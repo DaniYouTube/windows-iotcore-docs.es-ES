@@ -1,76 +1,71 @@
-## Microsoft Open Source Code of Conduct
+## <a name="microsoft-open-source-code-of-conduct"></a>Código de conducta de código fuente de Microsoft Open
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Este proyecto se ha adoptado el [Microsoft código de conducta de código abierto](https://opensource.microsoft.com/codeofconduct/).
+Para obtener más información, consulte el [código de conducta preguntas más frecuentes sobre](https://opensource.microsoft.com/codeofconduct/faq/) o póngase en contacto con [ opencode@microsoft.com ](mailto:opencode@microsoft.com) con otras preguntas o comentarios.
 
-# How to contribute to Windows 10 IoTCore documentation
+# <a name="how-to-contribute-to-windows-10-iotcore-documentation"></a>Cómo contribuir a la documentación de Windows 10 IoTCore
 
-## Legal Notices
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
+## <a name="legal-notices"></a>Avisos legales
+Microsoft y sus colaboradores te conceden una licencia para la documentación de Microsoft y otros contenidos de este repositorio bajo la [licencia pública de Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode), consulta el archivo [LICENSE](LICENSE), y concédete una licencia para cualquier código del repositorio bajo la [Licencia MIT](https://opensource.org/licenses/MIT), consulta el archivo [LICENSE-CODE](LICENSE-CODE).
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+Microsoft, Windows, Microsoft Azure y otros productos y servicios Microsoft a los que se hace referencia en la documentación pueden ser marcas comerciales o marcas registradas de Microsoft en los Estados Unidos y en otros países o regiones.
+Las licencias para este proyecto no te conceden derechos para usar los nombres, logotipos o marcas comerciales de Microsoft.
+Directrices generales de marca registrada de Microsoft pueden encontrarse en http://go.microsoft.com/fwlink/?LinkID=254653.
 
-Privacy information can be found at https://privacy.microsoft.com/en-us/
+Puede encontrar información de privacidad en https://privacy.microsoft.com/en-us/
 
-Microsoft and any contributors reserve all others rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
+Microsoft y sus colaboradores se reservan todos los demás derechos, ya sea bajo sus respectivos derechos de autor, patentes o marcas comerciales, y tanto de manera implícita, explícita como de otro modo.
 
-## Contributing
+## <a name="contributing"></a>Contribución
 
-This is the repository for Windows 10 IoT **documentation** hosted at [https://docs.microsoft.com/windows/iot-core](https://docs.microsoft.com/windows/iot-core).
+Este es el repositorio de Windows 10 IoT **documentación** hospedado en [ https://docs.microsoft.com/windows/iot-core ](https://docs.microsoft.com/windows/iot-core).
 
-If you would like to see new coverage or have feedback, please consider [**contributing**](/CONTRIBUTING.md).  You can edit the existing content, add new content, or simply create new [issues](https://github.com/MicrosoftDocs/windows-iotcore-docs/issues). We’ll take a look at your suggestions and will work together to incorporate them into the docs.
+Si le gustaría ver cobertura de nuevo o tiene algún comentario, considere la posibilidad de [ **contribución**](/CONTRIBUTING.md).  Puede editar el contenido existente, agregar contenido nuevo o simplemente crear nuevos [problemas](https://github.com/MicrosoftDocs/windows-iotcore-docs/issues). Le echaremos un vistazo a sus sugerencias y trabajarán juntos para incorporarlos a los documentos.
 
-To edit content, just click edit on the article you want to make changes to:
+Para editar contenido, simplemente haga clic en Editar en el artículo que desee realizar cambios en:
 
-![Gif on how to edit docs](windows-iotcore/media/edit-doc.gif)
+![GIF sobre cómo editar docs](windows-iotcore/media/edit-doc.gif)
 
 
-You can also clone or download the repo to make changes:
+También puede clonar o descargar el repositorio para realizar cambios:
 
-![Gif on how to clone or download repo](windows-iotcore/media/download-repo.gif)
+![GIF sobre cómo clonar o descargar repositorio](windows-iotcore/media/download-repo.gif)
 
-You will also need to add a reviewer or reviews to your pull requests to get them approved:
+También necesitará agregar un revisor o las revisiones a las solicitudes de extracción puede obtenerlos aprobados:
 
-![Adding reviewers to your pull request](windows-iotcore/media/reviewers.gif)
+![Agregar revisores a la solicitud de incorporación de cambios](windows-iotcore/media/reviewers.gif)
 
-# Conventions
-  - When adding a page, you must add an entry for it in [toc.md](windows-iotcore/TOC.md) for it to appear.
-  - A folder can contain more folders or `readme.md`s
-  - Folder/directory names are dash-separated (e.g., `f12-tools`) and lowercase. They are used in URLs on the docs.microsoft.com site. Don't use underscores or PascalCase/camelCase.
+# <a name="conventions"></a>Convenciones
+  - Al agregar una página, debe agregar una entrada para él en [toc.md](windows-iotcore/TOC.md) para que aparezca.
+  - Una carpeta puede contener más carpetas o `readme.md`s
+  - Los nombres de directorio o carpeta están separados por guión (p. ej., `f12-tools`) y en minúsculas. Se usan en las direcciones URL en el sitio docs.microsoft.com. No utilice caracteres de subrayado o PascalCase/camelCase.
 
 
-## Other text elements
+## <a name="other-text-elements"></a>Otros elementos de texto
 
-These other text elements have styling available:
+Estos otros elementos de texto tienen estilos disponibles:
 
-* Unordered lists
-* Have regular bullets
-   * You can also nest bullets
-   * Bullets lists should have more than one entry.
-* Pretty standard
+* Listas sin ordenar
+* Tiene viñetas normales
+   * También puede anidar viñetas
+   * Las listas de viñetas deben tener más de una entrada.
+* Bastante estándar
 
-1. Ordered lists
-2. Use regular ol' western-style numbering.
-3. Should be used only when a list truly has order.
+1. Listas ordenadas
+2. Use la numeración occidental regular antiguo.
+3. Debe usarse solo cuando una lista realmente tiene el orden.
 
 _________________________
 
-Horizontal rules are available. We suggest using them sparingly to reduce clutter.
-Do not combine horizontal rules with heading tags; some already used line styles for visual hierarchy.
-Also, do not combine notes (see below) in the middle of numbered lists. This messes with the numbering order.
+Las reglas horizontales están disponibles. Se recomienda su uso con moderación para reducir el desorden.
+No se combinan las reglas horizontales con etiquetas de encabezado; ya algunos usan estilos de línea en una jerarquía visual.
+Además, no combine notas (ver abajo) en el medio de listas numeradas. Esto se confunden con el orden de numeración.
 
-## Displaying code
+## <a name="displaying-code"></a>Visualización de código
 
-You can use inline `code` Markdown syntax (with the backticks).
+Puede usar en línea `code` sintaxis de Markdown (con los acentos graves).
 
-Or you can display blocks of code like so:
+O puede mostrar bloques de código de este modo:
 
 ```css
 body {
@@ -78,32 +73,32 @@ body {
 }
 ```
 
-## Tables
+## <a name="tables"></a>Tablas
 
-| You can     | use headers | on tables    |
+| Después, puede     | usar encabezados | en las tablas    |
 |-------------|-------------|-------------:|
-| Left-aligned| Unless a #  | 456          |
-| Text value  | More text   | $0.00        |
+| alineado a la izquierda| A menos que un #  | 456          |
+| Valor de texto  | Más texto   | $0.00        |
 
-## Notes
+## <a name="notes"></a>Notas
 
-Use notes sparingly. They are blocks designed to highlight "don't-miss-it" information.
+Utilice con moderación las notas. Se trata de bloques diseñados para resaltar la información de "no-error-it".
 
-We have four different versions of notes currently styled:
-- NOTE
-- WARNING
-- TIP
-- IMPORTANT
+Tenemos cuatro versiones diferentes de notas con el estilo actualmente:
+- NOTA
+- ADVERTENCIA
+- PROPINA
+- IMPORTANTE
 
 
-For multi-line blockquote notes, use a > in front of each line of the notes as seen in the example below.
+Notas de la cita en bloque de varias líneas, use un > delante de cada una de las notas tal como se muestra en el ejemplo siguiente.
 
-## Images
+## <a name="images"></a>Imágenes
 
-Images should be stored in a `media` folder and referenced with a relative path:
+Las imágenes deben almacenarse en un `media` carpeta y que se hace referencia con una ruta de acceso relativa:
 
 `![Note patterns](media/notes.png)`
 
 
-## Code of Conduct
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## <a name="code-of-conduct"></a>Código de conducta
+Este proyecto se ha adoptado el [Microsoft código de conducta de código abierto](https://opensource.microsoft.com/codeofconduct/). Para obtener más información, consulte el [código de conducta preguntas más frecuentes sobre](https://opensource.microsoft.com/codeofconduct/faq/) o póngase en contacto con [ opencode@microsoft.com ](mailto:opencode@microsoft.com) con otras preguntas o comentarios.
