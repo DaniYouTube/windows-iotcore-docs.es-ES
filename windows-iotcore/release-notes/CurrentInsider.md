@@ -1,0 +1,236 @@
+---
+title: Notas de la versión de compilación 17744
+author: zeeshanfurqan
+ms.author: zeeshanf
+ms.date: 08/24/2018
+ms.topic: article
+description: Lea y obtenga información acerca de cuáles son las novedades en 17744 de número de compilación de Insider de Windows.
+keywords: notas de la versión de Windows iot, Windows Insider,
+ms.openlocfilehash: 3f78aa22f6edd4692d1e7956edc30856eeed2e7c
+ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59514492"
+---
+# <a name="release-notes-for-build-17744"></a><span data-ttu-id="67586-104">Notas de la versión de compilación 17744</span><span class="sxs-lookup"><span data-stu-id="67586-104">Release Notes for Build 17744</span></span>
+_<span data-ttu-id="67586-105">17744 del número de compilación.</span><span class="sxs-lookup"><span data-stu-id="67586-105">Build Number 17744.</span></span> <span data-ttu-id="67586-106">Agosto de 2018.</span><span class="sxs-lookup"><span data-stu-id="67586-106">August 2018.</span></span>_
+
+<span data-ttu-id="67586-107">&copy; 2018 Microsoft Corporation.</span><span class="sxs-lookup"><span data-stu-id="67586-107">&copy; 2018 Microsoft Corporation.</span></span> <span data-ttu-id="67586-108">Todos los derechos reservados.</span><span class="sxs-lookup"><span data-stu-id="67586-108">All rights reserved.</span></span>
+
+<span data-ttu-id="67586-109">Este documento proporciona información de última hora o de otro que complementa la documentación incluida con el de Windows 10 IoT Core.</span><span class="sxs-lookup"><span data-stu-id="67586-109">This document provides late-breaking or other information that supplements the documentation included with the Windows 10 IoT Core.</span></span>
+
+<span data-ttu-id="67586-110">Gracias por descargar Windows 10 IoT Core.</span><span class="sxs-lookup"><span data-stu-id="67586-110">Thank you for downloading Windows 10 IoT Core.</span></span> <span data-ttu-id="67586-111">Windows 10 IoT Core es la versión de Windows 10 dirigida al desarrollo de dispositivos incrustados o dedicado de propósito y la elección de la Comunidad de creadores de.</span><span class="sxs-lookup"><span data-stu-id="67586-111">Windows 10 IoT Core is the version of Windows 10 intended for development of embedded or dedicated purpose devices and the choice for the Maker community.</span></span> <span data-ttu-id="67586-112">Los paquetes dentro de esta versión contienen herramientas y el contenido necesario para instalar Windows 10 IoT Core en plataforma de Minnowboard Max basada en procesadores Intel Atom, Raspberry Pi 2 o 3 según Broadcom 2836/2837 y Dragonboard 410c en función de la serie 400 de Qualcomm Snapdragon procesadores.</span><span class="sxs-lookup"><span data-stu-id="67586-112">The packages within this release contain tools and content needed to install Windows 10 IoT Core on Minnowboard Max platform based on Intel Atom processers, Raspberry Pi 2/3 based on Broadcom 2836/2837, and Dragonboard 410c based on Qualcomm Snapdragon 400 series processors.</span></span>
+
+
+## <a name="privacy-statement"></a><span data-ttu-id="67586-113">Declaración de privacidad en línea</span><span class="sxs-lookup"><span data-stu-id="67586-113">Privacy Statement</span></span>
+
+<span data-ttu-id="67586-114">Se puede ver la declaración de privacidad para esta versión del sistema operativo Windows [aquí](http://go.microsoft.com/fwlink/?LinkId=506737).</span><span class="sxs-lookup"><span data-stu-id="67586-114">The privacy statement for this version of the Windows operating system can be viewed [here](http://go.microsoft.com/fwlink/?LinkId=506737).</span></span>
+
+<span data-ttu-id="67586-115">Puede revisar los términos vinculados si pega el vínculo hacia delante en la ventana del explorador.</span><span class="sxs-lookup"><span data-stu-id="67586-115">You can review linked terms by pasting the forward link into your browser window.</span></span>
+
+## <a name="whats-new-in-this-build"></a><span data-ttu-id="67586-116">Novedades en esta compilación:</span><span class="sxs-lookup"><span data-stu-id="67586-116">What's new in this build:</span></span> 
+* <span data-ttu-id="67586-117">Correcciones de errores generales</span><span class="sxs-lookup"><span data-stu-id="67586-117">General bug fixes</span></span> 
+
+
+## <a name="additional-information"></a><span data-ttu-id="67586-118">Información adicional</span><span class="sxs-lookup"><span data-stu-id="67586-118">Additional Information</span></span>
+* <span data-ttu-id="67586-119">La versión BSP usada para nuestra imagen Dragon Board es 2118.0.0.0.</span><span class="sxs-lookup"><span data-stu-id="67586-119">The BSP version used for our Dragon Board image is 2118.0.0.0.</span></span> 
+
+
+## <a name="known-issues-in-this-build"></a><span data-ttu-id="67586-120">Problemas conocidos de esta compilación:</span><span class="sxs-lookup"><span data-stu-id="67586-120">Known issues in this build:</span></span>
+* <span data-ttu-id="67586-121">Implementación de controladores de F5 desde Visual Studio no funciona en IoT Core.</span><span class="sxs-lookup"><span data-stu-id="67586-121">F5 driver deployment from Visual Studio does not work on IoT Core.</span></span>
+* <span data-ttu-id="67586-122">Los dispositivos que se instalaron a través de NOOBS no pueden ejecutar la herramienta bcdedit para habilitar al depurador de kernel.</span><span class="sxs-lookup"><span data-stu-id="67586-122">Devices that were installed via NOOBS cannot run the bcdedit tool to enable the kernel debugger.</span></span> <span data-ttu-id="67586-123">Esto puede lograrse con la siguiente solución alternativa: \*\* montar la tarjeta SD en su PC \*\* encontrar la partición de disco EFIESP número con diskpart o administración de discos (por ejemplo, "M:") \*\* ejecute el comando "bcdedit /store M:\EFI\Microsoft\boot\bcd /set {default} debug Sí" \*\*  Desmonte la tarjeta SD.</span><span class="sxs-lookup"><span data-stu-id="67586-123">This can be achieved with the following workaround: \*\*  Mount the SD card on your PC \*\*  Find the EFIESP drive partition number with diskpart or Disk Management (say it’s “M:”) \*\*  Run the command “bcdedit /store M:\EFI\Microsoft\boot\bcd /set {default} debug yes” \*\*  Unmount the SD card.</span></span>
+<span data-ttu-id="67586-124">\*\* Ya debería poder conectar el depurador como de costumbre</span><span class="sxs-lookup"><span data-stu-id="67586-124">\*\*  You should now be able to connect the debugger as usual</span></span>
+* <span data-ttu-id="67586-125">En ocasiones, se interrumpirá la PSSession al enviar comandos a dispositivos IoT.</span><span class="sxs-lookup"><span data-stu-id="67586-125">On occasion, PSSession will break when sending commands to IoT devices.</span></span>
+* <span data-ttu-id="67586-126">RPi3 no asócielo BT + BTLE con Bluetooth incorporar.</span><span class="sxs-lookup"><span data-stu-id="67586-126">RPi3 will not pair BT + BTLE with onboard Bluetooth.</span></span>
+* <span data-ttu-id="67586-127">No se puede conectar a internet a través de la conexión Wi-Fi con SoftAp de Up2.</span><span class="sxs-lookup"><span data-stu-id="67586-127">Unable to connect to internet through WIFI connection with SoftAp of Up2.</span></span>
+* <span data-ttu-id="67586-128">Error intermitente UWF.</span><span class="sxs-lookup"><span data-stu-id="67586-128">UWF is failing intermittently.</span></span>
+* <span data-ttu-id="67586-129">El cliente de Windows IoT remoto no funciona para Raspberry Pi.</span><span class="sxs-lookup"><span data-stu-id="67586-129">The Windows IoT Remote client does not work for Raspberry Pi.</span></span> <span data-ttu-id="67586-130">Usar un panel con gráficos acelerados como Minnowboard Max o Dragonboard o adjuntar a un monitor para visualización local.</span><span class="sxs-lookup"><span data-stu-id="67586-130">Use a board with accelerated graphics such as Minnowboard Max or Dragonboard or attach a monitor for local display.</span></span>
+
+
+## <a name="iot-core-general-known-issues-and-work-arounds"></a><span data-ttu-id="67586-131">Problemas conocidos de IoT Core generales y soluciones</span><span class="sxs-lookup"><span data-stu-id="67586-131">IoT Core general known issues and work arounds</span></span>
+
+### <a name="for-raspberry-pi"></a><span data-ttu-id="67586-132">Para Raspberry Pi</span><span class="sxs-lookup"><span data-stu-id="67586-132">For Raspberry Pi</span></span>
+
+#### <a name="raspberry-pi-display-resolution-if-monitor-is-disconnected"></a><span data-ttu-id="67586-133">Resolución de pantalla de raspberry Pi si se desconecta el monitor</span><span class="sxs-lookup"><span data-stu-id="67586-133">Raspberry Pi Display Resolution if monitor is disconnected</span></span> 
+<span data-ttu-id="67586-134">Raspberry Pi no puede mantener la resolución de pantalla si se desconecta el monitor.</span><span class="sxs-lookup"><span data-stu-id="67586-134">The Raspberry Pi may not maintain Display Resolution if monitor is disconnected.</span></span> <span data-ttu-id="67586-135">El EDID del monitor se usa para establecer la resolución del sistema cuando uno está conectado.</span><span class="sxs-lookup"><span data-stu-id="67586-135">The EDID of the monitor is used to set the resolution of the system when one is connected.</span></span> <span data-ttu-id="67586-136">Cuando se desconecta, el firmware del dispositivo Raspberry Pi predeterminado es lo que está en el config.txt en la raíz de la tarjeta SD.</span><span class="sxs-lookup"><span data-stu-id="67586-136">When disconnected, the Raspberry Pi firmware defaults to what is in the config.txt in the root of the SD card.</span></span> 
+
+#### <a name="raspberry-pi-video-performance"></a><span data-ttu-id="67586-137">Rendimiento de vídeo de raspberry Pi</span><span class="sxs-lookup"><span data-stu-id="67586-137">Raspberry Pi Video Performance</span></span> 
+<span data-ttu-id="67586-138">No se optimiza el rendimiento de reproducción de vídeo en la plataforma de Raspberry Pi.</span><span class="sxs-lookup"><span data-stu-id="67586-138">Video playback performance on the Raspberry Pi platform is not optimized.</span></span><span data-ttu-id="67586-139">  Anima el usuario pueden presentar elementos, como menús desplegables basada en XAML de menos de un rendimiento óptimo.</span><span class="sxs-lookup"><span data-stu-id="67586-139">  Animated user elements including XAML-based dropdown menus may exhibit less than optimal performance.</span></span> 
+ 
+#### <a name="raspberry-pi-camera-support"></a><span data-ttu-id="67586-140">Compatibilidad con la cámara raspberry Pi</span><span class="sxs-lookup"><span data-stu-id="67586-140">Raspberry Pi Camera Support</span></span> 
+<span data-ttu-id="67586-141">Compatibilidad con dispositivos periféricos de cámara es limitada.</span><span class="sxs-lookup"><span data-stu-id="67586-141">Support for camera peripheral devices is limited.</span></span> <span data-ttu-id="67586-142">No se admite el dispositivo PiCam directamente conectado al bus de cámara integrada debido a limitaciones en la plataforma para admitir USB modernas D3D cámaras Web generan los flujos de datos que son muy exigentes en el controlador Host USB.</span><span class="sxs-lookup"><span data-stu-id="67586-142">The PiCam device directly connected to the onboard camera bus is not supported due to limitations in the platform to support D3D Modern USB webcams produce data streams that are very demanding on the USB Host controller.</span></span><span data-ttu-id="67586-143">  Incluso cuando se usa con cámaras Web de configuración de baja resolución requerirá adicionales USB ajustar y especializada la lógica de control.</span><span class="sxs-lookup"><span data-stu-id="67586-143">  Even when used with low resolution settings webcams will require additional USB fine tuning and specialized control logic.</span></span> 
+
+#### <a name="raspberry-pi3-bluetooth-support"></a><span data-ttu-id="67586-144">Soporte de raspberry Pi3 Bluetooth</span><span class="sxs-lookup"><span data-stu-id="67586-144">Raspberry Pi3 Bluetooth support</span></span> 
+<span data-ttu-id="67586-145">El controlador Bluetooth integrado que Raspberry Pi3 solo admite dispositivos de bajo ancho de banda.</span><span class="sxs-lookup"><span data-stu-id="67586-145">The Raspberry Pi3 built-in Bluetooth driver only supports low bandwidth devices.</span></span> 
+
+#### <a name="serial-port-usage-and-access-on-rpi2"></a><span data-ttu-id="67586-146">Uso de los puertos serie y el acceso en RPi2</span><span class="sxs-lookup"><span data-stu-id="67586-146">Serial Port Usage and Access on RPi2</span></span> 
+<span data-ttu-id="67586-147">Raspberry Pi 2 es compatible con el transporte de serie para la comunicación a través de UART PL011.</span><span class="sxs-lookup"><span data-stu-id="67586-147">Raspberry Pi 2 supports the serial transport for communication through the PL011 UART.</span></span><span data-ttu-id="67586-148">  Esto se establece de forma predeterminada en escenarios de depuración del kernel.</span><span class="sxs-lookup"><span data-stu-id="67586-148">  This is set by default in kernel debugging scenarios.</span></span><span data-ttu-id="67586-149">  Un controlador de dispositivo o aplicación puede usar el UART PL011 para enviar y recibir datos con el controlador de dispositivo PL011 si se desactiva el depurador mediante el siguiente comando:</span><span class="sxs-lookup"><span data-stu-id="67586-149">  An application or device driver can use the PL011 UART to send and receive data with the PL011 device driver turning off the debugger using the following command:</span></span>
+
+```
+bcdedit /set debug off 
+```
+
+#### <a name="data-breakpoints-have-been-disabled-on-the-raspberry-pi2"></a><span data-ttu-id="67586-150">Se han deshabilitado los puntos de interrupción de datos en el Pi2 Raspberry</span><span class="sxs-lookup"><span data-stu-id="67586-150">Data breakpoints have been disabled on the Raspberry Pi2</span></span>
+<span data-ttu-id="67586-151">Ninguna solución alternativa en este momento.</span><span class="sxs-lookup"><span data-stu-id="67586-151">No workaround at this time.</span></span>
+
+#### <a name="disabling-the-onboard-adapters-for-raspberry-pi-3"></a><span data-ttu-id="67586-152">Deshabilitar a los adaptadores integrados para Raspberry Pi 3</span><span class="sxs-lookup"><span data-stu-id="67586-152">Disabling the onboard adapters for Raspberry Pi 3</span></span>
+<span data-ttu-id="67586-153">Raspberry Pi 3 tiene incorporar Bluetooth que debe deshabilitarse para usar un dispositivo diferente para deshabilitar para incorporar Bluetooth, abra una sesión de telnet y ssh y ejecute:</span><span class="sxs-lookup"><span data-stu-id="67586-153">The Raspberry Pi 3 has onboard Bluetooth which must be disabled to use a different dongle to disable to onboard Bluetooth, open a telnet/ssh session and run:</span></span> 
+```
+reg add hklm\system\controlset001\services\BtwSerialH5Bus /v Start /t REG_DWORD /d 4 
+```
+
+<span data-ttu-id="67586-154">Puede deshabilitar Wi-Fi con el siguiente comando:</span><span class="sxs-lookup"><span data-stu-id="67586-154">You may disable WiFi with the following command:</span></span> 
+```
+reg add hklm\system\controlset001\services\bcmsdh43xx /v Start /t REG_DWORD /d 4 
+``` 
+
+### <a name="for-dragonboard"></a><span data-ttu-id="67586-155">Para DragonBoard</span><span class="sxs-lookup"><span data-stu-id="67586-155">For DragonBoard</span></span>
+
+#### <a name="dragonboard-410c-shutdown"></a><span data-ttu-id="67586-156">Apagado Dragonboard 410c</span><span class="sxs-lookup"><span data-stu-id="67586-156">Dragonboard 410c Shutdown</span></span>
+<span data-ttu-id="67586-157">En el DragonBoard, un comando de apagado no se apague la placa.</span><span class="sxs-lookup"><span data-stu-id="67586-157">On the DragonBoard, a shutdown command will not power off the board.</span></span> <span data-ttu-id="67586-158">El sistema se reiniciará.</span><span class="sxs-lookup"><span data-stu-id="67586-158">The system will restart.</span></span> <span data-ttu-id="67586-159">Inicie la alimentación del tablero al desconectar la alimentación.</span><span class="sxs-lookup"><span data-stu-id="67586-159">Please power off the board by disconnecting the power.</span></span>
+
+#### <a name="dragonboard-and-windbg"></a><span data-ttu-id="67586-160">DragonBoard y windbg</span><span class="sxs-lookup"><span data-stu-id="67586-160">DragonBoard and windbg</span></span>
+<span data-ttu-id="67586-161">Los controladores GPIO/I2C/SPI/UART se deshabilitarán cuando se conecta a la DragonBoard con windbg.</span><span class="sxs-lookup"><span data-stu-id="67586-161">The GPIO/I2C/SPI/UART drivers will be disabled when connecting to the DragonBoard with windbg.</span></span>
+
+#### <a name="dragonboard-headset--microphone-jack"></a><span data-ttu-id="67586-162">Jack de auriculares & micrófono DragonBoard</span><span class="sxs-lookup"><span data-stu-id="67586-162">DragonBoard headset & microphone jack</span></span>
+<span data-ttu-id="67586-163">El BSP Dragonboard tiene controladores para el enchufe para auriculares y del micrófono, pero no tiene cualquiera de estos conectores a bordo.</span><span class="sxs-lookup"><span data-stu-id="67586-163">The Dragonboard BSP has drivers for the headset jack and microphone jack, but it doesn't have either of these jacks on board.</span></span>  
+
+#### <a name="dragonboard-spi-runs-at-48mhz"></a><span data-ttu-id="67586-164">DragonBoard SPI se ejecuta en 4,8 Mhz</span><span class="sxs-lookup"><span data-stu-id="67586-164">DragonBoard SPI runs at 4.8Mhz</span></span>
+<span data-ttu-id="67586-165">El SPI en el Dragonboard omitirá la velocidad solicitada y siempre se ejecutan con 4,8 Mhz.</span><span class="sxs-lookup"><span data-stu-id="67586-165">The SPI on the Dragonboard will ignore the requested speed and always run at 4.8 Mhz.</span></span>  
+
+#### <a name="dragonboard-connected-standby"></a><span data-ttu-id="67586-166">DragonBoard conectado en espera</span><span class="sxs-lookup"><span data-stu-id="67586-166">DragonBoard Connected Standby</span></span> 
+<span data-ttu-id="67586-167">Modo de espera conectado no está habilitado en el Qualcomm Dragonboard de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="67586-167">Connected Standby is not enabled on the Qualcomm Dragonboard by default.</span></span>  <span data-ttu-id="67586-168">Para habilitar el modo de espera conectado en DragonBoard la siguiente clave del registro debe establecerse en "1":</span><span class="sxs-lookup"><span data-stu-id="67586-168">To enable Connected Standby on DragonBoard the following registry key needs to be set to “1”:</span></span>
+
+```
+HKLM\System\Controlset001\Control\Power\CsEnabled=DWORD:1 
+```
+
+> [!NOTE]
+> <span data-ttu-id="67586-169">No todas las plataformas tienen compatibilidad para el modo de espera conectado.</span><span class="sxs-lookup"><span data-stu-id="67586-169">Not all platforms have support for Connected Standby.</span></span>  <span data-ttu-id="67586-170">Esto podría no funcionar en todas las plataformas.</span><span class="sxs-lookup"><span data-stu-id="67586-170">This may not work on all platforms.</span></span>    
+
+
+### <a name="for-minnowboard"></a><span data-ttu-id="67586-171">Para MinnowBoard</span><span class="sxs-lookup"><span data-stu-id="67586-171">For MinnowBoard</span></span>
+#### <a name="minnowboard-max-boot-and-firmware-update"></a><span data-ttu-id="67586-172">Arranque de Max Minnowboard y actualización de Firmware</span><span class="sxs-lookup"><span data-stu-id="67586-172">Minnowboard Max Boot and Firmware Update</span></span> 
+<span data-ttu-id="67586-173">El número máximo de MinnowBoard no arrancará a menos que el firmware versión.092 o posterior.</span><span class="sxs-lookup"><span data-stu-id="67586-173">The MinnowBoard Max will not boot unless the firmware is version .092 or later.</span></span> <span data-ttu-id="67586-174">La versión mínima recomendada del firmware es "MinnowBoard MAX 0,92 32 bits".</span><span class="sxs-lookup"><span data-stu-id="67586-174">The minimum recommended version of the firmware is “MinnowBoard MAX 0.92 32-Bit”.</span></span> <span data-ttu-id="67586-175">Las actualizaciones de firmware pueden descargarse desde [aquí](http://go.microsoft.com/fwlink/?LinkId=708613).</span><span class="sxs-lookup"><span data-stu-id="67586-175">Firmware updates can be downloaded from [here](http://go.microsoft.com/fwlink/?LinkId=708613).</span></span>
+
+#### <a name="minnow-board-peripheral-support"></a><span data-ttu-id="67586-176">Compatibilidad con periférico de la placa minnow</span><span class="sxs-lookup"><span data-stu-id="67586-176">Minnow Board Peripheral Support</span></span>
+<span data-ttu-id="67586-177">La imagen de Windows 10 IoT Core incluida en esta lista es compatible con los periféricos que se exponen en el panel MinnowBoard MAX.</span><span class="sxs-lookup"><span data-stu-id="67586-177">The Windows 10 IoT Core image included in this drop supports the peripherals that are exposed on the MinnowBoard MAX board.</span></span> <span data-ttu-id="67586-178">Posteriormente, Intel&reg; les ofrecerá soporte técnico del conjunto completo de características de los procesadores Baytrail incluyendo el Celeron de Intel&trade; procesadores J1900/N2930/N2807 y Intel Atom&trade; E38XX procesadores.</span><span class="sxs-lookup"><span data-stu-id="67586-178">Subsequently, Intel&reg; will provide support of the full feature set of the Baytrail processors including the Intel Celeron&trade; Processors J1900/N2930/N2807 and Intel Atom&trade; Processors E38XX.</span></span>
+
+
+### <a name="for-all-platforms"></a><span data-ttu-id="67586-179">Para todas las plataformas</span><span class="sxs-lookup"><span data-stu-id="67586-179">For All Platforms</span></span> 
+
+#### <a name="mouse-pointer-disappears-while-debugging"></a><span data-ttu-id="67586-180">Puntero del mouse desaparece durante la depuración</span><span class="sxs-lookup"><span data-stu-id="67586-180">Mouse Pointer disappears while debugging</span></span> 
+<span data-ttu-id="67586-181">En algunos casos, el puntero del mouse no está visible después de implementar o depurar aplicaciones con Visual Studio, el puntero del mouse debe reaparecer si cambia el foco mediante el teclado (pestaña).</span><span class="sxs-lookup"><span data-stu-id="67586-181">In some cases, the mouse pointer is not visible after deploying or debugging apps with Visual Studio, the mouse pointer should reappear if you change focus using the keyboard (Tab).</span></span>
+
+
+#### <a name="server-applications-with-softap"></a><span data-ttu-id="67586-182">Aplicaciones de servidor con SoftAP</span><span class="sxs-lookup"><span data-stu-id="67586-182">Server Applications with SoftAP</span></span>
+<span data-ttu-id="67586-183">Cuando se usa el SoftAP los clientes no podrán tener acceso al contenido expuesto por aplicaciones UAP.</span><span class="sxs-lookup"><span data-stu-id="67586-183">When using the SoftAP clients will not be able to access content exposed by UAP apps.</span></span>  
+<span data-ttu-id="67586-184">Para exponer las aplicaciones a través de SoftAP UAP se deben realizar los cambios siguientes desde la consola en el dispositivo:</span><span class="sxs-lookup"><span data-stu-id="67586-184">To expose UAP applications via SoftAP the following changes must be made from the console on the device:</span></span>  
+
+```
+reg add hklm\system\currentcontrolset\services\mpssvc\parameters /v IoTInboundLoopbackPolicy /t REG_DWORD /d 1 
+checknetisolation loopbackexempt -a -n=<AppID for SoftAP App> 
+checknetisolation loopbackexempt -a -n=<AppID for Additional App>  
+```
+
+<span data-ttu-id="67586-185">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="67586-185">For example:</span></span>  
+```
+checknetisolation loopbackexempt -a -n=IoTOnboardingTask-uwp_1w720vyc4ccym
+```
+<span data-ttu-id="67586-186">Reiniciar</span><span class="sxs-lookup"><span data-stu-id="67586-186">Reboot</span></span> 
+
+
+#### <a name="sensor-driver-conflict-in-pre-built-ffus"></a><span data-ttu-id="67586-187">Conflicto del controlador de sensor en FFUs precompiladas</span><span class="sxs-lookup"><span data-stu-id="67586-187">Sensor Driver conflict in pre-built FFUs</span></span> 
+<span data-ttu-id="67586-188">Hay un conflicto del controlador del Sensor en el FFUs proporcionados.</span><span class="sxs-lookup"><span data-stu-id="67586-188">There is a Sensor Driver Conflict in the provided FFUs.</span></span> <span data-ttu-id="67586-189">El marco de Sensor remoto instala a controladores para Compass, Magnetómetro, acelerómetro y giro.</span><span class="sxs-lookup"><span data-stu-id="67586-189">The Remote Sensor Framework installs drivers for Compass, Magnetometer, Accelerometer and Gyro.</span></span> <span data-ttu-id="67586-190">Las API de UWP para tener acceso a ellos desde una aplicación supone simplemente 1 está instalado.</span><span class="sxs-lookup"><span data-stu-id="67586-190">The UWP APIs for accessing these from an application assume just 1 is installed.</span></span> <span data-ttu-id="67586-191">Si está desarrollando un controlador para un dispositivo físicamente conectado, el controlador remoto de Microsoft proporciona que ffus entrará en conflicto.</span><span class="sxs-lookup"><span data-stu-id="67586-191">If you are developing a driver for a physically attached device, the remote driver on the Microsoft provided FFUs will conflict.</span></span>
+
+<span data-ttu-id="67586-192">Solución: Se puede quitar el controlador en conflicto mediante la conexión al dispositivo a través de SSH o Powershell y usar la herramienta devcon.exe para quitar el controlador de sensor remoto escribiendo "quitar devcon.exe @" ROOT\REMOTESENSORDRIVER \*".</span><span class="sxs-lookup"><span data-stu-id="67586-192">Resolution: The conflicting driver can be removed by connecting to the device via SSH or Powershell and using the tool devcon.exe to remove the remote sensor driver by typing “devcon.exe remove @”ROOT\REMOTESENSORDRIVER\*”.</span></span> <span data-ttu-id="67586-193">El controlador de sensor remoto no afecta a los OEM creado FFUs.</span><span class="sxs-lookup"><span data-stu-id="67586-193">The remote sensor driver does not affect OEM created FFUs.</span></span>
+
+
+#### <a name="default-administrator-user-name-and-password"></a><span data-ttu-id="67586-194">Contraseña y nombre de usuario de administrador predeterminado</span><span class="sxs-lookup"><span data-stu-id="67586-194">Default Administrator User Name and Password</span></span>
+<span data-ttu-id="67586-195">El nombre de usuario de administrador predeterminado y la contraseña son difíciles de codificada en la imagen de Windows 10 IoT Core.</span><span class="sxs-lookup"><span data-stu-id="67586-195">The default administrator user name and password are hard coded in the Windows 10 IoT Core image.</span></span> <span data-ttu-id="67586-196">Esto supone un riesgo de seguridad para el dispositivo y no debe exponerse a una conexión a internet abierto hasta que se cambió la contraseña.</span><span class="sxs-lookup"><span data-stu-id="67586-196">This is a security risk for the device, and it should not be exposed to an open internet connection until the password has been changed.</span></span>
+
+#### <a name="volume-controls"></a><span data-ttu-id="67586-197">Controles de volumen</span><span class="sxs-lookup"><span data-stu-id="67586-197">Volume Controls</span></span>
+<span data-ttu-id="67586-198">Controles de volumen de hardware para micrófonos USB y altavoces que dependen del sistema de Windows para cambiar el volumen del sistema no se admiten en Windows 10 IoT Core.</span><span class="sxs-lookup"><span data-stu-id="67586-198">Hardware volume controls for USB microphones and speakers which depend on Windows system to change system volume are currently not supported on Windows 10 IoT Core.</span></span> 
+
+#### <a name="usb-keyboards"></a><span data-ttu-id="67586-199">Teclados USB</span><span class="sxs-lookup"><span data-stu-id="67586-199">USB Keyboards</span></span>  
+<span data-ttu-id="67586-200">Algunos teclados y ratones USB no funcionen en IoT Core.</span><span class="sxs-lookup"><span data-stu-id="67586-200">Some USB keyboards and mice may not work on IoT Core.</span></span> <span data-ttu-id="67586-201">Usar un teclado o mouse.</span><span class="sxs-lookup"><span data-stu-id="67586-201">Use a different keyboard or mouse.</span></span> <span data-ttu-id="67586-202">Encontrará una lista de dispositivos periféricos validados en el [documentación aquí](https://docs.microsoft.com/windows/iot-core/learn-about-hardware/hardwarecompatlist).</span><span class="sxs-lookup"><span data-stu-id="67586-202">A list of validated peripheral devices can be found in the [documentation here](https://docs.microsoft.com/windows/iot-core/learn-about-hardware/hardwarecompatlist).</span></span>
+
+
+#### <a name="screen-orientation"></a><span data-ttu-id="67586-203">Orientación de pantalla</span><span class="sxs-lookup"><span data-stu-id="67586-203">Screen Orientation</span></span>
+<span data-ttu-id="67586-204">Establecer la orientación a "Vertical" no se respeta en una aplicación Universal.</span><span class="sxs-lookup"><span data-stu-id="67586-204">Setting the orientation to “Portrait” may not be honored in a Universal App.</span></span>
+
+#### <a name="referencing-adapters-with-alljoyn-templates"></a><span data-ttu-id="67586-205">Hacer referencia a los adaptadores con plantillas de AllJoyn</span><span class="sxs-lookup"><span data-stu-id="67586-205">Referencing Adapters with AllJoyn Templates</span></span>
+<span data-ttu-id="67586-206">Al intentar agregar referencias a proyectos de adaptador AllJoyn puede producirse errores al usar las versiones específicas del SDK.</span><span class="sxs-lookup"><span data-stu-id="67586-206">Attempting to add references to AllJoyn adapter projects may result in errors when using specific SDK versions.</span></span>  <span data-ttu-id="67586-207">Para resolver estos errores, cambiar la plataforma de destino de Visual Studio para que coincida con la versión actual del SDK y vuelva a cargar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="67586-207">To resolve these errors, change Visual Studio’s target platform to match the current SDK version, then reload the project.</span></span>
+
+#### <a name="wifi-direct-limitations-on-iotcore"></a><span data-ttu-id="67586-208">Limitaciones de Wi-Fi Direct en IoTCore</span><span class="sxs-lookup"><span data-stu-id="67586-208">WiFi Direct limitations on IoTCore</span></span>
+* <span data-ttu-id="67586-209">El dispositivo IoTCore debe ser el dispositivo que se conecta, no funcionará como dispositivo de publicidad con otro dispositivo inicia la conexión.</span><span class="sxs-lookup"><span data-stu-id="67586-209">The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.</span></span>   
+* <span data-ttu-id="67586-210">Debe usarse el emparejamiento avanzadas.</span><span class="sxs-lookup"><span data-stu-id="67586-210">Advanced pairing must be used.</span></span>  <span data-ttu-id="67586-211">La aplicación de ejemplo muestra cómo usar la API de emparejamiento avanzada para emparejar los dispositivos antes de conectar.</span><span class="sxs-lookup"><span data-stu-id="67586-211">The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.</span></span> 
+* <span data-ttu-id="67586-212">No todos los adaptadores inalámbricos admiten Wi-Fi direct.</span><span class="sxs-lookup"><span data-stu-id="67586-212">Not all wireless adapters support WiFi direct.</span></span> <span data-ttu-id="67586-213">Hemos probado y comprobado que la "red USB 2.0 de Realtek RTL8188EU Wireless Lan 802. 11n adaptador" funciona, pero otros adaptadores no se admite.</span><span class="sxs-lookup"><span data-stu-id="67586-213">We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.</span></span> 
+
+
+#### <a name="non-default-drive-mode"></a><span data-ttu-id="67586-214">Modo de unidad no predeterminada</span><span class="sxs-lookup"><span data-stu-id="67586-214">Non-default drive mode</span></span>
+<span data-ttu-id="67586-215">En Raspberry Pi y Dragonboard, al cambiar de un modo de unidad no predeterminada a un modo de unidad no predeterminada diferente, puede producir un problema en la clavija GPIO.</span><span class="sxs-lookup"><span data-stu-id="67586-215">On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin.</span></span> <span data-ttu-id="67586-216">Solución alternativa: Establecer el modo de la unidad una vez al principio de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="67586-216">WORKAROUND: Set drive mode once at the beginning of the application.</span></span>
+
+#### <a name="application-already-running"></a><span data-ttu-id="67586-217">Aplicación ya está ejecutando</span><span class="sxs-lookup"><span data-stu-id="67586-217">Application already running</span></span>
+<span data-ttu-id="67586-218">La aplicación de inicio predeterminada podría entrar en conflicto con sí mismo cuando también se implementa desde Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="67586-218">The Default startup app may conflict with itself when it is also deployed from Visual Studio.</span></span> <span data-ttu-id="67586-219">Solución alternativa: Cambiar la aplicación de inicio predeterminada para una aplicación que distinta de la que desea implementar.</span><span class="sxs-lookup"><span data-stu-id="67586-219">WORKAROUND: Change the default startup app to an application other than that you wish to deploy.</span></span> 
+
+#### <a name="backgroundmediaplayermessagereceivedfromforeground-may-crash"></a><span data-ttu-id="67586-220">Se puede bloquear BackgroundMediaPlayer.MessageReceivedFromForeground</span><span class="sxs-lookup"><span data-stu-id="67586-220">BackgroundMediaPlayer.MessageReceivedFromForeground may crash</span></span>
+<span data-ttu-id="67586-221">Se puede bloquear la siguiente línea de código: "BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;".</span><span class="sxs-lookup"><span data-stu-id="67586-221">The following line of code may crash: “BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;”.</span></span> <span data-ttu-id="67586-222">Para evitar el bloqueo, agregue este código para que se ejecute primero "Reproductor de var = BackgroundMediaPlayer.Current;"</span><span class="sxs-lookup"><span data-stu-id="67586-222">To prevent the crash, add this code so that it is executed first “var player = BackgroundMediaPlayer.Current;”</span></span> 
+
+#### <a name="azure-active-directory-authentication-support"></a><span data-ttu-id="67586-223">Compatibilidad con la autenticación de Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="67586-223">Azure Active Directory Authentication Support</span></span>
+<span data-ttu-id="67586-224">La biblioteca de autenticación de Azure Active Directory no funciona en Windows 10 IoT Core.</span><span class="sxs-lookup"><span data-stu-id="67586-224">The Azure Active Directory Authentication Library does not work on Windows 10 IoT Core.</span></span>  
+
+#### <a name="shell-management-of-application-crashes"></a><span data-ttu-id="67586-225">Shell de administración de bloqueos de la aplicación</span><span class="sxs-lookup"><span data-stu-id="67586-225">Shell Management of Application Crashes</span></span>
+<span data-ttu-id="67586-226">Infraestructura de IoT Core shell supervisa aplicaciones APPX-type que se ejecutan en el dispositivo de bloqueos y reinicia esas aplicaciones cuando se producen bloqueos.</span><span class="sxs-lookup"><span data-stu-id="67586-226">IoT Core’s shell infrastructure monitors APPX-type applications running on the device for crashes, and restarts those applications when crashes occur.</span></span>  <span data-ttu-id="67586-227">Si las aplicaciones reiniciadas continúan se bloquee, el shell se emplean un __failfast: un proceso crítico de sistema que provoca una comprobación de errores y reinicie en un intento de recuperar.</span><span class="sxs-lookup"><span data-stu-id="67586-227">If the restarted applications continue to crash, the shell will employ a __failfast – a system critical process that causes a bugcheck and reboot in an attempt to recover.</span></span>  <span data-ttu-id="67586-228">Control y comparable lógica se utiliza para aplicaciones de primer plano en una configuración con cabezal y tareas en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="67586-228">Comparable logic and handling is used to background tasks and foreground applications in a headed configuration.</span></span>   <span data-ttu-id="67586-229">A continuación, se captura lógica de reintento y entrega de bloqueo:</span><span class="sxs-lookup"><span data-stu-id="67586-229">Crash handing and retry logic is captured below:</span></span>
+
+```
+Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\CBTConfig  (or ForegroundAppConfig for headed) 
+Qword:"FailureResetIntervalMs" – length of time app has to run successfully to reset failures seen to 0. – default is 0x00000000000493E0 == 5 minutes 
+Qword:"BaseRetryDelayMs"  -- wait time coefficient.  Default is 0xa. 
+Dword:"MaxFailureCount". Default is 10 
+DWord:"FallbackExponentNumerator", default is 31. 
+Dword:"FallbackExponentDenominator", default is 20 
+Fallback_exponent = FallbackExponentNumerator / FallbackExponentDenominator; // default is 1.55 
+```
+
+<span data-ttu-id="67586-230">Cuando se detecta el bloqueo de aplicación:</span><span class="sxs-lookup"><span data-stu-id="67586-230">When app crash is detected:</span></span> 
+
+```
+if time_since_last_crash > failureresetinterval then crashes_seen = 1 
+
+else ++crashes_seen; 
+
+if crashes_seen > MaxFailureCount then __failfast; 
+
+else  
+
+delay = (dword) ((float)BaseRetryDelayMs * (crashes_seen ** Fallback_exponent)) 
+```
+
+<span data-ttu-id="67586-231">Espera para retraso y vuelva a iniciar la aplicación</span><span class="sxs-lookup"><span data-stu-id="67586-231">Wait for delay and relaunch app</span></span> 
+
+
+#### <a name="time-synchronization"></a><span data-ttu-id="67586-232">Sincronización de hora</span><span class="sxs-lookup"><span data-stu-id="67586-232">Time Synchronization</span></span>  
+<span data-ttu-id="67586-233">Si se producen errores en sincronización de hora o tiempo de espera de esto puede deberse a inaccesible o un servidor distante del tiempo, la siguiente puede hacerse para agregar servidores de hora local o adicionales.</span><span class="sxs-lookup"><span data-stu-id="67586-233">If time sync is failing or timing out this may be due to unreachable or a distant time server, the following can be done to add additional or local time servers.</span></span> 
+
+1) <span data-ttu-id="67586-234">Desde una línea de comandos en el dispositivo (p ej.</span><span class="sxs-lookup"><span data-stu-id="67586-234">From a command line on the device (eg.</span></span> <span data-ttu-id="67586-235">SSH, Powershell) w32tm /config/syncfromflags: manual /manualpeerlist:"0.windows.time.com 1.pool.ntp.org 2. otra cosa,..."</span><span class="sxs-lookup"><span data-stu-id="67586-235">SSH, Powershell) w32tm /config /syncfromflags:manual /manualpeerlist:"0.windows.time.com 1.pool.ntp.org 2.something else, ..."</span></span> 
+
+2) <span data-ttu-id="67586-236">También puede hacer estas adiciones en el registro mediante un script de arranque o un paquete de configuración de tiempo de ejecución personalizado incluido como parte del proceso de creación de imagen si es necesario.</span><span class="sxs-lookup"><span data-stu-id="67586-236">You may also make these additions to the registry via a boot script or a custom runtime configuration package included as part of the image creation process if needed.</span></span> <span data-ttu-id="67586-237">Para obtener más información, consulte:</span><span class="sxs-lookup"><span data-stu-id="67586-237">For more details, see:</span></span> 
+
+* [<span data-ttu-id="67586-238">Agregar un archivo y la configuración del registro a una imagen</span><span class="sxs-lookup"><span data-stu-id="67586-238">Adding a file and registry setting to an image</span></span>](https://msdn.microsoft.com/library/windows/hardware/mt670641(v=vs.85).aspx)
+
+
+### <a name="starting-the-ftp-server"></a><span data-ttu-id="67586-239">Iniciar el servidor FTP</span><span class="sxs-lookup"><span data-stu-id="67586-239">Starting the FTP Server</span></span> 
+<span data-ttu-id="67586-240">El servidor FTP ya no se ejecuta de forma predeterminada al inicio</span><span class="sxs-lookup"><span data-stu-id="67586-240">The FTP Server no longer runs by default at start-up</span></span> 
+
+<span data-ttu-id="67586-241">Para ejecutar una vez: Inicio de sesión con SSH\PS y ejecute este comando para iniciar FTP:</span><span class="sxs-lookup"><span data-stu-id="67586-241">To run once: Login with SSH\PS and run this command to start FTP:</span></span>  
+```
+start ftpd.exe 
+```
+
+<span data-ttu-id="67586-242">Para ejecutar en todos los usuarios de arranque, debe crear un programador de tareas: Inicio de sesión con SSH\PS y crear un programador de tareas:</span><span class="sxs-lookup"><span data-stu-id="67586-242">To run on every boot Users should create a scheduler task: Login with SSH\PS and create a scheduler task:</span></span> 
+```
+schtasks /create /tn "IoTFTPD" /tr ftpd.exe /ru system /sc onstart 
+Schtasks /run /tn “IoTFTPD”
+```
