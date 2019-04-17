@@ -1,0 +1,58 @@
+items:
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Windows
+    tocHref: /windows/
+    topicHref: /windows/
+    items:
+    - name: Documentación de Windows IoT Core
+      tocHref: /windows/iot-core/
+      topicHref: /windows/iot-core/index
+      items:
+      - name: Windows 10 IoT Enterprise
+        tocHref: /windows/iot-core/windows-iot-enterprise/
+        topicHref: /windows/iot-core/windows-iot-enterprise
+      - name: Windows 10 IoT Core
+        tocHref: /windows/iot-core/windows-iot-core/
+        topicHref: /windows/iot-core/windows-iot-core
+      - name: Tutoriales
+        tocHref: /windows/iot-core/Tutorials/
+        topicHref: /windows/iot-core/Tutorials/PrototypeBoards.md
+      - name: Más información acerca del hardware
+        tocHref: /windows/iot-core/learn-about-hardware/
+        topicHref: /windows/iot-core/learn-about-hardware/suggestedboards
+      - name: Conexión del dispositivo
+        tocHref: /windows/iot-core/connect-your-device/
+        topicHref: /windows/iot-core/connect-your-device/iotdashboard
+      - name: Compilación de la imagen
+        tocHref: /windows/iot-core/build-your-image/
+        topicHref: /windows/iot-core/build-your-image/createbsps
+      - name: Administración del perfil
+        tocHref: /windows/iot-core/manage-your-device/
+        topicHref: /windows/iot-core/manage-your-device/deviceportal
+      - name: Protección del perfil
+        tocHref: /windows/iot-core/secure-your-device/
+        topicHref: /windows/iot-core/secure-your-device/buildingsecuredevices
+      - name: Desarrollo de la aplicación
+        tocHref: /windows/iot-core/develop-your-app/
+        topicHref: /windows/iot-core/develop-your-app/appdeployment
+      - name: Conexión a la nube
+        tocHref: /windows/iot-core/connect-to-cloud/
+        topicHref: /windows/iot-core/connect-to-cloud/overview
+      - name: Ampliación de la aplicación
+        tocHref: /windows/iot-core/extend-your-app/
+        topicHref: /windows/iot-core/extend-your-app/cortanaoniotcore
+      - name: Comercialización del dispositivo
+        tocHref: /windows/iot-core/commercialize-your-device/
+        topicHref: /windows/iot-core/commercialize-your-device/oemlicenserequirements
+      - name: Notas de la versión
+        tocHref: /windows/iot-core/release-notes/
+        topicHref: /windows/iot-core/release-notes/rtm/creatorsupdate
+ms.openlocfilehash: 5118e7d1a098cee1841b22599748a61d8821d275
+ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59510045"
