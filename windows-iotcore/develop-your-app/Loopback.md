@@ -8,7 +8,7 @@ description: Obtenga información sobre cómo crear una conexión TCP/IP con dos
 keywords: Windows iot, localhost, bucle invertido, UWP, visual studio
 ms.openlocfilehash: 498db8321babad890606e9e4589c9a6407f3ea6e
 ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/11/2019
 ms.locfileid: "59514247"
@@ -26,7 +26,7 @@ El host local de entrada directiva de bucle invertido para **Windows IoT Core** 
         [HKEY_LOCAL_MACHINE\system\currentcontrolset\services\mpssvc\parameters]
             "IoTInboundLoopbackPolicy"=dword:00000001
 
-Este valor de clave del registro IoTInboundLoopbackPolicy debe establecerse en DWORD: 00000001 para habilitar. Si cambia el valor del registro de IoTInboundLoopbackPolicy que debe reiniciarse para que el cambio surta efecto.  La directiva de bucle invertido localhost debe estar habilitada de forma predeterminada en **Windows IoT Core**
+Este valor de clave del registro IoTInboundLoopbackPolicy debe establecerse en DWORD: 00000001 para habilitar. Si cambia el valor del registro de IoTInboundLoopbackPolicy que debe reiniciarse para que el cambio surta efecto.  La directiva de bucle invertido localhost debe estar habilitada de forma predeterminada en **Windows IoT Core** 
 
 Para comprobar que el valor es el conjunto ejecute el siguiente comando en el **Windows IoT Core** dispositivo:
 
