@@ -26,7 +26,7 @@ El host local de entrada directiva de bucle invertido para **Windows IoT Core** 
         [HKEY_LOCAL_MACHINE\system\currentcontrolset\services\mpssvc\parameters]
             "IoTInboundLoopbackPolicy"=dword:00000001
 
-Este valor de clave del registro IoTInboundLoopbackPolicy debe establecerse en DWORD: 00000001 para habilitar. Si cambia el valor del registro de IoTInboundLoopbackPolicy que debe reiniciarse para que el cambio surta efecto.  La directiva de bucle invertido localhost debe estar habilitada de forma predeterminada en **Windows IoT Core** 
+Este valor de clave del registro IoTInboundLoopbackPolicy debe establecerse en DWORD: 00000001 para habilitar. Si cambia el valor del registro de IoTInboundLoopbackPolicy que debe reiniciarse para que el cambio surta efecto.  La directiva de bucle invertido localhost debe estar habilitada de forma predeterminada en **Windows IoT Core**
 
 Para comprobar que el valor es el conjunto ejecute el siguiente comando en el **Windows IoT Core** dispositivo:
 
