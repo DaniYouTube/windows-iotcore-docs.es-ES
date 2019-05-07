@@ -6,21 +6,26 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de Windows 10 IoT Enterprise y lo que puede hacer con él.
 keywords: Binario de Windows 10 IoT Enterprise, Enterprise, Windows
-ms.openlocfilehash: 029c98dc7652269aceaa97b820f2a190850eb1d3
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
-ms.translationtype: HT
+ms.openlocfilehash: c8e9eed02a9ae3010ceb10c78bd8a01c4535e383
+ms.sourcegitcommit: 1f6afcfee0cb5557dc21c7b15e199bc557d8eedb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514580"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65171337"
 ---
 # <a name="an-overview-of-windows-10-iot-enterprise"></a>Información general de Windows 10 IoT Enterprise
+
+> [!NOTE]
+> Contenedores de Windows 10 solo pueden usarse con Windows IoT Core y Windows IoT Enterprise para las implementaciones comerciales de uso de Microsoft Azure IoT Edge.
 
 ## <a name="what-is-windows-10-iot-enterprise"></a>¿Qué es Windows 10 IoT Enterprise?
 Windows 10 IoT Enterprise es una versión completa de Windows 10 que ofrece seguridad y capacidad de administración empresarial para las soluciones de IoT. Windows 10 IoT Enterprise comparte todos los beneficios del ecosistema de Windows en todo el mundo. Es un archivo binario equivalente a Windows 10 Enterprise, por lo que puede usar el mismo desarrollo conocido y las herramientas de administración como los equipos cliente y equipos portátiles.  Sin embargo, cuando se trata de licencias y distribución, la versión de escritorio y versiones de IoT son diferentes. Tenga en cuenta que Windows 10 IoT Enterprise ofrece opciones de canal de mantenimiento a largo plazo (LTSC) y canal semianual (SAC). Los OEM pueden elegir la versión que se necesitan para sus dispositivos.
 
 ## <a name="getting-started"></a>Introducción 
 
-Para obtener información acerca de Windows 10 IoT Enterprise de fabricación, es recomendable leer [la Guía de fabricación de empresa de Windows 10 IoT](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/iot-ent-overview).  
+Para iniciar su recorrido en fabricación con Windows 10 IoT Enterprise, es necesario llegar a un distribuidor de [esta lista](https://go.microsoft.com/fwlink/p/?linkid=2069623).
+
+Desde allí, puede aprender fabricar con Windows 10 IoT Enterprise con nuestro [la Guía de fabricación de Windows 10 IoT Enterprise](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/iot-ent-overview). 
 
 ## <a name="fixed-purpose-devices"></a>Dispositivos de propósito fijo 
 
@@ -44,7 +49,7 @@ A menudo, los sistemas especializados, como los PC que controlan equipos médico
 
 ## <a name="long-term-support-silicon-details"></a>Detalles de silicio compatibilidad a largo plazo
 
-La versión de otoño de 2018 de Windows 10 IoT Enterprise también será una versión LTSC. La siguiente lista abarca todos los procesadores que se espera que sean compatibles con la versión 2018 otoño. Si va a usar una versión anterior de Windows 10 IoT Enterprise, puede encontrar detalles sobre la compatibilidad de procesador [aquí](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements#windows-iot-enterprise--embedded-processor-table).
+La versión de Windows 10 IoT Enterprise 2019 será una versión LTSC. La siguiente lista abarca todos los procesadores que se espera que se admiten en esta versión. Si va a usar una versión anterior de Windows 10 IoT Enterprise, puede encontrar detalles sobre la compatibilidad de procesador [aquí](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements#windows-iot-enterprise--embedded-processor-table).
 
 > | Windows 10 IoT Enterprise  |
 > |-------------|
@@ -76,6 +81,6 @@ La versión de otoño de 2018 de Windows 10 IoT Enterprise también será una ve
 * [Selector de shell para las ediciones Enterprise y Education](https://docs.microsoft.com/windows-hardware/customize/enterprise/shell-launcher)
 * [Recursos de bloqueo](https://docs.microsoft.com/windows-hardware/customize/enterprise/create-a-kiosk-image) 
 * [Habilitar el modo incrustado y el uso de tareas en segundo plano en Windows IoT Enterprise](https://docs.microsoft.com/windows/iot-core/develop-your-app/embeddedmode)
-* [Configurar la telemetría de Windows en la organización](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization )
-* [Configurar dispositivos compartidos y de quiosco multimedia que ejecutan ediciones de escritorio de Windows](https://docs.microsoft.com/windows/configuration/kiosk-shared-pc)
+* [Configurar la telemetría de Windows en su organización](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization )
+* [Configura el quiosco y dispositivos compartidos que se ejecutan las ediciones de escritorio de Windows](https://docs.microsoft.com/windows/configuration/kiosk-shared-pc)
 * [Fabricación de escritorio](https://docs.microsoft.com/windows-hardware/manufacture/desktop/)
