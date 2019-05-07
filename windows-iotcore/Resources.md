@@ -6,12 +6,12 @@ ms.date: 09/07/18
 ms.topic: article
 description: Aprovechar todos los recursos de la Comunidad de Windows 10 IoT.
 keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, recursos más valiosos personas, vídeos, blogs
-ms.openlocfilehash: a5ef340af33f014dc7212e719a042d97a3cd8c30
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 5d2c90d20da8d44155a0bf0250a4cfd2ce55d4ac
+ms.sourcegitcommit: 3eacb968296e79e7e981fdc2a6f7f4f69c0920d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514952"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65040164"
 ---
 # <a name="windows-10-iot-resources"></a>Recursos de Windows 10 IoT
 
@@ -58,6 +58,7 @@ ms.locfileid: "59514952"
 * [Rosa robótica](https://customers.microsoft.com/en-us/story/misty-robotics)
 * [Askey Turbomate](https://customers.microsoft.com/en-us/story/askey)
 * [GLAS de Johnson Controls](https://customers.microsoft.com/en-us/story/johnson-controls)
+* [Keith & Koep cóctel ajuste](https://customers.microsoft.com/de-de/story/keith-koep)
 * [Kodisoft](https://customers.microsoft.com/en-us/story/kodisoft)
 * [Tecnologías de Redback](https://customers.microsoft.com/en-us/story/redback-technologies)
 
@@ -66,11 +67,11 @@ ms.locfileid: "59514952"
 
 * [Automatización industrial](https://www.hackster.io/projects/tags/industrial+automation+win10)
 * [Señalización digital](https://www.hackster.io/projects/tags/digital+signage+win10)
-* [atención sanitaria](https://www.hackster.io/projects/tags/healthcare+win10)
+* [Healthcare](https://www.hackster.io/projects/tags/healthcare+win10)
 * [Edificios inteligentes](https://www.hackster.io/projects/tags/smart+building+win10)
-* [Minoristas](https://www.hackster.io/projects/tags/retail+win10)
+* [Retail](https://www.hackster.io/projects/tags/retail+win10)
 * [Seguridad](https://www.hackster.io/projects/tags/security+win10)
-* [Energía](https://www.hackster.io/projects/tags/energy+win10)
+* [Energy](https://www.hackster.io/projects/tags/energy+win10)
 
 ## <a name="our-technology-partners"></a>Nuestros asociados de tecnología
 

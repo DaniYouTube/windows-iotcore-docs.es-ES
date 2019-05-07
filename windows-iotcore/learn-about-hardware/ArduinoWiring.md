@@ -6,14 +6,17 @@ ms.date: 09/06/17
 ms.topic: article
 description: Aprenda a crear, implementar y depurar el cableado Arduino dibujos en los dispositivos compatibles de Windows IoT Core.
 keywords: Windows iot, Arduino, Arduino cableado, plantilla, IoT Core, UWP
-ms.openlocfilehash: 212e69360e89daafe08c58a7b8bced94ea4410f2
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: ee6c64bdfd01e79d26bfa0a6c5f88f7735150393
+ms.sourcegitcommit: cbea9d713986fbe8b85e1bba1561a000188bd91c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514767"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64744797"
 ---
 # <a name="arduino-wiring-for-windows-iot-core-devices"></a>Conexión de Arduino para dispositivos de Windows IoT Core
+
+> [!IMPORTANT]
+> El equipo de Windows 10 IoT activamente ya no es mantener Arduino.
 
 Para habilitar el desarrollo y la reutilización de la conocida [Arduino cableado](https://www.arduino.cc/en/Reference/HomePage) dibujos en los dispositivos de IoT Core, una plantilla de proyecto de Visual Studio para la conexión de Arduino se proporciona como parte de la [plantillas de proyecto de Windows IoT Core extensión](https://go.microsoft.com/fwlink/?linkid=847472).
 

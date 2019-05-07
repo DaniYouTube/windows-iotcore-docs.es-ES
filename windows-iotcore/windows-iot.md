@@ -6,14 +6,17 @@ ms.date: 01/30/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de Windows 10 IoT y lo que puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Windows 10 IoT Core, sin periféricos, voz, características, edición binaria, las ediciones
-ms.openlocfilehash: ecfb80049b4fe1dd5437faf6bce410f9fcb3c528
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: f1ff68d1efe967eee0472eec54b5354d47c9447a
+ms.sourcegitcommit: 1f6afcfee0cb5557dc21c7b15e199bc557d8eedb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514259"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65171348"
 ---
 # <a name="an-overview-of-windows-10-iot"></a>Información general de Windows 10 IoT 
+
+> [!NOTE]
+> Contenedores de Windows 10 solo pueden usarse con Windows IoT Core y Windows IoT Enterprise para las implementaciones comerciales de uso de Microsoft Azure IoT Edge.
 
 ## <a name="what-is-windows-10-iot"></a>¿Qué es Windows 10 IoT?
 Windows 10 IoT es un miembro de la familia de Windows 10 que aporta la potencia de clase empresarial, seguridad y facilidad de uso a Internet de las cosas.  Aprovecha de Windows embedded experiencia, ecosistema y en la nube conectividad, lo que permite a las organizaciones crear su Internet de las cosas con dispositivos seguros que se pueden aprovisionar rápidamente, fáciles de administrar y conectados a la perfección a una estrategia de nube global.  
@@ -86,6 +89,9 @@ REG ADD "HKCU\Control Panel\Accessibility" /v DynamicScrollbars /t REG_DWORD \d 
 * No todas las carpetas en el dispositivo son accesibles para las aplicaciones universales de Windows. Puede usar la herramienta FolderPermissions para crear una carpeta accesibles para una aplicación para UWP en Windows 10 IoT Core. Por ejemplo, ejecute FolderPermissions c:\test -e para dar acceso de aplicaciones UWP a la carpeta c:\test. Sin embargo, esto no está disponible en el escritorio.
 
 Todas las diferencias que se ha mostrado en esta publicación pueden desaparecer a medida que pasa el tiempo porque Windows 10 IoT Core es mantener la actualización.
+
+## <a name="iot-edge-support-for-windows-10-iot"></a>Compatibilidad de IoT Edge para Windows 10 IoT
+Para más información acerca de IoT Edge soporte técnico para Windows 10 IoT, por favor, puede obtener más información sobre "Sistemas operativos" en el artículo de Azure IoT Edge [aquí](https://docs.microsoft.com/en-us/azure/iot-edge/support#operating-systems).
 
 
 ## <a name="helpful-resources"></a>Recursos útiles

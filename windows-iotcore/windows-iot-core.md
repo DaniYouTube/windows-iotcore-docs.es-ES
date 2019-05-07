@@ -6,14 +6,17 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de Windows 10 IoT Core y lo que puede hacer con él.
 keywords: Windows 10 IoT Core, superficie pequeña, sin periféricos
-ms.openlocfilehash: 1be159b685ffed30effbb2ae8abc80ded8edd879
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: d5b9c59ad735d66b4812e6303f6298a33da44d33
+ms.sourcegitcommit: 1f6afcfee0cb5557dc21c7b15e199bc557d8eedb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514248"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65171358"
 ---
 # <a name="windows-10-iot-core"></a>Windows 10 IoT Core
+
+> [!NOTE]
+> Contenedores de Windows 10 solo pueden usarse con Windows IoT Core y Windows IoT Enterprise para las implementaciones comerciales de uso de Microsoft Azure IoT Edge.
 
 ## <a name="what-is-windows-10-iot-core"></a>¿Qué es Windows 10 IoT Core?
 Windows 10 IoT Core es una versión de Windows 10 que está optimizado para los dispositivos más pequeños con o sin una pantalla que se ejecutan en tanto ARM y dispositivos x86/x64. La documentación de Windows IoT Core, proporciona información sobre conectar, administrar, actualizar, proteger los dispositivos y mucho más. 

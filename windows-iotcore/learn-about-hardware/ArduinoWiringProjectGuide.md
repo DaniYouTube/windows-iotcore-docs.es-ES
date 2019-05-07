@@ -6,20 +6,26 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre la creación, el programa de instalación e implementación de un proyecto de cableado de Arduino con Windows IoT Core.
 keywords: iot, Arduino, Arduino cableado de Windows, un rendimiento increíblemente, Visual Studio
-ms.openlocfilehash: baa904d1d5f23db15fd1dacd05c749449dc91213
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 7c5e51efd20de014af4533587fbe6f210140b793
+ms.sourcegitcommit: cbea9d713986fbe8b85e1bba1561a000188bd91c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514536"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64744810"
 ---
 # <a name="arduino-wiring-project-guide"></a>Guía de proyectos de la conexión de Arduino
+
+> [!IMPORTANT]
+> El equipo de Windows 10 IoT activamente ya no es mantener Arduino.
 
 Esta guía le guiará a través de la creación, el programa de instalación e implementación de un proyecto de cableado de Arduino con Windows IoT Core.
 
 Proyectos de la conexión de Arduino usan la API de cableado de familiar y fácil de usar Arduino con controladores de Windows IoT relámpago DMAP: un controlador mediante la asignación de memoria directa para proporcionar importantes [velocidades de rendimiento](../develop-your-app/LightningPerformance.md). Puede copiar & Pegar Arduino Bocetos y las bibliotecas en sus proyectos de IoT Core Arduino cableado y ejecútelas en admitidos IoT Core dispositivos, incluidos Raspberry Pi2, 3 y Minnowboard máximo! Consulte la sección de desarrollo de esta página para obtener más información.
 
 ## <a name="install-the-microsoft-iot-templates"></a>Instalar las plantillas de IoT de Microsoft
+
+> [!NOTE]
+> Descarga de VS 2015 para acceder a las plantillas de cableado Arduino - estas plantillas no son ningún solitaria admitido en VS 2017 y versiones posteriores.
 
 Hemos proporcionado una extensión de Visual Studio que se instalará automáticamente una plantilla de VS para los proyectos de la conexión de Arduino, así como otros tipos de proyecto de IoT de Microsoft. 
 

@@ -6,14 +6,17 @@ ms.date: 02/07/2019
 ms.topic: article
 description: Obtenga información sobre qué es Windows Server IoT 2019 y lo que puede hacer con él.
 keywords: Windows Server IoT 2019, capacidad de administración empresarial, ecosistema de Windows, IoT
-ms.openlocfilehash: d3e172aa4073e0c0e853d31b2d50fb83d588dd00
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 07c361d2b34aebe645659900587c25b92de442be
+ms.sourcegitcommit: f447681d9a73ebdec97a3da973bd798a02df975d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514243"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65197664"
 ---
 # <a name="an-overview-of-windows-server-iot-2019"></a>Información general de Windows Server IoT 2019
+
+> [!NOTE]
+> Contenedores de Windows 10 se admiten para implementaciones comerciales en el servidor de Windows IoT y Windows Server 2019.
 
 ## <a name="what-is-windows-server-iot-2019"></a>¿Qué es Windows Server IoT 2019?
 Windows Server IoT 2019 es una versión completa de Windows Server 2019 que ofrece seguridad y capacidad de administración empresarial para las soluciones de IoT. Windows Server IoT 2019 comparte todos los beneficios del ecosistema de Windows en todo el mundo. Es un archivo binario equivalente a Windows Server 2019, por lo que puede usar el mismo desarrollo conocido y herramientas de administración que utiliza en los servidores de uso general. Sin embargo, cuando se trata de licencias y distribución, la versión de uso general y IoT difieren.  Windows Server IoT 2019 solo tiene licencia a través del canal OEM bajo los derechos de uso dedicado especial.

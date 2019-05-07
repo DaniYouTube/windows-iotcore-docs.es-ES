@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre las interfaces periféricas y los protocolos que admite Windows 10 IoT Core mejor.
 keywords: Windows iot, periféricos, protocolos, compatibilidad, buses, hardware
-ms.openlocfilehash: 819414db94d01e826fbcf721c911fff9d02f6c94
-ms.sourcegitcommit: b79c2b74968e552bee664ecc886725754d183657
+ms.openlocfilehash: 54ca0f706033a8a3eef0704534805d0d6b379083
+ms.sourcegitcommit: 77caab0cfa47c74c66777c3cf5eeaa0ec9ac5784
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59515264"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64981936"
 ---
 # <a name="hardware-compatibility-list"></a>Lista de compatibilidad de hardware
 
@@ -70,7 +70,7 @@ Windows 10 IoT Core es compatible con una variedad de interfaces de periféricos
 > | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified  | 
 > |----------------|-------------------|-------------|--------|------------------------------|
 > | Aeon Labs Z-Wave Z Stick serie 2 USB llave DSA02203-ZWUS | ARM32 | Controlador de Z-Stick USB de serie 2 Z-Wave |  | &#10004; |
-> | [Pizarra electrónica 7" LCD capacitativa pantalla táctil](https://www.chalk-elec.com/?page_id=1280#!/7-black-frame-universal-HDMI-LCD-with-capacitive-multi-touch/p/21750201/category=3094861) | ARM32 | | [La actualización del firmware](https://www.chalk-elec.com/?p=1826) | &#10004; |
+> | [Pizarra electrónica 7" LCD capacitativa pantalla táctil](https://www.chalk-elec.com/?page_id=1280#!/7-black-frame-universal-HDMI-LCD-with-capacitive-multi-touch/p/21750201/category=3094861) | ARM32 | | [Actualización del firmware](https://www.chalk-elec.com/?p=1826) | &#10004; |
 > | Vodafone (Huawei) K5150 | ARM32, x64, x86 | Vodafone (Huawei) K5150 150 Mbps 4G LTE FDD USB móvil módem de banda ancha |  | &#10004;  |
 > | Vodafone (Huawei) K5160 | ARM32, x64, x86 | Vodafone (Huawei) K5160 150 Mbps GSM/EDGE / 3G/HSPA c++ / módem de banda ancha móvil LTE CAT4 USB |  | |
 > | Sierra inalámbrica carretera (AirCard 340U) | x64, x86 |    Sierra carretera inalámbrica (AirCard 340U) 4G LTE USB móvil módem de banda ancha |  |&#10004; |
@@ -79,11 +79,11 @@ Windows 10 IoT Core es compatible con una variedad de interfaces de periféricos
 
 ## <a name="other-hardware-peripherals"></a>Otros dispositivos periféricos de Hardware
 
-### <a name="storage-media"></a>Medios de almacenamiento
-> | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified  | 
+### <a name="nfcrfidproximity"></a>NFC/RFID/proximidad
+> | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified |
 > |----------------|-------------------|-------------|--------|------------------------------|
-> | [Samsung 32GB EVO Class 10 Micro SDHC](https://www.amazon.com/gp/product/B00IVPU786) | AARM32, x64, x86 | Una tarjeta SD recomendada para los dispositivos que pueden tener Windows 10 IoT Core se vacían. | | &#10004;|
-> | [SanDisk Ultra Micro SDHC 16GB](https://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445) | ARM32, x64, x86 | Una tarjeta SD recomendada para los dispositivos que pueden tener Windows 10 IoT Core se vacían. | | &#10004; |
+> | Panel de demostración NXP OM5577 | ARM32 | Placa de demostración para el chip NXP PN7120 NFC. | [Documentación de ProximityDevice](https://docs.microsoft.com/uwp/api/Windows.Networking.Proximity.ProximityDevice) | &#10004; |
+> | NXP PN547/PN548/PN7120 | ARM32, x64, x86 | Admite los chips NXP NFC. | | &#10004; |
 
 ### <a name="pi-hats"></a>Sombreros PI
 > | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified  | 
@@ -92,12 +92,24 @@ Windows 10 IoT Core es compatible con una variedad de interfaces de periféricos
 > | [Dexter Industries GrovePi](https://www.dexterindustries.com/shop/grovepi-board/) | ARM32 | Puede conectarse a cientos de diferentes sensores sin soldadura, por lo que se puede programar para supervisar, control y automatizar los dispositivos de su vida. | [Ejemplos de GrovePi](https://github.com/DexterInd/GrovePi/) | |
 > | Dexter Industries GoPiGo | ARM, x32 | El GoPiGo es un robot agradable y completado para Raspberry Pi que Pi se convierte en un robot completamente operativo. GoPiGo es una plataforma robótica móvil para Raspberry Pi desarrollado por Dexter sectores. | [Ejemplos de GoPiGo](https://github.com/DexterInd/GoPiGo/tree/master/Software/CSharp) | |
 
+### <a name="port-expanders"></a>Ampliadores de puertos
+> | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified  | 
+> |----------------|-------------------|-------------|--------|------------------------------|
+> | Botón de expansión de puerto de E/S de 8 bits MCP23008 | ARM32, x64, x86 | Chip de interfaz i2c, puerto GPIO expansor. 8 puertos, el paquete de 18 PDIP | [Ejemplo de puerto SPI Explander](https://www.hackster.io/4803/i2c-port-expander-sample-0a6d4f) | &#10004; |
+> | Botón de expansión de puerto de E/S de 16 bits MCP23S17 | ARM32, x64, x86 | Chip de interfaz i2c, puerto GPIO expansor. paquete de 28 SPDIP de 16 puertos | [Ejemplo de Piano interactivo](https://www.hackster.io/windowsiot/build-2014-piano-3b449c) | &#10004; |
+
+### <a name="storage-media"></a>Medios de almacenamiento
+> | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified  | 
+> |----------------|-------------------|-------------|--------|------------------------------|
+> | [Samsung 32GB EVO Class 10 Micro SDHC](https://www.amazon.com/gp/product/B00IVPU786) | AARM32, x64, x86 | Una tarjeta SD recomendada para los dispositivos que pueden tener Windows 10 IoT Core se vacían. | | &#10004;|
+> | [SanDisk Ultra Micro SDHC 16GB](https://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445) | ARM32, x64, x86 | Una tarjeta SD recomendada para los dispositivos que pueden tener Windows 10 IoT Core se vacían. | | &#10004; |
+
 ### <a name="sensors"></a>Sensores
 > | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified  | 
 > |----------------|-------------------|-------------|--------|------------------------------|
 > | Sensor de temperatura y humedad básica DHT11 | ARM32, x64, x86 | Un básico, ultra bajo costo temperatura y humedad sensor digital. Se usa un sensor de humedad de las capacidades y un termistor para medir el aire circundante y arroja una señal digital en el pin de datos (no es necesitados ningún PIN entrados analógicos).  | [GpioOneWireSample (DHT11)](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/GpioOneWire)| &#10004; |
 > | Sensor de humedad y temperatura DHT22 | ARM32, x64, x86 | Un básico, ultra bajo costo temperatura y humedad sensor digital. Se usa un sensor de humedad de las capacidades y un termistor para medir el aire circundante y arroja una señal digital en el pin de datos (no es necesitados ningún PIN entrados analógicos).  | [GpioOneWireSample (DHT11)](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/GpioOneWire) | &#10004; |
-> | Desglose de acelerómetro de eje SparkFun Triple - ADXL345 | ARM32, x64, x86 | Pequeño, ligero, de baja potencia, 3 ejes acelerómetro MEMS con mediciones de alta resolución (13 bits) con hasta ±16 g. Datos de salida digital con el formato de complemento a dos de 16 bits y son accesibles a través de una interfaz digital I2C o SPI (3 o 4 cables). |[Muestra de acelerómetro](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Accelerometer) | &#10004; |
+> | Desglose de acelerómetro de eje SparkFun Triple - ADXL345 | ARM32, x64, x86 | Pequeño, ligero, de baja potencia, 3 ejes acelerómetro MEMS con mediciones de alta resolución (13 bits) con hasta ±16 g. Datos de salida digital con el formato de complemento a dos de 16 bits y son accesibles a través de una interfaz digital I2C o SPI (3 o 4 cables). |[Ejemplo de acelerómetro](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Accelerometer) | &#10004; |
 > | Sensor barométrica y temperatura Adafruit BMP280 | ARM32 | Sensor de medioambientales Bosch con la temperatura, presión barométrica | |   &#10004; |
 > | [Sensor de Adafruit TCS34725 de Color](http://www.adafruit.com/products/1334) | ARM, x32 | Sensor de Color RGB con filtro IR y LED blanco - TCS34725 | | &#10004; |
 > | Sensor de luz ambiente ROHM BH1750FVI | ARM32 | Sensor de I2C pequeño para la medición de luz ambiente | [Ejemplos de i2c](https://github.com/mickut/Win10-IoT-Sensors) | |
@@ -105,18 +117,10 @@ Windows 10 IoT Core es compatible con una variedad de interfaces de periféricos
 > | Sensor de humedad relativa Dorji DSTH01 | ARM32 | Sensor de humedad relativa i2c | [Ejemplos de i2c](https://github.com/mickut/Win10-IoT-Sensors)| |
 > | Honeywell HMC5883L brújula 3 ejes digital/magnetómetro | ARM32 | Un pequeño magnetómetro 3 ejes de mediciones de uso y el campo magnético brújula digitales | [Ejemplos de i2c](https://github.com/mickut/Win10-IoT-Sensors) | |
 
-
-### <a name="port-expanders"></a>Ampliadores de puertos
-> | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified  | 
+### <a name="touchpanel-solutions"></a>Soluciones TouchPanel
+> | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified | 
 > |----------------|-------------------|-------------|--------|------------------------------|
-> | Botón de expansión de puerto de E/S de 8 bits MCP23008 | ARM32, x64, x86 | Chip de interfaz i2c, puerto GPIO expansor. 8 puertos, el paquete de 18 PDIP | [Ejemplo de puerto SPI Explander](https://www.hackster.io/4803/i2c-port-expander-sample-0a6d4f) | &#10004; |
-> | Botón de expansión de puerto de E/S de 16 bits MCP23S17 | ARM32, x64, x86 | Chip de interfaz i2c, puerto GPIO expansor. paquete de 28 SPDIP de 16 puertos | [Ejemplo de Piano interactivo](https://www.hackster.io/windowsiot/build-2014-piano-3b449c) | &#10004; |
-
-### <a name="nfcrfidproximity"></a>NFC/RFID/proximidad
-> | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified |
-> |----------------|-------------------|-------------|--------|------------------------------|
-> | Panel de demostración NXP OM5577 | ARM32 | Placa de demostración para el chip NXP PN7120 NFC. | [Documentación de ProximityDevice](https://docs.microsoft.com/uwp/api/Windows.Networking.Proximity.ProximityDevice) | &#10004; |
-> | NXP PN547/PN548/PN7120 | ARM32, x64, x86 | Admite los chips NXP NFC. | | &#10004; |
+> | Keith & Koep CoverLens de M7 i-panorámica | ARM32 | 7.0 pulgadas equipo Touchpanel para su uso industrial con CPU de Qualcomm Snapdragon 410E, resolución 800x480px, brillo 850cd/qm, USB 2.0, tarjeta SD, POE | [información de i-panorámica M7](https://keith-koep.com/en/products/products-hmi/i-pan-m7-coverlens-arm-touch-panel-computer-technical-data/) | &#10004; |
 
 ### <a name="miscellaneous"></a>Varios
 > | Nombre de elemento o no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft Verified | 

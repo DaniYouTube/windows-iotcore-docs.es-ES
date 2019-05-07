@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre lo que hace el panel de Windows 10 IoT Core y cómo empezar a trabajar.
 keywords: Windows iot, panel de windows 10 iot core, panel de windows iot, los dispositivos
-ms.openlocfilehash: d21b67dad15d510564ec7fae28a2431d28faf8be
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: af87ff8224cf77b567b1dd96e6de2297b4752530
+ms.sourcegitcommit: f447681d9a73ebdec97a3da973bd798a02df975d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514960"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65197677"
 ---
 # <a name="windows-10-iot-core-dashboard"></a>Panel de Windows 10 IoT Core
 
@@ -20,7 +20,7 @@ Panel de Windows 10 IoT Core es la mejor manera de descargar, configurar y conec
 Puede descargar el [IoT Core aquí panel](http://go.microsoft.com/fwlink/?LinkID=708576).
 
 > [!NOTE]
-> Si se detecta que está obteniendo una pantalla en blanco al abrir el panel de IoT después de descargar, puede que debido a un problema de controlador. Para solucionar este problema, necesitará descargar el [formato zip](https://downloadmirror.intel.com/27894/a08/win64_24.20.100.6229.zip) del controlador de gráficos Intel e instalar manualmente el controlador. 
+> Si se detecta que está obteniendo una pantalla en blanco al abrir el panel de IoT después de descargar, puede deberse a un problema de controlador. Para solucionar este problema, necesitará descargar el [formato zip](https://downloadmirror.intel.com/27894/a08/win64_24.20.100.6229.zip) del controlador de gráficos Intel e instalar manualmente el controlador. 
 
 ## <a name="set-up-a-new-device"></a>Configurar un dispositivo nuevo
 

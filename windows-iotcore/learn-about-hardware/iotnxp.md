@@ -6,12 +6,12 @@ ms.date: 02/22/2019
 ms.topic: article
 description: Obtenga información sobre Windows 10 IoT Core y NXP i.MX Qualcomm
 keywords: Windows 10 IoT Core, introducción, i.MX, NXP
-ms.openlocfilehash: 2dc212fa403e2d8d4c32bffbae3c8bcd97b5b022
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: a6331b8f5695c2a432e1b22f1ba275cd48c549e4
+ms.sourcegitcommit: 3eacb968296e79e7e981fdc2a6f7f4f69c0920d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514431"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65040184"
 ---
 # <a name="window-10-iot-core-and-nxp-imx-socs"></a>Windows 10 IoT Core y NXP Qualcomm i.MX
 
@@ -77,7 +77,7 @@ Varios socios de Microsoft y NXP habilitó comercial i.MX 6, 7, i.MX y i.MX 8M d
 </tr>
 
 <tr class="odd">
-<td align="left"><p><a href="http://wce.keith-koep.com/en/products/pconxs-ff/">Keith & Koep pConXS</a> con <a href="http://wce.keith-koep.com/en/products/trizeps7-i.MX6/">Trizeps VII</a></p></td>
+<td align="left"><p><a href="https://keith-koep.com/de/produkte/produkte-baseboards/pconxs-baseboard-vollausstattung-technische-daten/">Keith & Koep pConXS</a> con <a href="https://keith-koep.com/de/produkte/produkte-trizeps/trizeps-vii-technische-daten-imx6/">Trizeps VII</a></p></td>
 <td align="left"><p><p><a href="mailto:contact@keith-koep.com">contact@keith-koep.com</a></p></td>
 </tr>
 
