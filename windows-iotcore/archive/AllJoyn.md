@@ -8,15 +8,15 @@ ms.prod: windows-iot
 ms.technology: IoT
 description: Obtenga información sobre AllJoyn, un protocolo común para los dispositivos de IoT y cómo permite que otras extensiones y características con Windows IoT.
 keywords: Windows iot, AllJoyn
-ms.openlocfilehash: 6655cf5e8584a9c7046301cda24b10348a704d6e
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 6b558680d479c71b6b8a22d34d03b04e5cbdbd76
+ms.sourcegitcommit: 0f46b7b5c15906a6c82b847ffcd9f4d2674f9fd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514291"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226834"
 ---
 > [!NOTE]
-> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, abra una incidencia en GitHub o enviarnos sus comentarios en los comentarios a continuación.
+> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, alternativas, el protocolo de IoT de capa de aplicación que sirve para AllJoyn es el [Open Foundation conectividad](https://openconnectivity.org). La implementación estándar de la especificación OCF es Iotivity: puede encontrar soporte técnico de Windows para Iotivity [aquí](https://wiki.iotivity.org/windows).
 
 # <a name="alljoyn"></a>AllJoyn
 
@@ -80,7 +80,7 @@ El Explorador de IoT para AllJoyn (anteriormente conocido como el Explorador de 
 * [Crear sesión técnica AllJoyn de 2015](https://channel9.msdn.com/Events/Build/2015/2-623)
 * [WinHEC 2015 AllJoyn Technical sesión](https://channel9.msdn.com/Events/WinHEC/2015/IOT200)
 
-**Muestras**
+**Ejemplos**
 
 * [Productores AllJoyn](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ProducerExperiences)
 * [Consumidores de AllJoyn](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ConsumerExperiences)

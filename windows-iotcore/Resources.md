@@ -6,30 +6,30 @@ ms.date: 09/07/18
 ms.topic: article
 description: Aprovechar todos los recursos de la Comunidad de Windows 10 IoT.
 keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, recursos más valiosos personas, vídeos, blogs
-ms.openlocfilehash: 5d2c90d20da8d44155a0bf0250a4cfd2ce55d4ac
-ms.sourcegitcommit: 3eacb968296e79e7e981fdc2a6f7f4f69c0920d1
+ms.openlocfilehash: c144aabe4662deba7efa990a5af3d59ffe1531b8
+ms.sourcegitcommit: 0f46b7b5c15906a6c82b847ffcd9f4d2674f9fd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65040164"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226819"
 ---
 # <a name="windows-10-iot-resources"></a>Recursos de Windows 10 IoT
 
 ## <a name="blog-posts"></a>Entradas de blog
 
+* [Modernización de sistemas de Windows CE con Windows 10 IoT](https://blogs.windows.com/buildingapps/2019/05/07/modernizing-windows-ce-systems-with-windows-10-iot/#oHzjguRIlWV0ryo6.97)
+* [Abra robótica y Microsoft versión ROS en Windows 10 IoT Enterprise](https://blogs.windows.com/buildingapps/2019/05/07/open-robotics-and-microsoft-release-ros-on-windows-10-iot-enterprise/#Y86A6YUJELKDoRJJ.97)
+* [Disponibilidad general del dispositivo agente V2 de Microsoft Azure IoT](https://blogs.windows.com/buildingapps/2019/05/07/microsoft-azure-iot-device-agent-v2-general-availability/#BwOSxBSymeJqU34K.97)
 * [Evolución de Windows IoT: La base para el perímetro inteligente](https://blogs.windows.com/windowsexperience/2019/04/03/evolution-of-windows-iot-the-foundation-for-your-intelligent-edge/)
-* [Microsoft Azure IoT dispositivo agente V2 Public Preview ya está disponible](https://blogs.windows.com/windowsexperience/2019/01/15/microsoft-azure-iot-device-agent-v2-public-preview-now-available/#fB07iWklwq1Ro8dk.97)
 * [Windows 10 IoT ofrece innovación e inteligencia en el perímetro con el de octubre de 2018 actualización](https://blogs.windows.com/windowsexperience/2018/10/04/windows-10-iot-delivers-innovation-and-intelligence-at-the-edge-with-the-october-2018-update/#9g9hmmO2AdUB1C6F.97) 
-* [La eficacia de Windows 10 en el sistema operativo de Robot](https://blogs.windows.com/windowsexperience/2018/09/28/bringing-the-power-of-windows-10-to-the-robot-operating-system/#pqcOPjyO74t65LGb.97)
-* [IoT en acción: Desarrollar soluciones inteligentes que cambie el mundo](https://blogs.windows.com/windowsexperience/2018/09/05/iot-in-action-developing-intelligent-solutions-that-change-the-world/#GHq5SrW6ffImgLgv.97)
 * [Windows 10 IoT: IoT hoy en día de mañana](https://blogs.windows.com/windowsexperience/2018/06/05/windows-10-iot-tomorrows-iot-today/#wl3TcsFseJ6XROUZ.97)
 * [Más en el intelligent edge con Windows 10 IoT](https://blogs.windows.com/windowsexperience/2018/05/07/do-more-at-the-intelligent-edge-with-windows-10-iot/#uDVaAtoBvz7BGrTf.97)
-* [DevOps para IoT con Windows 10 IoT Core, UWP y VSTS](https://blogs.msdn.microsoft.com/devops/2018/03/07/devops-for-iot-with-win10-iot-core-uwp-and-vsts/)
 * [Duplica Microsoft hacia abajo en Windows 10 IoT con se agregó compatibilidad con](https://blogs.windows.com/windowsexperience/2018/02/27/microsoft-doubles-down-on-windows-10-iot-with-added-support/#DJaDiKX0bYJ1JDHD.97)
 
 ## <a name="videos"></a>Vídeos
 
 >[!Video https://www.youtube.com/embed/Cmj0sxBRofs]
+* [Modernización de dispositivos de Windows CE](https://www.youtube.com/watch?time_continue=1&v=5iUZkZmgmJA)
 * [Introducción a Windows Server IoT 2019](https://channel9.msdn.com/Shows/Internet-of-Things-Show/Introduction-to-Windows-Server-IoT-2019)
 * [Introducción a ROS en Windows](https://www.youtube.com/watch?v=nZSjwMLi3jQ)
 * [Agente de dispositivo IoT de Azure para Windows](https://www.youtube.com/watch?v=DZn6diOn7uI)
