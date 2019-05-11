@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo usar un módulo de plataforma segura para habilitar las capacidades de cifrado para proteger mejor los dispositivos.
 keywords: Windows iot, seguridad, módulo de plataforma segura, TPM, criptografía, las claves
-ms.openlocfilehash: cf22811cbf45b5c715a19b8e12d7b00c2afaa9b8
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 70552a5f98891281879f1d45cbdbd671b56dd902
+ms.sourcegitcommit: 77b86eee2bba3844e87f9d3dbef816761ddf0dd9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514515"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65533319"
 ---
 # <a name="trusted-platform-module-tpm-on-windows-10-iot-core"></a>Módulo de plataforma segura (TPM) en Windows 10 IoT Core
 
@@ -38,7 +38,8 @@ Los cambios y mejoras en comparación con el TPM 1.2 anteriores incluyen:
 * Administración simplificada de TPM
 * Capacidades adicionales para mejorar la seguridad de servicios de plataforma
 
-Tenga en cuenta que Windows IoT Core es compatible con sólo TPM 2.0 y no es compatible con el TPM 1.2 obsoleta.
+> [!NOTE] 
+> Windows IoT Core es compatible con sólo TPM 2.0 y no es compatible con el TPM 1.2 obsoleta.
 
 ## <a name="what-is-tbs"></a>¿Qué es TB? 
 La característica Servicios de Base TPM (TBS) es un servicio de sistema que permite el uso compartido de los recursos TPM. Comparte los recursos TPM entre varias aplicaciones en la misma máquina física a través de llamadas a procedimiento remoto (RPC). Centraliza el acceso a TPM a través de las aplicaciones que usan las prioridades especificadas por las aplicaciones que realiza la llamada.  

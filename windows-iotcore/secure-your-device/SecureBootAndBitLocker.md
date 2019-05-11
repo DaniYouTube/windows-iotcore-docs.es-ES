@@ -6,49 +6,90 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 keywords: Windows iot, arranque seguro, BitLocker, protección de dispositivos, seguridad, seguridad de llave en mano
-ms.openlocfilehash: 68698a1b440b297eb9bfa9223bd324ce330386b9
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 957b81a0a5bc032c62fa75598418778862fdf76d
+ms.sourcegitcommit: 77b86eee2bba3844e87f9d3dbef816761ddf0dd9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514900"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65533337"
 ---
 # <a name="enabling-secure-boot-bitlocker-and-device-guard-on-windows-10-iot-core"></a>Habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 
-## <a name="introduction"></a>Introducción
+Windows 10 IoT Core ahora incluye ofertas de características de seguridad como arranque seguro de UEFI, cifrado de dispositivo de BitLocker y Device Guard.  Estos le ayudará a los generadores de dispositivo crear totalmente bloqueado de los dispositivos de IoT de Windows que sean resistentes a muchos tipos diferentes de los ataques.  Juntas, estas características ofrecen la protección óptima que garantiza que se iniciará una plataforma de una forma definida, mientras el bloqueo de archivos binarios desconocidos y proteger los datos de usuario mediante el uso de cifrado de dispositivo.
 
-Con el lanzamiento de Creators Update, Windows 10 IoT Core mejora sus ofertas de características de seguridad para incluir el arranque seguro de UEFI, dispositivo de cifrado de BitLocker y Device Guard.  Esto permite a los generadores de dispositivo en la creación de bloqueado completamente los dispositivos de IoT de Windows que sean resistentes a muchos tipos diferentes de los ataques.  Juntas, estas características ofrecen la protección óptima que garantiza que se iniciará una plataforma de una forma definida, mientras el bloqueo de archivos binarios desconocidos y proteger los datos de usuario mediante el uso de cifrado de dispositivo.
+## <a name="boot-order"></a>Orden de arranque
 
-### <a name="secure-boot"></a>Arranque seguro
+Antes de que podemos adentrarnos en los componentes individuales que proporcionan una plataforma segura para el dispositivo de IoT, es necesario comprender el orden de arranque en un dispositivo Windows 10 IoT Core.
 
-Arranque seguro de UEFI es el primer punto de cumplimiento de directiva, ubicado en UEFI.  Restringe el sistema para permitir solo la ejecución de archivos binarios firmados por una entidad determinada. Esta característica evita que código desconocido se ejecuta en la plataforma y potencialmente debilitar su seguridad de ella.
+Hay tres áreas principales que se producen cuando un dispositivo de IoT está encendido, todo el proceso para la carga de kernel del sistema operativo y la ejecución de la aplicación instalada.
 
-### <a name="bitlocker-device-encryption"></a>Cifrado de dispositivos de BitLocker
+* Arranque seguro de plataforma
+* Arranque seguro (UEFI) de la interfaz de Firmware Extensible unificada
+* Integridad de código de Windows
 
-Windows 10 IoT Core también implementa una versión ligera de cifrado de dispositivo de BitLocker, protección de los dispositivos de IoT contra ataques sin conexión.  Esta funcionalidad tiene una dependencia fuerte en la presencia de un TPM en la plataforma, incluido el protocolo preOS necesarios en UEFI que toma las medidas necesarias. Estas medidas de preOS asegurarse de que el sistema operativo posterior tenga un registro definitivo de cómo se inició el sistema operativo; Sin embargo, no aplica las restricciones de ejecución.
+![Captura de pantalla de panel](../media/SecureBootAndBitLocker/BootOrder.jpg)
 
-> [!TIP]
-> Funcionalidad de BitLocker en Windows 10 IoT Core permite para el cifrado automático de volumen del sistema operativo basado en NTFS al enlazar todos los volúmenes de datos NTFS disponibles en él.  Para ello, es necesario para asegurarse de que el volumen EFIESP GUID se establece en _C12A7328-F81F-11D2-BA4B-00A0C93EC93B_.
-
-### <a name="device-guard-on-windows-iot-core"></a>Device Guard en Windows IoT Core
-
-La mayoría de los dispositivos de IoT se crean como dispositivos de funciones fijas.  Esto implica que los generadores de dispositivo saben exactamente qué firmware, sistemas operativos, controladores y aplicaciones deben ejecutarse en un dispositivo determinado.  A su vez, esta información puede ser utilizado totalmente bloquear un dispositivo IoT solo tiene que permitir la ejecución de código conocida y de confianza.  Device Guard en Windows 10 IoT Core puede ayudar a proteger los dispositivos de IoT, lo que garantiza que no se puede ejecutar código ejecutable desconocido o que no se confía en los dispositivos bloqueados.
+Puede encontrar información adicional sobre el proceso de arranque de Windows 10 [aquí](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process).
 
 ## <a name="locking-down-iot-devices"></a>Dispositivos IoT bloquear
 
-Con el fin de bloquear un dispositivo Windows IoT, se deben realizar las siguientes consideraciones...
+En orden de bloqueo de un dispositivo Windows IoT, se deben realizar las siguientes consideraciones.
 
-### <a name="uefi-platform--secure-boot"></a>Plataforma UEFI y arranque seguro
+### <a name="platform-secure-boot"></a>Arranque seguro de plataforma
 
-Para poder aprovechar las capacidades de Device Guard, es necesario garantizar que los archivos binarios de arranque y el firmware UEFI están firmados y no se puedan alterar.  Arranque seguro de UEFI es el primer punto de cumplimiento de directiva, ubicado en UEFI.  Evita la alteración mediante la restricción del sistema para solo permitir la ejecución de los archivos binarios de arranque firmado por una entidad especificada. Obtener más detalles sobre el arranque seguro, junto con instrucciones para la administración y la creación de la clave está disponible [aquí](https://technet.microsoft.com/library/dn747883.aspx).
+Cuando el dispositivo está encendido en primer lugar, es el primer paso del proceso general de arranque cargar y ejecutar firmware cargadores de arranque, que inicializan el hardware en los dispositivos y proporcionan funcionalidad de intermitencia de emergencia. El entorno de UEFI, a continuación, se cargan y se cede el control.
 
-### <a name="configurable-code-integrity-cci"></a>Integridad de código configurable (CCI)
+Estos cargadores de arranque de firmware son específicos de SoC, por lo que necesita trabajar con el fabricante del dispositivo adecuado para tener estos cargadores de arranque creados en el dispositivo.
 
-Integridad de código (CI) mejora la seguridad del sistema operativo al validar la integridad de un controlador o una aplicación cada vez que se carga en la memoria. Elemento de configuración contiene dos componentes principales: integridad de código de modo Kernel (KMCI) y la integridad de código de modo de usuario (UMCI).
+### <a name="uefi-secure-boot"></a>Arranque seguro de la UEFI
+
+Arranque seguro de UEFI es el primer punto de cumplimiento de directivas y se encuentra en UEFI.  Restringe el sistema para permitir solo la ejecución de archivos binarios firmados por una entidad determinada, como los controladores de firmware, ROM, controladores UEFI o aplicaciones y los cargadores de arranque UEFI. Esta característica evita que código desconocido se ejecuta en la plataforma y potencialmente debilitar su seguridad de ella. Arranque seguro reduce el riesgo de ataques de malware previo al arranque en el dispositivo, como los rootkits. 
+
+OEM, deberá almacenar el arranque seguro de UEFI bases de datos en el dispositivo de IoT en tiempo de fabricación. Estas bases de datos incluyen la firma de base de datos (db), revocar la firma (dbx) y la base de datos de inscripción de clave (KEK). Estas bases de datos se almacenan en el firmware RAM no volátil (NV-RAM) del dispositivo.
+
+* **Base de datos de la firma (db):** Esto enumera los firmantes o códigos hash de la imagen de cargadores del sistema operativo, aplicaciones UEFI y controladores UEFI que pueden cargarse en el dispositivo
+
+* **Revocar la base de datos de firma (dbx):** Esto enumera los firmantes o códigos hash de la imagen de cargadores del sistema operativo, aplicaciones UEFI y controladores UEFI que ya no son de confianza y están *no* permite que se cargue en el dispositivo 
+
+* **Base de datos de inscripción de clave (KEK):** Contiene una lista de claves que pueden usarse para actualizar la firma y revocar las bases de datos de la firma de firma.
+
+Una vez que se crean estas bases de datos y se agrega al dispositivo, el OEM bloquea el firmware de la edición y genera una plataforma (PK) de la clave de firma. Esta clave se puede utilizar para firmar las actualizaciones a la KEK o para deshabilitar arranque seguro de UEFI.
+
+Estos son los pasos realizados por el arranque seguro de UEFI:
+
+1. Después de que el dispositivo está encendido, las bases de datos de la firma cada comprueban con la plataforma (PK) de la clave de firma.
+2. Si el firmware no es de confianza, el firmware UEFI inicia recuperación específica del OEM para restaurar el firmware de confianza.
+3. Si no se puede cargar el Administrador de arranque de Windows, el firmware intentará arrancar una copia de seguridad del Administrador de arranque de Windows. Si esto tampoco funciona, el firmware UEFI inicia corrección específica del OEM.
+4. Administrador de arranque de Windows se ejecuta y comprueba la firma digital del Kernel de Windows. Si la confianza, el Administrador de arranque de Windows pasa el control al Kernel de Windows.
+
+
+Obtener más detalles sobre el arranque seguro, junto con instrucciones para la administración y la creación de la clave está disponible [aquí](https://technet.microsoft.com/library/dn747883.aspx).
+
+### <a name="windows-code-integrity"></a>Integridad de código de Windows
+
+Integridad de código de Windows (WCI) mejora la seguridad del sistema operativo al validar la integridad de un controlador o una aplicación cada vez que se carga en la memoria. Elemento de configuración contiene dos componentes principales: integridad de código de modo Kernel (KMCI) y la integridad de código de modo de usuario (UMCI).
 
 Integridad de código configurable (CCI) es una característica de Windows 10 que permite que los generadores de dispositivo para bloquear un dispositivo y solo le permiten ejecutar y ejecutar código que se firma y de confianza.  Para ello, los generadores de dispositivo pueden crear una directiva de integridad de código en un dispositivo "golden" (versión de lanzamiento final de hardware y software) y, a continuación, proteger y aplicar esta directiva en todos los dispositivos en la fábrica.
 
 Para más información sobre la implementación de directivas de integridad de código, auditoría y cumplimiento, consulte la documentación más reciente de technet [aquí](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-code-integrity-policies-steps).
+
+Estos son los pasos seguidos por integridad de código de Windows:
+
+1. Kernel de Windows comprobará que todos los demás componentes en la base de datos de la firma antes de la carga. Esto incluye los controladores, los archivos de inicio y ELAM (temprana antimalware de inicio).
+2. Kernel de Windows cargará los componentes de confianza en el proceso de inicio y prohibir la carga de los componentes de confianza.
+3. Carga del sistema operativo de Windows 10 IoT Core, junto con las aplicaciones instaladas.
+
+### <a name="bitlocker-device-encryption"></a>Cifrado de dispositivos de BitLocker
+
+Windows 10 IoT Core también implementa una versión ligera de cifrado de dispositivo de BitLocker, protección de los dispositivos de IoT contra ataques sin conexión. Esta funcionalidad tiene una dependencia fuerte en la presencia de un TPM en la plataforma, incluido el protocolo previo necesario en UEFI que toma las medidas necesarias. Estas mediciones previo asegurarse de que el sistema operativo posterior tenga un registro definitivo de cómo se inició el sistema operativo; Sin embargo, no aplica las restricciones de ejecución.
+
+> [!TIP]
+> Funcionalidad de BitLocker en Windows 10 IoT Core permite para el cifrado automático de volumen del sistema operativo basado en NTFS al enlazar todos los volúmenes de datos NTFS disponibles en él. Para ello, es necesario para asegurarse de que el volumen EFIESP GUID se establece en _C12A7328-F81F-11D2-BA4B-00A0C93EC93B_.
+
+### <a name="device-guard-on-windows-iot-core"></a>Device Guard en Windows IoT Core
+
+La mayoría de los dispositivos de IoT se crean como dispositivos de funciones fijas. Esto implica que los generadores de dispositivo saben exactamente qué firmware, sistemas operativos, controladores y aplicaciones deben ejecutarse en un dispositivo determinado. A su vez, esta información puede ser utilizado totalmente bloquear un dispositivo IoT solo tiene que permitir la ejecución de código conocida y de confianza. Device Guard en Windows 10 IoT Core puede ayudar a proteger los dispositivos de IoT, lo que garantiza que no se puede ejecutar código ejecutable desconocido o que no se confía en los dispositivos bloqueados.
+
 
 ## <a name="turnkey-security-on-iot-core"></a>Seguridad de llave en mano en IoT Core
 
@@ -58,7 +99,7 @@ Para facilitar la fácil habilitación de características clave de seguridad en
 * Instalación y configuración de cifrado del dispositivo con BitLocker 
 * Iniciando el bloqueo del dispositivo para solo permitir la ejecución de las aplicaciones firmadas y controladores
 
-### <a name="pre-requisites"></a>Requisitos previos
+### <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo que ejecuta Windows 10 Enterprise
 * [Windows 10 SDK](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk) : requerido para la generación de certificado
@@ -100,13 +141,7 @@ Windows 10 IoT Core funciona con diversos silicons que se emplean en cientos de 
     * **Proteger las claves generadas** como el dispositivo confiará en los archivos binarios firmados con estas claves solo después del bloqueo.
     * Puede omitir este paso y usar las claves generadas previamente solo para pruebas
 
-5. Instalar los certificados PFX generado al hacer clic en los archivos pfx directamente o mediante el siguiente comando de powershell
-
-    ```powershell
-    Import-PfxCertificate -FilePath $pfxfile -CertStoreLocation Cert:\CurrentUser\My
-    ```
-
-6. Configure _settings.xml_
+5. Configure _settings.xml_
 
     * Sección general: Especifique los directorios de paquete
     * Sección de herramientas: Establecer la ruta de acceso para las herramientas
@@ -124,12 +159,6 @@ Windows 10 IoT Core funciona con diversos silicons que se emplean en cientos de 
 
 > [!IMPORTANT]
 > Con el fin de ayudar a probar durante el ciclo de desarrollo inicial, Microsoft ha proporcionado los certificados y claves generadas previamente en su caso.  Esto implica que los archivos binarios de Microsoft Test, desarrollo y versiones preliminares se consideran de confianza.  Durante la creación de un producto final y generación de imágenes, asegúrese de quitar estas dirija y usar sus propias claves para garantizar que un dispositivo totalmente bloqueado.
-
-> [!TIP]
-> Pueden permitir al incluir el certificado de Microsoft Marketplace PCA 2011 en la configuración de las aplicaciones de Microsoft App Store _settings.xml_: 
-    ```xml
-    <Cert>db\MicrosoftMarketPlacePCA2011.cer</Cert>              <!-- Microsoft MarketPlace PCA 2011 -->
-    ```
 
 6. ejecutar los comandos siguientes para generar paquetes necesarios:
 
@@ -173,32 +202,20 @@ Puede probar los paquetes generados por instalarlos manualmente en un dispositiv
 6. El dispositivo se reiniciará en el sistema operativo (mostrando gears) para instalar los paquetes de actualización y se reiniciará al sistema operativo principal.  Una vez que el dispositivo se reinicia en MainOS, se habilitará el arranque seguro y debe exponerse a SIPolicy.
 7. Reinicio del dispositivo para activar el cifrado de Bitlocker.
 8. Probar las características de seguridad
-    * **SecureBoot** : pruebe `bcdedit /debug on` , obtendrá un error que indica que el valor está protegido por la directiva de arranque seguro.
-   * **BitLocker** : Para validar que bitlocker se ha completado el cifrado, ejecute<p>
-        `sectask.exe -waitenableforcompletion 1`<p>
-        Si se devuelve 0, significa que todas las unidades en el sistema han sido bitlockered correctamente.  Cualquier otro código de retorno es error.<p>
-        *Sintaxis adicional*<p>
-         `-waitenableforcompletion [timeout]` <p>
-        = > Espera hasta que se complete el cifrado de BitLocker en todos los volúmenes NTFS.<p>
-        = > Tiempo de espera en segundos de espera para que habilitar en completarse.<p>
-        = > Si tiempo de espera no se especifica, esperará indefinidamente o hasta que se complete la habilite.<p>
-        Devuelve: <p>
-        0 : El cifrado de BitLocker que se completó correctamente, el volumen está cifrada con Bitlocker.<p>
-        ERROR_TIMEOUT: Tiempo de espera para la finalización, cifrado en curso.<p>
-        Error / otro código: devuelve el código de error devuelto por el servicio de la caja de seguridad de bits.
-
-    * **DeviceGuard** : Ejecute cualquier binario sin signo o un archivo binario firmado con certificado no está en la lista SIPolicy y confirme que no puede ejecutar.
+    * SecureBoot: pruebe `bcdedit /debug on` , obtendrá un error que indica que el valor está protegido por la directiva de arranque seguro
+    * BitLocker: Ejecute `fvecon -status c:`, obtendrá el estado mencionar *en Encrypted, tiene datos de recuperación (clave externa), tiene datos de TPM, seguro, partición de arranque, solo el espacio utilizado*
+    * DeviceGuard: Ejecute cualquier binario sin signo o un archivo binario firmado con certificado no está en la lista SIPolicy y confirme que no puede ejecutar.
 
 ### <a name="generate-lockdown-image"></a>Generar imagen de bloqueo
 
-Después de comprobar que los paquetes de bloqueo de seguridad funcionan según la configuración definida anteriormente, puede incluir estos paquetes en la imagen siguiendo el siguiente les indican los pasos. Lectura [IoT fabricación guía](https://aka.ms/iotcoreguide) para obtener instrucciones de creación de imagen personalizada.
+Después de comprobar que los paquetes de bloqueo de seguridad funcionan según la configuración definida anteriormente, puede incluir estos paquetes en la imagen siguiendo el siguiente les indican los pasos. Leer el [IoT fabricación guía](https://aka.ms/iotcoreguide) para obtener instrucciones de creación de imagen personalizada.
 
 1. En el directorio de área de trabajo, actualice los siguientes archivos desde el directorio de salida generado anterior
     * SecureBoot: `Copy ..\Output\SecureBoot\*.bin  ..\Workspace\Common\Packages\Security.SecureBoot`
       * SetVariable_db.bin
       * SetVariable_kek.bin
       * SetVariable_pk.bin
-    * BitLocker : `Copy ..\Output\Bitlocker\*.* ..\Workspace\Common\Packages\Security.Bitlocker`
+    * BitLocker: `Copy ..\Output\Bitlocker\*.* ..\Workspace\Common\Packages\Security.Bitlocker`
       * DETask.xml
       * Security.Bitlocker.wm.xml
       * setup.bitlocker.cmd
@@ -240,29 +257,8 @@ Si necesita el contenido que se accede con frecuencia sin conexión, desbloqueo 
 ### <a name="disabling-bitlocker"></a>Deshabilitar BitLocker
 
 Surgiera existe una necesidad de deshabilitar temporalmente BitLocker, iniciar una sesión remota de PowerShell con el dispositivo de IoT y ejecute el siguiente comando: `sectask.exe -disable`.  
-**Nota:** Cifrado del dispositivo se volverá a habilitar, en el arranque de dispositivos posterior a menos que la tarea programada de cifrado está deshabilitada.
 
-### <a name="disabling-device-guard"></a>Deshabilitación de Device Guard
-
-La secuencia de comandos de seguridad inmediata genera archivos SIPolicyOn.p7b y SIPolicyOff.p7b en la carpeta.
-El wm.xml empaqueta el SIPolicyOn.p7b y lo coloca en el sistema que SIPolicy.p7b.
-
-Por ejemplo:
-
-```
-C:\src\iot-adk-addonkit.db410c\TurnkeySecurity\QCDB\Output\DeviceGuard\Security.DeviceGuard.wm.xml
-…
-    <files>
-        <file
-            destinationDir="$(runtime.bootDrive)\efi\microsoft\boot"
-            source="SIPolicyOn.p7b"
-            name="SIPolicy.p7b" />
-    </files>
-..
-
-```
-
-Si crea un paquete que usa el archivo SIPolicyOff.p7b y lo coloca como un SIPolicy.p7b, aplicará este paquete y se desactivará la protección del dispositivo.
-
+> [!NOTE]
+> Cifrado del dispositivo se volverá a habilitar, en el arranque de dispositivos posterior a menos que la tarea programada de cifrado está deshabilitada.
 
 
