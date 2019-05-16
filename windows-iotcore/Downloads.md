@@ -7,12 +7,12 @@ ms.date: 10/05/18
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
-ms.openlocfilehash: 2a89c9dd15f793861a647028a5184a2c5a7553ba
-ms.sourcegitcommit: 9d2134b61848575d0bd5fcc23403ebda92ca6573
+ms.openlocfilehash: 85c56a53839f74b02dddf2d094d2b07e4d8d635d
+ms.sourcegitcommit: dc4dfc41419104e2f54b63b931168176dc4f2e9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64953363"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706079"
 ---
 # <a name="downloads"></a>Descargas
 Descargue las herramientas y software que necesita para empezar a trabajar con Windows 10 IoT Core.
@@ -30,9 +30,10 @@ _Al descargar y usar el panel de Windows 10 IoT Core acepta el [términos de lic
 
 ## <a name="latest-windows-10-iot-core-builds"></a>Compilaciones más recientes de Windows 10 IoT Core
 
-> [!IMPORTANT]
+> [!WARNING]
 > No use maker imágenes para la comercialización. Si se commercializing un dispositivo, debe usar un FFU personalizado para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
 
+Cuando commercializing la solución de IoT, deberá descargar las compilaciones desde la [sitio de descargas de Software de Microsoft](https://www.microsoft.com/en-us/software-download/windows10IoTCore#!). También hemos incluido versiones del pasado a continuación en caso de que necesita trabajar con una compilación anterior de Windows 10 IoT Core para el dispositivo. 
 
 ### <a name="october-2018-release"></a>Versión de octubre de 2018
 

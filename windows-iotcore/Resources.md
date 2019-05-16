@@ -6,12 +6,12 @@ ms.date: 09/07/18
 ms.topic: article
 description: Aprovechar todos los recursos de la Comunidad de Windows 10 IoT.
 keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, recursos más valiosos personas, vídeos, blogs
-ms.openlocfilehash: c144aabe4662deba7efa990a5af3d59ffe1531b8
-ms.sourcegitcommit: 0f46b7b5c15906a6c82b847ffcd9f4d2674f9fd0
+ms.openlocfilehash: 338f30bdfb87f5626cd1300a630529b1ed5b16a8
+ms.sourcegitcommit: dc4dfc41419104e2f54b63b931168176dc4f2e9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65226819"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706061"
 ---
 # <a name="windows-10-iot-resources"></a>Recursos de Windows 10 IoT
 
@@ -47,8 +47,8 @@ ms.locfileid: "65226819"
 
 * [Comunidad de MVP de Microsoft](https://mvp.microsoft.com/)
 * [Comunidad tecnológica de Microsoft IoT](https://techcommunity.microsoft.com/t5/Internet-of-Things-IoT/ct-p/IoT)
+* [Laboratorios de Microsoft Insider](https://www.microsoftiotinsiderlabs.com/)
 * [Foro de MSDN para Windows 10 IoT](https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT)
-* [Curso de Windows 10 IoT Core Lynda](https://www.lynda.com/Windows-tutorials/IoT-Development-Windows-10-IoT-Core-1-Installation-Basic-Connection/556513-2.html)
 * [Aprendizaje presencial con Annabooks](http://www.annabooks.com/training.html)
 * [Introducción a Windows 10 IoT Core en Hackster.io](http://www.hackster.io/KiwiBryn)
 * [Windows 10 IoT Core sombreros](https://www.turta.io/iothat)

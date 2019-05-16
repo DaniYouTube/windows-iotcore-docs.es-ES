@@ -6,12 +6,12 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de Windows 10 IoT Core y lo que puede hacer con él.
 keywords: Windows 10 IoT Core, superficie pequeña, sin periféricos
-ms.openlocfilehash: d5b9c59ad735d66b4812e6303f6298a33da44d33
-ms.sourcegitcommit: 1f6afcfee0cb5557dc21c7b15e199bc557d8eedb
+ms.openlocfilehash: a4ffa21b9e6fd0e539b1ede4810437990212015b
+ms.sourcegitcommit: dc4dfc41419104e2f54b63b931168176dc4f2e9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65171358"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706074"
 ---
 # <a name="windows-10-iot-core"></a>Windows 10 IoT Core
 
@@ -24,7 +24,7 @@ Windows 10 IoT Core es una versión de Windows 10 que está optimizado para los 
 ## <a name="getting-started"></a>Introducción
 Para empezar a trabajar con Windows 10 IoT Core, hemos creado un [Windows 10 IoT Core Quickstarter](tutorials/Tutorials.md) que le ayudarán a familiarizarse con la plataforma rápidamente. 
 
-Desde allí, aún puede experimentar con la plataforma mediante el desarrollo de su propia aplicación o comenzar a hacer planes para poner el dispositivo en el mercado para comercializar su dispositivo. Para empezar a trabajar con commercializing, consulte los Traer un dispositivo en el mercado de la sección en la [artículo de introducción](https://docs.microsoft.com/windows/iot-core/getstarted).
+Si está listo para ir al siguiente nivel e inicio commercializing la solución, puede aprender fabricar con Windows 10 IoT Core con nuestro [Guía de fabricación de Windows 10 IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). 
 
 ## <a name="differences-between-windows-10-desktop-and-windows-10-iot-core"></a>Diferencias entre el escritorio de Windows 10 y Windows 10 IoT Core
 
