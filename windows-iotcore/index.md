@@ -7,12 +7,12 @@ ms.date: 08/28/2017
 ms.topic: landing page
 description: Esta es la página de inicio de la documentación para desarrolladores de Windows 10 IoT Core.
 keywords: windows iot, documentación para desarrolladores, documentos, IoT Core
-ms.openlocfilehash: 2d8f8e2e578721edc4f22264e4e3b89f1018bce2
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 42f24fcd8e1c305f815181bb81b8ee2d299265f8
+ms.sourcegitcommit: dc4dfc41419104e2f54b63b931168176dc4f2e9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59510034"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706055"
 ---
 # <a name="windows-10-iot-documentation"></a>Documentación de Windows 10 IoT
 
@@ -131,13 +131,7 @@ Windows 10 IoT ofrece dos ediciones: Windows 10 IoT Core y Windows 10 IoT Enterp
 
 ---
 
-<h2>¿Se produjeron errores? ¿Sugerencias?</h2>
-<p>Si desea informar sobre un error, use <a href="https://social.msdn.microsoft.com/Forums/en-US/fad1c6a0-e578-44a7-8e8d-95cc28c06ccd/need-logs-if-your-device-hasnt-updated-to-the-latest-iotcore-version?forum=WindowsIoT">la aplicación Centro de opiniones</a> Para cualquier otra cosa relacionada con la documentación, como sugerencias, registre un problema en <a href="https://github.com/MicrosoftDocs/windows-iotcore-docs">nuestro GitHub</a>. 
+<h2>¿Errores? ¿Sugerencias?</h2>
+<p>Para cualquier problema o error con Windows 10 IoT Core, publíquelo en los foros de MSDN desde <a href="https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=WindowsIoT">aquí</a>. 
 <br><br>
-Si ve algo con lo que le gustaría contribuir o que le gustaría modificar, abra una solicitud de incorporación de cambios haciendo clic en "Editar" en la esquina superior derecha de cualquier página de documentación. No se responderá a consultas relacionadas con el soporte técnico en nuestro canal de problemas, consulte nuestros foros para ello. 
-
----
-
-<h2>¿Preguntas? ¿Problemas?</h2>
-<p>Si surge algo para lo que la documentación no tiene respuesta, puede enviar sus preguntas a nuestra <a href="https://techcommunity.microsoft.com/t5/Windows-10-IoT/bd-p/Windows10IoT">comunidad tecnológica</a> o a los <a href="https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT">foros de MSDN</a>.</p>
-
+Si desea informar sobre un problema o error en la documentación, regístrelo en <a href="https://github.com/MicrosoftDocs/windows-iotcore-docs">GitHub</a>. No se responderá a consultas relacionadas con el soporte técnico en nuestro canal de problemas de GitHub.
