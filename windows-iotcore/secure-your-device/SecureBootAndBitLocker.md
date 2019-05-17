@@ -6,18 +6,40 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 keywords: Windows iot, arranque seguro, BitLocker, protección de dispositivos, seguridad, seguridad de llave en mano
-ms.openlocfilehash: 957b81a0a5bc032c62fa75598418778862fdf76d
-ms.sourcegitcommit: 77b86eee2bba3844e87f9d3dbef816761ddf0dd9
+ms.openlocfilehash: 092be64210f651c25156e93885a63f35c22d4791
+ms.sourcegitcommit: fcc0c6add468040e2f676893b44b260e3ddc3c52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65533337"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779392"
 ---
 # <a name="enabling-secure-boot-bitlocker-and-device-guard-on-windows-10-iot-core"></a>Habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 
-Windows 10 IoT Core ahora incluye ofertas de características de seguridad como arranque seguro de UEFI, cifrado de dispositivo de BitLocker y Device Guard.  Estos le ayudará a los generadores de dispositivo crear totalmente bloqueado de los dispositivos de IoT de Windows que sean resistentes a muchos tipos diferentes de los ataques.  Juntas, estas características ofrecen la protección óptima que garantiza que se iniciará una plataforma de una forma definida, mientras el bloqueo de archivos binarios desconocidos y proteger los datos de usuario mediante el uso de cifrado de dispositivo.
+Windows 10 IoT Core incluye ofertas de características de seguridad como arranque seguro de UEFI, cifrado de dispositivo de BitLocker y Device Guard.  Estos le ayudará a los generadores de dispositivo crear totalmente bloqueado de los dispositivos de IoT de Windows que sean resistentes a muchos tipos diferentes de los ataques.  Juntas, estas características ofrecen la protección óptima que garantiza que se iniciará una plataforma de una forma definida, mientras el bloqueo de archivos binarios desconocidos y proteger los datos de usuario mediante el uso de cifrado de dispositivo.
 
 ## <a name="boot-order"></a>Orden de arranque
+
+Antes de que podemos adentrarnos en los componentes individuales que proporcionan una plataforma segura para el dispositivo de IoT, es necesario comprender el orden de arranque en un dispositivo Windows 10 IoT Core.
+
+Hay tres áreas principales que se producen cuando un dispositivo de IoT está encendido, todo el proceso para la carga de kernel del sistema operativo y la ejecución de la aplicación instalada.
+
+* Arranque seguro de plataforma
+* Arranque seguro (UEFI) de la interfaz de Firmware Extensible unificada
+* Integridad de código de Windows
+
+![Orden de arranque](../media/SecureBootAndBitLocker/BootOrder.jpg)
+
+Puede encontrar información adicional sobre el proceso de arranque de Windows 10 [aquí](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process).
+
+## <a name="locking-down-iot-devices"></a>Dispositivos IoT bloquear
+
+En orden de bloqueo de un dispositivo Windows IoT, se deben realizar las siguientes consideraciones.
+
+### <a name="platform-secure-boot"></a>Arranque seguro de plataforma
+
+Cuando el dispositivo está encendido en primer lugar, es el primer paso del proceso general de arranque cargar y ejecutar firmware cargadores de arranque, que inicializan el hardware en los dispositivos y proporcionan funcionalidad de intermitencia de emergencia. El entorno de UEFI, a continuación, se cargan y se cede el control.
+
+Estos cargadores de arranque de firmware son específicos de SoC, por lo que necesita trabajar con el fabricante del dispositivo adecuado para tener estos cargadores de arranque creados en el dispositivo.
 
 Antes de que podemos adentrarnos en los componentes individuales que proporcionan una plataforma segura para el dispositivo de IoT, es necesario comprender el orden de arranque en un dispositivo Windows 10 IoT Core.
 
@@ -31,7 +53,19 @@ Hay tres áreas principales que se producen cuando un dispositivo de IoT está e
 
 Puede encontrar información adicional sobre el proceso de arranque de Windows 10 [aquí](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process).
 
-## <a name="locking-down-iot-devices"></a>Dispositivos IoT bloquear
+En orden de bloqueo de un dispositivo Windows IoT, se deben realizar las siguientes consideraciones.
+
+### <a name="platform-secure-boot"></a>Arranque seguro de plataforma
+
+Cuando el dispositivo está encendido en primer lugar, es el primer paso del proceso general de arranque cargar y ejecutar firmware cargadores de arranque, que inicializan el hardware en los dispositivos y proporcionan funcionalidad de intermitencia de emergencia. El entorno de UEFI, a continuación, se cargan y se cede el control.
+
+Estos cargadores de arranque de firmware son específicos de SoC, por lo que necesita trabajar con el fabricante del dispositivo adecuado para tener estos cargadores de arranque creados en el dispositivo.
+
+### <a name="uefi-secure-boot"></a>Arranque seguro de la UEFI
+
+Arranque seguro de UEFI es el primer punto de cumplimiento de directivas y se encuentra en UEFI.  Restringe el sistema para permitir solo la ejecución de archivos binarios firmados por una entidad determinada, como los controladores de firmware, ROM, controladores UEFI o aplicaciones y los cargadores de arranque UEFI. Esta característica evita que código desconocido se ejecuta en la plataforma y potencialmente debilitar su seguridad de ella. Arranque seguro reduce el riesgo de ataques de malware previo al arranque en el dispositivo, como los rootkits. 
+
+OEM, deberá almacenar el arranque seguro de UEFI bases de datos en el dispositivo de IoT en tiempo de fabricación. Estas bases de datos incluyen la firma de base de datos (db), revocar la firma (dbx) y la base de datos de inscripción de clave (KEK). Estas bases de datos se almacenan en el firmware RAM no volátil (NV-RAM) del dispositivo.
 
 En orden de bloqueo de un dispositivo Windows IoT, se deben realizar las siguientes consideraciones.
 
@@ -61,7 +95,6 @@ Estos son los pasos realizados por el arranque seguro de UEFI:
 2. Si el firmware no es de confianza, el firmware UEFI inicia recuperación específica del OEM para restaurar el firmware de confianza.
 3. Si no se puede cargar el Administrador de arranque de Windows, el firmware intentará arrancar una copia de seguridad del Administrador de arranque de Windows. Si esto tampoco funciona, el firmware UEFI inicia corrección específica del OEM.
 4. Administrador de arranque de Windows se ejecuta y comprueba la firma digital del Kernel de Windows. Si la confianza, el Administrador de arranque de Windows pasa el control al Kernel de Windows.
-
 
 Obtener más detalles sobre el arranque seguro, junto con instrucciones para la administración y la creación de la clave está disponible [aquí](https://technet.microsoft.com/library/dn747883.aspx).
 
@@ -93,11 +126,15 @@ La mayoría de los dispositivos de IoT se crean como dispositivos de funciones f
 
 ## <a name="turnkey-security-on-iot-core"></a>Seguridad de llave en mano en IoT Core
 
-Para facilitar la fácil habilitación de características clave de seguridad en dispositivos de IoT Core, Microsoft ofrece una llave en mano "paquete de seguridad" que permite que los generadores de dispositivo crear completamente bloqueado de los dispositivos de IoT.  Le ayudará este paquete con:
+Para facilitar la fácil habilitación de características clave de seguridad en dispositivos de IoT Core, Microsoft ofrece un [paquete de seguridad de llave en mano]( https://github.com/ms-iot/security/tree/master/TurnkeySecurity) que permite que los generadores de dispositivo crear completamente bloqueado de los dispositivos de IoT. Le ayudará este paquete con:
 
 * Aprovisionamiento de claves de arranque seguro y habilitar la característica en las plataformas admitidas de IoT
-* Instalación y configuración de cifrado del dispositivo con BitLocker 
+* Instalación y configuración de cifrado del dispositivo con BitLocker
 * Iniciando el bloqueo del dispositivo para solo permitir la ejecución de las aplicaciones firmadas y controladores
+
+Los pasos siguientes dará lugar a través del proceso para crear una imagen de bloqueo mediante el [paquete de seguridad de llave en mano]( https://github.com/ms-iot/security/tree/master/TurnkeySecurity)
+
+![Crear imagen de bloqueo](../media/SecurityFlowAndCertificates/ImageLockDown.png)
 
 ### <a name="prerequisites"></a>Requisitos previos
 

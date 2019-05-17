@@ -1,17 +1,17 @@
 ---
-title: Proveedores de rayo
+title: Proveedores de Rayo
 author: msalehmsft
 ms.author: msaleh
 ms.date: 08/28/2017
 ms.topic: article
 description: Más información acerca de cómo puede usar la biblioteca de proveedores de rayo de Microsoft.
 keywords: Windows iot, proveedores de rayos, relámpago prueba de rendimiento, buses
-ms.openlocfilehash: 8f290bf741f64e07b7b048287128e1ae42ef6b9e
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 50cbf4f9940538da1570cebb6cc142e7fbe06588
+ms.sourcegitcommit: fcc0c6add468040e2f676893b44b260e3ddc3c52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514912"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779383"
 ---
 # <a name="working-with-lightning-providers"></a>Trabajar con proveedores de rayo
 La biblioteca Microsoft.IoT.Lightning.Providers contiene un conjunto de proveedores para interactuar con el panel de buses de controlador a través de la luz controlador directo a memoria asignada (DMAP).
@@ -42,7 +42,8 @@ Cada uno de los ejemplos hace referencia al SDK de rayo y está configurado corr
 
 Además, es fácil de agregar la referencia de Nuget de proveedores de rayo requerida y soporte técnico a una aplicación nueva o existente. Sigue los pasos siguientes:
 
-1. En su aplicación, a la derecha, haga clic en el proyecto y haga clic en el "Administrar paquetes NuGet" elemento de menú ![proyecto de UWP](../media/LightningProviders/manage-nuget-project.png)
+1. En su aplicación, a la derecha, haga clic en el proyecto y haga clic en el "Administrar paquetes NuGet" elemento de menú  
+![Proyecto para UWP](../media/LightningProviders/manage-nuget-project.png)
 
 2. Se abrirá el Administrador de paquetes de NuGet. En la pestaña Examinar, busque el "relámpago SDK", y asegúrese de activar la casilla "Incluir versión preliminar".
 
