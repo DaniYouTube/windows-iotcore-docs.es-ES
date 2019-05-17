@@ -78,7 +78,7 @@
 ### [Información general sobre TPM](secure-your-device/TPM.md)
 ### [Configuración de TPM](secure-your-device/setupTPM.md)
 ## [Orientación sobre Azure]()
-### [Información geneal sobre Azure IoT](connect-to-cloud/Overview.md)
+### [Introducción a Azure IoT](connect-to-cloud/Overview.md)
 ### [Conectar el dispositivo](connect-to-cloud/ConnectDeviceToCloud.md)
 ### [Conectar la aplicación](connect-to-cloud/ConnectAppToCloud.md)
 ### [Administración de dispositivos de Azure](manage-your-device/AzureIoTDM.md)
