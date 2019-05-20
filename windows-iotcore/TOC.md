@@ -22,6 +22,7 @@
 ## [Orientación sobre controladores]()
 ### [Implementación de controladores](learn-about-hardware/DriverDeployment.md)
 ### [Creación de controlador universal](learn-about-hardware/DriverCreation.md)
+### [Compatibilidad con USB](learn-about-hardware/usb-support.md)
 ### [Instalar controladores periféricos de USB](learn-about-hardware/PeripheralDrivers.md) 
 ## [Desarrollar aplicaciones]()
 ### [Aplicaciones de primer plano](develop-your-app/BuildingAppsForIoTCore.md)
