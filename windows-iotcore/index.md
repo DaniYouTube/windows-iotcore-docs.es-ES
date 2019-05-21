@@ -7,12 +7,12 @@ ms.date: 08/28/2017
 ms.topic: landing page
 description: Esta es la página de inicio de la documentación para desarrolladores de Windows 10 IoT Core.
 keywords: windows iot, documentación para desarrolladores, documentos, IoT Core
-ms.openlocfilehash: 42f24fcd8e1c305f815181bb81b8ee2d299265f8
-ms.sourcegitcommit: dc4dfc41419104e2f54b63b931168176dc4f2e9e
+ms.openlocfilehash: 6c4066472322bf6b1c61fd85f26fe99e9629573c
+ms.sourcegitcommit: 87c60bb857cb025255f4f06094c888384a0bb562
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706055"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940673"
 ---
 # <a name="windows-10-iot-documentation"></a>Documentación de Windows 10 IoT
 
@@ -133,5 +133,3 @@ Windows 10 IoT ofrece dos ediciones: Windows 10 IoT Core y Windows 10 IoT Enterp
 
 <h2>¿Errores? ¿Sugerencias?</h2>
 <p>Para cualquier problema o error con Windows 10 IoT Core, publíquelo en los foros de MSDN desde <a href="https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=WindowsIoT">aquí</a>. 
-<br><br>
-Si desea informar sobre un problema o error en la documentación, regístrelo en <a href="https://github.com/MicrosoftDocs/windows-iotcore-docs">GitHub</a>. No se responderá a consultas relacionadas con el soporte técnico en nuestro canal de problemas de GitHub.
