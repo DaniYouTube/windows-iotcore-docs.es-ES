@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo crear dispositivos seguros al habilitar el arranque seguro, la implementación de TPM y mucho más.
 keywords: Windows iot, seguridad, firmware, el arranque seguro, TPM, Bitlocker, cifrado
-ms.openlocfilehash: 4170b2819606b3862bb7fabfc62f73be0351cccf
-ms.sourcegitcommit: fcc0c6add468040e2f676893b44b260e3ddc3c52
+ms.openlocfilehash: 611d82af25d9c4959335aa208e0d06b49daa5f9f
+ms.sourcegitcommit: c4232e384e7347f97477e5cd3cc941de492f6a64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65779406"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65986489"
 ---
 # <a name="building-secure-devices-with-windows-10-iot-core"></a>Creación de dispositivos segura con Windows 10 IoT Core
 
@@ -25,10 +25,6 @@ En esta sección le ayudará a los OEM y a los desarrolladores a través del pro
 
 ![Proceso de compilación del dispositivo](../media/SecurityFlowAndCertificates/DeviceBuildProcess.png)
 
-## <a name="firmware"></a>Firmware  
-En dispositivos que están "abiertos", por ejemplo, los equipos informáticos de uso general, los usuarios tener acceso a configuración de firmware durante el arranque del dispositivo a través de diversas combinaciones de teclas (p. ej., F2 entra en el programa de instalación UEFI en la mayoría de los equipos hoy en día). Esto puede permitir que los usuarios realicen cambios en la forma en que la plataforma arranca, así como habilitar y deshabilitar los distintos puertos de dispositivo, funciones y otras características de seguridad potenciales disponibles en el dispositivo.  
-
-Dada la naturaleza confidencial de estas modificaciones, IoT, los dispositivos no deben funcionar como "Abra dispositivos" y debería funcionar más como dispositivos "bloqueada", similar a los teléfonos móviles, donde firmware es por lo general no permite el acceso a.  Normalmente esto se consigue asegurándose de que utilizas firmware bloqueado en el dispositivo de producción. Bloqueado firmware debe estar disponible a través del proveedor de firmware.  Como mínimo, en los dispositivos donde bloqueado firmware no está disponible o potencialmente no son adecuados, como para su uso por los creadores, considere la posibilidad de proteger el acceso de configuración de firmware a través de una contraseña de administrador segura.
 
 ## <a name="choosing-security-enabled-hardware"></a>Elegir el hardware de seguridad habilitada
 Aunque Windows IoT Core tiene capacidades de seguridad de compilación la plataforma para proteger los datos del cliente, se basa en las características de seguridad de hardware para poder utilizar todas estas funcionalidades. De hecho, software no puede protegerse a sí mismo como se puede manipular la memoria y no hay ningún anclaje de veracidad o identidad de dispositivo inmutable que puede proporcionarse a través de software por sí solo. Hay varias formas de proporcionar seguridad basada en hardware, por ejemplo, tarjetas inteligentes, de confianza (TPM) de módulos de plataforma o características de seguridad de compilación en el Soc. 
@@ -59,3 +55,6 @@ Microsoft ofrece el [paquete de seguridad de llave en mano](https://github.com/m
 * Iniciando el bloqueo del dispositivo para solo permitir la ejecución de las aplicaciones firmadas y controladores
 
 Una guía paso a paso se describe en el [Device Guard, BitLocker y habilitar el arranque seguro](https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/securebootandbitlocker) sección.
+
+## <a name="device-production"></a>Producción de dispositivo
+Una vez validada la imagen de bloqueo se puede usar para la fabricación. Para obtener más información, consulte [IoT Core fabricación](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/).
