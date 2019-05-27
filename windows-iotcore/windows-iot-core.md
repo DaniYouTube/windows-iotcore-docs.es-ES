@@ -6,14 +6,14 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de Windows 10 IoT Core y lo que puede hacer con él.
 keywords: Windows 10 IoT Core, superficie pequeña, sin periféricos
-ms.openlocfilehash: a4ffa21b9e6fd0e539b1ede4810437990212015b
-ms.sourcegitcommit: dc4dfc41419104e2f54b63b931168176dc4f2e9e
+ms.openlocfilehash: 0fbcc6a96f8e35227acf32a9507ed3c7a038a83d
+ms.sourcegitcommit: 8aadc776da7b473159f9023cd555145819e7e952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706074"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174049"
 ---
-# <a name="windows-10-iot-core"></a>Windows 10 IoT Core
+# <a name="an-overview-of-windows-10-iot-core"></a>Información general de Windows 10 IoT Core
 
 > [!NOTE]
 > Contenedores de Windows 10 solo pueden usarse con Windows IoT Core y Windows IoT Enterprise para las implementaciones comerciales de uso de Microsoft Azure IoT Edge.
@@ -21,10 +21,48 @@ ms.locfileid: "65706074"
 ## <a name="what-is-windows-10-iot-core"></a>¿Qué es Windows 10 IoT Core?
 Windows 10 IoT Core es una versión de Windows 10 que está optimizado para los dispositivos más pequeños con o sin una pantalla que se ejecutan en tanto ARM y dispositivos x86/x64. La documentación de Windows IoT Core, proporciona información sobre conectar, administrar, actualizar, proteger los dispositivos y mucho más. 
 
-## <a name="getting-started"></a>Introducción
-Para empezar a trabajar con Windows 10 IoT Core, hemos creado un [Windows 10 IoT Core Quickstarter](tutorials/Tutorials.md) que le ayudarán a familiarizarse con la plataforma rápidamente. 
-
 Si está listo para ir al siguiente nivel e inicio commercializing la solución, puede aprender fabricar con Windows 10 IoT Core con nuestro [Guía de fabricación de Windows 10 IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). 
+
+## <a name="getting-started"></a>Introducción
+
+Antes de intentar fabricar un dispositivo, es mejor primera try y prototipo de un dispositivo con Windows 10 IoT Core. De este modo, puede comprender las características que necesitará y qué configuraciones que deseará cuando se trata en la fabricación.
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tema</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="odd">
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/tutorials/quickstarter/PrototypeBoards"
+>1. Elija un tablero de prototipo</a></p></td>
+<td align="left"><p>Eche un vistazo a los prototipos de placas comunes y elija uno para iniciar con la creación de prototipos.</p></td>
+</tr>
+
+<tr class="odd">
+<td align="left"><p>2. Flash una imagen de prototipo</p></td>
+<td align="left"><p>Vaya a nuestras secciones tutoriales para aprender a flash imágenes de prototipo en los dispositivos seleccionados. </p></td>
+</tr>
+
+<tr class="odd">
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appinstaller">2. 3. Instalar la aplicación</a></p></td>
+<td align="left"><p>Obtenga información sobre cómo instalar la aplicación con distintas herramientas.</p></td>
+</tr>
+
+<tr class="odd">
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appdeployment">4. Implementar la aplicación</a></p></td>
+<td align="left"><p>Obtenga información sobre cómo implementar una aplicación mediante Visual Studio.</p></td>
+</tr>
+
+</tbody>
+</table>
 
 ## <a name="differences-between-windows-10-desktop-and-windows-10-iot-core"></a>Diferencias entre el escritorio de Windows 10 y Windows 10 IoT Core
 

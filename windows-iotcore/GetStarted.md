@@ -6,12 +6,12 @@ ms.date: 04/10/2018
 ms.topic: article
 description: Obtenga información sobre cómo empezar con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, introducción, imágenes,
-ms.openlocfilehash: 7fa6012cf6d3261e52c5040eafd6cfeaede55d41
-ms.sourcegitcommit: dc4dfc41419104e2f54b63b931168176dc4f2e9e
+ms.openlocfilehash: d52fbf7efe5f61e99910d26a02304dc16fabb683
+ms.sourcegitcommit: 8aadc776da7b473159f9023cd555145819e7e952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706044"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174011"
 ---
 # <a name="get-started-with-windows-10-iot-core"></a>Introducción a Windows 10 IoT Core
 
@@ -59,10 +59,6 @@ Para obtener más información sobre nuestras ofertas, vea la documentación par
 </tbody>
 </table>
 
-## <a name="build-a-prototype"></a>Compilar un prototipo
-
-¿Nuevo en Windows 10 IoT? Introducción rápida y fácilmente con nuestros [Windows 10 IoT Core Quickstarter](tutorials/Tutorials.md). 
-
 ## <a name="windows-10-iot-pricing"></a>Precios de Windows 10 IoT
 
 <table>
@@ -97,6 +93,47 @@ Para obtener más información sobre nuestras ofertas, vea la documentación par
 </table>
 
 <i>Más información sobre la información detallada del ciclo de vida [aquí](https://support.microsoft.com/en-us/lifecycle/search?alpha=IoT%20Core)</i>.
+
+## <a name="prototype-a-device"></a>Diseño del prototipo de un dispositivo
+
+Antes de intentar fabricar un dispositivo, es mejor primera try y prototipo de un dispositivo con Windows 10 IoT Core. De este modo, puede comprender las características que necesitará y qué configuraciones que deseará cuando se trata en la fabricación.
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tema</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="odd">
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/tutorials/quickstarter/PrototypeBoards"
+>1. Elija un tablero de prototipo</a></p></td>
+<td align="left"><p>Eche un vistazo a los prototipos de placas comunes y elija uno para iniciar con la creación de prototipos.</p></td>
+</tr>
+
+<tr class="odd">
+<td align="left"><p>2. Flash una imagen de prototipo</p></td>
+<td align="left"><p>Vaya a nuestras secciones tutoriales para aprender a flash imágenes de prototipo en los dispositivos seleccionados. </p></td>
+</tr>
+
+<tr class="odd">
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appinstaller">3. Instalar la aplicación</a></p></td>
+<td align="left"><p>Obtenga información sobre cómo instalar la aplicación con distintas herramientas.</p></td>
+</tr>
+
+<tr class="odd">
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appdeployment">4. Implementar la aplicación</a></p></td>
+<td align="left"><p>Obtenga información sobre cómo implementar una aplicación mediante Visual Studio.</p></td>
+</tr>
+
+</tbody>
+</table>
 
 ## <a name="bring-a-device-to-market"></a>Poner un dispositivo al mercado
 

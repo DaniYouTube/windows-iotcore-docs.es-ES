@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre las características de hardware para una variedad de paneles sugeridos y los dispositivos de la Comunidad.
 keywords: Windows iot, dispositivos de desarrollo, paneles, SOC, SOM, sistema de chips, 2 de Raspberry Pi, Raspberry Pi 3, Minnowboard Max, DragonBoard
-ms.openlocfilehash: b4225937fef1338182c77baa0fd288b7ed597d45
-ms.sourcegitcommit: 3eacb968296e79e7e981fdc2a6f7f4f69c0920d1
+ms.openlocfilehash: 55e7192a53197623ca47ff8186630a691749c026
+ms.sourcegitcommit: 8aadc776da7b473159f9023cd555145819e7e952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65040194"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174030"
 ---
 # <a name="socs-and-custom-boards"></a>QUALCOMM y paneles personalizados
 
@@ -132,7 +132,8 @@ NXP compatibilidad con Windows 10 IoT Core está en versión preliminar pública
 Puede ponerse en horizontal a los socios comerciales que estamos trabajando con:
 
 * Advantech [RSB 4411](http://www.advantech.com/products/single_board_computer/rsb-4411/mod_d3901250-b0a0-4a5f-9762-b26fa0c36858) - buy@advantech.tw
-* Keith & Koep [pConXS](https://keith-koep.com/de/produkte/produkte-baseboards/pconxs-baseboard-vollausstattung-technische-daten/) con [Trizeps VII](https://keith-koep.com/de/produkte/produkte-trizeps/trizeps-vii-technische-daten-imx6/) - contact@keith-koep.com
+* Keith & Koep [pConXS](https://keith-koep.com/de/produkte/produkte-baseboards/pconxs-baseboard-vollausstattung-technische-daten/
+) con [Trizeps VII](https://keith-koep.com/de/produkte/produkte-trizeps/trizeps-vii-technische-daten-imx6/) - contact@keith-koep.com
 * Kontron [SMARC sAMX6i](https://www.kontron.com/products/boards-and-standard-form-factors/smarc/smarc-samx6i.html) -Martin Unverdorben (martin.unverdorben@kontron.com)
 * Ejecución sólido [Hummingboard Edge](https://www.solid-run.com/imx6-win-10-iot-core/ )-Ilya Viten (ilya@solid-run.com)
 * Geniatech [SoM-iMX6Q-P7](https://www.geniatech.com/product/som-imx6q-q7/) & [SoM iMX7D](https://www.geniatech.com/product/som-imx7d/) -Mike Decker (mike.decker@geniatech.com) o Fang Jijun (Fjj@geniatech.com)
