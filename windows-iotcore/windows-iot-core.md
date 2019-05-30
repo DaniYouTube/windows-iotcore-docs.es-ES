@@ -6,12 +6,12 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de Windows 10 IoT Core y lo que puede hacer con él.
 keywords: Windows 10 IoT Core, superficie pequeña, sin periféricos
-ms.openlocfilehash: 0fbcc6a96f8e35227acf32a9507ed3c7a038a83d
-ms.sourcegitcommit: 8aadc776da7b473159f9023cd555145819e7e952
+ms.openlocfilehash: 15a3d3e5f1703f87b0f0a0c782bb4cab9b99557f
+ms.sourcegitcommit: 0a4039d333dc3d1ed79de9300c094eb3f57dd8ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174049"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66263858"
 ---
 # <a name="an-overview-of-windows-10-iot-core"></a>Información general de Windows 10 IoT Core
 
@@ -70,7 +70,7 @@ Antes de intentar fabricar un dispositivo, es mejor primera try y prototipo de u
 
 * Inbox Cortana ya no está disponible en Windows 10 IoT Core desde la versión 1809 (17763). Si desea para poner un dispositivo habilitado por voz al mercado rápidamente, puede integrar el soporte técnico de Cortana en el dispositivo mediante el [preview del SDK de dispositivos de Cortana](https://developer.microsoft.com/en-us/cortana/devices).
 * El [FileOpenPicker API](https://docs.microsoft.com/en-us/uwp/api/windows.storage.pickers.fileopenpicker) no se admite en Windows 10 IoT Core. Para obtener acceso a las unidades locales o almacenamiento extraíble, puede implementar en su propia aplicación.
-* El dispositivo Windows 10 IoT Core arrancará en el [aplicación predeterminada](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/iotcoredefaultapp) en lugar de un PC de sobremesa. El propósito de esta aplicación no es solo para proporcionarle un shell descriptivo para interactuar con tras el primer arranque, pero que también le permite usar el [código abierto](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp) para esta aplicación para que se pueden usar estas características para de plug and play sus propias aplicaciones personalizadas.
+* De fábrica, el dispositivo de la Windows 10 IoT Core arrancará en el [aplicación predeterminada](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/iotcoredefaultapp) en lugar de un PC de sobremesa. Sin embargo, para la comercialización, esta aplicación predeterminada **debe** se ha reemplazado por una aplicación personalizada o una aplicación predeterminada que se puede modificar. El propósito de esta aplicación no es solo para proporcionarle un shell descriptivo para interactuar con tras el primer arranque, pero que también le permite usar el [código abierto](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp) para esta aplicación para que se pueden usar estas características para de plug and play sus propias aplicaciones personalizadas.
 
 ### <a name="differences-in-driver-supported-areas"></a>Diferencias en las áreas compatibles con el controlador
 

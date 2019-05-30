@@ -1,19 +1,19 @@
 ---
-title: Modo incrustado
+title: Modo insertado
 author: lilyhou
 ms.author: lihou
 ms.date: 11/10/2017
 ms.topic: article
 description: Obtenga información sobre cómo configurar Windows para permitir el modo incrustado, habilitación de aplicaciones en segundo plano y otras capacidades.
 keywords: Windows iot, modo incrustado, las aplicaciones en segundo plano
-ms.openlocfilehash: 1944cec09400cff4d895bb9e55b89b3b19a3f5f5
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: ca8124d97a9161a1539eff92c55cf3630cf0a049
+ms.sourcegitcommit: b719e66699372e1339c2316cab45df2a474d09a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514260"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252175"
 ---
-# <a name="embedded-mode"></a>Modo incrustado
+# <a name="embedded-mode"></a>Modo insertado
 
 Modo incrustado se admite en Windows IoT Core y Windows IoT Enterprise. Habilita el modo incrustado:
 
@@ -33,12 +33,16 @@ En segundo plano de las aplicaciones se ejecutan sin necesidad de detener y sin 
 
 Mientras el sistema reiniciará automáticamente aplicaciones en segundo plano, las características de bloqueo del sistema deben habilitarse para impedir que los usuarios deteniendo o interfieran con el funcionamiento de aplicaciones en segundo plano.
 
-## <a name="lowleveldevice-capability"></a>lowLevelDevice capacidad
+## <a name="lowlevel-device-capability-and-lowleveldevice-capability"></a>dispositivo lowLevel capacidad de capacidad y lowLevelDevice
 
-La capacidad de lowLevelDevice proporciona acceso a las interfaces de hardware de bajo nivel como I2C, SPI y GPIO.
+El **lowLevel** dispositivo capacidad proporciona acceso a las interfaces de hardware de bajo nivel como I2C, SPI y GPIO.
 
 * [Sample(GPIO) llamativa](https://developer.microsoft.com/en-us/windows/iot/samples/helloblinky)
-* [Muestra de acelerómetro](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Accelerometer)
+* [Ejemplo de acelerómetro](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Accelerometer)
+
+El **lowLevelDevices** capacidad permite a las aplicaciones tener acceso a dispositivos personalizados cuando se cumple una serie de requisitos adicionales. Esta funcionalidad no debe confundirse con la funcionalidad del dispositivo lowLevel, que permite el acceso a los dispositivos GPIO, I2C, SPI y PWM.
+
+Consulte [declaraciones de funcionalidades de aplicación](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations) para obtener más información.
 
 ## <a name="systemmanagment-capability"></a>systemManagment capacidad
 

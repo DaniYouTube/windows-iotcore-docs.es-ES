@@ -6,17 +6,18 @@ ms.date: 09/07/18
 ms.topic: article
 description: Aprovechar todos los recursos de la Comunidad de Windows 10 IoT.
 keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, recursos más valiosos personas, vídeos, blogs
-ms.openlocfilehash: 338f30bdfb87f5626cd1300a630529b1ed5b16a8
-ms.sourcegitcommit: dc4dfc41419104e2f54b63b931168176dc4f2e9e
+ms.openlocfilehash: d7fdc6423212a387a62fe0dca89dc94792c9909d
+ms.sourcegitcommit: bcc4cf5a25841f499a1de71c463f34e47e9811d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706061"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66319841"
 ---
 # <a name="windows-10-iot-resources"></a>Recursos de Windows 10 IoT
 
 ## <a name="blog-posts"></a>Entradas de blog
 
+* [Nuevas soluciones de IoT de Windows en Computex ingenuity muestran en el perímetro inteligente](https://blogs.windows.com/windowsexperience/2019/05/28/new-windows-iot-solutions-at-computex-show-ingenuity-at-the-intelligent-edge/#U3yYXu1rq054ljuk.97)
 * [Modernización de sistemas de Windows CE con Windows 10 IoT](https://blogs.windows.com/buildingapps/2019/05/07/modernizing-windows-ce-systems-with-windows-10-iot/#oHzjguRIlWV0ryo6.97)
 * [Abra robótica y Microsoft versión ROS en Windows 10 IoT Enterprise](https://blogs.windows.com/buildingapps/2019/05/07/open-robotics-and-microsoft-release-ros-on-windows-10-iot-enterprise/#Y86A6YUJELKDoRJJ.97)
 * [Disponibilidad general del dispositivo agente V2 de Microsoft Azure IoT](https://blogs.windows.com/buildingapps/2019/05/07/microsoft-azure-iot-device-agent-v2-general-availability/#BwOSxBSymeJqU34K.97)
