@@ -6,12 +6,12 @@ ms.date: 09/07/18
 ms.topic: article
 description: Aprovechar todos los recursos de la Comunidad de Windows 10 IoT.
 keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, recursos más valiosos personas, vídeos, blogs
-ms.openlocfilehash: d7fdc6423212a387a62fe0dca89dc94792c9909d
-ms.sourcegitcommit: bcc4cf5a25841f499a1de71c463f34e47e9811d5
+ms.openlocfilehash: ba3fb673c12849e9b3cfb48ae9215f3ec85992eb
+ms.sourcegitcommit: 65900a35a0811b8510f3b7f53c8256b4dcc29d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319841"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499345"
 ---
 # <a name="windows-10-iot-resources"></a>Recursos de Windows 10 IoT
 
@@ -43,6 +43,7 @@ ms.locfileid: "66319841"
 ## <a name="whitepapers"></a>Notas del producto
 * [Azure IoT Edge + Windows IoT: Compatibilidad con inteligencia artificial en el perímetro](https://aka.ms/IoT-Edge-WP)
 * [Aprendizaje automático de Windows: Implementar AI en sus aplicaciones de Windows](https://aka.ms/Windows-ML-WP)
+* [Crear soluciones de IoT más seguras con Windows IoT](https://aka.ms/secure-windowsiot)
 
 ## <a name="learning-resources"></a>Recursos de aprendizaje
 

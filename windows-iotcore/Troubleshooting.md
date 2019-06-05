@@ -5,12 +5,12 @@ title: Solución de problemas
 ms.author: saclayt
 ms.date: 08/28/18
 ms.topic: article
-ms.openlocfilehash: 00c748e4ce06e960dbc2a4250fb3cb279f4d092a
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 8b93ad987c27e1123d68c4d22148447ccc99e37d
+ms.sourcegitcommit: 2e7e9555fe71ca60b5f41dbf06051a50520a368a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514747"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491706"
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 Se trata de un artículo que contiene los problemas más comunes que las personas han llegado a través. Para buscar un elemento específico, use Ctrl + F para buscar una palabra o frase. ¿Tendría ninguna idea de que desea agregar? Crear una solicitud para esta documentación o previsión comentarios sobre el contenido siguiente.
@@ -88,7 +88,7 @@ Puede obtener error **0x139f (ERROR_INVALID_STATE)** en el caso cuando el dispos
 
 El dispositivo Raspberry Pi 3 modelo B + es el producto más reciente en el intervalo de Raspberry Pi 3, haciendo alarde de un procesador quad core de 64 bits a 1,4 GHz, doble banda 2,4 GHz y 5 GHz redes LAN inalámbricas, Ethernet 4.2/BLE, más rápido de Bluetooth y PoE capacidad a través de una independiente PoE alta disponibilidad.
 
-Recientemente, muchos clientes que están interesados en Windows 10 IoT Core encontró un problema donde el dispositivo no pudo iniciar normalmente después de vaciar Windows 10 IoT Core, pero la Raspbian funciona bien en él. Las siguientes son algunas sugerencias sobre cómo solucionar el problema de inicio.
+Recientemente, muchos clientes que están interesados en Windows 10 IoT Core encontró un problema donde el dispositivo no se pudo iniciar normalmente después de intermitencia en Windows 10 IoT Core, pero la Raspbian funciona bien en él. Las siguientes son algunas sugerencias sobre cómo solucionar el problema de inicio.
 
 Hay algunos problemas conocidos en esta imagen de vista previa de Insider. Tenga en cuenta:
 * Esta imagen solo está pensada para el dispositivo Raspberry Pi 3B + y no se iniciará en el Pi Raspbierry 2.
