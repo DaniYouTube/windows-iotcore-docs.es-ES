@@ -6,12 +6,12 @@ ms.date: 01/30/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de Windows 10 IoT y lo que puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Windows 10 IoT Core, sin periféricos, voz, características, edición binaria, las ediciones
-ms.openlocfilehash: f1ff68d1efe967eee0472eec54b5354d47c9447a
-ms.sourcegitcommit: 1f6afcfee0cb5557dc21c7b15e199bc557d8eedb
+ms.openlocfilehash: b5c729344f3c805deeecb0a04c0c696c8fd7b51e
+ms.sourcegitcommit: 5a103405cbc5c61101139aff6aaa709bd4ef9582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65171348"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694117"
 ---
 # <a name="an-overview-of-windows-10-iot"></a>Información general de Windows 10 IoT 
 
@@ -39,9 +39,11 @@ Aunque Windows 10 IoT Core y Windows 10 IoT Enterprise son similares en nombre, 
 > | Tecnologías de seguridad del dispositivo | [TPM](https://docs.microsoft.com/windows/iot-core/secure-your-device/tpm), [Secure Boot, BitLocker, Device Guard](https://docs.microsoft.com/windows/iot-core/secure-your-device/securebootandbitlocker)y atestación de estado de dispositivo | [TPM](https://docs.microsoft.com/windows/iot-core/secure-your-device/tpm), [Secure Boot, BitLocker, Device Guard](https://docs.microsoft.com/windows/iot-core/secure-your-device/securebootandbitlocker) y atestación de estado de dispositivo |
 > | Compatibilidad con la arquitectura de CPU | x86 x64 y ARM | x86 y x64 |
 > | Concesión de licencias | En línea licencias de contrato y acuerdos de OEM incrustado, libre de regalías | Contratos directos e indirectos OEM incrustado |
-> | Escenarios de uso | [Señalización digital](https://www.microsoft.com/en-us/windowsforbusiness/digital-signage), edificio inteligente, puerta de enlace de IoT, HMI, Home, Smart ponibles | Tabletas del sector, PDV, quioscos multimedia, [señalización Digital](https://www.microsoft.com/en-us/windowsforbusiness/digital-signage), ATM, los dispositivos médicos, fabricación, los dispositivos de cliente ligero |
+> | Escenarios de uso | [Señalización digital](https://www.microsoft.com/en-us/windowsforbusiness/digital-signage), edificio inteligente, puerta de enlace de IoT, HMI, Home, Smart ponibles | Tabletas del sector, Retail Point of Service, quioscos multimedia, [señalización Digital](https://www.microsoft.com/en-us/windowsforbusiness/digital-signage), ATM, los dispositivos médicos, fabricación, los dispositivos de cliente ligero |
 
 Para obtener detalles de requisitos mínimos, visite [el sitio de Windows Hardware](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview).
+
+Si está interesado en aprender más sobre el punto de servicio, visite la [los documentos de UWP en este tema](https://aka.ms/pointofservice).
 
 ## <a name="differences-between-windows-10-desktop-and-windows-10-iot-core"></a>Diferencias entre el escritorio de Windows 10 y Windows 10 IoT Core
 

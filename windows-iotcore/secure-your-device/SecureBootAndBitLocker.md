@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 keywords: Windows iot, arranque seguro, BitLocker, protección de dispositivos, seguridad, seguridad de llave en mano
-ms.openlocfilehash: 092be64210f651c25156e93885a63f35c22d4791
-ms.sourcegitcommit: fcc0c6add468040e2f676893b44b260e3ddc3c52
+ms.openlocfilehash: 300f47ecb3d6c67f467174c230c56a15a1d0f4a1
+ms.sourcegitcommit: 5a103405cbc5c61101139aff6aaa709bd4ef9582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65779392"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694140"
 ---
 # <a name="enabling-secure-boot-bitlocker-and-device-guard-on-windows-10-iot-core"></a>Habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 
@@ -32,40 +32,6 @@ Hay tres áreas principales que se producen cuando un dispositivo de IoT está e
 Puede encontrar información adicional sobre el proceso de arranque de Windows 10 [aquí](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process).
 
 ## <a name="locking-down-iot-devices"></a>Dispositivos IoT bloquear
-
-En orden de bloqueo de un dispositivo Windows IoT, se deben realizar las siguientes consideraciones.
-
-### <a name="platform-secure-boot"></a>Arranque seguro de plataforma
-
-Cuando el dispositivo está encendido en primer lugar, es el primer paso del proceso general de arranque cargar y ejecutar firmware cargadores de arranque, que inicializan el hardware en los dispositivos y proporcionan funcionalidad de intermitencia de emergencia. El entorno de UEFI, a continuación, se cargan y se cede el control.
-
-Estos cargadores de arranque de firmware son específicos de SoC, por lo que necesita trabajar con el fabricante del dispositivo adecuado para tener estos cargadores de arranque creados en el dispositivo.
-
-Antes de que podemos adentrarnos en los componentes individuales que proporcionan una plataforma segura para el dispositivo de IoT, es necesario comprender el orden de arranque en un dispositivo Windows 10 IoT Core.
-
-Hay tres áreas principales que se producen cuando un dispositivo de IoT está encendido, todo el proceso para la carga de kernel del sistema operativo y la ejecución de la aplicación instalada.
-
-* Arranque seguro de plataforma
-* Arranque seguro (UEFI) de la interfaz de Firmware Extensible unificada
-* Integridad de código de Windows
-
-![Captura de pantalla de panel](../media/SecureBootAndBitLocker/BootOrder.jpg)
-
-Puede encontrar información adicional sobre el proceso de arranque de Windows 10 [aquí](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process).
-
-En orden de bloqueo de un dispositivo Windows IoT, se deben realizar las siguientes consideraciones.
-
-### <a name="platform-secure-boot"></a>Arranque seguro de plataforma
-
-Cuando el dispositivo está encendido en primer lugar, es el primer paso del proceso general de arranque cargar y ejecutar firmware cargadores de arranque, que inicializan el hardware en los dispositivos y proporcionan funcionalidad de intermitencia de emergencia. El entorno de UEFI, a continuación, se cargan y se cede el control.
-
-Estos cargadores de arranque de firmware son específicos de SoC, por lo que necesita trabajar con el fabricante del dispositivo adecuado para tener estos cargadores de arranque creados en el dispositivo.
-
-### <a name="uefi-secure-boot"></a>Arranque seguro de la UEFI
-
-Arranque seguro de UEFI es el primer punto de cumplimiento de directivas y se encuentra en UEFI.  Restringe el sistema para permitir solo la ejecución de archivos binarios firmados por una entidad determinada, como los controladores de firmware, ROM, controladores UEFI o aplicaciones y los cargadores de arranque UEFI. Esta característica evita que código desconocido se ejecuta en la plataforma y potencialmente debilitar su seguridad de ella. Arranque seguro reduce el riesgo de ataques de malware previo al arranque en el dispositivo, como los rootkits. 
-
-OEM, deberá almacenar el arranque seguro de UEFI bases de datos en el dispositivo de IoT en tiempo de fabricación. Estas bases de datos incluyen la firma de base de datos (db), revocar la firma (dbx) y la base de datos de inscripción de clave (KEK). Estas bases de datos se almacenan en el firmware RAM no volátil (NV-RAM) del dispositivo.
 
 En orden de bloqueo de un dispositivo Windows IoT, se deben realizar las siguientes consideraciones.
 
@@ -153,7 +119,7 @@ Windows 10 IoT Core funciona con diversos silicons que se emplean en cientos de 
 
 * Intel MinnowBoardMax
 
-    Para Intel MinnowBoard Max, versión de firmware debe ser 0.82 o posterior (obtener el [firmware más reciente](https://firmware.intel.com/projects/minnowboard-max)). Para habilitar la funcionalidad de TPM, encender la placa con un teclado y pantalla adjunta y presione F2 para entrar en la configuración UEFI. Vaya a _el Administrador de dispositivos -> configuración del sistema -> configuración de seguridad -> PTT_ y establézcalo en  _&lt;habilitar&gt;_. Presione F10 para guardar los cambios y continuar con un reinicio de la plataforma.
+    Para Intel MinnowBoard Max, versión de firmware debe ser 0.82 o posterior (obtener el [firmware más reciente](https://firmware.intel.com/projects/minnowboard-max)). Para habilitar la funcionalidad de TPM, encender la placa con un teclado y pantalla adjunta y presione F2 para entrar en la configuración UEFI. Vaya a _el Administrador de dispositivos -> configuración del sistema -> configuración de seguridad -> PTT_ y establézcalo en  _&lt;habilitar&gt;_ . Presione F10 para guardar los cambios y continuar con un reinicio de la plataforma.
 
 > [!NOTE]
 > Raspberry Pi 2 ni 3 no son compatibles con TPM y por lo que no podemos configuramos los escenarios de bloqueo.

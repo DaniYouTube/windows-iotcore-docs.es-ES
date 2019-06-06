@@ -6,12 +6,12 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de Windows 10 IoT Enterprise y lo que puede hacer con él.
 keywords: Binario de Windows 10 IoT Enterprise, Enterprise, Windows
-ms.openlocfilehash: c8e9eed02a9ae3010ceb10c78bd8a01c4535e383
-ms.sourcegitcommit: 1f6afcfee0cb5557dc21c7b15e199bc557d8eedb
+ms.openlocfilehash: abf6fa3478991a188b8980ceaf838648f6a89feb
+ms.sourcegitcommit: 5a103405cbc5c61101139aff6aaa709bd4ef9582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65171337"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694123"
 ---
 # <a name="an-overview-of-windows-10-iot-enterprise"></a>Información general de Windows 10 IoT Enterprise
 
@@ -23,7 +23,7 @@ Windows 10 IoT Enterprise es una versión completa de Windows 10 que ofrece segu
 
 ## <a name="getting-started"></a>Introducción 
 
-Para iniciar su recorrido en fabricación con Windows 10 IoT Enterprise, es necesario llegar a un distribuidor de [esta lista](https://go.microsoft.com/fwlink/p/?linkid=2069623).
+Para iniciar su recorrido en fabricación con Windows 10 IoT Enterprise, es necesario llegar a un distribuidor de [esta lista](https://go.microsoft.com/fwlink/p/?linkid=2093270).
 
 Desde allí, puede aprender fabricar con Windows 10 IoT Enterprise con nuestro [la Guía de fabricación de Windows 10 IoT Enterprise](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/iot-ent-overview). 
 
