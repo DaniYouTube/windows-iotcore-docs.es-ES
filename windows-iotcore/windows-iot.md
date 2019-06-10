@@ -6,12 +6,12 @@ ms.date: 01/30/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de Windows 10 IoT y lo que puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Windows 10 IoT Core, sin periféricos, voz, características, edición binaria, las ediciones
-ms.openlocfilehash: b5c729344f3c805deeecb0a04c0c696c8fd7b51e
-ms.sourcegitcommit: 5a103405cbc5c61101139aff6aaa709bd4ef9582
+ms.openlocfilehash: 1e1d2769513005a705c48522d4dc7dc034f5d7b9
+ms.sourcegitcommit: dcaeaa6c5e84dd6a4974a56098f3bab151209e41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66694117"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66760392"
 ---
 # <a name="an-overview-of-windows-10-iot"></a>Información general de Windows 10 IoT 
 
@@ -73,7 +73,7 @@ HKEY_CURRENTUSER\Control Panel\Accessibility
 REG ADD "HKCU\Control Panel\Accessibility" /v DynamicScrollbars /t REG_DWORD \d "1"
 ```
 
-* Debe establecer la clave del registro de la cuenta predeterminada. Si la configuración de XAML de ScrollViewer es "Visible", el valor del registro nEl 0 forzará la barra de desplazamiento aparezcan regardlss si no hay suficiente contenido para que el desplazamiento aparezca en la interfaz de usuario. El valor del registro 1 mantendrá la barra de desplazamiento oculta hasta que no hay suficiente contenido.
+* Debe establecer la clave del registro de la cuenta predeterminada. Si la configuración de XAML de ScrollViewer es "Visible", el valor del registro 0 forzará la barra de desplazamiento aparezcan regardlss si no hay suficiente contenido para que el desplazamiento aparezca en la interfaz de usuario. El valor del registro 1 mantendrá la barra de desplazamiento oculta hasta que no hay suficiente contenido.
 
 ```
 <TextBox Height="200" Width="100" IsEnabled="True" FontSize="50" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Visible" Text="..."/>
@@ -90,7 +90,7 @@ REG ADD "HKCU\Control Panel\Accessibility" /v DynamicScrollbars /t REG_DWORD \d 
 * El comando Remove-AppxPackage de PowerShell funciona en el escritorio, pero no en Windows 10 IoT Core.
 * No todas las carpetas en el dispositivo son accesibles para las aplicaciones universales de Windows. Puede usar la herramienta FolderPermissions para crear una carpeta accesibles para una aplicación para UWP en Windows 10 IoT Core. Por ejemplo, ejecute FolderPermissions c:\test -e para dar acceso de aplicaciones UWP a la carpeta c:\test. Sin embargo, esto no está disponible en el escritorio.
 
-Todas las diferencias que se ha mostrado en esta publicación pueden desaparecer a medida que pasa el tiempo porque Windows 10 IoT Core es mantener la actualización.
+Comandos que aparecen en esta publicación pueden cambiar mientras pasa el tiempo desde que se actualiza continuamente Windows 10 IoT Core.
 
 ## <a name="iot-edge-support-for-windows-10-iot"></a>Compatibilidad de IoT Edge para Windows 10 IoT
 Para más información acerca de IoT Edge soporte técnico para Windows 10 IoT, por favor, puede obtener más información sobre "Sistemas operativos" en el artículo de Azure IoT Edge [aquí](https://docs.microsoft.com/en-us/azure/iot-edge/support#operating-systems).

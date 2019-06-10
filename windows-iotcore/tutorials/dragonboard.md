@@ -6,17 +6,17 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar su Dragonboard con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, Dragonboard
 ms.custom: RS5
-ms.openlocfilehash: 8e4acc77d902124934e1bdae249f76c7f76306a6
-ms.sourcegitcommit: 8aadc776da7b473159f9023cd555145819e7e952
+ms.openlocfilehash: 3630ddad61ac34feeed3bf3c5b602c6c39245151
+ms.sourcegitcommit: dcaeaa6c5e84dd6a4974a56098f3bab151209e41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182277"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66760380"
 ---
 # <a name="setting-up-a-dragonboard"></a>Configurar un Dragonboard
 
 > [!IMPORTANT]
-> Cuando está trabajando con un nuevo Dragonboard, acompañada de Android instalado. Deberá borrar y cargar el dispositivo mediante el método eMMC parpadeante.
+> Cuando está trabajando con un nuevo Dragonboard, acompañada de Android instalado. Deberá borrar y cargar el dispositivo mediante el eMMC intermitencia en el método, [aquí](https://docs.microsoft.com/en-us/windows/iot-core/tutorials/qualcomm).
 
 > [!NOTE]
 > Si experimenta problemas relacionados con el audio con su DragonBoard, le recomendamos que lea manual de Qualcomm [aquí](https://developer.qualcomm.com/download/db410c/stereo-connector-and-audio-routing-application-note.pdf). 

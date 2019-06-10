@@ -6,12 +6,12 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo de Qualcomm con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, Qualcomm
 ms.custom: RS5
-ms.openlocfilehash: 949c5af00f48b4c2049e711d4e18385fe9f3c18e
-ms.sourcegitcommit: 8aadc776da7b473159f9023cd555145819e7e952
+ms.openlocfilehash: 42ccf65023b2742fc584760d09f679c4f6a5b197
+ms.sourcegitcommit: dcaeaa6c5e84dd6a4974a56098f3bab151209e41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182207"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66760371"
 ---
 # <a name="setting-up-a-qualcomm-device"></a>Cómo configurar un dispositivo de Qualcomm
 
@@ -23,7 +23,7 @@ Si busca para fabricar con un dispositivo de Qualcomm, consulte el [IoT Core fab
 ## <a name="using-emmc"></a>Uso de eMMC
 
 1. Descargue e instale la herramienta de actualización DragonBoard para su [x86](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip) o [x64](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip) máquina.
-2. Descargue el [Windows 10 IoT Core DragonBoard FFU](https://developer.microsoft.com/en-us/windows/iot/Downloads).
+2. Descargue el [Windows 10 IoT Core DragonBoard FFU](https://docs.microsoft.com/en-us/windows/iot-core/downloads).
 3. Haga doble clic en el archivo ISO descargado y busque la montado Virtual-unidad de CD. Esta unidad contendrá un archivo de instalador (.msi); Haga doble clic en él. Esto crea un nuevo directorio en su equipo bajo `C:\Program Files (x86)\Microsoft IoT\FFU\` en lo que debería ver un archivo de imagen, "flash.ffu".
 4. Asegúrese de que su DragonBoard está en modo de descarga estableciendo el primer arranque cambie en el panel a USB de arranque, como se muestra a continuación. Conectar el equipo host a través de un cable microUSB DragonBoard, a continuación, conecte el DragonBoard a un 12V (> 1A) fuente de alimentación.
 5. Inicie la herramienta de actualización DragonBoard, que debe detectar que el DragonBoard se conecte al equipo con un círculo verde. "Examinar" para el DragonBoard FFU que ha descargado, a continuación, haga clic en el _programa_ botón.
