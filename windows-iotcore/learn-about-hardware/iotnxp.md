@@ -6,12 +6,12 @@ ms.date: 02/22/2019
 ms.topic: article
 description: Obtenga información sobre Windows 10 IoT Core y NXP i.MX Qualcomm
 keywords: Windows 10 IoT Core, introducción, i.MX, NXP
-ms.openlocfilehash: 7b78aee0e67e481de38ade9b3fd6007baa8b0c9b
-ms.sourcegitcommit: 87c60bb857cb025255f4f06094c888384a0bb562
+ms.openlocfilehash: b27589d574db0f459e42d4a8170defa2689fa001
+ms.sourcegitcommit: fa4a29fcd5af464924a0a5ab581f08f631a3ad72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940671"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66835594"
 ---
 # <a name="window-10-iot-core-and-nxp-imx-socs"></a>Windows 10 IoT Core y NXP Qualcomm i.MX
 
@@ -24,7 +24,7 @@ Según el abrumador interés en la solución, Microsoft y NXP están avanzando B
 
 ## <a name="bsp-access"></a>Acceso BSP
 
-Si le interesa habilitar la compatibilidad con su propio hardware i.MX, vaya a la fuente BSP y documentación en [Github]( https://github.com/ms-iot/imx-iotcore). A menos que se ha indicado, la mayor parte del origen se proporciona bajo licencia MIT. El código está aún en desarrollo. No todas las características de plataforma totalmente están habilitadas u optimizadas. El código actualmente está pensado para el desarrollo no comercial solo en tiempo de tiempo. Se espera que una versión de calidad comercial más adelante en 2019.
+Si le interesa habilitar la compatibilidad con su propio hardware i.MX, vaya a la fuente BSP y documentación en [Github]( https://github.com/ms-iot/imx-iotcore). A menos que se ha indicado, la mayor parte del origen se proporciona bajo licencia MIT. El código se publica para uso comercial con soporte técnico proporcionado por NXP y pueden encontrarse [aquí](https://www.nxp.com/support/developer-resources/evaluation-and-development-boards/i.mx-evaluation-and-development-boards/i.mx-software-and-development-tool:IMX-SW).
 
 Si tiene preguntas de NXP hardware/BSP respectivo o comentarios acerca de cómo el BSP puede funcionar mejor con su solución de destino, publíquelas en el [NXP Comunidad](https://community.nxp.com/community/imx/content?filterID=contentstatus%5Bpublished%5D%7Ecategory%5Bwindows%5D). Para las preguntas relacionadas con Windows, utilice el [Microsoft Community](https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT).
 

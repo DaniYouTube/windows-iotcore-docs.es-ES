@@ -6,12 +6,12 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar su Dragonboard con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, Dragonboard
 ms.custom: RS5
-ms.openlocfilehash: 3630ddad61ac34feeed3bf3c5b602c6c39245151
-ms.sourcegitcommit: dcaeaa6c5e84dd6a4974a56098f3bab151209e41
+ms.openlocfilehash: 6488237a41f42c7acbe9e5e1c68466548577ab38
+ms.sourcegitcommit: fa4a29fcd5af464924a0a5ab581f08f631a3ad72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66760380"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66835609"
 ---
 # <a name="setting-up-a-dragonboard"></a>Configurar un Dragonboard
 
@@ -42,7 +42,7 @@ Para flash o descargar IoT Core en su MinnowBoard, necesitará:
 4. Conecte su DragongBoard a una pantalla externa.
 5. Encender su Dragonboard mediante un 12V (> 1A) alimentación mientras mantiene presionada (+) para Subir volumen botón. El dispositivo - cuando se conecta a una pantalla - debe aparecer la imagen de un martillo, un rayo y un engranaje.
 6. Ahora, el dispositivo debe estar visible en el panel, como se muestra a continuación. Seleccione el dispositivo adecuado.
-7. Acepte los términos de licnse y haga clic en **descargue e instale**. Verá que ahora parpadea en su dispositivo Windows 10 IoT Core.
+7. Acepte los términos de licencia de software y haga clic en **descargue e instale**. Verá que ahora parpadea en su dispositivo Windows 10 IoT Core.
 
 ![DragonBoard en modo de flash](../media/DeviceSetup/db4.png)
 
