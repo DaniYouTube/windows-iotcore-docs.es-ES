@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 keywords: Windows iot, arranque seguro, BitLocker, protección de dispositivos, seguridad, seguridad de llave en mano
-ms.openlocfilehash: 300f47ecb3d6c67f467174c230c56a15a1d0f4a1
-ms.sourcegitcommit: 5a103405cbc5c61101139aff6aaa709bd4ef9582
+ms.openlocfilehash: 26e0949dd8ee0a8cfec8aeafee3908a3ade86293
+ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66694140"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67142363"
 ---
 # <a name="enabling-secure-boot-bitlocker-and-device-guard-on-windows-10-iot-core"></a>Habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 
@@ -206,7 +206,7 @@ Puede probar los paquetes generados por instalarlos manualmente en un dispositiv
 7. Reinicio del dispositivo para activar el cifrado de Bitlocker.
 8. Probar las características de seguridad
     * SecureBoot: pruebe `bcdedit /debug on` , obtendrá un error que indica que el valor está protegido por la directiva de arranque seguro
-    * BitLocker: Ejecute `fvecon -status c:`, obtendrá el estado mencionar *en Encrypted, tiene datos de recuperación (clave externa), tiene datos de TPM, seguro, partición de arranque, solo el espacio utilizado*
+    * BitLocker: Ejecute `start /wait sectask.exe -waitencryptcomplete:1`, si el valor de ERRORLEVEL es `-2147023436` cifrado (ERROR_TIMEOUT), a continuación, no está completado. Cuando se ejecuta sectask.exe desde un archivo .cmd omite el `start /wait`.
     * DeviceGuard: Ejecute cualquier binario sin signo o un archivo binario firmado con certificado no está en la lista SIPolicy y confirme que no puede ejecutar.
 
 ### <a name="generate-lockdown-image"></a>Generar imagen de bloqueo
