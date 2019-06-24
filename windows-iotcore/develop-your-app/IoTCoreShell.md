@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo aprovechar el IoT Shell para navegar entre navegaciones en el dispositivo.
 keywords: Windows iot, IoT core shell, las aplicaciones, aplicaciones de primer plano, aplicaciones en segundo plano
-ms.openlocfilehash: be72fabc91fc5748a029b61ebd9a306deb23f726
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 74d8406036aa18dc5f8dcaa871e116eb7f8ec29b
+ms.sourcegitcommit: beed912a2266d6dbc06a8a26b85ff49f1feffd69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514764"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316625"
 ---
 # <a name="iot-shell-overview"></a>Introducción al Shell de IoT
 
@@ -31,7 +31,7 @@ Estas son las principales diferencias entre las aplicaciones de primer y segundo
 
 En este momento, la aplicación de inicio permite crear una aplicación principal para Windows 10 IoT Core, que le permite cambiar entre las aplicaciones de primer plano diferentes. 
 
-El **aplicación de inicio de IoT** ([ejemplo](https://developer.microsoft.com/en-us/windows/iot/samples/iotstartapp) representa una aplicación de inicio simple que enumera las aplicaciones instaladas en el dispositivo y, después, inicia una mediante las APIs PackageManager.
+El **aplicación de inicio de IoT** ([ejemplo](https://github.com/microsoft/Windows-iotcore-samples/tree/master/Samples/IoTStartApp) representa una aplicación de inicio simple que enumera las aplicaciones instaladas en el dispositivo y, después, inicia una mediante las APIs PackageManager.
 
 ## <a name="switching-between-apps-with-hid-injection-keys"></a>Cambiar entre las aplicaciones con las claves de inserción de HID
 
@@ -66,8 +66,7 @@ Como alternativa, si desea cambiar entre las aplicaciones de primer plano, puede
 “NEXT” QWORD 0x00020000 00050009 
 ``
 
-Como un archivo de registro, esto tiene el aspecto siguiente:
-``
+Como un archivo de registro, esto tiene el aspecto siguiente: ``
 [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\HotKeys]
 "Prev"=hex(b):09,00,01,00,00,00,01,00
 "Next"=hex(b):09,00,05,00,00,00,02,00
