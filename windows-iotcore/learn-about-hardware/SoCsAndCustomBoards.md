@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre las características de hardware para una variedad de paneles sugeridos y los dispositivos de la Comunidad.
 keywords: Windows iot, dispositivos de desarrollo, paneles, SOC, SOM, sistema de chips, 2 de Raspberry Pi, Raspberry Pi 3, Minnowboard Max, DragonBoard
-ms.openlocfilehash: 55e7192a53197623ca47ff8186630a691749c026
-ms.sourcegitcommit: 8aadc776da7b473159f9023cd555145819e7e952
+ms.openlocfilehash: 85625926a5aaa474ba2ea86ff6c2890553669131
+ms.sourcegitcommit: 8bb162cbfa286107e243a0286fe53b3b9cc3f359
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174030"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345116"
 ---
 # <a name="socs-and-custom-boards"></a>QUALCOMM y paneles personalizados
 
@@ -23,7 +23,7 @@ Microsoft trabaja junto con Broadcom, Intel, NXP y Qualcomm para comprobar la co
 |----------|-------|----------|-----|
 | BCM2837 | [Procesador Intel® Atom E3900 series (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                                | [Snapdragon 410 (APQ8016)](https://www.qualcomm.com/products/snapdragon/processors/410) | [i.MX 6 familia](http://aka.ms/iotnxp) |
 | BCM2836 | [Procesador Intel® Celeron® N3350 (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                                    | [Snapdragon 212 (APQ8009)](https://www.qualcomm.com/products/snapdragon/processors/212) | [i.MX 7 familia](http://aka.ms/iotnxp)     |
-|         | [Plataforma de procesador N4200 Intel® Pentium® (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                           |                                                                                         | [Familia de i.MX de 8 M](http://aka.ms/iotnxp) |
+|         | [Plataforma de procesador N4200 Intel® Pentium® (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                           |                                                                                         | [i.MX 8M y 8M mini familia](http://aka.ms/iotnxp) |
 |         | [Procesadores Intel® Pentium® y Celeron® procesador N3000 serie (Braswell)](http://ark.intel.com/products/codename/66094/#@embedded)                    |                                                                                         |      |
 |         | [Procesador de Atom de Intel® x5 E8000 (Braswell)](http://ark.intel.com/products/codename/66094/#@embedded)                                        |                                                                                         |  |
 |         | [Procesador de Atom de Intel® x5 Z8350 (Trail Cherry)](https://ark.intel.com/products/93361/Intel-Atom-x5-Z8350-Processor-2M-Cache-up-to-1_92-GHz) |                                                                                         |     |
