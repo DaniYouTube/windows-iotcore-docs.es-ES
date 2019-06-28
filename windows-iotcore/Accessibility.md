@@ -1,43 +1,43 @@
 ---
-title: Accesibilidad para Windows 10 IoT
+title: Accesibilidad de Windows 10 IoT
 author: saraclay
 ms.author: saclayt
 ms.date: 03/8/2018
 ms.topic: article
-description: Obtenga información sobre la accesibilidad y cómo aplicar estos conocimientos en la siguiente aplicación o dispositivo.
-keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, accesibilidad, el contraste de color
+description: Obtenga información sobre la accesibilidad y aprenda a aplicar los conocimientos adquiridos en su próxima aplicación o dispositivo.
+keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, accesibilidad, contraste de color
 ms.openlocfilehash: 149c47fc9cae7fb99eb6aa190055c13284c3e197
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
-ms.translationtype: MT
+ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514755"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "60167354"
 ---
-# <a name="an-overview-of-accessibility-for-windows-iot"></a>Información general sobre accesibilidad para Windows IoT 
+# <a name="an-overview-of-accessibility-for-windows-iot"></a>Información general sobre la accesibilidad en Windows IoT 
  
 ## <a name="introduction"></a>Introducción 
-Accesibilidad permite a los usuarios de todas las capacidades de forma intuitiva y eficaz aprovechar todas las funcionalidades que su oferta de aplicaciones o dispositivos, independientemente de una persona interactúa con la aplicación o dispositivo. 
+La accesibilidad permite a usuarios con diferentes capacidades aprovechar de forma intuitiva y eficaz todas las funcionalidades que ofrecen las aplicaciones o los dispositivos, independientemente de si la persona interactúa con estos. 
  
-Es fundamental que la accesibilidad se considera durante la fase de diseño del producto como esto evitará muchas posibles errores relacionados con la accesibilidad. Por ejemplo, durante la fase de diseño, consideración en torno a los colores usados y el tamaño de texto (y cómo los pueden personalizar, por el usuario) pueden ayudar a un gran muchos clientes. Y para dispositivos con un teclado, durante la fase de diseño, consideraciones acerca de cómo se puede usar el teclado para aprovechar toda la funcionalidad en el producto y también cómo tener acceso a la funcionalidad de acceso más frecuente con el menor número de pulsaciones de teclas.  
+Es fundamental tener en cuenta la accesibilidad durante la fase de diseño del producto, ya que esto evitará muchos posibles errores relacionados con la accesibilidad. Por ejemplo, durante la fase de diseño, se puede ayudar a numerosos clientes si se tienen en cuenta los colores usados y el tamaño de texto (y cómo el usuario puede personalizar estas opciones). En cuanto a los dispositivos con teclado, conviene considerar durante la fase de diseño cómo se puede usar el teclado para aprovechar toda la funcionalidad del producto y cómo se puede acceder a las funcionalidades usadas con más frecuencia con el menor número posible de pulsaciones de teclas.  
  
-Para el desarrollador, desde una perspectiva de la implementación la buena noticia es que Windows, como una plataforma hace ya mucho trabajo para proporcionar cierto nivel de accesibilidad de forma predeterminada. Por ejemplo, los controles estándar son accesibles mediante programación a través de la UI Automation (UIA) API de forma predeterminada. Si decide no utilizar un control estándar y compilar en su lugar la interfaz de usuario personalizada, el trabajo necesario para realizar la accesibilidad de interfaz de usuario puede resultar mucho más lento que basta con crear aplicaciones con controles estándares proporcionados por la plataforma. 
+Afortunadamente para el desarrollador, desde el punto de vista de la implementación, Windows es una plataforma que por su parte ya proporciona cierto grado de accesibilidad de forma predeterminada. Por ejemplo, se puede acceder a los controles estándar mediante programación de forma predeterminada a través de la API de Automatización de la interfaz de usuario (UIA). Si decide no usar un control estándar y, en su lugar, compilar una interfaz de usuario personalizada, el trabajo necesario para garantizar la accesibilidad de la interfaz de usuario puede llevar mucho más tiempo que simplemente crear las aplicaciones con los controles estándar que proporciona la plataforma. 
 
 ## <a name="accessibility-testing"></a>Pruebas de accesibilidad
-A continuación se muestran las herramientas que se recomienda para usar al compilar cualquier aplicación. Aunque estas herramientas le ayudarán a cuando se trata de auditoría de sus propios diseños, tenga en cuenta que todavía necesitará tener en cuenta las características como los requisitos de texto y de contraste alto.
+A continuación se muestran las herramientas recomendadas durante la compilación de la aplicación. Aunque le resultarán de gran ayuda para llevar a cabo una auditoría de sus propios diseños, tendrá que tener en cuenta igualmente características como los requisitos de texto y de contraste alto.
 
 ### <a name="accscope"></a>AccScope
-El [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239) herramienta permite a los desarrolladores y evaluadores evaluar la accesibilidad de su aplicación durante el desarrollo y el diseño, la aplicación potencialmente en fases de prototipo anteriormente, en lugar de en las fases de pruebas en tiempo de ejecución de una aplicación ciclo de desarrollo. Está diseñada especialmente para probar los escenarios de accesibilidad de la característica Narrador con la aplicación.
+La herramienta [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239) permite que los desarrolladores y los evaluadores evalúen la accesibilidad de la aplicación durante la fase de desarrollo y diseño de la aplicación, y posiblemente en fases anteriores del prototipo, en lugar de hacerlo en las fases de prueba más avanzadas del ciclo de desarrollo de la aplicación. Está diseñada especialmente para probar los escenarios de accesibilidad de la característica Narrador con la aplicación.
 
 ### <a name="inspect"></a>Inspect
-[Inspeccionar](https://msdn.microsoft.com/library/windows/desktop/Dd318521) le permite seleccionar cualquier elemento de interfaz de usuario y ver sus datos de accesibilidad. Puedes ver los modelos de control y las propiedades de Automatización de la interfaz de usuario de Microsoft y probar la estructura de navegación de los elementos de automatización en el árbol de automatización de la interfaz de usuario. Utilice inspeccionar durante el desarrollo de la interfaz de usuario para comprobar cómo se exponen los atributos de accesibilidad en la automatización de interfaz de usuario. En algunos casos, los atributos provienen de la compatibilidad para la automatización de la interfaz de usuario que ya viene implementada en los controles XAML predeterminados. En otros casos los atributos proceden de los valores específicos que se configuraron en el marcado XAML, como AutomationProperties propiedades adjuntas.
+[Inspect](https://msdn.microsoft.com/library/windows/desktop/Dd318521) permite seleccionar cualquier elemento de la interfaz de usuario y ver sus datos de accesibilidad. Puedes ver los modelos de control y las propiedades de Automatización de la interfaz de usuario de Microsoft y probar la estructura de navegación de los elementos de automatización en el árbol de automatización de la interfaz de usuario. Use Inspect mientras desarrolla la interfaz de usuario para comprobar cómo se exponen los atributos de accesibilidad en la automatización de la interfaz de usuario. En algunos casos, los atributos provienen de la compatibilidad para la automatización de la interfaz de usuario que ya viene implementada en los controles XAML predeterminados. En otros casos, los atributos provienen de valores específicos que ha definido en el marcado XAML, como propiedades adjuntas AutomationProperties.
 
-¿Desea obtener más información sobre la comprobación de accesibilidad? Leer el [artículo pruebas accesibilidad](https://docs.microsoft.com/windows/uwp/design/accessibility/accessibility-testing#inspect) para ver la lista completa.
+¿Le interesa obtener más información sobre las pruebas de accesibilidad? En el artículo [Pruebas de accesibilidad](https://docs.microsoft.com/windows/uwp/design/accessibility/accessibility-testing#inspect) encontrará una lista completa.
  
  
 ## <a name="accessibility-in-uwp-apps"></a>Accesibilidad en aplicaciones para UWP 
-El equipo UWP de Microsoft ha elaborado a una guía completa sobre la accesibilidad para el desarrollo y diseño de aplicaciones para UWP. Para su comodidad, hemos incluido la siguiente lista, pero también puede aprender más, lea nuestra [información general sobre accesibilidad](https://docs.microsoft.com/windows/uwp/design/accessibility/accessibility-overview). 
+El equipo de UWP de Microsoft ha elaborado una guía completa sobre la accesibilidad en el desarrollo y el diseño de aplicaciones para UWP. Para mayor comodidad hemos incluido una lista más abajo, pero también puede profundizar en los detalles en el artículo [Información general sobre accesibilidad](https://docs.microsoft.com/windows/uwp/design/accessibility/accessibility-overview). 
  
-Además, una introducción a la API de automatización de interfaz de usuario y algunas herramientas disponibles para ayudarle a obtener información sobre la representación mediante programación de la interfaz de usuario, está disponible a continuación. 
+Además, a continuación encontrará una introducción a la API de Automatización de la interfaz de usuario y algunas herramientas que le ayudarán a obtener información sobre la representación mediante programación de la interfaz de usuario. 
  
 > [!VIDEO https://www.youtube.com/embed/6b0K2883rXA]
 
@@ -52,5 +52,5 @@ Además, una introducción a la API de automatización de interfaz de usuario y 
 | [Temas de contraste alto](https://docs.microsoft.com/windows/uwp/design/accessibility/high-contrast-themes) | Describe los pasos necesarios para asegurarte de que tu aplicación para UWP pueda usarse cuando esté activo un tema de contraste alto. | 
 | [Requisitos de texto accesible](https://docs.microsoft.com/windows/uwp/design/accessibility/accessible-text-requirements) | En este tema se describen los procedimientos recomendados sobre accesibilidad de texto en una aplicación mediante la configuración de los colores de texto y fondo, de forma que cumplan con la relación de contraste necesaria. También se analizan los roles de Automatización de la interfaz de usuario de Microsoft que pueden tener los elementos de texto en una aplicación para UWP y los procedimientos recomendados para texto en elementos gráficos. | 
 | [Procedimientos de accesibilidad que deben evitarse](https://docs.microsoft.com/windows/uwp/design/accessibility/practices-to-avoid) | Enumera los procedimientos que se deben evitar si quieres crear una aplicación accesible para UWP. | 
-| [Automatización del mismo nivel personalizada](https://docs.microsoft.com/windows/uwp/design/accessibility/custom-automation-peers) | Describe el concepto de automatización del mismo nivel para la Automatización de la interfaz de usuario de Microsoft y cómo puedes proporcionar compatibilidad de automatización para tu propia clase de interfaz de usuario personalizada. | 
+| [Automatización del mismo nivel personalizado](https://docs.microsoft.com/windows/uwp/design/accessibility/custom-automation-peers) | Describe el concepto de automatización del mismo nivel para la Automatización de la interfaz de usuario de Microsoft y cómo puedes proporcionar compatibilidad de automatización para tu propia clase de interfaz de usuario personalizada. | 
  

@@ -8,39 +8,39 @@ ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
 ms.openlocfilehash: 85c56a53839f74b02dddf2d094d2b07e4d8d635d
-ms.sourcegitcommit: dc4dfc41419104e2f54b63b931168176dc4f2e9e
-ms.translationtype: MT
+ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "65706079"
 ---
 # <a name="downloads"></a>Descargas
-Descargue las herramientas y software que necesita para empezar a trabajar con Windows 10 IoT Core.
+Descargue las herramientas y el software necesarios para comenzar con Windows 10 IoT Core.
 
 ## <a name="windows-10-iot-core-dashboard"></a>Panel de Windows 10 IoT Core
 
-El panel de Windows 10 IoT Core hace que Windows 10 IoT Core la intermitencia en el dispositivo es más sencillo con una interfaz navegable. Una vez descargado, obtenga información sobre cómo configurar el dispositivo con el panel [aquí](https://docs.microsoft.com/en-gb/windows/iot-core/tutorials/quickstarter/devicesetup#using-the-iot-dashboard-raspberry-pi-minnowboard-nxp).
+El Panel de Windows 10 IoT Core hace que la instalación de la imagen de Windows 10 IoT Core en el dispositivo sea más sencilla, con una interfaz navegable. Una vez descargado, obtenga información [aquí](https://docs.microsoft.com/en-gb/windows/iot-core/tutorials/quickstarter/devicesetup#using-the-iot-dashboard-raspberry-pi-minnowboard-nxp) sobre cómo configurar el dispositivo con el panel.
 
 > [!div class="nextstepaction"]
-> [Descargar el panel de Windows 10 IoT Core](http://go.microsoft.com/fwlink/?LinkID=708576)
+> [Descargar el Panel de Windows 10 IoT Core](http://go.microsoft.com/fwlink/?LinkID=708576)
 
-_Al descargar y usar el panel de Windows 10 IoT Core acepta el [términos de licencia](http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809) y [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=521839) para el escritorio de Windows 10 IoT Core._
+_Al descargar y usar el Panel de Windows 10 IoT Core acepta los [términos de licencia](http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809) y la [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=521839) del Panel de Windows 10 IoT Core._
 
-![Imagen del panel de Windows 10 IoT Core](media/IoTDashboard/DASHBOARD-800x450.jpg)
+![Imagen del Panel de Windows 10 IoT Core](media/IoTDashboard/DASHBOARD-800x450.jpg)
 
 ## <a name="latest-windows-10-iot-core-builds"></a>Compilaciones más recientes de Windows 10 IoT Core
 
 > [!WARNING]
-> No use maker imágenes para la comercialización. Si se commercializing un dispositivo, debe usar un FFU personalizado para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
+> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
 
-Cuando commercializing la solución de IoT, deberá descargar las compilaciones desde la [sitio de descargas de Software de Microsoft](https://www.microsoft.com/en-us/software-download/windows10IoTCore#!). También hemos incluido versiones del pasado a continuación en caso de que necesita trabajar con una compilación anterior de Windows 10 IoT Core para el dispositivo. 
+Cuando comercialice la solución de IoT, deberá descargar las compilaciones desde el [sitio de Descarga de software de Microsoft](https://www.microsoft.com/en-us/software-download/windows10IoTCore#!). También hemos incluido debajo versiones del pasado, en caso de que necesite trabajar con una compilación anterior de Windows 10 IoT Core en el dispositivo. 
 
 ### <a name="october-2018-release"></a>Versión de octubre de 2018
 
 * [Paquetes de Windows 10 IoT Core](https://www.microsoft.com/en-us/software-download/windows10IoTCore#!)
-* [Raspberry Pi 2 & 3](https://go.microsoft.com/fwlink/?LinkId=846058)
+* [Raspberry Pi2 y Pi3](https://go.microsoft.com/fwlink/?LinkId=846058)
 * [DragonBoard 410c](https://go.microsoft.com/fwlink/?LinkId=846059)
-* [MinnowBoard Turbot/Max](https://go.microsoft.com/fwlink/?linkid=846057)
+* [MinnowBoard Turbot y MAX](https://go.microsoft.com/fwlink/?linkid=846057)
 
 
 ## <a name="previous-windows-10-iot-core-releases"></a>Versiones anteriores de Windows 10 IoT Core
@@ -48,32 +48,32 @@ Cuando commercializing la solución de IoT, deberá descargar las compilaciones 
 ### <a name="april-2018-update"></a>Actualización de abril de 2018
 
 * [Paquetes de Windows 10 IoT Core](https://software-download.microsoft.com/download/pr/17134.1.180410-1804.rs4_release_amd64fre_IOTCORE_PACKAGES.iso)
-* [Raspberry Pi 2 & 3](https://software-download.microsoft.com/download/pr/17134.1.180410-1804.rs4_release_amd64fre_IOTCORE_RPi.iso)
+* [Raspberry Pi2 y Pi3](https://software-download.microsoft.com/download/pr/17134.1.180410-1804.rs4_release_amd64fre_IOTCORE_RPi.iso)
 * [DragonBoard 410c](https://software-download.microsoft.com/download/pr/17134.1.180410-1804.rs4_release_amd64fre_IOTCORE_QCDB410C.iso)
-* [MinnowBoard Turbot/Max](https://software-download.microsoft.com/download/pr/17134.1.180410-1804.rs4_release_amd64fre_IOTCORE_MBM.iso)
+* [MinnowBoard Turbot y MAX](https://software-download.microsoft.com/download/pr/17134.1.180410-1804.rs4_release_amd64fre_IOTCORE_MBM.iso)
 
 
-### <a name="fall-creators-update"></a>Fall Creators Update
+### <a name="fall-creators-update"></a>Actualización Fall Creators Update
 
 * [Paquetes de Windows 10 IoT Core](https://software-download.microsoft.com/download/pr/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_PACKAGES.iso)
-* [Raspberry Pi 2 & 3](http://download.microsoft.com/download/9/6/2/9629C69B-02B8-4A82-A4C8-860D6E880C66/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_RPi.iso)
+* [Raspberry Pi2 y Pi3](http://download.microsoft.com/download/9/6/2/9629C69B-02B8-4A82-A4C8-860D6E880C66/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_RPi.iso)
 * [DragonBoard 410c](http://download.microsoft.com/download/1/0/C/10CAECC2-3B60-45BF-BF0D-D0BACF4072E5/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_QCDB410C.iso)
-* [MinnowBoard Turbot/Max](http://download.microsoft.com/download/5/F/9/5F917B68-020E-4993-A972-F1A7038510CF/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_MBM.iso)
+* [MinnowBoard Turbot y MAX](http://download.microsoft.com/download/5/F/9/5F917B68-020E-4993-A972-F1A7038510CF/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_MBM.iso)
 
 
 ## <a name="other-downloads"></a>Otras descargas
 
-### <a name="mdns-responderhttpsgomicrosoftcomfwlinklinkid2077676"></a>[servicio de respuesta de MDN](https://go.microsoft.com/fwlink/?linkid=2077676)
-Descargue los MDN Bonjour compatible con servicio de respuesta para Windows IoT (origen del ejemplo). Obtenga más información [aquí](mDNS.md).
+### <a name="mdns-responderhttpsgomicrosoftcomfwlinklinkid2077676"></a>[Respondedor de mDNS](https://go.microsoft.com/fwlink/?linkid=2077676)
+Descargue el respondedor de mDNS compatible con Bonjour para Windows IoT (código fuente de ejemplo). Obtenga más información [aquí](mDNS.md).
 
 ### <a name="firmware-updatehttpfirmwareintelcomprojectsminnowboard-max"></a>[Actualización de firmware](http://firmware.intel.com/projects/minnowboard-max)
-Descargar los componentes de firmware y actualizaciones para la placa de referencia MinnowBoard Max de Intel.
+Descargue los componentes y actualizaciones de firmware para la placa de referencia MinnowBoard MAX de Intel.
 
 ### <a name="visual-studio-2017httpswwwvisualstudiocomdownloads"></a>[Visual Studio 2017](https://www.visualstudio.com/downloads/)
-Estado de la técnica IDE, servicios y herramientas que puede usar para crear excelentes aplicaciones de IoT.
+IDE, herramientas y servicios modernos que puede usar para crear excelentes aplicaciones de IoT.
 
-### <a name="windows-driver-kit-2017httpsmsdnmicrosoftcomwindowshardwarehh852365aspx"></a>[Windows Driver Kit 2017](https://msdn.microsoft.com/windows/hardware/hh852365.aspx)
-Proporciona un entorno de desarrollo integrado para la creación de controladores eficaz de alta calidad para dispositivos que ejecutan Windows 10.
+### <a name="windows-driver-kit-2017httpsmsdnmicrosoftcomwindowshardwarehh852365aspx"></a>[Kit para controladores de Windows 2017](https://msdn.microsoft.com/windows/hardware/hh852365.aspx)
+Ofrece un entorno de desarrollo integrado para crear controladores eficaces y de alta calidad para dispositivos que ejecutan Windows 10.
 
-### <a name="windows-developer-tools-for-visual-studiohttpsdevwindowscomen-usdownloads"></a>[Windows Developer Tools para Visual Studio](https://dev.windows.com/en-us/downloads)
-Herramientas que se integran con Visual Studio 2017 y son necesarios para desarrollar aplicaciones para la plataforma de aplicación Universal de Windows. 
+### <a name="windows-developer-tools-for-visual-studiohttpsdevwindowscomen-usdownloads"></a>[Herramientas del desarrollador de Windows para Visual Studio](https://dev.windows.com/en-us/downloads)
+Herramientas que se integran con Visual Studio 2017 y que son necesarias para el desarrollo de la plataforma Aplicación universal de Windows. 
