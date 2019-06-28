@@ -8,12 +8,12 @@ ms.prod: windows-iot
 ms.technology: IoT
 description: Obtenga información sobre cómo usar el Windows Device Portal para configurar y administrar de forma remota el dispositivo.
 keywords: portal de dispositivo remoto, de Windows iot, Windows Device Portal,
-ms.openlocfilehash: 715e9c138e86efcd82b485d832c5fbdd536398dd
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: 8e430365ea09509f5638d86ac77b151226df488f
+ms.sourcegitcommit: 8932969dc50805113c330bc2ba6ec9003d067b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514307"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412149"
 ---
 # <a name="windows-device-portal"></a>Windows Device Portal
    La herramienta Windows Device Portal (WDP) le permite configurar y administrar el dispositivo de forma remota a través de la red local.
@@ -188,6 +188,23 @@ Si desea usar HTTPS, en primer lugar tomar la posesión de la clave del registro
 En Windows 10 Creators Update, el de Windows Device Portal agregado a los administradores de dispositivos instalar un certificado personalizado para su uso en la comunicación HTTPS.
 
 Para obtener más información, [lea la documentación en los documentos de Windows Device Portal](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-ssl). 
+
+### <a name="crash-dump-settings-for-capturing-memory-dump"></a>Bloquear la configuración de volcado de memoria para la captura de volcado de memoria:
+
+Para capturar un volcado de memoria completo, realice lo siguiente:
+
+1. Conectarse a un dispositivo de IoT a través de WDP.
+
+2. En depuración -> depuración -> configuración de configuración de bloqueo de Kernel -> tipo de volcado. 
+
+3. Seleccione: Volcado de memoria completo (en uso de memoria).
+    Asegúrese de que el dispositivo se reinicia para que la configuración surta efecto. 
+    
+4. Compruebe que `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl\CrashDumpEnabled` se establece en 0 x 1.
+
+5. Actualización `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl\DumpFileSize` en 0 x 0.
+
+6. Asegúrese de que tiene suficiente espacio en el dispositivo para que se genere este volcado de memoria. Puede configurar el cambio de la ubicación del archivo de volcado desde aquí: `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl\DumpFile`
 
 
 ## <a name="additional-resources"></a>Recursos adicionales
