@@ -84,7 +84,7 @@
 ### [Introducción a Azure IoT](connect-to-cloud/Overview.md)
 ### [Conectar el dispositivo](connect-to-cloud/ConnectDeviceToCloud.md)
 ### [Conectar la aplicación](connect-to-cloud/ConnectAppToCloud.md)
-### [Administración de dispositivos de Azure](manage-your-device/AzureIoTDM.md)
+### [Agente del dispositivo Azure IoT](manage-your-device/AzureIoTDA.md)
 ## [Notas de la versión]()
 ### [Vistas previas de Insider](release-notes/CurrentInsider.md)
 #### [Actual: Compilación 17744](release-notes/insider/17744.md)
