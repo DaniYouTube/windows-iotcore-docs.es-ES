@@ -1,34 +1,34 @@
 ---
-title: Empezar a trabajar con el origen del ejemplo de servicio de respuesta de MDN
+title: Introducción al origen de ejemplo de respondedor de mDNS
 author: saraclay
 ms.author: saclayt
 ms.date: 02/26/2019
 ms.topic: article
-description: Obtenga información sobre cómo empezar a trabajar con el origen del ejemplo de servicio de respuesta de MDN.
-keywords: Windows 10 IoT Core, origen de ejemplo de servicio de respuesta de MDN
+description: Obtenga información sobre cómo empezar a usar el origen de ejemplo de respondedor de mDNS.
+keywords: Windows 10 IoT Core, origen de ejemplo de respondedor de mDNS
 ms.openlocfilehash: eacd22bf4d8a93948706e214fd48262c61c59a08
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
-ms.translationtype: MT
+ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514240"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "60170611"
 ---
-# <a name="getting-started-with-mdns-responder-sample-source"></a>Introducción a origen de ejemplo de servicio de respuesta de MDN
+# <a name="getting-started-with-mdns-responder-sample-source"></a>Introducción al origen de ejemplo de respondedor de mDNS
 
 ## <a name="getting-started"></a>Introducción
 
-1.  Compile el proyecto *mDNSResponder* a mDNSResponder.exe get, que es un servicio. Copie el archivo .exe en el equipo de destino, a continuación, registrar el servicio y ejecute.
-2. Run “mDNSResponder.exe /?” Para imprimir el uso
-3.  Compile el proyecto *dnssd*, generaría dnssd.dll
-4.  Compile el proyecto *mDNSUWP*. Es un agente de UWP que se comunica con dnssd.dll y generará su propio archivo dll y winmd
-5.  Compile el proyecto *mDNSTest*, que es un ejemplo de aplicación para UWP para consumir mDNSUWP y finalmente se habla en el servicio mDNSResponder.
-6.  Esta aplicación para UWP depende dnssd.dll y el agente UWP (no hay secuencias de comandos configurada para copiar todo el contenido en la carpeta appx UWP)
-7.  Implementar inicio/mDNSTest, establecer un identificador y haga clic en Register, el código de respuesta debe ser 0 (correcto)
-8.  Si ejecuta cualquier explorador Bonjour al mismo tiempo, debe aparecer el nuevo dispositivo (falso).
+1.  Compile el elemento *mDNSResponder* del proyecto para obtener mDNSResponder.exe, que es un servicio. Copie el archivo .exe en el equipo de destino y, después, registre el servicio y ejecútelo.
+2. Ejecute "mDNSResponder.exe /?" para imprimir el uso.
+3.  Compile *dnssd* del proyecto, que generará el archivo dnssd.dll.
+4.  Compile *mDNSUWP* del proyecto. Es un agente de UWP que se comunica con dnssd.dll y que generará sus propios archivos dll y winmd.
+5.  Compile *mDNSTest* del proyecto, que es una aplicación para UWP de ejemplo para consumir mDNSUWP y que, en última instancia, se comunica con el servicio mDNSResponder.
+6.  Esta aplicación para UWP depende de dnssd.dll y del agente de UWP (hay un script configurado para copiar todo el contenido en la carpeta appx de UWP).
+7.  Implemente o inicie mDNSTest, establezca un identificador y haga clic en Registrar; el código de respuesta debe ser 0 (CORRECTO).
+8.  Si ejecuta cualquier explorador Bonjour al mismo tiempo, debería aparecer el nuevo dispositivo (falso).
 
-![En el registro para MDN](media/mDNS/mDNS1.png)
+![Registro de mDNS](media/mDNS/mDNS1.png)
 
 ## <a name="resources"></a>Recursos
 
-* Descargue los MDN Bonjour compatible con servicio de respuesta para Windows IoT (origen del ejemplo) [aquí](https://go.microsoft.com/fwlink/?linkid=2077676).
+* Descargue [aquí](https://go.microsoft.com/fwlink/?linkid=2077676) el respondedor de mDNS compatible con Bonjour para Windows IoT (código fuente de ejemplo).
 

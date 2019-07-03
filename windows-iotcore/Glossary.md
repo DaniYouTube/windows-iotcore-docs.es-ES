@@ -6,44 +6,44 @@ ms.date: 08/28/2017
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
-description: Obtenga información sobre los distintos términos de Windows IoT Core a través de nuestra documentación.
-keywords: Windows iot, glosario, términos, definiciones, terminología
+description: Obtenga información sobre los distintos términos relacionados con Windows IoT Core en nuestra documentación.
+keywords: windows iot, glosario, términos, terminología, definiciones
 ms.openlocfilehash: 155de380459cbb74642352ff2a2ff718ebfe1ed7
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
-ms.translationtype: MT
+ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514955"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "60168913"
 ---
 # <a name="glossary-for-windows-iot"></a>Glosario de Windows IoT
 
-**Advanced Power Interface (ACPI) y configuración** ACPI (configuración avanzada y Power Interface) es una especificación abierta desarrollada conjuntamente por Hewlett-Packard, Intel, Microsoft, Phoenix y Toshiba.  ACPI establece interfaces estándar del sector Habilitar configuración dirigido al sistema operativo, la administración de energía y administración térmica de plataformas móviles, escritorio y servidor.
+**Interfaz avanzada de configuración y energía (ACPI)** ACPI es una especificación abierta del sector desarrollada de forma conjunta por Hewlett-Packard, Intel, Microsoft, Phoenix y Toshiba.  ACPI establece interfaces estándar del sector que permiten la configuración dirigida al sistema operativo, la administración de energía y la administración térmica de plataformas de dispositivos móviles, de escritorio y servidor.
 
-**Sistema básico de entrada/salida (BIOS)** el conjunto de rutinas de software fundamentales que prueban el hardware en el inicio, inicie el sistema operativo y permiten la transferencia de datos entre dispositivos de hardware.
+**Sistema básico de entrada y salida (BIOS)** El conjunto de rutinas de software fundamentales que prueban el hardware al inicio, inician el sistema operativo y permiten la transferencia de datos entre dispositivos de hardware.
 
-**Comercializar** vías de desarrollo y la fabricación de un dispositivo con la intención de colocar comercialmente horizontal para el público.
+**Comercializar** El desarrollo y la fabricación de un dispositivo con la intención de ofrecerlo comercialmente al público.
 
-**Entrada/salida de propósito general (GPIO)** GPIO es un pin genérico en un circuito integrado, cuyo comportamiento, incluso si se trata de un pin de entrada o salido, puede controlarse por el usuario en tiempo de ejecución.  Puede usar el espacio de nombres en la aplicación para manipular el GPIO se ancla en la placa de Windows.Devices.Gpio.
+**Entrada y salida de uso general (GPIO)** GPIO es un pin genérico en un circuito integrado, cuyo comportamiento, incluido si se trata de un pin de entrada o salida, lo puede controlar el usuario en tiempo de ejecución.  Puede usar el espacio de nombres Windows.Devices.Gpio en la aplicación para manipular los pines GPIO de la placa.
 
-**Puntas** Windows IoT Core pueden estar en modo con cabezal o sin periféricos. La diferencia entre estos dos modos es la presencia o ausencia de cualquier forma de interfaz de usuario. De forma predeterminada, Windows 10 IoT Core está en modo con cabezal y muestra información del sistema, como el nombre del equipo y la dirección IP.
+**Con periféricos** Windows IoT Core pueden estar en modo con periféricos o sin periféricos. La diferencia entre estos dos modos es la presencia o ausencia de cualquier forma de interfaz de usuario. De forma predeterminada, Windows 10 IoT Core está en modo con periféricos y muestra información del sistema, como el nombre del equipo y la dirección IP.
 
-**Equipos sin periféricos** en modo "desatendido", no hay ninguna pila de la interfaz de usuario y las aplicaciones no son interactivas. Las aplicaciones de modo "desatendido" pueden considerarse como servicios.
+**Sin periféricos** En este modo, no hay ninguna pila de interfaz de usuario disponible y las aplicaciones no son interactivas. Las aplicaciones en modo "sin periféricos" se pueden considerar servicios.
 
-**Entre integrado circuitos (I2C)** datos en Simple bidireccional dos cables serie (SDA) y buses de serie de reloj (SCL) para integran entre control circuito.  Puede usar el espacio de nombres Windows.Devices.I2c en su aplicación comunicarse con un dispositivo a través de I2C.
+**Circuitos inter-integrados (I2C)** Sencillos buses bidireccionales de datos en serie (SDA) y reloj en serie (SCL) de dos cables para el control de circuitos inter-integrados.  Puede usar el espacio de nombres Windows.Devices.I2c en la aplicación para comunicarse con un dispositivo a través de I2C.
 
-**Diodos emisores de – luz (LED)** un LED es una fuente de luz semiconductor responsable de dos. Es un diodos pn-junction, que emite luz cuando activa.
+**Diodo emisor de luz (LED)** Un LED es una fuente de luz semiconductora de dos electrodos. Es un diodo de unión PN que emite luz cuando se activa.
 
-**Modo Driver Framework (KMDF) de Microsoft Windows Kernel** marco de desarrollo de Microsoft que permite a los desarrolladores de controladores exponer la funcionalidad de controlador en modo de kernel, lo que proporciona el acceso de controlador a la memoria del sistema y de hardware.
+**Marco de controlador en modo kernel (KMDF) de Microsoft Windows** Marco de desarrollo de Microsoft que permite a los desarrolladores de controladores exponer la funcionalidad del controlador en modo kernel, lo que permite al controlador acceder a la memoria y el hardware del sistema.
 
-**Prototipo** desarrollando una versión sin procesar más de una versión final de un dispositivo que usted desea crear. Creación de prototipos se recomienda encarecidamente, si no es un paso obligatorio en el proceso de fabricación. Esta fase debe usarse para probar todas las características que usted desea usar para la versión final de su dispositivo.
+**Prototipo** El desarrollo de una versión más básica de una versión final del dispositivo que se pretende crear. Se recomienda encarecidamente la creación de prototipos, cuando no es un paso obligatorio del proceso de fabricación. Esta fase se debe usar para probar todas las características que espera usar para la versión final del dispositivo.
 
-**Interfaz de Bus periféricos serie (SPI)** bus SPI es una especificación de interfaz de comunicación en serie sincrónica utilizada para la comunicación de corta distancia, principalmente en sistemas incrustados.  Puede usar el espacio de nombres Windows.Devices.Spi en su aplicación comunicarse con un dispositivo a través de SPI.
+**Bus de interfaz periférica en serie (SPI)** El bus SPI es una especificación de interfaz de comunicación en serie sincrónica que se usa para la comunicación de corta distancia, principalmente en sistemas insertados.  Puede usar el espacio de nombres Windows.Devices.Spi en la aplicación para comunicarse con un dispositivo a través de SPI.
 
-**Receptor/transmisor asincrónico universal (UART)** UART es una pieza de hardware del equipo que toma los bytes de datos y transmite los bits individuales en serie.
+**Transmisor/Receptor asincrónico universal (UART)** UART es un elemento de hardware informático que toma bytes de datos y transmite los bits individuales en serie.
 
-**Plataforma universal de Windows (UWP)** la plataforma Universal de Windows proporciona una capa de API garantizada de principal en todos los dispositivos.  Puede crear un paquete de aplicación única que puede instalarse en una amplia gama de dispositivos.
+**Plataforma universal de Windows (UWP)** La Plataforma universal de Windows proporciona una capa de API básica garantizada en todos los dispositivos.  Puede crear un único paquete de la aplicación para instalarlo en una amplia gama de dispositivos.
 
 **Máquina virtual (VM)**<br/>
-Software que actúa como interfaz entre código binario del compilador y el microprocesador que realmente realiza las instrucciones del programa.  En Windows, puede usar el Administrador de Hyper-V para administrar máquinas virtuales.
+Software que actúa como interfaz entre el código binario del compilador y el microprocesador que realmente ejecuta las instrucciones del programa.  En Windows, puede usar el Administrador de Hyper-V para administrar máquinas virtuales.
 
-**Consola del dispositivo de Windows (Devcon.exe)** DevCon (Devcon.exe), la consola del dispositivo, es una herramienta de línea de comandos que muestra información detallada acerca de los dispositivos en equipos que ejecutan Windows. Puede utilizar DevCon para habilitar, deshabilitar, instalar, configurar y quitar dispositivos.  Esta herramienta se usa principalmente para instalar y quitar controladores manualmente.
+**Consola del dispositivo de Windows (Devcon.exe)** DevCon (Devcon.exe), la consola del dispositivo, es una herramienta de línea de comandos que muestra información detallada sobre los dispositivos de equipos que ejecutan Windows. Puede usar DevCon para habilitar, deshabilitar, instalar, configurar y quitar dispositivos.  Esta herramienta se usa principalmente para instalar y quitar controladores de forma manual.

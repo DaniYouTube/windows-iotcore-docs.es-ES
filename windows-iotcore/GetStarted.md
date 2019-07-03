@@ -1,27 +1,27 @@
 ---
-title: Obtener iniciado información general
+title: Información general sobre cómo comenzar
 author: saraclay
 ms.author: saclayt
 ms.date: 04/10/2018
 ms.topic: article
-description: Obtenga información sobre cómo empezar con Windows 10 IoT Core.
-keywords: Windows 10 IoT Core, introducción, imágenes,
+description: Obtenga información sobre cómo empezar a usar Windows 10 IoT Core.
+keywords: Windows 10 IoT Core, introducción, imágenes,
 ms.openlocfilehash: c11e37c982c1e38ec270527d54127013b8df7515
-ms.sourcegitcommit: 3cab433275b07093efd1c6cfbfd7eb71c08bbd36
-ms.translationtype: MT
+ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66373138"
 ---
 # <a name="get-started-with-windows-10-iot-core"></a>Introducción a Windows 10 IoT Core
 
-Crear su propio dispositivo es emocionante, pero somos conscientes de que también puede ser intimidante. Los siguientes recursos le ayudará en su viaje de prototipo o la comercialización. 
+La creación de un dispositivo propio es emocionante, pero somos conscientes de que también puede ser abrumador. Los recursos siguientes le ayudarán en el viaje de creación del prototipo o la comercialización. 
 
-¿Tiene preguntas en el camino? Por favor, trabajar con su contacto de Microsoft o publicar preguntas en nuestro [foro de Windows 10 IoT](https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT).
+¿Tiene alguna pregunta? Trabaje con su contacto de Microsoft o publique preguntas en nuestro [foro de Windows 10 IoT](https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT).
 
 ## <a name="what-is-windows-10-iot"></a>¿Qué es Windows 10 IoT?
 
-Para obtener más información sobre nuestras ofertas, vea la documentación para obtener más información. 
+Para más información sobre nuestras ofertas, vea la documentación siguiente. 
 
 <table>
 <colgroup>
@@ -37,23 +37,23 @@ Para obtener más información sobre nuestras ofertas, vea la documentación par
 <tbody>
 
 <tr class="odd">
-<td align="left"><p><a href="windows-iot.md" data-raw-source="[Windows IoT Overview](windows-iot.md)">Introducción a Windows IoT</a></p></td>
-<td align="left"><p>Comparar nuestros dos productos de Windows 10 IoT y ver qué solución es la mejor opción para usted.</p></td>
+<td align="left"><p><a href="windows-iot.md" data-raw-source="[Windows IoT Overview](windows-iot.md)">Información general de Windows IoT</a></p></td>
+<td align="left"><p>Compare nuestros dos productos de Windows 10 IoT y vea qué solución es la mejor opción.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><p><a href="windows-iot-enterprise.md" data-raw-source="[Windows 10 IoT Enterprise Overview](windows-iot-enterprise.md)">Información general de Windows 10 IoT Enterprise</a></p></td>
-<td align="left"><p>Más información sobre cómo empezar a trabajar con Windows 10 IoT Enterprise.</p></td>
+<td align="left"><p>Obtenga más información sobre cómo empezar a trabajar con Windows 10 IoT Enterprise.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><p><a href="windows-iot-core.md" data-raw-source="[Windows 10 IoT Core Overview](windows-iot-core.md)">Información general de Windows 10 IoT Core</a></p></td>
-<td align="left"><p>Más información sobre cómo empezar a trabajar con Windows 10 IoT Core.</p></td>
+<td align="left"><p>Obtenga más información sobre cómo empezar a trabajar con Windows 10 IoT Core.</p></td>
 </tr>
 
 <tr class="odd">
   <td align="left"><p><a href="windows-server.md" data-raw-source="[Windows Server IoT 2019](https://docs.microsoft.com/en-us/windows/iot-core/windows-server)">Windows Server IoT 2019</a></p></td>
-<td align="left"><p>Más información sobre cómo empezar a trabajar con Windows Server IoT 2019.</p></td>
+<td align="left"><p>Obtenga más información sobre cómo empezar a trabajar con Windows Server IoT 2019.</p></td>
 </tr>
 
 </tbody>
@@ -68,7 +68,7 @@ Para obtener más información sobre nuestras ofertas, vea la documentación par
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Finalidad</th>
+<th align="left">Propósito</th>
 <th align="left">Precios</th>
 </tr>
 </thead>
@@ -80,13 +80,13 @@ Para obtener más información sobre nuestras ofertas, vea la documentación par
 </tr>
 
 <tr class="odd">
-<td align="left"><p>A largo plazo de mantenimiento canal (LTSC) para la comercialización</p></td>
-<td align="left"><p>Pequeña cuota por dispositivo con acceso a los 10 años de soporte, actualice el control y atestación de estado de dispositivo (DHA). Obtenga más información <a href="https://docs.microsoft.com/windows-hardware/manufacture/iot/iotcoreservicesoverview" data-raw-source="[here](https://docs.microsoft.com/windows-hardware/manufacture/iot/iotcoreservicesoverview)">aquí</a>.</p></td>
+<td align="left"><p>Canal de mantenimiento a largo plazo (LTSC) para la comercialización</p></td>
+<td align="left"><p>Pequeña cuota por cada dispositivo con acceso a 10 años de soporte técnico, control de actualizaciones y Atestación de estado de dispositivo (DHA). Obtenga más información <a href="https://docs.microsoft.com/windows-hardware/manufacture/iot/iotcoreservicesoverview" data-raw-source="[here](https://docs.microsoft.com/windows-hardware/manufacture/iot/iotcoreservicesoverview)">aquí</a>.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><p>Canal semestral (SAC) para la comercialización</p></td>
-<td align="left"><p>Gratuito, pero no se obtenga acceso a 10 años de soporte técnico, actualice el control o DHA. También deberá firmar nuestro acuerdo de comercialización. Solicitarla <a href="https://www.aka.ms/SAC-agreement">aquí</a>.</p></td>
+<td align="left"><p>Canal semianual (SAC) para la comercialización</p></td>
+<td align="left"><p>Gratuito, pero sin acceso a 10 años de soporte técnico, control de actualizaciones o DHA. También tendrá que firmar nuestro acuerdo de comercialización. Puede solicitarlo <a href="https://www.aka.ms/SAC-agreement">aquí</a>.</p></td>
 </tr>
 
 </tbody>
@@ -96,7 +96,7 @@ Para obtener más información sobre nuestras ofertas, vea la documentación par
 
 ## <a name="prototype-a-device"></a>Diseño del prototipo de un dispositivo
 
-Antes de intentar fabricar un dispositivo, es mejor primera try y prototipo de un dispositivo con Windows 10 IoT Core. De este modo, puede comprender las características que necesitará y qué configuraciones que deseará cuando se trata en la fabricación.
+Antes de intentar fabricar un dispositivo, primero es recomendable probar y diseñar un prototipo de un dispositivo con Windows 10 IoT Core. De este modo, puede comprender las características que va a necesitar y las configuraciones que le interesarán cuando llegue el momento de la fabricación.
 
 <table>
 <colgroup>
@@ -113,33 +113,33 @@ Antes de intentar fabricar un dispositivo, es mejor primera try y prototipo de u
 
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/tutorials/quickstarter/PrototypeBoards"
->1. Elija un tablero de prototipo</a></p></td>
-<td align="left"><p>Eche un vistazo a los prototipos de placas comunes y elija uno para iniciar con la creación de prototipos.</p></td>
+>1. Selección de una placa de prototipo</a></p></td>
+<td align="left"><p>Examine placas de prototipo comunes y elija una con la que empezar a crear prototipos.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><p>2. Flash una imagen de prototipo</p></td>
-<td align="left"><p>Vaya a nuestras secciones tutoriales para aprender a flash imágenes de prototipo en los dispositivos seleccionados. </p></td>
+<td align="left"><p>2. Instalación de una imagen de prototipo</p></td>
+<td align="left"><p>Vaya a las secciones de los tutoriales para obtener información sobre cómo instalar imágenes de prototipo en los dispositivos seleccionados. </p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appinstaller">3. Instalar la aplicación</a></p></td>
-<td align="left"><p>Obtenga información sobre cómo instalar la aplicación con distintas herramientas.</p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appinstaller">3. Instalación de la aplicación</a></p></td>
+<td align="left"><p>Obtenga información sobre cómo instalar la aplicación mediante distintas herramientas.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appdeployment">4. Implementar la aplicación</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appdeployment">4. Implementación de la aplicación</a></p></td>
 <td align="left"><p>Obtenga información sobre cómo implementar una aplicación mediante Visual Studio.</p></td>
 </tr>
 
 </tbody>
 </table>
 
-## <a name="bring-a-device-to-market"></a>Poner un dispositivo al mercado
+## <a name="bring-a-device-to-market"></a>Lanzamiento de un dispositivo al mercado
 
-Comercialización o el proceso de incorporación de un dispositivo en el mercado implica mover más partes y las personas que un dispositivo de creación de prototipos simplemente a su ritmo. Comercialización requiere una serie de pasos para asegurarse de que los dispositivos, dondequiera que estén en el mundo, pueden recibir las actualizaciones, es tan segura como sea posible y es compatible. 
+La comercialización, o el proceso de lanzar un dispositivo al mercado, implica la participación de más elementos y personas que la simple creación de prototipos de un dispositivo por su cuenta. La comercialización requiere una serie de pasos para asegurarse de que los dispositivos, con independencia de su ubicación, puedan recibir actualizaciones, ofrezcan la máxima seguridad y sean compatibles. 
 
-Comience con la Guía de fabricación que funciona mejor para usted, dependiendo de qué versión de Windows 10 IoT que desea para usar.
+Comience con la guía de fabricación que mejor se ajuste a sus necesidades, en función de la versión de Windows 10 IoT que tenga pensado usar.
 
 <table>
 <colgroup>
@@ -157,12 +157,12 @@ Comience con la Guía de fabricación que funciona mejor para usted, dependiendo
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide"
 >Guía de fabricación de Windows 10 IoT Core</a></p></td>
-<td align="left"><p>Comience aquí y aprenda a crear la prueba personalizados e imágenes de venta directa para la solución comercial de Windows 10 IoT Core.</p></td>
+<td align="left"><p>Comience aquí y aprenda a crear imágenes personalizadas de prueba y comerciales para la solución comercial de Windows 10 IoT Enterprise.</p></td>
 </tr>
 
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/iot-ent-overview">Guía de fabricación de Windows 10 IoT Enterprise</a></p></td>
-<td align="left"><p>Comience aquí y aprenda a crear una imagen para su solución comercial de Windows 10 IoT Enterprise.</p></td>
+<td align="left"><p>Comience aquí y aprenda a crear una imagen para la solución comercial de Windows 10 IoT Enterprise.</p></td>
 </tr>
 
 </tbody>

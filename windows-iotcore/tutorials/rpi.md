@@ -1,77 +1,77 @@
 ---
-title: Configurar un dispositivo Raspberry Pi
+title: Configuración de un dispositivo Raspberry Pi
 ms.author: saclayt
 ms.date: 05/22/2019
 ms.topic: article
-description: Obtenga información sobre cómo configurar Raspberry Pi con Windows 10 IoT Core.
+description: Obtenga información sobre cómo configurar el dispositivo Raspberry Pi con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, Raspberry Pi
 ms.custom: RS5
 ms.openlocfilehash: 3269aa2ed102b667519baa9212e604083f910783
-ms.sourcegitcommit: 8aadc776da7b473159f9023cd555145819e7e952
-ms.translationtype: MT
+ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66182197"
 ---
-# <a name="setting-up-a-raspberry-pi"></a>Configurar un dispositivo Raspberry Pi
+# <a name="setting-up-a-raspberry-pi"></a>Configuración de un dispositivo Raspberry Pi
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 > [!NOTE]
-> No se puede utilizar el panel usado para configurar el dispositivo Raspberry Pi 3B +. Si tiene un dispositivo 3B +, debe usar el [vista previa técnica de 3B +](https://www.microsoft.com/en-us/software-download/windowsiot). Consulte la [limitaciones conocidas](https://docs.microsoft.com/en-us/windows/iot-core/troubleshooting) de technical preview para determinar si esto es adecuado para el desarrollo.
+> El panel de información no se puede usar para configurar Raspberry Pi 3B+. Si tiene un dispositivo 3B+, debe usar la [versión preliminar técnica de 3B+](https://www.microsoft.com/en-us/software-download/windowsiot). Vea las [limitaciones conocidas](https://docs.microsoft.com/en-us/windows/iot-core/troubleshooting) de la versión preliminar técnica para determinar si esto es adecuado para el desarrollo.
 
 > [!IMPORTANT]
-> Cuando el "dar formato al disco" pop hasta, hacer _no_ formatear el disco. Estamos trabajando en una solución para este problema.
+> Cuando aparezca el mensaje emergente "formatear el disco", _no_ lo formatee. Estamos trabajando en una solución para este problema.
 
-Al configurar un dispositivo Raspberry Pi para la creación de prototipos, se recomienda usar el panel de Windows 10 IoT Core. Sin embargo, si busca para fabricar con Raspberry Pi, consulte el [IoT Core fabricación guía](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No puede usar imágenes de creador de fabricación.
+Al configurar un dispositivo Raspberry Pi para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Pero si lo que quiere es fabricar con un dispositivo Raspberry Pi, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
 <br>
 > [!Video https://www.youtube.com/embed/JPRUbGIyODY]
 
 ## <a name="using-the-dashboard"></a>Uso del panel
 
-Para flash o descargar IoT Core en su Raspberry Pi, necesitará:
-* Un equipo que ejecuta Windows 10 
-* [Panel de Windows 10 IoT Core](https://docs.microsoft.com/windows/iot-core/downloads)
+Para instalar una imagen de IoT Core o descargarlo en el dispositivo Raspberry Pi, necesitará lo siguiente:
+* Un equipo que ejecute Windows 10 
+* El [Panel de Windows 10 IoT Core](https://docs.microsoft.com/windows/iot-core/downloads)
 * Una tarjeta SD de alto rendimiento, como una tarjeta SD SanDisk
 * Una pantalla externa
-* Cualquier otro periférico (por ejemplo, mouse, teclado, etcetera.)
+* Otros periféricos (por ejemplo, mouse, teclado, etc.)
 
 ### <a name="instructions"></a>Instrucciones
 
-1. Ejecutar el panel de Windows 10 IoT Core y haga clic en *configurar un nuevo dispositivo* e inserte una tarjeta SD en el equipo.
-2. Conecte Raspberry Pi a una pantalla externa.
-3. Rellene los campos. Seleccione "Broadcomm [Raspberry Pi 2 & 3]" como el tipo de dispositivo. Asegúrese de dar a su dispositivo un nuevo nombre y una contraseña. En caso contrario, las credenciales predeterminadas permanecerá como:
+1. Ejecute el Panel de Windows 10 IoT Core, haga clic en *Set up a new device* (Configurar un nuevo dispositivo) e inserte una tarjeta SD en el equipo.
+2. Conecte el dispositivo Raspberry Pi a una pantalla externa.
+3. Rellene los campos. Seleccione "Broadcomm [Raspberry Pi 2 & 3]" como el tipo de dispositivo. Asegúrese de asignar un nombre y una contraseña nuevos al dispositivo. En caso contrario, las credenciales predeterminadas permanecerán como:
 
 ```
 Device: minwinpc
 Password: p@ssw0rd
 ```
 
-4. Acepte los términos de licencia de software y haga clic en *descargue e instale*. Si todo va bien, verá que ahora es Windows 10 IoT Core intermitencia en la tarjeta SD.
+4. Acepte los términos de licencia de software y haga clic en *Descargar e instalar*. Si todo es correcto, verá que Windows 10 IoT Core instala una imagen en la tarjeta SD.
 
-![Captura de pantalla de panel](../media/DeviceSetup/Dashboard-Screenshot.jpg)
+![Captura de pantalla del panel](../media/DeviceSetup/Dashboard-Screenshot.jpg)
 
-## <a name="connect-to-a-network"></a>Conectarse a una red
-### <a name="wired-connection"></a>Conexión con cable
-Si el dispositivo viene con un puerto Ethernet o la compatibilidad del adaptador Ethernet USB para habilitar una conexión con cable, conectar un cable Ethernet para conectarse a la red.
+## <a name="connect-to-a-network"></a>Conexión a una red
+### <a name="wired-connection"></a>Conexión por cable
+Si el dispositivo viene con un puerto Ethernet o con compatibilidad de adaptador Ethernet USB para habilitar una conexión por cable, conecte un cable Ethernet para conectarse a la red.
 
 ### <a name="wireless-connection"></a>Conexión inalámbrica
-Si el dispositivo admite la conectividad mediante Wi-Fi y ha conectado una pantalla a él, deberá:
+Si el dispositivo admite la conectividad Wi-Fi y le ha conectado una pantalla, deberá hacer lo siguiente:
 
-1. Vaya a la aplicación de forma predeterminada y haga clic en el botón Configuración situado junto al reloj.
-2. En la página de configuración, seleccione _red y Wi-Fi_.
-3. El dispositivo realizará un examen para redes inalámbricas.
-4. Una vez que la red aparece en esta lista, selecciónelo y haga clic en _Connect_.
+1. Vaya a la aplicación predeterminada y haga clic en el botón de configuración situado junto al reloj.
+2. En la página de configuración, seleccione _Network and Wi-Fi_ (Redes y Wi-Fi).
+3. El dispositivo realizará una exploración de redes inalámbricas.
+4. Una vez que la red aparezca en esta lista, selecciónela y haga clic en _Conectar_.
 
-Si aún no lo ha conectado a una pantalla y le gustaría conectarse a través de Wi-Fi, deberá:
+Si no se ha conectado a una pantalla y le gustaría conectarse a través de Wi-Fi, deberá hacer lo siguiente:
 
-1. Vaya al panel de IoT y haga clic en _Mis dispositivos_.
-2. Encuentre la placa no configurada en la lista. Su nombre comienza con "AJ_"... (por ejemplo, AJ_58EA6C68). Si no ve la placa aparecen después de unos minutos, intente reiniciar la placa.
-3. Haga clic en _Configurar dispositivo_ y escriba sus credenciales de red. La placa de esto conectará a la red.
+1. Vaya al Panel de IoT y haga clic en _Mis dispositivos_.
+2. Busque la placa no configurada en la lista. El nombre empieza por "AJ_"… (por ejemplo, AJ_58EA6C68). Si la placa no aparece después de unos minutos, intente reiniciarla.
+3. Haga clic en _Configurar dispositivo_ y escriba las credenciales de red. Esto conectará la placa a la red.
 
 > [!NOTE]
-> Wi-Fi en el equipo debe estar activada para poder buscar otras redes.
+> La Wi-Fi debe estar activada en el equipo para poder buscar otras redes.
 
-## <a name="connect-to-windows-device-portal"></a>Conectarse a Windows Device Portal
+## <a name="connect-to-windows-device-portal"></a>Conexión al Portal de dispositivos Windows
 
-Use la [Windows Device Portal](../manage-your-device/DevicePortal.md) para conectar el dispositivo mediante un explorador web. El portal de dispositivos ofrece configuración valioso y capacidades de administración de dispositivos. 
+Use el [Portal de dispositivos Windows](../manage-your-device/DevicePortal.md) para conectar el dispositivo mediante un explorador web. El portal de dispositivos ofrece funciones de configuración y administración de dispositivos muy útiles. 
