@@ -6,19 +6,19 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre los lenguajes y tipos de aplicaciones que son compatibles con IoT Core.
 keywords: Windows iot, idiomas, tipos de aplicaciones, UWP, compatibles
-ms.openlocfilehash: 7d330ff2961ba83d969861bbecd1536b02a4833a
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: e0eb046ba874e8433e7632d3f88a63a90b88fa2b
+ms.sourcegitcommit: 8a197111b5b7814b924d77dfea5f9d38760d4288
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514904"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67627399"
 ---
 # <a name="developing-foreground-applications"></a>Desarrollo de aplicaciones de primer plano
 Obtenga información sobre los lenguajes que se admiten en Windows 10 IoT Core, así como la UWP y tipos de aplicaciones no de UWP que se admiten en IoT Core.
 
 
 > [!NOTE]
-> Visual Studio generará un error críptico al implementar en un RS5 (o RS4 con OpenSSH habilitado) IoT a menos que se instala un SDK de RS4 o mayor que Visual Studio puede tener acceso a la imagen.
+> Visual Studio generará un error críptico al realizar la implementación en una imagen de IoT RS5 (o RS4 con OpenSSH habilitado), a menos que haya instalado un SDK de RS4 o superior al que pueda acceder Visual Studio.
 
 ## <a name="application-types"></a>Tipos de aplicación
 ___
@@ -119,10 +119,9 @@ C#y se admiten como aplicaciones para UWP de VB y tener acceso a la parte de .ne
 Ejemplos:
 
 
-* [C#Llamativa sin periféricos con documentación completa](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinkyBackground)
-* [C#Equipos sin periféricos llamativa sólo código](https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground/CS)
-* [VB llamativa sin periféricos solo para código](https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground/VB)
-* [C#Aplicación de interfaz de usuario de forma llamativa](https://developer.microsoft.com/en-us/windows/iot/samples/helloblinky)
+* [C#Llamativa sin periféricos](https://github.com/microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinkyBackground/CS)
+* [VB llamativa sin periféricos](https://github.com/microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinkyBackground/VB)
+* [C#Aplicación de interfaz de usuario de forma llamativa](https://github.com/microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinky/CS)
 
 
 ### <a name="javascript"></a>Javascript
@@ -145,7 +144,7 @@ Ejemplos:
 
 * [Llamativa sin periféricos](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinkyBackground/CPP)
 * [Llamativa puntas](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinky/Cpp)
-* [Aplicación de consola](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/MemoryStatus)
+* [Aplicación de consola](https://github.com/microsoft/Windows-iotcore-samples/tree/develop/Samples/MemoryStatus/CPP)
 
 > [!NOTE]
 > Para aquellos que se va a escribir su aplicación con C++, deberá comprobar la UWP C++ casilla de verificación tras la descarga.
@@ -158,7 +157,7 @@ Puede compilar las aplicaciones de conexión de Arduino para muchos componentes 
 
 Nuestro [Guía de proyecto de cableado de Arduino](../learn-about-hardware/ArduinoWiringProjectGuide.md) proporciona instrucciones completas sobre cómo configurar la aplicación para crear estas aplicaciones. Los ejemplos de copiado y vinculado a continuación le ayudarán a empezar a crear la suya propia.  Puede incluso [crear componentes de WinRT en Arduino](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky) que, a continuación, se puede utilizar desde otros lenguajes. 
 
-*Código de ejemplo llamativa* completo [docs y código muestra](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinkyBackground/VB) están disponibles en nuestros ejemplos de página y se puede encontrar el código completo siguiente:
+*Código de ejemplo llamativa* completo [docs y código muestra](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky) están disponibles en nuestros ejemplos de página y se puede encontrar el código completo siguiente:
 
 ```C++
 void setup()
