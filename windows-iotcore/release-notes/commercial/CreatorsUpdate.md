@@ -1,17 +1,17 @@
 ---
 title: Creators Update - compilación 15063
-author: zeeshanfurqan
-ms.author: zeeshanf
+author: saraclay
+ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Lea y obtenga información acerca de cuáles son las novedades de Creators Update.
 keywords: notas de la versión de Windows iot, Creators Update,
-ms.openlocfilehash: 73be3f48ce1051d98aa9ebce06dbdc4682fff0fa
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.openlocfilehash: a8b8fc93d8c079b1b57bbe18f48ea0bc7082dcbe
+ms.sourcegitcommit: 38de3aad11845248dac393ffc51b18c5596af4c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68155392"
 ---
 # <a name="creators-update-release-notes-for-windows-10-iot-core"></a>Creadores de actualización las notas de la versión para Windows 10 IoT Core
 15063 del número de compilación. Abril de 2017
@@ -26,7 +26,7 @@ Los paquetes dentro de esta versión contienen herramientas y componentes necesa
 
 ## <a name="privacy-statement"></a>Declaración de privacidad en línea
 
-Se puede ver la declaración de privacidad para esta versión del sistema operativo Windows [aquí](http://go.microsoft.com/fwlink/?LinkId=506737).
+La declaración de privacidad para esta versión del sistema operativo Windows se puede consultar [aquí](http://go.microsoft.com/fwlink/?LinkId=506737).
 
 ## <a name="whats-new"></a>Novedades
 * Versión pública de Windows 10 IoT Core. 
@@ -65,36 +65,36 @@ Se puede ver la declaración de privacidad para esta versión del sistema operat
 
 ### <a name="raspberry-pi"></a>Raspberry Pi  
 
-#### <a name="raspberry-pi-display-resolution-if-monitor-is-disconnected"></a>Resolución de pantalla de raspberry Pi si se desconecta el monitor 
-Raspberry Pi no puede mantener la resolución de pantalla si se desconecta el monitor. El EDID del monitor se usa para establecer la resolución del sistema cuando uno está conectado.  
-Cuando se desconecta, el firmware del dispositivo Raspberry Pi predeterminado es lo que está en el config.txt en la raíz de la tarjeta SD. 
+#### <a name="raspberry-pi-display-resolution-if-monitor-is-disconnected"></a>Resolución de pantalla de Raspberry Pi si se desconecta el monitor 
+Puede que Raspberry Pi no mantenga la resolución de pantalla si se desconecta el monitor. El EDID del monitor se usa para establecer la resolución del sistema cuando uno está conectado.  
+Cuando se desconecta, el firmware de Raspberry Pi establece de forma predeterminada lo que está en config.txt en la raíz de la tarjeta SD. 
 
-#### <a name="raspberry-pi-video-performance"></a>Rendimiento de vídeo de raspberry Pi 
-No se ha optimizado el rendimiento de reproducción de vídeo en la plataforma de Raspberry Pi.  Anima el usuario pueden presentar elementos, como menús desplegables basada en XAML de menos de un rendimiento óptimo. 
+#### <a name="raspberry-pi-video-performance"></a>Rendimiento de vídeo de Raspberry Pi 
+No se ha optimizado el rendimiento de reproducción de vídeo en la plataforma de Raspberry Pi.  Es posible que el rendimiento que muestren los elementos animados del usuario, incluidos los menús desplegables basados en XAML, no sea el óptimo. 
 
-#### <a name="raspberry-pi-camera-support"></a>Compatibilidad con la cámara raspberry Pi 
-Compatibilidad con Windows 10 IoT Core dispositivos periféricos de cámara con dispositivos Raspberry Pi es limitada. El dispositivo PiCam directamente conectado al bus de cámara integrada no es compatible actualmente, ya que requiere servicios GPU que no están actualmente disponibles en Raspberry Pi, dado que no se implementa el controlador de DirectX. Cámaras Web USB modernos genera secuencias de datos que son muy exigentes en el controlador Host USB.  Incluso cuando se usa con cámaras Web de configuración de baja resolución requerirá adicionales USB ajustar y especializada la lógica de control.  
+#### <a name="raspberry-pi-camera-support"></a>Compatibilidad de Raspberry Pi con la cámara 
+Compatibilidad con Windows 10 IoT Core dispositivos periféricos de cámara con dispositivos Raspberry Pi es limitada. El dispositivo PiCam directamente conectado al bus de cámara integrada no es compatible actualmente, ya que requiere servicios GPU que no están actualmente disponibles en Raspberry Pi, dado que no se implementa el controlador de DirectX. Cámaras Web USB modernos genera secuencias de datos que son muy exigentes en el controlador Host USB.  Incluso cuando se usa con cámaras web con valores de resolución bajos, se requerirá un ajuste preciso adicional y una lógica de control especializada del USB.  
 
 #### <a name="raspberry-pi-3-bluetooth-support"></a>Soporte de raspberry Pi 3 Bluetooth 
 El controlador Bluetooth de Raspberry Pi3 integrado solo es compatible con dispositivos de bajo ancho de banda  
 
 #### <a name="serial-port-usage-and-access-on-raspberry-pi-2"></a>Uso de los puertos serie y el acceso en Raspberry Pi 2 
-Raspberry Pi 2 es compatible con el transporte de serie para la comunicación a través de UART PL011.  Esto se establece de forma predeterminada en escenarios de depuración del kernel.  Un controlador de dispositivo o aplicación puede usar el UART PL011 para enviar y recibir datos con el controlador de dispositivo PL011 si se desactiva el depurador mediante el siguiente comando:   
+Raspberry Pi 2 es compatible con el transporte en serie para la comunicación a través de UART PL011.  Esto se establece de manera predeterminada en escenarios de depuración del kernel.  Un controlador de dispositivo o aplicación puede usar el UART PL011 para enviar y recibir datos con el controlador de dispositivo PL011 si se desactiva el depurador mediante el siguiente comando:   
 `bcedit /set debug off` 
  
 ### <a name="dragon-board"></a>Dragon Board 
 
-#### <a name="dragonboard-410c-shutdown"></a>Apagado Dragonboard 410c 
-En el DragonBoard, un comando de apagado no se apague la placa. El sistema se reiniciará. Inicie la alimentación del tablero al desconectar la alimentación. 
+#### <a name="dragonboard-410c-shutdown"></a>Apagado de DragonBoard 410c 
+En DragonBoard, la placa no se apagará con un comando de apagado. El sistema se reiniciará. Para apagar la placa, desconecte la alimentación. 
 
-#### <a name="dragon-board-headset--microphone-jack"></a>Jack de auriculares & micrófono Dragon Board  
-El BSP Dragonboard tiene controladores para el enchufe para auriculares y del micrófono, pero no tiene cualquiera de estos conectores a bordo.  
+#### <a name="dragon-board-headset--microphone-jack"></a>Conector de auriculares y micrófono de DragonBoard  
+El BSP de Dragonboard tiene controladores para el conector de auriculares y de micrófono, pero no tiene estos conectores en la placa.  
 
 #### <a name="dragonboard-spi-runs-at-lock-speed"></a>Dragonboard SPI se ejecuta a la velocidad de bloqueo  
 El SPI en el Dragonboard omitirá la velocidad solicitada y siempre se ejecutan con una velocidad preconfigurada.  
 
-#### <a name="dragonboard-connected-standby"></a>Dragonboard conectado en espera 
-Modo de espera conectado no está habilitado en el Qualcomm Dragonboard de forma predeterminada.  Para habilitar el modo de espera conectado en DragonBoard la siguiente clave del registro debe establecerse en "1" 
+#### <a name="dragonboard-connected-standby"></a>Modo de espera conectado de DragonBoard 
+El modo de espera conectado no está habilitado en Qualcomm DragonBoard de manera predeterminada.  Para habilitar el modo de espera conectado en DragonBoard la siguiente clave del registro debe establecerse en "1" 
 <br>
 `HKLM\System\Controlset001\Control\Power\CsEnabled=DWORD:1`
 <br>
@@ -120,7 +120,7 @@ Puede haber errores de conectividad de red en MinnowBoard Max (MBM) versión de 
  
 ### <a name="all-platforms"></a>Todas las plataformas 
 
-#### <a name="mouse-pointer-disappears-while-debugging"></a>Puntero del mouse desaparece durante la depuración 
+#### <a name="mouse-pointer-disappears-while-debugging"></a>El puntero del mouse desaparece durante la depuración 
 En algunos casos, el puntero del mouse no está visible después de implementar o depurar aplicaciones con Visual Studio, el puntero del mouse debe reaparecer si cambia el foco mediante el teclado (ficha)  
 
 #### <a name="server-applications-with-softap"></a>Aplicaciones de servidor con SoftAP  
@@ -137,43 +137,43 @@ Para exponer las aplicaciones a través de SoftAP UAP se deben realizar los camb
 <br>
 `Reboot`
 
-#### <a name="sensor-driver-conflict-in-pre-built-ffus"></a>Conflicto del controlador de sensor en FFUs precompiladas 
-Hay un conflicto del controlador del Sensor en el FFUs proporcionados. El marco de Sensor remoto instala a controladores para Compass, Magnetómetro, acelerómetro y giro. Las API de UWP para tener acceso a ellos desde una aplicación supone simplemente 1 está instalado. Si está desarrollando un controlador para un dispositivo físicamente conectado, el controlador remoto de Microsoft proporciona que ffus entrará en conflicto.  
-Solución: Se puede quitar el controlador en conflicto mediante la conexión al dispositivo a través de SSH o PowerShell y usar la herramienta devcon.exe para quitar el controlador de sensor remoto escribiendo "quitar devcon.exe @" ROOT\REMOTESENSORDRIVER *". El controlador de sensor remoto no afecta a los OEM creado FFUs. 
+#### <a name="sensor-driver-conflict-in-pre-built-ffus"></a>Conflicto del controlador de sensor en FFU precompiladas 
+Hay un conflicto del controlador de sensor en las FFU proporcionadas. El marco del sensor remoto instala controladores para la brújula, el magnetómetro, el acelerómetro y el giroscopio. Las API de UWP que proporcionan acceso a estos controladores desde una aplicación suponen que solo hay uno instalado. Si está desarrollando un controlador para un dispositivo físicamente conectado, el controlador remoto de Microsoft proporciona que ffus entrará en conflicto.  
+Solución: Se puede quitar el controlador en conflicto mediante la conexión al dispositivo a través de SSH o PowerShell y usar la herramienta devcon.exe para quitar el controlador de sensor remoto escribiendo "quitar devcon.exe @" ROOT\REMOTESENSORDRIVER *". El controlador de sensor remoto no afecta a las FFU que crea el fabricante de equipo original. 
  
-#### <a name="default-administrator-user-name-and-password"></a>Contraseña y nombre de usuario de administrador predeterminado 
-El nombre de usuario de administrador predeterminado y la contraseña son difíciles de codificada en la imagen de Windows 10 IoT Core. Esto supone un riesgo de seguridad para el dispositivo y no debe exponerse a una conexión a internet abierto hasta que se cambió la contraseña. 
+#### <a name="default-administrator-user-name-and-password"></a>Nombre de usuario y contraseña predeterminados del administrador 
+El nombre de usuario y la contraseña predeterminados del administrador están codificados de forma rígida en la imagen de Windows 10 IoT Core. Esto supone un riesgo de seguridad para el dispositivo y no debe exponerse a una conexión a Internet abierta hasta que se haya cambiado la contraseña. 
  
 #### <a name="volume-controls"></a>Controles de volumen 
-Controles de volumen de hardware para micrófonos USB y altavoces que dependen del sistema de Windows para cambiar el volumen del sistema no se admiten en Windows 10 IoT Core. 
+Los controles de volumen del hardware para micrófonos y altavoces USB que dependen del sistema de Windows para cambiar el volumen del sistema no son compatibles actualmente con Windows 10 IoT Core. 
  
 #### <a name="usb-keyboards"></a>Teclados USB  
-Algunos teclados y ratones USB no funcionen en IoT Core. Usar un teclado o mouse. Puede encontrar una lista de dispositivos periféricos validados [aquí](../../learn-about-hardware/HardwareCompatList.md).  
+Es posible que algún teclado y mouse USB no funcionen en IoT Core. Use otro teclado o mouse. Puede encontrar una lista de dispositivos periféricos validados [aquí](../../learn-about-hardware/HardwareCompatList.md).  
  
-#### <a name="screen-orientation"></a>Orientación de pantalla 
+#### <a name="screen-orientation"></a>Orientación de la pantalla 
 Establecer la orientación a "Vertical" no puede cumplirse en una aplicación Universal 
  
-#### <a name="referencing-adapters-with-alljoyn-templates"></a>Hacer referencia a los adaptadores con plantillas de AllJoyn 
-Al intentar agregar referencias a proyectos de adaptador AllJoyn puede producirse errores al usar las versiones específicas del SDK.  Para resolver estos errores, cambiar la plataforma de destino de Visual Studio para que coincida con la versión actual del SDK y vuelva a cargar el proyecto. 
+#### <a name="referencing-adapters-with-alljoyn-templates"></a>Adaptadores de referencia con plantillas de AllJoyn 
+El intento de agregar referencias a proyectos de adaptador AllJoyn puede producir errores al usar versiones específicas del SDK.  Para resolver estos errores, cambie la plataforma de destino de Visual Studio para que coincida con la versión actual del SDK y, luego, vuelva a cargar el proyecto. 
 
-#### <a name="non-default-drive-mode"></a>Modo de unidad no predeterminada  
-En Raspberry Pi y Dragonboard, al cambiar de un modo de unidad no predeterminada a un modo de unidad no predeterminada diferente, puede producir un problema en la clavija GPIO. Solución alternativa: Establecer el modo de la unidad una vez al principio de la aplicación. 
+#### <a name="non-default-drive-mode"></a>Modo de unidad no predeterminado  
+En Raspberry Pi y DragonBoard, el cambio de un modo de unidad no predeterminado a otro puede producir un problema en la patilla GPIO. Solución alternativa: establezca el modo de la unidad una vez al comienzo de la aplicación. 
  
-#### <a name="application-already-running"></a>Aplicación ya está ejecutando  
-La aplicación de inicio predeterminada podría entrar en conflicto con sí mismo cuando también se implementa desde Visual Studio. Solución alternativa: Cambiar la aplicación de inicio predeterminada para una aplicación que distinta de la que desea implementar. 
+#### <a name="application-already-running"></a>Aplicación en ejecución  
+La aplicación de inicio predeterminada podría entrar en conflicto consigo misma cuando también se implementa desde Visual Studio. Solución alternativa: cambie la aplicación de inicio predeterminada a otra aplicación distinta de la que quiere implementar. 
  
-#### <a name="backgroundmediaplayermessagereceivedfromforeground-may-crash"></a>Se puede bloquear BackgroundMediaPlayer.MessageReceivedFromForeground  
+#### <a name="backgroundmediaplayermessagereceivedfromforeground-may-crash"></a>Puede que se bloquee la línea de código BackgroundMediaPlayer.MessageReceivedFromForeground  
 La siguiente línea de código puede bloquearse: `BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;`.
 <br>
 Para evitar el bloqueo, agregue este código para que se ejecute en primer lugar `var player = BackgroundMediaPlayer.Current;` 
  
 #### <a name="azure-active-directory-authentication-support"></a>Compatibilidad con la autenticación de Azure Active Directory  
-La biblioteca de autenticación de Azure Active Directory no funciona en Windows 10 IoT Core.  
+La biblioteca de autenticación de Azure Active Directory no funciona en Windows 10 IoT Core.  
  
-#### <a name="shell-management-of-application-crashes"></a>Shell de administración de bloqueos de la aplicación 
-Infraestructura de IoT Core shell supervisa aplicaciones APPX-type que se ejecutan en el dispositivo de bloqueos y reinicia esas aplicaciones cuando se producen bloqueos.  Si las aplicaciones reiniciadas continúan se bloquee, el shell se emplean un __failfast: un proceso crítico de sistema que provoca una comprobación de errores y reinicie en un intento de recuperar.  Control y comparable lógica se utiliza para aplicaciones de primer plano en una configuración con cabezal y tareas en segundo plano.   
+#### <a name="shell-management-of-application-crashes"></a>Administración del shell de los bloqueos de la aplicación 
+La infraestructura del shell de IoT Core supervisa las aplicaciones de tipo APPX que se ejecutan en el dispositivo en busca de bloqueos y, cuando estos se producen, reinicia esas aplicaciones.  Si las aplicaciones reiniciadas continúan se bloquee, el shell se emplean un __failfast: un proceso crítico de sistema que provoca una comprobación de errores y reinicie en un intento de recuperar.  Se usan una lógica y un control comparables para las tareas en segundo plano y las aplicaciones de primer plano en una configuración con cabezal.   
 
-A continuación, se captura lógica de reintento y entrega de bloqueo: 
+A continuación se muestra la lógica de reintento y el control de bloqueo: 
 
 Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\CBTConfig (o ForegroundAppConfig para puntas) 
 * QWORD: "FailureResetIntervalMs": longitud de la aplicación de tiempo debe ejecutarse correctamente para restablecer los errores que se ven en 0. : valor predeterminado es 0x00000000000493E0 == 5 minutos. 
@@ -197,22 +197,21 @@ delay = (dword) ((float)BaseRetryDelayMs * (crashes_seen ** Fallback_exponent))
 // wait for delay and relaunch app
 ```
  
-#### <a name="time-synchronization"></a>Sincronización de hora  
-Si se producen errores en sincronización de hora o tiempo de espera de esto puede deberse a inaccesible o un servidor distante del tiempo, la siguiente puede hacerse para agregar servidores de hora local o adicionales. 
+#### <a name="time-synchronization"></a>Sincronización de la hora  
+Si se producen errores en la sincronización de la hora o se agota el tiempo de espera, puede deberse a un servidor horario lejano o inaccesible. Se puede hacer lo siguiente para agregar servidores de hora locales o adicionales. 
  
-* Desde una línea de comandos en el dispositivo (p ej. SSH, PowerShell)  w32tm /config/syncfromflags: manual /manualpeerlist:"0.windows.time.com 1.pool.ntp.org 2. otra cosa,..." 
+* Desde una línea de comandos en el dispositivo (por ejemplo, SSH, PowerShell)  w32tm /config/syncfromflags: manual /manualpeerlist:"0.windows.time.com 1.pool.ntp.org 2. otra cosa,..." 
 * También puede hacer estas adiciones en el registro mediante un script de arranque o un paquete de configuración de tiempo de ejecución personalizado incluido como parte del proceso de creación de imagen si es necesario. 
-Para obtener más información, consulte: 
+Para obtener más información, vea: 
 * [Agregar un archivo y una configuración del registro a una imagen](https://msdn.microsoft.com/library/windows/hardware/mt670641(v=vs.85).aspx)
 * [Creación de imágenes de Windows 10 IoT Core](https://blogs.msdn.microsoft.com/iot/2015/12/14/windows-10-iot-core-image-creation/)
 
-#### <a name="starting-the-ftp-server"></a>Iniciar el servidor FTP 
+#### <a name="starting-the-ftp-server"></a>Inicio del servidor FTP 
 El servidor FTP ya no se ejecuta de forma predeterminada al inicio 
 <br>
 Para ejecutar una vez: 
 `Login with SSH\PS` Ejecute este comando para iniciar FTP:  
-`start ftpd.exe` 
-  
+`start ftpd.exe`    
 Para ejecutar en cada arranque, los usuarios deben crear un programador de tareas. 
 
     Login with SSH\PS and create a scheduler task:       
