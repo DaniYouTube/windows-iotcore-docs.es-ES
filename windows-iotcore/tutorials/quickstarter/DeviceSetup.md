@@ -6,12 +6,12 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo con Windows 10 IoT Core mediante una tarjeta SD.
 keywords: Windows 10 IoT Core, tarjeta SD, Panel de Windows 10 IoT Core
 ms.custom: RS5
-ms.openlocfilehash: 29332c99c9c2136ed8f62421972ee7fec184a9fd
-ms.sourcegitcommit: 8a197111b5b7814b924d77dfea5f9d38760d4288
+ms.openlocfilehash: e276f2cd1d123e4bbf266557fcf069c459e96210
+ms.sourcegitcommit: 1f3760a4f03c5f7713023bfa6bad508c99103a54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67627408"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68522251"
 ---
 # <a name="setting-up-your-device"></a>Configuración del dispositivo
 
@@ -95,17 +95,22 @@ Debajo encontrará cuatro maneras diferentes para instalar una imagen en el disp
 
 ## <a name="flashing-with-emmc-for-up-squared-other-intel-devices"></a>Instalación de una imagen con eMMC (para UP Squared y otros dispositivos de Intel)
 
-1. Descargue e instale el [kit de evaluación e implementación de Windows](https://docs.microsoft.com/windows-hardware/get-started/adk-install) con la versión de correlación de Windows 10 que se está ejecutando.
-2. Inserte una unidad USB en el equipo.
-3. Cree una imagen de WinPE con arranque USB:
-4. Inicie el entorno de herramientas de implementación y creación de imágenes `(C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools)` como un administrador.
-5. Cree una copia de trabajo de los archivos de Windows PE. Especifique x86, amd64 o ARM: `Copype amd64 C:\WINPE_amd64`
-6. Instale Windows PE en la unidad flash USB, especificando la siguiente letra de unidad de WinPE. Puede encontrar más información [aquí](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive). `MMakeWinPEMedia /UFD C:\WinPE_amd64 P:`
+#### <a name="download-and-install-tools"></a>Descarga e instalación de herramientas
+
+1. Descargue e instale el [kit de evaluación e implementación de Windows](https://docs.microsoft.com/windows-hardware/get-started/adk-install) (Windows ADK) con la versión de correlación de Windows 10 que se está ejecutando en su equipo.
+2. Descargue e instale el [complemento de Windows PE para el ADK](https://go.microsoft.com/fwlink/?linkid=2087112).
+
+#### <a name="create-a-usb-bootable-windows-pehttpsdocsmicrosoftcomen-uswindows-hardwaremanufacturedesktopwinpe-intro-image"></a>Creación de una imagen de [Windows PE](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-intro) con arranque USB
+
+3. Inserte una unidad USB en el equipo.
+4. Inicie el entorno de herramientas de implementación y creación de imágenes como un administrador. La ruta de instalación predeterminada es `C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\DandISetEnv.bat`.
+5. Use [`Copype`](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/copype-command-line-options) para crear una copia de trabajo de los archivos de Windows PE. Debe especificar arquitecturas x86, AMD64 o ARM (por ejemplo, `Copype amd64 C:\WINPE_amd64`).
+6. Instale Windows PE en la unidad flash USB con [`MakeWinPEMedia`](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/makewinpemedia-command-line-options). Debe especificar la unidad USB de destino (por ejemplo, `MakeWinPEMedia /UFD C:\WinPE_amd64 P:`).
 7. Para descargar la [imagen de Windows 10 IoT Core](https://downloads.up-community.org/?post_type=wpdmpro&p=204&preview=true) haga doble clic en el archivo ISO descargado y localice la unidad de Virtual CD montada.
-8. Esta unidad contendrá un archivo de instalación (.msi); haga doble clic en él. Esto creará un directorio en el equipo en C:\Archivos de programa (x86)\Microsoft IoT\FFU\ en el que debería ver un archivo de imagen, "flash.ffu".
+8. Esta unidad contendrá un archivo de instalación (.msi); haga doble clic en él. Esto creará un directorio en el equipo en `C:\Program Files (x86)\Microsoft IoT\FFU\` donde debería ver un archivo de imagen, `flash.ffu`.
 9. Descargue, descomprima y copie el [script de instalador eMMC](https://github.com/ms-iot/content/blob/develop/Resources/eMMCInstaller.zip) al directorio raíz del dispositivo USB, junto con la FFU del dispositivo.
 10. Conecte la unidad USB, el ratón y el teclado al concentrador USB. Conecte la pantalla HDMI al dispositivo, el dispositivo al concentrador USB y el cable de alimentación al dispositivo.
-11. Vaya a la configuración del BIOS del dispositivo. Seleccione *Windows* como el sistema operativo y establezca el dispositivo para que arranque desde la unidad USB. Cuando se reinicie el sistema, verá el símbolo del sistema de WinPE. Cambie el símbolo del sistema de WinPE a la unidad USB. Suele ser C: o D:, pero puede que necesite probar otras letras de unidad.
+11. Si fuera necesario, vaya a la configuración del BIOS del dispositivo. Seleccione *Windows* como el sistema operativo y establezca el dispositivo para que arranque desde la unidad USB. Cuando se reinicie el sistema, verá el símbolo del sistema de WinPE. Cambie el símbolo del sistema de WinPE a la unidad USB. Suele ser C: o D:, pero puede que necesite probar otras letras de unidad.
 12. Ejecute el script del instalador de eMMC, que instalará la imagen de Windows 10 IoT Core en la memoria eMMC del dispositivo. Cuando haya terminado, presione cualquier tecla y ejecute `wpeutil reboot`. El sistema debe arrancar en Windows 10 IoT Core, iniciar el proceso de configuración y cargar la aplicación predeterminada.
 
 > [!NOTE]
