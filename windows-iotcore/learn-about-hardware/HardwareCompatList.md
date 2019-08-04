@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre las interfaces y los protocolos de periféricos que admite Windows 10 IoT Core.
 keywords: Windows IOT, periféricos, protocolos, compatibilidad, buses, hardware
-ms.openlocfilehash: 6e30dd487e86c5e512e156fc47ce795e6830f50a
-ms.sourcegitcommit: 3bfdf0bead481053edaabc1f9de97ffc3fc787cd
+ms.openlocfilehash: d1d97c3bff2fe843216410d07530f4866136bc63
+ms.sourcegitcommit: c5552007f5456e57512307f51b146406a23fa723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68409373"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739827"
 ---
 # <a name="hardware-compatibility-list"></a>Lista de compatibilidad de hardware
 
@@ -94,6 +94,29 @@ Windows 10 IoT Core admite una variedad de protocolos y interfaces de periféric
 > | [SeeedStudio de la base de Olivares para Raspberry PI](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html) |ARM| La Hat base Hat para RPI proporciona compatibilidad con el sistema Seeedstudio de los Raspbery PI.| [Biblioteca y ejemplos](https://github.com/KiwiBryn/GroveBaseHatWindows10IoTCore) | |
 > | [SeeedStudio de la base de Olivares para Raspberry PI Zero](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero-p-3187.html) |ARM| La Hat base Hat para RPI Zero proporciona compatibilidad con el sistema Seeedstudio de los Raspbery PI.| [Biblioteca y ejemplos](https://github.com/KiwiBryn/GroveBaseHatWindows10IoTCore) | |
 
+### <a name="semtech-sx127x-based-lora-pi-hatshttpswwwsemtechcomproductswireless-rflora-transceivers"></a>[Semtech basados en SX127X Lora creada® PI](https://www.semtech.com/products/wireless-rf/lora-transceivers)
+La tecnología de comunicaciones de espectro de Semtech de Lora creada® ultra-Long (de 100 a 10KM) tiene una gran inmunidad de interferencias y proporciona una solución de bajo costo para conectar los dispositivos de batería y solar a la infraestructura de red convencional.
+
+> | Nombre de la parte/no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft verificó  | 
+> |----------------|-------------------|-------------|--------|------------------------------|
+> | [Adafruit Lora creada 433MHz del capó](https://www.adafruit.com/product/4075) | ARM32 | 433MHz Lora creada, 3 botones y OLED. | [Biblioteca y ejemplos](https://github.com/KiwiBryn/RFM9XLoRa-Net) | |
+> | [Adafruit Lora creada 868-915MHz del capó](https://www.adafruit.com/product/4074) | ARM32 | 868/915MHz Lora creada conectividad, 3 botones y pantalla OLED. | [Biblioteca y ejemplos](https://github.com/KiwiBryn/RFM9XLoRa-Net) | |
+> | [Dragino Lora creada GPS Hat for RaspberryPI 433/868/915MHz](http://www.dragino.com/products/lora/item/106-lora-gps-hat.html) | ARM32 | Opciones de conectividad de 433/868/915MHz Lora creada y GPS. | [Biblioteca y ejemplos](https://github.com/KiwiBryn/RFM9XLoRa-Net) | |
+> | [Elecrow Lora creada RFM95 IoT Board for RPI 915MHz](https://www.elecrow.com/lora-rfm95-iot-board-for-rpi.html) | ARM32 | 915MHz Lora creada Connectivity y los sockets. | [Biblioteca y ejemplos](https://github.com/KiwiBryn/RFM9XLoRa-Net) | |
+> | [Trucos electrónicos Lora creada/LoraWan Shield para Raspberry PI Zero y PI3](https://www.tindie.com/products/electronictrik/loralorawan-shield-for-raspberry-pi-zero-and-pi3/) | ARM32 | 868/915MHz conectividad Lora creada y OLED opcional. | [Biblioteca y ejemplos](https://github.com/KiwiBryn/RFM9XLoRa-Net) | |
+> | [Escudo de puerta de enlace de LoRaWan de canal de M2M 1 para Raspberry PI](https://www.tindie.com/products/m2m/1-channel-lorawan-gateway-shield-for-raspberry-pi/) | ARM32 | Opciones de conectividad de 868/915/923MHz Lora creada. | [Biblioteca y ejemplos](https://github.com/KiwiBryn/RFM9XLoRa-Net) | |
+> | [Placa de expansión uputronics Raspberry PI + Lora creada (TM)](https://store.uputronics.com/index.php?route=product/product&path=61&product_id=68) | ARM32 | Opciones de conectividad de 433/868/915MHz Lora creada. | [Biblioteca y ejemplos](https://github.com/KiwiBryn/RFM9XLoRa-Net) | |
+> | [uputronics Raspberry PiZero Lora creada (TM) Expansion Board](https://store.uputronics.com/index.php?route=product/product&path=61&product_id=99) | ARM32 | Opciones de conectividad dual 433/868/915MHz Lora creada. | [Biblioteca y ejemplos](https://github.com/KiwiBryn/RFM9XLoRa-Net) | |
+
+
+### <a name="nordic-semiconductor-nrf24l01-wireless-pi-hatshttpswwwnordicsemicomproductslow-power-short-range-wirelessnrf24-series"></a>[Sombreros de nRF24L01 inalámbrica PI de Nordic semiconductor](https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF24-series)
+Nivel de datos de la banda de ISM de 2,5 GHz, 250Kbps, 1 Mbps y 2 Mbps. Los módulos de energía baja 10 de la gama de contadores, de alta potencia, 1KM.
+
+> | Nombre de la parte/no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft verificó  | 
+> |----------------|-------------------|-------------|--------|------------------------------|
+> | [Ceech Raspberry PI nRF24l01 + Shield](https://www.tindie.com/products/ceech/new-raspberry-pi-to-nrf24l01-shield/) |ARM| El complemento Raspberry PI NRF24l01 + Shield para el Raspberry PI es compatible con un solo módulo NRF24l01 + más un timbre y un área de prototipo.| [Biblioteca](https://github.com/techfooninja/Radios.RF24), [aplicación de ejemplo](https://github.com/KiwiBryn/nRF24L01Windows10IoTCoreDuinoDemo), [modificación necesaria](https://blog.devmobile.co.nz/2017/07/31/nrf24-windows-10-iot-core-hardware/) | |
+> | [Boros Rf2-dual nRF24L01 pHat](https://www.tindie.com/products/boros/borosrf2-dual-nrf24l01-phathat-rtc-for-pis/) |ARM| Boros RF2 admite hasta dos radios de NRF24L01 + y un RTC opcional.| [Biblioteca](https://github.com/techfooninja/Radios.RF24), [aplicación de ejemplo](https://github.com/KiwiBryn/nRF24L01Windows10IoTCoreDuinoDemo) | |
+
 
 ### <a name="port-expanders"></a>Ampliadores de puertos
 > | Nombre de la parte/no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft verificó  | 
@@ -124,6 +147,7 @@ Windows 10 IoT Core admite una variedad de protocolos y interfaces de periféric
 > | Nombre de la parte/no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft verificó | 
 > |----------------|-------------------|-------------|--------|------------------------------|
 > | Keith & Koep i-PAN M7 CoverLens | ARM32 | Equipo Touchpanel de 7,0 pulgadas para uso industrial con Qualcomm Snapdragon 410E CPU, resolución 800x480px, brillo 850cd/QM, USB 2,0, tarjeta SD, POE | [i-PAN información de M7](https://keith-koep.com/en/products/products-hmi/i-pan-m7-coverlens-arm-touch-panel-computer-technical-data/) | &#10004; |
+
 
 ### <a name="miscellaneous"></a>Varios
 > | Nombre de la parte/no. | Arquitectura compatible | Descripción | Vínculos relevantes | Microsoft verificó | 
