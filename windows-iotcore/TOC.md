@@ -21,6 +21,7 @@
 #### [Minnowboard Max](learn-about-hardware/PinMappings/PinMappingsMBM.md)
 ### [Dispositivos con y sin periféricos](learn-about-hardware/HeadlessMode.md)
 ### [Reactivar táctil](learn-about-hardware/WakeOnTouch.md)
+### [Requisitos de UEFI](commercialize-your-device/uefirequirements.md)
 ## [Orientación sobre controladores]()
 ### [Implementación de controladores](learn-about-hardware/DriverDeployment.md)
 ### [Creación de controlador universal](learn-about-hardware/DriverCreation.md)
