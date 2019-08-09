@@ -6,17 +6,17 @@ ms.date: 01/30/2018
 ms.topic: article
 description: Obtenga información sobre qué es Windows 10 IoT y lo que puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Windows 10 IoT Core, equipo sin periféricos, voz, características, edición binaria, ediciones
-ms.openlocfilehash: 1e1d2769513005a705c48522d4dc7dc034f5d7b9
-ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.openlocfilehash: 1c99541f3b52891d2510fa3fa05df68fac7ced14
+ms.sourcegitcommit: c5552007f5456e57512307f51b146406a23fa723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66760392"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739803"
 ---
 # <a name="an-overview-of-windows-10-iot"></a>Información general de Windows 10 IoT 
 
 > [!NOTE]
-> Los contenedores de Windows 10 solo se pueden usar con Windows IoT Core y Windows IoT Enterprise para implementaciones comerciales en las que se usa Microsoft Azure IoT Edge.
+> Se admiten contenedores Windows para implementaciones comerciales en Windows Server, Windows IoT Server, Windows IoT Enterprise y Windows IoT Core.  A partir de la actualización de octubre de 2018 de Windows (compilación 17763), los contenedores Windows solo se pueden usar con Windows Enterprise y Professional para fines de desarrollo y pruebas.
 
 ## <a name="what-is-windows-10-iot"></a>¿Qué es Windows 10 IoT?
 Windows 10 IoT es un miembro de la familia Windows 10 que aporta potencia de clase empresarial, seguridad y facilidad de uso para el Internet de las cosas.  Aprovecha la experiencia, el ecosistema y la conectividad de la nube que incluye Windows, lo que permite a las organizaciones crear su Internet de las cosas con dispositivos seguros que se pueden aprovisionar con rapidez, son fáciles de administrar y se conectan sin problema a una estrategia de nube global.  

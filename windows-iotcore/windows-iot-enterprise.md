@@ -6,24 +6,24 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información acerca de qué es Windows 10 IoT Enterprise y lo que se puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Enterprise, binario, Windows
-ms.openlocfilehash: c5532b3281eb0f497cbfeeedcf92e54a3659421d
-ms.sourcegitcommit: 8bb162cbfa286107e243a0286fe53b3b9cc3f359
+ms.openlocfilehash: 0d7347e86e3fd3eb6b5b7ad0eccc0825611a9225
+ms.sourcegitcommit: c5552007f5456e57512307f51b146406a23fa723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67345126"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739831"
 ---
 # <a name="an-overview-of-windows-10-iot-enterprise"></a>Introducción a Windows 10 IoT Enterprise
 
 > [!NOTE]
-> Los contenedores de Windows 10 solo se pueden usar con Windows IoT Core y Windows IoT Enterprise para implementaciones comerciales que usan Microsoft Azure IoT Edge.
+> Se admiten contenedores Windows para implementaciones comerciales en Windows Server, Windows IoT Server, Windows IoT Enterprise y Windows IoT Core.  A partir de la actualización de octubre de 2018 de Windows (compilación 17763), los contenedores Windows solo se pueden usar con Windows Enterprise y Professional para fines de desarrollo y pruebas.
 
 ## <a name="what-is-windows-10-iot-enterprise"></a>¿Qué es Windows 10 IoT Enterprise?
 Windows 10 IoT Enterprise es una versión completa de Windows 10 que ofrece seguridad y capacidad de administración empresarial a las soluciones de IoT. Windows 10 IoT Enterprise comparte todos los beneficios del ecosistema mundial de Windows. Es un binario equivalente a Windows 10 Enterprise, por lo que puede usar las mismas herramientas de desarrollo y administración que los PC y portátiles cliente.  Sin embargo, en lo referente a licencias y distribución, la versión de escritorio y versiones de IoT son diferentes. Tenga en cuenta que Windows 10 IoT Enterprise ofrece las opciones de Canal de mantenimiento a largo plazo (LTSC) y Canal semianual (SAC). Los OEM pueden elegir la versión que necesitan para sus dispositivos.
 
 ## <a name="getting-started"></a>Introducción 
 
-Para iniciar su recorrido con Windows 10 IoT Enterprise, tendrá que ponerse en contacto con alguno de los distribuidores de [esta lista](https://go.microsoft.com/fwlink/p/?linkid=2093270).
+Para iniciar su recorrido con Windows 10 IoT Enterprise, tendrá que ponerse en contacto con alguno de los distribuidores de [esta lista](https://go.microsoft.com/fwlink/?linkid=2094697).
 
 También puede probar una copia de evaluación de Windows 10 IoT Enterprise [aquí](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise).
 
