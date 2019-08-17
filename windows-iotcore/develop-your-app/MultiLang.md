@@ -1,26 +1,26 @@
 ---
-title: Compatibilidad con idiomas de Windows 10 IoT Core
+title: Compatibilidad con idiomas principales de IoT de Windows 10
 author: msalehmsft
 ms.author: msaleh
 ms.date: 09/12/17
 ms.topic: article
-description: Obtenga información sobre la compatibilidad con varios idiomas en las aplicaciones de UWP y el sistema operativo en IoT Core.
-keywords: Windows iot, idiomas, los tipos de aplicaciones, UWP, sistema operativo
-ms.openlocfilehash: 211ed2ee8350d8c92d6f959f8d9e7b5d6f567af7
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+description: Obtenga información sobre la compatibilidad con varios idiomas en aplicaciones y sistemas operativos UWP en IoT Core.
+keywords: Windows IOT, idiomas, tipos de aplicaciones, UWP, so
+ms.openlocfilehash: aad3005a008264223750b7ede5b154306d9d3015
+ms.sourcegitcommit: b005de492d52cd5139fa410dd31c3ca369030dd9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514295"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545522"
 ---
 # <a name="language-support"></a>Compatibilidad con idiomas
 
-Compatibilidad de idioma puede habilitarse en dos niveles, el nivel de aplicación y el nivel de sistema operativo, dependiendo de los recursos de idioma están disponibles en la imagen.
+La compatibilidad con idiomas se puede habilitar en dos niveles, nivel de aplicación y nivel de sistema operativo, en función de los recursos de idioma disponibles en la imagen.
 
-## <a name="languages-in-uwp-applications"></a>Lenguajes en aplicaciones UWP
-Idiomas de la aplicación de UWP no se limitan a los idiomas incluidos en el sistema operativo.  De hecho, un dispositivo de IoT que desencadenan el shell de interfaz de usuario o utilizar los recursos de voz no puede proporcionar una experiencia de dispositivo en varios idiomas a través de sus aplicaciones para UWP, aunque el SO subyacente de Windows 10 IoT Core se basa simplemente en el modo predeterminado en-US. 
+## <a name="languages-in-uwp-applications"></a>Lenguajes en aplicaciones para UWP
+Los lenguajes de aplicación de UWP no se limitan a los idiomas incluidos en el sistema operativo.  De hecho, un dispositivo de IoT que no desencadena la interfaz de usuario de Shell ni emplea recursos de voz puede proporcionar una experiencia de dispositivo en muchos lenguajes diferentes a través de sus aplicaciones UWP, aunque el sistema operativo Windows 10 IoT Core subyacente se crea simplemente en el modo predeterminado en-US. 
 
-Las aplicaciones de UWP deben proporcionar los recursos para los idiomas que deben ser compatibles. [Windows.Globalization.ApplicationLanguage](https://docs.microsoft.com/uwp/api/windows.globalization.applicationlanguages) API pueden usarse para especificar las preferencias de idioma.
+Las aplicaciones de UWP deben proporcionar los recursos para los idiomas que se necesitan para admitir. Las API de [Windows. Globalization. ApplicationLanguage](https://docs.microsoft.com/uwp/api/windows.globalization.applicationlanguages) se pueden usar para especificar las preferencias relacionadas con el idioma.
 
 Vea las aplicaciones de ejemplo siguientes:
 
@@ -31,9 +31,9 @@ Vea las aplicaciones de ejemplo siguientes:
 
 ## <a name="languages-in-os"></a>Idiomas en el sistema operativo
 
-Kits de Windows 10 IoTCore ahora incluyen los recursos de idioma para los idiomas siguientes:
+Los kits de IoTCore de Windows 10 ahora incluyen los recursos de idioma para los siguientes idiomas:
 
-> | Lenguaje  | Código | Region |
+> | Lenguaje  | Código | Área |
 > |-------------|-----|-----|
 > | Inglés (Estados Unidos) | en-US | Norteamérica | 
 > | Inglés (Reino Unido) | en-GB | Europa |
@@ -50,15 +50,15 @@ Kits de Windows 10 IoTCore ahora incluyen los recursos de idioma para los idioma
 > | Neerlandés | nl-NL | Europa |
 > | Polaco | pl-PL | Europa | 
 > | Rumano | ro-RO | Europa |
-> | Ruso | ro-RU | Europa |
+> | Ruso | ru-RU | Europa |
 > | Griego | el-GR | Europa |
-> | Portugués (Brasil) | pt-BR | Sudamérica y Europa |
-> | Portuese (Portugal) | pt-PR | Sudamérica y Europa |
+> | Portugués (Brasil) | pt-BR | Sudamérica/Europa |
+> | Portuese (Portugal) | pt-PT | Sudamérica/Europa |
 
-Estos recursos de idioma contienen cadenas de interfaz de usuario, idiomas de voz y voces (síntesis de voz). Se pueden crear imágenes de Windows IoT con uno o varios de estos recursos y se debe especificar durante el tiempo de imagen y no se puede modificar más adelante. Tenga en cuenta que el idioma de interfaz de usuario relacionados con los recursos son independientes de lenguaje de voz y los recursos de voz.
+Estos recursos de idioma contienen cadenas de interfaz de usuario, lenguaje de voz y voces (síntesis de voz). Las imágenes de Windows IoT pueden compilarse con uno o varios de estos recursos, y deben especificarse durante el tiempo de la imagen y no se pueden modificar posteriormente. Tenga en cuenta que los recursos relacionados con el idioma de la interfaz de usuario son independientes de los de voz.
 
-### <a name="specifying-ui-and-speech-resources"></a>Especificar recursos de la interfaz de usuario y de voz 
-En el archivo xml de entrada de OEM, la interfaz de usuario necesaria e idiomas de voz se especifican como se muestra a continuación
+### <a name="specifying-ui-and-speech-resources"></a>Especificar recursos de interfaz de usuario y voz 
+En el archivo XML de entrada OEM, los idiomas de interfaz de usuario y voz necesarios se especifican como se muestra a continuación
 
 ``` xml
   <SupportedLanguages>
@@ -92,8 +92,8 @@ En el archivo xml de entrada de OEM, la interfaz de usuario necesaria e idiomas 
 ```
 
 
-### <a name="specifying-speech-data-resources"></a>Especificar recursos de datos de voz
-En el archivo xml de entrada de OEM, se especifican los recursos de datos de voz necesarios tal como se muestra a continuación,
+### <a name="specifying-speech-data-resources"></a>Especificar los recursos de datos de voz
+En el archivo XML de entrada OEM, los recursos de datos de voz necesarios se especifican como se muestra a continuación.
 
 ``` xml
     <Microsoft>
@@ -108,27 +108,27 @@ En el archivo xml de entrada de OEM, se especifican los recursos de datos de voz
 ```
 
 > [!NOTE]
-> De forma predeterminada, los datos de voz en-US se incluyen en la imagen.
+> De forma predeterminada, los datos de voz en-US están incluidos en la imagen.
 
 ### <a name="samples"></a>Muestras
-* Consulte [MultiLangSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/MultiLangSample) para admiten varios idiomas
-* Consulte [SingleLangSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SingleLangSample) idioma fr-FR con en-US como idioma de reserva.
-    * Tenga en cuenta que cuando se cambia el idioma de interfaz de usuario de inicio, la `administrator` también se traduce el nombre de la cuenta en el idioma de interfaz de usuario de arranque. Por lo tanto, en fr-FR es `administrateur`. Consulte [OEMCustomization.cmd](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SingleLangSample/oemcustomization.cmd)
+* Consulte [MultiLangSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/MultiLangSample) para compatibilidad con varios idiomas
+* Consulte [SingleLangSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SingleLangSample) para el idioma FR-fr con en-US como lenguaje de reserva.
+    * Tenga en cuenta que cuando se cambia el idioma de la `administrator` interfaz de usuario de arranque, el nombre de la cuenta también se traduce en el idioma de la interfaz de usuario de arranque. Por lo tanto, en fr-FR `administrateur`es. Vea [OEMCustomization. cmd.](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SingleLangSample/oemcustomization.cmd)
 
 ## <a name="changing-user-preferences-language-region-speech-and-voice"></a>Cambiar las preferencias del usuario (idioma, región, voz y voz)
 
-Aplicación de UWP puede usar WinRT APIs para establecer la región, lista de idiomas de interfaz de usuario preferido, lenguaje de voz y voz que se debe usar de forma predeterminada. Conjunto de lista de idioma de interfaz de usuario una vez preferido, aplicación de UWP intentará cargar los recursos correspondientes (a menos que la aplicación mediante programación impide dicho).
+La aplicación UWP puede usar las API de WinRT para establecer la región, la lista de idiomas preferidos de la interfaz de usuario, el idioma de voz y la voz que deben usarse de forma predeterminada. Una vez que se establece la lista de idiomas de interfaz de usuario preferida, la aplicación UWP intentará cargar los recursos correspondientes (a menos que la aplicación lo impida mediante programación).
  
-Si la aplicación no tiene los recursos correspondientes, se cargarán los recursos de reserva. De forma similar, si los recursos del sistema operativo para el idioma preferido no forman parte de la imagen de Windows IoT, IoT Windows usará los reserva probable inglés (en-US).
+Si la aplicación no tiene los recursos correspondientes, se cargarán los recursos de reserva. Del mismo modo, si los recursos del sistema operativo para los idiomas preferidos no forman parte de la imagen de Windows IoT, Windows IoT usará su reserva probablemente en inglés (en-US).
 
-* Establece la región mediante `TrySetHomeGeographicRegion` en [Windows.System.UserProfile.GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
-* Idioma de interfaz de usuario de conjunto con `TrySetLanguages` en [Windows.System.UserProfile.GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
-* Conjunto de voz idioma mediante `TrySetSystemSpeechLanguageAsync` en [Windows.Media.SpeechRecognition.SpeechRecognizer](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer)
-* Establecer mediante voz `TrySetDefaultVoiceAsync` en [Windows.Media.SpeechSynthesis.SpeechSynthesizer](https://docs.microsoft.com/en-us/uwp/api/windows.media.speechsynthesis.speechsynthesizer)
+* Establecer región mediante `TrySetHomeGeographicRegion` en [Windows. System. userprofile. GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
+* Establezca el idioma de `TrySetLanguages` la interfaz de usuario mediante en [Windows. System. userprofile. GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
+* Establecer el idioma de `TrySetSystemSpeechLanguageAsync` la voz mediante en [Windows. Media. SpeechRecognition. SpeechRecognizer](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer)
+* Establecer Voice usando `TrySetDefaultVoiceAsync` en [Windows. Media. SpeechSynthesis. SpeechSynthesizer](https://docs.microsoft.com/en-us/uwp/api/windows.media.speechsynthesis.speechsynthesizer)
 
 > [!NOTE]
-> Para que funcione correctamente, Cortana requiere la región, el idioma de interfaz de usuario y lenguaje de voz para que sea coherente, p. ej.: región FR, la interfaz de usuario y la voz idiomas fr-FR o región ES, la interfaz de usuario y la voz idiomas es-es al directorio. Cortana usa su propia voz, aplicación de UWP no puede cambiar.
+> Para un funcionamiento correcto, Cortana requiere que la región, el idioma de la interfaz de usuario y el idioma de la voz sean coherentes, por ejemplo: región FR, interfaz de usuario y lenguajes de voz fr-FR o región ES, interfaz de usuario y lenguajes de voz es-ES. Cortana usa su propia voz; la aplicación UWP no puede cambiarla.
 
-## <a name="iotsettingsexe"></a>IoTSettings.exe
+## <a name="iotsettingsexe"></a>IoTSettings. exe
 
-Para más información acerca de cómo cambiar la configuración de región y el usuario o el lenguaje de voz crear productos de Cortana habilitado, lea nuestra [utilidades de línea de comandos](../manage-your-device/CommandLineUtils.md) documentación.
+Para obtener más información sobre cómo cambiar la configuración de la región y el idioma del usuario o de la voz para crear productos habilitados para Cortana, lea la documentación de los utils de la [línea de comandos](../manage-your-device/CommandLineUtils.md) .
