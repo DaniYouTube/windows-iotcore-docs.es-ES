@@ -6,12 +6,12 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo NXP con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, NXP
 ms.custom: RS5
-ms.openlocfilehash: 58bed6c49a5a05afe0852572051132f8731dfcb1
-ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.openlocfilehash: 4924d109ab6fce3b6794a996140364d2814aca23
+ms.sourcegitcommit: 4272081b5186dada1e61974193e41fcc1c42a1b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66182177"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629393"
 ---
 # <a name="setting-up-a-nxp-device"></a>Configuración de un dispositivo NXP
 
@@ -19,6 +19,9 @@ ms.locfileid: "66182177"
 
 > [!IMPORTANT]
 > Cuando aparezca el mensaje emergente "formatear el disco", _no_ lo formatee. Estamos trabajando en una solución para este problema.
+
+> [!NOTE]
+> La configuración de NXP es casi idéntica a la configuración de Raspberry Pi.
 
 Al configurar un dispositivo NXP para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Si lo que quiere es fabricar con un dispositivo NXP, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
 <br>
