@@ -6,12 +6,12 @@ ms.date: 01/30/2018
 ms.topic: article
 description: Obtenga información sobre qué es Windows 10 IoT y lo que puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Windows 10 IoT Core, equipo sin periféricos, voz, características, edición binaria, ediciones
-ms.openlocfilehash: 1c99541f3b52891d2510fa3fa05df68fac7ced14
-ms.sourcegitcommit: c5552007f5456e57512307f51b146406a23fa723
+ms.openlocfilehash: 8638a17201f2fe0a571741918e08172c99592be5
+ms.sourcegitcommit: 823a8f6967f74d71d5c61fe90f6b63ba79483479
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739803"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159278"
 ---
 # <a name="an-overview-of-windows-10-iot"></a>Información general de Windows 10 IoT 
 
@@ -87,7 +87,7 @@ REG ADD "HKCU\Control Panel\Accessibility" /v DynamicScrollbars /t REG_DWORD \d 
 
 ### <a name="different-commands-supported"></a>Diferentes comandos admitidos
 
-* El comando Remove-AppxPackage de PowerShell funciona en Dekstop pero no en Windows 10 IoT Core.
+* El comando Remove-AppxPackage de PowerShell funciona en Desktop pero no en Windows 10 IoT Core.
 * No todas las carpetas del dispositivo son accesibles para las aplicaciones universales de Windows. En Windows 10 IoT Core puede usar la herramienta FolderPermissions para hacer que una carpeta sea accesible para una aplicación para UWP. Por ejemplo, ejecute FolderPermissions c:\test -e para conceder a las aplicaciones para UWP acceso a la carpeta c:\test. Pero esto no está disponible en Desktop.
 
 Es posible que los comandos que se muestran en esta publicación cambien con el tiempo, ya que Windows 10 IoT Core se actualiza continuamente.

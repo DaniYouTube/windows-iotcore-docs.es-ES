@@ -20,7 +20,7 @@ _Número de compilación 17744. Agosto de 2018._
 
 En este documento se proporciona la información más reciente y de otro tipo que complementa la documentación incluida con Windows 10 IoT Core.
 
-Gracias por descargar Windows 10 IoT Core. Windows 10 IoT Core es la versión de Windows 10 destinada al desarrollo de dispositivos de uso insertado o dedicado, y es también la elección de la comunidad de fabricantes. Los paquetes de esta versión incluyen herramientas y contenido necesarios para instalar Windows 10 IoT Core en la plataforma MinnowBoard Max basada en procesadores Intel Atom, Raspberry Pi 2 o 3 basado en Broadcom 2836 o 2837 y DragonBoard 410c basado en procesadores de la serie Snapdragon 400 de Qualcomm.
+Gracias por descargar Windows 10 IoT Core. Windows 10 IoT Core es la versión de Windows 10 destinada al desarrollo de dispositivos de uso insertado o dedicado, y es también la elección de la comunidad de fabricantes. Los paquetes de esta versión contienen herramientas y contenido necesarios para instalar Windows 10 IoT Core en la plataforma Minnowboard Max basada en procesadores Intel Atom, Raspberry Pi 2 o 3 basada en Broadcom 2836 o 2837, y DragonBoard 410c basada en procesadores de la serie Snapdragon 400 de Qualcomm.
 
 
 ## <a name="privacy-statement"></a>Declaración de privacidad en línea
@@ -75,7 +75,7 @@ bcdedit /set debug off
 Por el momento no hay ninguna solución al respecto.
 
 #### <a name="disabling-the-onboard-adapters-for-raspberry-pi-3"></a>Deshabilitación de los adaptadores incorporados para Raspberry Pi3
-Raspberry Pi3 tiene Bluetooth incorporado, que se debe deshabilitar para usar una llave diferente. Para deshabilitar el Bluetooth incorporado, abra una sesión de telnet o ssh y ejecute lo siguiente: 
+Raspberry Pi3 tiene Bluetooth incorporado, que se debe deshabilitar para usar una llave diferente. Para deshabilitar el Bluetooth incorporado, abra una sesión de telnet o ssh, y ejecute lo siguiente: 
 ```
 reg add hklm\system\controlset001\services\BtwSerialH5Bus /v Start /t REG_DWORD /d 4 
 ```
@@ -142,7 +142,7 @@ Reiniciar
 
 
 #### <a name="sensor-driver-conflict-in-pre-built-ffus"></a>Conflicto del controlador de sensor en FFU precompiladas 
-Hay un conflicto del controlador de sensor en las FFU proporcionadas. El marco del sensor remoto instala controladores para la brújula, el magnetómetro, el acelerómetro y el giroscopio. Las API de UWP que proporcionan acceso a estos controladores desde una aplicación suponen que solo hay uno instalado. Si está desarrollando un controlador para un dispositivo adjuntado físicamente, el controlador remoto de las FFU que proporciona Microsoft entrará en conflicto.
+Hay un conflicto del controlador de sensor en las FFU proporcionadas. El marco del sensor remoto instala controladores para la brújula, el magnetómetro, el acelerómetro y el giroscopio. Las API de UWP que proporcionan acceso a estos controladores desde una aplicación suponen que solo hay uno instalado. Si va a desarrollar un controlador para un dispositivo adjuntado físicamente, el controlador remoto de las FFU que proporciona Microsoft entrará en conflicto.
 
 Solución: se puede quitar el controlador que causa el conflicto mediante la conexión al dispositivo a través de SSH o Powershell, y mediante el uso de la herramienta devcon.exe para quitar el controlador de sensor remoto (escriba "devcon.exe remove @”ROOT\REMOTESENSORDRIVER*"). El controlador de sensor remoto no afecta a las FFU que crea el fabricante de equipo original.
 
@@ -165,7 +165,7 @@ El intento de agregar referencias a proyectos de adaptador AllJoyn puede produci
 
 #### <a name="wifi-direct-limitations-on-iotcore"></a>Limitaciones de Wi-Fi Direct en IoTCore
 * El dispositivo IoTCore debe ser el dispositivo que se conecta. No funcionará como dispositivo de publicidad con otro dispositivo que inicie la conexión.   
-* Debe usarse el emparejamiento avanzado.  La aplicación de ejemplo muestra cómo usar la API de emparejamiento avanzada para emparejar los dispositivos antes de conectar. 
+* Se debe usar el emparejamiento avanzado.  La aplicación de ejemplo muestra cómo usar la API de emparejamiento avanzada para emparejar los dispositivos antes de la conexión. 
 * No todos los adaptadores inalámbricos son compatibles con Wi-Fi Direct. Hemos probado y validado el funcionamiento del "adaptador de red Realtek RTL8188EU Wireless Lan 802.11n USB 2.0", pero puede que otros adaptadores no sean compatibles. 
 
 
@@ -214,9 +214,9 @@ Espere el retraso y reinicie la aplicación.
 #### <a name="time-synchronization"></a>Sincronización de la hora  
 Si se producen errores en la sincronización de la hora o se agota el tiempo de espera, puede deberse a un servidor horario lejano o inaccesible. Se puede hacer lo siguiente para agregar servidores de hora locales o adicionales. 
 
-1) Desde una línea de comandos en el dispositivo (por ejemplo, SSH, Powershell): w32tm /config /syncfromflags:manual /manualpeerlist:"0.windows.time.com 1.pool.ntp.org 2.something else, ..." 
+1) Desde una línea de comandos en el dispositivo (por ejemplo, SSH, Powershell) w32tm /config /syncfromflags:manual /manualpeerlist:"0.windows.time.com 1.pool.ntp.org 2.something else, ..." 
 
-2) También puede realizar estas adiciones en el Registro mediante un script de arranque o un paquete de configuración de tiempo de ejecución personalizado, incluido como parte del proceso de creación de imagen, si es necesario. Para obtener más información, vea: 
+2) También puede realizar estas adiciones en el Registro mediante un script de arranque o un paquete de configuración de tiempo de ejecución personalizado, incluido como parte del proceso de creación de imagen si es necesario. Para obtener más información, vea: 
 
 * [Adición de un archivo y configuración del Registro en una imagen](https://msdn.microsoft.com/library/windows/hardware/mt670641(v=vs.85).aspx)
 

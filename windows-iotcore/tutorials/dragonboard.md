@@ -27,7 +27,7 @@ Al configurar un dispositivo DragonBoard para crear prototipos, se recomienda us
 
 ## <a name="using-the-dashboard"></a>Uso del panel
 
-Para instalar una imagen de IoT Core o descargarlo en su dispositivo MinnowBoard, necesitará lo siguiente:
+Para instalar una imagen de IoT Core o descargarlo en el dispositivo MinnowBoard, necesitará lo siguiente:
 * Un equipo que ejecute Windows 10 
 * El [Panel de Windows 10 IoT Core](https://docs.microsoft.com/windows/iot-core/downloads)
 * Un cable microUSB
@@ -51,9 +51,9 @@ Para instalar una imagen de IoT Core o descargarlo en su dispositivo MinnowBoard
 Si el dispositivo viene con un puerto Ethernet o con compatibilidad de adaptador Ethernet USB para habilitar una conexión por cable, conecte un cable Ethernet para conectarse a la red.
 
 ### <a name="wireless-connection"></a>Conexión inalámbrica
-Si el dispositivo admite la conectividad Wi-Fi y ha conectado una pantalla, deberá hacer lo siguiente:
+Si el dispositivo admite la conectividad Wi-Fi y le ha conectado una pantalla, deberá hacer lo siguiente:
 
-1. Vaya a la aplicación predeterminada y haga clic en el botón Configuración situado junto al reloj.
+1. Vaya a la aplicación predeterminada y haga clic en el botón de configuración situado junto al reloj.
 2. En la página de configuración, seleccione _Network and Wi-Fi_ (Redes y Wi-Fi).
 3. El dispositivo realizará una exploración de redes inalámbricas.
 4. Una vez que la red aparezca en esta lista, selecciónela y haga clic en _Conectar_.
@@ -62,12 +62,12 @@ Si no se ha conectado a una pantalla y le gustaría conectarse a través de Wi-F
 
 1. Vaya al Panel de IoT y haga clic en _Mis dispositivos_.
 2. Busque la placa no configurada en la lista. El nombre empieza por "AJ_"… (por ejemplo, AJ_58EA6C68). Si la placa no aparece después de unos minutos, intente reiniciarla.
-3. Haga clic en _Configurar dispositivo_ y escriba sus credenciales de red. Esto conectará la placa a la red.
+3. Haga clic en _Configurar dispositivo_ y escriba las credenciales de red. Esto conectará la placa a la red.
 
 > [!NOTE]
 > La Wi-Fi debe estar activada en el equipo para poder buscar otras redes.
 
-## <a name="connect-to-windows-device-portal"></a>Conexión a Portal de dispositivos Windows
+## <a name="connect-to-windows-device-portal"></a>Conexión al Portal de dispositivos Windows
 
 Use el [Portal de dispositivos Windows](../manage-your-device/DevicePortal.md) para conectar el dispositivo mediante un explorador web. El portal de dispositivos ofrece funciones de configuración y administración de dispositivos muy útiles. 
 

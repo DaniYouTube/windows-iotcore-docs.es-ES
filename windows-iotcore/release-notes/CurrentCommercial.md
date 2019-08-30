@@ -1,33 +1,33 @@
 ---
 title: Notas de la versión de la compilación 17763.253
-author: zeeshanfurqan
-ms.author: zeeshan.furqan
+ms.author: saclayt
+author: saraclay
 ms.date: 02/14/2019
 ms.topic: article
 description: Lea y obtenga información sobre las novedades en el número de compilación 17763.253 de Windows Insider
 keywords: Windows IoT, Windows Insider, notas de la versión
-ms.openlocfilehash: dde4089d16ff552e665d341b432f663293ede6b8
-ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.openlocfilehash: 476efb3edb5a260a6366e92927ebd24a4e648a19
+ms.sourcegitcommit: 823a8f6967f74d71d5c61fe90f6b63ba79483479
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "60168993"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159307"
 ---
 # <a name="release-notes-for-build-17763253"></a>Notas de la versión de la compilación 17763.253
 _Número de compilación 17763.253. Febrero de 2019._
 
 &copy; 2019 Microsoft Corporation. Todos los derechos reservados.
 
-En este documento se proporciona la información más reciente y de otro tipo que complementa la documentación incluida con Windows 10 IoT Core.
+En este documento se proporciona la información más reciente y de otro tipo que complementa la documentación incluida con Windows 10 IoT Core.
 
-Gracias por descargar Windows 10 IoT Core. Windows 10 IoT Core es la versión de Windows 10 destinada al desarrollo de dispositivos de uso insertado o dedicado, y es también la elección de la comunidad de fabricantes. Los paquetes de esta versión contienen herramientas y contenido necesarios para instalar Windows 10 IoT Core en la plataforma Minnowboard Max basada en procesadores Intel Atom, Raspberry Pi 2 o 3 basada en Broadcom 2836 o 2837, y DragonBoard 410c basada en procesadores de la serie Snapdragon 400 de Qualcomm.
+Gracias por descargar Windows 10 IoT Core. Windows 10 IoT Core es la versión de Windows 10 destinada al desarrollo de dispositivos de uso insertado o dedicado, y es también la elección de la comunidad de fabricantes. Los paquetes de esta versión contienen herramientas y contenido necesarios para instalar Windows 10 IoT Core en la plataforma Minnowboard Max basada en procesadores Intel Atom, Raspberry Pi 2 o 3 basada en Broadcom 2836 o 2837, y DragonBoard 410c basada en procesadores de la serie Snapdragon 400 de Qualcomm.
 
 
 ## <a name="privacy-statement"></a>Declaración de privacidad en línea
 
 La declaración de privacidad para esta versión del sistema operativo Windows se puede consultar [aquí](http://go.microsoft.com/fwlink/?LinkId=506737).
 
-Pegue el vínculo redireccionable en la ventana del explorador para revisar los términos y condiciones vinculados.
+Pegue el vínculo de redireccionamiento en la ventana del explorador para revisar los términos y condiciones vinculados.
 
 ## <a name="whats-new-in-this-build"></a>Novedades de esta compilación: 
 * Correcciones de errores generales 
@@ -37,9 +37,9 @@ Pegue el vínculo redireccionable en la ventana del explorador para revisar los 
 * La versión 2120.0.0.0 de BSP es la usada para la imagen en DragonBoard. 
 
 ## <a name="known-issues-in-this-build"></a>Problemas conocidos de esta compilación:
-* La implementación del controlador F5 de Visual Studio no funciona en IoT Core.
+* La implementación del controlador F5 de Visual Studio no funciona en IoT Core.
 * Los dispositivos que se han instalado a través de NOOBS no pueden ejecutar la herramienta bcdedit para habilitar al depurador de kernel. Esto se puede conseguir con la siguiente solución alternativa: ** Monte la tarjeta SD en el equipo. ** Busque el número de la partición de disco EFIESP con diskpart o Administración de discos (por ejemplo, "M:"). ** Ejecute el comando "bcdedit /store M:\EFI\Microsoft\boot\bcd /set {default} debug yes". ** Desmonte la tarjeta SD.
-** Ya debería poder conectar el depurador de la forma habitual
+** Ya debería poder conectar el depurador de la forma habitual.
 * En ocasiones, se interrumpirá la PSSession al enviar comandos a dispositivos IoT.
 * RPi3 no empareja BT + BTLE con el Bluetooth incorporado.
 * No se puede conectar a Internet a través de la conexión Wi-Fi con SoftAp de Up2.
@@ -57,13 +57,13 @@ Puede que Raspberry Pi no mantenga la resolución de pantalla si se desconecta e
 El rendimiento de la reproducción de vídeo en la plataforma de Raspberry Pi no está optimizado.  Es posible que el rendimiento que muestren los elementos animados del usuario, incluidos los menús desplegables basados en XAML, no sea el óptimo. 
  
 #### <a name="raspberry-pi-camera-support"></a>Compatibilidad de Raspberry Pi con la cámara 
-La compatibilidad con los dispositivos periféricos de cámara es limitada. El dispositivo PiCam conectado directamente al bus de la cámara incorporada no es compatible, ya que las limitaciones de la plataforma para admitir cámaras web USB modernas D3D generan flujos de datos muy exigentes en la controladora de host USB.  Incluso cuando se usa con cámaras web con valores de resolución bajos, se requerirá un ajuste fino y una lógica de control especializada del USB adicional. 
+La compatibilidad con los dispositivos periféricos de cámara es limitada. El dispositivo PiCam conectado directamente al bus de la cámara incorporada no es compatible, ya que las limitaciones de la plataforma para admitir cámaras web USB modernas D3D generan flujos de datos muy exigentes en la controladora de host USB.  Incluso cuando se usa con cámaras web con valores de resolución bajos, se requerirá un ajuste preciso adicional y una lógica de control especializada del USB. 
 
 #### <a name="raspberry-pi3-bluetooth-support"></a>Compatibilidad de Raspberry Pi3 con Bluetooth 
 El controlador Bluetooth integrado de Raspberry Pi3 solo admite dispositivos con un ancho de banda bajo. 
 
 #### <a name="serial-port-usage-and-access-on-rpi2"></a>Uso y acceso de los puertos serie en RPi2 
-Raspberry Pi 2 es compatible con el transporte en serie para la comunicación a través de UART PL011.  Esto se establece de manera predeterminada en escenarios de depuración del kernel.  Un controlador de dispositivo o de aplicación puede usar UART PL011 para enviar y recibir datos con el controlador de dispositivo PL011 si se desactiva el depurador mediante el comando siguiente:
+Raspberry Pi 2 es compatible con el transporte en serie para la comunicación a través de UART PL011.  Esto se establece de manera predeterminada en escenarios de depuración del kernel.  Un controlador de dispositivo o de aplicación puede usar UART PL011 para enviar y recibir datos con el controlador de dispositivo PL011 si se desactiva el depurador mediante el comando siguiente:
 ```
 bcedit /set debug off 
 ```
@@ -108,11 +108,11 @@ HKLM\System\Controlset001\Control\Power\CsEnabled=DWORD:1
 
 
 ### <a name="for-minnowboard"></a>Para MinnowBoard
-#### <a name="minnowboard-max-boot-and-firmware-update"></a>Arranque de MinnowBoard Max y actualización de Firmware 
-MinnowBoard MAX no arrancará a menos que la versión del firmware sea .092 o una posterior. La versión mínima recomendada del firmware es "MinnowBoard Max 0.92 de 32 bits". Las actualizaciones de firmware pueden descargarse desde [aquí](http://go.microsoft.com/fwlink/?LinkId=708613).
+#### <a name="minnowboard-max-boot-and-firmware-update"></a>Arranque de MinnowBoard Max y actualización de firmware 
+MinnowBoard Max no arrancará a menos que la versión del firmware sea .092 o posterior. La versión mínima recomendada del firmware es "MinnowBoard Max 0.92 de 32 bits". Las actualizaciones de firmware pueden descargarse desde [aquí](http://go.microsoft.com/fwlink/?LinkId=708613).
 
 #### <a name="minnow-board-peripheral-support"></a>Compatibilidad con los periféricos de MinnowBoard
-La imagen de Windows 10 IoT Core incluida en esta lista es compatible con los periféricos que se exponen en la placa MinnowBoard MAX. Posteriormente, Intel&reg; proporcionará soporte técnico del conjunto completo de características de los procesadores Baytrail, incluidos los procesadores Intel Celeron&trade; J1900/N2930/N2807 e Intel Atom&trade; E38XX.
+La imagen de Windows 10 IoT Core incluida en esta lista es compatible con los periféricos que se exponen en la placa MinnowBoard Max. Posteriormente, Intel&reg; proporcionará soporte técnico del conjunto completo de características de los procesadores Baytrail, incluidos los procesadores Intel Celeron&trade; J1900/N2930/N2807 e Intel Atom&trade; E38XX.
 
 
 ### <a name="for-all-platforms"></a>Para todas las plataformas 
@@ -143,7 +143,7 @@ El fragmento de archivo .XML debe tener este aspecto:
 
 #### <a name="server-applications-with-softap"></a>Aplicaciones de servidor con SoftAP
 Cuando se usa SoftAP, los clientes no podrán acceder al contenido que exponen las aplicaciones UAP.  
-Para exponer las aplicaciones UAP a través de SoftAP, desde la consola en el dispositivo se deben realizar los cambios siguientes:  
+Para exponer las aplicaciones UAP a través de SoftAP, deben realizarse los cambios siguientes desde la consola en el dispositivo:  
 
 ```
 reg add hklm\system\currentcontrolset\services\mpssvc\parameters /v IoTInboundLoopbackPolicy /t REG_DWORD /d 1 
@@ -159,19 +159,19 @@ Reiniciar
 
 
 #### <a name="sensor-driver-conflict-in-pre-built-ffus"></a>Conflicto del controlador de sensor en FFU precompiladas 
-Hay un conflicto del controlador de sensor en las FFU proporcionadas. El marco del sensor remoto instala controladores para la brújula, magnetómetro, acelerómetro y giroscopio. Las API de UWP que proporcionan acceso a estos controladores desde una aplicación suponen que solo hay 1 instalado. Si va a desarrollar un controlador para un dispositivo adjuntado físicamente, el controlador remoto de las FFU que proporciona Microsoft entrará en conflicto.
+Hay un conflicto del controlador de sensor en las FFU proporcionadas. El marco del sensor remoto instala controladores para la brújula, el magnetómetro, el acelerómetro y el giroscopio. Las API de UWP que proporcionan acceso a estos controladores desde una aplicación suponen que solo hay uno instalado. Si va a desarrollar un controlador para un dispositivo adjuntado físicamente, el controlador remoto de las FFU que proporciona Microsoft entrará en conflicto.
 
-Solución: se puede quitar el controlador que causa el conflicto mediante la conexión al dispositivo a través de SSH o Powershell, y el uso de la herramienta devcon.exe para quitar el controlador de sensor remoto escribiendo "devcon.exe remove @"ROOT\REMOTESENSORDRIVER*". El controlador de sensor remoto no afecta a las FFU que crea el fabricante de equipo original.
+Solución: se puede quitar el controlador que causa el conflicto mediante la conexión al dispositivo a través de SSH o Powershell, y mediante el uso de la herramienta devcon.exe para quitar el controlador de sensor remoto (escriba "devcon.exe remove @”ROOT\REMOTESENSORDRIVER*"). El controlador de sensor remoto no afecta a las FFU que crea el fabricante de equipo original.
 
 
 #### <a name="default-administrator-user-name-and-password"></a>Nombre de usuario y contraseña predeterminados del administrador
-El nombre de usuario y la contraseña predeterminados del administrador están codificados de forma rígida en la imagen de Windows 10 IoT Core. Esto supone un riesgo de seguridad para el dispositivo y no debe exponerse a una conexión a Internet abierta hasta que se haya cambiado la contraseña.
+El nombre de usuario y la contraseña predeterminados del administrador están codificados de forma rígida en la imagen de Windows 10 IoT Core. Esto supone un riesgo de seguridad para el dispositivo y no debe exponerse a una conexión a Internet abierta hasta que se haya cambiado la contraseña.
 
 #### <a name="volume-controls"></a>Controles de volumen
-Los controles de volumen del hardware para micrófonos y altavoces USB que dependen del sistema de Windows para cambiar el volumen del sistema no son compatibles con Windows 10 IoT Core. 
+Los controles de volumen del hardware para micrófonos y altavoces USB que dependen del sistema de Windows para cambiar el volumen del sistema no son compatibles actualmente con Windows 10 IoT Core. 
 
 #### <a name="usb-keyboards"></a>Teclados USB  
-Es posible que algunos teclados y ratones USB no funcionen en IoT Core. Use otro teclado o ratón. Encontrará una lista de dispositivos periféricos validados en [esta documentación](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/hardwarecompatlist).
+Es posible que algún teclado y mouse USB no funcionen en IoT Core. Use otro teclado o mouse. Encontrará una lista de dispositivos periféricos validados en [esta documentación](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/hardwarecompatlist).
 
 
 #### <a name="screen-orientation"></a>Orientación de la pantalla
@@ -187,16 +187,16 @@ El intento de agregar referencias a proyectos de adaptador AllJoyn puede produci
 
 
 #### <a name="non-default-drive-mode"></a>Modo de unidad no predeterminado
-En Raspberry Pi y DragonBoard, el cambio de un modo de unidad no predeterminado a otro diferente puede producir un problema en la patilla GPIO. Solución alternativa: establezca el modo de la unidad una vez al comienzo de la aplicación.
+En Raspberry Pi y DragonBoard, el cambio de un modo de unidad no predeterminado a otro puede producir un problema en la patilla GPIO. Solución alternativa: establezca el modo de la unidad una vez al comienzo de la aplicación.
 
 #### <a name="application-already-running"></a>Aplicación en ejecución
-La aplicación de inicio predeterminada podría entrar en conflicto consigo misma cuando también se implementa desde Visual Studio. Solución alternativa: cambie la aplicación de inicio predeterminada a otra aplicación distinta que la que quiere implementar. 
+La aplicación de inicio predeterminada podría entrar en conflicto consigo misma cuando también se implementa desde Visual Studio. Solución alternativa: cambie la aplicación de inicio predeterminada a otra aplicación distinta de la que quiere implementar. 
 
 #### <a name="backgroundmediaplayermessagereceivedfromforeground-may-crash"></a>Puede que se bloquee la línea de código BackgroundMediaPlayer.MessageReceivedFromForeground
-La línea de código siguiente podría bloquearse: "BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;". Para evitar el bloqueo, agregue este código para que se ejecute primero "var player = BackgroundMediaPlayer.Current;". 
+La línea de código siguiente podría bloquearse: "BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;". Para evitar el bloqueo, agregue este código para que se ejecute primero: "var player = BackgroundMediaPlayer.Current;". 
 
 #### <a name="azure-active-directory-authentication-support"></a>Compatibilidad con la autenticación de Azure Active Directory
-La biblioteca de autenticación de Azure Active Directory no funciona en Windows 10 IoT Core.  
+La biblioteca de autenticación de Azure Active Directory no funciona en Windows 10 IoT Core.  
 
 #### <a name="shell-management-of-application-crashes"></a>Administración del shell de los bloqueos de la aplicación
 La infraestructura del shell de IoT Core supervisa las aplicaciones de tipo APPX que se ejecutan en el dispositivo en busca de bloqueos y, cuando estos se producen, reinicia esas aplicaciones.  Si los bloqueos continúan en las aplicaciones reiniciadas, el shell empleará un __failfast, es decir, un proceso crítico del sistema que provoca una comprobación de errores y un reinicio en un intento de recuperación.  Se usan una lógica y un control comparables para las tareas en segundo plano y las aplicaciones de primer plano en una configuración con cabezal.   A continuación se muestra la lógica de reintento y el control de bloqueo:
@@ -229,7 +229,7 @@ Espere el retraso y reinicie la aplicación.
 
 
 #### <a name="time-synchronization"></a>Sincronización de la hora  
-Si se producen errores en la sincronización de la hora o se agota el tiempo de espera, puede deberse a un servidor horario distante o inaccesible. Se puede hacer lo siguiente para agregar servidores de hora locales o adicionales. 
+Si se producen errores en la sincronización de la hora o se agota el tiempo de espera, puede deberse a un servidor horario lejano o inaccesible. Se puede hacer lo siguiente para agregar servidores de hora locales o adicionales. 
 
 1) Desde una línea de comandos en el dispositivo (por ejemplo, SSH, Powershell) w32tm /config /syncfromflags:manual /manualpeerlist:"0.windows.time.com 1.pool.ntp.org 2.something else, ..." 
 
@@ -239,7 +239,7 @@ Si se producen errores en la sincronización de la hora o se agota el tiempo de 
 
 
 ### <a name="starting-the-ftp-server"></a>Inicio del servidor FTP 
-El servidor FTP ya no se ejecuta de manera predeterminada al inicio 
+El servidor FTP ya no se ejecuta de manera predeterminada al inicio. 
 
 Para ejecutarlo una vez: Inicie sesión con SSH o PS, y ejecute este comando para iniciar el FTP:  
 ```
