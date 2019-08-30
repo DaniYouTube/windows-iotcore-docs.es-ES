@@ -4,22 +4,22 @@ author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Obtenga información sobre cómo comenzar e instalar actualizaciones para Cortana en Windows IoT Core.
-keywords: Windows iot, Cortana, voz, AI, el asistente digital, el lenguaje
+description: Obtenga información sobre cómo empezar e instalar actualizaciones de Cortana en Windows IoT Core.
+keywords: Windows IOT, Cortana, voz, AI, asistente digital, idioma
 ms.openlocfilehash: c18534a532b0588b54f377acf1092d6916e8a673
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60170513"
 ---
-# <a name="cortana-on-iot-core"></a><span data-ttu-id="effe8-104">Cortana en IoT Core</span><span class="sxs-lookup"><span data-stu-id="effe8-104">Cortana on IoT Core</span></span>
+# <a name="cortana-on-iot-core"></a><span data-ttu-id="66904-104">Cortana en IoT Core</span><span class="sxs-lookup"><span data-stu-id="66904-104">Cortana on IoT Core</span></span>
 
-<span data-ttu-id="effe8-105">Cortana es un asistente personal digital funciona en todos los dispositivos que le ayudarán a su vida diaria.</span><span class="sxs-lookup"><span data-stu-id="effe8-105">Cortana is a personal digital assistant working across all your devices to help you in your daily life.</span></span> <span data-ttu-id="effe8-106">Aprende acerca de usted; le ayuda a realizar su trabajo al completar tareas; interactúa con usted con lenguaje natural de una manera coherente y contextual; y siempre tiene un aspecto horizontal para usted.</span><span class="sxs-lookup"><span data-stu-id="effe8-106">She learns about you; helps you get things done by completing tasks; interacts with you using natural language in a consistent, contextual way; and always looks out for you.</span></span> <span data-ttu-id="effe8-107">Cortana tiene una identidad visual coherente, personalidad y voz.</span><span class="sxs-lookup"><span data-stu-id="effe8-107">Cortana has a consistent visual identity, personality, and voice.</span></span>
+<span data-ttu-id="66904-105">Cortana es un asistente digital personal que trabaja en todos sus dispositivos para ayudarle en su vida diaria.</span><span class="sxs-lookup"><span data-stu-id="66904-105">Cortana is a personal digital assistant working across all your devices to help you in your daily life.</span></span> <span data-ttu-id="66904-106">Ella aprende sobre usted; le ayuda a hacer todo lo posible mediante la realización de tareas; interactúa con usted mediante lenguaje natural de una manera coherente y contextual; y siempre le parece.</span><span class="sxs-lookup"><span data-stu-id="66904-106">She learns about you; helps you get things done by completing tasks; interacts with you using natural language in a consistent, contextual way; and always looks out for you.</span></span> <span data-ttu-id="66904-107">Cortana tiene una identidad visual, personalidad y voz coherentes.</span><span class="sxs-lookup"><span data-stu-id="66904-107">Cortana has a consistent visual identity, personality, and voice.</span></span>
 
-<span data-ttu-id="effe8-108">Para habilitar la asistencia inteligente manos libres en el dispositivo con el SDK de dispositivo de Cortana, visite [el centro de desarrollo de Cortana](http://www.aka.ms/cortanadevices).</span><span class="sxs-lookup"><span data-stu-id="effe8-108">To enable hands-free intelligent assistance in your device with the Cortana Device SDK, please visit [The Cortana Dev Center](http://www.aka.ms/cortanadevices).</span></span>
+<span data-ttu-id="66904-108">Para habilitar la asistencia inteligente gratuita en el dispositivo con el SDK de dispositivo de Cortana, visite [el centro de desarrollo](http://www.aka.ms/cortanadevices)de Cortana.</span><span class="sxs-lookup"><span data-stu-id="66904-108">To enable hands-free intelligent assistance in your device with the Cortana Device SDK, please visit [The Cortana Dev Center](http://www.aka.ms/cortanadevices).</span></span>
 
-<span data-ttu-id="effe8-109">Cortana en IoT Core se centrará en los escenarios comerciales en el futuro.</span><span class="sxs-lookup"><span data-stu-id="effe8-109">Cortana on IoT Core will focus on commercial scenarios in the future.</span></span> <span data-ttu-id="effe8-110">Las actualizaciones se iniciará en breve.</span><span class="sxs-lookup"><span data-stu-id="effe8-110">Updates will come soon.</span></span> 
+<span data-ttu-id="66904-109">Cortana en IoT Core se centrará en escenarios comerciales en el futuro.</span><span class="sxs-lookup"><span data-stu-id="66904-109">Cortana on IoT Core will focus on commercial scenarios in the future.</span></span> <span data-ttu-id="66904-110">Pronto habrá actualizaciones.</span><span class="sxs-lookup"><span data-stu-id="66904-110">Updates will come soon.</span></span> 
 
 <!--
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Cortana-on-Windows-10-IoT-Core/player]

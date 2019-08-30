@@ -1,20 +1,20 @@
 ---
-title: Certificados y flujo de seguridad
+title: Flujo de seguridad y certificados
 author: jchen
 ms.author: jchen
 ms.date: 04/29/2018
 ms.topic: article
-description: Obtenga información sobre el flujo de seguridad y los certificados usados en la protección de Windows 10 IoT Core
-keywords: Windows iot, arranque seguro, BitLocker, protección de dispositivos, seguridad, seguridad de llave en mano
+description: Conozca el flujo de seguridad y los certificados usados en la protección de Windows 10 IoT Core
+keywords: Windows IOT, arranque seguro, BitLocker, Device Guard, seguridad, seguridad llave en mano
 ms.openlocfilehash: 563bf8641b94f194d52cadfdbae581ef502ebbfd
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60167481"
 ---
-# <a name="security-flow-and-certificates-used-in-securing-windows-10-iot-core"></a><span data-ttu-id="9118e-104">Flujo de seguridad y certificados se usan en la protección de Windows 10 IoT Core</span><span class="sxs-lookup"><span data-stu-id="9118e-104">Security Flow and Certificates used in Securing Windows 10 IoT Core</span></span>
+# <a name="security-flow-and-certificates-used-in-securing-windows-10-iot-core"></a><span data-ttu-id="7715f-104">Flujo de seguridad y certificados usados en la protección de Windows 10 IoT Core</span><span class="sxs-lookup"><span data-stu-id="7715f-104">Security Flow and Certificates used in Securing Windows 10 IoT Core</span></span>
 
-<span data-ttu-id="9118e-105">Windows</span><span class="sxs-lookup"><span data-stu-id="9118e-105">Windows</span></span> 
+<span data-ttu-id="7715f-105">Windows</span><span class="sxs-lookup"><span data-stu-id="7715f-105">Windows</span></span> 
 
-- ![securityflow.jpg](../media/SecurityFlowAndCertificates/securityflow.jpg)
+- ![securityflow. jpg](../media/SecurityFlowAndCertificates/securityflow.jpg)

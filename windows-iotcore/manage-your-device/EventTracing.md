@@ -4,42 +4,42 @@ author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Obtenga información sobre cómo utilizar el seguimiento de eventos para escribir los eventos y consumir eventos de Windows IoT Core.
-keywords: Windows iot, seguimiento de eventos de seguimiento, ETW, event para dispositivos windows
+description: Aprenda a usar el seguimiento de eventos para escribir eventos y consumir eventos para Windows IoT Core.
+keywords: Windows IOT, seguimiento de eventos, ETW, seguimiento de eventos para Windows, dispositivos
 ms.openlocfilehash: 7e01681e2af2ed8913614ba23bd12dfd36bcd76e
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59515192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60170313"
 ---
-# <a name="event-tracing-for-windows-iot-core"></a><span data-ttu-id="1db7b-104">Seguimiento de eventos para Windows IoT Core</span><span class="sxs-lookup"><span data-stu-id="1db7b-104">Event Tracing for Windows IoT Core</span></span>
+# <a name="event-tracing-for-windows-iot-core"></a><span data-ttu-id="31b0e-104">Seguimiento de eventos para Windows IoT Core</span><span class="sxs-lookup"><span data-stu-id="31b0e-104">Event Tracing for Windows IoT Core</span></span>
 
-<span data-ttu-id="1db7b-105">Seguimiento de eventos para Windows (ETW) proporciona a los desarrolladores la capacidad de iniciar y detener las sesiones de seguimiento de eventos, instrumentar una aplicación para proporcionar eventos de seguimiento y consumir eventos de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="1db7b-105">Event Tracing for Windows (ETW) provides developers the ability to start and stop event tracing sessions, instrument an application to provide trace events, and consume trace events.</span></span>
-<span data-ttu-id="1db7b-106">ETW en dispositivos de Windows IoT Core admite eventos basada en manifiestos y clásicos y no es diferente a otros dispositivos Windows 10.</span><span class="sxs-lookup"><span data-stu-id="1db7b-106">ETW on Windows IoT Core devices supports both manifest-based and classic events, and is no different than other Windows 10 devices.</span></span>
+<span data-ttu-id="31b0e-105">Seguimiento de eventos para Windows (ETW) proporciona a los desarrolladores la capacidad de iniciar y detener sesiones de seguimiento de eventos, instrumentar una aplicación para proporcionar eventos de seguimiento y consumir eventos de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="31b0e-105">Event Tracing for Windows (ETW) provides developers the ability to start and stop event tracing sessions, instrument an application to provide trace events, and consume trace events.</span></span>
+<span data-ttu-id="31b0e-106">ETW en dispositivos Windows IoT Core es compatible con eventos clásicos y basados en manifiestos, y no es diferente de otros dispositivos Windows 10.</span><span class="sxs-lookup"><span data-stu-id="31b0e-106">ETW on Windows IoT Core devices supports both manifest-based and classic events, and is no different than other Windows 10 devices.</span></span>
 
-<span data-ttu-id="1db7b-107">Esta sección proporciona vínculos útiles sobre los conceptos básicos de escritura y consumo de eventos.</span><span class="sxs-lookup"><span data-stu-id="1db7b-107">This section will provide useful links on the basics of writing and consuming events.</span></span> <span data-ttu-id="1db7b-108">Buscar la información más detallada de la [página seguimiento de eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="1db7b-108">Find more detailed information from the [Windows Event Tracing page](https://msdn.microsoft.com/library/windows/desktop/bb968803(v=vs.85).aspx).</span></span>
+<span data-ttu-id="31b0e-107">En esta sección se proporcionan vínculos útiles sobre los aspectos básicos de la escritura y el consumo de eventos.</span><span class="sxs-lookup"><span data-stu-id="31b0e-107">This section will provide useful links on the basics of writing and consuming events.</span></span> <span data-ttu-id="31b0e-108">Busque información más detallada en la [Página de seguimiento de eventos de Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="31b0e-108">Find more detailed information from the [Windows Event Tracing page](https://msdn.microsoft.com/library/windows/desktop/bb968803(v=vs.85).aspx).</span></span>
 
-## <a name="writing-events"></a><span data-ttu-id="1db7b-109">Eventos de escritura</span><span class="sxs-lookup"><span data-stu-id="1db7b-109">Writing Events</span></span>
+## <a name="writing-events"></a><span data-ttu-id="31b0e-109">Escribir eventos</span><span class="sxs-lookup"><span data-stu-id="31b0e-109">Writing Events</span></span>
 
-<span data-ttu-id="1db7b-110">Buscar una UWP de ejemplo que implementa los distintos métodos de escritura de eventos como parte de la [Github de Windows Universal Samples](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Logging).</span><span class="sxs-lookup"><span data-stu-id="1db7b-110">Find a UWP sample that implements the different methods of writing events as part of the [Windows Universal Samples Github](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Logging).</span></span>
-<span data-ttu-id="1db7b-111">Esto se ejecutará en dispositivos de Windows IoT Core y también es una referencia de código de gran calidad.</span><span class="sxs-lookup"><span data-stu-id="1db7b-111">This will run on Windows IoT Core devices and is also a great code reference.</span></span>
+<span data-ttu-id="31b0e-110">Busque un ejemplo de UWP que implemente los distintos métodos para escribir eventos como parte de los [ejemplos de Windows universal de github](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Logging).</span><span class="sxs-lookup"><span data-stu-id="31b0e-110">Find a UWP sample that implements the different methods of writing events as part of the [Windows Universal Samples Github](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Logging).</span></span>
+<span data-ttu-id="31b0e-111">Esto se ejecutará en dispositivos Windows IoT Core y también es una excelente referencia de código.</span><span class="sxs-lookup"><span data-stu-id="31b0e-111">This will run on Windows IoT Core devices and is also a great code reference.</span></span>
 
-<span data-ttu-id="1db7b-112">Guía detallada sobre la escritura de eventos y obtener el GUID puede encontrarse [aquí](https://msdn.microsoft.com/library/windows/desktop/aa364161(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="1db7b-112">Detailed guide on writing events and obtaining GUIDs can be found [here](https://msdn.microsoft.com/library/windows/desktop/aa364161(v=vs.85).aspx).</span></span>
+<span data-ttu-id="31b0e-112">Puede encontrar una guía detallada sobre la escritura de eventos y la obtención de GUID [aquí](https://msdn.microsoft.com/library/windows/desktop/aa364161(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="31b0e-112">Detailed guide on writing events and obtaining GUIDs can be found [here](https://msdn.microsoft.com/library/windows/desktop/aa364161(v=vs.85).aspx).</span></span>
 
-## <a name="consuming-events"></a><span data-ttu-id="1db7b-113">Consumo de eventos</span><span class="sxs-lookup"><span data-stu-id="1db7b-113">Consuming Events</span></span>
+## <a name="consuming-events"></a><span data-ttu-id="31b0e-113">Consumir eventos</span><span class="sxs-lookup"><span data-stu-id="31b0e-113">Consuming Events</span></span>
 
-<span data-ttu-id="1db7b-114">Los eventos se guardan en un archivo ETL o capturados en tiempo real.</span><span class="sxs-lookup"><span data-stu-id="1db7b-114">Events are either saved to an ETL file or captured in real-time.</span></span>
-<span data-ttu-id="1db7b-115">Use [FTP](../connect-your-device/FTP.md) o [uso compartido de archivos de Windows](../manage-your-device/WindowsFileSharing.md) para recuperar los archivos ETL de dispositivos de Windows IoT Core.</span><span class="sxs-lookup"><span data-stu-id="1db7b-115">Use [FTP](../connect-your-device/FTP.md) or [Windows File Sharing](../manage-your-device/WindowsFileSharing.md) to retrieve ETL files from Windows IoT Core devices.</span></span>
+<span data-ttu-id="31b0e-114">Los eventos se guardan en un archivo ETL o se capturan en tiempo real.</span><span class="sxs-lookup"><span data-stu-id="31b0e-114">Events are either saved to an ETL file or captured in real-time.</span></span>
+<span data-ttu-id="31b0e-115">Use [FTP](../connect-your-device/FTP.md) o el [uso compartido de archivos de Windows](../manage-your-device/WindowsFileSharing.md) para recuperar archivos ETL desde dispositivos Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="31b0e-115">Use [FTP](../connect-your-device/FTP.md) or [Windows File Sharing](../manage-your-device/WindowsFileSharing.md) to retrieve ETL files from Windows IoT Core devices.</span></span>
 
-## <a name="use-tools-in-windows-assessment-and-deployment-kit"></a><span data-ttu-id="1db7b-116">Usar herramientas en Windows Assessment and Deployment Kit</span><span class="sxs-lookup"><span data-stu-id="1db7b-116">Use Tools in Windows Assessment and Deployment Kit</span></span>
+## <a name="use-tools-in-windows-assessment-and-deployment-kit"></a><span data-ttu-id="31b0e-116">Usar herramientas en Windows Assessment and Deployment Kit</span><span class="sxs-lookup"><span data-stu-id="31b0e-116">Use Tools in Windows Assessment and Deployment Kit</span></span>
 
-<span data-ttu-id="1db7b-117">Windows Assessment and Deployment Kit incluye 3 herramientas para ayudar a capturar y analizar eventos.</span><span class="sxs-lookup"><span data-stu-id="1db7b-117">Windows Assessment and Deployment Kit includes 3 tools to help capture and analyze events.</span></span> [<span data-ttu-id="1db7b-118">Haga clic aquí para descargar</span><span class="sxs-lookup"><span data-stu-id="1db7b-118">Click here to download</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=526740)
+<span data-ttu-id="31b0e-117">Windows Assessment and Deployment Kit incluye 3 herramientas para ayudar a capturar y analizar eventos.</span><span class="sxs-lookup"><span data-stu-id="31b0e-117">Windows Assessment and Deployment Kit includes 3 tools to help capture and analyze events.</span></span> [<span data-ttu-id="31b0e-118">Haga clic aquí para descargar</span><span class="sxs-lookup"><span data-stu-id="31b0e-118">Click here to download</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=526740)
 
 
-1. <span data-ttu-id="1db7b-119">**Windows Performance Analyzer** visualiza los archivos ETL en escritorio, con una guía paso a paso [aquí](https://msdn.microsoft.com/library/windows/hardware/dn927319(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="1db7b-119">**Windows Performance Analyzer** visualizes ETL files on desktop, with a step by step guide [here](https://msdn.microsoft.com/library/windows/hardware/dn927319(v=vs.85).aspx).</span></span>
+1. <span data-ttu-id="31b0e-119">El **analizador de rendimiento de Windows** visualiza archivos ETL en el escritorio, con una guía paso a paso [aquí](https://msdn.microsoft.com/library/windows/hardware/dn927319(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="31b0e-119">**Windows Performance Analyzer** visualizes ETL files on desktop, with a step by step guide [here](https://msdn.microsoft.com/library/windows/hardware/dn927319(v=vs.85).aspx).</span></span>
 
-2. <span data-ttu-id="1db7b-120">**Herramienta de línea de comandos Xperf** captura los eventos en tiempo real y los escribe en un archivo ETL.</span><span class="sxs-lookup"><span data-stu-id="1db7b-120">**Xperf command line tool** captures real-time events and writes them to an ETL file.</span></span> <span data-ttu-id="1db7b-121">Esta herramienta ya está instalada en los dispositivos de Windows IoT Core, simplemente ejecute los siguientes comandos en los dispositivos:</span><span class="sxs-lookup"><span data-stu-id="1db7b-121">This tool is already installed on Windows IoT Core devices, just run the following commands on the devices:</span></span>
+2. <span data-ttu-id="31b0e-120">La **herramienta de línea de comandos Xperf** captura eventos en tiempo real y los escribe en un archivo ETL.</span><span class="sxs-lookup"><span data-stu-id="31b0e-120">**Xperf command line tool** captures real-time events and writes them to an ETL file.</span></span> <span data-ttu-id="31b0e-121">Esta herramienta ya está instalada en los dispositivos Windows IoT Core, solo tiene que ejecutar los siguientes comandos en los dispositivos:</span><span class="sxs-lookup"><span data-stu-id="31b0e-121">This tool is already installed on Windows IoT Core devices, just run the following commands on the devices:</span></span>
 
         // Start capturing events from specific GUID and save them to an ETL file
         xperf -start <Session Name> -f <ETL File> -on <GUID>
@@ -48,20 +48,20 @@ ms.locfileid: "59515192"
         xperf -stop <Session Name>
 
 
-3. <span data-ttu-id="1db7b-122">**Herramienta de línea de comandos tracerpt** convierte los archivos ETL en archivos xml.</span><span class="sxs-lookup"><span data-stu-id="1db7b-122">**Tracerpt command line tool** converts ETL files into xml files.</span></span>
+3. <span data-ttu-id="31b0e-122">**Tracerpt la herramienta de línea de comandos** convierte los archivos ETL en archivos XML.</span><span class="sxs-lookup"><span data-stu-id="31b0e-122">**Tracerpt command line tool** converts ETL files into xml files.</span></span>
 
         // Generate dumpfile.xml from ETL file
         tracerpt <ETL File>
 
 
-## <a name="use-device-portal"></a><span data-ttu-id="1db7b-123">Use el Portal de dispositivo</span><span class="sxs-lookup"><span data-stu-id="1db7b-123">Use Device Portal</span></span>
+## <a name="use-device-portal"></a><span data-ttu-id="31b0e-123">Uso del portal de dispositivos</span><span class="sxs-lookup"><span data-stu-id="31b0e-123">Use Device Portal</span></span>
 
-<span data-ttu-id="1db7b-124">Portal de dispositivos puede capturar los eventos en tiempo real, con instrucciones [aquí](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal).</span><span class="sxs-lookup"><span data-stu-id="1db7b-124">Device portal can capture events in real-time, with instructions [here](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal).</span></span>
+<span data-ttu-id="31b0e-124">El portal de dispositivos puede capturar eventos en tiempo real, con instrucciones [aquí](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal).</span><span class="sxs-lookup"><span data-stu-id="31b0e-124">Device portal can capture events in real-time, with instructions [here](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1db7b-125">Este método no genera un archivo ETL para su posterior análisis, pero requiere una configuración mínima.</span><span class="sxs-lookup"><span data-stu-id="1db7b-125">This method does not produce an ETL file for further analysis, but requires minimal setup.</span></span>
+> <span data-ttu-id="31b0e-125">Este método no genera un archivo ETL para su posterior análisis, pero requiere una configuración mínima.</span><span class="sxs-lookup"><span data-stu-id="31b0e-125">This method does not produce an ETL file for further analysis, but requires minimal setup.</span></span>
 
-## <a name="use-function-calls"></a><span data-ttu-id="1db7b-126">Usar llamadas de función</span><span class="sxs-lookup"><span data-stu-id="1db7b-126">Use Function Calls</span></span>
+## <a name="use-function-calls"></a><span data-ttu-id="31b0e-126">Usar llamadas a función</span><span class="sxs-lookup"><span data-stu-id="31b0e-126">Use Function Calls</span></span>
 
-<span data-ttu-id="1db7b-127">Habilita una aplicación para consumir eventos desde un archivo ETL o en tiempo real mediante llamadas a la función.</span><span class="sxs-lookup"><span data-stu-id="1db7b-127">Enable an application to consume events from an ETL file or in real-time using function calls.</span></span>
-<span data-ttu-id="1db7b-128">Aprenda a usar estas funciones [aquí](https://msdn.microsoft.com/library/windows/desktop/aa363692(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="1db7b-128">Learn how to use these functions [here](https://msdn.microsoft.com/library/windows/desktop/aa363692(v=vs.85).aspx).</span></span>
+<span data-ttu-id="31b0e-127">Permite que una aplicación consuma eventos de un archivo ETL o en tiempo real mediante llamadas a funciones.</span><span class="sxs-lookup"><span data-stu-id="31b0e-127">Enable an application to consume events from an ETL file or in real-time using function calls.</span></span>
+<span data-ttu-id="31b0e-128">Aprenda a usar estas funciones [aquí](https://msdn.microsoft.com/library/windows/desktop/aa363692(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="31b0e-128">Learn how to use these functions [here](https://msdn.microsoft.com/library/windows/desktop/aa363692(v=vs.85).aspx).</span></span>

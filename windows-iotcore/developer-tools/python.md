@@ -8,7 +8,7 @@ description: Aprende a instalar Python en un dispositivo ejecutando WindowsÂ 10Â
 keywords: windows iot, python
 ms.openlocfilehash: 26063863e5fdf7539e3159d4a4809bab3a38fb71
 ms.sourcegitcommit: 4272081b5186dada1e61974193e41fcc1c42a1b9
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69629380"
