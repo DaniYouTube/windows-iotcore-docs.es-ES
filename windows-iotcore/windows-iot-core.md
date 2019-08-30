@@ -6,12 +6,12 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información sobre qué es Windows 10 IoT Core y lo que puede hacer con él.
 keywords: Windows 10 IoT Core, superficie pequeña, equipo sin periféricos
-ms.openlocfilehash: 602aeb62ecc0bb2dd08118775aaf41c3ee61184b
-ms.sourcegitcommit: c5552007f5456e57512307f51b146406a23fa723
+ms.openlocfilehash: a1f2ce0835dcb40efc71f2b4d0d4733b781b0799
+ms.sourcegitcommit: 823a8f6967f74d71d5c61fe90f6b63ba79483479
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739794"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159286"
 ---
 # <a name="an-overview-of-windows-10-iot-core"></a>Información general de Windows 10 IoT Core
 
@@ -27,13 +27,10 @@ Si está listo para pasar al siguiente nivel y empezar a comercializar la soluci
 
 Antes de intentar fabricar un dispositivo, primero es recomendable probar y diseñar un prototipo de un dispositivo con Windows 10 IoT Core. De este modo, puede comprender las características que va a necesitar y las configuraciones que le interesarán cuando llegue el momento de la fabricación.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
+<table>  
+<colgroup> <col width="50%" /> <col width="50%" /> </colgroup>  
+<thead>  
+<tr class="header">  
 <th align="left">Tema</th>
 <th align="left">Descripción</th>
 </tr>
