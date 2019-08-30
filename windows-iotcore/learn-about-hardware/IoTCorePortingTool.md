@@ -4,35 +4,35 @@ author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Obtenga información sobre cómo usar la herramienta de migración de Windows 10 IoT Core API para calcular los costos de migración.
-keywords: Windows iot, API de migración de la herramienta, la portabilidad de API, los archivos binarios
+description: Aprenda a usar la herramienta de migración de la API de IoT Core de Windows 10 para calcular los costos de portabilidad.
+keywords: Windows IOT, herramienta de portabilidad de API, portabilidad de API, binarios
 ms.openlocfilehash: 56ca0d57752f000bf9e908fd32f514c3ae3264e5
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60169633"
 ---
 # <a name="windows-10-iot-core-api-porting-tool"></a>Herramienta de migración de Windows 10 IoT Core API
 
-Windows 10 IoT Core solo admite un subconjunto de la de Win32 y .net área expuesta de API disponible en diferentes versiones anteriores de Windows. Esta herramienta examinará los archivos binarios y le entregará un informe de las API que use estos archivos binarios que no están disponibles y se ofrecen sugerencias para los reemplazos posibles. Esto se ambos ayudar a estimar el costo de un puerto de IoT Core así como ayudarle a lo largo de la forma.
+Windows 10 IoT Core solo admite un subconjunto del área expuesta de la API de Win32 y .net disponible en varias versiones anteriores de Windows. Esta herramienta examinará los archivos binarios y le proporcionará un informe de las API que usan estos archivos binarios que no están disponibles y ofrecen sugerencias para posibles reemplazos. Esto le ayudará a calcular el costo de un puerto a IoT Core, así como a ayudarle durante el proceso.
 
 
 ## <a name="usage"></a>Uso
 
-La herramienta de migración de Windows 10 IoT Core API puede encontrarse en el [ms: iot/iot-utilidades](https://github.com/ms-iot/iot-utilities) repositorio de github.  Descargue el [zip del repositorio](https://github.com/ms-iot/iot-utilities/archive/master.zip) y copie la carpeta IoTAPIPortingTool en el equipo local.  Abra **IoTAPIPortingTool.sln** en Visual Studio 2017 y compile el proyecto.  Esto generará `IotAPIPortingTool.exe`.
+La herramienta de portabilidad de la API de IoT Core de Windows 10 se puede encontrar en el repositorio de github [MS-IOT/IOT-Utilities](https://github.com/ms-iot/iot-utilities) .  Descargue el archivo [zip del repositorio](https://github.com/ms-iot/iot-utilities/archive/master.zip) y copie la carpeta IoTAPIPortingTool en el equipo local.  Abra **IoTAPIPortingTool. sln** en Visual Studio 2017 y compile el proyecto.  Se generará `IotAPIPortingTool.exe`.
 
-Puede usar la herramienta mediante la ejecución de `IoTAPIPortingTool.exe <Application path> [-os]`.
+Puede usar la herramienta ejecutando `IoTAPIPortingTool.exe <Application path> [-os]`.
 
-*  `<Application path>` exe de la aplicación que se usa la herramienta de migración para
+*  `<Application path>`exe de la aplicación para la que se usa la herramienta de migración
 
-*  `-os` debe especificarse si no planea usar UWP.  De forma predeterminada, la herramienta valida los archivos binarios en la plataforma UWP de Windows.
+*  `-os`debe especificarse si no tiene previsto usar UWP.  De forma predeterminada, la herramienta valida los archivos binarios con la plataforma UWP de Windows.
 
 > [!NOTE] 
-> IoTAPIPortingTool.exe se debe ejecutar desde un símbolo del sistema de Visual Studio para desarrolladores. Necesita navegar hasta la carpeta que contiene el IotAPIPortingTool.exe. 
+> IoTAPIPortingTool. exe se debe ejecutar desde un Símbolo del sistema para desarrolladores de Visual Studio. Debe navegar hasta la carpeta que contiene IotAPIPortingTool. exe. 
 
         Sample command: C:\IoTAPIPortingTool\bin\Debug>IoTAPIPortingTool.exe C:\Sample\Sample.exe -os 
 
 ## <a name="output"></a>Salida
 
-La herramienta generará un archivo de archivo (csv) de valores separados por comas en la misma carpeta que contiene el `IotAPIPortingTool.exe`. El archivo se denomina `IoTAPIPortingTool.csv` (o bien, `IoTAPIPortingToolOS.csv` si se especifica - sistema operativo) y será un resumen en la línea de comandos. Abra el `.csv` archivo en Excel para analizar la salida completa.
+La herramienta generará un archivo de valores separados por comas (CSV) en la misma `IotAPIPortingTool.exe`carpeta que contiene el. El archivo se denomina `IoTAPIPortingTool.csv` (o, `IoTAPIPortingToolOS.csv` si se especifica-os) y se mostrará un resumen en la línea de comandos. Abra el `.csv` archivo en Excel para analizar la salida completa.

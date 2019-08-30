@@ -1,111 +1,111 @@
 ---
-title: Puente de sistema de dispositivo Alljoyn - Guía de la API
+title: 'Puente de sistema de dispositivos Alljoyn: Guía de API'
 author: saraclay
 ms.author: saclayt
 ms.date: 09/06/17
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
-description: Obtenga información sobre cómo asignar objetos de la interfaz de puente para AllJoyn con un IAdapter, que representa el controlador para un sistema de uno o varios dispositivos que se asignan al bus AllJoyn.
-keywords: Windows iot, AllJoyn
+description: Obtenga información sobre cómo asignar objetos de interfaz de puente a AllJoyn mediante IAdapter, que representa el controlador de un sistema de uno o más dispositivos que se asignan al bus AllJoyn.
+keywords: Windows IOT, AllJoyn
 ms.openlocfilehash: 7c928ee0359ba705a4255d309339c48aa8d000a4
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59515077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60169013"
 ---
 > [!NOTE]
-> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, abra una incidencia en GitHub o enviarnos sus comentarios en los comentarios a continuación.
+> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, abra un problema en GitHub o envíenos sus comentarios en los comentarios siguientes.
 
-# <a name="mapping-bridge-interface-objects-to-alljoyn"></a>Objetos de interfaz de puente de asignación para AllJoyn
+# <a name="mapping-bridge-interface-objects-to-alljoyn"></a>Asignación de objetos de interfaz de puente a AllJoyn
 
-### <a name="i-iadapter"></a>I. IAdapter
+### <a name="i-iadapter"></a>CONFIGUR. IAdapter
 
-Desde la perspectiva del puente, un IAdapter representa el controlador para un sistema de uno o varios dispositivos que se asignan al bus AllJoyn.  IAdapter declara las interfaces necesarias para compatibilidad con enumeración de dispositivos, configuración general y administración del ciclo de vida.  También declara los métodos que interactúan con un dispositivo o propiedades de dispositivos, los métodos y las señales. 
+Desde la perspectiva del puente, IAdapter representa el controlador de un sistema de uno o más dispositivos que se asignan al bus AllJoyn.  IAdapter declara las interfaces necesarias para admitir la enumeración de dispositivos, la configuración general y la administración del ciclo de vida.  También declara métodos que interactúan con las propiedades, los métodos y las señales de un dispositivo o dispositivo. 
 
-Para exponer los dispositivos como un servicio de AllJoyn, es necesario implementar una clase concreta que se hereda de IAdapter.  Cómo se implementa cada interfaz depende de la naturaleza de los dispositivos que se va a adaptar para AllJoyn. 
+Para exponer los dispositivos como un servicio AllJoyn, es necesario implementar una clase concreta que herede de IAdapter.  La forma en que se implementa cada interfaz depende de la naturaleza de los dispositivos que se están adaptando a AllJoyn. 
 
-El adaptador aparecerá en el bus AllJoyn como un AllJoyn anuncia el servicio con el siguiente nombre: 
+El adaptador aparecerá en el bus AllJoyn como un servicio AllJoyn anunciado con el siguiente nombre: 
 
 ```
 <ExposedAdapterPrefix>.DeviceSystemBridge.<AdapterName> 
 ```
 
-Cada adaptador expone dos `com.microsoft.alljoynmanagement.config` interfaces esa configuración de puente y el adaptador de soporte técnico: 
+Cada adaptador expone dos `com.microsoft.alljoynmanagement.config` interfaces que admiten la configuración de puente y adaptador: 
 
 ```
 /AdapterConfig 
 
 /BusConfig
 ```
-La interfaz de IAdapter declara ciertas propiedades que deben implementarse.  En la tabla siguiente se describe las propiedades y cómo se asignan a AllJoyn:
+La interfaz IAdapter declara ciertas propiedades que se deben implementar.  En la tabla siguiente se describen esas propiedades y cómo se asignan a AllJoyn:
 
 >  Propiedad IAdapter | Descripción | Asignación de puente |
 > | :---------------- | :---------- | :------------- |
-> | AdapterName       | Modelo de este adaptador.  También es el sufijo utilizado para nombre anunciados de este adaptador. (Consulte ExposedAdapterPrefix). | AllJoyn sobre el número de modelo de datos |
-> | ExposedAdapterPrefix |Prefijo que se usa al crear el nombre de este puente anunciado en el bus de AllJoyn.  El adaptador se verá expuesto con el siguiente nombre: {ExposedAdapterPrefix}. DeviceSystemBridge. {AdapterName}. | Datos adjuntos de Bus AllJoyn anuncian nombre |
-> | ExposedApplciationGUID | Un GUID proporcionado por el adaptador, que identifica este adaptador.  Este GUID también se aplica a los datos para todos los dispositivos administrados por este adaptador.|AllJoyn sobre datos de Id. de aplicación para este adaptador y todos los dispositivos que están expuestos por este adaptador. |
-> | ExposedApplicationName | Un nombre descriptivo de aplicación expuestos por este adaptador.  Este nombre también se aplica a todos los dispositivos administrados por este adaptador. | AllJoyn sobre datos nombre de la aplicación para este adaptador y todos los dispositivos que están expuestos por este adaptador. |
-> | proveedor | Nombre del proveedor de este adaptador | AllJoyn sobre datos fabricante |
-> | Versión | Versión de software de este adaptador | AllJoyn acerca de la versión de SO de datos |
+> | AdapterName       | Modelo de este adaptador.  También es el sufijo utilizado para el nombre anunciado de este adaptador. (Consulte ExposedAdapterPrefix). | AllJoyn acerca del número de modelo de datos |
+> | ExposedAdapterPrefix |Prefijo que se usa al crear el nombre anunciado de este puente en el bus AllJoyn.  El adaptador se expondrá con el siguiente nombre: {ExposedAdapterPrefix}. DeviceSystemBridge. {AdapterName}. | Nombre anunciado de datos adjuntos de bus AllJoyn |
+> | ExposedApplciationGUID | Un GUID, proporcionado por el adaptador, que identifica de forma única este adaptador.  Este GUID también se aplica a la información acerca de los datos de todos los dispositivos administrados por este adaptador.|AllJoyn acerca del ID. de la aplicación de datos para este adaptador y todos los dispositivos expuestos por este adaptador. |
+> | ExposedApplicationName | Nombre descriptivo de la aplicación expuesto por este adaptador.  Este nombre también se aplica a todos los dispositivos administrados por este adaptador. | AllJoyn acerca del nombre de la aplicación de datos para este adaptador y todos los dispositivos expuestos por este adaptador. |
+> | Proveedor | Nombre del proveedor de este adaptador | AllJoyn acerca del fabricante de datos |
+> | `Version` | Versión de software de este adaptador | AllJoyn acerca de la versión de Data SW |
 
-#### <a name="iadapterinitialize"></a>IAdapter::Initialize
+#### <a name="iadapterinitialize"></a>IAdapter:: Initialize
 
-Inicializa el adaptador. Esto se puede usar igualmente necesita.  Por ejemplo, se pudo iniciar un subproceso en segundo plano para iniciar la detección de dispositivos.  Normalmente, esto se utiliza para crear una inserción de dispositivo y las señales de eliminación del dispositivo. 
+Inicializa el adaptador. Se puede usar de todos modos.  Por ejemplo, se puede iniciar un subproceso en segundo plano para iniciar la detección de dispositivos.  Normalmente, también se usa para crear una inserción de dispositivo y señales de eliminación de dispositivos. 
 
-#### <a name="iadaptergetsetconfig"></a>IAdapter::Get/SetConfig
+#### <a name="iadaptergetsetconfig"></a>IAdapter:: get/SetConfig
 
-Este par de métodos se usan para tener acceso a datos de configuración de su adaptador.  Por lo general, constan de estas opciones de configuración de comunicación que el adaptador necesita para la enumeración de dispositivos, pero no se limitan a ese fin.  
+Este par de métodos se utiliza para tener acceso a los datos de configuración del adaptador.  Normalmente, estas opciones de configuración se componen de la configuración de comunicación que necesita el adaptador para la enumeración de dispositivos, pero no se limitan a ese propósito.  
 
-El puente expone los datos de configuración del adaptador para AllJoyn a través de la interfaz "com.microsoft.alljoynmanagement.config".  Desde la perspectiva del puente, los valores de datos de configuración de adaptador son completamente arbitrarios y se intercambian con el adaptador como una matriz de bytes simple.  Internamente, el adaptador, puede almacenar esta configuración según sea necesario.   
+El puente expone los datos de configuración del adaptador a AllJoyn a través de la interfaz "com. Microsoft. alljoynmanagement. config".  Desde la perspectiva del puente, los valores de los datos de configuración del adaptador son completamente arbitrarios y se intercambian con el adaptador como una matriz de bytes simple.  Internamente en el adaptador, puede almacenar estos valores como desee.   
 
-#### <a name="iadapterenumdevices"></a>IAdapter::EnumDevices
+#### <a name="iadapterenumdevices"></a>IAdapter:: EnumDevices
 
-Este método proporciona el puente con información acerca de los dispositivos disponibles en el bus.  La lista de dispositivos que se devuelven al puente se agregan al bus AllJoyn como AllJoyn los servicios individuales. 
+Este método proporciona al puente información acerca de los dispositivos disponibles en el bus.  La lista de dispositivos que se devuelven al puente se agregan al bus AllJoyn como servicios de AllJoyn individuales. 
 
-Se debe devolver una lista a través de este método, pero si la enumeración no ha completado una IAdapterIoRequest también puede aparecer aquí.  El puente esperará en esto hasta que el adaptador señala el IAdapterIoRequest para completar la enumeración de dispositivos.   
+Se debe devolver una lista a través de este método, pero si la enumeración no ha completado un IAdapterIoRequest, también se puede devolver aquí.  El puente esperará hasta que el adaptador señale a IAdapterIoRequest para completar la enumeración del dispositivo.   
 ### <a name="ii-iadapterdevice"></a>II. IAdapterDevice
 
-Desde la perspectiva del puente un dispositivo representa un dispositivo que, el implementador de adaptador, desea exponer en el bus AllJoyn como un AllJoyn Service.  ¿Qué propiedades, métodos y las señales que expone el dispositivo en el bus son depende de usted como implementador de la, pero normalmente sería una asignación directa de las propiedades, métodos y las señales de que el dispositivo o dispositivos intrínsecamente se exponen a través de su red de comunicaciones nativo . 
+Desde la perspectiva del puente un dispositivo representa un dispositivo que usted, el implementador del adaptador, desea exponer al bus de AllJoyn como un servicio AllJoyn.  ¿Qué propiedades, métodos y señales expone el dispositivo al bus como implementador, pero normalmente esto sería una asignación directa de propiedades, métodos y señales que el dispositivo o los dispositivos exponen de forma inherente a su red de comunicaciones nativas? . 
 
 Cada IAdapterDevice se anuncia a alljoyn con el siguiente nombre: 
 
     {ExposedAdapterPrefix}.{AdapterName}.{Name} 
 
-Cada dispositivo expone una interfaz de único alljoyn para exponer todas las propiedades, método y las señales encapsuladas por el dispositivo.  Es el nombre de la interfaz de alljoyn: 
+Cada dispositivo expone una única interfaz alljoyn para exponer todas las propiedades, el método y las señales encapsuladas por el dispositivo.  El nombre de la interfaz alljoyn es: 
 
     {ExposedAdapterPrefix}.{AdapterName}.{Name}.MainInterface 
 
-Al igual que un IAdapter, cada IAdapterDevice es necesario para implementar propiedades que usa el puente para exponer el dispositivo para AllJoyn.  La tabla siguiente describe cada propiedad y cómo el puente lo asigna a AllJoyn. 
+De forma similar a IAdapter, cada IAdapterDevice es necesario para implementar propiedades que el puente usa para exponer el dispositivo a AllJoyn.  En la tabla siguiente se describe cada propiedad y cómo la asigna el puente a AllJoyn. 
 
 > | Propiedad IAdapterDevice | Descripción | Asignación de puente |
 > | :---------------------- | :---------- | :------------- |
-> | ControlPanelHandler     | Un panel de control que puede operar a este dispositivo. | Expone como un org.alljoyn.ControlPanel.ControlPanel en un objeto de bus /ControlPanel |
-> | Descripción             | Una descripción de este dispositivo. | AllJoyn acerca de la descripción de datos |
-> | FirmwareVersion         | Versión de software de este dispositivo | AllJoyn acerca de la versión de Firmware de datos |
-> | Icon                    | Icono de gráfico que expone este dispositivo para alljoyn. Esto puede ser null si no hay ningún icono. |     Expone como un icono de sobre AllJoyn estándar |
-> | Métodos                 | Este es el conjunto de todos los métodos que expone el dispositivo para AllJoyn. | Esto puede estar vacío si no hay ningún método. Se exponen como métodos en la MainInterface con el nombre de cada método. Los nombres que no son únicos se anexan con un identificador único. |
-> | Modelo                   | Modelo de este dispositivo | Número de modelo de datos de Bus de AllJoyn |
-> | Nombre                      | Nombre de este nombre de dispositivo de AllJoyn sobre datos del dispositivo. | Esto también se usa para el sufijo de nombre anunciados del dispositivo: {ExposedAdapterPrefix}. {AdapterName}. {Name} |
-> | Propiedades              | Este es el conjunto de todas las propiedades que expone el dispositivo para AllJoyn. Esto puede estar vacío si no hay ninguna propiedad, pero si no está vacío, a continuación, al menos una señal, también se debe admitir la señal del cambio de valor. | Consulte IProperty |
-> | SerialNumber            | Número de serie de este dispositivo | AllJoyn sobre el número de serie de datos |
-> | Señales                 | Este es el conjunto de todas las señales que expone este dispositivo para AllJoyn. | Expuesto como señales de AllJoyn |
-> | proveedor                  | Nombre del proveedor de este dispositivo | AllJoyn sobre datos fabricante |
-> | Versión                 | Versión de software de este dispositivo | AllJoyn acerca de la versión de SO de datos |
+> | ControlPanelHandler     | Un panel de control que puede usar este dispositivo. | Se expone como org. alljoyn. ControlPanel. ControlPanel en un objeto de bus/ControlPanel |
+> | Descripción             | Descripción de este dispositivo. | Información general acerca de la descripción de datos |
+> | FirmwareVersion         | Versión de software de este dispositivo | AllJoyn acerca de la versión de firmware de datos |
+> | Icon                    | Icono gráfico que expone este dispositivo a alljoyn. Puede ser null si no hay ningún icono. |     Se expone como un icono de información de AllJoyn estándar |
+> | Métodos                 | Este es el conjunto de todos los métodos que expone el dispositivo a AllJoyn. | Puede estar vacío si no hay métodos. Se expone como métodos en MainInterface con el nombre de cada método. Los nombres no únicos se anexan con un identificador único. |
+> | Modelo                   | Modelo de este dispositivo | Número de modelo de datos de bus AllJoyn |
+> | NOMBRE                      | Nombre de este dispositivo AllJoyn sobre el nombre del dispositivo de datos. | También se usa para el sufijo del nombre anunciado de este dispositivo: {ExposedAdapterPrefix}. {AdapterName}. Name |
+> | Propiedades              | Este es el conjunto de todas las propiedades que expone el dispositivo a AllJoyn. Puede estar vacío si no hay ninguna propiedad, pero si no está vacía, debe admitirse también al menos una señal, el cambio de la señal de valor. | Consulte IProperty |
+> | SerialNumber            | Número de serie de este dispositivo | AllJoyn acerca del número de serie de datos |
+> | Simultáneamente                 | Este es el conjunto de todas las señales que expone este dispositivo a AllJoyn. | Expuesto como señales AllJoyn |
+> | Proveedor                  | Nombre del proveedor de este dispositivo | AllJoyn acerca del fabricante de datos |
+> | `Version`                 | Versión de software de este dispositivo | AllJoyn acerca de la versión de Data SW |
 
 
-### <a name="iii-iadapterproperty"></a>III. IAdapterProperty
+### <a name="iii-iadapterproperty"></a>ORDEN. IAdapterProperty
 
-Desde la perspectiva del puente un IAdapterProperty representa una colección de valores de datos relacionados, el implementador de adaptador, desea exponer en el bus de AllJoyn para un dispositivo específico.  Cada propiedad contiene un conjunto de uno o más IAdapterValues.  Cada IAdapterValue representa una unidad de datos que pueden tener acceso a un cliente AllJoyn individual.     
+Desde la perspectiva del puente, un IAdapterProperty representa una colección de valores de datos relacionados que usted, el implementador del adaptador, desea exponer al bus AllJoyn para un dispositivo específico.  Cada propiedad contiene un conjunto de uno o varios IAdapterValues.  Cada IAdapterValue representa una unidad de datos individual a la que puede tener acceso un cliente AllJoyn.     
 
-Cada IAdapterProperty se anuncia a Alljoyn como un objeto de bus con un nombre de interfaz como sigue: 
+Cada IAdapterProperty se anuncia a Alljoyn como un objeto de bus con un nombre de interfaz como se indica a continuación: 
 
     /{PropertyName} 
 
     {ExposedAdapterPrefix}.{AdapterName}.{PropertyName} 
 
-Como alternativa, el nombre de la interfaz puede reemplazarse por la propiedad para asignar a un tipo de interfaz específica.  En ese caso, el nombre IAdapterProperty se anuncia como un objeto de bus con un nombre de interfaz como sigue: 
+Como alternativa, el nombre de la interfaz puede reemplazarse por la propiedad para asignarse a un tipo de interfaz específico.  En ese caso, el nombre de IAdapterProperty se anuncia como un objeto de bus con un nombre de interfaz como se indica a continuación: 
 
     /{PropertyName} 
 
@@ -113,13 +113,13 @@ Como alternativa, el nombre de la interfaz puede reemplazarse por la propiedad p
 
 > | Propiedades de IAdapterProperty |   Descripción                        | Asignación de puente |
 > | :-------------------------- | :--------------------------------- | :-------------------------------------------- |
-> | Atributos                |Colección de IAdapterAttributes    | Conjunto de propiedades de AllJoyn (consulte IAdapterValue) |
-> | InterfaceHint | Una invalidación para esta propiedad, que puede usarse para asignar esta propiedad a algún otro tipo de interfaz conocida.  Devuelve null para usar el comportamiento predeterminado | Nombre de la interfaz de AllJoyn para esta propiedad (si se especifica) |
-> | Nombre | Nombre de propiedad | Propiedad AllJoyn |
+> | Atributos                |Colección de IAdapterAttributes    | Conjunto de propiedades de AllJoyn (vea IAdapterValue) |
+> | InterfaceHint | Una invalidación para esta propiedad que se puede usar para asignar esta propiedad a algún otro tipo de interfaz muy conocido.  Devolver null para usar el comportamiento predeterminado | Nombre de la interfaz AllJoyn para esta propiedad (si se especifica) |
+> | NOMBRE | Nombre de la propiedad | AllJoyn (propiedad) |
 
 ### <a name="v-iadaptervalue"></a>V. IAdapterValue
 
-Cada IAdapterValue se expone como un elemento secundario de una propiedad de AllJoyn con el siguiente nombre de objeto y la interfaz de bus:
+Cada IAdapterValue se expone como un elemento secundario de una propiedad AllJoyn con el siguiente objeto de bus y el nombre de interfaz:
 
     /{PropertyName}/{ValueName}
     
@@ -127,17 +127,17 @@ Cada IAdapterValue se expone como un elemento secundario de una propiedad de All
 
 > | Propiedades de IAdapterValue    | Descripción                        | Asignación de puente                                |
 > | :-------------------------- | :--------------------------------- | :-------------------------------------------- |
-> | Datos                          | El valor de los datos reales de una propiedad en un dispositivo con puente.| Una propiedad AllJoyn|
-> | Name                        | Nombre del valor                      | Nombre de una propiedad AllJoyn|
+> | Datos                          | Valor de datos real de una propiedad en un dispositivo puente.| Propiedad AllJoyn|
+> | NOMBRE                        | Nombre del valor                      | Nombre de una propiedad AllJoyn|
 
-### <a name="iv-iadaptersignal"></a>IV. IAdapterSignal
+### <a name="iv-iadaptersignal"></a>CUARTA. IAdapterSignal
 
-Desde la perspectiva del puente un ISignal representa un evento que el dispositivo puede generar cuando se produzca algún cambio.  Todos los dispositivos suelen tengan una señal de cambio de valor.  Esta señal alertas AllJoyn los clientes que han cambiado una o varias propiedades en un dispositivo. También pueden admitirse señales adicionales.
+Desde la perspectiva del puente, un ISignal representa un evento que el dispositivo puede generar cuando se produce algún cambio.  Todos los dispositivos suelen tener un cambio de señal de valor.  Esta señal alerta a los clientes de AllJoyn de que una o más propiedades han cambiado en un dispositivo. También pueden admitirse señales adicionales.
 
 Cada ISignal se anuncia a AllJoyn como una señal de sesión hospedada para un dispositivo con el nombre de señales.  
-Las siguientes propiedades deben implementarse para una ISignal
+Las siguientes propiedades se deben implementar para un ISignal
 
 > | Propiedades de ISignal          | Descripción                        | Asignación de puente                                |
 > | :-------------------------- | :--------------------------------- | :-------------------------------------------- |
-> | Nombre                          |Nombre de señal                      | AllJoyn Signal |
-> | params | Un conjunto de objetos que ha cambiado y los nuevos valores o null si se trata de una señal pura. | Se asigna a una matriz de argumentos de la señal de alljoyn pasa a la señal. |
+> | NOMBRE                          |Nombre de la señal                      | Señal AllJoyn |
+> | Params | Un conjunto de objetos que han cambiado y sus nuevos valores, o null si se trata de una señal pura. | Asigna a una matriz de argumentos de señal alljoyn pasados a la señal. |

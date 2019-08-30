@@ -1,74 +1,74 @@
 ---
-title: Asignaciones de raspberry Pi 2 & 3 Pin
+title: Asignaciones de Raspberry pi 2 & 3 pin
 author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Obtenga información acerca de la funcionalidad de las asignaciones de pin para Raspberry Pi 2 y 3.
-keywords: Windows iot, 2 de Rasperry Pi, Raspberry Pi 3, anclar asignaciones, GPIO
+description: Obtenga información sobre la funcionalidad de las asignaciones de PIN para Raspberry pi 2 y 3.
+keywords: Windows IOT, Rasperry pi 2, Raspberry PI 3, asignaciones de PIN, GPIO
 ms.openlocfilehash: 86e641bdcc6b4895161c6509ca7529b0dd55fad9
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60167521"
 ---
-# <a name="raspberry-pi-2--3-pin-mappings"></a>Asignaciones de raspberry Pi 2 & 3 Pin
+# <a name="raspberry-pi-2--3-pin-mappings"></a>Asignaciones de Raspberry pi 2 & 3 pin
 
-![Encabezado de raspberry Pi 2 & 3 Pin](../../media/PinMappingsRPI/RP2_Pinout.png)
+![Encabezado Raspberry pi 2 & 3 pin](../../media/PinMappingsRPI/RP2_Pinout.png)
 
-Interfaces de hardware para el dispositivo Raspberry Pi 2 y Raspberry Pi 3 se exponen a través del encabezado de 40-pin **celda J8** en el panel. La funcionalidad incluye:
+Las interfaces de hardware para Raspberry pi 2 y Raspberry PI 3 se exponen a través del encabezado de 40 **J8** en el panel. La funcionalidad incluye:
 
-* **24 x** -pines GPIO
-* **1 x** -UARTs serie (RPi3 sólo incluye mini UART)
-* **2 x** -bus SPI
-* **1 x** -bus I2C
-* **2 x** -PIN de alimentación de 5 v
-* **2 x** : 3,3 v power PIN
-* **8 x** -masa PIN
+* PIN de **24x** a GPIO
+* **1x** : UART en serie (RPi3 solo incluye mini UART)
+* Bus **2x** -SPI
+* Bus **1x** -I2C
+* clavijas de potencia **2x** -5V
+* **2x** -3,3 clavijas de alimentación
+* pines de **8X**
 
-## <a name="gpio-pins"></a>Pines GPIO
+## <a name="gpio-pins"></a>PIN de GPIO
 
-Echemos un vistazo a la GPIO disponible en este dispositivo.
+Echemos un vistazo al GPIO disponible en este dispositivo.
 
-### <a name="gpio-pin-overview"></a>Información general sobre el Pin GPIO
+### <a name="gpio-pin-overview"></a>Introducción al pin de GPIO
 
-Las clavijas GPIO siguientes son accesibles a través de API:
+Se puede acceder a los siguientes PIN de GPIO a través de las API:
 
-> | GPIO # | Incorporación de cambios de encendido | Funciones alternativas | Pin de encabezado         |
+> | GPIO # | Extracción de energía | Funciones alternativas | PIN de encabezado         |
 > |-------|---------------|---------------------|--------------------|
-> | 2     | Subida        | I2C1 SDA            | 3                  |
-> | 3     | Subida        | I2C1 SCL            | 5                  |
-> | 4     | Subida        |                     | 7                  |
-> | 5     | Subida        |                     | 29                 |
-> | 6     | Subida        |                     | 31                 |
-> | 7     | Subida        | SPI0 CS1            | 26                 |
-> | 8     | Subida        | SPI0 CS0            | 24                 |
-> | 9     | PullDown      | SPI0 MISO           | 21                 |
-> | 10    | PullDown      | SPI0 MOSI           | 19                 |
-> | 11    | PullDown      | SPI0 SCLK           | 23                 |
-> | 12    | PullDown      |                     | 32                 |
-> | 13    | PullDown      |                     | 33                 |
-> | 16    | PullDown      | SPI1 CS0            | 36                 |
-> | 17    | PullDown      |                     | 11                 |
-> | 18    | PullDown      |                     | 12                 |
-> | 19    | PullDown      | SPI1 MISO           | 35                 |
-> | 20    | PullDown      | SPI1 MOSI           | 38                 |
-> | 21    | PullDown      | SPI1 SCLK           | 40                 |
-> | 22    | PullDown      |                     | 15                 |
-> | 23    | PullDown      |                     | 16                 |
-> | 24    | PullDown      |                     | 18                 |
-> | 25    | PullDown      |                     | 22                 |
-> | 26    | PullDown      |                     | 37                 |
-> | 27    | PullDown      |                     | 13                 |
-> | 35*   | Subida        |                     | LED de alimentación rojo      |
-> | 47*   | Subida        |                     | LED verde de la actividad |
+> | 2     | PullUp        | I2C1 SDA            | 3                  |
+> | 3     | PullUp        | I2C1 SCL            | 5                  |
+> | 4     | PullUp        |                     | 7                  |
+> | 5     | PullUp        |                     | 29                 |
+> | 6     | PullUp        |                     | 31                 |
+> | 7     | PullUp        | SPI0 CS1            | 26                 |
+> | 8     | PullUp        | SPI0 CS0            | 24                 |
+> | 9     | Combinan      | SPI0           | 21                 |
+> | 10    | Combinan      | SPI0 MOSI           | 19                 |
+> | 11    | Combinan      | SPI0 SCLK           | 23                 |
+> | 12    | Combinan      |                     | 32                 |
+> | 13    | Combinan      |                     | 33                 |
+> | 16    | Combinan      | SPI1 CS0            | 36                 |
+> | 17    | Combinan      |                     | 11                 |
+> | 18    | Combinan      |                     | 12                 |
+> | 19    | Combinan      | SPI1           | 35                 |
+> | 20    | Combinan      | SPI1 MOSI           | 38                 |
+> | 21    | Combinan      | SPI1 SCLK           | 40                 |
+> | 22    | Combinan      |                     | 15                 |
+> | 23    | Combinan      |                     | 16                 |
+> | 24    | Combinan      |                     | 18                 |
+> | 25    | Combinan      |                     | 22                 |
+> | 26    | Combinan      |                     | 37                 |
+> | 27    | Combinan      |                     | 13                 |
+> | 35 *   | PullUp        |                     | LED de alimentación rojo      |
+> | 47 *   | PullUp        |                     | LED de actividad verde |
 
-\* = Raspberry Pi 2 solo. GPIO 35 & 47 no están disponibles en Raspberry Pi 3.
+\*= SOLO Raspberry pi 2. GPIO 35 & 47 no están disponibles en Raspberry PI 3.
 
-### <a name="gpio-sample"></a>Ejemplo GPIO
+### <a name="gpio-sample"></a>Ejemplo de GPIO
 
-Por ejemplo, el siguiente código se abre **GPIO 5** como salida y escribe un digitales '**1**' out en el pin:
+Como ejemplo, el código siguiente abre **GPIO 5** como salida y escribe un '**1**' digital en el PIN:
 
 ```csharp
 using Windows.Devices.Gpio;
@@ -93,15 +93,15 @@ public void GPIO()
 }
 ```
 
-Al abrir un pin, estará en su estado de encendido, que puede incluir una resistencia de incorporación de cambios. Para desconectar las resistencias de incorporación de cambios y obtener una entrada de impedancia de alta, establezca el modo de unidad en GpioPinDriveMode.Input:
+Al abrir un PIN, estará en su estado de encendido, que puede incluir una resistencia de extracción. Para desconectar las resistencias de extracción y obtener una entrada de alta impedancia, establezca el modo de unidad en GpioPinDriveMode. Input:
 
     pin.SetDriveMode(GpioPinDriveMode.Input);
 
-Cuando se cierra un pin, revierte a su estado de encendido.
+Cuando se cierra un PIN, vuelve a su estado de encendido.
 
-### <a name="pin-muxing"></a>PIN Muxing
+### <a name="pin-muxing"></a>Multiplexación de PIN
 
-Algunos pines GPIO pueden realizar varias funciones. De forma predeterminada, el PIN se configuran como entradas GPIO. Cuando abre una función alternativa mediante una llamada a `I2cDevice.FromIdAsync()` o `SpiDevice.FromIdAsync()` , el PIN requeridos por la función son automáticamente conmutada ("MUX") a la función correcta. Cuando se cierra el dispositivo mediante una llamada a `I2cDevice.Dispose()` o `SpiDevice.Dispose()`, el PIN se restablecerá a su función de forma predeterminada. Si intenta usar un pin para dos funciones diferentes a la vez, se producirá una excepción al intentar abrir la función en conflicto. Por ejemplo,
+Algunos PIN de GPIO pueden realizar varias funciones. De forma predeterminada, los PIN se configuran como entradas de GPIO. Al abrir una función `I2cDevice.FromIdAsync()` alternativa llamando a o `SpiDevice.FromIdAsync()` , los pin requeridos por la función se cambian automáticamente ("MUX") a la función correcta. Cuando el dispositivo se cierra mediante una `I2cDevice.Dispose()` llamada `SpiDevice.Dispose()`a o, los pin vuelven a su función predeterminada. Si intenta usar un PIN para dos funciones diferentes a la vez, se producirá una excepción al intentar abrir la función en conflicto. Por ejemplo,
 
 ```csharp
 var controller = GpioController.GetDefault();
@@ -119,14 +119,14 @@ i2cDevice.Dispose(); // release I2C device
 var gpio2 = controller.OpenPin(2); // succeeds now that GPIO2 is available
 ```
 
-## <a name="serial-uart"></a>UART serie
+## <a name="serial-uart"></a>UART en serie
 
-Hay un UART serie disponible en el RPi2/3: **UART0**
+Hay un UART de serie disponible en RPi2/3: **UART0**
 
-* Anclar 8 - **UART0 TX**
-* Anclar 10 - **UART0 RX**
+* Pin 8- **UART0 TX**
+* PIN 10- **UART0 RX**
 
-El ejemplo siguiente inicializa **UART0** y realiza una operación de escritura seguido por una lectura:
+En el ejemplo siguiente se inicializa **UART0** y se realiza una escritura seguida de una lectura:
 
 
 ```csharp
@@ -162,9 +162,9 @@ public async void Serial()
 }
 ```
 
-Tenga en cuenta que debe agregar la funcionalidad siguiente a la **Package.appxmanifest** archivo del proyecto UWP para ejecutar código UART serie:
+Tenga en cuenta que debe agregar la siguiente funcionalidad al archivo **Package. appxmanifest** en el proyecto de UWP para ejecutar el código UART en serie:
 
-Visual Studio 2017 tiene un problema conocido en el Diseñador de manifiestos (el editor visual para archivos appxmanifest) que afecta a la capacidad de serialcommunication.  Si su appxmanifest agrega la capacidad de serialcommunication, modificar su appxmanifest con el diseñador dañará su appxmanifest (el elemento secundario xml de dispositivo se perderán).  Puede solucionar este problema mediante la edición de mano el appxmanifest haciendo clic en su appxmanifest y seleccione Ver código en el menú contextual.
+Visual Studio 2017 tiene un error conocido en el diseñador de manifiestos (el editor visual para archivos appxmanifest) que afecta a la funcionalidad serialcommunication.  Si el appxmanifest agrega la funcionalidad serialcommunication, la modificación de appxmanifest con el diseñador dañará el appxmanifest (se perderá el elemento secundario XML del dispositivo).  Puede solucionar este problema de forma manual editaba el appxmanifest; para ello, haga clic con el botón derecho en el appxmanifest y seleccione Ver código en el menú contextual.
 
 ```xml
   <Capabilities>
@@ -176,20 +176,20 @@ Visual Studio 2017 tiene un problema conocido en el Diseñador de manifiestos (e
   </Capabilities>
 ```
 
-## <a name="i2c-bus"></a>Bus i2c
+## <a name="i2c-bus"></a>Bus I2C
 
-Vamos a examinar el bus I2C disponible en este dispositivo.
+Echemos un vistazo al bus I2C disponible en este dispositivo.
 
-### <a name="i2c-overview"></a>Información general de i2c
+### <a name="i2c-overview"></a>Información general de I2C
 
-Hay un controlador I2C **I2C1** expuestos en el encabezado de pin con dos líneas **SDA** y **SCL**. 1.8 K&#x2126; resistencias pull-up interno ya están instalados en el panel para este bus.
+Hay un **I2C1** de controlador i2c expuesto en el encabezado del PIN con dos líneas **sda** y **SCL**. en el&#x2126; panel de este bus ya están instaladas las resistencias de extracción internas de 1,8 k.
 
-> | Nombre de señal | Número de Pin de encabezado | Número de GPIO |
+> | Nombre de señal | Número de PIN del encabezado | Número de GPIO |
 > |-------------|-------------------|-------------|
-> | SDA         | 3                 | 2           |
-> | SCL         | 5                 | 3           |
+> | EMPAQUETADO         | 3                 | 2           |
+> | FICHERO         | 5                 | 3           |
 
-El ejemplo siguiente inicializa **I2C1** y escribe datos en un dispositivo I2C con dirección **0 x 40**:
+En el ejemplo siguiente se inicializa **I2C1** y se escriben datos en un dispositivo I2C con la dirección **0x40**:
 
 ```csharp
 using Windows.Devices.Enumeration;
@@ -215,31 +215,31 @@ public async void I2C()
 
 ## <a name="spi-bus"></a>Bus SPI
 
-Hay dos controladores de bus SPI en RPi2/3.
+Hay dos controladores de bus SPI disponibles en RPi2/3.
 
 ### <a name="spi0"></a>SPI0
 
-> | Nombre de señal | Número de Pin de encabezado | Número de GPIO |
+> | Nombre de señal | Número de PIN del encabezado | Número de GPIO |
 > |-------------|-------------------|-------------|
 > | MOSI        | 19                | 10          |
-> | MISO        | 21                | 9           |
+> | PERMISOS        | 21                | 9           |
 > | SCLK        | 23                | 11          |
 > | CS0         | 24                | 8           |
 > | CS1         | 26                | 7           |
 
 ### <a name="spi1"></a>SPI1
 
-> | Nombre de señal | Número de Pin de encabezado | Número de GPIO |
+> | Nombre de señal | Número de PIN del encabezado | Número de GPIO |
 > |-------------|-------------------|-------------|
 > | MOSI        | 38                | 20          |
-> | MISO        | 35                | 19          |
+> | PERMISOS        | 35                | 19          |
 > | SCLK        | 40                | 21          |
 > | CS0         | 36                | 16          |
 
 
-### <a name="spi-sample"></a>Ejemplo SPI
+### <a name="spi-sample"></a>Ejemplo de SPI
 
-Un ejemplo de cómo realizar un IRP de escritura en el bus **SPI0** mediante select chip 0 se muestra a continuación:
+A continuación se muestra un ejemplo de cómo realizar una escritura SPI en el bus **SPI0** con el chip Select 0:
 
 ```csharp
 using Windows.Devices.Enumeration;

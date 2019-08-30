@@ -4,31 +4,31 @@ author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Aprenda a usar secure shell para administrar de forma remota y configurar el dispositivo de IoT Core.
-keywords: Windows iot, shell seguro, remoto, cliente SSH PuTTY, SSH
+description: Aprenda a usar Secure Shell para administrar y configurar de forma remota el dispositivo de IoT Core.
+keywords: Windows IOT, shell seguro, remoto, cliente SSH, PuTTy, SSH
 ms.openlocfilehash: 2c83184507a840c6017b1dfe36ac915004057d9a
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60168772"
 ---
 # <a name="secure-shell-ssh"></a>Secure Shell (SSH)
-Shell seguro (SSH) le permite administrar de forma remota y configurar el dispositivo Windows IoT Core
+Secure Shell (SSH) permite administrar y configurar de forma remota el dispositivo de Windows IoT Core
 
-## <a name="using-the-windows-10-openssh-client"></a>Mediante el cliente de Windows 10 OpenSSH
+## <a name="using-the-windows-10-openssh-client"></a>Uso del cliente OpenSSH de Windows 10
 > [!IMPORTANT]
-> El cliente OpenSSH Windows requiere que el host del cliente SSH del sistema operativo es Windows 10 versión 1803(17134). Además, el dispositivo Windows 10 IoT Core debe ejecutar RS5 Windows Insider Preview versión 17723 o superior.
+> El cliente OpenSSH de Windows requiere que el sistema operativo del host del cliente SSH sea Windows 10 versión 1803 (17134). Además, el dispositivo Windows 10 IoT Core debe ejecutar RS5 Windows Insider Preview versión 17723 o posterior.
 
-El **cliente OpenSSH** se agregó a Windows 10 en 1803 (compilación 17134) como una característica opcional. Para instalar el cliente puede buscar **administrar características opcionales** en configuración de Windows 10. Si el **cliente OpenSSH** no aparece en la lista de las características instaladas, a continuación, elija **agregar una característica**.
+El **cliente OpenSSH** se ha agregado a Windows 10 en 1803 (compilación 17134) como una característica opcional. Para instalar el cliente, puede buscar **administrar características opcionales** en la configuración de Windows 10. Si el **cliente OpenSSH** no aparece en la lista de características instaladas, elija **Agregar una característica**.
 
 ![Agregar una característica](../media/SSH/add_a_feature.png)
 
 A continuación, seleccione **cliente OpenSSH** en la lista y haga clic en **instalar**.
 
-![Instalación de cliente OpenSSH](../media/SSH/optional_features.png)
+![Instalación del cliente OpenSSH](../media/SSH/optional_features.png)
 
-Para iniciar sesión con una nombre de usuario y contraseña, use el siguiente comando:
+Para iniciar sesión con un nombre de usuario y una contraseña, use el siguiente comando:
 
 ```cmd
 ssh administrator@host
@@ -36,7 +36,7 @@ ssh administrator@host
 
 Donde host es la dirección IP del dispositivo Windows IoT Core o el nombre del dispositivo.
 
-La primera vez que conecte verá un mensaje similar al siguiente:
+La primera vez que se conecte, verá un mensaje similar al siguiente:
 
 ```cmd
 The authenticity of host 'hostname (192.168.0.12)' can't be established.
@@ -44,16 +44,16 @@ ECDSA key fingerprint is SHA256:RahZpBFpecRiPmw8NGSa+7VKs8mgqQi/j2i1Qr9lUNU.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-Tipo **Sí** y presione **escriba**.
+Escriba **sí** y presione **entrar**.
 
-Si tiene que iniciar sesión como **DefaultAccount** en lugar de como administrador deberá generar una clave y usar la clave para iniciar sesión.  En el escritorio que pretende conectarse al dispositivo de IoT, abra una ventana de powershell y cambie a la carpeta datos personales (p. ej. cd ~)
+Si necesita iniciar sesión como **DefaultAccount** en lugar de como administrador, debe generar una clave y usar la clave para iniciar sesión.  Desde el escritorio que quiere conectar a su dispositivo de IoT desde, abra una ventana de PowerShell y cambie a la carpeta de datos personales (por ejemplo, CD ~).
 
 ```cmd
 cd ~
 ssh-keygen -t rsa -f id_rsa
 ```
 
-Registre la clave con ssh-agent (opcional, para la experiencia de inicio de sesión único).  Tenga en cuenta que ssh-agregar debe realizarse desde una carpeta que sea incorporarse a usted como la sesión de usuario (Builtin\Administrators y el usuario NT_AUTHORITY\System también son Aceptar).  CD predeterminado ~ desde powershell debe ser suficiente, ya que se muestra a continuación.
+Registre la clave con ssh-agent (opcional, para la experiencia de inicio de sesión único).  Tenga en cuenta que ssh-add debe realizarse desde una carpeta que sea una ACL como el usuario con sesión iniciada (Builtin\Administrators y el usuario NT_AUTHORITY\System también son correctos).  De forma predeterminada, el CD ~ de PowerShell debe ser suficiente como se muestra a continuación.
 
 ```cmd
 cd ~
@@ -62,9 +62,9 @@ ssh-add id_rsa
 ```
 
 > [!TIP]
-> Si recibe un mensaje que se ha deshabilitado el servicio ssh-agent puede habilitarla con **inicio ssh-agent de sc.exe config = auto**
+> Si recibe un mensaje que indica que el servicio ssh-agent está deshabilitado, puede habilitarlo con **SC. exe config ssh-agent Start = Auto**
 
-Para habilitar el inicio de sesión único anexa la clave pública en el dispositivo Windows IoT Core **authorized_keys** archivo.  O si solo tiene una clave copie el archivo de clave pública en el servidor remoto **authorized_keys** archivo.
+Para habilitar el inicio de sesión único, anexe la clave pública al archivo **authorized_keys** de dispositivo Windows IOT Core.  O bien, si solo tiene una clave, copie el archivo de clave pública en el archivo **authorized_keys** remoto.
 
 ```cmd
 net use X: \\host\c$ /user:host\administrator
@@ -72,19 +72,19 @@ if not exist x:\data\users\defaultaccount\.ssh md x:\data\users\defaultaccount\.
 copy .\id_rsa.pub x:\data\users\defaultaccount\.ssh\authorized_keys
 ```
 
-Si la clave no está registrada con ssh-agent debe especificarse en la línea de comandos para el inicio de sesión: 
+Si la clave no está registrada con ssh-agent, debe especificarse en la línea de comandos para iniciar sesión: 
 
 ```cmd
 ssh -i .\id_rsa DefaultAccount@host
 ```
 
-Si se registra la clave privada con ssh-agent, solo deberá especificar <strong>DefaultAccount@host</strong>:
+Si la clave privada está registrada con ssh-agent, solo tiene que especificar <strong>DefaultAccount@host</strong>:
 
 ```cmd
 ssh DefaultAccount@host
 ```
 
-La primera vez que conecte verá un mensaje similar al siguiente:
+La primera vez que se conecte, verá un mensaje similar al siguiente:
 
 ```cmd
 The authenticity of host 'hostname (192.168.0.12)' can't be established.
@@ -92,11 +92,11 @@ ECDSA key fingerprint is SHA256:RahZpBFpecRiPmw8NGSa+7VKs8mgqQi/j2i1Qr9lUNU.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-Tipo **Sí** y presione **escriba**.
+Escriba **sí** y presione **entrar**.
 
-Debe estar conectado como **DefaultAccount**
+Ahora debería estar conectado como **DefaultAccount**
 
-Usar inicio de sesión único con el **administrador** cuenta, la clave pública se anexa al c:\data\ProgramData\ssh\administrators_authorized_keys en el dispositivo Windows IoT Core. 
+Para usar el inicio de sesión único con la cuenta de **Administrador** , anexe la clave pública a c:\data\ProgramData\ssh\administrators_authorized_keys en el dispositivo Windows IOT Core. 
 
 ```cmd
 net use X: \\host\c$ /user:host\administrator
@@ -105,72 +105,72 @@ icacls x:\data\ProgramData\ssh\administrators_authorized_keys /remove "NT AUTHOR
 icaclsx:\data\ProgramData\ssh\administrators_authorized_keys /inheritance:r
 ```
 
-También deberá establecer la ACL para administrators_authorized_keys para que coincida con la ACL de ssh_host_dsa_key en el mismo directorio.
+También tendrá que establecer la ACL de administrators_authorized_keys para que coincida con la ACL de ssh_host_dsa_key en el mismo directorio.
 
 ```cmd
 icacls x:\data\ProgramData\ssh\administrators_authorized_keys /remove "NT AUTHORITY\Authenticated Users"
 icacls x:\data\ProgramData\ssh\administrators_authorized_keys /inheritance:r
 ```
 
-Para establecer la ACL mediante powershell
+Para establecer la ACL mediante PowerShell
 
 ```cmd
 get-acl x:\data\ProgramData\ssh\ssh_host_dsa_key | set-acl x:\data\ProgramData\ssh\administrators_authorized_keys
 ```
 
 > [!NOTE]
-> Si ve un **CAMBIADO de identificación del HOST remoto** mensaje después de realizar cambios en el dispositivo Windows 10 IoT Core, a continuación, editar C:\Users\<username >\.ssh\known_hosts y quitar el host que ha cambiado.
+> Si ve un mensaje de **identificación de host remoto cambiado** después de realizar cambios en el dispositivo de Windows 10 IOT Core,\<Edite\.C:\Users username > ssh\known_hosts y quite el host que ha cambiado.
 
 Consulte también: [Win32-OpenSSH](https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples)
 
-## <a name="using-putty"></a>Uso de PuTTY
+## <a name="using-putty"></a>Usar PuTTy
 
-### <a name="download-a-ssh-client"></a>Descargar a un cliente SSH
-Para conectarse a su dispositivo mediante SSH, primero debe descargar un cliente SSH, como [PuTTY](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe).
+### <a name="download-a-ssh-client"></a>Descarga de un cliente SSH
+Para conectarse a su dispositivo mediante SSH, primero deberá descargar un cliente SSH, como [Putty](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe).
 
 ### <a name="connect-to-your-device"></a>Conectarse al dispositivo
-* Para conectarse al dispositivo, deberá primero obtener la dirección IP del dispositivo.  Después de arrancar el dispositivo Windows IoT Core, se mostrará una dirección IP en la pantalla conectada al dispositivo:
+* Para conectarse a su dispositivo, primero debe obtener la dirección IP del dispositivo.  Después de arrancar el dispositivo Windows IoT Core, se mostrará una dirección IP en la pantalla conectada al dispositivo:
 
     ![DefaultApp en Windows IoT Core](../media/SSH/DefaultApp.png)
 
-* Ahora inicie PuTTY y escriba la dirección IP en el `Host Name` cuadro de texto y asegúrese de que el `SSH` botón de radio está seleccionado.  A continuación, haga clic en `Open`.
+* Ahora, inicie Putty y escriba la dirección IP en `Host Name` el cuadro de texto y asegúrese `SSH` de que el botón de radio está seleccionado.  A continuación `Open`, haga clic en.
 
-    ![Configuración de puTTY](../media/SSH/putty_config.png)
+    ![Configuración de PuTTy](../media/SSH/putty_config.png)
 
-* Si se conecta al dispositivo por primera vez desde su equipo, verá la siguiente alerta de seguridad.  Simplemente haga clic en `Yes` para continuar.
+* Si se va a conectar al dispositivo por primera vez desde el equipo, es posible que vea la alerta de seguridad siguiente.  Basta con `Yes` hacer clic para continuar.
 
-    ![Alerta de seguridad de puTTY](../media/SSH/putty_security_prompt.png)
+    ![Alerta de seguridad de PuTTy](../media/SSH/putty_security_prompt.png)
 
-* Si la conexión se realizó correctamente, debería ver `login as:` en la pantalla, que le solicitará que inicie sesión.  
-    Escriba `Administrator` y presione ENTRAR.  A continuación, escriba la contraseña predeterminada `p@ssw0rd` como la contraseña y presione ENTRAR.
+* Si la conexión se realizó correctamente, debería ver `login as:` en la pantalla, donde se le pide que inicie sesión.  
+    Escriba `Administrator` y presione Entrar.  A continuación, escriba la `p@ssw0rd` contraseña predeterminada como contraseña y presione Entrar.
 
-    ![Inicio de sesión de puTTY](../media/SSH/putty_login.png)
+    ![Inicio de sesión de PuTTy](../media/SSH/putty_login.png)
 
-    Si puede iniciar sesión correctamente, debería ver algo parecido a esto:
+    Si ha podido iniciar sesión correctamente, debería ver algo parecido a esto:
 
-    ![Consola de puTTY](../media/ssh/putty_console.png)
+    ![Consola de PuTTy](../media/ssh/putty_console.png)
 
-### <a name="update-account-password"></a>Actualizar la contraseña de cuenta
+### <a name="update-account-password"></a>Actualizar contraseña de la cuenta
 
-Es **recomienda** que actualizar la contraseña predeterminada para la cuenta de administrador.
+Se **recomienda encarecidamente** que actualice la contraseña predeterminada para la cuenta de administrador.
 
-Para ello, escriba el siguiente comando en la consola de PuTTY, reemplazando `[new password]` con una contraseña segura:
+Para ello, escriba el siguiente comando en la consola de Putty y reemplace `[new password]` con una contraseña segura:
     
     net user Administrator [new password]
     
-### <a name="configure-your-windows-iot-core-device"></a>Configurar el dispositivo Windows IoT Core
-* Para poder implementar aplicaciones desde Visual Studio 2017, deberá asegurarse de que se está ejecutando Visual Studio Remote Debugger en el dispositivo Windows IoT Core. El depurador remoto debe ejecutarse automáticamente en tiempo de arranque de la máquina. Para volver a comprobar, use el comando de tlist para enumerar todos los procesos de ejecución de powershell. Debe haber dos instancias de msvsmon.exe que se ejecutan en el dispositivo.
+### <a name="configure-your-windows-iot-core-device"></a>Configuración del dispositivo de Windows IoT Core
+* Para poder implementar aplicaciones desde Visual Studio 2017, tendrá que asegurarse de que el Visual Studio Remote Debugger se está ejecutando en el dispositivo de Windows IoT Core. El depurador remoto debe iniciarse automáticamente al arrancar el equipo. Para realizar una doble comprobación, use el comando Tlist para enumerar todos los procesos en ejecución de PowerShell. Debe haber dos instancias de msvsmon. exe en ejecución en el dispositivo.
 
-* Es posible que el depurador remoto de Visual Studio en tiempo de espera tras un largo período de inactividad. Si Visual Studio no puede conectarse a su dispositivo Windows IoT Core, intente reiniciar el dispositivo.
+* Es posible que el Visual Studio Remote Debugger agote el tiempo de espera después de largos períodos de inactividad. Si Visual Studio no se puede conectar al dispositivo de Windows IoT Core, intente reiniciar el dispositivo.
 
-* Si lo desea, también puede cambiar el nombre del dispositivo. Para cambiar el nombre del equipo, use el `setcomputername` utilidad:
+* Si lo desea, también puede cambiar el nombre del dispositivo. Para cambiar el nombre de equipo, use la `setcomputername` utilidad:
 
         setcomputername <new-name>
 
-    Deberá reiniciar el dispositivo para que el cambio surta efecto. Puede usar el `shutdown` comando como sigue:
+    Tendrá que reiniciar el dispositivo para que el cambio surta efecto. Puede usar el comando `shutdown` de la siguiente manera:
 
         shutdown /r /t 0
         
-### <a name="commonly-used-utilities"></a>Frecuente utilidades
+### <a name="commonly-used-utilities"></a>Utilidades usadas comúnmente
 
-Consulte la [utilidades de línea de comandos](../manage-your-device/CommandLineUtils.md) para obtener una lista de comandos y utilidades que puede utilizar con SSH.
+Consulte la página de utilidades de la [línea de comandos](../manage-your-device/CommandLineUtils.md) para obtener una lista de comandos y utilidades que puede usar con SSH.

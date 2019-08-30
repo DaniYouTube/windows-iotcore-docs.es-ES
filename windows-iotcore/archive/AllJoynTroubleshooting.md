@@ -6,46 +6,46 @@ ms.date: 09/07/17
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
-description: Obtenga información sobre cómo solucionar problemas de tecnología de AllJoyn con esta completa guía que cubren los problemas conocidos y solución de problemas de configuración.
-keywords: Windows iot, AllJoyn
+description: Obtenga información sobre cómo solucionar problemas de la tecnología AllJoyn con esta guía completa que trata los problemas conocidos y la configuración de solución de problemas.
+keywords: Windows IOT, AllJoyn
 ms.openlocfilehash: 8b93242c8f583199ee5890c6d0d15985f9025175
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60169973"
 ---
 > [!NOTE]
-> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, abra una incidencia en GitHub o enviarnos sus comentarios en los comentarios a continuación.
+> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, abra un problema en GitHub o envíenos sus comentarios en los comentarios siguientes.
 
 # <a name="alljoyn-troubleshooting"></a>Solución de problemas de AllJoyn
 
-[AllJoyn](https://allseenalliance.org/developers/learn) es una tecnología que permite a los dispositivos de IoT y aplicaciones para detectar e interactuar entre sí. Puesto que AllJoyn está integrada en Windows 10 y el SDK de Windows 10, es fácil aprovechar las ventajas de AllJoyn con la plataforma Universal de Windows (UWP).
+[AllJoyn](https://allseenalliance.org/developers/learn) es una tecnología que permite a los dispositivos y aplicaciones IOT detectar e interactuar entre sí. Como AllJoyn está integrado en Windows 10 y el SDK de Windows 10, es fácil aprovechar AllJoyn con el Plataforma universal de Windows (UWP).
 
 ![AJ_Troubleshooting_intro](../media/AllJoyn/AJ_Troubleshooting_intro.jpg)
 
-Esta entrada de blog le ayudará a configurar la red de AllJoyn y dispositivos y también proporcionan los pasos de solución de problemas cuando algo no funcione según lo previsto. El objetivo principal de este artículo se habilitará la comunicación entre aplicaciones de cliente de AllJoyn de UWP (AllJoyn consumidores) y dispositivos de AllJoyn (AllJoyn productores). Muchos de los mismos pasos de configuración son necesarios para habilitar la comunicación con aplicaciones de UWP AllJoyn productor, pero aún más los detalles se quedará en futuras en blogs y artículos.
+Esta entrada de blog le ayudará a configurar la red y los dispositivos de AllJoyn, así como los pasos de solución de problemas que deben seguirse cuando las cosas no funcionan según lo esperado. El objetivo principal de este artículo será habilitar la comunicación entre las aplicaciones cliente de AllJoyn de UWP (consumidores AllJoyn) y los dispositivos AllJoyn (productores AllJoyn). Muchos de los mismos pasos de configuración son necesarios para habilitar la comunicación con las aplicaciones de productores AllJoyn de UWP, pero se dejarán más detalles en las próximas entradas y artículos de blog.
 
 ### <a name="app-development-checklist"></a>Lista de comprobación de desarrollo de aplicaciones
 
-Si está escribiendo aplicaciones para UWP para Windows 10, primero debe asegurarse:
+Si va a escribir aplicaciones para UWP para Windows 10, debe asegurarse de que:
 
-1. Se ha declarado la función 'allJoyn' en el manifiesto de la aplicación (tenga en cuenta mayúsculas y minúsculas).
-2. Ha seleccionado la arquitectura específica que se va a dirigir. (Necesario en algunos casos porque no se pueden compilar los componentes de Windows en tiempo de ejecución mediante "Any CPU", un problema conocido con algunas Visual Studio 2017 se basa).
+1. Ha declarado la funcionalidad ' allJoyn ' en el manifiesto de la aplicación (con mayúsculas y minúsculas).
+2. Ha seleccionado la arquitectura específica de destino. (Se requiere en algunos casos porque Windows Runtime componentes no se pueden compilar con ' any CPU ', un problema conocido con algunas compilaciones de Visual Studio 2017).
 
-Si está escribiendo una aplicación o software de dispositivo que no es una aplicación basada en UWP para Windows 10, debe revisar la siguiente lista de comprobación para garantizar la compatibilidad con AllJoyn en Windows 10:
+Si va a escribir una aplicación o software de dispositivo que no es una aplicación basada en UWP para Windows 10, debe revisar la siguiente lista de comprobación para garantizar la compatibilidad con AllJoyn en Windows 10:
 
-1. Si implementa un productor, asegúrese de que acerca de la interfaz y el anuncio y detección basada en About se usan. Es la interfaz About [documentada en el sitio Web de AllSeen Alliance](https://allseenalliance.org/developers/learn/core/about-announcement/interface).
-2. Para obtener mejores resultados, use la base de código AllJoyn 15.04, disponible en el [sección de descargas](https://allseenalliance.org/developers/download) del sitio Web AllSeen Alliance.
+1. Si va a implementar un productor, asegúrese de que se están usando la interfaz about y la detección de anuncios basados en. La interfaz about se [documenta en el sitio web de AllSeen Alliance](https://allseenalliance.org/developers/learn/core/about-announcement/interface).
+2. Para obtener los mejores resultados, use la base de código AllJoyn 15,04, disponible en la [sección de descargas](https://allseenalliance.org/developers/download) del sitio web de AllSeen Alliance.
 
-### <a name="network-setup-and-troubleshooting"></a>Configuración de red y la solución de problemas
+### <a name="network-setup-and-troubleshooting"></a>Configuración y solución de problemas de red
 
-Para que los dispositivos AllJoyn ser capaz de descubrir e interactuar entre sí, la configuración de red y la configuración para cada dispositivo debe cumplir lo siguiente:
+Para que los dispositivos AllJoyn puedan detectar e interactuar entre sí, la configuración de red y la configuración de cada dispositivo deben cumplir lo siguiente:
 
-1. Todos los dispositivos de AllJoyn están conectados a la misma red y en la misma subred.
-2. Windows 10 PC: "Buscar dispositivos y el contenido" está habilitada para la red en uso con AllJoyn (no es aplicable para Phone).
+1. Todos los dispositivos AllJoyn están conectados a la misma red y se encuentran en la misma subred.
+2. PC con Windows 10: "Buscar dispositivos y contenido" está habilitado para la red en uso con AllJoyn (no se aplica al teléfono).
 
-En un equipo puede usar el comando de la ruta de seguimiento desde una ventana CMD o PowerShell para comprobar si otro máquina/el dispositivo está en la misma subred como sigue:
+En un equipo, puede usar el comando seguimiento de ruta desde una ventana de CMD o PowerShell para comprobar si otro equipo o dispositivo está en la misma subred de la manera siguiente:
 
     PS C:\Users\user> tracert WIN10PC1
      
@@ -57,23 +57,23 @@ En un equipo puede usar el comando de la ruta de seguimiento desde una ventana C
      
     Trace complete.
 
-Aquí la primera salida número es el número de saltos, y dado que ese valor es "1" significa que ambos equipos están en la misma subred.
+La salida del primer número aquí es el número de saltos, y dado que ese valor es "1", significa que ambos equipos están en la misma subred.
 
-A continuación es un ejemplo de una configuración de red AllJoyn típica. En este ejemplo, todos los dispositivos que se muestran sería capaz de descubrir e interactuar entre sí mediante AllJoyn suponiendo que estuvieran en la misma subred.
+A continuación se muestra un ejemplo de una configuración de red de AllJoyn típica. En este ejemplo, todos los dispositivos mostrados podrían detectarse e interactuar entre sí mediante AllJoyn suponiendo que estuvieran en la misma subred.
 
 ![AJ_Troubleshooting_Devices](../media/AllJoyn/AJ_Troubleshooting_Devices.jpg)
 
-Cuando se conecta el equipo con Windows 10 a la red con dispositivos AllJoyn, deberá si se muestra un cuadro de diálogo con respecto a los equipos y dispositivos de la búsqueda en la red, haga clic en "Sí". (Tenga en cuenta: Esto no es aplicable al unirse a redes de teléfonos con Windows 10, porque no hay ningún cuadro de diálogo tal).
+Al conectar su equipo con Windows 10 a la red con dispositivos AllJoyn, deberá hacer clic en "sí" si se muestra un cuadro de diálogo con respecto a la búsqueda de dispositivos y equipos en la red. Tenga en cuenta Esto no se aplica al unir redes desde Windows 10 Phone, ya que no hay ningún cuadro de diálogo de este tipo.
 
-También puede administrar esta configuración en la página "Configuración avanzada" en la configuración de Wi-Fi como se muestra aquí: (esta página puede ser ligeramente diferente dependiendo de la compilación de Windows 10 Insider usa)
+También puede administrar esta opción en la página "configuración avanzada" en configuración de Wi-Fi, como se muestra aquí: (esta página puede tener un aspecto ligeramente diferente en función de la compilación de Windows 10 Insider que esté usando)
 
 ![AJ_Troubleshooting_Settings](../media/AllJoyn/AJ_Troubleshooting_Settings.jpg)
 
-El botón de alternancia para "Buscar dispositivos y el contenido" debe estar en la posición "On" para habilitar la funcionalidad de AllJoyn.
+La alternancia de "buscar dispositivos y contenido" debe estar en la posición "activado" para habilitar la funcionalidad AllJoyn.
 
-Para las conexiones de red existentes, puede validar fácilmente si esta opción está configurada correctamente, ejecute el cmdlet de Powershell "Get-NetConnectionProfile". (Tenga en cuenta que esto no es aplicable para teléfonos con Windows 10).
+En el caso de las conexiones de red existentes, puede validar fácilmente si esta opción está configurada correctamente mediante la ejecución del cmdlet de PowerShell "Get-NetConnectionProfile". (Tenga en cuenta que esto no se aplica a Windows 10 Phone).
 
-Ejemplo de salida de Get-NetConnectionProfile:
+Ejemplo de salida Get-NetConnectionProfile:
 
     PS C:\Users\user> Get-NetConnectionProfile
      
@@ -85,13 +85,13 @@ Ejemplo de salida de Get-NetConnectionProfile:
     IPv6Connectivity : LocalNetwork
 
 
-Si el valor de "NetworkCategory" es "Private" (como se muestra arriba), esto indica que ha configurado correctamente la conexión de red para AllJoyn.
+Si el valor "NetworkCategory" es "Private" (como se mostró anteriormente), significa que ha configurado correctamente la conexión de red para AllJoyn.
 
-### <a name="about-advertisement-and-troubleshooting-discovery-with-getajxmlexe"></a>Acerca de la publicidad y la solución de problemas de detección con Getajxml.exe
+### <a name="about-advertisement-and-troubleshooting-discovery-with-getajxmlexe"></a>Acerca de la detección de anuncios y solución de problemas con Getajxml. exe
 
-Para que los dispositivos de productor de AllJoyn o las aplicaciones para que sea reconocible por las aplicaciones de Windows 10 UWP AllJoyn, detección basada en sobre debe implementarse correctamente. Esto se puede comprobar fácilmente con la herramienta GetAjXml.exe. Para obtener información de descarga y uso relacionados con GetAjXml.exe, consulte [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286).
+Para que las aplicaciones de AllJoyn de Windows 10 UWP puedan detectar aplicaciones o dispositivos productores de AllJoyn, la detección basada en se debe implementar correctamente. Esto puede comprobarse fácilmente con la herramienta GetAjXml. exe. Para buscar información de uso y descarga relacionada con GetAjXml. exe, consulte [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286).
 
-A continuación muestra la salida GetAjXml.exe para un dispositivo de ejemplo que admite la detección basada en sobre:
+A continuación se muestra la salida de GetAjXml. exe para un dispositivo de ejemplo que admite la detección basada en about:
 
     ----------------------------------------------------------------------
     Discovery   : About Announcement
@@ -110,26 +110,26 @@ A continuación muestra la salida GetAjXml.exe para un dispositivo de ejemplo qu
           :3yZG_wu1.2                       25 /warning
 
 
-En el ejemplo anterior, puesto que `Discovery   : About Announcement` se incluyó en esta salida, este productor AllJoyn podrán detectar aplicaciones AllJoyn de Windows 10 UWP. Si no ve esta salida para un productor AllJoyn determinado, deberá investigar la implementación de detección en el lado del dispositivo (productor).
+En el ejemplo anterior, como `Discovery   : About Announcement` se incluyó en esta salida, las aplicaciones de UWP de alljoyn de Windows 10 detectarán este productor alljoyn. Si no ve esta salida para un productor AllJoyn determinado, deberá investigar la implementación de la detección en el lado del dispositivo (productor).
 
-### <a name="advanced-troubleshooting-with-etw-log-output"></a>Solución avanzada de problemas con la salida del registro ETW
+### <a name="advanced-troubleshooting-with-etw-log-output"></a>Solución avanzada de problemas con la salida del registro de ETW
 
-Seguimiento de eventos para Windows (ETW) puede ayudarle a obtener información de depuración para muchas de las distintas características de Windows avanzada. Afortunadamente AllJoyn es una de las características con registro de soporte técnico, por lo que en esta sección mostraré cómo habilitar el registro para AllJoyn ETW y cómo tener acceso a los registros ETW.
+Seguimiento de eventos para Windows (ETW) puede ayudarle a obtener información de depuración avanzada para muchas características diferentes de Windows. Afortunadamente, AllJoyn es una de las características de compatibilidad con el registro de ETW, por lo que en esta sección le mostraré cómo habilitar el registro de ETW para AllJoyn y cómo obtener acceso a los registros.
 
-1. Inicie el Visor de eventos escribiendo "Registros de eventos" en el cuadro de texto de búsqueda del menú Inicio, seleccione "ver registros de eventos".
-2. En el menú "Ver", asegúrese de que se activa "Mostrar registros analíticos y de depuración".
-3. Vaya a la vista de árbol en el panel de navegación izquierdo para "Aplicaciones y servicios registros > Microsoft > Windows > AllJoyn" en la vista de carpetas y habilite el canal de depuración y el canal operativo. (vea un cuadro rojo en la siguiente captura de pantalla).
+1. Inicie el Visor de eventos escribiendo "registros de eventos" en el cuadro de texto de búsqueda del menú Inicio y seleccione "Ver registros de eventos".
+2. En el menú "ver", asegúrese de que está activada la casilla "Mostrar registros analíticos y de depuración".
+3. Navegue por la vista de árbol en el panel de navegación izquierdo hasta "registros de aplicaciones y servicios > Microsoft > Windows > AllJoyn" en la vista de carpetas y habilite el canal de depuración y el canal operativo. (vea el cuadro rojo en la captura de pantalla siguiente).
 4. Reproduzca el problema que está experimentando con AllJoyn.
-5. Haga clic en "Actualización" en la barra de la derecha "acciones", a continuación, compruebe los canales operativos y de depuración en la barra de navegación izquierdo debajo de la carpeta "AllJoyn".
+5. Haga clic en "actualizar" en la barra derecha "acciones" y, a continuación, compruebe los canales operativos y de depuración en la barra de navegación izquierda bajo la carpeta "AllJoyn".
 
 ![AJ_Troubleshooting_ETW](../media/AllJoyn/AJ_Troubleshooting_ETW.jpg)
 
-Los seguimientos de ETW AllJoyn se dividen en particiones como sigue:
+Los seguimientos de ETW de AllJoyn tienen particiones como se indica a continuación:
 
-- Canal de depuración: Seguimientos detallados, no-error/informativo
-- Canal operativo: Seguimientos de errores, errores son sólo de salida en el canal operativo
+- Canal de depuración: Seguimientos detallados, no erróneos o informativos
+- Canal operativo: Seguimientos de errores, los errores solo se muestran en el canal operativo
 
-Con el fin de extraer información de las entradas ETW, puede hacer doble clic en una entrada en la vista de lista para un canal determinado y, a continuación, seleccione "Copiar" y, a continuación, en "Copiar detalles como texto". Si, a continuación, pegar el texto correspondiente en un editor de texto, tendrá los detalles, como en el ejemplo siguiente:
+Para extraer información de las entradas ETW, puede hacer clic con el botón secundario en una entrada de la vista de lista para un canal determinado y, a continuación, seleccionar "copiar" y, a continuación, "copiar detalles como texto". Si después pega el texto correspondiente en un editor de texto, tendrá detalles como el ejemplo siguiente:
 
 
     Log Name:       Microsoft-Windows-AllJoyn/Operational
@@ -174,13 +174,13 @@ Con el fin de extraer información de las entradas ETW, puede hacer doble clic e
     </Event>
 
 
-Esta información puede ayudar a localizar problemas de AllJoyn o ayudar a proporcionar detalles al notificar problemas a Microsoft o a otros asociados. Puede obtener más información acerca de [ETW seguimientos y el Visor de eventos en MSDN](https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx).
+Esta información puede ayudar a realizar un seguimiento de los problemas de AllJoyn o ayudar a proporcionar detalles al informar de problemas a Microsoft o a otros asociados. Puede obtener más información acerca de [los seguimientos de ETW y el visor de eventos en MSDN](https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx).
 
 ### <a name="known-issues-and-limitations"></a>Problemas y limitaciones conocidos
 
-Limitaciones de diseño para AllJoyn de Windows 10:
+Limitaciones de diseño de AllJoyn en Windows 10:
 
-- El nodo de AllJoyn Router no es iniciado automáticamente por AllJoyn dispositivos o aplicaciones en la red cuando no hay aplicaciones se ejecutan en el equipo con Windows 10. El nodo de enrutador de Windows 10 se puede iniciar desde un símbolo del sistema con privilegios elevados o una sesión de Powershell ejecutando el comando "net start ajrouter".
-- Aplicaciones AllJoyn UWP no pueden detectar ni interactuar con otras aplicaciones de AllJoyn UWP o aplicaciones de escritorio de AllJoyn que se ejecutan en el mismo equipo. Esta es una parte de la promesa de aislamiento de aplicación se implementa en Windows 10 para aplicaciones UWP. 
-  - Si implementa una aplicación de AllJoyn UWP desde Visual Studio, el aislamiento de aplicación de aislamiento de aplicaciones se omite para esa aplicación (Esto se denomina una exención de bucle invertido""). Cada aplicación para UWP que se implemente desde Visual Studio podrá descubrir e interactuar con otras aplicaciones de escritorio y aplicaciones UWP de exención de bucle invertido, siempre y cuando esas aplicaciones usan anuncio/detección basada en sobre. Si está ejecutando Windows 10 IoT Core en "Modo incrustado", automáticamente se aplica esta excepción de bucle invertido, no es algo que deba configurar. Puede leer más sobre las excepciones de bucle invertido [en MSDN](https://msdn.microsoft.com/library/windows/apps/Hh780593.aspx).
+- Los dispositivos o aplicaciones de AllJoyn no inician automáticamente el nodo del enrutador AllJoyn en la red cuando no se ejecuta ninguna aplicación en el equipo con Windows 10. El nodo del enrutador de Windows 10 se puede iniciar desde un símbolo del sistema con privilegios elevados o desde una sesión de PowerShell mediante la ejecución del comando "net start ajrouter".
+- Las aplicaciones para UWP de AllJoyn no pueden detectar ni interactuar con otras aplicaciones de UWP de AllJoyn ni con aplicaciones de escritorio AllJoyn que se ejecuten en el mismo equipo. Esta es una parte de la promesa de aislamiento de aplicaciones que se implementa en Windows 10 para aplicaciones para UWP. 
+  - Si implementa una aplicación de UWP de AllJoyn desde Visual Studio, se omite el aislamiento de aplicaciones de aislamiento de aplicaciones para esa aplicación (esto se denomina "exención de bucle invertido"). Cada aplicación de UWP que se implemente desde Visual Studio podrá detectar e interactuar con otras aplicaciones UWP de exención de bucle invertido y aplicaciones de escritorio, siempre y cuando esas aplicaciones usen la detección y el anuncio basados en. Si está ejecutando Windows 10 IoT Core en "modo incrustado", esta excepción de bucle invertido se aplica automáticamente, no es algo que deba configurar. Puede obtener más información sobre las excepciones [de bucle invertido en MSDN](https://msdn.microsoft.com/library/windows/apps/Hh780593.aspx).
 

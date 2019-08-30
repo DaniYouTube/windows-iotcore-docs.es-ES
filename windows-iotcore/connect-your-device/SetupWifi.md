@@ -1,62 +1,62 @@
 ---
-title: Uso de Wi-Fi en el dispositivo Windows 10 IoT Core
+title: Usar Wi-Fi en el dispositivo de Windows 10 IoT Core
 author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Aprenda a usar, de instalación y configuración de Wi-Fi en el dispositivo Windows 10 IoT Core.
-keywords: Windows iot, Wi-Fi, el programa de instalación, los dispositivos
+description: Aprenda a usar, configurar y configurar Wi-Fi en el dispositivo de Windows 10 IoT Core.
+keywords: Windows IOT, Wi-Fi, instalación, dispositivos
 ms.openlocfilehash: 20f61114323baa60c8052038df68a8c172ce1c95
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60169499"
 ---
-# <a name="using-wifi-on-your-windows-10-iot-core-device"></a>Uso de Wi-Fi en el dispositivo Windows 10 IoT Core
+# <a name="using-wifi-on-your-windows-10-iot-core-device"></a>Usar Wi-Fi en el dispositivo de Windows 10 IoT Core
 
-Wi-Fi se admite en dispositivos Windows 10 IoT Core mediante el uso de un adaptador USB Wi-Fi. Uso de Wi-Fi proporciona toda la funcionalidad de una conexión con cable, incluidos [SSH](../connect-your-device/SSH.md), [Powershell](../connect-your-device/PowerShell.md), [Windows Device Portal](../manage-your-device/DevicePortal.md)y depurar la aplicación e implementación.
+Wi-Fi es compatible con dispositivos Windows 10 IoT Core mediante el uso de un adaptador de USB WiFi. El uso de la red Wi-Fi proporciona toda la funcionalidad de una conexión cableada, como [ssh](../connect-your-device/SSH.md), [PowerShell](../connect-your-device/PowerShell.md), el [portal de dispositivos de Windows](../manage-your-device/DevicePortal.md)y la depuración e implementación de aplicaciones.
 
 > [!NOTE]
-> Conexión de un cable Ethernet con cable invalidará Wi-Fi como la interfaz de red predeterminada.
+> La conexión de un cable Ethernet cableado invalidará Wi-Fi como la interfaz de red predeterminada.
 
-### <a name="supported-adapters"></a>Adaptadores compatibles
-Una lista de adaptadores de red Wi-Fi que se han probado en Windows 10 IoT Core puede encontrarse en nuestra [Hardware admite](../learn-about-hardware/HardwareCompatList.md) página.
+### <a name="supported-adapters"></a>Adaptadores admitidos
+Puede encontrar una lista de adaptadores de Wi-Fi que se han probado en Windows 10 IoT Core en nuestra página de [hardware compatible](../learn-about-hardware/HardwareCompatList.md) .
 
 ### <a name="configuring-wifi"></a>Configuración de Wi-Fi
-Para utilizar Wi-Fi, deberá proporcionar las credenciales de red Wi-Fi a Windows 10 IoT core. Además de la documentación sobre cómo compilar la aplicación complementaria y soluciones personalizadas de WPS, hay varias opciones diferentes para hacerlo, por lo que se enumeran a continuación.
+Para usar Wi-Fi, debe proporcionar Windows 10 IoT Core con las credenciales de red WiFi. Además de la documentación sobre cómo crear soluciones personalizadas de aplicación y WPS, hay varias opciones para hacerlo que se indican a continuación.
 
-## <a name="custom-companion-app--wps-wi-fi-onboarding-samples"></a>Aplicación personalizada complementaria y ejemplos de incorporación de Wi-Fi WPS
+## <a name="custom-companion-app--wps-wi-fi-onboarding-samples"></a>Ejemplos de incorporación de aplicaciones complementarias & WPS Wi-Fi
 
-Actualmente, se ofrecen una serie de formas para que los desarrolladores crear una solución de incorporación de red Wi-Fi personalizado para su dispositivo. 
+Actualmente, ofrecemos varias maneras para que los desarrolladores creen una solución de incorporación Wi-Fi personalizada para su dispositivo. 
 
-> | Muestras | Descripción | Ventajas  |  Inconvenientes  |
+> | Muestras | Descripción | Ventajas  |  Desventajas  |
 > |-------------|----------|---------|---------|
-> | [Aplicación complementaria](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/CompanionApp) | Creación de una aplicación simple que puede configurar Wi-Fi su dispositivo. |  Fácil de usar; Puntas o sin periféricos de IoT Core; Los clientes funcionan en varias plataformas | Programador crea su propio protocolo; requiere que el desarrollador implementar la seguridad |
-> | [Incorporación de IoT con RFCOMM de Bluetooth](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTOnboarding_RFCOMM) | Crear soluciones para configurar el dispositivo sin periféricos de IoT para conectar con su red Wi-Fi mediante RFCOMM de Bluetooth.  | Relevantes en dispositivos con cabezal o sin periféricos; Usa tecnologías conocidas y conceptos: No requiere de dispositivo IoT para iniciar un SoftAP; No es necesario ajustar la configuración de firewall | Requiere compatibilidad con Bluetooth para dispositivos de cliente y servidor; Ejemplo proporciona sólo la aplicación cliente para Windows 10; Servidor aplicación pre-defines/codifica los nombres de los dispositivos cliente. |
-> | [Incorporación de IoT con AllJoyn](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTOnboarding) | Unirse de forma remota el dispositivo de IoT sin periféricos con la red Wi-Fi doméstica. | Funciona con AllJoyn | Compatibilidad para AllJoyn está en desuso |
-> | Wi-Fi Protected Setup (WPS) API para los dispositivos | Ejecutar la detección WPS para consultar los métodos WPS admitidos por la red. | Simplemente Aproveche el [WiFiAdapter.GetWpsConfigurationAsync (WiFiAvailableNetwork](https://docs.microsoft.com/uwp/api/windows.devices.wifi.wifiadapter.getwpsconfigurationasync) y [WiFiAdapter.ConnectAsync](https://docs.microsoft.com/uwp/api/windows.devices.wifi.wifiadapter.connectasync) métodos para conectar dispositivos de wi-fi a redes específicas. | Deberá familiarizarse con estas API aprovecharlas.; solo es compatible con enrutadores compatibles con WPS|
+> | [Aplicación complementaria](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/CompanionApp) | Cree una aplicación de Xamarin sencilla que pueda configurar la Wi-Fi del dispositivo. |  Fácil de usar; Con cabeza o sin cabezal para IoT Core; Los clientes funcionan entre plataformas | El desarrollador está creando su propio protocolo; requiere que el desarrollador implemente la seguridad |
+> | [Incorporación de IoT con Bluetooth RFCOMM](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTOnboarding_RFCOMM) | Cree una solución para configurar el dispositivo IoT sin periféricos con el fin de conectarse a la red Wi-Fi mediante Bluetooth RFCOMM.  | Relevante en dispositivos con cabeza o sin periféricos; Utiliza tecnologías y conceptos conocidos; No requiere que el dispositivo IoT inicie un SoftAP; No es necesario ajustar la configuración del firewall | Requiere compatibilidad con Bluetooth para dispositivos cliente y servidor; El ejemplo solo proporciona la aplicación cliente para Windows 10; La aplicación de servidor define previamente o codifica los nombres del dispositivo cliente. |
+> | [Incorporación de IoT con AllJoyn](https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTOnboarding) | Unir de forma remota el dispositivo de IoT sin periféricos con la red Wi-Fi doméstica. | Funciona con AllJoyn | Parte de la compatibilidad con AllJoyn está en desuso. |
+> | API de instalación protegida Wi-Fi (WPS) para dispositivos | Realice la detección de WPS para consultar los métodos WPS admitidos por la red. | Simplemente aproveche los métodos [WiFiAdapter. GetWpsConfigurationAsync (WiFiAvailableNetwork](https://docs.microsoft.com/uwp/api/windows.devices.wifi.wifiadapter.getwpsconfigurationasync) y [WiFiAdapter. ConnectAsync](https://docs.microsoft.com/uwp/api/windows.devices.wifi.wifiadapter.connectasync) para conectar dispositivos Wi-Fi a redes específicas. | Deberá familiarizarse con estas API para aprovecharlas. solo compatible con enrutadores habilitados para WPS|
 
-## <a name="headed-options"></a>Opciones de punta:
+## <a name="headed-options"></a>Opciones de cabeza:
 
 ### <a name="option-1-startup-configuration"></a>Opción 1: Configuración de inicio
-**Requisito previo:** El dispositivo de Windows 10 IoT core necesita un mouse, teclado, mostrar y adaptador de Wi-Fi USB conectado
+**Requisitos previos** El dispositivo Windows 10 IoT Core necesita un mouse, un teclado, una pantalla y un adaptador WiFi USB conectados
 
-La primera vez que arranque Windows 10 IoT Core con un adaptador USB Wi-Fi compatible, se le mostrará una pantalla de configuración.
-En la pantalla de configuración, seleccione la red Wi-Fi que le gustaría conectar a y proporcionar la contraseña. Haga clic en **conectar** para iniciar la conexión.
+La primera vez que inicie Windows 10 IoT Core con un adaptador de USB WiFi compatible, aparecerá una pantalla de configuración.
+En la pantalla Configuración, seleccione la red Wi-Fi a la que le gustaría conectarse y proporcione la contraseña. Haga clic en **conectar** para iniciar la conexión.
 
-![Pantalla de inicio de configuración de Wi-Fi](../media/SetupWiFi/WiFiStartupConfig.png)
+![Pantalla de configuración de Wi-Fi de inicio](../media/SetupWiFi/WiFiStartupConfig.png)
 
-### <a name="option-2-default-app-configuration"></a>Opción 2: Configuración de la aplicación predeterminada
-**Requisito previo:** El dispositivo de Windows 10 IoT core necesita un mouse, teclado, mostrar y adaptador de Wi-Fi USB conectado
+### <a name="option-2-default-app-configuration"></a>Opción 2: Configuración predeterminada de la aplicación
+**Requisitos previos** El dispositivo Windows 10 IoT Core necesita un mouse, un teclado, una pantalla y un adaptador WiFi USB conectados
 
-Configuración de Wi-Fi de forma alternativa es usar la aplicación predeterminada. Puede utilizarlo para configurar o modificar la configuración de Wi-Fi después de que el dispositivo se ha iniciado.
+Una manera alternativa de configurar Wi-Fi es usar la aplicación predeterminada. Puede usar esta opción para configurar o modificar la configuración de Wi-Fi una vez arrancado el dispositivo.
 
-1. Haga clic en el icono de configuración en forma de engranaje en la página principal
-2. Seleccione **Wi-Fi & red** en el panel izquierdo
-3. Haga clic en la red Wi-Fi que desea conectarse. Escriba la contraseña si se le solicita y haga clic en **Connect**
+1. Haga clic en el icono de configuración con forma de engranaje de la Página principal.
+2. Seleccionar **red & Wi-Fi** en el panel izquierdo
+3. Haga clic en la red Wi-Fi a la que desea conectarse. Proporcione la contraseña si se le solicita y haga clic en **conectar** .
 
-![Configuración de Wi-Fi de aplicación predeterminada](../media/SetupWiFi/DefaultAppWiFiConfig.png)
+![Configuración de la aplicación Wi-Fi predeterminada](../media/SetupWiFi/DefaultAppWiFiConfig.png)
 
 ## <a name="headless-options"></a>Opciones sin periféricos:
 
@@ -64,61 +64,61 @@ Configuración de Wi-Fi de forma alternativa es usar la aplicación predetermina
 
 
 ### <a name="option-1-web-based-configuration"></a>Opción 1: Configuración basada en Web
-**Requisito previo:** El dispositivo ya debe estar conectado a la red local a través de Ethernet y debe conectado un adaptador de USB Wi-Fi
+**Requisitos previos** El dispositivo ya tendrá que estar conectado a la red local a través de Ethernet y debe tener un adaptador de USB WiFi conectado
 
-Si tiene dispositivos un con ninguna interfaz de usuario, mostrar o dispositivos de entrada, puede configurar a través de la [Windows Device Portal](../manage-your-device/DevicePortal.md).
-En **panel de Windows 10 IoT Core**, *haga clic en* en el **abrir en el Portal de dispositivo** icono para el dispositivo.
+Si tiene el dispositivo a sin interfaz de usuario, pantalla o dispositivos de entrada, todavía puede configurarlo a través del [portal de dispositivos de Windows](../manage-your-device/DevicePortal.md).
+En el **Panel de Windows 10 IOT Core**, *haga clic* en el icono **abrir en el portal de dispositivos** del dispositivo.
 
 <!-- This content is replicated at en-US/Docs/KitSetupRPI.md -->
 
-1. Escriba **administrador** para el nombre de usuario y proporcione la contraseña (p@ssw0rd de forma predeterminada)
-2. Haga clic en **red** en el panel izquierdo
-3. En **redes disponibles**, seleccione que le gustaría conectar a y proporcionar las credenciales de conexión de red. Haga clic en **Connect** para iniciar la conexión
+1. Escriba **Administrador** para el nombre de usuario y proporcione su contraseñap@ssw0rd (de forma predeterminada).
+2. Haga clic en **red** en el panel izquierdo.
+3. En **redes disponibles**, seleccione la red a la que desea conectarse y proporcione las credenciales de conexión. Haga clic en **conectar** para iniciar la conexión.
 
-![Configuración de Wi-Fi basado en Web](../media/SetupWiFi/WebBWiFiConfig.png)
+![Configuración de Wi-Fi basada en Web](../media/SetupWiFi/WebBWiFiConfig.png)
 
 <!-- End of Replicated Content -->
 
 
-### <a name="option-2-connect-using-wifi-profiles"></a>Opción 2: Conectarse mediante perfiles de Wi-Fi
+### <a name="option-2-connect-using-wifi-profiles"></a>Opción 2: Conexión mediante perfiles de Wi-Fi
 
-**Requisito previo:** El dispositivo ya debe estar conectado a la red local a través de Ethernet y debe conectado un adaptador de USB Wi-Fi. También necesita un equipo Windows con la funcionalidad de Wi-Fi.
+**Requisitos previos** El dispositivo ya tendrá que estar conectado a la red local a través de Ethernet y debe tener un adaptador de USB WiFi conectado. También necesita un equipo Windows con capacidad WiFi.
 
-Se admite la configuración de Wi-Fi mediante perfiles inalámbricos en Windows 10 IoT Core. Consulte [MSDN](https://msdn.microsoft.com/library/windows/desktop/aa369853) para obtener información detallada y ejemplos.
+La configuración de Wi-Fi mediante perfiles inalámbricos se admite en Windows 10 IoT Core. Consulte [MSDN](https://msdn.microsoft.com/library/windows/desktop/aa369853) para obtener más información y ejemplos.
 
-1. Conectar el equipo de Windows a la red inalámbrica deseada y cree el archivo XML de perfil de Wi-Fi con estos comandos:
+1. Conecte el equipo Windows a la red inalámbrica deseada y cree el archivo XML del perfil de Wi-Fi con estos comandos:
 
-    * `netsh wlan show profiles` -> Buscar el nombre del perfil que acaba de agregar
+    * `netsh wlan show profiles`-> buscar el nombre del perfil que acaba de agregar
 
-    * `netsh wlan export profile name=<your profilename>`. El perfil se exportarán a un archivo XML
+    * `netsh wlan export profile name=<your profilename>` Se exportará el perfil a un archivo XML.
 
-2. Abra un **Explorador de archivos** ventana y en el tipo de la barra de dirección `\\<TARGET_DEVICE>\C$\` y, a continuación, presione ENTRAR.  En este caso concreto, `<TARGET_DEVICE>` es el nombre o la dirección IP del dispositivo Windows 10 IoT Core:
+2. Abra una ventana del **Explorador de archivos** y, en la barra de `\\<TARGET_DEVICE>\C$\` direcciones, escriba y presione Entrar.  En este caso concreto, `<TARGET_DEVICE>` es el nombre o la dirección IP del dispositivo de Windows 10 IOT Core:
 
-    ![SMB con el Explorador de archivos](../media/SetupWifi/smb1.png)
+    ![SMB con el explorador de archivos](../media/SetupWifi/smb1.png)
 
-    Si se le pide un nombre de usuario y contraseña, utilice las credenciales siguientes:
+    Si se le pide un nombre de usuario y una contraseña, use las credenciales siguientes:
 
         User Name: <TARGET_DEVICE>\Administrator
         Password:  p@ssw0rd
 
-    ![SMB con el Explorador de archivos](../media/SetupWifi/cred1.png)
+    ![SMB con el explorador de archivos](../media/SetupWifi/cred1.png)
 
 > [!NOTE]
-> Es **recomienda** que actualizar la contraseña predeterminada para la cuenta de administrador.  Siga las instrucciones que encontrará [aquí](../connect-your-device/PowerShell.md).
+> Se **recomienda encarecidamente** que actualice la contraseña predeterminada para la cuenta de administrador.  Siga las instrucciones que se encuentran [aquí](../connect-your-device/PowerShell.md).
 
-3. Copie el archivo XML de perfil de Wi-Fi exportado desde el equipo de Windows para el dispositivo Windows 10 IoT Core
+3. Copiar el archivo XML del perfil de Wi-Fi exportado del equipo de Windows en el dispositivo de Windows 10 IoT Core
 
-4. Conéctese a su dispositivo con [PowerShell](../connect-your-device/PowerShell.md) y agregue el nuevo perfil de Wi-Fi a su dispositivo mediante la ejecución de los siguientes comandos
+4. Conéctese al dispositivo mediante [PowerShell](../connect-your-device/PowerShell.md) y agregue el nuevo perfil de Wi-Fi al dispositivo mediante la ejecución de los siguientes comandos.
 
     * `netsh wlan add profile filename=<copied XML path>`
 
     * `netsh wlan show profiles`
 
-5. Conecte el dispositivo de Windows 10 IoT Core a una red inalámbrica a través de netsh
+5. Conexión del dispositivo Windows 10 IoT Core a la red inalámbrica a través de Netsh
 
     * `netsh wlan connect name=<profile name>`
 
-6. Compruebe que el dispositivo está conectado a la red inalámbrica y puede conectarse a internet
+6. Compruebe que el dispositivo está conectado a la red inalámbrica y puede conectarse a Internet.
 
     * `netsh wlan show interfaces`
 
@@ -127,12 +127,12 @@ Se admite la configuración de Wi-Fi mediante perfiles inalámbricos en Windows 
     * `ping /S <your WiFi adapter ip address> bing.com`
 
 
-#### <a name="connecting-to-wpa2-psk-personal-networks"></a>Conexión a redes WPA2-PSK Personal
+#### <a name="connecting-to-wpa2-psk-personal-networks"></a>Conexión a redes personales WPA2-PSK
 
-Si necesita conectarse a una red Wi-Fi de WPA2-PSK Personal, siga las instrucciones anteriores en primer lugar, pero realizar los cambios siguientes en el archivo XML. La única diferencia es que, cuando su PC de Windows se exporta el código XML cifra la contraseña.
+Si necesita conectarse a una red Wi-Fi personal WiFi, siga primero las instrucciones anteriores, pero realice los cambios siguientes en el archivo XML. La única diferencia es que cuando el equipo Windows exporta el XML, cifra la contraseña.
 
 > [!WARNING] 
-> Esto hará que la conexión no segura.
+> Esto hará que la conexión no sea segura.
 
 Perfil XML exportado desde PC Windows:
 
@@ -143,7 +143,7 @@ Perfil XML exportado desde PC Windows:
     </sharedKey>
 
 
-Los cambios necesitan para trabajar en Windows 10 IoT Core:
+Cambios necesarios para trabajar en Windows 10 IoT Core:
 
     <sharedKey>
         <keyType>passPhrase</keyType>

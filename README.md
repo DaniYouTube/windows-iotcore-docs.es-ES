@@ -1,7 +1,7 @@
-## <a name="microsoft-open-source-code-of-conduct"></a>Código de conducta del código abierto de Microsoft
+## <a name="microsoft-open-source-code-of-conduct"></a>Código de conducta de código abierto de Microsoft
 
-Este proyecto ha adoptado el [código de conducta del código abierto de Microsoft](https://opensource.microsoft.com/codeofconduct/).
-Para obtener más información, vea las [preguntas más frecuentes sobre el código de conducta](https://opensource.microsoft.com/codeofconduct/faq/) o póngase en contacto con [opencode@microsoft.com](mailto:opencode@microsoft.com) si tiene preguntas o comentarios adicionales.
+Este proyecto ha adoptado el [código de conducta de código abierto de Microsoft](https://opensource.microsoft.com/codeofconduct/).
+Para obtener más información, vea las preguntas más [frecuentes sobre el código de conducta](https://opensource.microsoft.com/codeofconduct/faq/) o póngase en contacto [opencode@microsoft.com](mailto:opencode@microsoft.com) con si tiene preguntas o comentarios adicionales.
 
 # <a name="how-to-contribute-to-windows-10-iotcore-documentation"></a>Cómo contribuir a la documentación de Windows 10 IoTCore
 
@@ -101,4 +101,4 @@ Las imágenes se deben almacenar en una carpeta `media` y hacerles referencia co
 
 
 ## <a name="code-of-conduct"></a>Código de conducta
-Este proyecto ha adoptado el [código de conducta del código abierto de Microsoft](https://opensource.microsoft.com/codeofconduct/). Para obtener más información, vea las [preguntas más frecuentes sobre el código de conducta](https://opensource.microsoft.com/codeofconduct/faq/) o póngase en contacto con [opencode@microsoft.com](mailto:opencode@microsoft.com) si tiene preguntas o comentarios adicionales.
+Este proyecto ha adoptado el [código de conducta de código abierto de Microsoft](https://opensource.microsoft.com/codeofconduct/). Para obtener más información, vea las preguntas más [frecuentes sobre el código de conducta](https://opensource.microsoft.com/codeofconduct/faq/) o póngase en contacto [opencode@microsoft.com](mailto:opencode@microsoft.com) con si tiene preguntas o comentarios adicionales.

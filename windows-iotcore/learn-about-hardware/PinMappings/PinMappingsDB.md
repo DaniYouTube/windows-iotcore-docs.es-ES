@@ -1,43 +1,43 @@
 ---
-title: Asignaciones de Dragonboard Pin
+title: Asignaciones de Dragonboard PIN
 author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Obtenga información acerca de la funcionalidad de las asignaciones de pin para Dragonboard.
-keywords: asignaciones de Windows iot, Dragonboard, pin, GPIO
+description: Obtenga información sobre la funcionalidad de las asignaciones de PIN para Dragonboard.
+keywords: asignaciones de Windows IOT, Dragonboard, PIN, GPIO
 ms.openlocfilehash: f6df962c6d05aa912013f8f0819c0789bfc393ce
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59515078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60167691"
 ---
-# <a name="dragonboard-pin-mappings"></a>Asignaciones de Dragonboard Pin
+# <a name="dragonboard-pin-mappings"></a>Asignaciones de Dragonboard PIN
 
-![Encabezado Dragonboard Pin](../../media/PinMappingsDB/DB_Pinout.png)
+![Encabezado Dragonboard PIN](../../media/PinMappingsDB/DB_Pinout.png)
 
-Interfaces de hardware para el Dragonboard se exponen a través del encabezado de 40-pin en el panel. La funcionalidad incluye:
+Las interfaces de hardware de Dragonboard se exponen a través del encabezado 40-PIN en el panel. La funcionalidad incluye:
 
-* **x 11** -pines GPIO
-* **2 x** -UARTs serie
-* **1 x** -bus SPI
-* **2 x** -bus I2C
-* **1 x** -pin de alimentación de 5 v
-* **1 x** : 1,8 pin de energía
-* **4 x** -masa PIN
+* PIN de **11x** -GPIO
+* **2x** -UART en serie
+* Bus **1x** -SPI
+* Bus **2x** -I2C
+* PIN de alimentación de **1x** -5V
+* **1x** -1,8 v Power PIN
+* pines de la base **4x**
 
-Tenga en cuenta que el Dragonboard usa 1,8 niveles de lógica en todas las patillas de E/S. 
+Tenga en cuenta que Dragonboard usa niveles de lógica de 1,8 V en todos los pin de e/s. 
 
-## <a name="gpio-pins"></a>Pines GPIO
+## <a name="gpio-pins"></a>PIN de GPIO
 
-Echemos un vistazo a la GPIO disponible en este dispositivo.
+Echemos un vistazo al GPIO disponible en este dispositivo.
 
-### <a name="gpio-pin-table"></a>Tabla GPIO Pin
+### <a name="gpio-pin-table"></a>Tabla de PIN de GPIO
 
-Las clavijas GPIO siguientes son accesibles a través de API:
+Se puede acceder a los siguientes PIN de GPIO a través de las API:
 
-> | GPIO # | Pin de encabezado         |
+> | GPIO # | PIN de encabezado         |
 > |-------|--------------------|
 > | 36    | 23                 |
 > | 12    | 24                 |
@@ -50,11 +50,11 @@ Las clavijas GPIO siguientes son accesibles a través de API:
 > | 34    | 32                 |
 > | 28    | 33                 |
 > | 33    | 34                 |
-> | 21    | 1 de LED de usuario         | 
-> | 120   | 2 de LED de usuario         |         
+> | 21    | LED de usuario 1         | 
+> | 120   | LED de usuario 2         |         
 
 
-Por ejemplo, el siguiente código se abre **GPIO 35** como salida y escribe un digitales '**1**' out en el pin:
+Como ejemplo, el código siguiente abre **GPIO 35** como salida y escribe un '**1**' digital en el PIN:
          
 ```C#
 using Windows.Devices.Gpio;
@@ -69,32 +69,32 @@ public void GPIO()
 }
 ```
 
-### <a name="gpio-issues"></a>Problemas GPIO
+### <a name="gpio-issues"></a>Problemas de GPIO
 
-* Salida no funciona en GPIO 24. Entrada funciona bien.
-* PIN se configuran como InputPullDown durante el arranque, pero cambiará a la entrada (flotante) la primera vez que se abren.
-* Los PIN no volverá a su estado predeterminado al cerrar
-* Interrupciones falsas pueden verse cuando están habilitadas las interrupciones en varios PIN
-
-
-## <a name="serial-uart"></a>UART serie
-
-Hay dos UARTS serie en el Dragonboard **UART0** y **UART1**
-
-**UART0** tiene la norma **UART0 TX** y **UART0 RX** señales de líneas, junto con el flujo de controlan **UART0 CTS** y **UART0 RTS**.
-
-* Anclar 5 - **UART0 TX**
-* Anclar 7 - **UART0 RX**
-* Anclar 3 - **UART0 CTS**
-* Anclar 9 - **UART0 RTS**
+* La salida no funciona en GPIO 24. La entrada funciona bien.
+* Los PIN se configuran como InputPullDown en el arranque, pero cambiarán a la entrada (flotante) la primera vez que se abran.
+* Los PIN no revierten a su estado predeterminado al cerrarse
+* Se pueden producir interrupciones falsas cuando las interrupciones están habilitadas en varios PIN
 
 
-**UART1** incluye solamente el **UART1 TX** y **UART1 RX** líneas.
+## <a name="serial-uart"></a>UART en serie
 
-* Anclar 11 - **UART1 TX**
-* Anclar 13 - **UART1 RX**
+Hay dos UART en serie disponibles en Dragonboard **UART0** y **UART1**
 
-El ejemplo siguiente inicializa **UART1** y realiza una operación de escritura seguido por una lectura:
+**UART0** tiene las líneas de RX estándar **UART0 TX** y **UART0** , junto con las señales de control de flujo **UART0 CTS** y **UART0 RTS**.
+
+* Pin 5- **UART0 TX**
+* PIN 7- **UART0 RX**
+* PIN 3- **UART0 CTS**
+* PIN 9- **UART0 RTS**
+
+
+**UART1** incluye solo las líneas RX **UART1 TX** y **UART1** .
+
+* PIN 11- **UART1 TX**
+* PIN 13- **UART1 RX**
+
+En el ejemplo siguiente se inicializa **UART1** y se realiza una escritura seguida de una lectura:
 
 ```C#
 using Windows.Storage.Streams;
@@ -129,9 +129,9 @@ public async void Serial()
 }
 ```
 > [!NOTE]
-> Visual Studio 2017 tiene un problema conocido en el Diseñador de manifiestos (el editor visual para archivos appxmanifest) que afecta a la capacidad de serialcommunication.  Si su appxmanifest agrega la capacidad de serialcommunication, modificar su appxmanifest con el diseñador dañará su appxmanifest (el elemento secundario xml de dispositivo se perderán).  Puede solucionar este problema mediante la edición de mano el appxmanifest haciendo clic en su appxmanifest y seleccione Ver código en el menú contextual.
+> Visual Studio 2017 tiene un error conocido en el diseñador de manifiestos (el editor visual para archivos appxmanifest) que afecta a la funcionalidad serialcommunication.  Si el appxmanifest agrega la funcionalidad serialcommunication, la modificación de appxmanifest con el diseñador dañará el appxmanifest (se perderá el elemento secundario XML del dispositivo).  Puede solucionar este problema de forma manual editaba el appxmanifest; para ello, haga clic con el botón derecho en el appxmanifest y seleccione Ver código en el menú contextual.
 
-Debe agregar la funcionalidad siguiente a la **Package.appxmanifest** archivo del proyecto UWP para ejecutar código UART serie:
+Debe agregar la siguiente funcionalidad al archivo **Package. appxmanifest** en el proyecto de UWP para ejecutar el código de UART en serie:
 
 ```xml
   <Capabilities>
@@ -143,25 +143,25 @@ Debe agregar la funcionalidad siguiente a la **Package.appxmanifest** archivo de
   </Capabilities>
 ```
 
-## <a name="i2c-bus"></a>Bus i2c
+## <a name="i2c-bus"></a>Bus I2C
 
-Echemos un vistazo a lo buses de I2C disponible en este dispositivo.
+Echemos un vistazo a los buses I2C disponibles en este dispositivo.
 
-### <a name="i2c-pins"></a>PIN i2c
+### <a name="i2c-pins"></a>Clavijas I2C
 
-**I2C0** expuestos en el encabezado de pin con dos líneas **SDA** y **SCL**
+**I2C0** expuesto en el encabezado del PIN con dos líneas **sda** y **SCL**
 
-* Anclar 17 - **I2C0 SDA**
-* Anclar 15 - **I2C0 SCL**
+* PIN 17- **I2C0 SDA**
+* PIN 15- **I2C0 SCL**
 
-**I2C1** expuestos en el encabezado de pin con dos líneas **SDA** y **SCL**
+**I2C1** expuesto en el encabezado del PIN con dos líneas **sda** y **SCL**
 
-* Anclar 21 - **I2C1 SDA**
-* Anclar 19 - **I2C1 SCL**
+* Patilla 21- **I2C1 SDA**
+* Pin 19- **I2C1 SCL**
 
-### <a name="i2c-sample"></a>Ejemplo de i2c
+### <a name="i2c-sample"></a>Ejemplo de I2C
 
-El ejemplo siguiente inicializa **I2C0** y escribe datos en un dispositivo I2C con dirección **0 x 40**:
+En el ejemplo siguiente se inicializa **I2C0** y se escriben datos en un dispositivo I2C con la dirección **0x40**:
 
 ```C#
 using Windows.Devices.Enumeration;
@@ -192,25 +192,25 @@ public async void I2C()
 
 ## <a name="spi-bus"></a>Bus SPI
 
-Echemos un vistazo del bus SPI disponible en este dispositivo.
+Echemos un vistazo al bus SPI disponible en este dispositivo.
 
-### <a name="spi-pins"></a>PIN SPI
+### <a name="spi-pins"></a>Clavijas SPI
 
-Hay un controlador SPI **SPI0** disponible en la base de datos
+Hay un **SPI0** de controlador de SPI disponible en la base de
 
-* Anclar 10 - **SPI0 MISO**
-* Anclar 14 - **SPI0 MOSI**
-* Anclar 8 - **SPI0 SCLK**
-* Anclar 12 - **SPI0 CS0**
+* PIN de 10 a **SPI0**
+* PIN 14- **SPI0 Mosi**
+* Pin 8- **SPI0 SCLK**
+* Pin 12- **SPI0 CS0**
 
-### <a name="spi-issues"></a>Problemas SPI
+### <a name="spi-issues"></a>Problemas con SPI
 
-El reloj SPI se fija en 4.8 mhz. Se omitirá el reloj SPI solicitado. 
+El reloj SPI se fija a 4,8 MHz. Se omitirá el reloj SPI solicitado. 
 
 
-### <a name="spi-sample"></a>Ejemplo SPI
+### <a name="spi-sample"></a>Ejemplo de SPI
 
-Un ejemplo sobre cómo realizar un IRP de escritura en el bus **SPI0** se muestra a continuación:
+A continuación se muestra un ejemplo de cómo realizar una escritura SPI en el bus **SPI0** :
 
 ```C3
 using Windows.Devices.Enumeration;

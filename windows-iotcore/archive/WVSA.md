@@ -1,130 +1,130 @@
 ---
-title: Shields Virtual de Windows para la introducción a Arduino
+title: Información general de las pantallas virtuales de Windows para Arduino
 author: saraclay
 ms.author: saclayt
 ms.date: 09/13/17
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
-description: Aprenda a configurar Windows Virtual Shields de Arduino y construya su primera aplicación de Windows 10 IoT Core.
-keywords: aplicación de Windows Virtual Shields, Arduino, iot, WVSA, de Windows
+description: Aprenda a configurar las pletinas virtuales de Windows para Arduino y a compilar su primera aplicación de Windows 10 IoT Core.
+keywords: Windows IOT, WVSA, protección virtual de Windows, Arduino, aplicación
 ms.openlocfilehash: bd1dccd59fbc99de9076260f6e21b0ac1403660a
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60169003"
 ---
 > [!NOTE]
-> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, abra una incidencia en GitHub o enviarnos sus comentarios en los comentarios a continuación.
+> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, abra un problema en GitHub o envíenos sus comentarios en los comentarios siguientes.
 
-# <a name="set-up-windows-virtual-shields-for-arduino"></a>Configurar Windows Virtual Shields de Arduino
+# <a name="set-up-windows-virtual-shields-for-arduino"></a>Configuración de escudos virtuales de Windows para Arduino
 
 ## <a name="overview"></a>Información general
-Si ha usado un [Arduino](https://www.arduino.cc), está familiarizado con el concepto de un icono de escudo. Cada icono de escudo tiene una finalidad especializada (por ejemplo, una temperatura shield, un icono de escudo de acelerómetro) y creación de un dispositivo con varios shields puede ser complejo, costoso y espacio ineficaz. Ahora Imagínese que puede usar un teléfono Lumia de Windows de bajo costo como un conjunto compacto de shields. El boceto de Arduino podrán tener acceso a cientos de dólares de sensores y capacidades en su Windows Phone a través de llamadas a bibliotecas de fácil de usar.
+Si ha usado un [Arduino](https://www.arduino.cc), está familiarizado con el concepto de un escudo. Cada escudo tiene un propósito especializado (por ejemplo, un escudo de temperatura, una pletina de acelerómetro) y la creación de un dispositivo con varias pletinas puede ser compleja, costosa y poco eficiente de espacio. Ahora Imagine que puede usar un teléfono de Windows Lumia de bajo costo como un conjunto compacto de escudos. El boceto de Arduino podría tener acceso a cientos de dólares de recursos y capacidades en el Windows Phone a través de llamadas de biblioteca fáciles de usar.
 
-Esto es exactamente lo que permite la Shields Virtual de Windows para la biblioteca de Arduino para desarrolladores. Y no es la mejor parte: esta tecnología funciona en todos los dispositivos Windows 10, para que pueda usar las capacidades y los sensores en un equipo o la superficie también. Además, Arduino puede descargar tareas consumen muchos recursos, como el reconocimiento de voz y web de análisis para el dispositivo complementario de Windows 10.
+Esto es exactamente lo que los blindajes virtuales de Windows para la biblioteca Arduino permite a los desarrolladores. Y eso no es lo mejor: esta tecnología funciona en todos los dispositivos de Windows 10, por lo que también puede usar los sensores y las capacidades en su PC o superficie. Además, el Arduino puede descargar tareas caros computacionales, como el reconocimiento de voz y el análisis web, al dispositivo complementario de Windows 10.
 
-Vamos a aprender a configurar el hardware y software para trabajar con Windows Virtual Shields de Arduino.
+Vamos a obtener información sobre cómo configurar el hardware y el software para trabajar con las pletinas virtuales de Windows para Arduino.
 
 
-## <a name="1-get-your-windows-10-device-ready-for-developing-projects-using-windows-virtual-shields-for-arduino"></a>1. Preparar el dispositivo Windows 10 para desarrollar proyectos que usan Windows Virtual Shields de Arduino.
+## <a name="1-get-your-windows-10-device-ready-for-developing-projects-using-windows-virtual-shields-for-arduino"></a>1. Preparar el dispositivo con Windows 10 para el desarrollo de proyectos con escudos virtuales de Windows para Arduino.
 
-En esta sección del tutorial, se preparará un dispositivo Windows 10 de su elección, cargue los Shields Virtual de Windows para la aplicación de Arduino: esta aplicación Universal de Windows permite usar el dispositivo como un "escudo virtual" para una placa de Arduino.  Algunas posibilidades poderosas para responsables de decisiones, lo que les permite usar el reconocimiento de voz, el resultado tocar las pantallas y la potencia de cálculo de Windows con relativa facilidad.
+En esta sección del tutorial, va a preparar un dispositivo de Windows 10 de su elección mediante su carga en la aplicación de escudos virtuales de Windows para Arduino. esta aplicación universal de Windows permite usar el dispositivo como "escudo virtual" para una placa Arduino.  Esto da como resultado algunas posibilidades eficaces para los responsables de ti, permitiéndoles usar el reconocimiento de voz, pantallas táctiles y la potencia de cálculo de Windows con relativa facilidad.
 
 ### <a name="hardware"></a>Hardware
-Puede ejecutar los Shields Virtual de Windows para la aplicación de Arduino en cualquier dispositivo Windows 10, pero en este tutorial se explica el programa de instalación con un Windows Phone.
+La aplicación de escudos virtuales de Windows para Arduino se puede ejecutar en cualquier dispositivo de Windows 10, pero en este tutorial se explicará el programa de instalación con un Windows Phone.
 
-*Lo que necesita* Windows Phone que ejecutan Windows 10 - se recomienda la [Lumia 520](http://www.microsoft.com/en-us/mobile/phone/lumia520) o [Lumia 635](http://www.microsoft.com/en-us/mobile/phone/lumia635).
+*Lo que necesita* Windows Phone que ejecutan Windows 10, se recomienda usar [lumia 520](http://www.microsoft.com/en-us/mobile/phone/lumia520) o [Lumia 635](http://www.microsoft.com/en-us/mobile/phone/lumia635).
 
-*Configurar su Windows Phone*
+*Configurar el Windows Phone*
 
-Si el teléfono no se está ejecutando Windows 10, hay opciones para instalar las versiones preliminares del software.  Los usuarios de Windows Phone 8 pueden ir a la aplicación de Microsoft Store para descargar la aplicación de "Windows Insider": esta aplicación permite al usuario optar por recibir Windows 10 Technical Preview como las actualizaciones.  Siga las indicaciones e instrucciones al abrir la aplicación y seguir una vez que el teléfono ejecuta correctamente en Windows 10.
+Si su teléfono no está ejecutando Windows 10, hay opciones para instalar versiones preliminares del software.  Windows Phone 8 usuarios pueden ir a la aplicación de Microsoft Store para descargar la aplicación "Windows Insider": esta aplicación permite al usuario participar en la recepción de las versiones preliminares técnicas de Windows 10 como actualizaciones.  Siga las indicaciones y las instrucciones al abrir la aplicación y continúe una vez que el teléfono ejecute correctamente Windows 10.
 
 ### <a name="software"></a>Software
 
-Hay dos opciones para instalar los Shields Virtual de Windows para la aplicación de UWP de Arduino en su Windows Phone.  Descargar la aplicación es la opción más fácil y rápida.
+Hay dos opciones para instalar las pantallas virtuales de Windows para la aplicación Arduino para UWP en el Windows Phone.  Descargar la aplicación es la opción más fácil y rápida.
 
-* Descargar la aplicación desde la Microsoft Store
-* Transferir localmente la aplicación utiliza un PC y Visual Studio
+* Descargue la aplicación desde el Microsoft Store
+* Transferir localmente la aplicación con un PC y Visual Studio
 
-*Opción 1: Descargar la aplicación desde la Microsoft Store*
+*Opción 1: Descargue la aplicación desde el Microsoft Store*
 
-Siga este [vínculo](https://www.microsoft.com/store/apps/9nblgggz0mld) a la página de Microsoft Store para Shields Virtual de Windows para Arduino, descargue la aplicación y, a continuación, instalar. A continuación, puede abrir la aplicación para asegurarse de que se ejecuta correctamente.  El dispositivo ahora está configurado para utilizarse como un "escudo virtual" para Arduino!  Puede continuar a la página siguiente.
+Siga este [vínculo](https://www.microsoft.com/store/apps/9nblgggz0mld) a la página Microsoft Store de las pantallas virtuales de Windows para Arduino, descargue la aplicación y, a continuación, instale. Después, puede abrir la aplicación para asegurarse de que se ejecuta correctamente.  El dispositivo ya está configurado para usarse como "escudo virtual" para un Arduino.  Puede pasar a la página siguiente.
 
-*Opción 2: Transferir localmente la aplicación utiliza un PC y Visual Studio*
+*Opción 2: Transferir localmente la aplicación con un equipo y visual*Studio
 _lo que necesita_
-* Visual Studio 2017 para transferir localmente la Shields Virtual de Windows para la aplicación de Arduino en un teléfono desbloqueado por el desarrollador.
-* Esto [repositorio](https://github.com/ms-iot/virtual-shields-universal) que contiene el código para los Shields Virtual de Windows para la aplicación de Arduino.  Clone el repositorio o descargarlo como un archivo ZIP en el disco local.  Si no está familiarizado con git y realizar un clon adecuado, siga las instrucciones [aquí](https://help.github.com/articles/cloning-a-repository).
+* Visual Studio 2017 para transferir localmente las pletinas virtuales de Windows para la aplicación Arduino a un teléfono desbloqueado por el desarrollador.
+* Este [repositorio](https://github.com/ms-iot/virtual-shields-universal) contiene el código para la aplicación de protección virtual de Windows para Arduino.  Clone el repositorio o descárguelo como un archivo ZIP en el disco local.  Si no está familiarizado con git y desea realizar un clon adecuado, siga las instrucciones que se indican [aquí](https://help.github.com/articles/cloning-a-repository).
 
 _Configurar Visual Studio 2017_
-1. Instalar Visual Studio 2017 con las herramientas de vista previa de Windows 10 para desarrolladores de [dev.windows.com](https://developer.microsoft.com/en-us/windows/downloads).  Se recomienda la gratuita Community versión de Visual Studio, pero Enterprise y Professional también funcionan correctamente.  Si ya tiene instalado Visual Studio, vaya al paso siguiente.
-2. En Visual Studio carga el Shield.sln desde el repositorio se descargó en el "lo que necesita" sección anterior.
-3. Asegúrese de que el dispositivo Windows 10 (en este caso un Windows Phone) es el desbloqueo de desarrollador. [Esta página](https://msdn.microsoft.com/library/windows/apps/dn614128.aspx) explica cómo desbloquear Windows Phone 8.1, 8 y 7.1; sin embargo, los pasos son los mismos para teléfonos con Windows 10.
-4. Conecte su dispositivo Windows 10 en su equipo e implementar el programa Shield.sln al dispositivo.  Para ello, implemente en un "equipo Local" y asegúrese de establecer la arquitectura del dispositivo como "ARM".
-5. Ejecute recién instalado Shields Virtual de Windows para la aplicación de Arduino en el teléfono para garantizar la implementación fue correcta.  El dispositivo Windows 10 ahora está configurado para utilizarse como un icono de escudo virtual!
+1. Instale Visual Studio 2017 con las herramientas de vista previa de Windows 10 Developer desde [dev.Windows.com](https://developer.microsoft.com/en-us/windows/downloads).  Se recomienda la versión gratuita de la comunidad de Visual Studio, pero tanto Enterprise como Professional funcionarán también.  Si ya tiene Visual Studio instalado, vaya al paso siguiente.
+2. En Visual Studio, cargue el Shield. sln del repositorio descargado en la sección "lo que necesita" anterior.
+3. Asegúrese de que el dispositivo Windows 10 (en este caso, un Windows Phone) está desbloqueado por el desarrollador. En [esta página](https://msdn.microsoft.com/library/windows/apps/dn614128.aspx) se explica cómo desbloquear Windows Phone 8,1, 8 y 7,1; sin embargo, los pasos son los mismos para los teléfonos con Windows 10.
+4. Conecte el dispositivo Windows 10 al equipo e implemente el programa Shield. sln en el dispositivo.  Para ello, implemente en un "equipo local" y asegúrese de establecer la arquitectura del dispositivo como "ARM".
+5. Ejecute los escudos virtuales de Windows recién instalados para la aplicación Arduino en el teléfono para asegurarse de que la implementación se realizó correctamente.  El dispositivo Windows 10 ya está configurado para usarse como escudo virtual.
 
-## <a name="2-set-up-your-arduino-to-use-the-windows-virtual-shields-for-arduino-library"></a>2. Configurar su Arduino para usar los Shields Virtual de Windows para la biblioteca de Arduino 
-Con nuestro dispositivo complementario de Windows 10 correctamente configurado, vamos a nuestra Arduino listo para usar los Shields Virtual de Windows para la biblioteca de Arduino. Puede establecer una conexión entre su Arduino y Windows 10 "virtual escudo" a través de Wi-Fi, Bluetooth o USB. En este tutorial particular se explica cómo completar la instalación mediante una conexión Bluetooth, pero no dude en experimentar con las otras opciones.
+## <a name="2-set-up-your-arduino-to-use-the-windows-virtual-shields-for-arduino-library"></a>2. Configuración de Arduino para usar las pletinas virtuales de Windows para la biblioteca de Arduino 
+Una vez que el dispositivo complementario de Windows 10 esté configurado correctamente, vamos a preparar el Arduino para usar las pletinas virtuales de Windows para la biblioteca de Arduino. Puede establecer una conexión entre el Arduino y el "escudo virtual" de Windows 10 a través de USB, Bluetooth o Wi-Fi. En este tutorial concreto se explicará cómo completar la instalación mediante una conexión Bluetooth, pero no dude en experimentar con las demás opciones.
 
 ### <a name="hardware"></a>Hardware
 *Lo que necesita*
-* Arduino Uno u otro dispositivo compatible
-* Cables de conexión
-* Un equipo que se use para cargar los bocetos de Arduino
-* Estándar A estándar USB B - necesario para cargar dibujos en el dispositivo de Arduino
-* Opcional: Módulo de Bluetooth: solo es necesario si decide conectar mediante Bluetooth.
-* Opcional: Módulo de Wi-fi: solo es necesario si decide conectar mediante wi-fi.
+* Arduino uno o dispositivo compatible
+* Conexión de hilos
+* Un equipo que se usa para cargar los bocetos de Arduino
+* Estándar a a estándar B USB: necesario para cargar bocetos en el dispositivo Arduino
+* Opcional: Módulo Bluetooth: solo es necesario si decide conectarse mediante Bluetooth.
+* Opcional: Módulo de Wi-Fi: solo es necesario si decide conectarse mediante Wi-Fi.
 
-* Configurar su Arduino
-* Si es necesario (el módulo de Bluetooth que deba tener encabezados soldados en él), prepare el módulo de Bluetooth.
-* Excepto el otro se indica a continuación, conectado el módulo de Bluetooth a Arduino por [el diagrama de cableado](https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup).
+* Configuración de Arduino
+* Prepare el módulo Bluetooth si es necesario (es posible que el módulo Bluetooth deba tener encabezados soldados en él).
+* A excepción de lo que se indica a continuación, conecte el módulo Bluetooth a Arduino por [el diagrama de cableado](https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup).
 
-  * Diferencia: Usar el PIN 0 y 1 en lugar de 2 y 3:
-    * TX Bluetooth debe conectarse a la clavija de 0 (RX de Arduino o RX0).
-    * Debe conectar RX de Bluetooth del pin 1 (TX de Arduino o TX1).
+  * Hay Use los pin 0 y 1 en lugar de 2 y 3:
+    * La transmisión de Bluetooth debe conectarse al pin 0 (Arduino RX o RX0).
+    * El RX de Bluetooth debe conectarse al pin 1 (Arduino TX o TX1).
 
 ### <a name="software"></a>Software
 *Lo que necesita*
-* Arduino IDE 1.6 o superior
+* Arduino IDE 1,6 o superior
 * Biblioteca ArduinoJSON
 * [Este repositorio](https://github.com/ms-iot/virtual-shields-arduino), que contiene el boceto de ejemplo que se ejecutará en Arduino.
 
-*Configurar el IDE de Arduino*
-* Descargue e instale el IDE de Arduino, inicie el programa.
-* Compruebe que dispone de la placa de Arduino correcta seleccionada en *Herramientas > panel*.
-* Compruebe que tiene el puerto COM correcto seleccionado en *Herramientas > puerto*. El nombre del panel debe aparecer junto a cada opción, lo que facilita a elegir la opción correcta.
+*Configuración del IDE de Arduino*
+* Descargue e instale el IDE de Arduino y, a continuación, inicie el programa.
+* Compruebe que tiene seleccionada la placa Arduino correcta en *herramientas > placa*.
+* Compruebe que tiene seleccionado el puerto COM correcto en *herramientas > puerto*. El nombre del panel debe aparecer junto a cada opción, lo que facilita la elección de la opción correcta.
 
-*Configurar la biblioteca ArduinoJSON*
-* Desde el [ArduinoJson repositorio](https://github.com/bblanchon/ArduinoJson), clone el repositorio o descargue el archivo zip.
-* Colocar el repositorio completo en la carpeta de bibliotecas (es decir, `Documents\Arduino\libraries\ArduinoJson\`).
+*Configuración de la biblioteca ArduinoJSON*
+* En el [repositorio de ArduinoJson](https://github.com/bblanchon/ArduinoJson), Clone el repositorio o descargue el archivo zip.
+* Coloque todo el repositorio en la carpeta de bibliotecas (es `Documents\Arduino\libraries\ArduinoJson\`decir,).
 
-*Configurar los Shields Virtual de Windows para la biblioteca de Arduino*
-* Clon [este repositorio](https://github.com/ms-iot/virtual-shields-arduino) o descargue el archivo ZIP. Si no está familiarizado con git y realizar un clon adecuado, siga las instrucciones [aquí](https://help.github.com/articles/cloning-a-repository/).
-* Copie la carpeta "VirtualShield", que se encuentra en la carpeta "Arduino\Libraries" del repositorio que acaba de descargar, a la carpeta de biblioteca de Arduino (es decir, `Documents\Arduino\libraries\VirtualShield\`).
+*Configuración de las pletinas virtuales de Windows para la biblioteca Arduino*
+* Clone [este repositorio](https://github.com/ms-iot/virtual-shields-arduino) o descargue el archivo zip. Si no está familiarizado con git y desea realizar un clon adecuado, siga las instrucciones que se indican [aquí](https://help.github.com/articles/cloning-a-repository/).
+* Copie la carpeta "VirtualShield", que se encuentra en la carpeta "Arduino\Libraries" del repositorio que acaba de descargar, en la carpeta de la biblioteca `Documents\Arduino\libraries\VirtualShield\`de Arduino (es decir,).
 
-*Probar la configuración*
-* En el IDE de Arduino, vaya al elemento de menú *archivo -> ejemplos -> Virtual escudo -> HelloWorld de voz-eventos*. Esto debería cargar en el ejemplo de Hello World en función de reconocimiento de voz, que vamos a usar para este tutorial.
-* Antes de cargar el boceto a su Arduino, quitar temporalmente los cables Bluetooth TX y RX de Arduino (solo hay un puerto serie que se comparte entre el USB y Bluetooth, el Bluetooth interfiere con la carga).
-* Carga del boceto presionando el botón "Cargar" en el IDE.
-* Reemplace los cables Bluetooth TX y RX en las clavijas de Arduino (Bluetooth RX para Arduino TX y Bluetooth TX Arduino RX (o RX0) o (TX1)).
-* En el teléfono (u otro dispositivo de Windows) preparado en la página anterior, emparejar con el dispositivo Bluetooth en su Arduino en la configuración de Bluetooth. Si usas el BlueSMiRF, el código pin predeterminado es 1234. 
+*Prueba de la configuración*
+* En el IDE de Arduino, vaya al elemento de menú *File-> examples-> virtual Shield-> HelloWorld-Speech-Eventing*. Esto debe cargar el ejemplo de reconocimiento de voz basado Hola mundo que estamos usando para este tutorial.
+* Antes de cargar el boceto en el Arduino, quite temporalmente los cables TX y RX de Bluetooth de la Arduino (solo hay un puerto serie compartido entre el USB y Bluetooth: el Bluetooth interfiere con la carga).
+* Cargue el boceto presionando el botón "cargar" en el IDE.
+* Reemplace los cables TX y RX de Bluetooth a los pin de Arduino (TX de Bluetooth a Arduino RX (o RX0) y RX de Bluetooth a Arduino TX o (TX1)).
+* En el teléfono (u otro dispositivo de Windows) preparado en la página anterior, empareje con el dispositivo Bluetooth en el Arduino de configuración de Bluetooth. Si usa BlueSMiRF, el código PIN predeterminado es 1234. 
 
 > [!NOTE]
-> La luz roja parpadeante en la BlueSMiRF continúa hacer parpadear rojo después de un emparejamiento correcto. Esto es de esperar. Solo se vuelve verde después de una conexión con los Shields Virtual de Windows para la aplicación de Arduino.
+> La luz roja parpadeante en el BlueSMiRF continúa parpadeando en rojo después de un emparejamiento correcto. Esto es de esperar. Solo se vuelve verde después de conectarse a la aplicación de protección virtual de Windows para Arduino.
 
 
-## <a name="3-write-your-first-app-hello-blinky"></a>3. Escribir su primera aplicación: Hola llamativa. 
+## <a name="3-write-your-first-app-hello-blinky"></a>3. Escriba su primera aplicación: ¡ Hola, parpadeo! 
 
-### <a name="hello-world-speech-enabled-led-example"></a>Ejemplo de Hola mundo compatibles con voz LED
-Con su Windows Phone (o potencialmente a cualquier dispositivo de Windows 10) y su Arduino preparada tal como se detalla en los pasos anteriores de este tutorial, ahora está listo para probar nuestro ejemplo.
+### <a name="hello-world-speech-enabled-led-example"></a>Hola mundo ejemplo de LED habilitado para voz
+Con su Windows Phone (o potencialmente cualquier dispositivo de Windows 10) y su Arduino preparado tal y como se detallan en los pasos anteriores de este tutorial, ya está listo para probar el ejemplo.
 
-1. Preparar la placa de Arduino para conectar un LED con una resistencia a la clavija de 8.
-2. Asegúrese de que su Arduino todavía se carga con el ejemplo HelloWorld de voz-eventos y, a continuación, conecte el Arduino en una fuente de alimentación.
-3. Ejecute los Shields Virtual de Windows para la aplicación de Arduino en el Windows Phone que preparó anteriormente.
-4. Si todo ha correctamente el programa de instalación, el teléfono debe conectar con el boceto de Arduino y le damos la bienvenida con una indicación de audio. Ahora puede decir 'on' u 'off' en el dispositivo Windows 10 para pasar el LED en su Arduino y desactivar!
+1. Prepare la placa de Arduino enlazando un LED con una resistencia al vástago 8.
+2. Asegúrese de que el Arduino todavía se carga con el ejemplo HelloWorld-Speech-Eventing y, a continuación, conecte el Arduino a una fuente de alimentación.
+3. Ejecute la aplicación de protección virtual de Windows para Arduino en el Windows Phone que preparó previamente.
+4. Si todo se ha configurado correctamente, el teléfono debe conectarse al boceto de Arduino y le agradecemos la señal de audio. Ahora puede decir "activado" u "desactivado" en el dispositivo Windows 10 para cambiar el LED en el Arduino entre on y OFF.
 
-### <a name="arduino-wiring-sketch-hello-world-example"></a>El cableado de boceto de Arduino: Hello World, ejemplo
+### <a name="arduino-wiring-sketch-hello-world-example"></a>Boceto del cableado de Arduino: Ejemplo de Hola mundo
 
 ```C++
 #include <ArduinoJson.h>

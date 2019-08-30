@@ -1,11 +1,11 @@
 ---
-title: Habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
+title: Habilitación del arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
-keywords: Windows iot, arranque seguro, BitLocker, protección de dispositivos, seguridad, seguridad de llave en mano
+keywords: Windows IOT, arranque seguro, BitLocker, Device Guard, seguridad, seguridad llave en mano
 ms.openlocfilehash: 26e0949dd8ee0a8cfec8aeafee3908a3ade86293
 ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
 ms.translationtype: MT
@@ -13,157 +13,157 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 06/14/2019
 ms.locfileid: "67142363"
 ---
-# <a name="enabling-secure-boot-bitlocker-and-device-guard-on-windows-10-iot-core"></a>Habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
+# <a name="enabling-secure-boot-bitlocker-and-device-guard-on-windows-10-iot-core"></a>Habilitación del arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 
-Windows 10 IoT Core incluye ofertas de características de seguridad como arranque seguro de UEFI, cifrado de dispositivo de BitLocker y Device Guard.  Estos le ayudará a los generadores de dispositivo crear totalmente bloqueado de los dispositivos de IoT de Windows que sean resistentes a muchos tipos diferentes de los ataques.  Juntas, estas características ofrecen la protección óptima que garantiza que se iniciará una plataforma de una forma definida, mientras el bloqueo de archivos binarios desconocidos y proteger los datos de usuario mediante el uso de cifrado de dispositivo.
+Windows 10 IoT Core incluye ofertas de características de seguridad como UEFI Secure boot, cifrado de dispositivos de BitLocker y Device Guard.  Estos ayudarán a los creadores de dispositivos en la creación de dispositivos IoT de Windows completamente bloqueados que son resistentes a muchos tipos diferentes de ataques.  Juntas, estas características proporcionan una protección óptima que garantiza que una plataforma se iniciará de una manera definida, al tiempo que se bloquean los binarios desconocidos y se protegen los datos de usuario mediante el cifrado del dispositivo.
 
 ## <a name="boot-order"></a>Orden de arranque
 
-Antes de que podemos adentrarnos en los componentes individuales que proporcionan una plataforma segura para el dispositivo de IoT, es necesario comprender el orden de arranque en un dispositivo Windows 10 IoT Core.
+Se necesita una comprensión del orden de arranque en un dispositivo de Windows 10 IoT Core antes de que podamos profundizar en los componentes individuales que proporcionan una plataforma segura para el dispositivo de IoT.
 
-Hay tres áreas principales que se producen cuando un dispositivo de IoT está encendido, todo el proceso para la carga de kernel del sistema operativo y la ejecución de la aplicación instalada.
+Hay tres áreas principales que se producen desde el momento en que se enciende un dispositivo IoT, pasando por la carga y la ejecución del kernel de sistema operativo de la aplicación instalada.
 
 * Arranque seguro de plataforma
-* Arranque seguro (UEFI) de la interfaz de Firmware Extensible unificada
+* Arranque seguro de Unified Extensible Firmware Interface (UEFI)
 * Integridad de código de Windows
 
 ![Orden de arranque](../media/SecureBootAndBitLocker/BootOrder.jpg)
 
-Puede encontrar información adicional sobre el proceso de arranque de Windows 10 [aquí](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process).
+[Aquí](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process)encontrará información adicional sobre el proceso de arranque de Windows 10.
 
-## <a name="locking-down-iot-devices"></a>Dispositivos IoT bloquear
+## <a name="locking-down-iot-devices"></a>Bloqueo de dispositivos IoT
 
-En orden de bloqueo de un dispositivo Windows IoT, se deben realizar las siguientes consideraciones.
+Para bloquear un dispositivo de Windows IoT, deben tenerse en cuenta las consideraciones siguientes.
 
 ### <a name="platform-secure-boot"></a>Arranque seguro de plataforma
 
-Cuando el dispositivo está encendido en primer lugar, es el primer paso del proceso general de arranque cargar y ejecutar firmware cargadores de arranque, que inicializan el hardware en los dispositivos y proporcionan funcionalidad de intermitencia de emergencia. El entorno de UEFI, a continuación, se cargan y se cede el control.
+Cuando el dispositivo se enciende por primera vez, el primer paso en el proceso de arranque total consiste en cargar y ejecutar los cargadores de arranque de firmware, que inicializan el hardware en los dispositivos y proporcionan funcionalidad intermitente de emergencia. A continuación, se carga el entorno UEFI y se entrega el control.
 
-Estos cargadores de arranque de firmware son específicos de SoC, por lo que necesita trabajar con el fabricante del dispositivo adecuado para tener estos cargadores de arranque creados en el dispositivo.
+Estos cargadores de arranque de firmware son específicos del SoC, por lo que tendrá que trabajar con el fabricante del dispositivo adecuado para crear estos cargadores de arranque en el dispositivo.
 
 ### <a name="uefi-secure-boot"></a>Arranque seguro de la UEFI
 
-Arranque seguro de UEFI es el primer punto de cumplimiento de directivas y se encuentra en UEFI.  Restringe el sistema para permitir solo la ejecución de archivos binarios firmados por una entidad determinada, como los controladores de firmware, ROM, controladores UEFI o aplicaciones y los cargadores de arranque UEFI. Esta característica evita que código desconocido se ejecuta en la plataforma y potencialmente debilitar su seguridad de ella. Arranque seguro reduce el riesgo de ataques de malware previo al arranque en el dispositivo, como los rootkits. 
+El arranque seguro UEFI es el primer punto de cumplimiento de directiva y se encuentra en UEFI.  Restringe el sistema para permitir solo la ejecución de archivos binarios firmados por una entidad de certificación especificada, como controladores de firmware, opciones de ROM, controladores UEFI o aplicaciones y cargadores de arranque UEFI. Esta característica evita que el código desconocido se ejecute en la plataforma y pueda debilitar la posición de seguridad del mismo. El arranque seguro reduce el riesgo de ataques de malware de prearranque al dispositivo, como rootkits. 
 
-OEM, deberá almacenar el arranque seguro de UEFI bases de datos en el dispositivo de IoT en tiempo de fabricación. Estas bases de datos incluyen la firma de base de datos (db), revocar la firma (dbx) y la base de datos de inscripción de clave (KEK). Estas bases de datos se almacenan en el firmware RAM no volátil (NV-RAM) del dispositivo.
+Como OEM, debe almacenar las bases de datos de arranque seguro de UEFI en el dispositivo IoT en el momento de la fabricación. Estas bases de datos incluyen la base de datos de firmas (dB), la base de datos de firma revocada (dbx) y la base de datos de claves de inscripción de claves (KEK). Estas bases de datos se almacenan en la RAM no volátil de firmware (NV-RAM) del dispositivo.
 
-* **Base de datos de la firma (db):** Esto enumera los firmantes o códigos hash de la imagen de cargadores del sistema operativo, aplicaciones UEFI y controladores UEFI que pueden cargarse en el dispositivo
+* **Base de datos de firmas (BD):** Aquí se enumeran los firmantes o los hash de imagen de los cargadores de sistema operativo, las aplicaciones UEFI y los controladores UEFI que se pueden cargar en el dispositivo.
 
-* **Revocar la base de datos de firma (dbx):** Esto enumera los firmantes o códigos hash de la imagen de cargadores del sistema operativo, aplicaciones UEFI y controladores UEFI que ya no son de confianza y están *no* permite que se cargue en el dispositivo 
+* **Base de datos de firma revocada (dbx):** Aquí se enumeran los firmantes o los hash de imagen de los cargadores de sistema operativo, las aplicaciones UEFI y los controladores UEFI que ya no son de confianza y *no* se les permite que se carguen en el dispositivo. 
 
-* **Base de datos de inscripción de clave (KEK):** Contiene una lista de claves que pueden usarse para actualizar la firma y revocar las bases de datos de la firma de firma.
+* **Base de datos de clave de inscripción de claves (KEK):** Contiene una lista de claves de firma que se pueden utilizar para actualizar la firma y las bases de datos de firma revocadas.
 
-Una vez que se crean estas bases de datos y se agrega al dispositivo, el OEM bloquea el firmware de la edición y genera una plataforma (PK) de la clave de firma. Esta clave se puede utilizar para firmar las actualizaciones a la KEK o para deshabilitar arranque seguro de UEFI.
+Una vez que estas bases de datos se crean y se agregan al dispositivo, el OEM bloquea el firmware de la edición y genera una clave de firma de plataforma (PK). Esta clave se puede usar para firmar actualizaciones en KEK o para deshabilitar el arranque seguro UEFI.
 
-Estos son los pasos realizados por el arranque seguro de UEFI:
+Estos son los pasos que realiza el arranque seguro de UEFI:
 
-1. Después de que el dispositivo está encendido, las bases de datos de la firma cada comprueban con la plataforma (PK) de la clave de firma.
-2. Si el firmware no es de confianza, el firmware UEFI inicia recuperación específica del OEM para restaurar el firmware de confianza.
-3. Si no se puede cargar el Administrador de arranque de Windows, el firmware intentará arrancar una copia de seguridad del Administrador de arranque de Windows. Si esto tampoco funciona, el firmware UEFI inicia corrección específica del OEM.
-4. Administrador de arranque de Windows se ejecuta y comprueba la firma digital del Kernel de Windows. Si la confianza, el Administrador de arranque de Windows pasa el control al Kernel de Windows.
+1. Una vez encendido el dispositivo, las bases de datos de firmas se comprueban con la clave de firma de plataforma (PK).
+2. Si el firmware no es de confianza, el firmware UEFI inicia la recuperación específica del OEM para restaurar el firmware de confianza.
+3. Si no se puede cargar el administrador de arranque de Windows, el firmware intentará arrancar una copia de seguridad del administrador de arranque de Windows. Si también se produce un error, el firmware UEFI inicia la corrección específica del OEM.
+4. El administrador de arranque de Windows ejecuta y comprueba la firma digital del kernel de Windows. Si es de confianza, el administrador de arranque de Windows pasa el control al kernel de Windows.
 
-Obtener más detalles sobre el arranque seguro, junto con instrucciones para la administración y la creación de la clave está disponible [aquí](https://technet.microsoft.com/library/dn747883.aspx).
+[Aquí](https://technet.microsoft.com/library/dn747883.aspx)encontrará más detalles sobre el arranque seguro, junto con la guía de creación y administración de claves.
 
 ### <a name="windows-code-integrity"></a>Integridad de código de Windows
 
-Integridad de código de Windows (WCI) mejora la seguridad del sistema operativo al validar la integridad de un controlador o una aplicación cada vez que se carga en la memoria. Elemento de configuración contiene dos componentes principales: integridad de código de modo Kernel (KMCI) y la integridad de código de modo de usuario (UMCI).
+La integridad de código de Windows (WCI) mejora la seguridad del sistema operativo al validar la integridad de un controlador o una aplicación cada vez que se carga en la memoria. CI contiene dos componentes principales: integridad de código en modo kernel (KMCI) e integridad de código de modo de usuario (UMCI).
 
-Integridad de código configurable (CCI) es una característica de Windows 10 que permite que los generadores de dispositivo para bloquear un dispositivo y solo le permiten ejecutar y ejecutar código que se firma y de confianza.  Para ello, los generadores de dispositivo pueden crear una directiva de integridad de código en un dispositivo "golden" (versión de lanzamiento final de hardware y software) y, a continuación, proteger y aplicar esta directiva en todos los dispositivos en la fábrica.
+La integridad de código configurable (CCI) es una característica de Windows 10 que permite a los creadores de dispositivos bloquear un dispositivo y permitirle ejecutar y ejecutar código firmado y de confianza.  Para ello, los generadores de dispositivos pueden crear una directiva de integridad de código en un dispositivo "Golden" (versión de lanzamiento final de hardware y software) y, a continuación, proteger y aplicar esta directiva en todos los dispositivos de la fábrica.
 
-Para más información sobre la implementación de directivas de integridad de código, auditoría y cumplimiento, consulte la documentación más reciente de technet [aquí](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-code-integrity-policies-steps).
+Para obtener más información sobre la implementación de directivas de integridad de código, auditorías y cumplimiento, consulte la documentación de TechNet más reciente [aquí](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-code-integrity-policies-steps).
 
-Estos son los pasos seguidos por integridad de código de Windows:
+Estos son los pasos que realiza la integridad de código de Windows:
 
-1. Kernel de Windows comprobará que todos los demás componentes en la base de datos de la firma antes de la carga. Esto incluye los controladores, los archivos de inicio y ELAM (temprana antimalware de inicio).
-2. Kernel de Windows cargará los componentes de confianza en el proceso de inicio y prohibir la carga de los componentes de confianza.
-3. Carga del sistema operativo de Windows 10 IoT Core, junto con las aplicaciones instaladas.
+1. El kernel de Windows comprobará todos los demás componentes en la base de datos de firmas antes de cargarlos. Esto incluye los controladores, los archivos de inicio y ELAM (antimalware de inicio temprano).
+2. El kernel de Windows cargará los componentes de confianza en el proceso de inicio y prohibirá la carga de los componentes que no son de confianza.
+3. Cargas del sistema operativo Windows 10 IoT Core, junto con las aplicaciones instaladas.
 
-### <a name="bitlocker-device-encryption"></a>Cifrado de dispositivos de BitLocker
+### <a name="bitlocker-device-encryption"></a>Cifrado de dispositivo de BitLocker
 
-Windows 10 IoT Core también implementa una versión ligera de cifrado de dispositivo de BitLocker, protección de los dispositivos de IoT contra ataques sin conexión. Esta funcionalidad tiene una dependencia fuerte en la presencia de un TPM en la plataforma, incluido el protocolo previo necesario en UEFI que toma las medidas necesarias. Estas mediciones previo asegurarse de que el sistema operativo posterior tenga un registro definitivo de cómo se inició el sistema operativo; Sin embargo, no aplica las restricciones de ejecución.
+Windows 10 IoT Core también implementa una versión ligera del cifrado de dispositivos de BitLocker, protegiendo los dispositivos IoT contra ataques sin conexión. Esta funcionalidad tiene una dependencia fuerte en la presencia de un TPM en la plataforma, incluido el protocolo anterior al sistema operativo necesario en UEFI que realiza las medidas necesarias. Estas medidas previas al sistema operativo garantizan que el sistema operativo más adelante tenga un registro definitivo de cómo se inició el sistema operativo; sin embargo, no aplica ninguna restricción de ejecución.
 
 > [!TIP]
-> Funcionalidad de BitLocker en Windows 10 IoT Core permite para el cifrado automático de volumen del sistema operativo basado en NTFS al enlazar todos los volúmenes de datos NTFS disponibles en él. Para ello, es necesario para asegurarse de que el volumen EFIESP GUID se establece en _C12A7328-F81F-11D2-BA4B-00A0C93EC93B_.
+> La funcionalidad de BitLocker en Windows 10 IoT Core permite el cifrado automático del volumen del sistema operativo basado en NTFS mientras enlaza todos los volúmenes de datos NTFS disponibles a él. Para ello, es necesario asegurarse de que el GUID del volumen EFIESP se establece en _C12A7328-F81F-11D2-BA4B-00A0C93EC93B_.
 
 ### <a name="device-guard-on-windows-iot-core"></a>Device Guard en Windows IoT Core
 
-La mayoría de los dispositivos de IoT se crean como dispositivos de funciones fijas. Esto implica que los generadores de dispositivo saben exactamente qué firmware, sistemas operativos, controladores y aplicaciones deben ejecutarse en un dispositivo determinado. A su vez, esta información puede ser utilizado totalmente bloquear un dispositivo IoT solo tiene que permitir la ejecución de código conocida y de confianza. Device Guard en Windows 10 IoT Core puede ayudar a proteger los dispositivos de IoT, lo que garantiza que no se puede ejecutar código ejecutable desconocido o que no se confía en los dispositivos bloqueados.
+La mayoría de los dispositivos IoT se compilan como dispositivos de funciones fijas. Esto implica que los generadores de dispositivos saben exactamente qué firmware, sistema operativo, controladores y aplicaciones deben ejecutarse en un dispositivo determinado. A su vez, esta información se puede usar para el bloqueo completo de un dispositivo IoT, ya que solo se permite la ejecución de código conocido y de confianza. Device Guard en Windows 10 IoT Core puede ayudar a proteger los dispositivos IoT asegurándose de que no se pueda ejecutar código ejecutable desconocido o que no sea de confianza en dispositivos bloqueados.
 
 
-## <a name="turnkey-security-on-iot-core"></a>Seguridad de llave en mano en IoT Core
+## <a name="turnkey-security-on-iot-core"></a>Seguridad llave en mano en IoT Core
 
-Para facilitar la fácil habilitación de características clave de seguridad en dispositivos de IoT Core, Microsoft ofrece un [paquete de seguridad de llave en mano]( https://github.com/ms-iot/security/tree/master/TurnkeySecurity) que permite que los generadores de dispositivo crear completamente bloqueado de los dispositivos de IoT. Le ayudará este paquete con:
+Para facilitar la habilitación de las principales características de seguridad en los dispositivos IoT Core, Microsoft proporciona un [paquete de seguridad Llave]( https://github.com/ms-iot/security/tree/master/TurnkeySecurity) en mano que permite a los creadores de dispositivos compilar dispositivos IOT totalmente bloqueados. Este paquete le ayudará con:
 
-* Aprovisionamiento de claves de arranque seguro y habilitar la característica en las plataformas admitidas de IoT
-* Instalación y configuración de cifrado del dispositivo con BitLocker
-* Iniciando el bloqueo del dispositivo para solo permitir la ejecución de las aplicaciones firmadas y controladores
+* Aprovisionamiento de claves de arranque seguras y habilitación de la característica en plataformas de IoT compatibles
+* Instalación y configuración del cifrado de dispositivos con BitLocker
+* Iniciar el bloqueo de dispositivo para permitir solo la ejecución de aplicaciones y controladores firmados
 
-Los pasos siguientes dará lugar a través del proceso para crear una imagen de bloqueo mediante el [paquete de seguridad de llave en mano]( https://github.com/ms-iot/security/tree/master/TurnkeySecurity)
+En los pasos siguientes se llevará a cabo el proceso de creación de una imagen de bloqueo mediante el [paquete de seguridad Llave]( https://github.com/ms-iot/security/tree/master/TurnkeySecurity) en mano.
 
 ![Crear imagen de bloqueo](../media/SecurityFlowAndCertificates/ImageLockDown.png)
 
 ### <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo que ejecuta Windows 10 Enterprise
-* [Windows 10 SDK](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk) : requerido para la generación de certificado
-* [Windows 10 ADK](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) : requerido para la generación de CAB
-* Plataforma de referencia: versión de hardware con el firmware de trasvase de registros, sistema operativo, controladores y aplicaciones será necesaria para bloqueo final
+* [SDK de Windows 10](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk) : necesario para la generación de certificados
+* [Windows 10 ADK](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) : necesario para la generación de CAB
+* Plataforma de referencia: se necesitará hardware de versión con firmware de envío, sistema operativo, controladores y aplicaciones para el bloqueo final.
 
-### <a name="development-iot-devices"></a>Dispositivos de IoT de desarrollo
+### <a name="development-iot-devices"></a>Desarrollo de dispositivos IoT
 
-Windows 10 IoT Core funciona con diversos silicons que se emplean en cientos de dispositivos. De la [sugiere los dispositivos de desarrollo de IoT](../learn-about-hardware/SoCsAndCustomBoards.md), los siguientes proporcionan funcionalidad TPM de firmware de fábrica, junto con las funcionalidades de arranque seguro, arranque medido, BitLocker y Device Guard:
+Windows 10 IoT Core funciona con varios silicios que se usan en cientos de dispositivos. De los [dispositivos de desarrollo de IOT sugeridos](../learn-about-hardware/SoCsAndCustomBoards.md), los siguientes proporcionan funcionalidad TPM de firmware, junto con el arranque seguro, el arranque medido, las funcionalidades de BitLocker y Device Guard:
 
-* QUALCOMM DragonBoard 410c
+* Qualcomm DragonBoard 410C
 
-    Con el fin de habilitar el arranque seguro, puede ser necesario para aprovisionar RPMB. Una vez que el eMMC ha sido se vacían con Windows 10 IoT Core (según las instrucciones [aquí](https://docs.microsoft.com/windows/iot-core/tutorials/quickstarter/devicesetup#using-the-iot-dashboard-dragonboard-410c), presione [Power] + [Vol +] + Vol-simultáneamente en el dispositivo cuando se inicia rápidamente y seleccione "RPMB aprovisionar" en el menú BDS. *Tenga en cuenta que esto es un paso irreversible.*
+    Para habilitar el arranque seguro, puede que sea necesario aprovisionar RPMB. Una vez que el eMMC se ha deshabilitado con Windows 10 IoT Core (según las instrucciones que se indican [aquí](https://docs.microsoft.com/windows/iot-core/tutorials/quickstarter/devicesetup#using-the-iot-dashboard-dragonboard-410c), presione [POWER] + [VOL +] + [VOL-] simultáneamente en el dispositivo cuando se enciende y seleccione "aprovisionar RPMB" en el menú BDS. *Tenga en cuenta que se trata de un paso irreversible.*
 
 * Intel MinnowBoardMax
 
-    Para Intel MinnowBoard Max, versión de firmware debe ser 0.82 o posterior (obtener el [firmware más reciente](https://firmware.intel.com/projects/minnowboard-max)). Para habilitar la funcionalidad de TPM, encender la placa con un teclado y pantalla adjunta y presione F2 para entrar en la configuración UEFI. Vaya a _el Administrador de dispositivos -> configuración del sistema -> configuración de seguridad -> PTT_ y establézcalo en  _&lt;habilitar&gt;_ . Presione F10 para guardar los cambios y continuar con un reinicio de la plataforma.
+    En el caso de MinnowBoard Max, la versión de firmware debe ser 0,82 o superior (obtener el [firmware más reciente](https://firmware.intel.com/projects/minnowboard-max)). Para habilitar las capacidades de TPM, encienda el panel con un teclado & Mostrar adjunta y presione F2 para especificar la configuración de UEFI. Vaya a _Device Manager-> configuración del sistema-> configuración de seguridad-> PTT_ y establézcalo  _&lt;en&gt;habilitar_. Presione F10 para guardar los cambios y continuar con un reinicio de la plataforma.
 
 > [!NOTE]
-> Raspberry Pi 2 ni 3 no son compatibles con TPM y por lo que no podemos configuramos los escenarios de bloqueo.
+> Raspberry pi 2 y 3 no admiten TPM y, por tanto, no se pueden configurar escenarios de bloqueo.
 
 ### <a name="generate-lockdown-packages"></a>Generar paquetes de bloqueo
 
-1. Descargue el [DeviceLockDown Script](https://github.com/ms-iot/security/tree/master/TurnkeySecurity) paquete, que contiene todas las herramientas adicionales y los scripts necesarios para configurar y bloqueo de dispositivos
-2. Inicie una consola administrativa PowerShell (PS) en los equipos Windows 10 y navegue hasta la ubicación del script descargado.
-3. Montaje de la plataforma de hardware de referencia (que se ejecuta la imagen desbloqueada) a su equipo a través de recurso compartido de red con
+1. Descargue el paquete de scripts de [DeviceLockDown](https://github.com/ms-iot/security/tree/master/TurnkeySecurity) , que contiene todas las herramientas y los scripts adicionales necesarios para configurar y bloquear dispositivos.
+2. Inicie una consola de administración de PowerShell (PS) en el equipo con Windows 10 y navegue hasta la ubicación del script descargado.
+3. Monte la plataforma de hardware de referencia (que ejecuta la imagen desbloqueada) en el equipo a través de un recurso compartido de red con
 
     ```powershell
     net use \\a.b.c.d\c$ /user:username password
     ```
 
-4. Generar claves para su dispositivo mediante
+4. Generar claves para el dispositivo mediante
 
     ```powershell
     .\GenerateKeys.ps1 -OemName '<your oem name>' -outputPath '<output directory>'
     ```
 
-    * En la carpeta de salida especificado con el sufijo adecuado, se generan las claves y certificados.
-    * **Proteger las claves generadas** como el dispositivo confiará en los archivos binarios firmados con estas claves solo después del bloqueo.
-    * Puede omitir este paso y usar las claves generadas previamente solo para pruebas
+    * Las claves y los certificados se generan en la carpeta de salida especificada con el sufijo adecuado.
+    * **Proteja las claves generadas** , ya que el dispositivo confiará en los archivos binarios firmados con estas claves solo después del bloqueo.
+    * Puede omitir este paso y usar las claves generadas previamente solo para realizar pruebas.
 
-5. Configure _settings.xml_
+5. Configurar _Settings. XML_
 
-    * Sección general: Especifique los directorios de paquete
-    * Sección de herramientas: Establecer la ruta de acceso para las herramientas
-        * Windows10KitsRoot `(e.g. <Windows10KitsRoot>C:\Program Files (x86)\Windows Kits\10\</Windows10KitsRoot>)`
-        * WindowsSDKVersion `(e.g. <WindowsSDKVersion>10.0.15063.0</WindowsSDKVersion>)`
-            * Versión del SDK instalado en el equipo está bajo `C:\Program Files (x86)\Windows Kits\10\`
-    * Sección SecureBoot: Especifique qué claves que se usarán para el arranque seguro (PK y SB claves)
-    * Sección de BitLocker: Especifique un certificado para la recuperación de datos de Bitlocker (clave DRA)
-    * Sección SIPolicy: Especificar los certificados en los que deben ser de confianza
-        * ScanPath : Ruta de acceso del dispositivo para el análisis de los archivos binarios, `\\a.b.c.d\C$`
-        * actualizar: Firmante de la SIPolicy (claves PAUTH)
-        * Usuario: Certificados de modo de usuario (claves UMCI) 
-        * Kernel: Certificados de modo kernel (claves KMCI)
-    * Empaquetado: Especifique la configuración para la generación de paquetes
+    * Sección General: Especificar los directorios del paquete
+    * Sección herramientas: Establecer la ruta de acceso de las herramientas
+        * Windows10KitsRoot`(e.g. <Windows10KitsRoot>C:\Program Files (x86)\Windows Kits\10\</Windows10KitsRoot>)`
+        * WindowsSDKVersion`(e.g. <WindowsSDKVersion>10.0.15063.0</WindowsSDKVersion>)`
+            * La versión del SDK instalada en la máquina está en`C:\Program Files (x86)\Windows Kits\10\`
+    * Sección de SecureBoot: Especificar las claves que se van a usar para el arranque seguro (claves PK y SB)
+    * Sección de BitLocker: Especificar un certificado para la recuperación de datos de BitLocker (clave DRA)
+    * Sección SIPolicy: Especificar los certificados que deben ser de confianza
+        * ScanPath : Ruta de acceso del dispositivo para la detección de archivos binarios,`\\a.b.c.d\C$`
+        * Update Firmante de SIPolicy (PAUTH Keys)
+        * Usuario Certificados de modo de usuario (claves UMCI) 
+        * Cronología Certificados de modo kernel (claves KMCI)
+    * Empaquetado Especificar la configuración para la generación de paquetes
 
 > [!IMPORTANT]
-> Con el fin de ayudar a probar durante el ciclo de desarrollo inicial, Microsoft ha proporcionado los certificados y claves generadas previamente en su caso.  Esto implica que los archivos binarios de Microsoft Test, desarrollo y versiones preliminares se consideran de confianza.  Durante la creación de un producto final y generación de imágenes, asegúrese de quitar estas dirija y usar sus propias claves para garantizar que un dispositivo totalmente bloqueado.
+> Para ayudar a realizar las pruebas durante el ciclo de desarrollo inicial, Microsoft ha proporcionado claves y certificados generados previamente cuando corresponda.  Esto implica que los binarios de prueba, desarrollo y versión preliminar de Microsoft se consideran de confianza.  Durante la creación del producto final y la generación de la imagen, asegúrese de quitar estos dirija y usar sus propias claves para garantizar un dispositivo totalmente bloqueado.
 
-6. ejecutar los comandos siguientes para generar paquetes necesarios:
+6. Ejecute los siguientes comandos para generar los paquetes necesarios:
 
     ```powershell
     Import-Module .\IoTTurnkeySecurity.psm1
@@ -174,22 +174,22 @@ Windows 10 IoT Core funciona con diversos silicons que se emplean en cientos de 
     New-IoTTurnkeySecurity -ConfigFileName .\settings.xml -Test
     ```
 
-### <a name="test-lockdown-packages"></a>Probar los paquetes de bloqueo
-Puede probar los paquetes generados por instalarlos manualmente en un dispositivo desbloqueado mediante los pasos siguientes
+### <a name="test-lockdown-packages"></a>Probar paquetes bloqueados
+Puede probar los paquetes generados si los instala manualmente en un dispositivo desbloqueado mediante los pasos siguientes:
 
-1. Flash del dispositivo con la imagen desbloqueado (imagen utilizada para el análisis en el paso anterior).
-2. Conectarse al dispositivo ([mediante SSH](../connect-your-device/SSH.md) o mediante [Powershell](../connect-your-device/PowerShell.md))
-3. Copie los siguientes archivos .cab en el dispositivo en un directorio, p. ej. `c:\OemInstall`
-    * OEM.Custom.Cmd.cab
-    * OEM.Security.BitLocker.cab
-    * OEM.Security.SecureBoot.cab
-    * OEM.Security.DeviceGuard.cab
-4. Iniciar el almacenamiento provisional de los paquetes generados por emitiendo los comandos siguientes
+1. Desbloquee el dispositivo con la imagen desbloqueada (imagen usada para digitalizar en el paso anterior).
+2. Conexión al dispositivo ([mediante SSH](../connect-your-device/SSH.md) o con [PowerShell](../connect-your-device/PowerShell.md))
+3. Copie los siguientes archivos. cab en el dispositivo en un directorio, por ejemplo,`c:\OemInstall`
+    * OEM. Personalizado. cmd. cab
+    * OEM. Security. BitLocker. cab
+    * OEM. Security. SecureBoot. cab
+    * OEM. Security. DeviceGuard. cab
+4. Inicie el ensayo de los paquetes generados mediante el emisión de los siguientes comandos:
 
     ```C
     applyupdate -stage c:\OemInstall\OEM.Custom.Cmd.cab
     ```
-    Si está utilizando la imagen personalizada y, después, tendrá que *omitir* este archivo y editar manualmente el `c:\windows\system32\oemcustomization.cmd` con el contenido disponible en `Output\OEMCustomization\OEMCustomization.cmd` archivo
+    Si usa una imagen personalizada, tendrá que omitir este archivo y editar manualmente el `c:\windows\system32\oemcustomization.cmd` con el contenido disponible en `Output\OEMCustomization\OEMCustomization.cmd` el archivo.
 
     ```C
     applyupdate -stage c:\OemInstall\OEM.Security.BitLocker.cab
@@ -202,66 +202,66 @@ Puede probar los paquetes generados por instalarlos manualmente en un dispositiv
     applyupdate -commit
     ```
 
-6. El dispositivo se reiniciará en el sistema operativo (mostrando gears) para instalar los paquetes de actualización y se reiniciará al sistema operativo principal.  Una vez que el dispositivo se reinicia en MainOS, se habilitará el arranque seguro y debe exponerse a SIPolicy.
-7. Reinicio del dispositivo para activar el cifrado de Bitlocker.
+6. El dispositivo se reiniciará en Update OS (mostrando engranajes) para instalar los paquetes y se reiniciará de nuevo en el sistema operativo principal.  Una vez que el dispositivo se reinicia en los principales, se habilitará el arranque seguro y se debe usar SIPolicy.
+7. Reinicie el dispositivo para activar el cifrado de BitLocker.
 8. Probar las características de seguridad
-    * SecureBoot: pruebe `bcdedit /debug on` , obtendrá un error que indica que el valor está protegido por la directiva de arranque seguro
-    * BitLocker: Ejecute `start /wait sectask.exe -waitencryptcomplete:1`, si el valor de ERRORLEVEL es `-2147023436` cifrado (ERROR_TIMEOUT), a continuación, no está completado. Cuando se ejecuta sectask.exe desde un archivo .cmd omite el `start /wait`.
-    * DeviceGuard: Ejecute cualquier binario sin signo o un archivo binario firmado con certificado no está en la lista SIPolicy y confirme que no puede ejecutar.
+    * SecureBoot: Pruebe `bcdedit /debug on` , recibirá un error que indica que el valor está protegido por la Directiva de arranque seguro
+    * BitLocker: Ejecutar `start /wait sectask.exe -waitencryptcomplete:1`, si ERRORLEVEL es `-2147023436` (ERROR_TIMEOUT), el cifrado no se completa. Cuando se ejecuta sectask. exe desde un archivo. cmd, `start /wait`se omite.
+    * DeviceGuard : Ejecute cualquier binario sin firmar o binario firmado con certificado que no esté en la lista SIPolicy y confirme que no se puede ejecutar.
 
 ### <a name="generate-lockdown-image"></a>Generar imagen de bloqueo
 
-Después de comprobar que los paquetes de bloqueo de seguridad funcionan según la configuración definida anteriormente, puede incluir estos paquetes en la imagen siguiendo el siguiente les indican los pasos. Leer el [IoT fabricación guía](https://aka.ms/iotcoreguide) para obtener instrucciones de creación de imagen personalizada.
+Después de validar que los paquetes de bloqueo funcionan según la configuración definida anteriormente, puede incluir estos paquetes en la imagen siguiendo los pasos indicados a continuación. Lea la [Guía de fabricación de IOT](https://aka.ms/iotcoreguide) para obtener instrucciones de creación de imágenes personalizadas.
 
-1. En el directorio de área de trabajo, actualice los siguientes archivos desde el directorio de salida generado anterior
-    * SecureBoot: `Copy ..\Output\SecureBoot\*.bin  ..\Workspace\Common\Packages\Security.SecureBoot`
-      * SetVariable_db.bin
-      * SetVariable_kek.bin
-      * SetVariable_pk.bin
-    * BitLocker: `Copy ..\Output\Bitlocker\*.* ..\Workspace\Common\Packages\Security.Bitlocker`
-      * DETask.xml
-      * Security.Bitlocker.wm.xml
-      * setup.bitlocker.cmd
-    * DeviceGuard: `Copy ..\Output\DeviceGuard\*.*  ..\Workspace\Common\Packages\Security.DeviceGuard`
-      * SIPolicyOn.p7b
-      * SIPolicyOff.p7b
+1. En el directorio del área de trabajo, actualice los siguientes archivos desde el directorio de salida generado anterior
+    * SecureBoot`Copy ..\Output\SecureBoot\*.bin  ..\Workspace\Common\Packages\Security.SecureBoot`
+      * SetVariable_db. bin
+      * SetVariable_kek. bin
+      * SetVariable_pk. bin
+    * BitLocker`Copy ..\Output\Bitlocker\*.* ..\Workspace\Common\Packages\Security.Bitlocker`
+      * Destask. XML
+      * Security. BitLocker. WM. XML
+      * Setup. BitLocker. cmd
+    * DeviceGuard :`Copy ..\Output\DeviceGuard\*.*  ..\Workspace\Common\Packages\Security.DeviceGuard`
+      * SIPolicyOn. p7b
+      * SIPolicyOff. p7b
   
-2. Agregar RetailOEMInput.xml y TestOEMInput.xml bajo el directorio ProductName con Id. de característica de paquete de bloqueo
+2. Agregue RetailOEMInput. XML y TestOEMInput. XML en el directorio ProductName con el identificador de característica del paquete de bloqueo
     * `<Feature>SEC_BITLOCKER</Feature>`
     * `<Feature>SEC_SECUREBOOT</Feature>`
     * `<Feature>SEC_DEVICEGUARD</Feature>`
 3. Volver a generar la imagen
-    * `buildpkg all` (Esto genera nuevos paquetes de bloqueo según por encima de los archivos de directiva)
-    * `buildimage ProductName test(or)retail`  (Esto genera Flash.ffu nueva)
-4. El dispositivo con este nuevo Flash.ffu Flash y validar las características de seguridad.
+    * `buildpkg all`(esto genera nuevos paquetes de bloqueo basados en archivos de directivas anteriores)
+    * `buildimage ProductName test(or)retail`(esto genera el nuevo flash. FFU)
+4. Parpadee el dispositivo con este nuevo flash. FFU y valide las características de seguridad.
 
-Consulte [SecureSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SecureSample) como un ejemplo de una configuración de la placa de bloqueo dragon.
+Vea [SecureSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SecureSample) como ejemplo de configuración de la placa Dragon de bloqueo.
 
-Como alternativa, puede generar los paquetes de seguridad en el propio IoTCore Shell, consulte [agregar paquetes de seguridad](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Tools#adding-security-packages) para obtener los detalles.
+Como alternativa, puede generar los paquetes de seguridad en el propio Shell de IoTCore, consulte [agregar paquetes de seguridad](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Tools#adding-security-packages) para los detalles.
 
 
-### <a name="developing-with-codesigning-enforcement-enabled"></a>Desarrollo con el cumplimiento de la firma de código habilitado
+### <a name="developing-with-codesigning-enforcement-enabled"></a>Desarrollo con la aplicación de codiseño habilitada
 
-Una vez que se generan los paquetes y el bloqueo está activado, todos los archivos binarios que introdujo en la imagen durante el desarrollo deberá firmarse de forma adecuada. Asegúrese de que los archivos binarios de modo de usuario se firman con la clave _. \Keys\ ***-UMCI.pfx_. Para la firma de modo de kernel, como para los controladores, deberá especificar sus propias claves de firmas y asegúrese de se incluyen también en el SIPolicy anterior.
+Una vez que se generan los paquetes y se activa el bloqueo, todos los archivos binarios introducidos en la imagen durante el desarrollo deberán firmarse de forma adecuada. Asegúrese de que los archivos binarios de modo de usuario están firmados con la clave _.\Keys\ * * *-UMCI. pfx_. En el caso de la firma en modo kernel, como en el caso de los controladores, deberá especificar sus propias claves de firma y asegurarse de que también se incluyen en el SIPolicy anterior.
 
-### <a name="unlocking-encrypted-drives"></a>Desbloquear unidades cifradas
+### <a name="unlocking-encrypted-drives"></a>Desbloqueo de unidades cifradas
 
-Durante el desarrollo y pruebas, al intentar leer el contenido de un dispositivo cifrado sin conexión (por ejemplo, tarjeta SD para eMMC MinnowBoardMax o de DragonBoard con el modo de almacenamiento masivo USB), 'diskpart' puede usarse para asignar una letra de unidad al volumen de datos y MainOS (vamos a Suponga v: para MainOS y w: por datos).
-Los volúmenes aparecerán bloqueados y necesita desbloquea manualmente. Esto puede realizarse en cualquier equipo que tenga instalado el certificado de OEM DRA.pfx (incluido en el [DeviceLockDown ejemplo](https://github.com/ms-iot/security/tree/master/TurnkeySecurity)). Instale el archivo PFX y, a continuación, ejecute los siguientes comandos desde un símbolo del sistema administrativo:
+Durante el desarrollo y las pruebas, al intentar leer el contenido de un dispositivo cifrado sin conexión (por ejemplo, tarjeta SD para MinnowBoardMax o eMMC de DragonBoard a través del modo de almacenamiento masivo USB), se puede usar ' DiskPart ' para asignar una letra de unidad a los principales y al volumen de datos (vamos a Supongamos que es v: para los principales y w: para los datos).
+Los volúmenes aparecerán bloqueados y deben desbloquearse manualmente. Esto puede realizarse en cualquier máquina que tenga instalado el certificado OEM-DRA. pfx (incluido en el [ejemplo DeviceLockDown](https://github.com/ms-iot/security/tree/master/TurnkeySecurity)). Instale el archivo PFX y, a continuación, ejecute los siguientes comandos desde un símbolo del sistema de CMD administrativo:
 
 * `manage-bde -unlock v: -cert -cf OEM-DRA.cer`
 * `manage-bde -unlock w: -cert -cf OEM-DRA.cer`
 
-Si necesita el contenido que se accede con frecuencia sin conexión, desbloqueo automático de BitLocker puede configurarse para los volúmenes después de la inicial desbloquear mediante los siguientes comandos:
+Si es necesario tener acceso a los contenidos con frecuencia sin conexión, se puede configurar el desbloqueo automático de BitLocker para los volúmenes después del desbloqueo inicial mediante los siguientes comandos:
 
 * `manage-bde -autounlock v: -enable`
 * `manage-bde -autounlock w: -enable`
 
 ### <a name="disabling-bitlocker"></a>Deshabilitar BitLocker
 
-Surgiera existe una necesidad de deshabilitar temporalmente BitLocker, iniciar una sesión remota de PowerShell con el dispositivo de IoT y ejecute el siguiente comando: `sectask.exe -disable`.  
+Si surge la necesidad de deshabilitar BitLocker temporalmente, iniciar una sesión remota de PowerShell con el dispositivo de IoT y ejecute el siguiente `sectask.exe -disable`comando:.  
 
 > [!NOTE]
-> Cifrado del dispositivo se volverá a habilitar, en el arranque de dispositivos posterior a menos que la tarea programada de cifrado está deshabilitada.
+> El cifrado de dispositivo se volverá a habilitar en el siguiente arranque del dispositivo a menos que se deshabilite la tarea de cifrado programado.
 
 

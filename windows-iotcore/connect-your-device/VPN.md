@@ -4,40 +4,40 @@ author: saraclay
 ms.author: saclayt
 ms.date: 11/19/2018
 ms.topic: article
-description: Obtenga información sobre cómo usar el programa de instalación y configurar las funcionalidades de VPN para el dispositivo Windows 10 IoT Core.
-keywords: Windows iot, VPN, el programa de instalación, el dispositivo
+description: Aprenda a usar, configurar y configurar las funcionalidades de VPN para el dispositivo de Windows 10 IoT Core.
+keywords: Windows IOT, VPN, instalación, dispositivo
 ms.openlocfilehash: 94eafcb74a05179a7741cb516b5e7be30b525092
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60167903"
 ---
-# <a name="leveraging-vpn-capabilities-for-your-windows-10-iot-core-device"></a>Aprovechamiento de las capacidades VPN para el dispositivo Windows 10 IoT Core
+# <a name="leveraging-vpn-capabilities-for-your-windows-10-iot-core-device"></a>Aprovechamiento de las funcionalidades de VPN para el dispositivo de Windows 10 IoT Core
 
-Para poder aprovechar las capacidades VPN de Windows 10 IoT Core, siga las instrucciones siguientes.
+Para aprovechar las funcionalidades de VPN de Windows 10 IoT Core, siga las instrucciones que se indican a continuación.
 
 > [!NOTE]
-> La mayoría de las instrucciones siguientes debe modificarse. Son específicos del host VPN que se conecta el usuario. Los certificados que usa son ejemplos.
+> La mayoría de las instrucciones siguientes deben adaptarse. Son específicos del host de VPN al que se está conectando el usuario. Los certificados utilizados son ejemplos.
 
 ## <a name="establishing-a-vpn-connection"></a>Establecer una conexión VPN 
 
-1. Obtener los certificados necesarios y copie en el dispositivo de IoT (por ejemplo, en una carpeta de \vpntest).
+1. Obtenga los certificados necesarios y cópielo en el dispositivo de IoT (por ejemplo, en una carpeta \vpntest).
 
-* RASTest.pfx
-* IssuingCA.crl
-* RootCA.crl
+* RASTest. pfx
+* IssuingCA. CRL
+* RootCA. CRL
 
-2. Certificados de equipo local se aplican una. PowerShell en el dispositivo como administrador
+2. Aplique los certificados de la máquina local a. PowerShell en el dispositivo como administrador
 
 ```powershell
 certmgr -add .\IssuingCA.crl -r localmachine -s root
 certmgr -add .\RootCA.crl -r localmachine -s root
 ```
 
-3. Certificados de usuario se aplican una. Inicie sesión en el dispositivo de IoT mediante SSH como "DefaultAccount".
-b. Desde el símbolo del sistema, escriba "PowerShell".
-c. Emita los siguientes comandos de PowerShell (sesión iniciada como "Cuenta predeterminada"):
+3. Aplique los certificados de usuario a. Inicie sesión en el dispositivo IoT con SSH como "DefaultAccount".
+b. En el símbolo del sistema, escriba "PowerShell".
+c. Emita los siguientes comandos desde PowerShell (mientras está conectado como "cuenta predeterminada"):
 
 ```powershell
 $mypwd = ConvertTo-SecureString -String "<password>" -Force -AsPlainText
@@ -47,21 +47,21 @@ Cert -add .\IssuingCA.crl -r currentuser -s my
 certmgr -add .\RootCA.crl -r currentuser -s my
 ```
 
-4. Agregar una entrada en el archivo c:\windows\system32\driverS\etc\hosts (el ejemplo se muestra a continuación); del archivo de hosts de corrección
+4. Corregir el archivo de hosts agregar una entrada en el archivo c:\windows\system32\driverS\etc\hosts (ejemplo que se muestra a continuación);
 
 > |    |    |    |
 > |----|----| ---|
-> | 10.10.10.10 | MyVPN.DomainName.org | Reemplazar por el nombre de dominio y dirección IP según sea necesario |
+> | 10.10.10.10 | MyVPN.DomainName.org | Reemplazar por la dirección IP y el nombre de dominio según sea necesario |
 
-5. Compilación de la aplicación de prueba VPN reemplazar "MyVPN.DomainName.org" en el código fuente. Aumentar aún más, según sea necesario.
+5. Cree la aplicación de prueba de VPN y reemplace "MyVPN.DomainName.org" en el código fuente. Aumente el aumento según sea necesario.
 
-6. Implementar el código siguiente en la sección "Iniciar y detener una conexión VPN" para el dispositivo Windows 10 IoT.
-Escriba un "perfil nombre arbitrario" y presione el botón "Conectar a la VPN". 
+6. Implemente el código siguiente en la sección "Inicio y detención de una conexión VPN" en el dispositivo IoT de Windows 10.
+Escriba un "nombre de perfil" arbitrario y haga clic en el botón "conectar con VPN". 
 
 
 ## <a name="starting-and-stopping-a-vpn-connection"></a>Inicio y detención de una conexión VPN
 
-Utilice el código siguiente para iniciar y detener una conexión VPN.
+Use el código siguiente para iniciar y detener una conexión VPN.
 
 ```csharp
 

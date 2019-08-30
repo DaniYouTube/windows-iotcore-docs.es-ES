@@ -1,66 +1,66 @@
 ---
-title: Productores AllJoyn
+title: Productores de AllJoyn
 author: saraclay
 ms.author: saclayt
 ms.date: 09/07/17
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
-description: Obtenga información sobre cómo hacer que un productor AllJoyn por aprender y creación introspección XML y sus características diferentes.
-keywords: Windows iot, AllJoyn
+description: Obtenga información sobre cómo crear un productor de AllJoyn aprendiendo y creando XML introspección y sus distintas características.
+keywords: Windows IOT, AllJoyn
 ms.openlocfilehash: 014f6f4b4c33f4dbd85963bbddccb948322ccca9
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60167409"
 ---
 > [!NOTE]
-> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, abra una incidencia en GitHub o enviarnos sus comentarios en los comentarios a continuación.
+> Está viendo la documentación archivada. AllJoyn ya no es compatible con Windows 10 IoT. Si tiene preguntas, abra un problema en GitHub o envíenos sus comentarios en los comentarios siguientes.
 
-# <a name="alljoyn-producers"></a>Productores AllJoyn
+# <a name="alljoyn-producers"></a>Productores de AllJoyn
 
-AllJoyn, creado por el [AllSeen Alliance](https://allseenalliance.org/), proporciona un marco excelente para hacer que los dispositivos conectados y aplicaciones en una red articulaciones próximas y Windows proporciona la mejor experiencia para el uso de AllJoyn con las [AllJoyn Studio ](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286) extensión para Visual Studio.  Mientras que sobresale con nuestras herramientas de creación de aplicaciones para los productores y consumidores, puede resultar muy confuso a partir de un nuevo dispositivo AllJoyn desde cero.
+AllJoyn, creado por [AllSeen Alliance](https://allseenalliance.org/), proporciona un marco de trabajo excelente para la creación de aplicaciones y dispositivos conectados en una red proximal, y Windows proporciona la mejor experiencia para usar AllJoyn con la extensión [Alljoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286) para Visual Studio.  Aunque nuestras herramientas de Excel en la creación de aplicaciones para productores y consumidores, el inicio de un nuevo dispositivo de AllJoyn desde cero puede resultar bastante confuso.
 
-Si tiene alguna idea para el dispositivo conectado excelente siguiente o un juguete nuevo con la que se va a realizar ajustes y explore, es posible que no pueda usar una de las interfaces estándares que ofrece la alianza AllSeen.  Si es así, deberá crear un productor AllJoyn completamente nuevo.
+Si tiene una idea para el siguiente dispositivo conectado o un nuevo juguete con el que Tinker y explore, es posible que no pueda usar una de las interfaces estándar ofrecidas por AllSeen Alliance.  Si es así, debe crear un productor AllJoyn nuevo.
 
-Un desarrollador que desean realizar un productor AllJoyn nuevo debe crear su propio XML introspección, pero crear XML de introspección requiere experiencia en la materia y tiene una considerable curva de aprendizaje para desarrolladores nuevo.  Esta entrada de blog, reduce la curva de aprendizaje desglosando los distintos componentes de introspección XML, que describe el propósito y las restricciones de cada componente, y proporcionando buenos ejemplos en términos asequible.
+Un desarrollador que desea hacer que un nuevo productor de AllJoyn tenga que crear su propio XML de introspección, pero crear introspección XML requiere conocimientos sobre la materia y tiene una curva de aprendizaje significativa para los nuevos desarrolladores.  Este blog reducirá la curva de aprendizaje al desglosar los distintos componentes de introspección XML, describir el propósito y las restricciones de cada componente, y proporcionar buenos ejemplos en términos aproximables.
 
 ## <a name="existing-documentation"></a>Documentación existente
 
-Un examen de los siguientes recursos que se combina con esta entrada de blog debe acelerar developer comprensión de introspección XML:
+Un examen de cursores de los siguientes recursos combinados con este blog debe acelerar la comprensión del desarrollador de introspección XML:
 
-1. [Guía de la API de acciones y eventos de AllJoyn](https://allseenalliance.org/developers/develop/api-guide/events-and-actions) – AllJoyn información general y detalles de implementación.
-2. [Instrucciones de diseño de AllJoyn interfaz Review Board](https://wiki.allseenalliance.org/irb/interface_design_guidelines_1.0) -estructurar estrictos y la especificación para AllJoyn introspección XML.
-3. [Especificación de Bus de D](http://dbus.freedesktop.org/doc/dbus-specification.html) – AllJoyn basa introspección XML en esta especificación.
+1. [Guía de la API de eventos y acciones de alljoyn](https://allseenalliance.org/developers/develop/api-guide/events-and-actions) : detalles e información general sobre la implementación de alljoyn.
+2. [Directrices de diseño del panel de revisión de la interfaz alljoyn](https://wiki.allseenalliance.org/irb/interface_design_guidelines_1.0) : estructura y especificación rigurosas para ALLJOYN introspección XML.
+3. [Especificación de bus D](http://dbus.freedesktop.org/doc/dbus-specification.html) : AllJoyn basa introspección XML en esta especificación.
 
-__Los tres tipos de introspección XML__
+__Los tres tipos de XML de introspección__
 
-Como leer detenidamente la documentación de AllJoyn, encontrará tres tipos de introspección XML:
+Al igual que en la documentación de AllJoyn, encontrará tres tipos de introspección XML:
 
-1. XML de especificación de Bus de D: comunicación entre procesos, de baja sobrecarga con un formato de tipo para la representación de datos.
-2. Introspección AllJoyn XML: amplía XML de especificación de Bus de D con las etiquetas XML que contiene descripciones textuales al aplicar también AllJoyn principios para la especificación.
-3. Había extendido AllJoyn introspección XML: evolución de la introducción de introspección XML clásico había denominado tipos para las estructuras y diccionarios.
+1. XML de especificación de bus D: baja sobrecarga, comunicación entre procesos con un formato de tipo para la representación de datos.
+2. AllJoyn introspección XML: extiende el XML de especificación de bus D con etiquetas XML para almacenar descripciones de texto y aplicar también principios de AllJoyn a la especificación.
+3. Introspección de AllJoyn extendido XML: evolución del XML clásico de introspección introducción de tipos con nombre para estructuras y diccionarios.
 
-AllJoyn Studio actualmente es compatible con XML de especificación de Bus de D y AllJoyn introspección XML; este blog determinará cómo crear y formulario AllJoyn introspección XML.  Interfaz Review Board (IRB de la alianza AllSeen) usa el nuevo introspección de AllJoyn extendido como el formato para envíos formales para las revisiones de estandarización, pero está trabajando en un formato XML de introspección unificada para el futuro próximo.
+AllJoyn Studio admite actualmente la especificación de bus D XML y AllJoyn introspección XML; este blog determinará cómo crear y formar el XML introspección de AllJoyn.  El panel de revisión de interfaz (IRB) de AllSeen Alliance usa la nueva introspección de AllJoyn extendida como formato para los envíos formales para las revisiones de estandarización, pero está trabajando en un formato XML Unificado de introspección en un futuro próximo.
 
-## <a name="introspection-high-level-overview"></a>Introducción de alto nivel introspección
+## <a name="introspection-high-level-overview"></a>Información general de alto nivel de introspección
 
-Cada productor AllJoyn anuncia públicamente un archivo XML de introspección presenta funcionalidad admitida del productor: interfaces como se describe a través de las señales, propiedades y métodos.  Soluciones de generación de código, como el de la extensión AllJoyn Studio, dependen de introspección XML para crear el código necesario para acelerar el desarrollo.  Introspección XML describe la funcionalidad de un productor de forma no ambigua y legible que dos distintos fabricantes pueden usar el código XML para implementar un productor con la misma funcionalidad.  Con el mismo token, los desarrolladores con ningún conocimiento anterior de un productor AllJoyn deberían poder desarrollar en que el productor según su XML.
+Cada productor de AllJoyn anuncia públicamente un XML introspección que muestra la funcionalidad admitida por el productor, tal como se describe a través de señales, propiedades y métodos.  Las soluciones de generación de código, como la de la extensión AllJoyn Studio, se basan en el XML de introspección para crear el código necesario para acelerar el desarrollo.  El XML introspección describe la funcionalidad de un productor en una manera no ambigua y legible, de modo que dos fabricantes diferentes pueden utilizar el XML para implementar un productor con la misma funcionalidad.  Con el mismo token, los desarrolladores sin ningún conocimiento previo de un productor de AllJoyn deberían ser capaces de desarrollar en ese productor en función de su XML.
 
-__Interfaces de AllJoyn__
+__Interfaces AllJoyn__
 
-Para hacerlo, AllJoyn dividir un archivo XML de introspección en diversas "interfaces" que representan diferentes agrupaciones lógicas de comportamiento y las funcionalidades.  Interfaces de AllJoyn se denominan utilizando una convención de DNS inversa. Por ejemplo, la interfaz de "Foo" creada por Contoso Ltd., que posee el dominio contoso.com, se escribiría como:
+AllJoyn consigue esto dividiendo un XML introspección en varias "interfaces" que representan diferentes agrupaciones lógicas de comportamiento y capacidades.  Las interfaces AllJoyn se denominan mediante una Convención de DNS inverso. Por ejemplo, la interfaz "foo" de la interfaz creada por contoso Ltd., que posee el dominio contoso.com, se escribiría como:
 
     <interface name="com.contoso.Foo">
 
-Un productor puede implementar cualquier número de interfaces, pero debe implementar todos los componentes de una interfaz que anuncie.  Con el fin de diferenciar y extender el comportamiento, AllJoyn admite crear interfaces nuevas con respecto a una jerarquía de interfaz existente; es decir, `com.contoso.Foo.Bar` define nuevas capacidades de las cosas en el `Foo.Bar` categoría, pero no tiene ninguna dependencia explícita en el `com.contoso.Foo` interfaz. 
+Un productor puede implementar cualquier número de interfaces, pero debe implementar todos los componentes de una interfaz que anuncien.  Con el fin de diferenciar y extender los comportamientos, AllJoyn admite la creación de nuevas interfaces con respecto a una jerarquía de interfaz existente. es decir, `Foo.Bar` `com.contoso.Foo` define nuevas funcionalidades para las cosas en la categoría, pero no tiene ninguna dependencia explícita en la interfaz. `com.contoso.Foo.Bar` 
 
-Por ejemplo, tenemos dos interfaces: `com.contoso.Sensor` y `com.contoso.Sensor.Humidity` : "Humedad" lógicamente cae por debajo de la categoría "Sensor".  Alguien desarrollar un productor de humedad podría optar por admitir solamente el `com.contoso.Sensor.Humdity` interfaz, pero también podría optar por admitir la `com.contoso.Sensor` interfaz.  En cualquier caso, si anuncia una interfaz, a continuación, los productores deben admitir todas sus funciones.
+Por ejemplo, tenemos dos interfaces: `com.contoso.Sensor` y `com.contoso.Sensor.Humidity` – "humedad" se encuentra lógicamente en la categoría "sensor".  Alguien que desarrolle un productor de humedad podría optar `com.contoso.Sensor.Humdity` por admitir solo la interfaz, pero también podría optar por admitir la `com.contoso.Sensor` interfaz.  Independientemente de si anuncian una interfaz, los productores deben admitir todas sus funciones.
 
-El `<description>` etiqueta se utiliza para describir interfaces, capacidades y los argumentos y se pueden localizar para varios idiomas.  El uso racional de la `<description>` etiqueta a la que hace que el código XML sea más comprensible y elimina la ambigüedad.
+La `<description>` etiqueta se usa para describir interfaces, funcionalidades y argumentos, y se puede localizar para varios idiomas.  El uso liberal de `<description>` la etiqueta hace que el código XML sea más comprensible y elimine la ambigüedad.
 
-Una práctica estándar dicta el uso de la `org.alljoyn.Bus.Secure` anotación en una interfaz para habilitar la autenticación y seguridad.  Para una autenticación segura, utilice una clave precompartida (PSK) o un intercambio de claves de certificado (ECDSA).  En caso contrario, una autenticación de "null" se convierte en el comportamiento predeterminado.  **El mecanismo de autenticación real se produce en la implementación, no la declaración**. Esta anotación habilita la seguridad pero no especifica el tipo de seguridad que utilizan o cómo se implementarán.
+La práctica estándar dicta el uso de la `org.alljoyn.Bus.Secure` anotación en una interfaz para habilitar la seguridad y la autenticación.  Para una autenticación segura, use una clave previamente compartida (PSK) o un intercambio de claves de certificado (ECDSA).  De lo contrario, una autenticación "null" se convierte en el comportamiento predeterminado.  **El mecanismo de autenticación real se produce en la implementación, no en la declaración**. Esta anotación habilita la seguridad pero no especifica el tipo de seguridad utilizado o cómo se implementará.
 
 ___Ejemplo___
 
@@ -82,49 +82,49 @@ ___Ejemplo___
 </node>
 ```
 
-En este ejemplo se muestra una interfaz expuesta por un dispositivo: `com.example.Door.PrivateDoor`. En el ámbito de la interfaz, lo único que nos preocupa es si debe protegerse comunicación cuando se usa esa interfaz, no se está usando el tipo de mecanismo.
+En este ejemplo se muestra una interfaz expuesta por un `com.example.Door.PrivateDoor`dispositivo:. En el ámbito de la interfaz, lo único que nos preocupa es si la comunicación se debe proteger al usar esa interfaz, no qué tipo de mecanismo se está usando.
 
 __Capacidades de interfaz__
 
-Las interfaces declarar sus capacidades con tres miembros de interfaz: métodos, propiedades o señales. Introspección XML también admite las anotaciones que describan una funcionalidad adicional o restricciones.  Estas funcionalidades con notación UpperCamelCase mientras lowerCamelCase con argumentos de notación.
+Las interfaces declaran sus capacidades con tres miembros de interfaz: métodos, propiedades o señales. Introspección XML también admite anotaciones que describen funcionalidad o restricciones adicionales.  Estas funcionalidades usan la notación UpperCamelCase mientras que los argumentos usan la notación lowerCamelCase.
 
 ### <a name="argument-types"></a>Tipos de argumento
 
-Los miembros de interfaz enviar y reciben los argumentos que se indica con un código de tipo ASCII.  Según el tipo de miembro de interfaz, argumentos han se pueden enviar al productor del consumidor (dirección = "out") o desde el productor al consumidor (dirección = "in").  En la tabla siguiente proporciona una breve descripción de los tipos más comunes:
+Los miembros de interfaz envían y reciben argumentos indicados por un código de tipo ASCII.  Dependiendo del tipo de miembro de interfaz, es posible que los argumentos se hayan enviado al productor desde el consumidor (Direction = "out") o desde el consumidor hasta el productor (Direction = "in").  En la tabla siguiente se proporciona una breve descripción de los tipos usados comúnmente:
 
-> | *Nombre convencional* | *Tipo de código* | *Usar* |
+> | *Nombre convencional* | *Código de tipo* | *Uso* |
 > |----------------- |---------| --- |
-> |**BOOLEANO** | b | Representa TRUE (1) o FALSE (0). Se usa para información binaria simple o Estados. |
-> |**BYTES** | y | Valor entero comprendido entre 0 y 255. Se utiliza cuando se trabaja con un número positivo pequeño. |
-> |**UINT16** | q | Valor entero entre 0 y 2 ^ 16-1 |
-> |**UINT32** | u | Valor entero entre 0 y 2 ^ 32-1 |
-> |**UINT64** | tar | Valor entero entre 0 y 2 ^ 64-1 |
-> |**INT16** | per? | Valor entero entre –(2^15) y 2 ^ 15-1 |
-> |**INT32** | i | Valor entero entre –(2^31) y 2 ^ 31-1 |
-> |**INT64** | x | Valor entero entre –(2^63) y 2 ^ 63-1 |
-> |**DOBLE** | d | Precisión de números decimales de –(2^127) a 2 ^ 127-1 |
-> |**CADENA** | s | Cadena UTF-8 |
+> |**BOOLEANO** | b | Representa TRUE (1) o FALSE (0). Se utiliza para obtener información o Estados binarios simples. |
+> |**BYTES** | y | Valor entero comprendido entre 0 y 255. Se usa cuando se trabaja con números positivos pequeños. |
+> |**UINT16** | q | Valor entero de 0 a 2 ^ 16-1 |
+> |**UINT32** | 5\.50 | Valor entero de 0 a 2 ^ 32-1 |
+> |**UINT64** | t | Valor entero de 0 a 2 ^ 64-1 |
+> |**INT16** | per? | Valor entero de – (2 ^ 15) a 2 ^ 15-1 |
+> |**INT32** | i | Valor entero de – (2 ^ 31) a 2 ^ 31-1 |
+> |**INT64** | x | Valor entero de – (2 ^ 63) a 2 ^ 63-1 |
+> |**HACE** | d | Números de punto flotante de precisión desde – (2 ^ 127) hasta 2 ^ 127-1 |
+> |**STRING@** | s | Cadena UTF-8 |
  
-Para obtener una descripción más exhaustiva de todos los tipos admitidos, consulte [aquí](http://dbus.freedesktop.org/doc/dbus-specification.html#idp94392448).
+Para obtener información general más exhaustiva sobre todos los tipos admitidos, consulte [aquí](http://dbus.freedesktop.org/doc/dbus-specification.html#idp94392448).
 
-Cuando se redactó este documento, use las unidades que sea posible y denotar claramente unidades deseadas. Cuando sea posible, elija el tipo de código más restrictivo para su escenario; Por ejemplo, si va a representar la edad de una persona en años, a continuación, utilizar BYTE, no UINT16 o INT16, ya que nadie será una negativo edad o más de 255 años de antigüedad.  Siga siempre la versión más reciente [AllJoyn interfaz Review Board (IRB)](https://wiki.allseenalliance.org/interfacereviewboard?s%5b%5d=interface&s%5b%5d=review&s%5b%5d=board) directrices.
+En el punto de redactar este documento, use las unidades SI siempre que sea posible y denote claramente las unidades prepensadas. Cuando sea posible, elija el código de tipo más restrictivo para su escenario; por ejemplo, si está representando la edad de una persona en años, use BYTE, no UINT16 o INT16, ya que nadie tendrá una edad negativa o más de 255 años.  Siga siempre las instrucciones más recientes del panel de revisión de la [interfaz AllJoyn (IRB)](https://wiki.allseenalliance.org/interfacereviewboard?s%5b%5d=interface&s%5b%5d=review&s%5b%5d=board) .
 
-La tabla siguiente resume las unidades comunes:
+En la tabla siguiente se resumen las unidades comunes:
 
 
-> |*Cantidad* | *Unidad*|
+> |*Volumen* | *Unidad*|
 > |-------- | ---- |
-> |**Tiempo absoluto (fecha y hora)** | Segundos transcurridos desde la época de UNIX (00: 00:00 en 1 de enero de 1970) |
-> |**Hora del día** | Segundos transcurridos desde medianoche |
+> |**Tiempo absoluto (fecha & hora)** | Segundos desde la época de UNIX (00:00:00 el 1 de enero de 1970) |
+> |**Hora del día** | Segundos desde la medianoche |
 > |**Intervalo de tiempo** | Segundos |
-> |**Ancho de banda** | Bits por segundo |
+> |**Consumo** | Bits por segundo |
 > |**Tamaño de los datos** | Bytes |
  
 ### <a name="methods"></a>Métodos
 
-Los consumidores de llamar a métodos para modificar el estado de un productor y sus nombres deben empezar con un verbo, ya que representan las solicitudes para el productor realizar una acción.  Los métodos pueden tener de entrada y salida argumentos; en el caso de que no hay que enviar ningún mensaje de retorno, se aplica la anotación "org.freedesktop.DBus.Method.NoReply".  Sin embargo, métodos de AllJoyn normalmente devuelven un SuccessResult o un FailureResult, ofreciendo a comentarios de los consumidores acerca de la llamada al método.  El tipo de los argumentos debe cumplir el [D Bus especificación](http://dbus.freedesktop.org/doc/dbus-specification.html). 
+Los consumidores llaman a métodos para modificar el estado de un productor y sus nombres deben empezar con un verbo porque representan solicitudes para que el productor realice una acción.  Los métodos pueden tener argumentos de entrada y salida; en el caso de que no sea necesario enviar ningún mensaje de retorno, aplique la anotación "org. freedesktop. dBu. Method. noresponse".  Sin embargo, los métodos AllJoyn normalmente devuelven un SuccessResult o un FailureResult, lo que otorga a los consumidores comentarios sobre la llamada al método.  El tipo de los argumentos debe cumplir la [especificación de bus D](http://dbus.freedesktop.org/doc/dbus-specification.html). 
 
-___Ejemplo (excepto la información de la interfaz para su comodidad)___
+___Ejemplo (excluir información de interfaz para mayor comodidad)___
 
 ``` xml
 <node>
@@ -204,22 +204,22 @@ ___Ejemplo (excepto la información de la interfaz para su comodidad)___
 </node>
 ```
 
-*Nota: En la mayoría de los casos, las propiedades deben usarse en lugar de métodos para tener acceso a estado del productor (por ejemplo, usar una propiedad de Color en lugar de un método GetColor).*
+*Nota: En la mayoría de los casos, se deben usar propiedades en lugar de métodos para tener acceso al estado de un productor (por ejemplo, usar una propiedad de color en lugar de un método GetColor).*
 
 ### <a name="properties"></a>Propiedades
 
-Propiedades principalmente permiten el acceso al estado del productor.  Aunque técnicamente, las propiedades tienen valores de acceso de "lectura", "readwrite" o "escritura", funcionalidad de modificación de estado generalmente pertenece a los métodos, por lo tanto, los desarrolladores deben esforzarse por mantener propiedades como "lectura" y use "readwrite" solo cuando el estado representado por esa propiedad es independiente de todas las demás propiedades.  Las propiedades nunca deben ser simplemente "escritura": modificar el estado sin observación es la función de los métodos.
+Las propiedades permiten principalmente el acceso al estado de un productor.  Aunque las propiedades técnicamente tienen los valores de acceso de "lectura", "ReadWrite" o "escritura", la funcionalidad de modificación de Estado suele pertenecer a métodos, como tal, los desarrolladores deben tratar de mantener las propiedades como "lectura" y usar "ReadWrite" solo cuando el estado representado esa propiedad es independiente de todas las demás propiedades.  Las propiedades nunca deben ser simplemente "write": modificar el estado sin observación es el rol de los métodos.
 
-Se deben anotar propiedades a los consumidores alertas cuando cambian sus valores (si lo desea, las propiedades pueden heredar esta anotación de su interfaz primaria).  La anotación `org.freedesktop.DBus.Property.EmitsChangedSignal` puede tener cuatro valores:
+Las propiedades se deben anotar para avisar a los consumidores cuando cambian sus valores (opcionalmente, las propiedades pueden heredar esta anotación de su interfaz primaria).  La anotación `org.freedesktop.DBus.Property.EmitsChangedSignal` puede tener cuatro valores:
 
-* "true": cuando se cambia la propiedad, el productor emitirá una señal que indica la propiedad que ha cambiado y el nuevo valor. Se utiliza en las propiedades que se utilizan con frecuencia y que requieren una supervisión activa, como "LockState" para una puerta.
-* "invalida": cuando cambia la propiedad, el productor emitirá una señal que indica la propiedad que ha cambiado, pero no el nuevo valor. Se utiliza en las propiedades que no requieren supervisión pesada (por ejemplo, el "WashMode" un secador de ropas) o representan una gran cantidad de datos, como un contenedor.
-* "false": cuando se cambia la propiedad, el productor no emite ninguna señal. Se utiliza en las propiedades que actualizan rápidamente, por ejemplo, una propiedad "TransitCounter" en un torniquete metro seguimiento de personas que realiza el metro. Si no se especifica, las propiedades de AllJoyn Úselo como valor predeterminado.
-* "const": la propiedad nunca cambiará valor y nunca emitir una señal modificada. Se trata de introducidas en la versión 16.04 AllJoyn; hasta entonces, utilice "true".
+* "true": cuando cambia la propiedad, el productor emitirá una señal que denota la propiedad cambiada y el nuevo valor. Se utiliza en las propiedades que se usan con frecuencia y requieren supervisión activa, como un "LockState" para una puerta.
+* "invalidaciones": cuando la propiedad cambia, el productor emitirá una señal que denota la propiedad modificada pero no el nuevo valor. Se usa en las propiedades que no requieren mucha supervisión (por ejemplo, "WashMode" de una secadora de ropa) o que representan una gran cantidad de datos, como un contenedor.
+* "false": cuando cambia la propiedad, el productor no emite ninguna señal. Se usa en las propiedades que se actualizan rápidamente, como una propiedad "TransitCounter" en un próximo de seguimiento de guión de la próximo. Si no se especifica, las propiedades AllJoyn lo utilizan como valor predeterminado.
+* "const": la propiedad nunca cambiará el valor y nunca emitirá una señal modificada. Esto se presentará en la versión AllJoyn 16,04; hasta entonces, use "true".
 
 ___Ejemplo___
 
-Ampliar el ejemplo anterior, hemos modificado el código XML para incluir propiedades (excepto los métodos por razones de brevedad).
+Al expandir el ejemplo anterior, hemos modificado el código XML para incluir las propiedades (excepto los métodos para mayor brevedad).
 
 ``` xml
 <node>
@@ -263,13 +263,13 @@ Ampliar el ejemplo anterior, hemos modificado el código XML para incluir propie
 </node>
 ```
 
-### <a name="signals"></a>Señales
+### <a name="signals"></a>Simultáneamente
 
-Señales de uso para informar a los consumidores de un evento que no puede determinar consultando el productor.  Apertura de una puerta se podría transmitir a través de propiedad de un productor DoorOpen con una anotación EmitsChangedProperty "true".  Alguien pasa a través de la puerta, sin embargo, no puede derivar de los cambios de propiedades, por lo que esto provocaría una señal de buena independiente.  Nos referimos a estos tipos de eventos como "sin estado".  Puesto que las señales son unidireccionales del productor al consumidor, solo puede contener "argumentos out".
+Use señales para informar a los consumidores de un evento que no pudieron determinar consultando el productor.  Una abertura de puerta se transmitiría a través de la propiedad DoorOpen de un productor con una anotación EmitsChangedProperty "true".  No obstante, alguien que pase a través de la puerta no se puede derivar de cualquier cambio de propiedad, por lo que esto haría una buena señal independiente.  Hacemos referencia a estos tipos de eventos como "sin estado".  Dado que las señales son unidireccionales desde el productor hasta el consumidor, solo pueden contener argumentos "out".
 
-___Ejemplos___ 
+___Example___ 
 
-(excepto los métodos y propiedades para su comodidad):
+(sin incluir métodos y propiedades para mayor comodidad):
 
 ``` xml
 <node>
@@ -299,45 +299,45 @@ ___Ejemplos___
 </node>
 ```
 
-Normalmente puesto que las señales tienen este tipo de un ámbito restringido, pocos aparecen en el XML del productor.
+Dado que las señales tienen un ámbito tan estrecho, normalmente aparecen pocas en el XML de un productor.
 
 ### <a name="containers"></a>Contenedores
 
-No combine varios argumentos en una colección compleja como una cadena JSON serializada. La especificación de Bus de D hace prestaciones para los contenedores de datos, STRUCT, matriz, variante y DICT_ENTRY.  Úselas para pasar argumentos que requieren más de los tipos básicos.
+No Combine varios argumentos en una colección compleja como una cadena JSON serializada. La especificación de bus D realiza prestaciones para contenedores de datos: STRUCT, ARRAY, VARIANT y DICT_ENTRY.  Úselos para pasar argumentos que requieran más de tipos básicos.
 
-___VARIANT___
+___VARIANTE___
 
-Las variantes se denotan mediante el tipo "v" y puede contener ninguno [único de tipo completo](http://dbus.freedesktop.org/doc/dbus-specification.html#term-single-complete-type). Sin embargo, las variantes deben evitarse siempre que sea posible porque agregan ambigüedad definiciones XML.
+Las variantes se indican mediante el tipo "v" y pueden contener cualquier [tipo completo](http://dbus.freedesktop.org/doc/dbus-specification.html#term-single-complete-type). Sin embargo, las variantes deben evitarse siempre que sea posible porque agregan ambigüedad a las definiciones XML.
 
-___STRUCT___
+___DESTRUCTOR___
 
-Uso de STRUCTs "(" y ")" para denotar el principio y al final de una estructura de datos: un único tipo completo.  Estas estructuras de datos pueden estar anidadas.
+Los STRUCTs usan "(" y ")" para indicar el principio y el final de una estructura de datos, un solo tipo completo.  Estas estructuras de datos pueden estar anidadas.
 
 Ejemplos:
 
-Un tipo de "(iii)" denota una estructura de tres enteros; "(i(ii))" denota una estructura de un entero y una estructura de dos enteros, que es distinta del tipo "((ii))".
+Un tipo de "(III)" denota una estructura de tres enteros; "(i (II))" denota una estructura de un entero y una estructura de dos enteros, que es diferente del tipo "((II) i)".
 
 ___MATRIZ___
 
-Las matrices de usar el código de tipo "a" y debe ir seguido por un único tipo completo.  Las matrices no tienen longitudes de conjunto, por lo que son similares a una estructura de datos de lista. Matrices representan un único tipo completo.
+Las matrices usan el código de tipo "a" y deben ir seguidos de un único tipo completo.  Las matrices no tienen longitudes fijas, por lo que son similares a una estructura de datos de lista. Las matrices representan un único tipo completo.
 
 Ejemplos:
 
-Un tipo de "ai" representa una matriz de enteros, mientras que "aai" representa una matriz de una matriz de enteros.  Una matriz se puede utilizar con las estructuras también: "a(ii)".
+Un tipo de "AI" representa una matriz de enteros, mientras que "AAI" representa una matriz de enteros.  También se puede utilizar una matriz con STRUCTs: "a (II)".
 
 ___DICT_ENTRY___
 
-Función DICT_ENTRYs similar a un STRUCT con mayores restricciones: usan "{" y "}", solo se puede producir como un tipo de elemento de matriz y debe tener exactamente dos tipos entre las llaves completos.  El primer tipo representa una "clave" en una estructura de datos de diccionario y la segunda representa el "valor" par de clave-valor del diccionario.  Una clave debe ser única en un diccionario.
+DICT_ENTRYs función similar a una estructura con restricciones mayores: usan "{" y "}", solo se puede producir como un tipo de elemento de matriz y deben tener exactamente dos tipos completos dentro de las llaves.  El primer tipo representa una "clave" en una estructura de datos del diccionario y la segunda representa el "valor" en el par clave-valor del diccionario.  Una clave debe ser única en un diccionario.
 
-Por ejemplo:
+Ejemplo:
 
-Un tipo de una {sy} denota un diccionario de claves de cadena y valores de tipo byte.  Usar <description> etiquetas para describir los valores y claves válidas. 
+Un tipo de {SY} denota un diccionario de claves de cadena y valores de byte.  Usar <description> Etiquetas para describir claves y valores válidos. 
 
-__Final ejemplo y ajxmlcop__
+__Ejemplo final y ajxmlcop__
 
-El concepto de contenedores mejora las capacidades de XML existente, además de proporcionar una vía para nuevos miembros de interfaz útil.
+El concepto de contenedores mejora las capacidades del XML existente y proporciona una vía para los nuevos miembros de interfaz útiles.
 
-Cuando haya terminado de escribir el código XML, utilice la herramienta de línea de comandos ajxmlcop.exe (disponible en el AllJoyn [git origen](https://git.allseenalliance.org/cgit/core/alljoyn.git/) o [aquí](https://github.com/MS-brock/AllJoynToasterDemo)) para validar el XML.  Use ajxmlcop.exe con el archivo XML como el argumento de entrada (por ejemplo, `C:\>ajxmlcop.exe doorExample.xml`) para recibir el error, advertencia y mensajes informativos.  Esta herramienta proporciona valiosos comentarios sobre la estructura y el formato de XML y el uso de las señales, propiedades y métodos.
+Una vez que haya terminado de escribir el código XML, use la herramienta de línea de comandos ajxmlcop. exe (disponible en el [origen de Git](https://git.allseenalliance.org/cgit/core/alljoyn.git/) de AllJoyn o [aquí](https://github.com/MS-brock/AllJoynToasterDemo)) para validar el XML.  Use ajxmlcop. exe con el archivo XML como argumento de entrada (por ejemplo, `C:\>ajxmlcop.exe doorExample.xml`) para recibir mensajes de error, de advertencia e informativos.  Esta herramienta proporciona comentarios valiosos sobre la estructura y el formato del XML y el uso de señales, propiedades y métodos.
 
 ``` xml
 <node>

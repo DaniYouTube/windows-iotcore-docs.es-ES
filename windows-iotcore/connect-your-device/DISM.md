@@ -1,49 +1,49 @@
 ---
-title: Use DISM para flash de Windows 10 IoT Core
+title: Usar DISM para Flash Windows 10 IoT Core
 author: bfjelds
 ms.author: bfjelds
 ms.date: 08/28/2017
 ms.topic: article
-description: Obtenga información sobre cómo usar DISM para flash de Windows 10 IoT Core en un tarjeta SD micro.
-keywords: Windows iot, DISM, administración de mantenimiento de imágenes implementación, tarjeta SD, flash, sistema operativo
+description: Obtenga información sobre cómo usar DISM para Flash Windows 10 IoT Core en una tarjeta micro SD.
+keywords: Windows IOT, DISM, administración de mantenimiento de imágenes de implementación, tarjeta SD, Flash, OS
 ms.openlocfilehash: 1fd075037b97399762aea1b0b844a477337cbc5d
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59515234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60168941"
 ---
-# <a name="use-dism-to-flash-windows-10-iot-core"></a>Use DISM para flash de Windows 10 IoT Core
+# <a name="use-dism-to-flash-windows-10-iot-core"></a>Usar DISM para Flash Windows 10 IoT Core
 
 > [!NOTE]
-> No se admite el mantenimiento sin conexión de DISM. Si intenta montar un FFU para IoT Core, recibirá el siguiente error: No se admite la solicitud.
-> La imagen no tiene un nombre y es probable que sea un FFU Mobile/Onecore, que no se admite actualmente.
-> Error 0 x 80070032 FfuMountImage #160.
+> No se admite el mantenimiento sin conexión de DISM. Recibirá el siguiente error si intenta montar un FFU para IoT Core: No se admite la solicitud.
+> La imagen no tiene un nombre y es probable que sea una FFU móvil/Onecore, que no se admite actualmente.
+> Error de FfuMountImage # 160 con 0x80070032.
 
-## <a name="an-alternative-method-to-iot-dashboard-for-flashing-a-ffu"></a>Un método alternativo para el panel de IoT de intermitencia en un FFU
+## <a name="an-alternative-method-to-iot-dashboard-for-flashing-a-ffu"></a>Un método alternativo al panel de IoT para hacer parpadear un FFU
 
-Puede usar Management(Dism.exe) y mantenimiento de imágenes de implementación para Windows 10 IoT Core en la tarjeta SD. Necesitará un archivo de imagen FFU correspondiente al tipo de dispositivo. 
+Puede usar administración y mantenimiento de imágenes de implementación (DISM. exe) para Flash Windows 10 IoT Core en la tarjeta SD. Necesitará un archivo de imagen FFU que se corresponda con el tipo de dispositivo. 
 
-* Abra un símbolo del sistema de administrador y navegue hasta la carpeta que contiene el archivo flash.ffu local.
+* Abra un símbolo del sistema de administrador y navegue hasta la carpeta que contiene el archivo Flash. FFU local.
 
-* Complemento tarjeta la SD en el equipo. 
+* Conecte la tarjeta SD al equipo. 
 
-* Buscar el número de disco que se encuentra la tarjeta SD en el equipo.  Se usará cuando se aplica la imagen en el paso siguiente.  Para ello, puede usar la utilidad diskpart.  Ejecute los siguientes comandos:
+* Busque el número de disco que tiene la tarjeta SD en el equipo.  Se usará cuando la imagen se aplique en el paso siguiente.  Para ello, puede usar la utilidad Diskpart.  Ejecute los comandos siguientes:
 
         c:\FFUFolder>diskpart
 
         DISKPART>list disk
 
-    Deben enumerar todos los dispositivos de almacenamiento conectados al equipo. 
+    Debería mostrar todos los dispositivos de almacenamiento conectados al equipo. 
 
-    ![Disco de la lista DISM](../media/Dism/DiskpartListDisk.png)
+    ![Disco de lista de DISM](../media/Dism/DiskpartListDisk.png)
 
-    Tenga en cuenta el número de disco y escriba diskpart exit para salir. 
+    Anote el número de disco y escriba Exit para salir de Diskpart. 
 
         DISKPART>exit
 
-* Mediante el símbolo del sistema de administrador, aplique la imagen a la tarjeta SD, ejecute el comando siguiente (no olvide reemplazar PhysicalDriveN con el valor que se encuentra en el paso anterior, por ejemplo, en este caso tarjeta SD es el número de disco 4, por lo que usaremos `/ApplyDrive:\\.\PhysicalDrive4` a continuación)
+* Con el símbolo del sistema de administrador, aplique la imagen a la tarjeta SD ejecutando el siguiente comando (Asegúrese de reemplazar PhysicalDriveN por el valor que encontró en el paso anterior, por ejemplo, en este caso, la tarjeta SD es el número de disco 4, `/ApplyDrive:\\.\PhysicalDrive4` por lo que usaremos menor
 
         dism.exe /Apply-Image /ImageFile:"[FULLPATH]\flash.ffu" /ApplyDrive:\\.\PhysicalDriveN /SkipPlatformCheck
 
-* Haga clic en el icono "Quitar Hardware de forma segura" en su Bandeja de tareas y seleccione su lector de tarjetas SD USB para quitarlo de forma segura desde el sistema.  No se puede hacer esto puede provocar daños en la imagen.
+* Haga clic en el icono "quitar hardware de forma segura" en la bandeja de tareas y seleccione el lector de tarjetas USB SD para quitarlo del sistema de forma segura.  Si no lo hace, puede provocar daños en la imagen.

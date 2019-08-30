@@ -1,55 +1,55 @@
 ---
-title: Programa de instalación de una aplicación predeterminada
+title: Configuración de una aplicación predeterminada
 author: bfjelds
 ms.author: bfjelds
 ms.date: 09/05/17
 ms.topic: article
-description: Obtenga información sobre cómo configurar una aplicación de forma predeterminada con la de Windows Device Portal o el shell.
-keywords: Windows iot, iot de aplicación, PowerShell, de forma predeterminada
+description: Aprenda a configurar una aplicación predeterminada mediante el portal de dispositivos de Windows o el shell.
+keywords: Windows IOT, aplicación predeterminada, PowerShell, IOT
 ms.openlocfilehash: f3f7a5194491250a8a0b49e81e073282c8f5660b
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60170252"
 ---
-# <a name="setup-a-default-app"></a>Programa de instalación de una aplicación predeterminada
-Aquí obtendrá información sobre las formas de configurar la aplicación como aplicación predeterminada. La aplicación predeterminada es el que se inician cuando se inicia el sistema.  
+# <a name="setup-a-default-app"></a>Configuración de una aplicación predeterminada
+Aquí aprenderá las maneras de configurar la aplicación como la aplicación predeterminada. La aplicación predeterminada es la que se inicia cuando se inicia el sistema.  
 
 > [!NOTE]
-> Visual Studio generará un error críptico al implementar en un RS5 (o RS4 con OpenSSH habilitado) IoT a menos que se instala un SDK de RS4 o mayor que Visual Studio puede tener acceso a la imagen.
+> Visual Studio generará un error críptico al realizar la implementación en una imagen de IoT RS5 (o RS4 con OpenSSH habilitado), a menos que haya instalado un SDK de RS4 o superior al que pueda acceder Visual Studio.
 
 ## <a name="runtime-options"></a>Opciones de tiempo de ejecución
 
-Durante el desarrollo / experimental fases, puede cambiar la aplicación predeterminada por medios siguientes.
+Durante las fases de desarrollo o experimentales, puede cambiar la aplicación predeterminada de la manera siguiente:
 
-### <a name="using-windows-device-portal"></a>Uso de Windows Device Portal
+### <a name="using-windows-device-portal"></a>Uso del portal de dispositivos de Windows
 
-Puede hacer clic en **inicio** columna correspondiente a la aplicación.
+Puede hacer clic en la columna **Startup** correspondiente a la aplicación.
 ![SetupDefaultAppWDP](../media/SetupDefaultApp/DefaultAppWDP.png)
 
-### <a name="using-the-shell"></a>Uso del shell
+### <a name="using-the-shell"></a>Usar el shell
 
-Pasos para configurar la aplicación predeterminada mediante el shell 
+Pasos para establecer la aplicación predeterminada mediante el shell 
 
-1. Conectarse al dispositivo a través de [Powershell](../connect-your-device/PowerShell.md)
+1. Conexión al dispositivo a través de [PowerShell](../connect-your-device/PowerShell.md)
 
-2. Lista de las aplicaciones instaladas con `iotstartup list`
+2. Enumerar las aplicaciones instaladas con`iotstartup list`
 
-3. Tenga en cuenta el appid de la aplicación que desea realizar como valor predeterminado y establecerlo mediante `iotstartup add headed <appid>`. Para la aplicación sin periféricos, debe usar `iotstartup add headless <appid>`.
+3. Anote el valor de AppID de la aplicación que desea establecer como predeterminado y establézcalo mediante `iotstartup add headed <appid>`. En el caso de la aplicación sin periféricos, debe usar `iotstartup add headless <appid>`.
 
 
 ## <a name="build-time-option"></a>Opción de tiempo de compilación
 
-Para implementaciones grandes, puede conseguirlo mediante el paquete de aprovisionamiento
+Para implementaciones de gran tamaño, puede conseguirlo mediante el paquete de aprovisionamiento
 
-Puede especificar la configuración de StartupApp de forma predeterminada en el WCD durante la creación del paquete de aprovisionamiento.
+Puede especificar el valor de StartupApp/default en el WCD durante la creación del paquete de aprovisionamiento.
 ![SetupDefaultAppICD](../media/SetupDefaultApp/DefaultAppICD.png)
 
-Consulte [Appx.IoTCoreDefaultApp](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Packages/Appx.IoTCoreDefaultApp/customizations.xml) como ejemplo. Puede obtener la aplicación de usuario modelo ID (AUMID) de un appx con [GetAppxInfo herramienta](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Tools/GetAppxInfo.exe).
+Consulte [appx. IoTCoreDefaultApp](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Packages/Appx.IoTCoreDefaultApp/customizations.xml) como ejemplo. Puede obtener el identificador de modelo de usuario de la aplicación (AUMID) de un appx mediante la [herramienta GetAppxInfo](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Tools/GetAppxInfo.exe).
 
-## <a name="how-to-configure-home-key"></a>Cómo configurar la clave "Hogar"
+## <a name="how-to-configure-home-key"></a>Cómo configurar la clave "principal"
 
-Actualización de aniversario de Windows 10 IoT (1607) proporciona compatibilidad de shell para traer la ventana de la aplicación de forma predeterminada al primer plano cuando se está ejecutando otra aplicación.
+Actualización de aniversario de IoT de Windows 10 (1607) proporciona compatibilidad con Shell para poner la ventana de la aplicación predeterminada en primer plano cuando otra aplicación se está ejecutando actualmente.
 
-Para ver cómo se habilita la clave "Home", visite nuestro [página IoT Shell](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoreshell#switching-between-apps-with-hid-injection-keys)
+Para ver cómo habilitar la clave "Inicio", visite nuestra página de [Shell de IOT](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoreshell#switching-between-apps-with-hid-injection-keys) .

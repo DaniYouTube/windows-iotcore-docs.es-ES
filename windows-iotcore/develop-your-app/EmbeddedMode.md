@@ -4,8 +4,8 @@ author: lilyhou
 ms.author: lihou
 ms.date: 11/10/2017
 ms.topic: article
-description: Obtenga información sobre cómo configurar Windows para permitir el modo incrustado, habilitación de aplicaciones en segundo plano y otras capacidades.
-keywords: Windows iot, modo incrustado, las aplicaciones en segundo plano
+description: Obtenga información acerca de cómo configurar Windows para permitir el modo incrustado, habilitar aplicaciones en segundo plano y otras funcionalidades.
+keywords: Windows IOT, modo incrustado, aplicaciones en segundo plano
 ms.openlocfilehash: ca8124d97a9161a1539eff92c55cf3630cf0a049
 ms.sourcegitcommit: b719e66699372e1339c2316cab45df2a474d09a0
 ms.translationtype: MT
@@ -15,77 +15,77 @@ ms.locfileid: "66252175"
 ---
 # <a name="embedded-mode"></a>Modo insertado
 
-Modo incrustado se admite en Windows IoT Core y Windows IoT Enterprise. Habilita el modo incrustado:
+El modo incrustado se admite en Windows IoT Core y Windows IoT Enterprise. El modo incrustado habilita:
 
-* [Aplicaciones en segundo plano (más)](https://docs.microsoft.com/windows/iot-core/develop-your-app/backgroundapplications)
-* Uso de la capacidad de lowLevelDevice
-* Uso de capacidad systemManagement
+* [Aplicaciones en segundo plano (más información)](https://docs.microsoft.com/windows/iot-core/develop-your-app/backgroundapplications)
+* Uso de la funcionalidad lowLevelDevice
+* Uso de la funcionalidad systemManagement
 
-Modo incrustado siempre está habilitado en la ventana IoT Core.
-Modo incrustado debe habilitarse siguiendo los pasos siguientes en Windows IoT Enterprise.
+El modo incrustado siempre está habilitado en la ventana IoT Core.
+El modo incrustado debe estar habilitado siguiendo los pasos que se indican a continuación en Windows IoT Enterprise.
 
 ## <a name="background-applications"></a>Aplicaciones en segundo plano
 
-Aplicaciones en segundo plano se crean mediante la plantilla de aplicación en segundo plano (IoT) de Visual Studio.
-Obtenga más información sobre crear [aplicaciones en segundo plano](https://docs.microsoft.com/windows/iot-core/develop-your-app/backgroundapplications).
+Las aplicaciones en segundo plano se crean mediante la plantilla aplicación en segundo plano (IoT) de Visual Studio.
+Obtenga más información sobre la creación de [aplicaciones en segundo plano](https://docs.microsoft.com/windows/iot-core/develop-your-app/backgroundapplications).
 
-En segundo plano de las aplicaciones se ejecutan sin necesidad de detener y sin límites de recursos. Además, si la aplicación en segundo plano se detiene por alguna razón y embedded está habilitado el modo se reiniciará la aplicación en segundo plano por el sistema.
+Las aplicaciones en segundo plano se ejecutan sin detenerse y sin límites de recursos. Además, si la aplicación en segundo plano se detiene por alguna razón y el modo incrustado está habilitado, el sistema reiniciará la aplicación en segundo plano.
 
-Mientras el sistema reiniciará automáticamente aplicaciones en segundo plano, las características de bloqueo del sistema deben habilitarse para impedir que los usuarios deteniendo o interfieran con el funcionamiento de aplicaciones en segundo plano.
+Aunque el sistema reiniciará automáticamente las aplicaciones en segundo plano, las características de bloqueo del sistema deben estar habilitadas para impedir que los usuarios se detengan o interfieran con el funcionamiento de las aplicaciones en segundo plano.
 
-## <a name="lowlevel-device-capability-and-lowleveldevice-capability"></a>dispositivo lowLevel capacidad de capacidad y lowLevelDevice
+## <a name="lowlevel-device-capability-and-lowleveldevice-capability"></a>funcionalidad del dispositivo lowLevel y capacidad de lowLevelDevice
 
-El **lowLevel** dispositivo capacidad proporciona acceso a las interfaces de hardware de bajo nivel como I2C, SPI y GPIO.
+La funcionalidad del dispositivo **lowLevel** proporciona acceso a interfaces de hardware de bajo nivel como GPIO, SPI y I2C.
 
-* [Sample(GPIO) llamativa](https://developer.microsoft.com/en-us/windows/iot/samples/helloblinky)
+* [Ejemplo de parpadeo (GPIO)](https://developer.microsoft.com/en-us/windows/iot/samples/helloblinky)
 * [Ejemplo de acelerómetro](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Accelerometer)
 
-El **lowLevelDevices** capacidad permite a las aplicaciones tener acceso a dispositivos personalizados cuando se cumple una serie de requisitos adicionales. Esta funcionalidad no debe confundirse con la funcionalidad del dispositivo lowLevel, que permite el acceso a los dispositivos GPIO, I2C, SPI y PWM.
+La funcionalidad **lowLevelDevices** permite a las aplicaciones tener acceso a dispositivos personalizados cuando se cumplen varios requisitos adicionales. Esta funcionalidad no se debe confundir con la funcionalidad de dispositivo lowLevel, que permite el acceso a dispositivos GPIO, I2C, SPI y PWM.
 
 Consulte [declaraciones de funcionalidades de aplicación](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations) para obtener más información.
 
-## <a name="systemmanagment-capability"></a>systemManagment capacidad
+## <a name="systemmanagment-capability"></a>Funcionalidad de systemManagment
 
-Al habilitar las capacidades de systemManagment para la aplicación trata el conjunto de API que desbloquea:  
+Cuando se habilitan las capacidades de systemManagment para la aplicación, este es el conjunto de API que se desbloquea:  
 
-* [Windows.System.ProcessLauncher](https://msdn.microsoft.com/library/windows/apps/windows.system.processlauncher.aspx)
-* [Windows.System.TimeZoneSettings](https://msdn.microsoft.com/library/windows/apps/windows.system.timezonesettings.aspx)
-* [Windows.System.ShutdownManager](https://msdn.microsoft.com/library/windows/apps/windows.system.shutdownmanager.aspx)
-* [Windows.Globalization.Language.TrySetInputMethodLanguageTag](https://msdn.microsoft.com/library/windows/apps/windows.globalization.language.trysetinputmethodlanguagetag.aspx)
+* [Windows. System. ProcessLauncher](https://msdn.microsoft.com/library/windows/apps/windows.system.processlauncher.aspx)
+* [Windows. System. TimeZoneSettings](https://msdn.microsoft.com/library/windows/apps/windows.system.timezonesettings.aspx)
+* [Windows. System. ShutdownManager](https://msdn.microsoft.com/library/windows/apps/windows.system.shutdownmanager.aspx)
+* [Windows. Globalization. Language. TrySetInputMethodLanguageTag](https://msdn.microsoft.com/library/windows/apps/windows.globalization.language.trysetinputmethodlanguagetag.aspx)
 
-## <a name="debugging-background-applications"></a>Depuración de aplicaciones en segundo plano
+## <a name="debugging-background-applications"></a>Depurar aplicaciones en segundo plano
 
-Si está depurando en un dispositivo que no se está ejecutando Windows IoT Core y ve alguno de los siguientes mensajes de error debe asegurarse de AllowEmbeddedMode está habilitado en el dispositivo y que se está ejecutando el servicio en modo incrustado:
+Si está depurando en un dispositivo que no ejecuta Windows IoT Core y ve alguno de los siguientes mensajes de error, debe asegurarse de que AllowEmbeddedMode está habilitado en el dispositivo y de que el servicio de modo incrustado se está ejecutando:
 
-* No hay no hay más extremos disponibles desde el endpoint mapper.
-* Este programa está bloqueado por la directiva de grupo. Para obtener más información, póngase en contacto con el administrador del sistema.
+* No hay más extremos disponibles desde el asignador de extremos.
+* Este programa está bloqueado por la Directiva de grupo. Para obtener más información, póngase en contacto con el administrador del sistema.
 
 ## <a name="changing-the-mode"></a>Cambiar el modo
-Para habilitar el modo incrustado que deberá crear un paquete de aprovisionamiento en la creación de imágenes y configuraciones de diseñador (ICD) que establece AllowEmbeddedMode = 1.  Para instalar ICD deberá descargar e instalar Windows ADK para Windows 10.
+Para habilitar el modo incrustado, debe crear un paquete de aprovisionamiento en el diseñador de imágenes y configuraciones (ICD) que establece AllowEmbeddedMode = 1.  Para instalar ICD, debe descargar e instalar Windows ADK para Windows 10.
 
-* [Descargue el Windows ADK para Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=526740)
-* [Obtenga información sobre cuáles son las novedades en Windows ADK para Windows 10](https://msdn.microsoft.com/library/windows/hardware/dn927348(v=vs.85).aspx)
+* [Descargar Windows ADK para Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=526740)
+* [Obtener información sobre las novedades de Windows ADK para Windows 10](https://msdn.microsoft.com/library/windows/hardware/dn927348(v=vs.85).aspx)
 
-1. Al instalar el ADK, seleccione **creación de imágenes y configuraciones de diseñador (ICD)**
-2. Una vez completada la instalación, ejecute Windows Imaging y Diseñador de configuración (WICD).
+1. Al instalar el ADK, seleccione **Imaging and Configuration Designer (ICD)**
+2. Una vez completada la instalación, ejecute el diseñador de imágenes y configuraciones de Windows (WICD).
 
-    ![Icono WICD](../media/EmbeddedMode/WICD_Icon.png)
+    ![Icono de WICD](../media/EmbeddedMode/WICD_Icon.png)
 
-3. Haz clic en **Aprovisionamiento avanzado**.  Denomine el proyecto **AllowEmbeddedMode** y haga clic en **siguiente**.
-    ![Paso 3](../media/EmbeddedMode/Step3.png)
+3. Haz clic en **Aprovisionamiento avanzado**.  Asigne al proyecto el nombre **AllowEmbeddedMode** y haga clic en **siguiente**.
+    ![Step3](../media/EmbeddedMode/Step3.png)
 
-4. Elija **comunes a todas las ediciones de Windows** , a continuación, **siguiente**.
-    ![Paso 4](../media/EmbeddedMode/Step4.png)
+4. Elija **común a todas las ediciones de Windows** y, a continuación, haga clic en **siguiente**.
+    ![Paso4](../media/EmbeddedMode/Step4.png)
 
-5. Haga clic en **Finalizar**.
+5. Haga clic en **Finalizar**
 
     ![Paso5](../media/EmbeddedMode/Step5.png)
 
-6. En el cuadro Buscar, escriba **EmbeddedMode** y, a continuación, haga clic en **AllowEmbeddedMode**.
+6. En el cuadro de búsqueda, escriba **EmbeddedMode** y, a continuación, haga clic en **AllowEmbeddedMode**.
 
     ![Paso6](../media/EmbeddedMode/Step6.png)
 
-7. En el centro de panel de establece el valor de **AllowEmbeddedMode** a **Sí** ![Step7](../media/EmbeddedMode/Step7.png)
+7. En el panel central, establezca el valor de **AllowEmbeddedMode** en **sí** ![STEP7](../media/EmbeddedMode/Step7.png)
 
 8. Haga clic en Exportar > paquete de aprovisionamiento
 
@@ -103,44 +103,44 @@ Para habilitar el modo incrustado que deberá crear un paquete de aprovisionamie
 
     ![Step11](../media/EmbeddedMode/Step11.png)
 
-12. Haga clic en generar.
+12. Haga clic en compilar.
 
-    ![12](../media/EmbeddedMode/Step12.png)
+    ![Step12](../media/EmbeddedMode/Step12.png)
 
 13. Para instalar el modo incrustado. PPKG en Windows IoT Enterprise haga doble clic en el. PPKG.
 
 14. Haz clic en **Sí, agrégalo**.
-    Haga clic en Sí en el cuadro de diálogo LUA si aparece y haga clic en **Sí, agregarlo** en el cuadro de diálogo se muestra a continuación.
+    Haga clic en sí en el cuadro de diálogo LUA, si aparece, y en **sí, agréguelo** en el cuadro de diálogo que se muestra a continuación.
     ![Step14Standard](../media/EmbeddedMode/Step14Standard.png)
 
 
-## <a name="configuring-a-background-application-to-run-automatically"></a>Configurar una aplicación en segundo plano para ejecutarse automáticamente
-1. Para configurar una aplicación en segundo plano para ejecutar automáticamente, tendrá que seguir las instrucciones para [crear una tarjeta SD de MinnowBoardMax](https://developer.microsoft.com/en-us/windows/iot/getstarted) y copie `D:\windows\system32\iotstartup.exe` (donde D: es la tarjeta SD).
+## <a name="configuring-a-background-application-to-run-automatically"></a>Configurar una aplicación en segundo plano para que se ejecute automáticamente
+1. Para configurar una aplicación en segundo plano para que se ejecute automáticamente, tendrá que seguir las instrucciones para [crear una tarjeta MinnowBoardMax SD](https://developer.microsoft.com/en-us/windows/iot/getstarted) y copiar `D:\windows\system32\iotstartup.exe` (donde D: es la tarjeta SD).
 
-2. Para obtener una lista de tipos de aplicaciones en segundo plano instaladas:
+2. Para obtener una lista de las aplicaciones en segundo plano instaladas, escriba:
 
         C:\> iotstartup list BackgroundApplication1
 
-3. La salida debe incluir el nombre completo de cada aplicación instalada en segundo plano, que tendrá un aspecto similar al siguiente:
+3. La salida debe incluir el nombre completo de cada aplicación en segundo plano instalada, que tendrá el siguiente aspecto:
 
         Headless : BackgroundApplication1-uwp_1.0.0.0_x86__cqewk5knvpvee
 
-5. Para configurar esta aplicación se ejecute en el tipo de arranque:
+5. Para configurar esta aplicación de forma que se ejecute en el tipo de arranque:
 
         C:\> iotstartup add headless BackgroundApplication1
 
-6. Si la aplicación en segundo plano se ha agregado correctamente a la lista de inicio verá esto:
+6. Si la aplicación en segundo plano se ha agregado correctamente a la lista de inicio, debería ver lo siguiente:
 
         Added Headless: BackgroundApplication1-uwp_1.0.0.0_x86__cqewk5knvpveeplication1
 
 7. Reinicie el dispositivo en modo incrustado:
 
-8. Una vez que se haya reiniciado el dispositivo, se iniciará automáticamente la aplicación en segundo plano.  El servicio de modo incrustado que administra aplicaciones en segundo plano puede tardar unos minutos en iniciarse.  El servicio de modo incrustado supervisar aplicaciones en segundo plano en la lista de inicio y asegúrese de que obtenga reinicia si detiene.  Si una aplicación en segundo plano se detiene varias veces en un breve período de tiempo ya no se reiniciará.
+8. Una vez que se haya reiniciado el dispositivo, la aplicación en segundo plano se iniciará automáticamente.  El servicio de modo incrustado que administra las aplicaciones en segundo plano puede tardar unos minutos en iniciarse.  El servicio de modo incrustado supervisará las aplicaciones en segundo plano en la lista de inicio y se asegurará de que se reinicien si se detienen.  Si una aplicación en segundo plano se detiene varias veces en un breve período de tiempo, ya no se reiniciará.
 
-9. Para quitar la aplicación en segundo plano desde el tipo de lista de inicio:
+9. Para quitar la aplicación en segundo plano del tipo de lista de Inicio:
 
         C:\> iotstartup remove headless BackgroundApplication1
 
-10. Si la aplicación en segundo plano se quita de la lista de inicio la salida tendrá este aspecto:
+10. Si la aplicación en segundo plano se quita de la lista de inicio, la salida tendrá el siguiente aspecto:
 
         Removed headless: BackgroundApplication1-uwp_1.0.0.0_x86__cqewk5knvpvee

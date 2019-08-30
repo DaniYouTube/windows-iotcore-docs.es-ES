@@ -4,22 +4,22 @@ author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Obtenga información sobre cómo comenzar e instalar actualizaciones para Cortana en Windows IoT Core.
-keywords: Windows iot, Cortana, voz, AI, el asistente digital, el lenguaje
+description: Obtenga información sobre cómo empezar e instalar actualizaciones de Cortana en Windows IoT Core.
+keywords: Windows IOT, Cortana, voz, AI, asistente digital, idioma
 ms.openlocfilehash: c18534a532b0588b54f377acf1092d6916e8a673
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60170513"
 ---
 # <a name="cortana-on-iot-core"></a>Cortana en IoT Core
 
-Cortana es un asistente personal digital funciona en todos los dispositivos que le ayudarán a su vida diaria. Aprende acerca de usted; le ayuda a realizar su trabajo al completar tareas; interactúa con usted con lenguaje natural de una manera coherente y contextual; y siempre tiene un aspecto horizontal para usted. Cortana tiene una identidad visual coherente, personalidad y voz.
+Cortana es un asistente digital personal que trabaja en todos sus dispositivos para ayudarle en su vida diaria. Ella aprende sobre usted; le ayuda a hacer todo lo posible mediante la realización de tareas; interactúa con usted mediante lenguaje natural de una manera coherente y contextual; y siempre le parece. Cortana tiene una identidad visual, personalidad y voz coherentes.
 
-Para habilitar la asistencia inteligente manos libres en el dispositivo con el SDK de dispositivo de Cortana, visite [el centro de desarrollo de Cortana](http://www.aka.ms/cortanadevices).
+Para habilitar la asistencia inteligente gratuita en el dispositivo con el SDK de dispositivo de Cortana, visite [el centro de desarrollo](http://www.aka.ms/cortanadevices)de Cortana.
 
-Cortana en IoT Core se centrará en los escenarios comerciales en el futuro. Las actualizaciones se iniciará en breve. 
+Cortana en IoT Core se centrará en escenarios comerciales en el futuro. Pronto habrá actualizaciones. 
 
 <!--
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Cortana-on-Windows-10-IoT-Core/player]

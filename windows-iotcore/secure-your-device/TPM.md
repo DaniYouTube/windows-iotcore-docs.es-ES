@@ -4,8 +4,8 @@ author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Obtenga información sobre cómo usar un módulo de plataforma segura para habilitar las capacidades de cifrado para proteger mejor los dispositivos.
-keywords: Windows iot, seguridad, módulo de plataforma segura, TPM, criptografía, las claves
+description: Obtenga información acerca de cómo usar un Módulo de plataforma segura para habilitar las capacidades criptográficas para mejorar la seguridad de los dispositivos.
+keywords: Windows IOT, seguridad, Módulo de plataforma segura, TPM, criptografía, claves
 ms.openlocfilehash: 70552a5f98891281879f1d45cbdbd671b56dd902
 ms.sourcegitcommit: 77b86eee2bba3844e87f9d3dbef816761ddf0dd9
 ms.translationtype: MT
@@ -16,68 +16,68 @@ ms.locfileid: "65533319"
 # <a name="trusted-platform-module-tpm-on-windows-10-iot-core"></a>Módulo de plataforma segura (TPM) en Windows 10 IoT Core
 
 ## <a name="what-is-tpm"></a>¿Qué es TPM?
-Una plataforma segura Module (TPM), es un coprocesador criptográfico que incluye capacidades de generación de números aleatorios, generación segura de claves criptográficas y la limitación de su uso. También incluye capacidades como la autorización remota y almacenamiento sealed.
-Especificación técnica del TPM está disponible públicamente, controlado por el Trusted Computing Group (TCG). La última versión 2.0 de TPM (publicado en octubre de 2014), es un cambio de diseño principal de la especificación que agrega nuevas funcionalidades y corrige los puntos débiles de la anterior 1.2 de TPM.
+Un Módulo de plataforma segura (TPM) es un coprocesador criptográfico que incluye funcionalidades para la generación de números aleatorios, la generación segura de claves criptográficas y la limitación de su uso. También incluye funcionalidades como la atestación remota y el almacenamiento sellado.
+La especificación técnica del TPM está disponible públicamente, controlada por el Trusted Computing Group (TCG). La versión más reciente del TPM 2,0 (Publicada en octubre de 2014) es un rediseño importante de la especificación que agrega nuevas funcionalidades y corrige los puntos débiles del antiguo TPM 1,2.
 
 ## <a name="why-tpm"></a>¿Por qué TPM?  
-Los equipos que incorporan TPM pueden crear claves criptográficas y cifrarlas para que solo se puedan descifrar con el TPM. Este proceso, a menudo denominado **"encapsulado"** o **"enlace"** una clave, puede ayudar a proteger la clave de la divulgación. Cada TPM tiene una clave de "encapsulado" maestra, denominada clave de raíz de almacenamiento, que se almacena dentro del propio TPM. La parte privada de una clave creada en un TPM nunca se expone a cualquier otro componente, software, proceso o persona.  
+Los equipos que incorporan TPM pueden crear claves criptográficas y cifrarlas para que solo se puedan descifrar con el TPM. Este proceso, a menudo denominado **"Encapsular"** o **"enlazar"** una clave, puede ayudar a proteger la clave contra la divulgación. Cada TPM tiene una clave de "encapsulado" maestra, denominada clave raíz de almacenamiento, que se almacena en el propio TPM. La parte privada de una clave creada en un TPM nunca se expone a ningún otro componente, software, proceso o persona.  
 
-Los equipos que incorporan un TPM también pueden crear una clave que no sólo se haya encapsulado, sino también esté ligada a ciertas medidas de la plataforma. Este tipo de clave solo puede ser sin ajustar cuando esas mediciones de plataforma tienen los mismos valores que tenían cuando se creó la clave. Este proceso se denomina **"sellar"** la clave en el TPM. Descifrar la clave se denomina **"desprecintado"**. TPM también puede sellar y quitar el sello de datos generados fuera de TPM. Con esta clave sellada y software como cifrado de unidad BitLocker, puede bloquear los datos hasta que se cumplan las condiciones de software o hardware específico.  
+Los equipos que incorporan un TPM también pueden crear una clave que no sólo se haya encapsulado, sino que también esté ligada a determinadas mediciones de la plataforma. Este tipo de clave solo se puede desempaquetar cuando esas mediciones de plataforma tienen los mismos valores que tenían cuando se creó la clave. Este proceso se denomina **"sellar"** la clave en el TPM. El descifrado de la clave se denomina **"dessellado"** . El TPM también puede sellar y anular la sellado de los datos generados fuera de TPM. Con esta clave sellada y software como Cifrado de unidad BitLocker, puede bloquear los datos hasta que se cumplan las condiciones específicas de hardware o software.  
 
-Con un TPM, las partes privadas de los pares de claves se mantienen separadas de la memoria controlada por el sistema operativo. Las claves se pueden sellar en TPM y comprobar determinadas garantías sobre el estado de un sistema (controles que definen el "nivel de confianza" de un sistema) pueden realizarse antes de que las claves son y liberarlas para su uso. Dado que el TPM usa su propio firmare interno y circuitos de lógica para las instrucciones de procesamiento, no se basa en el sistema operativo y no se expone a las vulnerabilidades que puedan existir en el sistema operativo o el software de aplicación.
+Con un TPM, las partes privadas de pares de claves se mantienen independientes de la memoria controlada por el sistema operativo. Las claves se pueden sellar en el TPM y se pueden realizar ciertas garantías sobre el estado de un sistema (las garantías que definen el "grado de confiabilidad" de un sistema) antes de que las claves se dessellen y se liberen para su uso. Dado que el TPM usa su propio firmware interno y circuitos lógicos para las instrucciones de procesamiento, no se basa en el sistema operativo y no se expone a las vulnerabilidades que pueden existir en el software del sistema operativo o de la aplicación.
 
-## <a name="tpm-architecture"></a>Arquitectura TPM
-_Diferencia entre 1.2 y 2.0 de TPM._  
-La especificación de TPM se ha desarrollado dos veces. La primera vez, desarrolló desde 1.1b 1.2, que incorpora nuevas capacidades solicitado/identificado por el Comité de especificación. Este formulario sobrante de la característica de la evolución que realizan la especificación TPM 1.2 final muy complicado. Finalmente, los puntos débiles criptográficos SHA-1 (que era el algoritmo más seguro comercial en TPM 1.2) se han revelado que ha causado la necesidad de un cambio. Se ha rediseñado la arquitectura TPM desde cero, lo que resulta en el diseño mucho más integrado y unificado de TPM 2.0.  
+## <a name="tpm-architecture"></a>Arquitectura de TPM
+_Diferencia entre TPM 1,2 y TPM 2,0._  
+La especificación del TPM se ha desarrollado dos veces. La primera vez, desarrollada de la versión 1.1 b a la 1,2, que incorpora nuevas capacidades solicitadas/identificadas por el Comité de especificaciones. Esta forma de evolución de la característica ha hecho que la especificación final del TPM 1,2 sea muy complicada. Finalmente, se revelaron los puntos débiles criptográficos de SHA-1 (que era el algoritmo comercial más fuerte en TPM 1,2), lo que hizo que se produjeron cambios. La arquitectura de TPM se ha rediseñado desde cero, lo que produce un diseño unificado y mucho más integrado de TPM 2,0.  
 
-Los cambios y mejoras en comparación con el TPM 1.2 anteriores incluyen:
+Los cambios y las mejoras que se comparan con el TPM 1,2 anterior incluyen:
 
 * Compatibilidad con algoritmos criptográficos adicionales
-* Mejoras en la disponibilidad de TPM a las aplicaciones
-* Mecanismos de autorización mejorada
+* Mejoras en la disponibilidad del TPM en las aplicaciones
+* Mecanismos de autorización mejorados
 * Administración simplificada de TPM
-* Capacidades adicionales para mejorar la seguridad de servicios de plataforma
+* Capacidades adicionales para mejorar la seguridad de los servicios de la plataforma
 
 > [!NOTE] 
-> Windows IoT Core es compatible con sólo TPM 2.0 y no es compatible con el TPM 1.2 obsoleta.
+> Windows IoT Core solo admite TPM 2,0 y no es compatible con el TPM 1,2 obsoleto.
 
-## <a name="what-is-tbs"></a>¿Qué es TB? 
-La característica Servicios de Base TPM (TBS) es un servicio de sistema que permite el uso compartido de los recursos TPM. Comparte los recursos TPM entre varias aplicaciones en la misma máquina física a través de llamadas a procedimiento remoto (RPC). Centraliza el acceso a TPM a través de las aplicaciones que usan las prioridades especificadas por las aplicaciones que realiza la llamada.  
+## <a name="what-is-tbs"></a>¿Qué es TBS? 
+La característica servicios base de TPM (TBS) es un servicio del sistema que permite el uso compartido transparente de los recursos de TPM. Comparte los recursos de TPM entre varias aplicaciones en el mismo equipo físico a través de llamadas a procedimiento remoto (RPC). Centraliza el acceso de TPM entre aplicaciones utilizando las prioridades especificadas por las aplicaciones que llaman.  
 
-El TPM proporciona funciones de cifrado diseñadas para proporcionar la confianza en la plataforma. Dado que el TPM se implementa en el hardware, tiene recursos finitos. El TCG define una pila de Software TPM (TSS) que hace uso de estos recursos para proporcionar operaciones de confianza para software de la aplicación. Sin embargo, se ha realizado ninguna disposición para ejecutar un TSS implementación side-by-side con software de sistema operativo que también pueden usar los recursos TPM. La característica TBS soluciona este problema habilitando cada pila de software que se comunica con TBS usar recursos TPM comprobación para otras pilas de software que se estén ejecutando en el equipo.
+El TPM proporciona funciones criptográficas diseñadas para proporcionar confianza en la plataforma. Dado que el TPM está implementado en hardware, tiene recursos finitos. El TCG define una pila de software de TPM (TSS) que hace uso de estos recursos para proporcionar operaciones de confianza para el software de la aplicación. Sin embargo, no se realiza ninguna disposición para ejecutar una implementación de TSS en paralelo con el software del sistema operativo que también puede usar recursos de TPM. La característica TBS resuelve este problema habilitando cada pila de software que se comunica con TBS para usar la comprobación de recursos de TPM para cualquier otra pila de software que pueda estar ejecutándose en la máquina.
 
-## <a name="tpm-solutions-available-on-windows-iot-core"></a>Soluciones TPM disponibles en Windows IoT Core  
-_Unas palabras sobre Software TPM (sTPM), el Firmware de TPM (fTPM), TPM discreto (dTPM)..._
+## <a name="tpm-solutions-available-on-windows-iot-core"></a>Soluciones de TPM disponibles en Windows IoT Core  
+_Algunas palabras sobre el TPM de software (sTPM), el TPM de firmware (fTPM), el TPM discreto (dTPM)..._
 
 ### <a name="firmware-tpm-ftpm"></a>Firmware TPM (fTPM)  
-Firmware TPM (fTPM) requiere compatibilidad de procesador/SoC especial que no está implementada actualmente en Raspberry Pi 2 o 3. MinnowBoard Max necesita la versión de firmware 0,80 o superior. DragonBoard410c proporciona capacidades de fTPM fuera de la casilla habilitado de forma predeterminada.  
+El TPM de firmware (fTPM) requiere una compatibilidad especial con el procesador o SoC que no está implementada actualmente en Raspberry pi 2 ó 3. MinnowBoard Max necesita firmware versión 0,80 o superior. DragonBoard410c proporciona funcionalidades de fTPM de forma predeterminada, que están habilitadas de manera predeterminada.  
 
 ### <a name="discrete-tpm-dtpm"></a>TPM discreto (dTPM)  
-TPM discreto (dTPM) se considera la solución de confianza mayor de todas maneras.  
-Hay varios fabricantes de chips dTPM y módulos PCB que se admiten en Windows IoT Core:
+El TPM discreto (dTPM) se considera la solución más confiable por todos los medios.  
+Hay varios fabricantes de chips de dTPM y módulos PCB que se admiten en Windows IoT Core:
 
-> | Fabricante | Página Web | Tipo de Modul | Chip de TPM |
+> | Fabricante | Página Web | Tipo Modul | Chip TPM |
 > |-------------|----------|----------|----------| 
-> | Infineon | [TPM Infineon](https://www.infineon.com/cms/en/product/evaluation-boards/iridium9670-tpm2.0-linux/)| Evalboard | [Infineon SLB9670 TPM 2.0](https://www.infineon.com/cms/de/product/security-smart-card-solutions/optiga-embedded-security-solutions/optiga-tpm/slb-9670vq2.0/) |
-> | Pi3g | [Pi3g.com](https://pi3g.com/eigene-produkte/)| Evalboard & producto masivo | [Infineon SLB9670 TPM 2.0](https://www.infineon.com/cms/de/product/security-smart-card-solutions/optiga-embedded-security-solutions/optiga-tpm/slb-9670vq2.0/) |
+> | Infineon | [TPM de Infineon](https://www.infineon.com/cms/en/product/evaluation-boards/iridium9670-tpm2.0-linux/)| Evalboard | [TPM SLB9670 TPM 2,0](https://www.infineon.com/cms/de/product/security-smart-card-solutions/optiga-embedded-security-solutions/optiga-tpm/slb-9670vq2.0/) |
+> | Pi3g | [Pi3g.com](https://pi3g.com/eigene-produkte/)| & De producto masivo Evalboard | [TPM SLB9670 TPM 2,0](https://www.infineon.com/cms/de/product/security-smart-card-solutions/optiga-embedded-security-solutions/optiga-tpm/slb-9670vq2.0/) |
 
 
-### <a name="software-tpm-stpm"></a>Software TPM (sTPM)  
-Software TPM (sTPM) también se conoce como el simulador de TPM. Es independiente de la plataforma, compatible con Windows IoT Core.  
+### <a name="software-tpm-stpm"></a>TPM de software (sTPM)  
+El TPM de software (sTPM) también se conoce como simulador de TPM. Es independiente de la plataforma, compatible con Windows IoT Core.  
 
 > [!NOTE]
-> sTPM está pensado únicamente con fines de desarrollo y no se proporciona ninguna ventaja de seguridad real.  
+> sTPM está pensado únicamente para fines de desarrollo y no proporciona ninguna ventaja de seguridad real.  
 
 
 ## <a name="samples"></a>Muestras  
 <!--
 * [TBSSample project C++](https://developer.microsoft.com/en-us/windows/iot/samples/tbssample)
   This tutorial demonstrates how to create a basic C++ application that uses TBS to poll the TPM.  -->
-* [Ejemplo de la biblioteca urchin](https://github.com/ms-iot/security/tree/master/Urchin/Lib) en este tutorial se muestra cómo crear un ejemplo C++ aplicación que utiliza las funciones TPM mediante el [biblioteca Urchin](https://github.com/ms-iot/security). Urchin es una biblioteca de especificación conforme derivada de la implementación de referencia de TPM 2.0. Proporciona al cliente la funcionalidad para serializar/deserializar todas las estructuras de datos, correctamente calcular las autorizaciones, realizar el cifrado de parámetros y realizar la auditoría.
+* [Ejemplo de biblioteca Urchin](https://github.com/ms-iot/security/tree/master/Urchin/Lib) En este tutorial se muestra cómo crear una C++ aplicación de ejemplo que ejercita la funcionalidad de TPM mediante la [biblioteca Urchin](https://github.com/ms-iot/security). Urchin es una biblioteca compatible con especificaciones derivada de la implementación de referencia de TPM 2,0. Proporciona al cliente la funcionalidad para calcular las referencias de todas las estructuras de datos y anular su serialización, calcular correctamente las autorizaciones, realizar el cifrado de parámetros y realizar auditorías.
 
 ## <a name="additional-resources"></a>Recursos adicionales  
-* [Especificaciones de plataforma segura (TPM) del módulo](http://www.trustedcomputinggroup.org/developers/trusted_platform_module) 
-* [Especificación de la biblioteca de TCG TPM 2.0](http://www.trustedcomputinggroup.org/resources/tpm_library_specification)
-* [Servicios de Base TPM](https://msdn.microsoft.com/library/windows/desktop/aa446796(v=vs.85).aspx) 
-* [Habilitación de BitLocker y el arranque seguro](SecureBootAndBitLocker.md)
+* [Especificaciones de Módulo de plataforma segura (TPM)](http://www.trustedcomputinggroup.org/developers/trusted_platform_module) 
+* [Especificación de biblioteca 2,0 de TCG TPM](http://www.trustedcomputinggroup.org/resources/tpm_library_specification)
+* [Servicios base de TPM](https://msdn.microsoft.com/library/windows/desktop/aa446796(v=vs.85).aspx) 
+* [Habilitación del arranque seguro y BitLocker](SecureBootAndBitLocker.md)
 

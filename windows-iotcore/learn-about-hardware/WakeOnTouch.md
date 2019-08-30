@@ -1,26 +1,26 @@
 ---
-title: Wake on táctil
+title: Activación táctil
 author: jordanrh1
 ms.author: jordanrh
 ms.date: 09/17/2018
 ms.topic: article
-description: Configurar el dispositivo a reactivarse en táctil
-keywords: Windows iot, pantalla, suspensión, wake, toque, en espera, energía
+description: Configuración del dispositivo para la reactivación táctil
+keywords: Windows IOT, pantalla, suspensión, Wake, Touch, Standby, Power
 ms.custom: RS5
 ms.openlocfilehash: 7c0fc9613f1b1ed45fb8d69a18d82b034eb366fb
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60167643"
 ---
-# <a name="configure-your-device-to-wake-on-touch"></a>Configurar el dispositivo a reactivarse en táctil
+# <a name="configure-your-device-to-wake-on-touch"></a>Configuración del dispositivo para la reactivación táctil
 
-En algunos escenarios, que desea que la pantalla de su dispositivo para desactivar mientras no esté en uso y para activar rápidamente si un usuario toca la pantalla táctil. Este documento describe cómo configurar el dispositivo para lograr este escenario.
+En algunos escenarios, quiere que la pantalla del dispositivo se apague mientras no esté en uso y se active rápidamente cuando un usuario toca la pantalla táctil. En este documento se describe cómo configurar el dispositivo para lograr este escenario.
 
-## <a name="setting-a-video-idle-timeout"></a>Establecer un tiempo de espera de inactividad vídeo
+## <a name="setting-a-video-idle-timeout"></a>Establecer un tiempo de espera de inactividad de vídeo
 
-Puede configurar la pantalla para desactivar estableciendo un tiempo de espera de inactividad vídeo tras un período de inactividad. Cuando el usuario no ha interactuado con el dispositivo durante un período de tiempo especificado, se desactivará la pantalla. Esto permitirá que el dispositivo entrar en un estado de bajo consumo de energía al apagar los componentes relacionados con la presentación.
+Puede configurar la pantalla para que se apague después de un período de inactividad mediante la configuración de un tiempo de espera de inactividad de vídeo. Cuando el usuario no ha interactuado con el dispositivo durante un período de tiempo especificado, la pantalla se apagará. Esto permitirá que el dispositivo entre en un estado de energía baja apagando los componentes relacionados con la pantalla.
 
 ```
     powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 10
@@ -28,16 +28,16 @@ Puede configurar la pantalla para desactivar estableciendo un tiempo de espera d
     powercfg.exe /setactive SCHEME_CURRENT
 ```
 
-Para obtener más información, consulte [Mostrar tiempo de espera inactivo](/windows-hardware/customize/power-settings/display-settings-display-idle-timeout) y [Display, suspensión e hibernación de los temporizadores de inactividad](/windows-hardware/design/device-experiences/display--sleep--and-hibernate-idle-timers).
+Para obtener más información, vea Mostrar el tiempo de [espera](/windows-hardware/customize/power-settings/display-settings-display-idle-timeout) de inactividad y [Mostrar, suspender e hibernar temporizadores](/windows-hardware/design/device-experiences/display--sleep--and-hibernate-idle-timers)de inactividad.
 
-## <a name="disabling-modern-standby"></a>Deshabilitar standby moderna
+## <a name="disabling-modern-standby"></a>Deshabilitar el modo de espera moderno
 
-En los sistemas AoAC (que incluye todos los sistemas ARM), especificará automáticamente el sistema [standby modernas](/windows-hardware/design/device-experiences/modern-standby) cuando sale de la pantalla. Cuando un sistema está en modo de espera moderna, solo se active ciertas entradas. Esto no es una lista exhaustiva, pero estas entradas incluyen al presionar el botón de encendido, abriendo la tapa de un equipo portátil o hacer clic con el mouse. Tocar la pantalla no se activará el dispositivo del modo de suspensión modernas. Si desea que el dispositivo de reactivación con el tacto, tendrá que configurar el dispositivo para que no entra en suspensión modernas. Para deshabilitar la suspensión modernos, establezca la siguiente clave del registro y reiniciar el equipo.
+En los sistemas AoAC (que incluyen todos los sistemas ARM), el sistema entrará automáticamente en [modo de espera moderno](/windows-hardware/design/device-experiences/modern-standby) cuando la pantalla se desactive. Cuando un sistema se encuentra en modo de espera moderno, solo se puede reactivarán mediante ciertas entradas. Esta no es una lista exhaustiva, pero estas entradas incluyen presionar el botón de encendido, abrir la tapa de un portátil o hacer clic con el mouse. Al tocar la pantalla no se reactivará el dispositivo desde el modo de espera moderno. Si desea que el dispositivo se reactive mediante la función táctil, tiene que configurar el dispositivo para que no entre en modo de espera moderno. Para deshabilitar el modo de espera moderno, establezca la siguiente clave del registro y reinicie el sistema.
 
 ```
     reg add HKLM\System\CurrentControlSet\Control\Power /v PlatformAoAcOverride /t REG_DWORD /d 0
 ```
     
-Deshabilitar standby moderno puede afectar al consumo de energía cuando el sistema está inactivo. Debe medir el consumo de energía del sistema con modernas espera habilitados y deshabilitados antes de tomar la decisión de deshabilitar standby modernas.
+Deshabilitar el modo de espera moderno puede afectar al consumo de energía cuando el sistema está inactivo. Debe medir el consumo de energía del sistema con el modo de espera moderno habilitado y deshabilitado antes de tomar la decisión de deshabilitar el modo de espera moderno.
 
-Standby moderna es un mecanismo de software que intenta la actividad del sistema silencioso tanto como sea posible, lo que permite que el hardware entrar en un estado de bajo consumo de energía. En teoría, un dispositivo lo suficientemente silencioso con modernas deshabilitado en espera puede lograr el mismo bajo consumo de energía como un dispositivo en modo de espera modernas. Es importante minimizar la actividad en segundo plano incluidos los temporizadores de software y las tareas periódicas si espera moderna está deshabilitado.
+El modo de espera moderno es un mecanismo de software que intenta deshacer la actividad del sistema lo máximo posible, lo que permite que el hardware entre en un estado de baja energía. En teoría, un dispositivo suficientemente silencioso con el modo de espera moderno deshabilitado puede lograr el mismo consumo de energía bajo que un dispositivo en el modo de espera moderno. Es importante minimizar la actividad en segundo plano, incluidos los temporizadores de software y las tareas periódicas, si está deshabilitado el modo de espera moderno.

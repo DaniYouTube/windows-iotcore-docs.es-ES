@@ -41,7 +41,7 @@ Si no está familiarizado con el uso de Git, pruebe el [entrenamiento Lynda.com 
 
 ## <a name="authoring-your-contribution"></a>Creación de la contribución
 
-Una vez que ha bifurcado y clonado el repositorio en el equipo local, puede empezar a crear con el editor de texto que prefiera.  Por supuesto, recomendamos [Visual Studio Code](https://code.visualstudio.com/), un editor ligero gratuito de código abierto de Microsoft. Para obtener ayuda con la creación de Markdown, consulte este [póster Markdown es DIVERTIDO para todos](windows-iotcore/media/DocsMarkdownPoster.pdf) con todos los aspectos básicos que necesita saber. Incluso puede imprimirlo y colgarlo en su pared como un recordatorio para contribuir. 
+Una vez que ha bifurcado y clonado el repositorio en el equipo local, puede empezar a crear con el editor de texto que prefiera.  Por supuesto, recomendamos [Visual Studio Code](https://code.visualstudio.com/), un editor ligero gratuito de código abierto de Microsoft. Para obtener ayuda con la creación de Markdown, consulte este [póster Markdown es DIVERTIDO para todos con todos los aspectos básicos que necesita saber. Incluso puede imprimirlo y colgarlo en su pared como un recordatorio para contribuir. 
 
 ## <a name="submitting-your-contribution-and-filing-a-pull-request-pr"></a>Envío de la contribución y tramitación de una solicitud de incorporación de cambios
 

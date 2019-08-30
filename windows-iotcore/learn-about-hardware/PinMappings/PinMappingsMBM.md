@@ -1,47 +1,47 @@
 ---
-title: Asignaciones de Pin máxima Minnowboard
+title: Minnowboard asignaciones de PIN máx.
 author: saraclay
 ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
-description: Obtenga información acerca de la funcionalidad de las asignaciones de pin para Minnowboard Max.
-keywords: Windows iot, Minnowboard Max, asignaciones de pin, GPIO
+description: Obtenga información sobre la funcionalidad de las asignaciones de PIN para Minnowboard Max.
+keywords: Windows IOT, Minnowboard Max, asignaciones de PIN, GPIO
 ms.openlocfilehash: 884d9ee0d93167a13f39a28b28454daccb2eebad
-ms.sourcegitcommit: ef85ccba54b1118d49554e88768240020ff514b0
+ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59514792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60167501"
 ---
-# <a name="minnowboard-max-pin-mappings"></a>Asignaciones de Pin máxima MinnowBoard
+# <a name="minnowboard-max-pin-mappings"></a>MinnowBoard asignaciones de PIN máx.
 
 > [!NOTE] 
-> Para comparar esta asignación de pin a versiones más recientes de la Minnowboard, visite la documentación [aquí](https://minnowboard.org/minnowboard-turbot/documentation).
+> Para comparar esta asignación de pin con las versiones más recientes de Minnowboard, visite la documentación [aquí](https://minnowboard.org/minnowboard-turbot/documentation).
 
 ## <a name="overview"></a>Información general
 
-![Encabezado de Pin máxima MinnowBoard](../../media/PinMappingsMBM/MBM_Pinout.png)
+![MinnowBoard encabezado Max PIN](../../media/PinMappingsMBM/MBM_Pinout.png)
 
-Interfaces de hardware para el número máximo de MinnowBoard se exponen a través del encabezado de 26 clavijas **JP1** en el panel. La funcionalidad incluye:
+Las interfaces de hardware para el máximo de MinnowBoard se exponen a través del encabezado de 26 pines **JP1** en el panel. La funcionalidad incluye:
 
-* **10 x** -pines GPIO
-* **2 x** -UARTs serie
-* **1 x** -bus SPI
-* **1 x** -bus I2C
-* **1 x** -pin de alimentación de 5 v
-* **1 x** : 3,3 v pin de energía
-* **2 x** -masa PIN
+* PIN de **10 veces** -GPIO
+* **2x** -UART en serie
+* Bus **1x** -SPI
+* Bus **1x** -I2C
+* PIN de alimentación de **1x** -5V
+* **1x** -3,3 v de alimentación
+* pines de **doble** fondo
 
-Los niveles de lógica de usos 3,3 v MinnowBoard Max en todas las patillas de E/S. Además se almacenan en búfer todos los bolos por [TXS0104E](http://www.ti.com/product/txs0104e) shifters, a excepción de la tierra de energía y de PIN de nivel.
-Estos shifters nivel se muestran como resultados de recopilador abierto con un **10K&#x2126; subida del electromagnético y la subida del está presente, independientemente de si la operación de E/S está establecida en entrada o salida.**
+MinnowBoard Max usa los niveles de lógica de 3,3 V en todos los pin de e/s. Además, todos los PIN se almacenan en búfer mediante los desplazadores de nivel de [TXS0104E](http://www.ti.com/product/txs0104e) , con la excepción de las clavijas de alimentación y de alimentación.
+Estos desplazadores de nivel aparecen como salidas del recopilador abierto con una **extracción resistente de&#x2126; 10 000 y la extracción está presente independientemente de si la e/s está establecida en entrada o salida.**
  
-La naturaleza de recopilador de apertura de los medios shifters nivel es que el PIN pueden devolver ' 0 'fuertemente, pero solo débil de salida ' 1'. Esto es importante tener en cuenta al conectar los dispositivos que dibujar actual de los bolos (por ejemplo, un LED). Consulte la [ejemplo llamativa](https://developer.microsoft.com/en-us/windows/iot/samples/helloblinky) para la forma correcta un LED MinnowBoard máxima de la interfaz.
+La naturaleza de Open-Collector de los desplazamientos de nivel significa que los pin pueden generar un "0" firmemente, pero solo se genera de forma débil un "1". Es importante tener en cuenta cuando se conectan los dispositivos que dibujan el actual a partir de las clavijas (por ejemplo, un LED). Vea el [ejemplo de parpadeo](https://developer.microsoft.com/en-us/windows/iot/samples/helloblinky) para obtener la manera correcta de interactuar con el LED MinnowBoard Max.
 
-## <a name="gpio-pins"></a>Pines GPIO
+## <a name="gpio-pins"></a>PIN de GPIO
 
-Las clavijas GPIO siguientes son accesibles a través de API:
+Se puede acceder a los siguientes PIN de GPIO a través de las API:
 
-> | GPIO # | Pin de encabezado         |
+> | GPIO # | PIN de encabezado         |
 > |-------|--------------------|
 > | 0     | 21                 |
 > | 1     | 23                 |
@@ -54,13 +54,13 @@ Las clavijas GPIO siguientes son accesibles a través de API:
 > | 8     | 24                 |
 > | 9     | 26                 |
 
-**Nota:** **GPIO 4** y **GPIO 5** se usan por el número máximo de MinnowBoard como anclajes de configuración de arranque en el BIOS.
-Asegúrese de que los dispositivos conectados no controlar estos GPIO baja durante el arranque, ya que esto podría impedir que el MBM arranque.
-Después de iniciarse la MBM más allá de la BIOS, normalmente se puede usar estos GPIO.
+**Nota:** Los pin de configuración Max **4** y **GPIO 5** se usan en las clavijas de configuración MinnowBoard Max as bootstrap del BIOS.
+Asegúrese de que los dispositivos conectados no controlan el nivel de GPIO bajo durante el arranque, ya que esto podría impedir el arranque de MBM.
+Después de que MBM haya arrancado más allá del BIOS, estos GPIO se pueden usar con normalidad.
      
-## <a name="gpio-sample"></a>Ejemplo GPIO
+## <a name="gpio-sample"></a>Ejemplo de GPIO
 
-Por ejemplo, el siguiente código se abre **GPIO 5** como salida y escribe un digitales '**1**' out en el pin:
+Como ejemplo, el código siguiente abre **GPIO 5** como salida y escribe un '**1**' digital en el PIN:
          
 ```C#
 using Windows.Devices.Gpio;
@@ -75,32 +75,32 @@ public void GPIO()
 }
 ```
 
-## <a name="serial-uart"></a>UART serie
+## <a name="serial-uart"></a>UART en serie
 
-Hay dos UARTS serie en el MBM: **UART1** y **UART2**
+Hay dos UART en serie disponibles en MBM: **UART1** y **UART2**
 
-**UART1** tiene la norma **UART1 TX** y **UART1 RX** señales de líneas, junto con el flujo de controlan **UART1 CTS** y **UART1 RTS**.
+**UART1** tiene las líneas de RX estándar **UART1 TX** y **UART1** , junto con las señales de control de flujo **UART1 CTS** y **UART1 RTS**.
 
-* Anclar 6 - **UART1 TX**
-* Anclar 8 - **UART1 RX**
-* Anclar 10 - **UART1 CTS**
-* Anclar 12 - **UART1 RTS**
+* Patilla 6: **UART1 TX**
+* Pin 8- **UART1 RX**
+* PIN 10- **UART1 CTS**
+* Pin 12- **UART1 RTS**
 
-UART1 no funciona a partir de la compilación 10240. Use UART2 o un convertidor de USB a serie.
+UART1 no funciona a partir de la compilación 10240. Use UART2 o un convertidor USB-serie.
 
-**UART2** incluye solamente el **UART2 TX** y **UART2 RX** líneas.
+**UART2** incluye solo las líneas RX **UART2 TX** y **UART2** .
 
-* Anclar 17 - **UART2 TX**
-* Anclar 19 - **UART2 RX**
+* PIN 17- **UART2 TX**
+* Pin 19- **UART2 RX**
 
-UART2 no admite el control de flujo, para tener acceso a las siguientes propiedades de SerialDevice puede dar lugar a una excepción:
+UART2 no admite el control de flujo, por lo que el acceso a las siguientes propiedades de SerialDevice puede dar lugar a que se produzca una excepción:
 
  * BreakSignalState
  * IsDataTerminalReadyEnabled
  * IsRequestToSendEnabled
- * Protocolo de enlace - SerialHandshake.None solo se admite
+ * Solo se admite el protocolo de enlace SerialHandshake. None
 
-El ejemplo siguiente inicializa **UART2** y realiza una operación de escritura seguido por una lectura:
+En el ejemplo siguiente se inicializa **UART2** y se realiza una escritura seguida de una lectura:
 
 ```C#
 using Windows.Storage.Streams;
@@ -135,9 +135,9 @@ public async void Serial()
 }
 ```
 
-Tenga en cuenta que debe agregar la funcionalidad siguiente a la **Package.appxmanifest** archivo del proyecto UWP para ejecutar código UART serie:
+Tenga en cuenta que debe agregar la siguiente funcionalidad al archivo **Package. appxmanifest** en el proyecto de UWP para ejecutar el código UART en serie:
 
-Visual Studio 2017 tiene un problema conocido en el Diseñador de manifiestos (el editor visual para archivos appxmanifest) que afecta a la capacidad de serialcommunication.  Si su appxmanifest agrega la capacidad de serialcommunication, modificar su appxmanifest con el diseñador dañará su appxmanifest (el elemento secundario xml de dispositivo se perderán).  Puede solucionar este problema mediante la edición de mano el appxmanifest haciendo clic en su appxmanifest y seleccione Ver código en el menú contextual.
+Visual Studio 2017 tiene un error conocido en el diseñador de manifiestos (el editor visual para archivos appxmanifest) que afecta a la funcionalidad serialcommunication.  Si el appxmanifest agrega la funcionalidad serialcommunication, la modificación de appxmanifest con el diseñador dañará el appxmanifest (se perderá el elemento secundario XML del dispositivo).  Puede solucionar este problema de forma manual editaba el appxmanifest; para ello, haga clic con el botón derecho en el appxmanifest y seleccione Ver código en el menú contextual.
 
 ```
   <Capabilities>
@@ -149,20 +149,20 @@ Visual Studio 2017 tiene un problema conocido en el Diseñador de manifiestos (e
   </Capabilities>
 ```
 
-## <a name="i2c-bus"></a>Bus i2c
+## <a name="i2c-bus"></a>Bus I2C
 
-Vamos a examinar el bus I2C disponible en este dispositivo.
+Echemos un vistazo al bus I2C disponible en este dispositivo.
 
-### <a name="i2c-overview"></a>Información general de i2c
+### <a name="i2c-overview"></a>Información general de I2C
 
-Hay un controlador I2C **I2C5** expuestos en el encabezado de pin con dos líneas **SDA** y **SCL**. 10K&#x2126; resistencias pull-up interno ya están presentes en estas líneas.
+Hay un **I2C5** de controlador i2c expuesto en el encabezado del PIN con dos líneas **sda** y **SCL**. 10&#x2126; 000 resistencias internas de extracción ya están presentes en estas líneas.
 
-* Anclar 15 - **I2C5 SDA**
-* Anclar 13 - **I2C5 SCL**
+* PIN 15- **I2C5 SDA**
+* PIN 13- **I2C5 SCL**
 
-### <a name="i2c-sample"></a>Ejemplo de i2c
+### <a name="i2c-sample"></a>Ejemplo de I2C
 
-El ejemplo siguiente inicializa **I2C5** y escribe datos en un dispositivo I2C con dirección **0 x 40**:
+En el ejemplo siguiente se inicializa **I2C5** y se escriben datos en un dispositivo I2C con la dirección **0x40**:
 
 ```C#
 using Windows.Devices.Enumeration;
@@ -188,30 +188,30 @@ public async void I2C()
 }
 ```
 
-### <a name="i2c-issues"></a>Problemas de i2c
+### <a name="i2c-issues"></a>Problemas de I2C
 
-El número máximo de MinnowBoard tiene un problema conocido con el bus I2C, lo que provoca problemas de comunicación con determinados dispositivos I2C. Normalmente, un dispositivo I2C reconocerá su dirección durante una solicitud de bus.
-Sin embargo, en determinadas condiciones esta confirmación no se propague hacia atrás por el nivel shifters a la MBM, y como resultado la CPU piensa que el dispositivo no ha respondido y cancela la transacción de bus.
-El problema parece estar relacionado con la [TXS0104E](http://www.ti.com/product/txs0104e) shifters en las patillas de la E/S, que pueden desencadenar prematuramente debido a picos de voltaje de la línea de nivel.
-La solución actual consiste en Insertar una resistencia 100 ohm en serie con la línea SCK I2C, lo que ayuda a suprimir los picos. No todos los dispositivos se ven afectados, por lo que esta solución solo es necesario si tiene problemas para obtener una respuesta de bus. Un dispositivo que se sabe que requieren esta solución alternativa es la HTU21D.
+MinnowBoard Max tiene un problema conocido con el bus I2C que causa problemas de comunicación con determinados dispositivos I2C. Normalmente, un dispositivo I2C confirma su dirección durante una solicitud de bus.
+Sin embargo, en determinadas condiciones, este reconocimiento no puede propagarse de nuevo a través de los desplazamientos de nivel a MBM y, como resultado, la CPU considera que el dispositivo no respondió y cancela la transacción de bus.
+El problema parece estar relacionado con los desplazadores de nivel de [TXS0104E](http://www.ti.com/product/txs0104e) en los pines de e/s, que pueden desencadenarse prematuramente debido a picos de tensión en la línea.
+La solución actual es insertar una resistencia de 100 Ohm en serie con la línea I2C SCK, que ayuda a suprimir los picos. No todos los dispositivos se ven afectados, por lo que esta solución solo es necesaria si tiene problemas para obtener una respuesta de bus. Un dispositivo que se sabe que requiere esta solución es el HTU21D.
 
 ## <a name="spi-bus"></a>Bus SPI
 
-Echemos un vistazo del bus SPI disponible en este dispositivo.
+Echemos un vistazo al bus SPI disponible en este dispositivo.
 
-### <a name="spi-overview"></a>Información general SPI
+### <a name="spi-overview"></a>Información general sobre SPI
 
-Hay un controlador SPI **SPI0** disponible en el MBM:
+Hay un **SPI0** de controlador de SPI disponible en MBM:
 
-* Anclar 9 - **SPI0 MOSI**
-* Anclar 7 - **SPI0 MISO**
-* Anclar 11 - **SPI0 SCLK**
-* Anclar 5 - **SPI0 CS0**
+* PIN 9- **SPI0 Mosi**
+* PIN 7: **SPI0**
+* PIN 11- **SPI0 SCLK**
+* Pin 5- **SPI0 CS0**
 
 
-### <a name="spi-sample"></a>Ejemplo SPI
+### <a name="spi-sample"></a>Ejemplo de SPI
 
-Un ejemplo sobre cómo realizar un IRP de escritura en el bus **SPI0** se muestra a continuación:
+A continuación se muestra un ejemplo de cómo realizar una escritura SPI en el bus **SPI0** :
 
 ```C#
 using Windows.Devices.Enumeration;
