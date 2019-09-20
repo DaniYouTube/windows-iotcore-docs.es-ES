@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 keywords: Windows IOT, arranque seguro, BitLocker, Device Guard, seguridad, seguridad llave en mano
-ms.openlocfilehash: 26e0949dd8ee0a8cfec8aeafee3908a3ade86293
-ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.openlocfilehash: 012cf74528a556f40b865a4ca02f27c9effc2cb7
+ms.sourcegitcommit: 365721929dc902ec12bafe02653609d3d21a59f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67142363"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71140466"
 ---
 # <a name="enabling-secure-boot-bitlocker-and-device-guard-on-windows-10-iot-core"></a>Habilitación del arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 
@@ -104,7 +104,7 @@ En los pasos siguientes se llevará a cabo el proceso de creación de una imagen
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-* Un equipo que ejecuta Windows 10 Enterprise
+* Un equipo que ejecuta Windows 10 Enterprise (los scripts proporcionados **no** admiten otras versiones de Windows) 
 * [SDK de Windows 10](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk) : necesario para la generación de certificados
 * [Windows 10 ADK](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) : necesario para la generación de CAB
 * Plataforma de referencia: se necesitará hardware de versión con firmware de envío, sistema operativo, controladores y aplicaciones para el bloqueo final.
@@ -126,7 +126,7 @@ Windows 10 IoT Core funciona con varios silicios que se usan en cientos de dispo
 
 ### <a name="generate-lockdown-packages"></a>Generar paquetes de bloqueo
 
-1. Descargue el paquete de scripts de [DeviceLockDown](https://github.com/ms-iot/security/tree/master/TurnkeySecurity) , que contiene todas las herramientas y los scripts adicionales necesarios para configurar y bloquear dispositivos.
+1. Descargue el paquete de [scripts de DeviceLockDown](https://github.com/ms-iot/security/tree/master/TurnkeySecurity) , que contiene todas las herramientas y los scripts adicionales necesarios para configurar y bloquear dispositivos.
 2. Inicie una consola de administración de PowerShell (PS) en el equipo con Windows 10 y navegue hasta la ubicación del script descargado.
 3. Monte la plataforma de hardware de referencia (que ejecuta la imagen desbloqueada) en el equipo a través de un recurso compartido de red con
 
@@ -189,7 +189,7 @@ Puede probar los paquetes generados si los instala manualmente en un dispositivo
     ```C
     applyupdate -stage c:\OemInstall\OEM.Custom.Cmd.cab
     ```
-    Si usa una imagen personalizada, tendrá que omitir este archivo y editar manualmente el `c:\windows\system32\oemcustomization.cmd` con el contenido disponible en `Output\OEMCustomization\OEMCustomization.cmd` el archivo.
+    Si usa una imagen personalizada, tendrá que *omitir* este archivo y editar manualmente el `c:\windows\system32\oemcustomization.cmd` con el contenido disponible en `Output\OEMCustomization\OEMCustomization.cmd` el archivo.
 
     ```C
     applyupdate -stage c:\OemInstall\OEM.Security.BitLocker.cab
