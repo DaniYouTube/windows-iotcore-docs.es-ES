@@ -6,12 +6,12 @@ ms.date: 09/07/18
 ms.topic: article
 description: Aproveche todos los recursos de la comunidad de Windows 10 IoT.
 keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, recursos, MVP, vídeos, entradas de blog
-ms.openlocfilehash: ba3fb673c12849e9b3cfb48ae9215f3ec85992eb
-ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.openlocfilehash: b8916b4f344ee11e3cd0697f43e9afbad23c7870
+ms.sourcegitcommit: 365721929dc902ec12bafe02653609d3d21a59f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66499345"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71135792"
 ---
 # <a name="windows-10-iot-resources"></a>Recursos de Windows 10 IoT
 
@@ -45,6 +45,9 @@ ms.locfileid: "66499345"
 * [Windows Machine Learning: Implement AI in your Windows apps](https://aka.ms/Windows-ML-WP) (Windows Machine Learning: Implementación de IA en las aplicaciones Windows)
 * [Create more secure IoT solutions with Windows IoT](https://aka.ms/secure-windowsiot) (Creación de soluciones de IoT más seguras con Windows IoT)
 
+## <a name="webinars"></a>Seminarios web
+* [Procedimientos recomendados de inteligencia perimetral](https://youtu.be/DEOCKFb7lvM)
+
 ## <a name="learning-resources"></a>Recursos de aprendizaje
 
 * [Comunidad de MVP de Microsoft](https://mvp.microsoft.com/)
@@ -55,25 +58,6 @@ ms.locfileid: "66499345"
 * [Getting started with Windows 10 IoT Core on Hackster.io](http://www.hackster.io/KiwiBryn) (Introducción a Windows 10 IoT Core en Hackster.i)
 * [Window 10 IoT Core HATs](https://www.turta.io/iothat) (HAT de Windows 10 IoT Core)
 
-## <a name="commercialized-projects"></a>Proyectos comercializados
-
-* [Misty Robotics](https://customers.microsoft.com/en-us/story/misty-robotics)
-* [Askey Turbomate](https://customers.microsoft.com/en-us/story/askey)
-* [GLAS de Johnson Controls](https://customers.microsoft.com/en-us/story/johnson-controls)
-* [Keith & Koep Cocktail Booster](https://customers.microsoft.com/de-de/story/keith-koep)
-* [Kodisoft](https://customers.microsoft.com/en-us/story/kodisoft)
-* [Redback Technologies](https://customers.microsoft.com/en-us/story/redback-technologies)
-
-
-## <a name="community-projects"></a>Proyectos de la Comunidad
-
-* [Automatización industrial](https://www.hackster.io/projects/tags/industrial+automation+win10)
-* [Señalización digital](https://www.hackster.io/projects/tags/digital+signage+win10)
-* [Atención sanitaria](https://www.hackster.io/projects/tags/healthcare+win10)
-* [Edificios inteligentes](https://www.hackster.io/projects/tags/smart+building+win10)
-* [Venta al por menor](https://www.hackster.io/projects/tags/retail+win10)
-* [Seguridad](https://www.hackster.io/projects/tags/security+win10)
-* [Energía](https://www.hackster.io/projects/tags/energy+win10)
 
 ## <a name="our-technology-partners"></a>Nuestros asociados tecnológicos
 

@@ -1,0 +1,240 @@
+- name: Documentación de Windows para IoT
+  href: index.yml
+- name: Windows para IoT
+  expanded: false
+  items:
+    - name: Windows 10 IoT Core
+      href: windows-iot-core.md
+    - name: Windows 10 IoT Enterprise
+      href: windows-iot-enterprise.md
+    - name: Windows Server IoT 2019
+      href: windows-server.md
+- name: Tutoriales
+  expanded: false
+  items:
+    - name: Configuración de un dispositivo Raspberry Pi
+      href: tutorials/rpi.md
+    - name: Configuración de un dispositivo MinnowBoard
+      href: tutorials/minnowboard.md
+    - name: Configuración de dispositivos NXP
+      href: tutorials/nxp.md
+    - name: Configuración de un dispositivo DragonBoard
+      href: tutorials/dragonboard.md
+    - name: Configuración de dispositivos Qualcomm
+      href: tutorials/qualcomm.md
+    - name: Configuración de dispositivos Intel
+      href: tutorials/intel.md
+- name: Orientación acerca del hardware
+  expanded: false
+  items:
+    - name: Paneles personalizados y SOC
+      href: learn-about-hardware/SoCsAndCustomBoards.md
+    - name: Lista de compatibilidad de hardware
+      href: learn-about-hardware/HardwareCompatList.md
+    - name: NXP i.MX SoCs
+      href: learn-about-hardware/iotnxp.md
+    - name: Asignaciones de PIN
+      items:
+        - name: Raspberry Pi 2 y 3
+          href: learn-about-hardware/PinMappings/PinMappingsRPI.md
+        - name: Dragonboard
+          href: learn-about-hardware/PinMappings/PinMappingsDB.md
+        - name: Minnowboard Max
+          href: learn-about-hardware/PinMappings/PinMappingsMBM.md
+    - name: Dispositivos con periféricos y sin ellos
+      href: learn-about-hardware/HeadlessMode.md
+    - name: Activación táctil
+      href: learn-about-hardware/WakeOnTouch.md
+    - name: Requisitos de UEFI
+      href: commercialize-your-device/uefirequirements.md
+- name: Instrucciones sobre controladores
+  expanded: false
+  items:
+    - name: Implementación de controladores
+      href: learn-about-hardware/DriverDeployment.md
+    - name: Creación de un controlador universal
+      href: learn-about-hardware/DriverCreation.md
+    - name: Compatibilidad con USB
+      href: learn-about-hardware/usb-support.md
+    - name: Instalación de controladores periféricos de USB
+      href: learn-about-hardware/PeripheralDrivers.md
+- name: Desarrollo de aplicaciones
+  expanded: false
+  items:
+    - name: Aplicaciones en primer plano
+      href: develop-your-app/BuildingAppsForIoTCore.md
+    - name: Aplicaciones en segundo plano
+      href: develop-your-app/BackgroundApplications.md
+    - name: Implementación de la aplicación
+      href: develop-your-app/AppDeployment.md
+    - name: Configuración de una aplicación predeterminada
+      href: develop-your-app/SetupDefaultApp.md
+    - name: Instalación de la aplicación
+      href: develop-your-app/AppInstaller.md
+    - name: Aplicación predeterminada de IoT Core
+      href: develop-your-app/IoTCoreDefaultApp.md
+    - name: Pruebas unitarias
+      href: develop-your-app/UnitTestsForIoTCore.md
+    - name: Implementación de la aplicación de consola
+      href: develop-your-app/RemoteDebugging.md
+    - name: Compatibilidad con idiomas
+      href: develop-your-app/MultiLang.md
+    - name: Modo insertado
+      href: develop-your-app/EmbeddedMode.md
+    - name: Proveedores de bus
+      href: develop-your-app/BusProviders.md
+    - name: Teclado en pantalla
+      href: develop-your-app/OnScreenKeyboard.md
+    - name: Barras de cuadro de diálogo de inicio de sesión
+      href: develop-your-app/SignInDialogTitleBars.md
+    - name: Bucle invertido de localhost
+      href: develop-your-app/Loopback.md
+    - name: Introducción a IoT Shell
+      href: develop-your-app/IoTCoreShell.md
+- name: Depuración de aplicaciones
+  expanded: false
+  items:
+    - name: Introducción
+      href: manage-your-device/Overview.md
+    - name: Windows Device Portal
+      href: manage-your-device/DevicePortal.md
+    - name: Depurador de Windows
+      href: manage-your-device/WindowsDebugger.md
+    - name: Configuración de una aplicación predeterminada
+      href: develop-your-app/SetupDefaultApp.md
+    - name: Fugas de memoria
+      href: develop-your-app/InvestigateMemoryLeaks.md
+    - name: Fiddler
+      href: develop-your-app/Fiddler.md
+    - name: Proveedores de Rayo
+      href: develop-your-app/LightningProviders.md
+    - name: Seguimiento de eventos
+      href: manage-your-device/EventTracing.md
+- name: Herramientas de desarrollo
+  expanded: false
+  items:
+    - name: Panel de Windows 10 IoT Core
+      href: connect-your-device/IoTDashboard.md
+    - name: PowerShell
+      href: connect-your-device/PowerShell.md
+    - name: Visualización remota
+      href: manage-your-device/RemoteDisplay.md
+    - name: Utilidades de línea de comandos
+      href: manage-your-device/CommandLineUtils.md
+    - name: Herramienta de portabilidad de API de Windows 10 IoT Core
+      href: learn-about-hardware/IoTCorePortingTool.md
+    - name: Capturas de paquetes de red
+      href: manage-your-device/NetworkPacketCapture.md
+    - name: Uso compartido de archivos de Windows
+      href: manage-your-device/WindowsFileSharing.md
+    - name: SSH
+      href: connect-your-device/SSH.md
+    - name: DISM
+      href: connect-your-device/DISM.md
+    - name: FTP
+      href: connect-your-device/FTP.md
+    - name: MTP
+      href: connect-your-device/MTP.md
+    - name: Python
+      href: developer-tools/python.md
+- name: Conectividad
+  expanded: false
+  items:
+    - name: Wi-Fi Direct
+      href: connect-your-device/SetupWiFiDirect.md
+    - name: Wi-Fi
+      href: connect-your-device/SetupWifi.md
+    - name: Miracast
+      href: connect-your-device/Miracast.md
+    - name: Bluetooth
+      href: connect-your-device/Bluetooth.md
+    - name: VPN
+      href: connect-your-device/VPN.md
+    - name: Banda ancha móvil
+      href: connect-your-device/MBB.md
+- name: Administrar dispositivos
+  expanded: false
+  items:
+    - name: Administración de dispositivos
+      href: manage-your-device/DeviceManagement.md
+    - name: Proyecto Roma
+      href: manage-your-device/ProjectRome.md
+    - name: Inscripción de dispositivo de Intune
+      href: manage-your-device/IntuneDeviceEnrollment.md
+- name: Protección de dispositivos
+  expanded: false
+  items:
+    - name: Introducción
+      href: secure-your-device/BuildingSecureDevices.md
+    - name: 'Secure Boot, BitLocker y Device Guard'
+      href: secure-your-device/SecureBootAndBitLocker.md
+    - name: Unified Write Filter
+      href: secure-your-device/UnifiedWriteFilter.md
+    - name: Introducción sobre TPM
+      href: secure-your-device/TPM.md
+    - name: Configuración de TPM
+      href: secure-your-device/setupTPM.md
+- name: Conectividad de la nube
+  expanded: false
+  items:
+    - name: Introducción
+      href: connect-to-cloud/Overview.md
+    - name: Conexión del dispositivo
+      href: connect-to-cloud/ConnectDeviceToCloud.md
+    - name: Conexión de la aplicación
+      href: connect-to-cloud/ConnectAppToCloud.md
+    - name: Agente de dispositivos Azure IoT
+      href: manage-your-device/AzureIoTDA.md
+- name: Notas de la versión
+  expanded: false
+  items:
+    - name: Vistas previas de Insider
+      items:
+        - name: 'Actuales: Compilación 17744'
+          href: release-notes/insider/17744.md
+        - name: Compilación 17723
+          href: release-notes/insider/17723.md
+        - name: Compilación 17692
+          href: release-notes/insider/17692.md
+        - name: Compilación 17686
+          href: release-notes/insider/17686.md
+        - name: Compilación 17672
+          href: release-notes/insider/17672.md
+        - name: 'Actuales: Compilación 17661'
+          href: release-notes/insider/17661.md
+        - name: Raspberry Pi versión 3B+
+          href: release-notes/insider/RPi3BP.md
+        - name: Compilación 17110
+          href: release-notes/insider/17110.md
+        - name: Compilación 17083
+          href: release-notes/insider/17083.md
+        - name: Compilación 17015
+          href: release-notes/insider/17015.md
+        - name: Compilación 16267
+          href: release-notes/insider/16267.md
+        - name: Compilación 16257
+          href: release-notes/insider/16257.md
+    - name: Versiones comerciales
+      items:
+        - name: 'Actuales: Actualización de octubre de 2018 (con el paquete de mantenimiento de enero de 2019)'
+          href: release-notes/commercial/17763.md
+        - name: Actualización de octubre de 2018 (compilación 17763)
+          href: release-notes/commercial/October2018Update.md
+        - name: Actualización de abril de 2018 (compilación 17134)
+          href: release-notes/commercial/April2018Update.md
+        - name: Fall Creators Update (compilación 16299)
+          href: release-notes/commercial/FallCreatorsUpdate.md
+        - name: Creators Update (compilación 15063)
+          href: release-notes/commercial/CreatorsUpdate.md
+- name: Solución de problemas
+  href: Troubleshooting.md
+- name: Descargas
+  href: Downloads.md
+- name: Recursos
+  href: Resources.md
+- name: Microsoft IoT Pack
+  href: tutorials/adafruitkit.md
+- name: Accesibilidad
+  href: Accessibility.md
+- name: Glosario
+  href: Glossary.md
