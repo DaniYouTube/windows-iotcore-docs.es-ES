@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: Documentación de Windows para IoT
+summary: La plataforma Windows para IoT tiene varias ediciones, cada una de ellas optimizada para escenarios específicos. Todas comparten la seguridad, la capacidad de administración, la compatibilidad y la conectividad de la nube que espera de Windows.
+metadata:
+  description: Obtenga información sobre Windows para IoT con el fin de desarrollar sus propias soluciones insertadas y conectadas.
+  services: windows-iot
+  ms.service: windows-iot
+  ms.topic: landing-page
+  author: saraclay
+  ms.author: saclayt
+  ms.date: 09/04/2019
+  ms.openlocfilehash: 655ef6423c244b3eec6d49797ad2affbc859ff32
+  ms.sourcegitcommit: 365721929dc902ec12bafe02653609d3d21a59f0
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 09/19/2019
+  ms.locfileid: "71144985"
+landingContent:
+- title: Acerca de Windows para IoT
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 10 IoT Core
+      url: windows-iot-core.md
+    - text: Windows 10 IoT Enterprise
+      url: windows-iot-enterprise.md
+    - text: Windows Server IoT 2019
+      url: windows-server.md
+- title: Comenzar
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Guía de fabricación de Windows 10 IoT Core
+      url: https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide
+    - text: Guía de fabricación de Windows 10 IoT Enterprise
+      url: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/iot-ent-overview
+  - linkListType: reference
+    links:
+    - text: Prototipos de paneles
+      url: tutorials/quickstarter/prototypeboards.md
+    - text: Paneles personalizados y SOC
+      url: learn-about-hardware/socsandcustomboards.md
+    - text: Lista de compatibilidad de hardware
+      url: learn-about-hardware/hardwarecompatlist.md
+    - text: NXP i.MX SoCs
+      url: learn-about-hardware/iotnxp.md
+- title: Recursos
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Entrenamiento y libros de Windows para IoT
+      url: http://www.annabooks.com/training.html
+    - text: Foros de Windows para IoT
+      url: https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=WindowsIoT
+    - text: UserVoice de Windows para IoT
+      url: https://wpdev.uservoice.com/forums/110705-universal-windows-platform?category_id=364159
