@@ -6,12 +6,12 @@ ms.date: 09/07/18
 ms.topic: article
 description: Aproveche todos los recursos de la comunidad de Windows 10 IoT.
 keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, recursos, MVP, vídeos, entradas de blog
-ms.openlocfilehash: b8916b4f344ee11e3cd0697f43e9afbad23c7870
-ms.sourcegitcommit: 365721929dc902ec12bafe02653609d3d21a59f0
+ms.openlocfilehash: e9dd4ffdc3e49b34aff3907d5bca592fac97e04c
+ms.sourcegitcommit: 4ed27e7a37d30d5a7c59e76d691e40b709d291e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71135792"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151134"
 ---
 # <a name="windows-10-iot-resources"></a>Recursos de Windows 10 IoT
 
@@ -46,7 +46,7 @@ ms.locfileid: "71135792"
 * [Create more secure IoT solutions with Windows IoT](https://aka.ms/secure-windowsiot) (Creación de soluciones de IoT más seguras con Windows IoT)
 
 ## <a name="webinars"></a>Seminarios web
-* [Procedimientos recomendados de inteligencia perimetral](https://youtu.be/DEOCKFb7lvM)
+* [IA en el entorno perimetral](https://youtu.be/DEOCKFb7lvM)
 
 ## <a name="learning-resources"></a>Recursos de aprendizaje
 
