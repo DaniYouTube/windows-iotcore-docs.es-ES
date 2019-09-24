@@ -8,12 +8,12 @@ ms.prod: windows-iot
 ms.technology: IoT
 description: Obtenga información sobre las distintas formas en que puede depurar Windows 10 IoT Core.
 keywords: Windows IOT, depuración, PowerShell, SSH
-ms.openlocfilehash: 64fa743416823a849deb2cb7826c149f9023a893
-ms.sourcegitcommit: 77b86eee2bba3844e87f9d3dbef816761ddf0dd9
+ms.openlocfilehash: 1baeaca24fff425372e6a6de64d4b74bdcc60abb
+ms.sourcegitcommit: e3457de2e13ff89142a91cb8af2da4bf2e41ad20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535835"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71189933"
 ---
 # <a name="debugging-on-windows-iot-core"></a>Depuración en Windows IoT Core
 Una vez que tenga la configuración de la imagen de IoT Core con la aplicación en ejecución, es importante que pueda depurar la aplicación o el sistema según sea necesario. El mejor momento para depurar y probar el sistema es el estado de la imagen de prueba. Una vez que los sistemas basados en IoT Core están fuera de la naturaleza, la depuración puede convertirse en Challanging. Esto no se puede decir que no se puede hacer, pero con capas adicionales de dificultades agregadas para depurar Comparar con las fases de prueba. Puede usar lo siguiente para depurar la aplicación o imagen en modo de prueba:
@@ -44,4 +44,4 @@ La implementación y depuración de la aplicación es sencilla con Visual Studio
 
 -----
 ## <a name="live-app-debug"></a>Depuración de aplicación activa
-En Visual Studio (2015 y versiones posteriores), puede analizar el rendimiento y diagnosticar problemas en la aplicación Web de ASP.NET en la depuración y en producción, mediante la telemetría de Aplicación de Azure Insights. La característica se extiende posteriormente para incluir aplicaciones de escritorio y UWP en Visual Studio 2017 y a través de Azure portal. Aquí puede encontrar información adicional sobre la depuración del [proyecto y la](https://docs.microsoft.com/en-us/azure/azure-monitor/app/visual-studio) supervisión del uso, y el rendimiento en aplicaciones de escritorio o [UWP.](https://docs.microsoft.com/en-us/azure/azure-monitor/app/windows-desktop)
+En Visual Studio (2015 y versiones posteriores), puede analizar el rendimiento y diagnosticar problemas en la aplicación Web de ASP.NET en la depuración y en producción, mediante la telemetría de Aplicación de Azure Insights. La característica se extiende posteriormente para incluir aplicaciones de escritorio y UWP en Visual Studio 2017 y a través de Azure portal. Puede encontrar información adicional sobre cómo depurar el proyecto [aquí](https://docs.microsoft.com/en-us/azure/azure-monitor/app/visual-studio) y supervisar el uso, y el rendimiento de las aplicaciones de escritorio o UWP [aquí](https://docs.microsoft.com/en-us/azure/azure-monitor/app/windows-desktop).
