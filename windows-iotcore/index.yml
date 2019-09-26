@@ -9,12 +9,12 @@ metadata:
   author: saraclay
   ms.author: saclayt
   ms.date: 09/04/2019
-  ms.openlocfilehash: ab7185c6439439764ed6e78530ec4d25258e6112
-  ms.sourcegitcommit: e3457de2e13ff89142a91cb8af2da4bf2e41ad20
+  ms.openlocfilehash: 03caed08ace90632f31e6c32a75cfc66b652c22f
+  ms.sourcegitcommit: 5eebf5f03a4ee0b498bd80e8c54f343d94be3ecd
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/23/2019
-  ms.locfileid: "71189919"
+  ms.lasthandoff: 09/24/2019
+  ms.locfileid: "71247544"
 landingContent:
 - title: Acerca de Windows para IoT
   linkLists:
@@ -26,6 +26,8 @@ landingContent:
       url: windows-iot-enterprise.md
     - text: Windows Server IoT 2019
       url: windows-server.md
+    - text: Windows 10 IoT Core Services
+      url: https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iotcoreservicesoverview
 - title: Comenzar
   linkLists:
   - linkListType: tutorial
