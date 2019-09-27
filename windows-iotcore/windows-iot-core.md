@@ -7,10 +7,10 @@ ms.topic: article
 description: Obtenga información sobre qué es Windows 10 IoT Core y lo que puede hacer con él.
 keywords: Windows 10 IoT Core, superficie pequeña, equipo sin periféricos
 ms.openlocfilehash: a1f2ce0835dcb40efc71f2b4d0d4733b781b0799
-ms.sourcegitcommit: 823a8f6967f74d71d5c61fe90f6b63ba79483479
+ms.sourcegitcommit: e3457de2e13ff89142a91cb8af2da4bf2e41ad20
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 09/24/2019
 ms.locfileid: "70159286"
 ---
 # <a name="an-overview-of-windows-10-iot-core"></a>Información general de Windows 10 IoT Core
