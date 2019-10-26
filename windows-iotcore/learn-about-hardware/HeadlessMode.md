@@ -1,57 +1,55 @@
 ---
 title: Dispositivos con periféricos y sin ellos
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo configurar Windows IoT Core para dispositivos con o sin cabeza.
 keywords: Windows IOT, pantallas, cabeza, interfaz de usuario
-ms.openlocfilehash: 8ac0d7e06477836aa080af1b7556b054957d0cac
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 138bc19b355e39db7e6bd4f4441159b03fde26c1
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60169441"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918098"
 ---
-# <a name="headed-and-headless-devices"></a><span data-ttu-id="8744b-104">Dispositivos con cabeza y sin periféricos</span><span class="sxs-lookup"><span data-stu-id="8744b-104">Headed and Headless devices</span></span>
+# <a name="headed-and-headless-devices"></a><span data-ttu-id="9f7e4-104">Dispositivos con cabeza y sin periféricos</span><span class="sxs-lookup"><span data-stu-id="9f7e4-104">Headed and Headless devices</span></span>
 
-<span data-ttu-id="8744b-105">Windows 10 IoT Core puede configurarse para el modo de encabezado o sin *cabeza* .</span><span class="sxs-lookup"><span data-stu-id="8744b-105">Windows 10 IoT Core can be configured for either *headed* or *headless* mode.</span></span> 
+<span data-ttu-id="9f7e4-105">Windows 10 IoT Core puede configurarse para el *modo de encabezado o sin* *cabeza* .</span><span class="sxs-lookup"><span data-stu-id="9f7e4-105">Windows 10 IoT Core can be configured for either *headed* or *headless* mode.</span></span> 
 
-## <a name="headed-mode"></a><span data-ttu-id="8744b-106">Modo de punta</span><span class="sxs-lookup"><span data-stu-id="8744b-106">Headed mode</span></span>
-<span data-ttu-id="8744b-107">El modo de cabeza se define por la presencia de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="8744b-107">Headed mode is defined by the presence of UI.</span></span> <span data-ttu-id="8744b-108">En el modo de *cabeza* , se iniciará una sola aplicación de interfaz de usuario en el arranque del sistema y también puede haber 0 o más "aplicaciones en segundo plano" (StartupTasks).</span><span class="sxs-lookup"><span data-stu-id="8744b-108">In *headed* mode a single UI app will be launched at system boot and there can additionally be 0 or more "Background Apps" (StartupTasks).</span></span> 
+## <a name="headed-mode"></a><span data-ttu-id="9f7e4-106">Modo de punta</span><span class="sxs-lookup"><span data-stu-id="9f7e4-106">Headed mode</span></span>
+<span data-ttu-id="9f7e4-107">El modo de cabeza se define por la presencia de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="9f7e4-107">Headed mode is defined by the presence of UI.</span></span> <span data-ttu-id="9f7e4-108">En el modo de *cabeza* , se iniciará una sola aplicación de interfaz de usuario en el arranque del sistema y también puede haber 0 o más "aplicaciones en segundo plano" (StartupTasks).</span><span class="sxs-lookup"><span data-stu-id="9f7e4-108">In *headed* mode a single UI app will be launched at system boot and there can additionally be 0 or more "Background Apps" (StartupTasks).</span></span> 
 
-## <a name="headless-mode"></a><span data-ttu-id="8744b-109">Modo sin periféricos</span><span class="sxs-lookup"><span data-stu-id="8744b-109">Headless mode</span></span>
-<span data-ttu-id="8744b-110">El modo sin periféricos no tiene interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="8744b-110">Headless mode has no UI.</span></span>  <span data-ttu-id="8744b-111">Los dispositivos que no necesitan la funcionalidad de la interfaz de usuario se pueden establecer en el modo sin periféricos.</span><span class="sxs-lookup"><span data-stu-id="8744b-111">Devices that don't need UI functionality can be set to *headless* mode.</span></span> <span data-ttu-id="8744b-112">La pila de la interfaz de usuario está deshabilitada y las aplicaciones de IU no se iniciarán.</span><span class="sxs-lookup"><span data-stu-id="8744b-112">The UI stack is disabled and UI apps will not launch.</span></span> <span data-ttu-id="8744b-113">Esto reduce la cantidad de recursos del sistema utilizados.</span><span class="sxs-lookup"><span data-stu-id="8744b-113">This reduces the amount of system resources used.</span></span> <span data-ttu-id="8744b-114">Si conecta un monitor al dispositivo, la pantalla será negra.</span><span class="sxs-lookup"><span data-stu-id="8744b-114">If you attach a monitor to your device, the screen will be black.</span></span>
+## <a name="headless-mode"></a><span data-ttu-id="9f7e4-109">Modo sin periféricos</span><span class="sxs-lookup"><span data-stu-id="9f7e4-109">Headless mode</span></span>
+<span data-ttu-id="9f7e4-110">El modo sin periféricos no tiene interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="9f7e4-110">Headless mode has no UI.</span></span>  <span data-ttu-id="9f7e4-111">Los dispositivos que no necesitan la funcionalidad de la interfaz de usuario se pueden establecer en el modo sin *periféricos* .</span><span class="sxs-lookup"><span data-stu-id="9f7e4-111">Devices that don't need UI functionality can be set to *headless* mode.</span></span> <span data-ttu-id="9f7e4-112">La pila de la interfaz de usuario está deshabilitada y las aplicaciones de IU no se iniciarán.</span><span class="sxs-lookup"><span data-stu-id="9f7e4-112">The UI stack is disabled and UI apps will not launch.</span></span> <span data-ttu-id="9f7e4-113">Esto reduce la cantidad de recursos del sistema utilizados.</span><span class="sxs-lookup"><span data-stu-id="9f7e4-113">This reduces the amount of system resources used.</span></span> <span data-ttu-id="9f7e4-114">Si conecta un monitor al dispositivo, la pantalla será negra.</span><span class="sxs-lookup"><span data-stu-id="9f7e4-114">If you attach a monitor to your device, the screen will be black.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8744b-115">Si coloca el dispositivo en el modo sin periféricos, puede usar la aplicación Windows 10 IoT Core Dashboard, que se describe a continuación, para encontrar su dirección IP.</span><span class="sxs-lookup"><span data-stu-id="8744b-115">If you put your device into headless mode, then you can use the Windows 10 IoT Core Dashboard application, described below, to find its IP address.</span></span>
+> <span data-ttu-id="9f7e4-115">Si coloca el dispositivo en el modo sin periféricos, puede usar la aplicación Windows 10 IoT Core Dashboard, que se describe a continuación, para encontrar su dirección IP.</span><span class="sxs-lookup"><span data-stu-id="9f7e4-115">If you put your device into headless mode, then you can use the Windows 10 IoT Core Dashboard application, described below, to find its IP address.</span></span>
 
-## <a name="changing-the-mode"></a><span data-ttu-id="8744b-116">Cambiar el modo</span><span class="sxs-lookup"><span data-stu-id="8744b-116">Changing the mode</span></span>
-<span data-ttu-id="8744b-117">Puede modificar el estado de la cabeza o el estado de los dispositivos desde una sesión de Windows PowerShell o una sesión de SSH.</span><span class="sxs-lookup"><span data-stu-id="8744b-117">You can modify the headed/headless state of your device from a Windows PowerShell session or an SSH session.</span></span> <span data-ttu-id="8744b-118">Para obtener más información acerca de PowerShell, consulte la página [PowerShell para IOT Core](../connect-your-device/PowerShell.md) .</span><span class="sxs-lookup"><span data-stu-id="8744b-118">To learn more about PowerShell, see the [PowerShell for IoT Core](../connect-your-device/PowerShell.md) page.</span></span> <span data-ttu-id="8744b-119">Para más información sobre SSH, consulte la página [SSH para IOT Core](../connect-your-device/SSH.md) .</span><span class="sxs-lookup"><span data-stu-id="8744b-119">To learn more about SSH, see the [SSH for IoT Core](../connect-your-device/SSH.md) page.</span></span>
+## <a name="changing-the-mode"></a><span data-ttu-id="9f7e4-116">Cambiar el modo</span><span class="sxs-lookup"><span data-stu-id="9f7e4-116">Changing the mode</span></span>
+<span data-ttu-id="9f7e4-117">Puede modificar el estado de la cabeza o el estado de los dispositivos desde una sesión de Windows PowerShell o una sesión de SSH.</span><span class="sxs-lookup"><span data-stu-id="9f7e4-117">You can modify the headed/headless state of your device from a Windows PowerShell session or an SSH session.</span></span> <span data-ttu-id="9f7e4-118">Para obtener más información acerca de PowerShell, consulte la página [PowerShell para IOT Core](../connect-your-device/PowerShell.md) .</span><span class="sxs-lookup"><span data-stu-id="9f7e4-118">To learn more about PowerShell, see the [PowerShell for IoT Core](../connect-your-device/PowerShell.md) page.</span></span> <span data-ttu-id="9f7e4-119">Para más información sobre SSH, consulte la página [SSH para IOT Core](../connect-your-device/SSH.md) .</span><span class="sxs-lookup"><span data-stu-id="9f7e4-119">To learn more about SSH, see the [SSH for IoT Core](../connect-your-device/SSH.md) page.</span></span>
 
-* <span data-ttu-id="8744b-120">Para mostrar el estado actual del dispositivo, use la `setbootoption` utilidad:</span><span class="sxs-lookup"><span data-stu-id="8744b-120">To display the current state of your device, use the `setbootoption` utility:</span></span>
+* <span data-ttu-id="9f7e4-120">Para mostrar el estado actual del dispositivo, use la utilidad `setbootoption`:</span><span class="sxs-lookup"><span data-stu-id="9f7e4-120">To display the current state of your device, use the `setbootoption` utility:</span></span>
 
 ~~~
     [192.168.0.243]: PS C:\> setbootoption.exe
 ~~~
 
-* <span data-ttu-id="8744b-121">Para modificar el estado del dispositivo para habilitar el modo sin periféricos, use `setbootoption` la utilidad con `headless` el argumento Arg:</span><span class="sxs-lookup"><span data-stu-id="8744b-121">To modify the state of your device to enable headless mode, use the `setbootoption` utility with the `headless` arg:</span></span>
+* <span data-ttu-id="9f7e4-121">Para modificar el estado del dispositivo para habilitar el modo sin periféricos, use la utilidad `setbootoption` con el `headless` Arg:</span><span class="sxs-lookup"><span data-stu-id="9f7e4-121">To modify the state of your device to enable headless mode, use the `setbootoption` utility with the `headless` arg:</span></span>
 
 ~~~
     [192.168.0.243]: PS C:\> setbootoption.exe headless
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 ~~~
 
-* <span data-ttu-id="8744b-122">Para modificar el estado del dispositivo para habilitar el modo de cabeza, use `setbootoption` la utilidad con `headed` el argumento Arg:</span><span class="sxs-lookup"><span data-stu-id="8744b-122">To modify the state of your device to enable headed mode, use the `setbootoption` utility with the `headed` arg:</span></span>
+* <span data-ttu-id="9f7e4-122">Para modificar el estado del dispositivo para habilitar el modo de cabeza, use la utilidad `setbootoption` con el `headed` Arg:</span><span class="sxs-lookup"><span data-stu-id="9f7e4-122">To modify the state of your device to enable headed mode, use the `setbootoption` utility with the `headed` arg:</span></span>
 
 ~~~
     [192.168.0.243]: PS C:\> setbootoption.exe headed
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 ~~~
 
-## <a name="finding-your-headless-device"></a><span data-ttu-id="8744b-123">Búsqueda de un dispositivo sin periféricos</span><span class="sxs-lookup"><span data-stu-id="8744b-123">Finding your headless device</span></span>
+## <a name="finding-your-headless-device"></a><span data-ttu-id="9f7e4-123">Búsqueda de un dispositivo sin periféricos</span><span class="sxs-lookup"><span data-stu-id="9f7e4-123">Finding your headless device</span></span>
 
-<span data-ttu-id="8744b-124">Un dispositivo de IoT Core que está en modo sin periférico se puede detectar mediante la aplicación **Windows 10 IOT Core Dashboard** .</span><span class="sxs-lookup"><span data-stu-id="8744b-124">An IoT Core device that is in headless mode can be discovered using the **Windows 10 IoT Core Dashboard** application.</span></span>  <span data-ttu-id="8744b-125">Para descargar el panel de IoT, consulte la página de [descargas](http://go.microsoft.com/fwlink/?LinkID=708576) .</span><span class="sxs-lookup"><span data-stu-id="8744b-125">To download the IoT Dashboard, see the [Downloads](http://go.microsoft.com/fwlink/?LinkID=708576) page.</span></span>
-<span data-ttu-id="8744b-126">Cuando se ejecuta, la aplicación escucha los pings desde cualquier dispositivo de IoT Core en la red local y muestra información del dispositivo, como el nombre, la dirección IP, etc.</span><span class="sxs-lookup"><span data-stu-id="8744b-126">When running, the application listens for pings from any IoT Core devices on the local network and displays device information such as the name, IP address, and more.</span></span>
+<span data-ttu-id="9f7e4-124">Un dispositivo de IoT Core que está en modo sin periférico se puede detectar mediante la aplicación **Windows 10 IOT Core Dashboard** .</span><span class="sxs-lookup"><span data-stu-id="9f7e4-124">An IoT Core device that is in headless mode can be discovered using the **Windows 10 IoT Core Dashboard** application.</span></span>  <span data-ttu-id="9f7e4-125">Para descargar el panel de IoT, consulte la página de [descargas](http://go.microsoft.com/fwlink/?LinkID=708576) .</span><span class="sxs-lookup"><span data-stu-id="9f7e4-125">To download the IoT Dashboard, see the [Downloads](http://go.microsoft.com/fwlink/?LinkID=708576) page.</span></span>
+<span data-ttu-id="9f7e4-126">Cuando se ejecuta, la aplicación escucha los pings desde cualquier dispositivo de IoT Core en la red local y muestra información del dispositivo, como el nombre, la dirección IP, etc.</span><span class="sxs-lookup"><span data-stu-id="9f7e4-126">When running, the application listens for pings from any IoT Core devices on the local network and displays device information such as the name, IP address, and more.</span></span>
 
 ![Panel de Windows 10 IoT Core](../media/HeadlessMode/selectDevice.png)

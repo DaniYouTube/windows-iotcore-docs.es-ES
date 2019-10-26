@@ -1,43 +1,41 @@
 ---
 title: VPN en Windows 10 IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 11/19/2018
 ms.topic: article
 description: Aprenda a usar, configurar y configurar las funcionalidades de VPN para el dispositivo de Windows 10 IoT Core.
 keywords: Windows IOT, VPN, instalación, dispositivo
-ms.openlocfilehash: 94eafcb74a05179a7741cb516b5e7be30b525092
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 2f88fe9090f7cf5329b77a3185f82dd153547b6a
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167903"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918279"
 ---
-# <a name="leveraging-vpn-capabilities-for-your-windows-10-iot-core-device"></a><span data-ttu-id="be1e9-104">Aprovechamiento de las funcionalidades de VPN para el dispositivo de Windows 10 IoT Core</span><span class="sxs-lookup"><span data-stu-id="be1e9-104">Leveraging VPN capabilities for your Windows 10 IoT Core device</span></span>
+# <a name="leveraging-vpn-capabilities-for-your-windows-10-iot-core-device"></a><span data-ttu-id="1399b-104">Aprovechamiento de las funcionalidades de VPN para el dispositivo de Windows 10 IoT Core</span><span class="sxs-lookup"><span data-stu-id="1399b-104">Leveraging VPN capabilities for your Windows 10 IoT Core device</span></span>
 
-<span data-ttu-id="be1e9-105">Para aprovechar las funcionalidades de VPN de Windows 10 IoT Core, siga las instrucciones que se indican a continuación.</span><span class="sxs-lookup"><span data-stu-id="be1e9-105">In order to leverage the VPN capabilities of Windows 10 IoT Core, follow the instructions below.</span></span>
+<span data-ttu-id="1399b-105">Para aprovechar las funcionalidades de VPN de Windows 10 IoT Core, siga las instrucciones que se indican a continuación.</span><span class="sxs-lookup"><span data-stu-id="1399b-105">In order to leverage the VPN capabilities of Windows 10 IoT Core, follow the instructions below.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="be1e9-106">La mayoría de las instrucciones siguientes deben adaptarse.</span><span class="sxs-lookup"><span data-stu-id="be1e9-106">Most of the instructions below must be adapted.</span></span> <span data-ttu-id="be1e9-107">Son específicos del host de VPN al que se está conectando el usuario.</span><span class="sxs-lookup"><span data-stu-id="be1e9-107">They are specific to the VPN host that the user is connecting to.</span></span> <span data-ttu-id="be1e9-108">Los certificados utilizados son ejemplos.</span><span class="sxs-lookup"><span data-stu-id="be1e9-108">The certs used are examples.</span></span>
+> <span data-ttu-id="1399b-106">La mayoría de las instrucciones siguientes deben adaptarse.</span><span class="sxs-lookup"><span data-stu-id="1399b-106">Most of the instructions below must be adapted.</span></span> <span data-ttu-id="1399b-107">Son específicos del host de VPN al que se está conectando el usuario.</span><span class="sxs-lookup"><span data-stu-id="1399b-107">They are specific to the VPN host that the user is connecting to.</span></span> <span data-ttu-id="1399b-108">Los certificados utilizados son ejemplos.</span><span class="sxs-lookup"><span data-stu-id="1399b-108">The certs used are examples.</span></span>
 
-## <a name="establishing-a-vpn-connection"></a><span data-ttu-id="be1e9-109">Establecer una conexión VPN</span><span class="sxs-lookup"><span data-stu-id="be1e9-109">Establishing a VPN connection</span></span> 
+## <a name="establishing-a-vpn-connection"></a><span data-ttu-id="1399b-109">Establecer una conexión VPN</span><span class="sxs-lookup"><span data-stu-id="1399b-109">Establishing a VPN connection</span></span> 
 
-1. <span data-ttu-id="be1e9-110">Obtenga los certificados necesarios y cópielo en el dispositivo de IoT (por ejemplo, en una carpeta \vpntest).</span><span class="sxs-lookup"><span data-stu-id="be1e9-110">Obtain the necessary certs and copy to your IoT device (e.g. to a \vpntest folder).</span></span>
+1. <span data-ttu-id="1399b-110">Obtenga los certificados necesarios y cópielo en el dispositivo de IoT (por ejemplo, en una carpeta \vpntest).</span><span class="sxs-lookup"><span data-stu-id="1399b-110">Obtain the necessary certs and copy to your IoT device (e.g. to a \vpntest folder).</span></span>
 
-* <span data-ttu-id="be1e9-111">RASTest. pfx</span><span class="sxs-lookup"><span data-stu-id="be1e9-111">RASTest.pfx</span></span>
-* <span data-ttu-id="be1e9-112">IssuingCA. CRL</span><span class="sxs-lookup"><span data-stu-id="be1e9-112">IssuingCA.crl</span></span>
-* <span data-ttu-id="be1e9-113">RootCA. CRL</span><span class="sxs-lookup"><span data-stu-id="be1e9-113">RootCA.crl</span></span>
+* <span data-ttu-id="1399b-111">RASTest. pfx</span><span class="sxs-lookup"><span data-stu-id="1399b-111">RASTest.pfx</span></span>
+* <span data-ttu-id="1399b-112">IssuingCA. CRL</span><span class="sxs-lookup"><span data-stu-id="1399b-112">IssuingCA.crl</span></span>
+* <span data-ttu-id="1399b-113">RootCA. CRL</span><span class="sxs-lookup"><span data-stu-id="1399b-113">RootCA.crl</span></span>
 
-2. <span data-ttu-id="be1e9-114">Aplique los certificados de la máquina local a.</span><span class="sxs-lookup"><span data-stu-id="be1e9-114">Apply local machine certs a.</span></span> <span data-ttu-id="be1e9-115">PowerShell en el dispositivo como administrador</span><span class="sxs-lookup"><span data-stu-id="be1e9-115">PowerShell into device as administrator</span></span>
+2. <span data-ttu-id="1399b-114">Aplique los certificados de la máquina local a.</span><span class="sxs-lookup"><span data-stu-id="1399b-114">Apply local machine certs a.</span></span> <span data-ttu-id="1399b-115">PowerShell en el dispositivo como administrador</span><span class="sxs-lookup"><span data-stu-id="1399b-115">PowerShell into device as administrator</span></span>
 
 ```powershell
 certmgr -add .\IssuingCA.crl -r localmachine -s root
 certmgr -add .\RootCA.crl -r localmachine -s root
 ```
 
-3. <span data-ttu-id="be1e9-116">Aplique los certificados de usuario a.</span><span class="sxs-lookup"><span data-stu-id="be1e9-116">Apply user certs a.</span></span> <span data-ttu-id="be1e9-117">Inicie sesión en el dispositivo IoT con SSH como "DefaultAccount".</span><span class="sxs-lookup"><span data-stu-id="be1e9-117">Login to the IoT Device using SSH as "DefaultAccount".</span></span>
-<span data-ttu-id="be1e9-118">b.</span><span class="sxs-lookup"><span data-stu-id="be1e9-118">b.</span></span> <span data-ttu-id="be1e9-119">En el símbolo del sistema, escriba "PowerShell".</span><span class="sxs-lookup"><span data-stu-id="be1e9-119">From the command prompt, type "PowerShell".</span></span>
-<span data-ttu-id="be1e9-120">c.</span><span class="sxs-lookup"><span data-stu-id="be1e9-120">c.</span></span> <span data-ttu-id="be1e9-121">Emita los siguientes comandos desde PowerShell (mientras está conectado como "cuenta predeterminada"):</span><span class="sxs-lookup"><span data-stu-id="be1e9-121">Issue the following commands from PowerShell (while logged in as "Default Account"):</span></span>
+3. <span data-ttu-id="1399b-116">Aplique los certificados de usuario a.</span><span class="sxs-lookup"><span data-stu-id="1399b-116">Apply user certs a.</span></span> <span data-ttu-id="1399b-117">Inicie sesión en el dispositivo IoT con SSH como "DefaultAccount".</span><span class="sxs-lookup"><span data-stu-id="1399b-117">Login to the IoT Device using SSH as "DefaultAccount".</span></span>
+<span data-ttu-id="1399b-118">b.</span><span class="sxs-lookup"><span data-stu-id="1399b-118">b.</span></span> <span data-ttu-id="1399b-119">En el símbolo del sistema, escriba "PowerShell".</span><span class="sxs-lookup"><span data-stu-id="1399b-119">From the command prompt, type "PowerShell".</span></span>
+<span data-ttu-id="1399b-120">c.</span><span class="sxs-lookup"><span data-stu-id="1399b-120">c.</span></span> <span data-ttu-id="1399b-121">Emita los siguientes comandos desde PowerShell (mientras está conectado como "cuenta predeterminada"):</span><span class="sxs-lookup"><span data-stu-id="1399b-121">Issue the following commands from PowerShell (while logged in as "Default Account"):</span></span>
 
 ```powershell
 $mypwd = ConvertTo-SecureString -String "<password>" -Force -AsPlainText
@@ -47,21 +45,21 @@ Cert -add .\IssuingCA.crl -r currentuser -s my
 certmgr -add .\RootCA.crl -r currentuser -s my
 ```
 
-4. <span data-ttu-id="be1e9-122">Corregir el archivo de hosts agregar una entrada en el archivo c:\windows\system32\driverS\etc\hosts (ejemplo que se muestra a continuación);</span><span class="sxs-lookup"><span data-stu-id="be1e9-122">Fix hosts file Add an entry into c:\windows\system32\driverS\etc\hosts file (example shown below);</span></span>
+4. <span data-ttu-id="1399b-122">Corregir el archivo de hosts agregar una entrada en el archivo c:\windows\system32\driverS\etc\hosts (ejemplo que se muestra a continuación);</span><span class="sxs-lookup"><span data-stu-id="1399b-122">Fix hosts file Add an entry into c:\windows\system32\driverS\etc\hosts file (example shown below);</span></span>
 
 > |    |    |    |
 > |----|----| ---|
-> | <span data-ttu-id="be1e9-123">10.10.10.10</span><span class="sxs-lookup"><span data-stu-id="be1e9-123">10.10.10.10</span></span> | <span data-ttu-id="be1e9-124">MyVPN.DomainName.org</span><span class="sxs-lookup"><span data-stu-id="be1e9-124">MyVPN.DomainName.org</span></span> | <span data-ttu-id="be1e9-125">Reemplazar por la dirección IP y el nombre de dominio según sea necesario</span><span class="sxs-lookup"><span data-stu-id="be1e9-125">Replace with IP address and domain name as needed</span></span> |
+> | <span data-ttu-id="1399b-123">10.10.10.10</span><span class="sxs-lookup"><span data-stu-id="1399b-123">10.10.10.10</span></span> | <span data-ttu-id="1399b-124">MyVPN.DomainName.org</span><span class="sxs-lookup"><span data-stu-id="1399b-124">MyVPN.DomainName.org</span></span> | <span data-ttu-id="1399b-125">Reemplazar por la dirección IP y el nombre de dominio según sea necesario</span><span class="sxs-lookup"><span data-stu-id="1399b-125">Replace with IP address and domain name as needed</span></span> |
 
-5. <span data-ttu-id="be1e9-126">Cree la aplicación de prueba de VPN y reemplace "MyVPN.DomainName.org" en el código fuente.</span><span class="sxs-lookup"><span data-stu-id="be1e9-126">Build the VPN test app Replace the "MyVPN.DomainName.org" in the source code.</span></span> <span data-ttu-id="be1e9-127">Aumente el aumento según sea necesario.</span><span class="sxs-lookup"><span data-stu-id="be1e9-127">Augment further as needed.</span></span>
+5. <span data-ttu-id="1399b-126">Cree la aplicación de prueba de VPN y reemplace "MyVPN.DomainName.org" en el código fuente.</span><span class="sxs-lookup"><span data-stu-id="1399b-126">Build the VPN test app Replace the "MyVPN.DomainName.org" in the source code.</span></span> <span data-ttu-id="1399b-127">Aumente el aumento según sea necesario.</span><span class="sxs-lookup"><span data-stu-id="1399b-127">Augment further as needed.</span></span>
 
-6. <span data-ttu-id="be1e9-128">Implemente el código siguiente en la sección "Inicio y detención de una conexión VPN" en el dispositivo IoT de Windows 10.</span><span class="sxs-lookup"><span data-stu-id="be1e9-128">Deploy the code below in the "Starting and stopping a VPN Connection" section to the Windows 10 IoT device.</span></span>
-<span data-ttu-id="be1e9-129">Escriba un "nombre de perfil" arbitrario y haga clic en el botón "conectar con VPN".</span><span class="sxs-lookup"><span data-stu-id="be1e9-129">Enter an arbitrary "Profile name" and press the "Connect to VPN" button.</span></span> 
+6. <span data-ttu-id="1399b-128">Implemente el código siguiente en la sección "Inicio y detención de una conexión VPN" en el dispositivo IoT de Windows 10.</span><span class="sxs-lookup"><span data-stu-id="1399b-128">Deploy the code below in the "Starting and stopping a VPN Connection" section to the Windows 10 IoT device.</span></span>
+<span data-ttu-id="1399b-129">Escriba un "nombre de perfil" arbitrario y haga clic en el botón "conectar con VPN".</span><span class="sxs-lookup"><span data-stu-id="1399b-129">Enter an arbitrary "Profile name" and press the "Connect to VPN" button.</span></span> 
 
 
-## <a name="starting-and-stopping-a-vpn-connection"></a><span data-ttu-id="be1e9-130">Inicio y detención de una conexión VPN</span><span class="sxs-lookup"><span data-stu-id="be1e9-130">Starting and stopping a VPN connection</span></span>
+## <a name="starting-and-stopping-a-vpn-connection"></a><span data-ttu-id="1399b-130">Inicio y detención de una conexión VPN</span><span class="sxs-lookup"><span data-stu-id="1399b-130">Starting and stopping a VPN connection</span></span>
 
-<span data-ttu-id="be1e9-131">Use el código siguiente para iniciar y detener una conexión VPN.</span><span class="sxs-lookup"><span data-stu-id="be1e9-131">Use the code below to start and stop a VPN connection.</span></span>
+<span data-ttu-id="1399b-131">Use el código siguiente para iniciar y detener una conexión VPN.</span><span class="sxs-lookup"><span data-stu-id="1399b-131">Use the code below to start and stop a VPN connection.</span></span>
 
 ```csharp
 

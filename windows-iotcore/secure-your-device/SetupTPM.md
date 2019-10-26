@@ -1,30 +1,28 @@
 ---
 title: Configuración de TPM en las plataformas sugeridas
-author: saraclay
-ms.author: saclayt
-ms.date: 09/05/17
+ms.date: 09/05/2017
 ms.topic: article
 description: Obtenga información acerca de cómo hacer que el dispositivo sea seguro siguiendo esta guía sobre cómo configurar TPM en las plataformas sugeridas.
 keywords: Windows IOT, seguridad, configuración, Módulo de plataforma segura, TPM, criptografía, claves
-ms.openlocfilehash: cc82262e3f800195b460bfe1113ec7c075d36b9a
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 905d6ea829d6920a1458dbc1a4bdd16f266f7be1
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170133"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918685"
 ---
-# <a name="setting-up-tpm-on-suggested-platforms"></a><span data-ttu-id="7f363-104">Configuración de TPM en las plataformas sugeridas</span><span class="sxs-lookup"><span data-stu-id="7f363-104">Setting up TPM on Suggested Platforms</span></span>
+# <a name="setting-up-tpm-on-suggested-platforms"></a><span data-ttu-id="9f89f-104">Configuración de TPM en las plataformas sugeridas</span><span class="sxs-lookup"><span data-stu-id="9f89f-104">Setting up TPM on Suggested Platforms</span></span>
 
-## <a name="setup-firmware-tpm-ftpm"></a><span data-ttu-id="7f363-105">Configuración del firmware TPM (fTPM)</span><span class="sxs-lookup"><span data-stu-id="7f363-105">Setup firmware TPM (fTPM)</span></span>
-<span data-ttu-id="7f363-106">El TPM de firmware (fTPM) requiere compatibilidad especial con el procesador/SoC y el cofTPM no se implementa actualmente en Raspberry pi2.</span><span class="sxs-lookup"><span data-stu-id="7f363-106">Firmware TPM (fTPM) requires special Processor/SoC support and whence fTPM is not currently implemented on Raspberry Pi2.</span></span>
+## <a name="setup-firmware-tpm-ftpm"></a><span data-ttu-id="9f89f-105">Configuración del firmware TPM (fTPM)</span><span class="sxs-lookup"><span data-stu-id="9f89f-105">Setup firmware TPM (fTPM)</span></span>
+<span data-ttu-id="9f89f-106">El TPM de firmware (fTPM) requiere compatibilidad especial con el procesador/SoC y el cofTPM no se implementa actualmente en Raspberry pi2.</span><span class="sxs-lookup"><span data-stu-id="9f89f-106">Firmware TPM (fTPM) requires special Processor/SoC support and whence fTPM is not currently implemented on Raspberry Pi2.</span></span>
 
-1. <span data-ttu-id="7f363-107">Debe tener MBM con la versión 0,80 o superior de UEFI.</span><span class="sxs-lookup"><span data-stu-id="7f363-107">You must have MBM with UEFI version 0.80 or above.</span></span>
-2. <span data-ttu-id="7f363-108">Habilite fTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="7f363-108">Enable fTPM by changing the following UEFI settings:</span></span>
+1. <span data-ttu-id="9f89f-107">Debe tener MBM con la versión 0,80 o superior de UEFI.</span><span class="sxs-lookup"><span data-stu-id="9f89f-107">You must have MBM with UEFI version 0.80 or above.</span></span>
+2. <span data-ttu-id="9f89f-108">Habilite fTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="9f89f-108">Enable fTPM by changing the following UEFI settings:</span></span>
 
         Device Manager -> System Setup -> Security Configuration -> PTT = <Enable>
 
-3. <span data-ttu-id="7f363-109">Asegúrese de que no tiene C:\Windows\System32\ACPITABL.dat para sTPM/dTPM (resuelva el conflicto o elimine el archivo si no es necesario).</span><span class="sxs-lookup"><span data-stu-id="7f363-109">Ensure you do not have C:\Windows\System32\ACPITABL.dat for sTPM/dTPM (resolve the conflict/delete the file if not needed).</span></span>
-4. <span data-ttu-id="7f363-110">Compruebe que tiene la versión correcta de TPM habilitada: ejecute la [herramienta tpm 2,0](https://github.com/ms-iot/security/tree/master/Urchin/T2T) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="7f363-110">Verify you have the right TPM version enabled - run the [TPM 2.0 Tool](https://github.com/ms-iot/security/tree/master/Urchin/T2T) on the Windows IoT Core device.</span></span>
+3. <span data-ttu-id="9f89f-109">Asegúrese de que no tiene C:\Windows\System32\ACPITABL.dat para sTPM/dTPM (resuelva el conflicto o elimine el archivo si no es necesario).</span><span class="sxs-lookup"><span data-stu-id="9f89f-109">Ensure you do not have C:\Windows\System32\ACPITABL.dat for sTPM/dTPM (resolve the conflict/delete the file if not needed).</span></span>
+4. <span data-ttu-id="9f89f-110">Compruebe que tiene la versión correcta de TPM habilitada: ejecute la [herramienta tpm 2,0](https://github.com/ms-iot/security/tree/master/Urchin/T2T) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="9f89f-110">Verify you have the right TPM version enabled - run the [TPM 2.0 Tool](https://github.com/ms-iot/security/tree/master/Urchin/T2T) on the Windows IoT Core device.</span></span>
 
         C:\>t2t.exe -cap
 
@@ -95,8 +93,8 @@ ms.locfileid: "60170133"
 
         c:\>
 
-5. <span data-ttu-id="7f363-111">Comprobar que el fTPM está en funcionamiento: ejecute las [pruebas unitarias de Urchin](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="7f363-111">Verify fTPM is functioning - run the [Urchin Unit Tests](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) on the Windows IoT Core device.</span></span>  
-   <span data-ttu-id="7f363-112">Debería ver varias pruebas de SUPERAción (tenga en cuenta que algunas de las funciones no son compatibles con fTPM, por lo que se esperan algunos códigos de error):</span><span class="sxs-lookup"><span data-stu-id="7f363-112">You should see several PASS tests (note that some of the functionality is not supported by the fTPM, so a few error codes are expected):</span></span>
+5. <span data-ttu-id="9f89f-111">Comprobar que el fTPM está en funcionamiento: ejecute las [pruebas unitarias de Urchin](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="9f89f-111">Verify fTPM is functioning - run the [Urchin Unit Tests](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) on the Windows IoT Core device.</span></span>  
+   <span data-ttu-id="9f89f-112">Debería ver varias pruebas de SUPERAción (tenga en cuenta que algunas de las funciones no son compatibles con fTPM, por lo que se esperan algunos códigos de error):</span><span class="sxs-lookup"><span data-stu-id="9f89f-112">You should see several PASS tests (note that some of the functionality is not supported by the fTPM, so a few error codes are expected):</span></span>
 
         C:\>urchintest.exe
         ---SETUP----------------------------------------
@@ -141,27 +139,27 @@ ms.locfileid: "60170133"
 
         C:\>
 
-## <a name="setup-discrete-tpm-dtpm"></a><span data-ttu-id="7f363-113">Configuración de TPM discreto (dTPM)</span><span class="sxs-lookup"><span data-stu-id="7f363-113">Setup discrete TPM (dTPM)</span></span>
-<span data-ttu-id="7f363-114">Estas instrucciones se aplican a cualquier módulo dTPM admitido en MBM, RPi2 o RPi3.</span><span class="sxs-lookup"><span data-stu-id="7f363-114">These instructions are applicable for any dTPM module supported on MBM, RPi2, or RPi3.</span></span>
+## <a name="setup-discrete-tpm-dtpm"></a><span data-ttu-id="9f89f-113">Configuración de TPM discreto (dTPM)</span><span class="sxs-lookup"><span data-stu-id="9f89f-113">Setup discrete TPM (dTPM)</span></span>
+<span data-ttu-id="9f89f-114">Estas instrucciones se aplican a cualquier módulo dTPM admitido en MBM, RPi2 o RPi3.</span><span class="sxs-lookup"><span data-stu-id="9f89f-114">These instructions are applicable for any dTPM module supported on MBM, RPi2, or RPi3.</span></span>
 
-1. <span data-ttu-id="7f363-115">Obtenga un módulo de TPM discreto y asócielo a MBM/RPi2/RPi3.</span><span class="sxs-lookup"><span data-stu-id="7f363-115">Get a discrete TPM module and attach it to the MBM/RPi2/RPi3.</span></span>
-2. <span data-ttu-id="7f363-116">(Se aplica a MBM) Deshabilite fTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="7f363-116">(Applies to MBM) Disable fTPM by changing the following UEFI settings:</span></span>
+1. <span data-ttu-id="9f89f-115">Obtenga un módulo de TPM discreto y asócielo a MBM/RPi2/RPi3.</span><span class="sxs-lookup"><span data-stu-id="9f89f-115">Get a discrete TPM module and attach it to the MBM/RPi2/RPi3.</span></span>
+2. <span data-ttu-id="9f89f-116">(Se aplica a MBM) Deshabilite fTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="9f89f-116">(Applies to MBM) Disable fTPM by changing the following UEFI settings:</span></span>
 
         Device Manager -> System Setup -> Security Configuration -> PTT = <Disable>
 
-3. <span data-ttu-id="7f363-117">(Se aplica a MBM) Habilite dTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="7f363-117">(Applies to MBM) Enable dTPM by changing the following UEFI settings:</span></span>
+3. <span data-ttu-id="9f89f-117">(Se aplica a MBM) Habilite dTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="9f89f-117">(Applies to MBM) Enable dTPM by changing the following UEFI settings:</span></span>
 
         Device Manager -> System Setup -> Security Configuration -> Discrete TPM = <Enable>
 
-4. <span data-ttu-id="7f363-118">En función del módulo de TPM discreto que elija, identifique [aquí](https://github.com/ms-iot/security/tree/master/TPM-ACPITABL)su tabla ACPI coincidente.</span><span class="sxs-lookup"><span data-stu-id="7f363-118">Based on your discrete TPM module of choice, identify its matching ACPI table [here](https://github.com/ms-iot/security/tree/master/TPM-ACPITABL).</span></span>
-5. <span data-ttu-id="7f363-119">Copie esa tabla de ACPI a MBM/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.</span><span class="sxs-lookup"><span data-stu-id="7f363-119">Copy that ACPI table to MBM/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.</span></span>
-6. <span data-ttu-id="7f363-120">Habilite testsigning en el dispositivo:</span><span class="sxs-lookup"><span data-stu-id="7f363-120">Enable testsigning on the device:</span></span>
+4. <span data-ttu-id="9f89f-118">En función del módulo de TPM discreto que elija, identifique [aquí](https://github.com/ms-iot/security/tree/master/TPM-ACPITABL)su tabla ACPI coincidente.</span><span class="sxs-lookup"><span data-stu-id="9f89f-118">Based on your discrete TPM module of choice, identify its matching ACPI table [here](https://github.com/ms-iot/security/tree/master/TPM-ACPITABL).</span></span>
+5. <span data-ttu-id="9f89f-119">Copie esa tabla de ACPI a MBM/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.</span><span class="sxs-lookup"><span data-stu-id="9f89f-119">Copy that ACPI table to MBM/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.</span></span>
+6. <span data-ttu-id="9f89f-120">Habilite testsigning en el dispositivo:</span><span class="sxs-lookup"><span data-stu-id="9f89f-120">Enable testsigning on the device:</span></span>
 
         bcdedit /set {current} integrityservices disable
         bcdedit /set testsigning on
 
-7. <span data-ttu-id="7f363-121">Reinicia el dispositivo.</span><span class="sxs-lookup"><span data-stu-id="7f363-121">Reboot the device.</span></span>
-8. <span data-ttu-id="7f363-122">Compruebe que tiene la versión correcta de TPM habilitada: ejecute la [herramienta tpm 2,0](https://github.com/ms-iot/security/tree/master/Urchin/T2T) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="7f363-122">Verify you have the right TPM version enabled - run the [TPM 2.0 Tool](https://github.com/ms-iot/security/tree/master/Urchin/T2T) on the Windows IoT Core device.</span></span>
+7. <span data-ttu-id="9f89f-121">Reinicia el dispositivo.</span><span class="sxs-lookup"><span data-stu-id="9f89f-121">Reboot the device.</span></span>
+8. <span data-ttu-id="9f89f-122">Compruebe que tiene la versión correcta de TPM habilitada: ejecute la [herramienta tpm 2,0](https://github.com/ms-iot/security/tree/master/Urchin/T2T) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="9f89f-122">Verify you have the right TPM version enabled - run the [TPM 2.0 Tool](https://github.com/ms-iot/security/tree/master/Urchin/T2T) on the Windows IoT Core device.</span></span>
 
         C:\>t2t.exe -cap
 
@@ -232,8 +230,8 @@ ms.locfileid: "60170133"
 
         C:\>
 
-9. <span data-ttu-id="7f363-123">Comprobar que el dTPM está en funcionamiento: ejecute las [pruebas unitarias de Urchin](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="7f363-123">Verify dTPM is functioning - run the [Urchin Unit Tests](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) on the Windows IoT Core device.</span></span>  
-    <span data-ttu-id="7f363-124">Debería ver varias pruebas de SUPERAción (tenga en cuenta que es posible que algunas de las funcionalidades no sean compatibles con dTPM, por lo que se esperan algunos códigos de error):</span><span class="sxs-lookup"><span data-stu-id="7f363-124">You should see several PASS tests (note that some of the functionality may not be supported by the dTPM, so a few error codes are expected):</span></span>
+9. <span data-ttu-id="9f89f-123">Comprobar que el dTPM está en funcionamiento: ejecute las [pruebas unitarias de Urchin](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="9f89f-123">Verify dTPM is functioning - run the [Urchin Unit Tests](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) on the Windows IoT Core device.</span></span>  
+    <span data-ttu-id="9f89f-124">Debería ver varias pruebas de SUPERAción (tenga en cuenta que es posible que algunas de las funcionalidades no sean compatibles con dTPM, por lo que se esperan algunos códigos de error):</span><span class="sxs-lookup"><span data-stu-id="9f89f-124">You should see several PASS tests (note that some of the functionality may not be supported by the dTPM, so a few error codes are expected):</span></span>
 
         C:\>urchintest.exe
 
@@ -279,25 +277,25 @@ ms.locfileid: "60170133"
 
         C:\>
 
-## <a name="enable-and-verify-software-tpm-stpm"></a><span data-ttu-id="7f363-125">Habilitar y comprobar el TPM de software (sTPM)</span><span class="sxs-lookup"><span data-stu-id="7f363-125">Enable and verify software TPM (sTPM)</span></span>  
-<span data-ttu-id="7f363-126">Tenga en cuenta que **sTPM está pensado únicamente para fines de desarrollo y no proporciona ninguna ventaja de seguridad real**.</span><span class="sxs-lookup"><span data-stu-id="7f363-126">Note that **sTPM is intended for development purposes only and does not provide any real security benefits**.</span></span>
+## <a name="enable-and-verify-software-tpm-stpm"></a><span data-ttu-id="9f89f-125">Habilitar y comprobar el TPM de software (sTPM)</span><span class="sxs-lookup"><span data-stu-id="9f89f-125">Enable and verify software TPM (sTPM)</span></span>  
+<span data-ttu-id="9f89f-126">Tenga en cuenta que **sTPM está pensado únicamente para fines de desarrollo y no proporciona ninguna ventaja de seguridad real**.</span><span class="sxs-lookup"><span data-stu-id="9f89f-126">Note that **sTPM is intended for development purposes only and does not provide any real security benefits**.</span></span>
 
-1. <span data-ttu-id="7f363-127">(Se aplica a MBM) Deshabilite fTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="7f363-127">(Applies to MBM) Disable fTPM by changing the following UEFI settings:</span></span>
+1. <span data-ttu-id="9f89f-127">(Se aplica a MBM) Deshabilite fTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="9f89f-127">(Applies to MBM) Disable fTPM by changing the following UEFI settings:</span></span>
 
         Device Manager -> System Setup -> Security Configuration -> PTT = <Disable>
 
-2. <span data-ttu-id="7f363-128">(Se aplica a MBM) Habilite dTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="7f363-128">(Applies to MBM) Enable dTPM by changing the following UEFI settings:</span></span>
+2. <span data-ttu-id="9f89f-128">(Se aplica a MBM) Habilite dTPM cambiando la siguiente configuración de UEFI:</span><span class="sxs-lookup"><span data-stu-id="9f89f-128">(Applies to MBM) Enable dTPM by changing the following UEFI settings:</span></span>
 
         Device Manager -> System Setup -> Security Configuration -> Discrete TPM = <Enable>
 
-3. <span data-ttu-id="7f363-129">Habilite testsigning en el dispositivo:</span><span class="sxs-lookup"><span data-stu-id="7f363-129">Enable testsigning on the device:</span></span>
+3. <span data-ttu-id="9f89f-129">Habilite testsigning en el dispositivo:</span><span class="sxs-lookup"><span data-stu-id="9f89f-129">Enable testsigning on the device:</span></span>
 
         bcdedit /set {current} integrityservices disable
         bcdedit /set testsigning on
 
-4. <span data-ttu-id="7f363-130">Copie la tabla ACPI desde [aquí](https://github.com/ms-iot/security/tree/master/TPM-ACPITABL/fTPMSim) a mbm/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.</span><span class="sxs-lookup"><span data-stu-id="7f363-130">Copy the ACPI table from [here](https://github.com/ms-iot/security/tree/master/TPM-ACPITABL/fTPMSim) to MBM/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.</span></span>
-5. <span data-ttu-id="7f363-131">Reinicia el dispositivo.</span><span class="sxs-lookup"><span data-stu-id="7f363-131">Reboot the device.</span></span>
-6. <span data-ttu-id="7f363-132">Compruebe que tiene la versión correcta de TPM habilitada: ejecute la [herramienta tpm 2,0](https://github.com/ms-iot/security/tree/master/Urchin/T2T) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="7f363-132">Verify you have the right TPM version enabled - run the [TPM 2.0 Tool](https://github.com/ms-iot/security/tree/master/Urchin/T2T) on the Windows IoT Core device.</span></span>
+4. <span data-ttu-id="9f89f-130">Copie la tabla ACPI desde [aquí](https://github.com/ms-iot/security/tree/master/TPM-ACPITABL/fTPMSim) a mbm/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.</span><span class="sxs-lookup"><span data-stu-id="9f89f-130">Copy the ACPI table from [here](https://github.com/ms-iot/security/tree/master/TPM-ACPITABL/fTPMSim) to MBM/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.</span></span>
+5. <span data-ttu-id="9f89f-131">Reinicia el dispositivo.</span><span class="sxs-lookup"><span data-stu-id="9f89f-131">Reboot the device.</span></span>
+6. <span data-ttu-id="9f89f-132">Compruebe que tiene la versión correcta de TPM habilitada: ejecute la [herramienta tpm 2,0](https://github.com/ms-iot/security/tree/master/Urchin/T2T) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="9f89f-132">Verify you have the right TPM version enabled - run the [TPM 2.0 Tool](https://github.com/ms-iot/security/tree/master/Urchin/T2T) on the Windows IoT Core device.</span></span>
 
         C:\>t2t.exe -cap
         TBS detected 2.0 simulated TPM (sTPM).
@@ -367,8 +365,8 @@ ms.locfileid: "60170133"
 
         C:\>
 
-7. <span data-ttu-id="7f363-133">Comprobar que el sTPM está en funcionamiento: ejecute las [pruebas unitarias de Urchin](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="7f363-133">Verify sTPM is functioning - run the [Urchin Unit Tests](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) on the Windows IoT Core device.</span></span>  
-   <span data-ttu-id="7f363-134">Debería ver varias pruebas de SUPERAción (tenga en cuenta que algunas de las funciones no son compatibles con sTPM, por lo que se esperan algunos códigos de error):</span><span class="sxs-lookup"><span data-stu-id="7f363-134">You should see several PASS tests (note that some of the functionality is not supported by the sTPM, so a few error codes are expected):</span></span>
+7. <span data-ttu-id="9f89f-133">Comprobar que el sTPM está en funcionamiento: ejecute las [pruebas unitarias de Urchin](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) en el dispositivo Windows IOT Core.</span><span class="sxs-lookup"><span data-stu-id="9f89f-133">Verify sTPM is functioning - run the [Urchin Unit Tests](https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest) on the Windows IoT Core device.</span></span>  
+   <span data-ttu-id="9f89f-134">Debería ver varias pruebas de SUPERAción (tenga en cuenta que algunas de las funciones no son compatibles con sTPM, por lo que se esperan algunos códigos de error):</span><span class="sxs-lookup"><span data-stu-id="9f89f-134">You should see several PASS tests (note that some of the functionality is not supported by the sTPM, so a few error codes are expected):</span></span>
 
         C:\>urchintest.exe
         ---SETUP----------------------------------------
