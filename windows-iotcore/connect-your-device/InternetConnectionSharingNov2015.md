@@ -1,17 +1,15 @@
 ---
 title: Tutorial de conexión compartida a Internet (versión 2015 de noviembre)
-author: saraclay
-ms.author: saclayt
-ms.date: 09/06/17
+ms.date: 09/06/2017
 ms.topic: article
 description: Obtenga información acerca de cómo habilitar y configurar la conexión compartida a Internet para la versión de noviembre de 2015 de Windows.
 keywords: Windows IOT, conexión compartida a Internet, ICS, portal de dispositivos
-ms.openlocfilehash: c8f27b48197a0ec881a66da5d3e81272b3076100
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: fa53539128251fd45e47003979a72e5a588b2869
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60169082"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918354"
 ---
 # <a name="internet-connection-sharing-tutorial-november-2015-release"></a>Tutorial de conexión compartida a Internet (versión 2015 de noviembre)
 
@@ -24,16 +22,16 @@ En este documento se describen los pasos para habilitar conexión compartida a I
 * Conexión Ethernet con acceso a Internet.
 
 
-## <a name="setup"></a>Programa de instalación
+## <a name="setup"></a>Configuración
 
-### <a name="step-1-gathering-network-information"></a>Paso 1: Recopilar información de red
+### <a name="step-1-gathering-network-information"></a>Paso 1: recopilar información de red
 
 1. Arranque del dispositivo con la llave Wi-Fi conectada, cable Ethernet enchufado.
 2. Inicie SoftAP desde el dispositivo IoT Core.
 
    De forma predeterminada, las imágenes proporcionadas por Microsoft inician una aplicación de incorporación de IoT que configurará un SoftAP si la radio Wi-Fi es compatible y no se ha agregado ningún perfil de WLAN. Para iniciar SoftAP, las aplicaciones para UWP pueden usar la [API Windows. Devices. WiFiDirect. WiFiDirectAdvertisementPublisher](https://msdn.microsoft.com/library/windows/apps/windows.devices.wifidirect.wifidirectadvertisementpublisher.aspx). El código fuente de la aplicación de incorporación de IoT puede estar en GitHub [IoTOnboarding](https://github.com/ms-iot/samples/tree/develop/IotOnboarding).
 
-   Grabe el SSID de la red SoftAP. Lo necesitará más adelante para conectarse a su dispositivo de IoT Core a través de Wi-Fi. En el caso de la aplicación de incorporación de IoT, el SSID\_comenzará con "AJ SoftAPSsid\_" y se puede cambiar en el [archivo](https://github.com/ms-iot/samples/blob/develop/IotOnboarding/IoTOnboardingTask/Config.xml)de configuración de la aplicación.
+   Grabe el SSID de la red SoftAP. Lo necesitará más adelante para conectarse a su dispositivo de IoT Core a través de Wi-Fi. En el caso de la aplicación de incorporación de IoT, el SSID comenzará con "AJ\_SoftAPSsid\_" y se puede cambiar en el [archivo](https://github.com/ms-iot/samples/blob/develop/IotOnboarding/IoTOnboardingTask/Config.xml)de configuración de la aplicación.
 
 3. Conéctese de forma remota al dispositivo de IoT Core [mediante SSH](ssh.md).
 4. Recopile información acerca de las redes de dispositivos buscando los índices y las descripciones de los dispositivos de red. Esto es necesario para declarar las redes que se van a enlazar.
@@ -41,7 +39,7 @@ En este documento se describen los pasos para habilitar conexión compartida a I
    En el dispositivo, ejecute **Route Print** y recopile los datos siguientes:
 
    * Registra el índice de red de la interfaz pública del Ethernet.
-   * Registra el índice de red de la interfaz privada para SoftAP (por ejemplo, "Adaptador virtual de Microsoft Wi-Fi Direct #2").
+   * Registra el índice de red de la interfaz privada para SoftAP (por ejemplo, "adaptador virtual de Microsoft Wi-Fi Direct #2").
 
    Por ejemplo, el SoftAP se expone a través del índice de la interfaz 5, la descripción del adaptador "adaptador virtual de Wi-Fi Direct de Microsoft #2".
 
@@ -55,7 +53,7 @@ En este documento se describen los pasos para habilitar conexión compartida a I
 
    ![ipconfig all](../media/InternetConnectionSharing/internetconnectionsharing_ipconfig.png)
 
-### <a name="step-2-scripting-internet-connection-sharing-trigger"></a>Paso 2: Crear script para el desencadenador de conexión compartida a Internet
+### <a name="step-2-scripting-internet-connection-sharing-trigger"></a>Paso 2: crear scripts para el desencadenador de conexión compartida a Internet
 
 El inicio de conexión compartida a Internet entre dos redes requiere los pasos siguientes:
 
@@ -350,10 +348,10 @@ main(
 
 Compilación para la arquitectura de destino, por ejemplo, versión x86, y búsqueda de la salida **SharedAccessUtility. exe**
 
-### <a name="step-3-starting-internet-connection-sharing"></a>Paso 3: Inicio de conexión compartida a Internet
+### <a name="step-3-starting-internet-connection-sharing"></a>Paso 3: iniciar la conexión compartida a Internet
 
-1. Copie el script **ConfigICS. cmd** creado en el paso 2 en el dispositivo en alguna ubicación, por ejemplo, para`C:\test\`
-2. Copie **SharedAccessUtility. exe** creado en el paso 2 en el dispositivo en la misma ubicación, por ejemplo,`C:\test`\
+1. Copie el script **ConfigICS. cmd** creado en el paso 2 en el dispositivo en alguna ubicación, por ejemplo, para `C:\test\`
+2. Copie **SharedAccessUtility. exe** creado en el paso 2 en el dispositivo en la misma ubicación, por ejemplo, `C:\test`\
 3. En el dispositivo, ejecute **C:\test\ConfigureICS.cmd Start [Public index] [Private index] [Private Adapter Name** ] en este ejemplo, lo que significa que <strong>C:\test\ConfigureICS.cmd start 4 5 "conexión de área local * 3"</strong>
 
 En este momento, el dispositivo ha habilitado el uso compartido de conexión a Internet para cualquier cliente conectado al SSID anunciado del dispositivo.

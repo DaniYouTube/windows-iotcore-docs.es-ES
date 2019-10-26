@@ -1,19 +1,17 @@
 ---
 title: Información general sobre depuración
-author: saraclay
-ms.author: saclayt
 ms.date: 05/10/2019
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
 description: Obtenga información sobre las distintas formas en que puede depurar Windows 10 IoT Core.
 keywords: Windows IOT, depuración, PowerShell, SSH
-ms.openlocfilehash: 1baeaca24fff425372e6a6de64d4b74bdcc60abb
-ms.sourcegitcommit: e3457de2e13ff89142a91cb8af2da4bf2e41ad20
+ms.openlocfilehash: 455d8a90fc655b2deda4a09a661c849ff852b65c
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71189933"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917246"
 ---
 # <a name="debugging-on-windows-iot-core"></a>Depuración en Windows IoT Core
 Una vez que tenga la configuración de la imagen de IoT Core con la aplicación en ejecución, es importante que pueda depurar la aplicación o el sistema según sea necesario. El mejor momento para depurar y probar el sistema es el estado de la imagen de prueba. Una vez que los sistemas basados en IoT Core están fuera de la naturaleza, la depuración puede convertirse en Challanging. Esto no se puede decir que no se puede hacer, pero con capas adicionales de dificultades agregadas para depurar Comparar con las fases de prueba. Puede usar lo siguiente para depurar la aplicación o imagen en modo de prueba:

@@ -1,17 +1,15 @@
 ---
 title: Ejemplos y recursos de voz
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga más información sobre cómo crear una interfaz de voz completa con IoT Core.
 keywords: Windows IOT, Speech, Speech recongnition, TTS, dictado
-ms.openlocfilehash: 837716d32214478ee74a8532fd1f4b2e4ee24958
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: b7ae1000bc9f7fc748ad64f88e207db132030b79
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60166303"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918165"
 ---
 # <a name="speech-resources-and-samples"></a>Ejemplos y recursos de voz
 

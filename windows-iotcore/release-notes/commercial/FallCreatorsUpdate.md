@@ -1,17 +1,15 @@
 ---
 title: Fall Creators Update (compilación 16299)
-author: saraclay
-ms.author: saclayt
 ms.date: 10/12/2017
 ms.topic: article
 description: Obtenga información sobre las novedades de la actualización de Fall Creators para Windows 10 IoT.
 keywords: Windows IoT, Fall Creators Update, notas de la versión
-ms.openlocfilehash: 00daad18d5519eee9be695105332aced81a1133f
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 35dbe905cfb25613d1225ab8e6d4b8fd636134d9
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167463"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918692"
 ---
 # <a name="fall-creators-update-release-notes-for-windows-10-iot"></a>Notas de la versión de Fall Creators Update para Windows 10 IoT
 Número de compilación 16299. Octubre de 2017
@@ -20,7 +18,7 @@ Windows 10 IoT permite el desarrollo de dispositivos integrados o dedicados y es
 
 En este documento se proporciona información que complementa otros contenidos y documentación de esta versión de Windows 10 IoT.
 
-Para descargar esta compilación más reciente, así como los paquetes, visite la [Página de descargas de Windows](https://www.microsoft.com/en-us/software-download/windowsiot)Insider Preview.
+Para descargar esta compilación más reciente, así como los paquetes, visite la [Página de descargas de Windows Insider Preview](https://www.microsoft.com/en-us/software-download/windowsiot).
 
 ## <a name="privacy-statement"></a>Declaración de privacidad en línea
 
@@ -32,7 +30,7 @@ La declaración de privacidad de esta versión del sistema operativo Windows se 
 * Compatibilidad con los [servicios de administración de emergencia](https://technet.microsoft.com/library/cc736319(v=ws.10).aspx) en Windows 10 IOT Core.
 * [Compatibilidad mejorada con las entradas manuscritas](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions) en Windows 10 IOT Core. Con un digitalizador de lápiz compatible, ahora puede emplear las API de DirectInk para el resaltado, el lápiz y la entrada de lápiz basada en vectores. También hemos agregado controles de entrada de lápiz de XAML para UWP, incluidos InkCanvas e InkToolbar, que habilitan las galerías de símbolos como las reglas y los intercambios, y las interacciones multimodales como el lápiz simultáneo y el toque en el hardware compatible. No se admiten características de tinta inteligente como el reconocimiento de tinta y el análisis de tinta.
 * Compatibilidad adicional para controlar las pantallas de línea, incluida la personalización del estilo de cursor, el brillo, la velocidad de intermitencia y los juegos de caracteres. También hemos agregado compatibilidad con los glifos personalizados, los descriptores de transacción y el modo de Marquesina para el texto desplazado.
-* En Windows 10 IoT Enterprise, hemos habilitado el acceso a buses estándar del sector como GPIO, I2C, SPI y UART desde el modo de usuario a través de las [API de Windows.](https://docs.microsoft.com/windows/uwp/devices-sensors/enable-usermode-access)Devices.
+* En Windows 10 IoT Enterprise, hemos habilitado el acceso a buses estándar del sector como GPIO, I2C, SPI y UART desde el modo de usuario a través de las [API de Windows. Devices](https://docs.microsoft.com/windows/uwp/devices-sensors/enable-usermode-access).
 * El [acceso asignado](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) es una característica de Windows 10 IOT Enterprise que le permite restringir una cuenta de usuario específica para usar solo una aplicación universal de Windows. Hemos ampliado el soporte de acceso asignado para permitir la ejecución de varias aplicaciones de UWP y Win32 en una experiencia de bloqueo y administrar esa configuración desde la nube.
 * Puede cambiar el idioma del sistema mediante IoTSettings. exe o las nuevas API. Para obtener más información, consulte la sección configuración de idioma de la documentación de la [línea de comandos](https://docs.microsoft.com/windows/iot-core/develop-your-app/multilang) y la [compatibilidad con lenguajes](https://docs.microsoft.com/windows/iot-core/develop-your-app/multilang) .
 * Actualizaciones de Raspberry PI UEFI para habilitar el monitor de volumen de arranque.
@@ -40,7 +38,7 @@ La declaración de privacidad de esta versión del sistema operativo Windows se 
 * Se han habilitado las [secuencias de audio en modo exclusivo](https://msdn.microsoft.com/library/windows/desktop/dd370844(v=vs.85).aspx) para dispositivos de punto de conexión de audio en Windows 10 IOT Core.
 * Se han agregado nuevas API en WinRT para establecer la fecha y la hora del sistema en Windows 10 IoT Core.
 * Se ha agregado compatibilidad con el [BSP universal (WM. xml)](https://docs.microsoft.com/windows-hardware/manufacture/iot/create-packages). Use IOT-ADK-addonkit v 4.0 con la versión actual del ADK.
-* Se ha agregado selección de idioma y diseños adaptados al teclado en pantalla. Para obtener más información, vea distribuciones [de teclado en pantalla](https://docs.microsoft.com/windows/iot-core/develop-your-app/onscreenkeyboardlayouts).
+* Se ha agregado selección de idioma y diseños adaptados al teclado en pantalla. Para obtener más información, vea [distribuciones de teclado en pantalla](https://docs.microsoft.com/windows/iot-core/develop-your-app/onscreenkeyboardlayouts).
 
 ## <a name="features-in-preview-for-dev-and-test-scenarios"></a>Características en versión preliminar para escenarios de desarrollo y pruebas
 * El servicio de actualización de componentes [versión preliminar] permite a los OEM administrar de forma global sus aplicaciones e instalar actualizaciones para el sistema operativo, las aplicaciones, la configuración y los archivos de la nube en dispositivos para mantenerlos actualizados y seguros.
@@ -53,7 +51,7 @@ La declaración de privacidad de esta versión del sistema operativo Windows se 
 ## <a name="windows-10-iot-core-reference-images"></a>Imágenes de referencia de Windows 10 IoT Core
 ___ 
 * Minnowboard Max
-  * Procesador: E3825 de Intel Atom
+  * Procesador: Intel Atom E3825
   * Arquitectura: x86
   * Versión de BSP: 10.0.4.0
 * Raspberry Pi 3

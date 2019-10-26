@@ -1,17 +1,15 @@
 ---
 title: Seguimiento de eventos para Windows IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Aprenda a usar el seguimiento de eventos para escribir eventos y consumir eventos para Windows IoT Core.
 keywords: Windows IOT, seguimiento de eventos, ETW, seguimiento de eventos para Windows, dispositivos
-ms.openlocfilehash: 7e01681e2af2ed8913614ba23bd12dfd36bcd76e
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: ce031cd2bc7b94f01c970bec9e1ad4df0b9dbf06
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170313"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917260"
 ---
 # <a name="event-tracing-for-windows-iot-core"></a>Seguimiento de eventos para Windows IoT Core
 

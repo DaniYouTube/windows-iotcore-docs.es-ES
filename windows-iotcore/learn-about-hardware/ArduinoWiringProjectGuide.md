@@ -1,17 +1,15 @@
 ---
 title: Guía de proyecto de cableado de Arduino
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre la creación, la instalación y la implementación de un proyecto de cableado de Arduino con Windows IoT Core.
 keywords: Windows IOT, Arduino, Arduino, rendimiento de relámpago, Visual Studio
-ms.openlocfilehash: 7c5e51efd20de014af4533587fbe6f210140b793
-ms.sourcegitcommit: cbea9d713986fbe8b85e1bba1561a000188bd91c
+ms.openlocfilehash: 17dc35174cc6aca7074183875e69202fc36dd9bc
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64744810"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918116"
 ---
 # <a name="arduino-wiring-project-guide"></a>Guía de proyecto de cableado de Arduino
 
@@ -36,8 +34,8 @@ Hemos proporcionado una extensión de Visual Studio que instalará automáticame
 
 Tendrá que ejecutar el controlador asignado a memoria directa para escribir soluciones de cableado de Arduino. Consulte la [Guía de configuración de Lightning](../develop-your-app/LightningSetup.md) para obtener instrucciones.
 
-## <a name="develop"></a>Desarrollo
-Complete uno de los ejemplos de "conexión" en la [Página de ejemplos](https://developer.microsoft.com/en-us/windows/iot/samples)o cree su propio proyecto. Cualquiera de los ejemplos que se hayan creado con el cableado de Arduino se enumerará como se indica a continuación: [Parpadeo (cableado)](https://developer.microsoft.com/en-us/windows/iot/samples/helloblinkybackgroundwiring). Parpadee, el proyecto de cononical "Hola mundo" para proyectos de IoT, es un buen lugar para empezar por su primer proyecto.
+## <a name="develop"></a>Desarrollar
+Complete uno de los ejemplos de "conexión" en la [Página de ejemplos](https://developer.microsoft.com/en-us/windows/iot/samples)o cree su propio proyecto. Cualquiera de los ejemplos que se hayan creado con el cableado Arduino se mostrará como: [parpadeo (cableado)](https://developer.microsoft.com/en-us/windows/iot/samples/helloblinkybackgroundwiring). Parpadee, el proyecto de cononical "Hola mundo" para proyectos de IoT, es un buen lugar para empezar por su primer proyecto.
 
 ### <a name="create-a-new-project"></a>Crear un nuevo proyecto
 1. Abra Visual Studio.
@@ -69,7 +67,7 @@ La API de cableado de Arduino se ha implementado cuidadosamente para que sea pos
 
 - Busque la dirección IP o el nombre de equipo del dispositivo. Use la aplicación Windows 10 IoT Core Dashboard o Conecte el dispositivo a un monitor.
 - Escriba el nombre de la máquina (minwinpc de forma predeterminada) o la dirección IP del equipo remoto en el campo "nombre del equipo". Si ha cambiado el nombre del dispositivo a algo además de "minwinpc", use ese nombre en el cuadro de inicio de sesión.
-- Asegúrese de que el tipo de Authentican es: Universal (protocolo sin cifrar)
+- Asegúrese de que el tipo de Authentican es: universal (protocolo sin cifrar)
 
 ![Propiedades de la solución](../media/ArduinoWiring/wiringapp_properties2.png)
 

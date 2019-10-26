@@ -1,17 +1,15 @@
 ---
 title: Configuración de TPM en las plataformas sugeridas
-author: saraclay
-ms.author: saclayt
-ms.date: 09/05/17
+ms.date: 09/05/2017
 ms.topic: article
 description: Obtenga información acerca de cómo hacer que el dispositivo sea seguro siguiendo esta guía sobre cómo configurar TPM en las plataformas sugeridas.
 keywords: Windows IOT, seguridad, configuración, Módulo de plataforma segura, TPM, criptografía, claves
-ms.openlocfilehash: cc82262e3f800195b460bfe1113ec7c075d36b9a
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 905d6ea829d6920a1458dbc1a4bdd16f266f7be1
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170133"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918685"
 ---
 # <a name="setting-up-tpm-on-suggested-platforms"></a>Configuración de TPM en las plataformas sugeridas
 

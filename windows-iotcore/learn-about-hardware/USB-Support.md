@@ -1,22 +1,20 @@
 ---
 title: Información general sobre la compatibilidad con USB y el doble rol para Windows 10 IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 10/11/2017
 ms.topic: article
 description: Obtenga información sobre la compatibilidad con USB y el rol dual, así como sobre cómo personalizar esto para sus dispositivos Windows 10 IoT Core.
 keywords: Windows IOT, compatibilidad con USB, doble función, USB
-ms.openlocfilehash: be1ba523975a0a39414537242ca3b14b680d9799
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 11b359d096aedf44e0dac8f87d343caa5db3f57f
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167622"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917332"
 ---
 # <a name="overview-of-usb-support-and-dual-role"></a>Información general sobre la compatibilidad con USB y el rol dual
 
 Un bus serie universal (USB) proporciona una interfaz serie Plug and Play expansible y conectable en caliente que garantiza una conexión estándar de bajo costo para dispositivos periféricos como teclados, ratones, joysticks, impresoras, escáneres, dispositivos de almacenamiento, módems y vídeo. cámaras de conferencia.  
-Cuando hablamos sobre dispositivos USB, la pila de funciones USB hace referencia a un grupo de controladores que el administrador de Plug and Play enumera y carga, y un dispositivo USB compuesto puede admitir varias interfaces en una sola configuración. Aunque la mayor parte de lo que hablamos en este artículo se refiere a la función dual de USB 2,0, más comúnmente conocida como USB a la vez o por el grupo OTG o OTG de USB, también resulta útil conocer USB 3,0 y cómo difiere de USB 2,0. El OTG USB define dos roles para dispositivos: El grupo OTG a-Device y OTG B-Device, especificando qué lado suministra la alimentación al vínculo y cuál es el host inicialmente. Puesto que cada controlador OTG admite ambos roles, a menudo se denominan controladores de "doble rol" en lugar de "controladores OTG". USB 3,0, por otro lado, puede crear dispositivos en hosts o periféricos. Algunos dispositivos pueden tomar cualquier rol en función del tipo que se detecte en el otro extremo. Estos tipos de puertos se denominan datos de doble rol (DRD). Cuando dos dispositivos de este tipo están conectados, los roles se asignan aleatoriamente, pero se puede hacer un comando swap desde cualquier extremo. 
+Cuando hablamos sobre dispositivos USB, la pila de funciones USB hace referencia a un grupo de controladores que el administrador de Plug and Play enumera y carga, y un dispositivo USB compuesto puede admitir varias interfaces en una sola configuración. Aunque la mayor parte de lo que hablamos en este artículo se refiere a la función dual de USB 2,0, más comúnmente conocida como USB a la vez o por el grupo OTG o OTG de USB, también resulta útil conocer USB 3,0 y cómo difiere de USB 2,0. El grupo OTG de USB define dos roles para dispositivos: OTG A-Device y OTG-Device, especificando qué lado suministra la alimentación al vínculo y cuál es el host inicialmente. Puesto que cada controlador OTG admite ambos roles, a menudo se denominan controladores de "doble rol" en lugar de "controladores OTG". USB 3,0, por otro lado, puede crear dispositivos en hosts o periféricos. Algunos dispositivos pueden tomar cualquier rol en función del tipo que se detecte en el otro extremo. Estos tipos de puertos se denominan datos de doble rol (DRD). Cuando dos dispositivos de este tipo están conectados, los roles se asignan aleatoriamente, pero se puede hacer un comando swap desde cualquier extremo. 
 
 ## <a name="architecture-of-usb-function-in-windows-10-iot-core"></a>Arquitectura de la función USB en Windows 10 IoT Core
 
@@ -37,7 +35,7 @@ Cada dispositivo USB tiene un VID y un PID únicos, que lo identifican. Un OEM, 
 ### <a name="supporting-from-the-device-side"></a>Compatibilidad desde el lado del dispositivo
 
 _Características que se van a incluir en FFU para la generación de imágenes con USBFN habilitado_
-* La imagen de IoT debe tener los paquetes necesarios en ella, es decir, ufx01000. sys y usbfnclx. sys. Ambos se componen con el `Microsoft-IoTUAP-USBFN-Class-Extension-Package.cab`siguiente paquete. Los OEM deben usar una etiqueta "Feature" adecuada en su archivo XML, que enumera todas las características incluidas en FFU. Por ejemplo, en el archivo BoardTestOEMInput. XML, habrá la siguiente entrada <Feature>IOT_USBFN_CLASS_EXTENSION</Feature> incluida en <Microsoft> la sección características. 
+* La imagen de IoT debe tener los paquetes necesarios en ella, es decir, ufx01000. sys y usbfnclx. sys. Ambos se componen de la `Microsoft-IoTUAP-USBFN-Class-Extension-Package.cab`de paquete siguiente. Los OEM deben usar una etiqueta "Feature" adecuada en su archivo XML, que enumera todas las características incluidas en FFU. Por ejemplo, en el archivo BoardTestOEMInput. XML se incluirá la siguiente entrada <Feature>IOT_USBFN_CLASS_EXTENSION</Feature> en la sección <Microsoft> características. 
 
 _Controlador de conmutación de roles USB_
 * Para el OTG USB, los OEM deben proporcionar la entrada de tabla ACPI (*myOTGacpi*) correcta para el controlador de conmutación de roles USB y el propio controlador (* myURS. sys).
@@ -56,7 +54,7 @@ _Configuración de dispositivos de función USB_
 
 _Propiedades comunes_
 * Hay propiedades comunes para todas las configuraciones de funciones USB de la plataforma de IoT. En última instancia, el OEM debe especificar entradas de descriptor USB estándar como VID, PID, DeviceClass, DeviceProtocol, cadena de fabricante, número de serie, etc.
-* Estas propiedades comunes se establecen en el registro en la siguiente ubicación:`HKLM\System\ControlSet001\Control\USBFN\default`
+* Estas propiedades comunes se establecen en el registro en la siguiente ubicación: `HKLM\System\ControlSet001\Control\USBFN\default`
 
 ```
 BcdDevice=0x1 
@@ -76,9 +74,9 @@ SerialNumberString=0x123
 
 _Por propiedades de configuración_
 
-Las configuraciones se almacenan en un registro con la siguiente clave:`HKLM\SYSTEM\ControlSet001\Control\USBFN\Configurations`
+Las configuraciones se almacenan en un registro con la siguiente clave: `HKLM\SYSTEM\ControlSet001\Control\USBFN\Configurations`
 
-De forma predeterminada, hay una configuración de función USB predeterminada vacía incluida en FFU, como se establece en:`HKLM\SYSTEM\ControlSet001\Control\USBFN\Configurations\default`
+De forma predeterminada, hay una configuración de función USB predeterminada vacía incluida en FFU, como se establece en: `HKLM\SYSTEM\ControlSet001\Control\USBFN\Configurations\default`
 
 Esta configuración predeterminada vacía hace que la plataforma de IoT aparezca como un dispositivo de Windows IoT para el que no hay ningún controlador en el lado del host instalado.
 
@@ -96,7 +94,7 @@ InterfaceDescriptor =
 InterfaceGUIDE =
 ```
 
-Actualmente, la configuración seleccionada es la que se aplicará cuando se conecte al dispositivo USB activo:`HKLM\SYSTEM\ControlSet001\Control\USBFN`
+Actualmente, la configuración seleccionada es la que se aplicará cuando se conecte al dispositivo USB activo: `HKLM\SYSTEM\ControlSet001\Control\USBFN`
 
 _Ejemplos de configuraciones_
 
@@ -111,7 +109,7 @@ _Ejemplos de configuraciones_
    2. Cuando se conecta a un equipo, la plataforma de IoT aparecerá como un dispositivo USB compuesto con varias unidades (es decir, dispositivo MTP, dispositivo serie, dispositivo personalizado).
    3. `HKLM\SYSTEM\ControlSet001\Control\USBFN\Configurations\mycfg`, `InterfaceList = "MODEM\0MTP"`
 
-Las interfaces USBFN se enumeran en el registro con la siguiente clave:`HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\USBFN\Interfaces`
+Las interfaces USBFN se enumeran en el registro con la siguiente clave: `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\USBFN\Interfaces`
 
 Cada entrada de interfaz USB debe contener un valor de descriptor de interfaz y un GUID de interfaz.
 

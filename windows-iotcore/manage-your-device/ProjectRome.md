@@ -1,17 +1,15 @@
 ---
 title: Usar Project Roma con Windows 10 IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 11/14/2017
 ms.topic: article
 description: Conozca y comprenda los pasos necesarios para poner el dispositivo de Windows IoT en el mercado.
 keywords: Windows 10 IoT Core, proyecto Roma, dispositivos remotos
-ms.openlocfilehash: cc016abad05dd54c7b948bcae8120b6da1724ee0
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: dcf1ba9bec776b2ebde0d374266bb4d7dba3baec
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170401"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917317"
 ---
 # <a name="using-project-rome-with-windows-10-iot-core"></a>Usar Project Roma con Windows 10 IoT Core 
  

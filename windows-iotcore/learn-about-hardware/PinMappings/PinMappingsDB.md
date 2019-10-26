@@ -1,17 +1,15 @@
 ---
 title: Asignaciones de Dragonboard PIN
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre la funcionalidad de las asignaciones de PIN para Dragonboard.
 keywords: asignaciones de Windows IOT, Dragonboard, PIN, GPIO
-ms.openlocfilehash: f6df962c6d05aa912013f8f0819c0789bfc393ce
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 170b14ce640fed33754f90bd4df188f4629f04c2
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167691"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917962"
 ---
 # <a name="dragonboard-pin-mappings"></a>Asignaciones de Dragonboard PIN
 

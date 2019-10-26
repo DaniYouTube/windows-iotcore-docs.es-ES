@@ -2,16 +2,16 @@
 title: Cableado Arduino para dispositivos Windows IoT Core
 author: msalehmsft
 ms.author: msaleh
-ms.date: 09/06/17
+ms.date: 09/06/2017
 ms.topic: article
 description: Obtenga información sobre cómo crear, implementar y depurar bocetos de cableado de Arduino en dispositivos Windows IoT Core compatibles.
 keywords: Windows IOT, Arduino, Arduino de conexión, plantilla, IoT Core, UWP
-ms.openlocfilehash: ee6c64bdfd01e79d26bfa0a6c5f88f7735150393
-ms.sourcegitcommit: cbea9d713986fbe8b85e1bba1561a000188bd91c
+ms.openlocfilehash: e6329001649aee8fc474d30f1761c05537dabf45
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64744797"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918131"
 ---
 # <a name="arduino-wiring-for-windows-iot-core-devices"></a>Cableado Arduino para dispositivos Windows IoT Core
 

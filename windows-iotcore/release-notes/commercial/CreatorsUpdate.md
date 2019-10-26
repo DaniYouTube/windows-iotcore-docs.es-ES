@@ -1,17 +1,15 @@
 ---
 title: 'Creators Update: compilación 15063'
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Lea y obtenga información sobre las novedades en Creators Update.
 keywords: Windows IOT, Creators Update, notas de la versión
-ms.openlocfilehash: a8b8fc93d8c079b1b57bbe18f48ea0bc7082dcbe
-ms.sourcegitcommit: 38de3aad11845248dac393ffc51b18c5596af4c3
+ms.openlocfilehash: f62bb14e99c8509374c776172cfcb495b62325da
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68155392"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918717"
 ---
 # <a name="creators-update-release-notes-for-windows-10-iot-core"></a>Notas de la versión de Creators Update para Windows 10 IoT Core
 Número de compilación 15063. Abril de 2017
@@ -70,21 +68,21 @@ Puede que Raspberry Pi no mantenga la resolución de pantalla si se desconecta e
 Cuando se desconecta, el firmware de Raspberry Pi establece de forma predeterminada lo que está en config.txt en la raíz de la tarjeta SD. 
 
 #### <a name="raspberry-pi-video-performance"></a>Rendimiento de vídeo de Raspberry Pi 
-No se ha optimizado el rendimiento de reproducción de vídeo en la plataforma Raspberry PI.  Es posible que el rendimiento que muestren los elementos animados del usuario, incluidos los menús desplegables basados en XAML, no sea el óptimo. 
+No se ha optimizado el rendimiento de reproducción de vídeo en la plataforma Raspberry PI.  Los elementos de usuario animados, incluidos los menús desplegables basados en XAML, pueden presentar un rendimiento inferior al óptimo. 
 
 #### <a name="raspberry-pi-camera-support"></a>Compatibilidad de Raspberry Pi con la cámara 
-La compatibilidad con Windows 10 IoT Core para dispositivos periféricos de cámara con dispositivos Raspberry PI es limitada. El dispositivo PiCam conectado directamente al bus de cámara incorporado no se admite actualmente, ya que requiere servicios de GPU que no están disponibles actualmente en Raspberry PI porque no se ha implementado el controlador de DirectX. Las webcams USB modernas producen flujos de datos muy exigentes en el controlador de host USB.  Incluso cuando se usa con cámaras web con valores de resolución bajos, se requerirá un ajuste preciso adicional y una lógica de control especializada del USB.  
+La compatibilidad con Windows 10 IoT Core para dispositivos periféricos de cámara con dispositivos Raspberry PI es limitada. El dispositivo PiCam conectado directamente al bus de cámara incorporado no se admite actualmente, ya que requiere servicios de GPU que no están disponibles actualmente en Raspberry PI porque no se ha implementado el controlador de DirectX. Las webcams USB modernas producen flujos de datos muy exigentes en el controlador de host USB.  Incluso cuando se usa con configuraciones de baja resolución, las webcams requerirán una optimización de USB adicional y una lógica de control especializada.  
 
 #### <a name="raspberry-pi-3-bluetooth-support"></a>Compatibilidad con Bluetooth de Raspberry PI 3 
 El controlador Bluetooth integrado de Raspberry Pi3 solo admite dispositivos de ancho de banda bajo  
 
 #### <a name="serial-port-usage-and-access-on-raspberry-pi-2"></a>Uso del puerto serie y acceso en Raspberry pi 2 
-Raspberry Pi 2 es compatible con el transporte en serie para la comunicación a través de UART PL011.  Esto se establece de manera predeterminada en escenarios de depuración del kernel.  Un controlador de aplicación o dispositivo puede usar PL011 UART para enviar y recibir datos con el controlador de dispositivo PL011 desactivando el depurador con el siguiente comando:   
+Raspberry Pi 2 es compatible con el transporte en serie para la comunicación a través de UART PL011.  Se establece de forma predeterminada en escenarios de depuración de kernel.  Un controlador de aplicación o dispositivo puede usar PL011 UART para enviar y recibir datos con el controlador de dispositivo PL011 desactivando el depurador con el siguiente comando:   
 `bcedit /set debug off` 
  
 ### <a name="dragon-board"></a>Placa de dragón 
 
-#### <a name="dragonboard-410c-shutdown"></a>Apagado de DragonBoard 410c 
+#### <a name="dragonboard-410c-shutdown"></a>Apagado de DragonBoard 410c 
 En DragonBoard, la placa no se apagará con un comando de apagado. El sistema se reiniciará. Para apagar la placa, desconecte la alimentación. 
 
 #### <a name="dragon-board-headset--microphone-jack"></a>Conector de auriculares y micrófono de DragonBoard  
@@ -94,7 +92,7 @@ El BSP de Dragonboard tiene controladores para el conector de auriculares y de m
 El SPI en el Dragonboard omitirá la velocidad solicitada y siempre se ejecutará a una velocidad preconfigurada.  
 
 #### <a name="dragonboard-connected-standby"></a>Modo de espera conectado de DragonBoard 
-El modo de espera conectado no está habilitado en Qualcomm DragonBoard de manera predeterminada.  Para habilitar el modo de espera conectado en DragonBoard, la siguiente clave del registro debe establecerse en "1". 
+El modo de espera conectado no está habilitado en Qualcomm DragonBoard de manera predeterminada.  Para habilitar el modo de espera conectado en DragonBoard, la siguiente clave del registro debe establecerse en "1" 
 <br>
 `HKLM\System\Controlset001\Control\Power\CsEnabled=DWORD:1`
 <br>
@@ -115,7 +113,7 @@ Para confirmación/comprobación en una imagen existente, conéctese con SSH o P
 
 #### <a name="minnowboard-max-firmware-update"></a>Actualización de firmware de Minnowboard Max 
 El número máximo de MinnowBoard no arrancará a menos que el firmware sea la versión. 092 o posterior.  
-Puede haber errores de conectividad de red en el firmware MinnowBoard Max (MBM) versión 0,93.   El problema se corrigió en la versión de firmware 0,94).  La versión mínima recomendada del firmware es "MinnowBoard MAX 0,94 32-bit". Las actualizaciones de firmware se pueden descargar desde [aquí](http://go.microsoft.com/fwlink/?LinkId=708613).
+Puede haber errores de conectividad de red en el firmware MinnowBoard Max (MBM) versión 0,93.   El problema se corrigió en la versión de firmware 0,94).  la versión mínima recomendada del firmware es "MinnowBoard MAX 0,94 32-bit". Las actualizaciones de firmware se pueden descargar desde [aquí](http://go.microsoft.com/fwlink/?LinkId=708613).
   
  
 ### <a name="all-platforms"></a>Todas las plataformas 
@@ -139,7 +137,7 @@ Para exponer las aplicaciones UAP a través de SoftAP, se deben realizar los sig
 
 #### <a name="sensor-driver-conflict-in-pre-built-ffus"></a>Conflicto del controlador de sensor en FFU precompiladas 
 Hay un conflicto del controlador de sensor en las FFU proporcionadas. El marco del sensor remoto instala controladores para la brújula, el magnetómetro, el acelerómetro y el giroscopio. Las API de UWP que proporcionan acceso a estos controladores desde una aplicación suponen que solo hay uno instalado. Si está desarrollando un controlador para un dispositivo conectado físicamente, el controlador remoto en el FFUs proporcionado por Microsoft entrará en conflicto.  
-Solución: El controlador conflictivo se puede quitar conectándose al dispositivo a través de SSH o PowerShell y usando la herramienta DEVCON. exe para quitar el controlador del sensor remoto escribiendo "DEVCON. exe Remove @" ROOT\REMOTESENSORDRIVER * ". El controlador de sensor remoto no afecta a las FFU que crea el fabricante de equipo original. 
+Solución: el controlador conflictivo se puede quitar conectándose al dispositivo a través de SSH o PowerShell y usando la herramienta DEVCON. exe para quitar el controlador del sensor remoto escribiendo "DEVCON. exe Remove @" ROOT\REMOTESENSORDRIVER * ". El controlador de sensor remoto no afecta a las FFU que crea el fabricante de equipo original. 
  
 #### <a name="default-administrator-user-name-and-password"></a>Nombre de usuario y contraseña predeterminados del administrador 
 El nombre de usuario y la contraseña predeterminados del administrador están codificados de forma rígida en la imagen de Windows 10 IoT Core. Esto supone un riesgo de seguridad para el dispositivo y no debe exponerse a una conexión a Internet abierta hasta que se haya cambiado la contraseña. 
@@ -154,24 +152,24 @@ Es posible que algún teclado y mouse USB no funcionen en IoT Core. Use otro tec
 No se puede establecer la orientación en "vertical" en una aplicación universal. 
  
 #### <a name="referencing-adapters-with-alljoyn-templates"></a>Adaptadores de referencia con plantillas de AllJoyn 
-El intento de agregar referencias a proyectos de adaptador AllJoyn puede producir errores al usar versiones específicas del SDK.  Para resolver estos errores, cambie la plataforma de destino de Visual Studio para que coincida con la versión actual del SDK y, luego, vuelva a cargar el proyecto. 
+El intento de agregar referencias a proyectos de adaptador AllJoyn puede producir errores al usar versiones específicas del SDK.  Para resolver estos errores, cambie la plataforma de destino de Visual Studio para que coincida con la versión actual del SDK y, a continuación, vuelva a cargar el proyecto. 
 
 #### <a name="non-default-drive-mode"></a>Modo de unidad no predeterminado  
-En Raspberry Pi y DragonBoard, el cambio de un modo de unidad no predeterminado a otro puede producir un problema en la patilla GPIO. Solución alternativa: establezca el modo de la unidad una vez al comienzo de la aplicación. 
+En Raspberry Pi y DragonBoard, el cambio de un modo de unidad no predeterminado a otro puede producir un problema en la patilla GPIO. SOLUCIÓN alternativa: establezca el modo de unidad una vez al principio de la aplicación. 
  
 #### <a name="application-already-running"></a>Aplicación en ejecución  
-La aplicación de inicio predeterminada podría entrar en conflicto consigo misma cuando también se implementa desde Visual Studio. Solución alternativa: cambie la aplicación de inicio predeterminada a otra aplicación distinta de la que quiere implementar. 
+La aplicación de inicio predeterminada podría entrar en conflicto consigo misma cuando también se implementa desde Visual Studio. SOLUCIÓN alternativa: cambie la aplicación de inicio predeterminada a una aplicación que no sea la que desea implementar. 
  
 #### <a name="backgroundmediaplayermessagereceivedfromforeground-may-crash"></a>Puede que se bloquee la línea de código BackgroundMediaPlayer.MessageReceivedFromForeground  
-La siguiente línea de código puede bloquearse `BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;`:.
+La siguiente línea de código puede bloquearse: `BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;`.
 <br>
-Para evitar el bloqueo, agregue este código para que se ejecute primero`var player = BackgroundMediaPlayer.Current;` 
+Para evitar el bloqueo, agregue este código para que se ejecute en primer lugar `var player = BackgroundMediaPlayer.Current;` 
  
 #### <a name="azure-active-directory-authentication-support"></a>Compatibilidad con la autenticación de Azure Active Directory  
 La biblioteca de autenticación de Azure Active Directory no funciona en Windows 10 IoT Core.  
  
 #### <a name="shell-management-of-application-crashes"></a>Administración del shell de los bloqueos de la aplicación 
-La infraestructura del shell de IoT Core supervisa las aplicaciones de tipo APPX que se ejecutan en el dispositivo en busca de bloqueos y, cuando estos se producen, reinicia esas aplicaciones.  Si las aplicaciones reiniciadas continúan bloqueando, el shell empleará un __failfast: un proceso crítico del sistema que produce una comprobación de errores y se reinicia en un intento de recuperación.  Se usan una lógica y un control comparables para las tareas en segundo plano y las aplicaciones de primer plano en una configuración con cabezal.   
+La infraestructura del shell de IoT Core supervisa las aplicaciones de tipo APPX que se ejecutan en el dispositivo en busca de bloqueos y, cuando estos se producen, reinicia esas aplicaciones.  Si las aplicaciones reiniciadas continúan bloqueando, el shell empleará un __failfast: un proceso crítico del sistema que produce una comprobación de errores y se reinicia en un intento de recuperación.  La lógica comparable y el control se usan para las tareas en segundo plano y las aplicaciones de primer plano en una configuración.   
 
 A continuación se muestra la lógica de reintento y el control de bloqueo: 
 
@@ -200,7 +198,7 @@ delay = (dword) ((float)BaseRetryDelayMs * (crashes_seen ** Fallback_exponent))
 #### <a name="time-synchronization"></a>Sincronización de la hora  
 Si se producen errores en la sincronización de la hora o se agota el tiempo de espera, puede deberse a un servidor horario lejano o inaccesible. Se puede hacer lo siguiente para agregar servidores de hora locales o adicionales. 
  
-* Desde una línea de comandos en el dispositivo (por ejemplo, SSH, PowerShell)  W32tm/config/syncfromflags:/manualpeerlist manual: "0. Windows. Time. com 1.Pool.NTP.org 2. otro elemento,..." 
+* Desde una línea de comandos en el dispositivo (por ejemplo, SSH, PowerShell)  W32tm/config/syncfromflags:/manualpeerlist manual: "0. Windows. Time. com 1.pool.ntp.org 2. otro elemento,..." 
 * También puede realizar estas adiciones al registro a través de un script de arranque o un paquete de configuración de tiempo de ejecución personalizado incluido como parte del proceso de creación de la imagen, si es necesario. 
 Para obtener más información, vea: 
 * [Agregar un archivo y una configuración de registro a una imagen](https://msdn.microsoft.com/library/windows/hardware/mt670641(v=vs.85).aspx)
@@ -210,8 +208,8 @@ Para obtener más información, vea: 
 El servidor FTP ya no se ejecuta de forma predeterminada al iniciarse 
 <br>
 Para ejecutarse una vez: 
-`Login with SSH\PS` Ejecute este comando para iniciar FTP:  
- `start ftpd.exe`    
+`Login with SSH\PS` ejecute este comando para iniciar FTP:  
+`start ftpd.exe`    
 Para ejecutar en todos los usuarios de arranque, debe crear una tarea de programador. 
 
     Login with SSH\PS and create a scheduler task:       
@@ -224,7 +222,7 @@ Para ejecutar en todos los usuarios de arranque, debe crear una tarea de program
  
 Este documento se proporciona tal y como está.  La información y las vistas expresadas en este documento, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso. 
 
-Algunos de los ejemplos mencionados aquí son solamente ejemplos ficticios.  No se pretende realizar ni debe interpretarse ninguna conexión o asociación reales.  
+Algunos de los ejemplos mencionados aquí son solamente ejemplos ficticios.  No se pretende ni se debe inferir ninguna asociación o conexión real.  
 
 Este documento no proporciona ningún derecho legal sobre ninguna propiedad intelectual de ningún producto de Microsoft.  Este documento se puede usar para fines de referencia internos. 
   
@@ -236,7 +234,7 @@ Las demás marcas comerciales pertenecen a sus respectivos propietarios.  
 
 UPnP ™ es una marca de certificación de lUPnP™ Implementers Corporation. 
 
-Bluetooth® es una marca comercial propiedad de Bluetooth SIG, Inc. Estados Unidos y con licencia para Microsoft Corporation. 
+Bluetooth® es una marca comercial propiedad de Bluetooth SIG, Inc. EE. UU. y con licencia para Microsoft Corporation. 
 
 Intel es una marca registrada de Intel Corporation. 
 

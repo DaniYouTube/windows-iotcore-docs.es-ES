@@ -1,17 +1,15 @@
 ---
 title: Usar Wi-Fi Direct en el dispositivo de Windows 10 IOT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información acerca de cómo configurar, probar y usar Wi-Fi Direct en dispositivos con un adaptador Wi-Fi USB habilitado.
 keywords: Windows IOT, WiFi Direct, instalación, WiFi, dispositivos
-ms.openlocfilehash: 04ecf1820356c59fecea81be47f69617ab42ab36
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 7355d5d0879b2a0f31f5fa89eb00e71eb0fa4e4f
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60169412"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918290"
 ---
 # <a name="using-wifi-direct-on-your-windows-10-iot-core-device"></a>Usar Wi-Fi Direct en el dispositivo de Windows 10 IoT Core
 

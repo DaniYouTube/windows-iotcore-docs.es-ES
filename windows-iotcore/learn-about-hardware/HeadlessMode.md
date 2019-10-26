@@ -1,27 +1,25 @@
 ---
 title: Dispositivos con periféricos y sin ellos
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo configurar Windows IoT Core para dispositivos con o sin cabeza.
 keywords: Windows IOT, pantallas, cabeza, interfaz de usuario
-ms.openlocfilehash: 8ac0d7e06477836aa080af1b7556b054957d0cac
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 138bc19b355e39db7e6bd4f4441159b03fde26c1
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60169441"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918098"
 ---
 # <a name="headed-and-headless-devices"></a>Dispositivos con cabeza y sin periféricos
 
-Windows 10 IoT Core puede configurarse para el modo de encabezado o sin *cabeza* . 
+Windows 10 IoT Core puede configurarse para el *modo de encabezado o sin* *cabeza* . 
 
 ## <a name="headed-mode"></a>Modo de punta
 El modo de cabeza se define por la presencia de la interfaz de usuario. En el modo de *cabeza* , se iniciará una sola aplicación de interfaz de usuario en el arranque del sistema y también puede haber 0 o más "aplicaciones en segundo plano" (StartupTasks). 
 
 ## <a name="headless-mode"></a>Modo sin periféricos
-El modo sin periféricos no tiene interfaz de usuario.  Los dispositivos que no necesitan la funcionalidad de la interfaz de usuario se pueden establecer en el modo sin periféricos. La pila de la interfaz de usuario está deshabilitada y las aplicaciones de IU no se iniciarán. Esto reduce la cantidad de recursos del sistema utilizados. Si conecta un monitor al dispositivo, la pantalla será negra.
+El modo sin periféricos no tiene interfaz de usuario.  Los dispositivos que no necesitan la funcionalidad de la interfaz de usuario se pueden establecer en el modo sin *periféricos* . La pila de la interfaz de usuario está deshabilitada y las aplicaciones de IU no se iniciarán. Esto reduce la cantidad de recursos del sistema utilizados. Si conecta un monitor al dispositivo, la pantalla será negra.
 
 > [!NOTE]
 > Si coloca el dispositivo en el modo sin periféricos, puede usar la aplicación Windows 10 IoT Core Dashboard, que se describe a continuación, para encontrar su dirección IP.
@@ -29,20 +27,20 @@ El modo sin periféricos no tiene interfaz de usuario.  Los dispositivos que no 
 ## <a name="changing-the-mode"></a>Cambiar el modo
 Puede modificar el estado de la cabeza o el estado de los dispositivos desde una sesión de Windows PowerShell o una sesión de SSH. Para obtener más información acerca de PowerShell, consulte la página [PowerShell para IOT Core](../connect-your-device/PowerShell.md) . Para más información sobre SSH, consulte la página [SSH para IOT Core](../connect-your-device/SSH.md) .
 
-* Para mostrar el estado actual del dispositivo, use la `setbootoption` utilidad:
+* Para mostrar el estado actual del dispositivo, use la utilidad `setbootoption`:
 
 ~~~
     [192.168.0.243]: PS C:\> setbootoption.exe
 ~~~
 
-* Para modificar el estado del dispositivo para habilitar el modo sin periféricos, use `setbootoption` la utilidad con `headless` el argumento Arg:
+* Para modificar el estado del dispositivo para habilitar el modo sin periféricos, use la utilidad `setbootoption` con el `headless` Arg:
 
 ~~~
     [192.168.0.243]: PS C:\> setbootoption.exe headless
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 ~~~
 
-* Para modificar el estado del dispositivo para habilitar el modo de cabeza, use `setbootoption` la utilidad con `headed` el argumento Arg:
+* Para modificar el estado del dispositivo para habilitar el modo de cabeza, use la utilidad `setbootoption` con el `headed` Arg:
 
 ~~~
     [192.168.0.243]: PS C:\> setbootoption.exe headed

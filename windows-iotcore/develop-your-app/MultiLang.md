@@ -2,16 +2,16 @@
 title: Compatibilidad con idiomas principales de IoT de Windows 10
 author: msalehmsft
 ms.author: msaleh
-ms.date: 09/12/17
+ms.date: 09/12/2017
 ms.topic: article
 description: Obtenga información sobre la compatibilidad con varios idiomas en aplicaciones y sistemas operativos UWP en IoT Core.
 keywords: Windows IOT, idiomas, tipos de aplicaciones, UWP, so
-ms.openlocfilehash: aad3005a008264223750b7ede5b154306d9d3015
-ms.sourcegitcommit: b005de492d52cd5139fa410dd31c3ca369030dd9
+ms.openlocfilehash: 5bc44fb090e6e198525e95d6aee6815afd0095da
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545522"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918227"
 ---
 # <a name="language-support"></a>Compatibilidad con idiomas
 
@@ -33,7 +33,7 @@ Vea las aplicaciones de ejemplo siguientes:
 
 Los kits de IoTCore de Windows 10 ahora incluyen los recursos de idioma para los siguientes idiomas:
 
-> | Lenguaje  | Código | Área |
+> | Idioma  | Código | Región |
 > |-------------|-----|-----|
 > | Inglés (Estados Unidos) | en-US | Norteamérica | 
 > | Inglés (Reino Unido) | en-GB | Europa |
@@ -45,7 +45,7 @@ Los kits de IoTCore de Windows 10 ahora incluyen los recursos de idioma para los
 > | Árabe | ar-SA | Asia |
 > | Alemán | de-DE | Europa |
 > | Italiano | it-IT | Europa | 
-> | Japonés | ja-JP | Asia |
+> | japonés | ja-JP | Asia |
 > | Coreano | ko-KR | Asia |
 > | Neerlandés | nl-NL | Europa |
 > | Polaco | pl-PL | Europa | 
@@ -110,10 +110,10 @@ En el archivo XML de entrada OEM, los recursos de datos de voz necesarios se esp
 > [!NOTE]
 > De forma predeterminada, los datos de voz en-US están incluidos en la imagen.
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 * Consulte [MultiLangSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/MultiLangSample) para compatibilidad con varios idiomas
 * Consulte [SingleLangSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SingleLangSample) para el idioma FR-fr con en-US como lenguaje de reserva.
-    * Tenga en cuenta que cuando se cambia el idioma de la `administrator` interfaz de usuario de arranque, el nombre de la cuenta también se traduce en el idioma de la interfaz de usuario de arranque. Por lo tanto, en fr-FR `administrateur`es. Vea [OEMCustomization. cmd.](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SingleLangSample/oemcustomization.cmd)
+    * Tenga en cuenta que cuando se cambia el idioma de la interfaz de usuario de arranque, el nombre de la cuenta de `administrator` también se traduce en el idioma de la interfaz de usuario de arranque. Por lo tanto, en fr-FR es `administrateur`. Vea [OEMCustomization. cmd.](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SingleLangSample/oemcustomization.cmd)
 
 ## <a name="changing-user-preferences-language-region-speech-and-voice"></a>Cambiar las preferencias del usuario (idioma, región, voz y voz)
 
@@ -121,14 +121,14 @@ La aplicación UWP puede usar las API de WinRT para establecer la región, la li
  
 Si la aplicación no tiene los recursos correspondientes, se cargarán los recursos de reserva. Del mismo modo, si los recursos del sistema operativo para los idiomas preferidos no forman parte de la imagen de Windows IoT, Windows IoT usará su reserva probablemente en inglés (en-US).
 
-* Establecer región mediante `TrySetHomeGeographicRegion` en [Windows. System. userprofile. GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
-* Establezca el idioma de `TrySetLanguages` la interfaz de usuario mediante en [Windows. System. userprofile. GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
-* Establecer el idioma de `TrySetSystemSpeechLanguageAsync` la voz mediante en [Windows. Media. SpeechRecognition. SpeechRecognizer](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer)
-* Establecer Voice usando `TrySetDefaultVoiceAsync` en [Windows. Media. SpeechSynthesis. SpeechSynthesizer](https://docs.microsoft.com/en-us/uwp/api/windows.media.speechsynthesis.speechsynthesizer)
+* Establecimiento de la región mediante `TrySetHomeGeographicRegion` en [Windows. System. userprofile. GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
+* Establezca el idioma de la interfaz de usuario mediante `TrySetLanguages` en [Windows. System. userprofile. GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
+* Establecimiento del lenguaje de voz mediante `TrySetSystemSpeechLanguageAsync` en [Windows. Media. SpeechRecognition. SpeechRecognizer](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer)
+* Establecer Voice mediante `TrySetDefaultVoiceAsync` en [Windows. Media. SpeechSynthesis. SpeechSynthesizer](https://docs.microsoft.com/en-us/uwp/api/windows.media.speechsynthesis.speechsynthesizer)
 
 > [!NOTE]
 > Para un funcionamiento correcto, Cortana requiere que la región, el idioma de la interfaz de usuario y el idioma de la voz sean coherentes, por ejemplo: región FR, interfaz de usuario y lenguajes de voz fr-FR o región ES, interfaz de usuario y lenguajes de voz es-ES. Cortana usa su propia voz; la aplicación UWP no puede cambiarla.
 
 ## <a name="iotsettingsexe"></a>IoTSettings. exe
 
-Para obtener más información sobre cómo cambiar la configuración de la región y el idioma del usuario o de la voz para crear productos habilitados para Cortana, lea la documentación de los utils de la [línea de comandos](../manage-your-device/CommandLineUtils.md) .
+Para obtener más información sobre cómo cambiar la configuración de la región y el idioma del usuario o de la voz para crear productos habilitados para Cortana, lea la documentación de los [utils](../manage-your-device/CommandLineUtils.md) de la línea de comandos.

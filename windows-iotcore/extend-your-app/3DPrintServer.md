@@ -1,23 +1,21 @@
 ---
 title: Impresora de red 3D con Windows 10 IoT Core
-author: saraclay
-ms.author: saclayt
-ms.date: 09/05/17
+ms.date: 09/05/2017
 ms.topic: article
 description: Obtenga información sobre cómo convertir el dispositivo de Windows 10 IoT Core en un servidor de impresión y conectar su impresora 3D a él.
 keywords: Windows IOT, 3D, impresora 3D, servidor de impresión, impresora 3D de red
-ms.openlocfilehash: 7a9bcc7871c62be5a73319ca284127ee4abc42f5
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 3c11756f7832952f816978244d401d1d735a8f80
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170492"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918197"
 ---
 # <a name="network-3d-printer-with-windows-10-iot-core"></a>Impresora de red 3D con Windows 10 IoT Core
 
 Convierta el dispositivo de Windows 10 IoT Core en un servidor de impresión y conecte la impresora 3D a él. Podrá acceder a la impresora de forma inalámbrica desde otros dispositivos.
 
-## <a name="1-install-windows-10-iot-core-on-your-device"></a>1. Instalación de Windows 10 IoT Core en el dispositivo
+## <a name="1-install-windows-10-iot-core-on-your-device"></a>1. instalar Windows 10 IoT Core en el dispositivo
 ___
 Antes de empezar, necesitará lo siguiente:
 
@@ -36,7 +34,7 @@ Antes de empezar, necesitará lo siguiente:
     * LulzBot
     * Velleman K8200
 
-## <a name="2-connect-your-3d-printer-to-your-device"></a>2. Conectar la impresora 3D al dispositivo
+## <a name="2-connect-your-3d-printer-to-your-device"></a>2. conectar la impresora 3D al dispositivo
 ___
 * Conecte la impresora 3D a la placa de Windows 10 IoT Core con el cable USB.
 
@@ -46,7 +44,7 @@ ___
 
     ![Comprobar que el dispositivo aparece en el panel de IoT](../media/3DPrintServer/selectDevice.png)
     
-## <a name="3-deploy-the-network-3d-printer-app"></a>3. Implementar la aplicación de impresora 3D de red
+## <a name="3-deploy-the-network-3d-printer-app"></a>3. implementación de la aplicación de impresora 3D de red
 ___
 * En el panel de IoT, haga clic en la sección **probar algunos ejemplos** .
 * Seleccione la aplicación de ejemplo de impresora Network 3D.
@@ -81,9 +79,9 @@ Los demás valores en el XML de PrintDeviceCapabilities se usan para notificar a
 
     
     
-## <a name="4-add-your-3d-printer"></a>4. Agregar la impresora 3D
+## <a name="4-add-your-3d-printer"></a>4. agregar la impresora 3D
 ___
-* Vaya a su equipo con Windows 10 y vaya a **configuración** -> **dispositivos** -> **impresoras impresoras & escáneres**.
+* Vaya a su equipo con Windows 10 y vaya a **configuración** -> **dispositivos** -> **impresoras & escáneres**.
 * Presione **Agregar una impresora o un escáner**.
 
      ![Configuración de Windows Agregar dispositivo](../media/3dprintserver/add-printer.png)

@@ -2,16 +2,16 @@
 title: Configuración de una aplicación predeterminada
 author: bfjelds
 ms.author: bfjelds
-ms.date: 09/05/17
+ms.date: 09/05/2017
 ms.topic: article
 description: Aprenda a configurar una aplicación predeterminada mediante el portal de dispositivos de Windows o el shell.
 keywords: Windows IOT, aplicación predeterminada, PowerShell, IOT
-ms.openlocfilehash: f3f7a5194491250a8a0b49e81e073282c8f5660b
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: b7165331daba3b8bc953535ecc2d5b51cfda782c
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170252"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918204"
 ---
 # <a name="setup-a-default-app"></a>Configuración de una aplicación predeterminada
 Aquí aprenderá las maneras de configurar la aplicación como la aplicación predeterminada. La aplicación predeterminada es la que se inicia cuando se inicia el sistema.  
@@ -34,7 +34,7 @@ Pasos para establecer la aplicación predeterminada mediante el shell
 
 1. Conexión al dispositivo a través de [PowerShell](../connect-your-device/PowerShell.md)
 
-2. Enumerar las aplicaciones instaladas con`iotstartup list`
+2. Enumerar las aplicaciones que se instalan mediante `iotstartup list`
 
 3. Anote el valor de AppID de la aplicación que desea establecer como predeterminado y establézcalo mediante `iotstartup add headed <appid>`. En el caso de la aplicación sin periféricos, debe usar `iotstartup add headless <appid>`.
 

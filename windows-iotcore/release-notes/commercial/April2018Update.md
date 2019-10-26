@@ -1,17 +1,15 @@
 ---
 title: 'Actualización de abril de 2018: compilación 17134'
-author: saraclay
-ms.author: saclayt
 ms.date: 05/01/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de la actualización de abril de 2018 para Windows 10 IoT.
 keywords: Windows IoT, actualización de abril de 2018, notas de la versión
-ms.openlocfilehash: b61ee94651c2bea0ec0582669b62867d47c85a0c
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: f9068b3860dcf684aaa12d12ed3fb0abd9598232
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167443"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918729"
 ---
 # <a name="april-2018-update-release-notes-for-windows-10-iot"></a>Notas de la versión de abril de 2018 para Windows 10 IoT
 Número de compilación 17134. Mayo de 2018
@@ -57,7 +55,7 @@ La declaración de privacidad de esta versión del sistema operativo Windows se 
 ## <a name="windows-10-iot-core-reference-images"></a>Imágenes de referencia de Windows 10 IoT Core
 ___ 
 * Minnowboard Max
-  * Procesador: E3825 de Intel Atom
+  * Procesador: Intel Atom E3825
   * Arquitectura: x86
 
 * Modelo B de Raspberry PI 3

@@ -1,17 +1,15 @@
 ---
 title: Miracast en IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 11/30/2017
 ms.topic: article
 description: Obtenga información sobre cómo incluir funcionalidades de Miracast en el dispositivo
 keywords: Windows IOT, miracast, conectividad
-ms.openlocfilehash: c58def4b218d35c78532f54df4a74fb572c8549e
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: bb997d0ec2899e7a0a988674ae8907e15e87b3c3
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60168112"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918328"
 ---
 # <a name="miracast-on-iot-core"></a>Miracast en IoT Core
 
@@ -41,8 +39,8 @@ En la tabla siguiente se muestra la compatibilidad de Miracast con las plataform
 | Panel | Seg | Controladores de WiFi presentes | Controladores de gráficos presentes | Compatible con Miracast |
 |-------|-----|----------------------|--------------------------|---------------------|
 | Qualcomm Dragonboard 410C | Snapdragon 410 | Sí | Sí | Sí |
-| Raspberry pi 2/3 | Broadcom BCM283x | Sí | No | Sin |
-| Minnowboard Max | E3825 de Intel Atom | Sí | No | Sin |
+| Raspberry pi 2/3 | Broadcom BCM283x | Sí | No | No |
+| Minnowboard Max | E3825 de Intel Atom | Sí | No | No |
 | ARRIBA cuadrada | N3350 de Intel Celeron | Sí | Sí | Sí |
 
 
@@ -79,11 +77,11 @@ Esto habilitará Miracast sin ninguna notificación de consentimiento, solo en r
 ## <a name="windows-iot-as-a-miracast-source"></a>Windows IoT como origen de Miracast
 
 > [!IMPORTANT]
-> Antes de intentar usar el dispositivo como origen de Miracast, desactive la aplicación IoTOnboardingTask del portal de [dispositivos de Windows](https://docs.microsoft.com/windows/iot-core/manage-your-device/deviceportal) como se muestra a continuación, que solo necesitará hacer una vez: ![Desactivar la aplicación IoTOnboardingTask](../media/Miracast/IoTOnboardingOff.gif)
+> Antes de intentar usar el dispositivo como origen de Miracast, desactive la aplicación IoTOnboardingTask en el [portal de dispositivos de Windows](https://docs.microsoft.com/windows/iot-core/manage-your-device/deviceportal) , tal como se muestra a continuación, que solo necesitará hacer una vez: ![desactivar la aplicación IoTOnboardingTask](../media/Miracast/IoTOnboardingOff.gif)
 >
 > Después, reinicie el dispositivo.
 
-Puede configurar la conversión de Miracast en el dispositivo compatible a través de las API `Windows.Media.Casting` públicas desde el espacio de nombres de la aplicación.
+Puede configurar la conversión de Miracast en el dispositivo compatible a través de las API públicas desde el espacio de nombres de `Windows.Media.Casting` de la aplicación.
 
 Para ver estas API en acción, descargue el [ejemplo de UWP de BasicMediaCasting](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicMediaCasting) y ejecútelo en el dispositivo. Las API del ejemplo cubren los escenarios siguientes, que se ejecutan en dispositivos IoT Core compatibles con Miracast:
 1. Conversión de multimedia básica, que usa la conversión integrada para enviar contenido a dispositivos Miracast, DLNA y Bluetooth

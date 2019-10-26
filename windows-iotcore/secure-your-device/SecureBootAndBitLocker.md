@@ -1,17 +1,15 @@
 ---
 title: Habilitación del arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo habilitar el arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 keywords: Windows IOT, arranque seguro, BitLocker, Device Guard, seguridad, seguridad llave en mano
-ms.openlocfilehash: 012cf74528a556f40b865a4ca02f27c9effc2cb7
-ms.sourcegitcommit: 365721929dc902ec12bafe02653609d3d21a59f0
+ms.openlocfilehash: 00e2abf82a043dfebe956281995961692b45c3b9
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71140466"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918539"
 ---
 # <a name="enabling-secure-boot-bitlocker-and-device-guard-on-windows-10-iot-core"></a>Habilitación del arranque seguro, BitLocker y Device Guard en Windows 10 IoT Core
 
@@ -119,7 +117,7 @@ Windows 10 IoT Core funciona con varios silicios que se usan en cientos de dispo
 
 * Intel MinnowBoardMax
 
-    En el caso de MinnowBoard Max, la versión de firmware debe ser 0,82 o superior (obtener el [firmware más reciente](https://firmware.intel.com/projects/minnowboard-max)). Para habilitar las capacidades de TPM, encienda el panel con un teclado & Mostrar adjunta y presione F2 para especificar la configuración de UEFI. Vaya a _Device Manager-> configuración del sistema-> configuración de seguridad-> PTT_ y establézcalo  _&lt;en&gt;habilitar_. Presione F10 para guardar los cambios y continuar con un reinicio de la plataforma.
+    En el caso de MinnowBoard Max, la versión de firmware debe ser 0,82 o superior (obtener el [firmware más reciente](https://firmware.intel.com/projects/minnowboard-max)). Para habilitar las capacidades de TPM, encienda el panel con un teclado & Mostrar adjunta y presione F2 para especificar la configuración de UEFI. Vaya a _Device Manager-> configuración del sistema-> configuración de seguridad-> PTT_ y establézcalo en _&lt;habilitar&gt;_ . Presione F10 para guardar los cambios y continuar con un reinicio de la plataforma.
 
 > [!NOTE]
 > Raspberry pi 2 y 3 no admiten TPM y, por tanto, no se pueden configurar escenarios de bloqueo.
@@ -146,19 +144,19 @@ Windows 10 IoT Core funciona con varios silicios que se usan en cientos de dispo
 
 5. Configurar _Settings. XML_
 
-    * Sección General: Especificar los directorios del paquete
-    * Sección herramientas: Establecer la ruta de acceso de las herramientas
-        * Windows10KitsRoot`(e.g. <Windows10KitsRoot>C:\Program Files (x86)\Windows Kits\10\</Windows10KitsRoot>)`
-        * WindowsSDKVersion`(e.g. <WindowsSDKVersion>10.0.15063.0</WindowsSDKVersion>)`
-            * La versión del SDK instalada en la máquina está en`C:\Program Files (x86)\Windows Kits\10\`
-    * Sección de SecureBoot: Especificar las claves que se van a usar para el arranque seguro (claves PK y SB)
-    * Sección de BitLocker: Especificar un certificado para la recuperación de datos de BitLocker (clave DRA)
-    * Sección SIPolicy: Especificar los certificados que deben ser de confianza
-        * ScanPath : Ruta de acceso del dispositivo para la detección de archivos binarios,`\\a.b.c.d\C$`
-        * Update Firmante de SIPolicy (PAUTH Keys)
-        * Usuario Certificados de modo de usuario (claves UMCI) 
-        * Cronología Certificados de modo kernel (claves KMCI)
-    * Empaquetado Especificar la configuración para la generación de paquetes
+    * Sección General: especificar los directorios del paquete
+    * Sección herramientas: establecer la ruta de acceso de las herramientas
+        * `(e.g. <Windows10KitsRoot>C:\Program Files (x86)\Windows Kits\10\</Windows10KitsRoot>)` Windows10KitsRoot
+        * `(e.g. <WindowsSDKVersion>10.0.15063.0</WindowsSDKVersion>)` WindowsSDKVersion
+            * La versión del SDK instalada en la máquina está en `C:\Program Files (x86)\Windows Kits\10\`
+    * Sección de SecureBoot: especificación de las claves que se van a usar para el arranque seguro (claves PK y SB)
+    * Sección de BitLocker: especificar un certificado para la recuperación de datos de BitLocker (clave DRA)
+    * Sección SIPolicy: especificar los certificados que deben ser de confianza
+        * ScanPath: ruta de acceso del dispositivo para la exploración de archivos binarios, `\\a.b.c.d\C$`
+        * Update: firmante de SIPolicy (PAUTH Keys)
+        * Usuario: certificados de modo de usuario (claves UMCI) 
+        * Kernel: certificados de modo kernel (claves KMCI)
+    * Empaquetado: especifique la configuración de la generación de paquetes.
 
 > [!IMPORTANT]
 > Para ayudar a realizar las pruebas durante el ciclo de desarrollo inicial, Microsoft ha proporcionado claves y certificados generados previamente cuando corresponda.  Esto implica que los binarios de prueba, desarrollo y versión preliminar de Microsoft se consideran de confianza.  Durante la creación del producto final y la generación de la imagen, asegúrese de quitar estos dirija y usar sus propias claves para garantizar un dispositivo totalmente bloqueado.
@@ -179,7 +177,7 @@ Puede probar los paquetes generados si los instala manualmente en un dispositivo
 
 1. Desbloquee el dispositivo con la imagen desbloqueada (imagen usada para digitalizar en el paso anterior).
 2. Conexión al dispositivo ([mediante SSH](../connect-your-device/SSH.md) o con [PowerShell](../connect-your-device/PowerShell.md))
-3. Copie los siguientes archivos. cab en el dispositivo en un directorio, por ejemplo,`c:\OemInstall`
+3. Copie los siguientes archivos. cab en el dispositivo en un directorio, por ejemplo `c:\OemInstall`
     * OEM. Personalizado. cmd. cab
     * OEM. Security. BitLocker. cab
     * OEM. Security. SecureBoot. cab
@@ -189,7 +187,7 @@ Puede probar los paquetes generados si los instala manualmente en un dispositivo
     ```C
     applyupdate -stage c:\OemInstall\OEM.Custom.Cmd.cab
     ```
-    Si usa una imagen personalizada, tendrá que *omitir* este archivo y editar manualmente el `c:\windows\system32\oemcustomization.cmd` con el contenido disponible en `Output\OEMCustomization\OEMCustomization.cmd` el archivo.
+    Si usa una imagen personalizada, tendrá que *omitir* este archivo y editar manualmente el `c:\windows\system32\oemcustomization.cmd` con el contenido disponible en `Output\OEMCustomization\OEMCustomization.cmd` archivo.
 
     ```C
     applyupdate -stage c:\OemInstall\OEM.Security.BitLocker.cab
@@ -205,24 +203,24 @@ Puede probar los paquetes generados si los instala manualmente en un dispositivo
 6. El dispositivo se reiniciará en Update OS (mostrando engranajes) para instalar los paquetes y se reiniciará de nuevo en el sistema operativo principal.  Una vez que el dispositivo se reinicia en los principales, se habilitará el arranque seguro y se debe usar SIPolicy.
 7. Reinicie el dispositivo para activar el cifrado de BitLocker.
 8. Probar las características de seguridad
-    * SecureBoot: Pruebe `bcdedit /debug on` , recibirá un error que indica que el valor está protegido por la Directiva de arranque seguro
-    * BitLocker: Ejecutar `start /wait sectask.exe -waitencryptcomplete:1`, si ERRORLEVEL es `-2147023436` (ERROR_TIMEOUT), el cifrado no se completa. Cuando se ejecuta sectask. exe desde un archivo. cmd, `start /wait`se omite.
-    * DeviceGuard : Ejecute cualquier binario sin firmar o binario firmado con certificado que no esté en la lista SIPolicy y confirme que no se puede ejecutar.
+    * SecureBoot: Pruebe `bcdedit /debug on`, obtendrá un error que indica que el valor está protegido por la Directiva de arranque seguro.
+    * BitLocker: ejecute `start /wait sectask.exe -waitencryptcomplete:1`, si ERRORLEVEL es `-2147023436` (ERROR_TIMEOUT), el cifrado no se completa. Al ejecutar sectask. exe desde un archivo. cmd, omita el `start /wait`.
+    * DeviceGuard: ejecute cualquier binario sin firmar o binario firmado con certificado que no esté en la lista SIPolicy y confirme que no se puede ejecutar.
 
 ### <a name="generate-lockdown-image"></a>Generar imagen de bloqueo
 
 Después de validar que los paquetes de bloqueo funcionan según la configuración definida anteriormente, puede incluir estos paquetes en la imagen siguiendo los pasos indicados a continuación. Lea la [Guía de fabricación de IOT](https://aka.ms/iotcoreguide) para obtener instrucciones de creación de imágenes personalizadas.
 
 1. En el directorio del área de trabajo, actualice los siguientes archivos desde el directorio de salida generado anterior
-    * SecureBoot`Copy ..\Output\SecureBoot\*.bin  ..\Workspace\Common\Packages\Security.SecureBoot`
+    * SecureBoot: `Copy ..\Output\SecureBoot\*.bin  ..\Workspace\Common\Packages\Security.SecureBoot`
       * SetVariable_db. bin
       * SetVariable_kek. bin
       * SetVariable_pk. bin
-    * BitLocker`Copy ..\Output\Bitlocker\*.* ..\Workspace\Common\Packages\Security.Bitlocker`
+    * BitLocker: `Copy ..\Output\Bitlocker\*.* ..\Workspace\Common\Packages\Security.Bitlocker`
       * Destask. XML
       * Security. BitLocker. WM. XML
       * Setup. BitLocker. cmd
-    * DeviceGuard :`Copy ..\Output\DeviceGuard\*.*  ..\Workspace\Common\Packages\Security.DeviceGuard`
+    * DeviceGuard: `Copy ..\Output\DeviceGuard\*.*  ..\Workspace\Common\Packages\Security.DeviceGuard`
       * SIPolicyOn. p7b
       * SIPolicyOff. p7b
   
@@ -231,8 +229,8 @@ Después de validar que los paquetes de bloqueo funcionan según la configuraci�
     * `<Feature>SEC_SECUREBOOT</Feature>`
     * `<Feature>SEC_DEVICEGUARD</Feature>`
 3. Volver a generar la imagen
-    * `buildpkg all`(esto genera nuevos paquetes de bloqueo basados en archivos de directivas anteriores)
-    * `buildimage ProductName test(or)retail`(esto genera el nuevo flash. FFU)
+    * `buildpkg all` (esto genera nuevos paquetes de bloqueo basados en archivos de directivas anteriores)
+    * `buildimage ProductName test(or)retail` (esto genera un nuevo flash. FFU)
 4. Parpadee el dispositivo con este nuevo flash. FFU y valide las características de seguridad.
 
 Vea [SecureSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SecureSample) como ejemplo de configuración de la placa Dragon de bloqueo.
@@ -259,7 +257,7 @@ Si es necesario tener acceso a los contenidos con frecuencia sin conexión, se p
 
 ### <a name="disabling-bitlocker"></a>Deshabilitar BitLocker
 
-Si surge la necesidad de deshabilitar BitLocker temporalmente, iniciar una sesión remota de PowerShell con el dispositivo de IoT y ejecute el siguiente `sectask.exe -disable`comando:.  
+Si surge la necesidad de deshabilitar BitLocker temporalmente, iniciar una sesión remota de PowerShell con el dispositivo de IoT y ejecute el siguiente comando: `sectask.exe -disable`.  
 
 > [!NOTE]
 > El cifrado de dispositivo se volverá a habilitar en el siguiente arranque del dispositivo a menos que se deshabilite la tarea de cifrado programado.

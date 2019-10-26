@@ -1,17 +1,15 @@
 ---
 title: Administración de dispositivos IoT de Azure
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo administrar los dispositivos mediante la administración de dispositivos IoT de Azure y Windows IoT.
 keywords: Windows IOT, Azure IoT, administración de dispositivos de Azure, administración de dispositivos
-ms.openlocfilehash: 51580c2ca4c5bf653428ed83e0d6d53310ae89a3
-ms.sourcegitcommit: b00cd20ca22e63b3d0795a1b8fe248963b3c74ed
+ms.openlocfilehash: 6ab98a1b684c21042395dbd3af0c5cd3d2fa215c
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67467128"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917384"
 ---
 # <a name="azure-iot-device-management"></a>Administración de dispositivos IoT de Azure   
 
@@ -66,10 +64,10 @@ El servicio Azure Device Provisioning permite a los clientes asociar y configura
 
 Microsoft proporciona la herramienta limpet para simplificar el proceso de registro del servicio Device provisioning. En función de la configuración de fabricación, si hay una conexión en línea disponible, el dispositivo se puede registrar mediante limpet directamente con el servicio Device provisioning o limpet puede recopilar el EKeyPub para un registro posterior sin conexión del dispositivo con el dispositivo. Servicio de aprovisionamiento.  
 
-Para más información sobre el proceso de registro del servicio Device provisioning con limpet, consulte la sección [inscripción del dispositivo en el servicio Device](https://github.com/ms-iot/azure-dm-client/blob/master/docs/limpet.md#setup-azure-cloud-resources) provisioning en la [documentación de limpet](https://github.com/ms-iot/azure-dm-client/blob/master/docs/limpet.md).    
+Para más información sobre el proceso de registro del servicio Device provisioning con limpet, consulte la sección [inscripción del dispositivo en el servicio Device provisioning](https://github.com/ms-iot/azure-dm-client/blob/master/docs/limpet.md#setup-azure-cloud-resources) en la [documentación de limpet](https://github.com/ms-iot/azure-dm-client/blob/master/docs/limpet.md).    
 
-Repositorio del proyecto: [Repositorio del proyecto de limpet](https://github.com/ms-iot/azure-dm-client/)     
+Repositorio del proyecto: [repositorio del proyecto de limpet](https://github.com/ms-iot/azure-dm-client/)     
 
 
-Sin Limpet cuenta con licencia de código abierto MIT   
+Licencia: limpet tiene licencia en virtud de la licencia de código abierto MIT   
 

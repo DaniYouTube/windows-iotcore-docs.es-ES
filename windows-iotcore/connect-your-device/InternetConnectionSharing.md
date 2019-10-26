@@ -1,17 +1,15 @@
 ---
 title: Conexión compartida a Internet
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo habilitar y configurar la conexión compartida a Internet en Windows IoT Core.
 keywords: Windows IOT, conexión compartida a Internet, ICS, portal de dispositivos
-ms.openlocfilehash: dcf51d98bc618c1a843c43b2d33fc8f832ef73d4
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 6392ef8b6216b9e622e308f8e1988655ebebee53
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60169023"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918579"
 ---
 # <a name="internet-connection-sharing"></a>Conexión compartida a Internet
 
@@ -19,7 +17,7 @@ En este documento se describe cómo se puede habilitar la conexión compartida a
 Cuando se usa una de las imágenes de la [versión de IOT Core de Windows 10](https://developer.microsoft.com/en-us/windows/iot/downloads) , ICS también puede configurarse mediante el portal de dispositivos.
 
 > [!IMPORTANT]
-> Primero se debe crear un perfil de Wi-Fi y se deben agregar los siguientes elementos al manifiesto:`<DeviceCapability Name="wiFiControl" />`
+> Primero se debe crear un perfil de Wi-Fi y se deben agregar los siguientes elementos al manifiesto: `<DeviceCapability Name="wiFiControl" />`
 
 Para ver el tutorial de uso compartido, consulte el documento de la [versión de Windows IOT Core de noviembre 2015](InternetConnectionSharingNov2015.md) .
 

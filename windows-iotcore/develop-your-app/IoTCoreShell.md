@@ -1,17 +1,15 @@
 ---
 title: Información general sobre el shell de IoT
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo aprovechar el shell de IoT para navegar entre las navegaciones del dispositivo.
 keywords: Windows IOT, Shell de IoT Core, aplicaciones, aplicaciones de primer plano, aplicaciones en segundo plano
-ms.openlocfilehash: 74d8406036aa18dc5f8dcaa871e116eb7f8ec29b
-ms.sourcegitcommit: beed912a2266d6dbc06a8a26b85ff49f1feffd69
+ms.openlocfilehash: e23f121073a84f9c36a390eb126e83b4f4215fee
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316625"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918240"
 ---
 # <a name="iot-shell-overview"></a>Información general sobre el shell de IoT
 
@@ -19,7 +17,7 @@ En este documento se tratan el shell de IoT, las aplicaciones de primer plano y 
 
 ## <a name="iot-shell-foreground-and-background-apps"></a>Aplicaciones de Shell de IoT, de primer plano y en segundo plano
 
-El dispositivo de IoT Core ejecuta el shell de IoT. Tiene muchas responsabilidades, pero su trabajo principal es asegurarse de que se inician las aplicaciones de inicio registradas. Tiene dos modos: Con cabeza y sin periféricos. En el modo de cabeza, el shell de IoT iniciará una sola aplicación de inicio registrada que mostrará su interfaz de usuario en pantalla completa (también conocida como aplicación de encabezado). El modo de cabeza supone que tiene una pantalla conectada y muestra la interfaz de usuario. En el modo sin periféricos (se explica con detalle [aquí](../learn-about-hardware/HeadlessMode.md)), no hay ninguna interfaz de usuario; el shell de IoT solo inicia aplicaciones en segundo plano.
+El dispositivo de IoT Core ejecuta el shell de IoT. Tiene muchas responsabilidades, pero su trabajo principal es asegurarse de que se inician las aplicaciones de inicio registradas. Tiene dos modos: con cabeza y sin periféricos. En el modo de cabeza, el shell de IoT iniciará una sola aplicación de inicio registrada que mostrará su interfaz de usuario en pantalla completa (también conocida como aplicación de encabezado). El modo de cabeza supone que tiene una pantalla conectada y muestra la interfaz de usuario. En el modo sin periféricos (se explica con detalle [aquí](../learn-about-hardware/HeadlessMode.md)), no hay ninguna interfaz de usuario; el shell de IoT solo inicia aplicaciones en segundo plano.
 
 Estas son las principales diferencias entre las aplicaciones de primer y segundo plano:
 
@@ -66,7 +64,7 @@ Como alternativa, si desea cambiar entre las aplicaciones de primer plano, puede
 “NEXT” QWORD 0x00020000 00050009 
 ``
 
-Como archivo REG, tiene el siguiente aspecto:``
+Como archivo REG, tiene el siguiente aspecto: ``
 [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\HotKeys]
 "Prev"=hex(b):09,00,01,00,00,00,01,00
 "Next"=hex(b):09,00,05,00,00,00,02,00
@@ -76,12 +74,12 @@ Como archivo REG, tiene el siguiente aspecto:``
 
 Las entradas del archivo REG anteriores descodifican de izquierda a derecha como se indica a continuación:
 
-- Bits 0-15: Código de tecla virtual (es decir, 1B, 00 para ESCAPE). Consulte el [código de tecla virtual](https://msdn.microsoft.com/library/windows/desktop/dd375731(v=vs.85).aspx) para ver la lista completa de valores de código clave.
-- Bits 16-19: Tecla modificadora. 0X0 = sin modificador, 0x1 = ALT, 0X2 = CTRL y 0x4 = Mayús. La combinación de claves suma los valores (es decir, ALT + MAYÚS es 0X5)
-- Bits 20-47: Reservado para uso futuro; debe ser 0
-- Bits 48-62:  .
+- Bits 0-15: código de tecla virtual (es decir, 1B, 00 para ESCAPE). Consulte el [código de tecla virtual](https://msdn.microsoft.com/library/windows/desktop/dd375731(v=vs.85).aspx) para ver la lista completa de valores de código clave.
+- Bits 16-19: tecla modificadora. 0X0 = sin modificador, 0x1 = ALT, 0X2 = CTRL y 0x4 = Mayús. La combinación de claves suma los valores (es decir, ALT + MAYÚS es 0X5)
+- Bits 20-47: reservado para uso futuro; debe ser 0
+- Bits 48-62: acción
     - 0 = Inicio
     - 1 = vista anterior (puede que no funcione en versiones futuras)
     - 2 = vista siguiente (puede que no funcione en versiones futuras)
-- Bit 63: Sector debe ser 0
+- Bit 63: reservado; debe ser 0
 

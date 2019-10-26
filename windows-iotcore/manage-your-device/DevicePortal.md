@@ -1,19 +1,17 @@
 ---
 title: Windows Device Portal
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
 description: Obtenga información sobre cómo usar el portal de dispositivos de Windows para configurar y administrar el dispositivo de forma remota.
 keywords: Windows IOT, Windows Device portal, Remote, portal de dispositivos
-ms.openlocfilehash: 8e430365ea09509f5638d86ac77b151226df488f
-ms.sourcegitcommit: 8932969dc50805113c330bc2ba6ec9003d067b3c
+ms.openlocfilehash: d7e5285b7a29a61f15a5272cc822832230e56f75
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412149"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917432"
 ---
 # <a name="windows-device-portal"></a>Windows Device Portal
    Windows Device portal (WDP) le permite configurar y administrar el dispositivo de forma remota a través de la red local.
@@ -22,7 +20,7 @@ Las características principales se documentan en la [Página de información ge
 ![Página principal del portal de dispositivos](../media/deviceportal/deviceportal.png)
 
 > [!IMPORTANT]
-> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
+> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Puedes obtener más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
 
 > [!WARNING]
 > Actualmente no se puede realizar la depuración del kernel activo para dispositivos ARM. Estamos trabajando para solucionar este problema.
@@ -34,11 +32,11 @@ Las características principales se documentan en la [Página de información ge
 WDP es una herramienta de desarrollo compartida entre todos los dispositivos de Windows 10. Cada producto tiene sus propias características únicas, pero la funcionalidad básica es la misma.
 La documentación de las principales características se encuentra en la [Página de información general del portal de dispositivos de Windows](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal). El resto de la documentación siguiente será específico de IoT.
 
-## <a name="set-up"></a>Configuración
+## <a name="set-up"></a>Configurar
 
 Hay dos maneras de poner en marcha el portal de dispositivos de Windows.
 
-### <a name="1-windows-10-iot-dashboard"></a>1. Panel de Windows 10 IoT
+### <a name="1-windows-10-iot-dashboard"></a>1. panel de IoT de Windows 10
 
 En primer lugar, querrá descargar el [Panel de IOT de Windows 10](https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/iotdashboard), una herramienta de desarrollador que facilita la configuración de nuevos dispositivos. Una vez que haya usado el panel para crear una imagen de Windows 10 IoT Core en el dispositivo, compruebe que el dispositivo aparece en "mis dispositivos". 
 
@@ -47,7 +45,7 @@ Desde allí, use los puntos suspensivos en "acciones" para seleccionar "abrir en
     Username: `Administrator`<br/>
     Password: `p@ssw0rd`
  
- ### <a name="2-browser"></a>2. Browser
+ ### <a name="2-browser"></a>2. explorador
 Si no puede encontrar el dispositivo en el panel o prefiere omitir el uso del panel, también puede abrir el portal de dispositivos escribiendo la dirección IP del dispositivo más `:8080` al final. Cuando se realiza correctamente, debería tener un aspecto similar al siguiente:
 
 
@@ -64,7 +62,7 @@ IoT Core agrega una casilla para habilitar o deshabilitar el [teclado en pantall
 
 ### <a name="apps"></a>Aplicaciones
 Proporciona la funcionalidad de instalación y desinstalación de paquetes AppX y agrupaciones en el dispositivo.
-![Lista de aplicaciones](../media/DevicePortal/AppList.png)
+![lista de aplicaciones](../media/DevicePortal/AppList.png)
 
 IoT Core es único, ya que solo permite ejecutar una aplicación en primer plano al mismo tiempo. La lista de aplicaciones se modifica para asegurarse de que este es el caso. En la columna **Inicio** , puede seleccionar tantas aplicaciones en segundo plano como se inicien de forma predeterminada, pero solo puede establecer una aplicación en primer plano.  
 
@@ -91,7 +89,7 @@ Esto es similar a los volcados de kernel en vivo, pero para los procesos de modo
 #### <a name="kernel-crash-settings"></a>Configuración de bloqueo de kernel
 ![Configuración de bloqueo de kernel](../media/DevicePortal/Debug3.png)
 
-### <a name="bluetooth"></a>Bluetooth
+### <a name="bluetooth"></a>Bluetooth,
 En esta página se muestran todos los dispositivos emparejados con Bluetooth y todos los dispositivos que se pueden detectar. Para emparejar con otro dispositivo Bluetooth, coloque el dispositivo en modo de emparejamiento y espere a que aparezca en la lista dispositivos disponibles.  
 ![Lista de dispositivos Bluetooth](../media/DevicePortal/Bluetooth.png)
 
@@ -118,12 +116,12 @@ Para usar esta característica, el dispositivo de IoT de Windows 10 debe tener a
 > [!NOTE]
 > Para usar la incorporación de AllJoyn con las compilaciones de IoT de Windows 10 10.0.14393 o anterior, se requiere una actualización del ejemplo <strong>IotOnboarding</strong> que se puede [Descargar aquí](https://github.com/ms-iot/samples).
 
-![Incorporación a la incorporación de](../media/DevicePortal/OnboardingAllJoyn.png)
-AllJoyn![en ICS](../media/DevicePortal/OnboardingICS.png)
+![incorporación en el](../media/DevicePortal/OnboardingAllJoyn.png)
+de AllJoyn![incorporación a ICS](../media/DevicePortal/OnboardingICS.png)
 
 > [!NOTE]
 > El adaptador de punto de acceso es el adaptador WiFi que actúa como punto de acceso WiFi (normalmente tiene una dirección IP como 192.168.137.1).
-> Adaptador de red compartido es el adaptador que se conecta a Internet (por ejemplo: Adaptador Ethernet).
+> Adaptador de red compartido es el adaptador que se conecta a Internet (por ejemplo: adaptador Ethernet).
 
 ![Incorporación a AP blando](../media/DevicePortal/OnboardingSoftAP.png)
 
@@ -135,7 +133,7 @@ AllJoyn![en ICS](../media/DevicePortal/OnboardingICS.png)
 El Módulo de plataforma segura (TPM) es un coprocesador criptográfico que incluye funcionalidades para la generación de números aleatorios, la generación segura de claves criptográficas y la limitación de su uso. También incluye funcionalidades como la atestación remota y el almacenamiento sellado. Para obtener información sobre el TPM y la seguridad en IoT Core, visite la página [creación de dispositivos seguros](../secure-your-device/BuildingSecureDevices.md) y la página [TPM](../secure-your-device/TPM.md) .
 
 > [!IMPORTANT]
-> Limpet. exe que se usa para formar parte de Windows IoT Core. A partir del 2018 de octubre, ahora está disponible como Porject de código abierto [https://github.com/ms-iot/azure-dm-client](https://github.com/ms-iot/azure-dm-client)en.
+> Limpet. exe que se usa para formar parte de Windows IoT Core. A partir del 2018 de octubre, ahora está disponible como Porject de código abierto en [https://github.com/ms-iot/azure-dm-client](https://github.com/ms-iot/azure-dm-client).
 
 Para facilitar las pruebas, tenemos una versión pregenerada no firmada de limpet. exe disponible y se puede descargar directamente desde WDP. Solo tiene que ir a la pestaña "configuración de TPM" y hacer clic en el botón "instalar latest". 
 
@@ -197,14 +195,14 @@ Para capturar un volcado de memoria completo, haga lo siguiente:
 
 2. En depurar-> configuración de depuración-> configuración de bloqueo del kernel-> tipo de volcado de memoria. 
 
-3. No Volcado de memoria completo (en uso de memoria).
+3. Select: completar volcado de memoria (en uso de memoria).
     Asegúrese de que el dispositivo se reinicie para que la configuración surta efecto. 
     
 4. Compruebe que `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl\CrashDumpEnabled` está establecido en 0x1.
 
 5. Actualice `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl\DumpFileSize` a 0X0.
 
-6. Asegúrese de que tiene suficiente espacio en el dispositivo para que se genere este volcado. Puede configurar el cambio de la ubicación del volcado de página desde aquí:`HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl\DumpFile`
+6. Asegúrese de que tiene suficiente espacio en el dispositivo para que se genere este volcado. Puede configurar el cambio de la ubicación del volcado de página desde aquí: `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl\DumpFile`
 
 
 ## <a name="additional-resources"></a>Recursos adicionales

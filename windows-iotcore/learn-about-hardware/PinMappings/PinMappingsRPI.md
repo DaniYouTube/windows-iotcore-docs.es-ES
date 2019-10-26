@@ -1,17 +1,15 @@
 ---
 title: Asignaciones de Raspberry pi 2 & 3 pin
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre la funcionalidad de las asignaciones de PIN para Raspberry pi 2 y 3.
 keywords: Windows IOT, Rasperry pi 2, Raspberry PI 3, asignaciones de PIN, GPIO
-ms.openlocfilehash: 86e641bdcc6b4895161c6509ca7529b0dd55fad9
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 2a3155b28fb01434ff8596de6e2f75b06b42f6ae
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167521"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917849"
 ---
 # <a name="raspberry-pi-2--3-pin-mappings"></a>Asignaciones de Raspberry pi 2 & 3 pin
 
@@ -64,7 +62,7 @@ Se puede acceder a los siguientes PIN de GPIO a través de las API:
 > | 35 *   | PullUp        |                     | LED de alimentación rojo      |
 > | 47 *   | PullUp        |                     | LED de actividad verde |
 
-\*= SOLO Raspberry pi 2. GPIO 35 & 47 no están disponibles en Raspberry PI 3.
+\* = Raspberry pi 2 solamente. GPIO 35 & 47 no están disponibles en Raspberry PI 3.
 
 ### <a name="gpio-sample"></a>Ejemplo de GPIO
 
@@ -101,7 +99,7 @@ Cuando se cierra un PIN, vuelve a su estado de encendido.
 
 ### <a name="pin-muxing"></a>Multiplexación de PIN
 
-Algunos PIN de GPIO pueden realizar varias funciones. De forma predeterminada, los PIN se configuran como entradas de GPIO. Al abrir una función `I2cDevice.FromIdAsync()` alternativa llamando a o `SpiDevice.FromIdAsync()` , los pin requeridos por la función se cambian automáticamente ("MUX") a la función correcta. Cuando el dispositivo se cierra mediante una `I2cDevice.Dispose()` llamada `SpiDevice.Dispose()`a o, los pin vuelven a su función predeterminada. Si intenta usar un PIN para dos funciones diferentes a la vez, se producirá una excepción al intentar abrir la función en conflicto. Por ejemplo,
+Algunos PIN de GPIO pueden realizar varias funciones. De forma predeterminada, los PIN se configuran como entradas de GPIO. Cuando se abre una función alternativa llamando a `I2cDevice.FromIdAsync()` o `SpiDevice.FromIdAsync()`, los pin requeridos por la función se cambian automáticamente ("MUX") a la función correcta. Cuando el dispositivo se cierra llamando a `I2cDevice.Dispose()` o `SpiDevice.Dispose()`, los pin vuelven a su función predeterminada. Si intenta usar un PIN para dos funciones diferentes a la vez, se producirá una excepción al intentar abrir la función en conflicto. Por ejemplo:
 
 ```csharp
 var controller = GpioController.GetDefault();
@@ -121,7 +119,7 @@ var gpio2 = controller.OpenPin(2); // succeeds now that GPIO2 is available
 
 ## <a name="serial-uart"></a>UART en serie
 
-Hay un UART de serie disponible en RPi2/3: **UART0**
+Hay un UART en serie disponible en RPi2/3: **UART0**
 
 * Pin 8- **UART0 TX**
 * PIN 10- **UART0 RX**

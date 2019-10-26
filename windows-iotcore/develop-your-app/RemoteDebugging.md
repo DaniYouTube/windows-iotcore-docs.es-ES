@@ -2,16 +2,16 @@
 title: Depurar la aplicación mediante la depuración de aplicaciones de consola remota
 author: bfjelds
 ms.author: bfjelds
-ms.date: 09/12/17
+ms.date: 09/12/2017
 ms.topic: article
 description: Obtenga información sobre cómo depurar de forma remota la aplicación de consola de IoT Core en Visual Studio.
 keywords: Windows IOT, Visual Studio, implementación de aplicaciones, depuración remota
-ms.openlocfilehash: dc3afad193bc6356a5f897f386f5061adaf6bc01
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: b18af69009b43df5d5d6f3d64a45d9d468017642
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170582"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918215"
 ---
 # <a name="debug-your-app-using-remote-console-app-debugging"></a>Depurar la aplicación mediante la depuración de aplicaciones de consola remota
 
@@ -19,7 +19,7 @@ Aquí se muestra cómo depurar la aplicación de consola de IoT Core de forma re
 
 * En primer lugar, debe configurar el depurador remoto en el dispositivo Windows IoT Core. En primer lugar, siga los pasos que se indican a [continuación](AppDeployment.md) para implementar cualquier otra aplicación universal de Windows en el dispositivo (Pruebe el proyecto HelloWorld). Se copiarán todos los archivos binarios necesarios en el dispositivo. 
 
-* Para iniciar el depurador remoto en el dispositivo, abra un explorador Web en su PC y apunte a `http://<device name/IP address>:8080` para iniciar el [portal de dispositivos de Windows](../manage-your-device/DevicePortal.md). En el cuadro de diálogo credenciales, use el nombre de `Administrator`usuario `p@ssw0rd`y la contraseña predeterminados:,. La administración de dispositivos Windows debe iniciar y mostrar la pantalla de inicio de administración web.
+* Para iniciar el depurador remoto en el dispositivo, abra un explorador Web en su PC y apunte a `http://<device name/IP address>:8080` para iniciar el [portal de dispositivos de Windows](../manage-your-device/DevicePortal.md). En el cuadro de diálogo credenciales, use el nombre de usuario y la contraseña predeterminados: `Administrator``p@ssw0rd`. La administración de dispositivos Windows debe iniciar y mostrar la pantalla de inicio de administración web.
 
 * Ahora, vaya a la sección configuración de depuración del portal de dispositivos de Windows y haga clic en el botón Inicio en iniciar Visual Studio Remote Debugger. 
 
@@ -45,7 +45,7 @@ Aquí se muestra cómo depurar la aplicación de consola de IoT Core de forma re
 
     ![Definimos configuración del proyecto de equipo remoto](../media/Console/deploy_checkbox.png)
 
-* Ahora estamos listos para implementar en el dispositivo Windows IoT Core remoto. Simplemente presione F5 (o seleccione \| depurar iniciar depuración) para iniciar la depuración de la aplicación. También puede usar la solución \| de implementación de compilación para implementar simplemente la aplicación sin iniciar una sesión de depuración.
+* Ahora estamos listos para implementar en el dispositivo Windows IoT Core remoto. Simplemente presione F5 (o seleccione Depurar \| iniciar depuración) para iniciar la depuración de la aplicación. También puede usar compilar \| implementar solución para implementar simplemente la aplicación sin iniciar una sesión de depuración.
 
 > [!NOTE]
 > Cuando se ejecuta desde Visual Studio, la salida no se mostrará en ningún lugar, pero podrá establecer puntos de interrupción, ver valores de variables, etc.

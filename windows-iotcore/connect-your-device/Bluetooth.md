@@ -1,17 +1,15 @@
 ---
 title: Compatibilidad con Bluetooth
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo aprovechar Bluetooth para dispositivos que ejecutan Windows 10 IoT Core.
 keywords: Windows IOT, Bluetooth, compatibilidad con Bluetooth, dispositivos, portal de dispositivos
-ms.openlocfilehash: f24b50b65b192ed6bd9309eeda30dbadfedf5bc2
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: e9159e6488ddcd078f5d73b0dafd08082e295cde
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60168982"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918367"
 ---
 # <a name="bluetooth-support"></a>Compatibilidad con Bluetooth
 Windows 10 IoT Core admite Bluetooth 4,0. Puede encontrar una lista de los llaves Bluetooth compatibles en la [lista de compatibilidad de hardware](../learn-about-hardware/HardwareCompatList.md).

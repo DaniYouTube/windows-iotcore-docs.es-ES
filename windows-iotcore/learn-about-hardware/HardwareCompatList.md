@@ -1,17 +1,15 @@
 ---
 title: Lista de compatibilidad de hardware
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre las interfaces y los protocolos de periféricos que admite Windows 10 IoT Core.
 keywords: Windows IOT, periféricos, protocolos, compatibilidad, buses, hardware
-ms.openlocfilehash: d1d97c3bff2fe843216410d07530f4866136bc63
-ms.sourcegitcommit: c5552007f5456e57512307f51b146406a23fa723
+ms.openlocfilehash: 4444001a77db654e1e666af068bec251749fb5ff
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739827"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918104"
 ---
 # <a name="hardware-compatibility-list"></a>Lista de compatibilidad de hardware
 
@@ -31,7 +29,7 @@ Windows 10 IoT Core admite una variedad de protocolos y interfaces de periféric
 > | Llave de Wi-Fi oficial de Raspberry PI | ARM32, x64, x86 | El adaptador WiFi de Raspberry PI oficial ofrece el mejor rendimiento de Wi-Fi posible para su tamaño de diminutive. | | &#10004;  |
 > | Adaptador USB Airlink Wireless N 150 mini | x64, x86 | Adaptador USB Mini inalámbrico Airlink 101 AWL5077 dorado con WPA2, WPA y WEP mejorado | | &#10004;  
 > | Panda PAU06 | x64, x86 |  Adaptador USB de Panda 300 Mbps Inalámbrico N con antena de alta ganancia | |  &#10004;  
-> | TP-LINK TL_WN725N |  ARM32, x64, x86 | Adaptador TP-LINK TL-WN725N Wireless N Nano adaptador USB 150 Mbps`(USB/VID_0BDA&PID_8179)` |  | &#10004;  
+> | TP-LINK TL_WN725N |  ARM32, x64, x86 | TP-LINK TL-WN725N adaptador USB de nano inalámbrico N 150 Mbps `(USB/VID_0BDA&PID_8179)` |  | &#10004;  
 > | Adaptador de red Wi-DIN USB WiFi | MBM | Adaptador USB WiFi NET-DYN | |  &#10004;  
 > | Wi-Fi USB inalámbrico Realtek 8191 | ARM32, x64, x86 | Adaptador de tarjeta de red LAN inalámbrica WiFi Realtek 8191 300 g/g/b/USB | | &#10004;  
 > | Wi-Fi USB inalámbrico Realtek 8192 | ARM32, x64, x86 | Controlador de WLAN de un solo chip IEEE 802.11 b/g/n 2T2R con la interfaz USB 2,0 | | &#10004; |
@@ -58,7 +56,7 @@ Windows 10 IoT Core admite una variedad de protocolos y interfaces de periféric
 > |----------------|-------------------|-------------|--------|------------------------------|
 > | Cámara USB 3000 de Microsoft LifeCam | ARM32, x64, x86 | Cámara web USB | [Proyecto de cámara de seguridad principal](https://developer.microsoft.com/en-us/windows/iot/samples/webcamapp)|&#10004;|
 > | Microsoft LifeCam HD-5000 | ARM32, x64, x86 | Webcam HD de Microsoft LifeCam HD-5000 720p | | &#10004; |
-> | ™ De Microsoft® LifeCam Studio | ARM32 | ™ De Microsoft® LifeCam Studio (modelo: Webcam de 1425) 1080p HD | | |
+> | ™ De Microsoft® LifeCam Studio | ARM32 | Microsoft® LifeCam Studio™ (modelo: 1425) 1080p HD Webcam | | |
 > | Logitech Webcam C210 | ARM32, x64, x86 | Cámara web de USB, 1.3 foto de MP |  |&#10004; |
 
 ### <a name="audio"></a>Audio

@@ -1,17 +1,15 @@
 ---
 title: Panel de Windows 10 IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre lo que hace el panel de IoT Core de Windows 10 y cómo empezar.
 keywords: Windows IOT, Windows 10 IOT Core Dashboard, panel de Windows IOT, dispositivos
-ms.openlocfilehash: af87ff8224cf77b567b1dd96e6de2297b4752530
-ms.sourcegitcommit: f447681d9a73ebdec97a3da973bd798a02df975d
+ms.openlocfilehash: e244dd4705fa85707468f284b9a5d070c91720d8
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197677"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918617"
 ---
 # <a name="windows-10-iot-core-dashboard"></a>Panel de Windows 10 IoT Core
 
@@ -44,7 +42,7 @@ Una tarjeta SD más antigua y menos confiable podría no funcionar siquiera. Si 
 El nombre de dispositivo predeterminado es minwinpc. Se recomienda cambiarla a algo único, ya que esto facilita la búsqueda del dispositivo en la red. El nombre del dispositivo puede tener una longitud de 15 caracteres como máximo y puede incluir letras, números y los siguientes símbolos: @ # $% ^ & ') (. -_ {} ~ Si cambia el nombre del dispositivo en el panel de IoT al configurar el dispositivo, se producirá un reinicio automático la primera vez que encienda el dispositivo.
 
 ### <a name="password"></a>Contraseña
-La contraseña es un campo obligatorio y debe establecerse. Al establecer una contraseña en el panel de IoT, se modifica la contraseña del usuario administrador quep@ssw0rd, de forma predeterminada, es "".
+La contraseña es un campo obligatorio y debe establecerse. Al establecer una contraseña en el panel de IoT, se modifica la contraseña del usuario administrador que, de forma predeterminada, es "p@ssw0rd".
 
 ### <a name="wi-fi-network-connection"></a>Conexión de red Wi-Fi
 En el panel de IoT se muestran todas las redes disponibles a las que se ha conectado el equipo previamente. Si no ve la red Wi-Fi deseada en la lista, asegúrese de que está conectado a ella en su PC.

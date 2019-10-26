@@ -1,17 +1,15 @@
 ---
 title: Módulo de plataforma segura (TPM)
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información acerca de cómo usar un Módulo de plataforma segura para habilitar las capacidades criptográficas para mejorar la seguridad de los dispositivos.
 keywords: Windows IOT, seguridad, Módulo de plataforma segura, TPM, criptografía, claves
-ms.openlocfilehash: 70552a5f98891281879f1d45cbdbd671b56dd902
-ms.sourcegitcommit: 77b86eee2bba3844e87f9d3dbef816761ddf0dd9
+ms.openlocfilehash: 36197c1cea96c964026682da2d05ba1fcd6524a9
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65533319"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918528"
 ---
 # <a name="trusted-platform-module-tpm-on-windows-10-iot-core"></a>Módulo de plataforma segura (TPM) en Windows 10 IoT Core
 
@@ -69,7 +67,7 @@ El TPM de software (sTPM) también se conoce como simulador de TPM. Es independi
 > sTPM está pensado únicamente para fines de desarrollo y no proporciona ninguna ventaja de seguridad real.  
 
 
-## <a name="samples"></a>Muestras  
+## <a name="samples"></a>Ejemplos  
 <!--
 * [TBSSample project C++](https://developer.microsoft.com/en-us/windows/iot/samples/tbssample)
   This tutorial demonstrates how to create a basic C++ application that uses TBS to poll the TPM.  -->

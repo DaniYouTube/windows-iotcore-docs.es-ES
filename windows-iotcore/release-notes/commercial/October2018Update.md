@@ -1,17 +1,15 @@
 ---
 title: 'Actualización de octubre de 2018: compilación 17763'
-author: saraclay
-ms.author: saclayt
 ms.date: 10/02/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de la actualización de octubre de 2018 para Windows.
 keywords: Windows IoT, actualización de octubre de 2018, notas de la versión
-ms.openlocfilehash: 886f86a733f53632dee73d0af7b2c172693bc3a5
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 30292437da20a577a319fe47b3f5c2647df00382
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170123"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918708"
 ---
 # <a name="october-2018-update-release-notes-for-windows-10-iot"></a>Notas de la versión de octubre de 2018 para Windows 10 IoT
 Número de compilación 17763. Octubre de 2018
@@ -79,7 +77,7 @@ _Windows 10 IoT Core_
 ## <a name="windows-10-iot-core-reference-images"></a>Imágenes de referencia de Windows 10 IoT Core
 ___ 
 * Minnowboard Max
-  * Procesador: E3825 de Intel Atom
+  * Procesador: Intel Atom E3825
   * Arquitectura: x86
 
 * Modelo B de Raspberry PI 3

@@ -1,17 +1,15 @@
 ---
 title: Arduino y Windows 10
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo usar Arduino y Windows 10 juntos en el cableado, Arduino remoto y mucho más.
 keywords: Windows IOT, Arduino, conexión de Arduino, Arduino remota de Windows
-ms.openlocfilehash: 79201f2f85f84783838b1de7c28031863d948d5e
-ms.sourcegitcommit: cbea9d713986fbe8b85e1bba1561a000188bd91c
+ms.openlocfilehash: 3d402d2718d5d57177d62eaff39a86841b61ad42
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64744799"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918148"
 ---
 # <a name="arduino-and-windows-10"></a>Arduino y Windows 10
 
@@ -30,7 +28,7 @@ Para habilitar el uso del lenguaje [Arduino cableado](https://www.arduino.cc/en/
 
 ## <a name="windows-remote-arduino"></a>Arduino remoto de Windows
 
-[![Arduino remoto de Windows](../media/ArduinoAndWindows10/WindowsPhone_0.png)](https://github.com/ms-iot/remote-wiring)
+[![remoto de Windows Arduino](../media/ArduinoAndWindows10/WindowsPhone_0.png)](https://github.com/ms-iot/remote-wiring)
 
 Windows Remote Arduino es una biblioteca de Windows Runtime de código abierto que permite a los fabricantes controlar un Arduino a través de una conexión Bluetooth, USB, Wi-Fi o Ethernet. Permite a los desarrolladores incluir sensores de Arduino en sus proyectos de Windows, o incluso descargar trabajo caromente costoso de un Arduino a Windows. La biblioteca de Arduino remota de Windows se puede usar con cualquier lenguajeC++de WinRT C# (/CX y JavaScript).
 

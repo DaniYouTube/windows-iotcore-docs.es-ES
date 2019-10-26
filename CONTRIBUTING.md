@@ -1,6 +1,6 @@
 # <a name="contributing-to-the-windows-10-iot-documentation"></a>Contribución a la documentación de Windows 10 IoT
 
-Gracias por interesarse en nuestra documentación. Le agradecemos sus comentarios, ediciones, adiciones y ayuda en la mejora de nuestra documentación. En esta página se tratan los pasos e instrucciones básicos para la contribución.
+Gracias por interesarse en nuestra documentación. Agradecemos sus comentarios, ediciones, adiciones y ayuda para mejorar nuestros documentos. En esta página se describen los pasos básicos y las instrucciones para contribuir.
 
 ## <a name="sign-a-cla"></a>Firma de un CLA
 
@@ -29,7 +29,7 @@ Antes de que contribuya con un nuevo artículo, también le pediremos que contes
 * ¿He agregado mi artículo, en caso de que contribuya con un artículo nuevo, a la categoría adecuada y he actualizado TOC.md?
 * ¿He formateado las direcciones URL correctamente para que tengan [este aspecto](https://github.com/MicrosoftDocs/windows-iotcore-docs/blob/master/CONTRIBUTING.md) en lugar de este: https://github.com/MicrosoftDocs/windows-iotcore-docs/blob/master/CONTRIBUTING.md?
 * ¿El artículo nuevo lo han revisado por lo menos dos personas?
-* ¿Ha contactado con Sara (saclayt) o Namrata (namkedia) cuando no ha estado seguro sobre algo?
+* Póngase en contacto con Terry Warwick, twarwick@microsoft.com
 
 Cuando se acepta el nuevo artículo, se recomienda realizar lo siguiente:
 * Compartir el artículo con su equipo. No ocultar el logro e informar a sus colegas.
@@ -41,19 +41,19 @@ Si no está familiarizado con el uso de Git, pruebe el [entrenamiento Lynda.com 
 
 ## <a name="authoring-your-contribution"></a>Creación de la contribución
 
-Una vez que ha bifurcado y clonado el repositorio en el equipo local, puede empezar a crear con el editor de texto que prefiera.  Por supuesto, recomendamos [Visual Studio Code](https://code.visualstudio.com/), un editor ligero gratuito de código abierto de Microsoft. Para obtener ayuda con la creación de Markdown, consulte este [póster Markdown es DIVERTIDO para todos con todos los aspectos básicos que necesita saber. Incluso puede imprimirlo y colgarlo en su pared como un recordatorio para contribuir. 
+Una vez que ha bifurcado y clonado el repositorio en el equipo local, puede empezar a crear con el editor de texto que prefiera.  Por supuesto, recomendamos [Visual Studio Code](https://code.visualstudio.com/), un editor ligero gratuito de código abierto de Microsoft. Para obtener ayuda con la creación de Markdown, consulte este [Markdown es divertido para todo el mundo. Póster](windows-iotcore/media/DocsMarkdownPoster.pdf) con todos los aspectos básicos que debe conocer. Incluso puede imprimirlo y colgarlo en su pared como un recordatorio para contribuir. 
 
 ## <a name="submitting-your-contribution-and-filing-a-pull-request-pr"></a>Envío de la contribución y tramitación de una solicitud de incorporación de cambios
 
 Una vez que esté listo para agregar los cambios en el repositorio remoto para que realicen una copia intermedia para la publicación, escriba los pasos siguientes en la línea de comandos:
-- `git status`: este comando le mostrará qué archivos se han cambiado para que confirme que eran los cambios que quería realizar. 
-- `git add -A`: este comando indica a git que agregue todos los cambios. Si prefiere agregar solo los cambios realizados en un archivo concreto, escriba el comando: `git add <file.md>`, donde "file.md" representa el nombre del archivo que contiene los cambios.
-- `git commit -m “Fixed a few typos”`: este comando indica a git que confirme los cambios que se han agregado en el paso anterior, junto con un mensaje breve que describe los cambios realizados.
-- `git push origin <yourbranchname>`: este comando inserta los cambios en el repositorio remoto del que ha realizado la bifurcación en GitHub (el "origen") en la rama que haya especificado. Puesto que ya ha realizado la bifurcación del repositorio en su propia cuenta de GitHub, le invitamos a realizar su trabajo en la rama **En desarrollo**. 
+- `git status`: este comando le mostrará los archivos que ha modificado para que pueda confirmar que ha previsto realizar esos cambios. 
+- `git add -A`: este comando indica a GIT que agregue todos los cambios. Si prefiere agregar solo los cambios realizados en un archivo concreto, escriba el comando: `git add <file.md>`, donde "file.md" representa el nombre del archivo que contiene los cambios.
+- `git commit -m “Fixed a few typos”`: este comando indica a GIT que confirme los cambios que ha agregado en el paso anterior, junto con un mensaje breve que describe los cambios realizados.
+- `git push origin <yourbranchname>`: este comando envía los cambios al repositorio remoto que ha bifurcado en GitHub (el "origen") en la rama que ha especificado. Puesto que ya ha realizado la bifurcación del repositorio en su propia cuenta de GitHub, le invitamos a realizar su trabajo en la rama **En desarrollo**. 
 
 Cuando esté satisfecho con los cambios y listo para enviar una solicitud, haga lo siguiente:
 - Vaya a la bifurcación del repositorio de IoT: https://github.com/your-github-alias/windows-iotcore-docs.
-- Haga clic en el botón "Nueva solicitud de incorporación de cambios". (La "bifurcación base:" se mostrará como "MicrosoftDocs/windows-iotcore-docs", la "bifurcación principal:" debe mostrar la bifurcación del repositorio y la rama en la que se han realizado los cambios). También puede revisar los cambios aquí. 
+- Haga clic en el botón "Nueva solicitud de incorporación de cambios". (La "bifurcación base:" se mostrará como "MicrosoftDocs/Windows-iotcore-docs", la "bifurcación Head:" debe mostrar la bifurcación del repositorio y la rama en la que realizó los cambios). También puede revisar los cambios aquí. 
 - Haga clic en el botón verde "Crear solicitud de incorporación de cambios". Después, se le pedirá que asigne un título y una descripción a su solicitud de incorporación de cambios y, luego, haga clic otra vez en el botón "Crear solicitud de incorporación de cambios".
 
 Después de insertar su contribución en el repositorio remoto, el *servicio de compilación de publicación abierta* le enviará un correo en el que se le informa si su contribución se ha compilado correctamente y se vinculan las advertencias de error, como vínculos rotos. Haga clic en los vínculos para ver el contenido del que se ha realizado una copia intermedia en el sitio.
@@ -64,7 +64,7 @@ Una vez enviada la solicitud de incorporación de cambios, un miembro del equipo
 
 ## <a name="working-with-branches"></a>Trabajo con ramas
 
-El [repositorio de GitHub de documentos de Windows 10 IoT](https://github.com/MicrosoftDocs/windows-iotcore-docs) utiliza dos ramas principales: [En desarrollo](https://github.com/MicrosoftDocs/windows-iotcore-docs/tree/develop), este contenido se puede consultar en el [sitio de ensayo](https://review.docs.microsoft.com/en-us/windows/iot-core) y [Publicado](https://github.com/MicrosoftDocs/windows-iotcore-docs/tree/live), para el contenido que aparece en el [sitio publicado](https://docs.microsoft.com/windows/iot-core). 
+El [repositorio de github de documentos de IOT de Windows 10](https://github.com/MicrosoftDocs/windows-iotcore-docs) utiliza dos ramas principales: [desarrollar](https://github.com/MicrosoftDocs/windows-iotcore-docs/tree/develop), este contenido se puede revisar en el [sitio de ensayo](https://review.docs.microsoft.com/en-us/windows/iot-core)y en [directo](https://github.com/MicrosoftDocs/windows-iotcore-docs/tree/live), para el contenido que aparece en el [sitio activo](https://docs.microsoft.com/windows/iot-core). 
 
 Al realizar contribuciones, envíe la solicitud de incorporación de cambios a la rama **En desarrollo**. Esta rama se puede ver en el sitio de ensayo y solo debe contener las contribuciones que están listas para ser publicadas.
 

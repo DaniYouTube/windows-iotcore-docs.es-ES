@@ -5,16 +5,17 @@ ms.author: Microsoft alias goes here
 ms.date: 09/11/2018
 ms.topic: article
 description: Escriba la descripción aquí
-keywords: windows iot, soluciones, arquitectura, asociados
-ms.openlocfilehash: 2ea83230f2771bb70032d8e20e93017f67c370ad
-ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+keywords: IOT de Windows
+ROBOTS: NOINDEX
+ms.openlocfilehash: 7023b9649296929b1e8e017a53fa54167260fc14
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "60167680"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918446"
 ---
 # <a name="main-title-goes-here"></a>Escriba el título principal aquí
 
-Contenido
+Contenido: la etiqueta de metadatos de robots: noindex es solo para esta página; no lo incluya en los nuevos artículos. 
 
-## <a name="subtitle"></a>Subtítulo
+## <a name="subtitle"></a>Subtitle

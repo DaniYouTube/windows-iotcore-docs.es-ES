@@ -1,23 +1,21 @@
 ---
 title: Cortana en IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo empezar e instalar actualizaciones de Cortana en Windows IoT Core.
 keywords: Windows IOT, Cortana, voz, AI, asistente digital, idioma
-ms.openlocfilehash: c18534a532b0588b54f377acf1092d6916e8a673
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: b3a4699a762f158671459c8bc592007def6d9621
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170513"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918176"
 ---
 # <a name="cortana-on-iot-core"></a>Cortana en IoT Core
 
 Cortana es un asistente digital personal que trabaja en todos sus dispositivos para ayudarle en su vida diaria. Ella aprende sobre usted; le ayuda a hacer todo lo posible mediante la realización de tareas; interactúa con usted mediante lenguaje natural de una manera coherente y contextual; y siempre le parece. Cortana tiene una identidad visual, personalidad y voz coherentes.
 
-Para habilitar la asistencia inteligente gratuita en el dispositivo con el SDK de dispositivo de Cortana, visite [el centro de desarrollo](http://www.aka.ms/cortanadevices)de Cortana.
+Para habilitar la asistencia inteligente gratuita en el dispositivo con el SDK de dispositivo de Cortana, visite [el centro de desarrollo de Cortana](http://www.aka.ms/cortanadevices).
 
 Cortana en IoT Core se centrará en escenarios comerciales en el futuro. Pronto habrá actualizaciones. 
 

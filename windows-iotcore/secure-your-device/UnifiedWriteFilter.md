@@ -1,17 +1,15 @@
 ---
 title: Usar el filtro de escritura unificado
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información acerca de cómo usar el filtro de escritura unificado para proteger los medios de almacenamiento físico de las escrituras de datos.
 keywords: Windows IOT, filtro de escritura unificado, seguridad, memoria, medios de almacenamiento
-ms.openlocfilehash: d1d6927fe19b5888ef0393d0b101065096cd9f63
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 7c8632cf12d391d458861ef22e2c3a9fc77a3a08
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167562"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918680"
 ---
 # <a name="using-the-unified-write-filter-uwf-on-windows-10-iot-core"></a>Uso del filtro de escritura unificado (UWF) en Windows 10 IoT Core
 
@@ -25,7 +23,7 @@ Lea nuestra documentación sobre el [filtro de escritura unificado](https://docs
 ## <a name="how-to-install-uwf-on-a-device-running-windows-10-iot-core"></a>Instalación de UWF en un dispositivo que ejecuta Windows 10 IoT Core
 
 * Si aún no tiene la versión actual de los kits de IoT Core de Windows 10, descargue e instale los [paquetes de Windows 10 IOT Core](https://www.microsoft.com/en-us/software-download/windows10iotcore).
-* En función de la arquitectura del dispositivo, copie los `Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` paquetes `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab` de UWF (y)`C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`del equipo () en el dispositivo (por ejemplo, con el [uso compartido de archivos de Windows](../manage-your-device/WindowsFileSharing.md)).
+* En función de la arquitectura del dispositivo, copie los paquetes de UWF (`Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` y `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab`) del equipo (`C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`) en el dispositivo (por ejemplo, con el [uso compartido de archivos de Windows](../manage-your-device/WindowsFileSharing.md)).
 * Inicie [ssh](../connect-your-device/SSH.md) o [PowerShell](../connect-your-device/PowerShell.md) y acceda a su dispositivo con Windows 10 IOT Core.
 * Desde SSH o PowerShell, haga lo siguiente:
   * Cambie al directorio en el que ha copiado los archivos
@@ -49,7 +47,7 @@ Lea nuestra documentación sobre el [filtro de escritura unificado](https://docs
 ## <a name="how-to-use-uwf"></a>Cómo usar UWF
 
 UWF se puede configurar mediante la herramienta uwfmgr. exe a través de una sesión de PowerShell o SSH.
-Lea la herramienta para las opciones disponibles con una excepción de algunos comandos que se enumeran a continuación y que no se admiten en IOT Core. [ `uwfmgr.exe` ](https://docs.microsoft.com/windows-hardware/customize/enterprise/uwfmgrexe)
+Lea [`uwfmgr.exe` herramienta](https://docs.microsoft.com/windows-hardware/customize/enterprise/uwfmgrexe) para las opciones disponibles con una excepción de algunos comandos que se enumeran a continuación y que no se admiten en IOT Core.
 Revise la configuración predeterminada de las configuraciones de superposición y adaptarlas según sus necesidades.
 
 UWF también puede configurarse a través del canal de MDM mediante el [CSP de filtro de escritura unificado](https://docs.microsoft.com/windows/client-management/mdm/unifiedwritefilter-csp).
@@ -57,11 +55,11 @@ UWF también puede configurarse a través del canal de MDM mediante el [CSP de f
 
 * Por ejemplo, la siguiente combinación de comandos habilita uwfmgr y configure para proteger la unidad C
 
-  `uwfmgr.exe filter enable`Habilita el filtro de escritura
+  `uwfmgr.exe filter enable` habilita el filtro de escritura
   <br>
-  `uwfmgr.exe volume protect c:`Protege el volumen C
+  `uwfmgr.exe volume protect c:` protege el volumen C
   <br>
-  `shutdown /r /t 0`Reinicia el dispositivo para que la configuración del filtro de escritura sea efectiva.
+  `shutdown /r /t 0` reinicia el dispositivo para que la configuración del filtro de escritura sea efectiva
 
 Es necesario *reiniciar* para que toda la configuración de uwfmgr sea efectiva. 
 
@@ -89,29 +87,29 @@ C:\Data\Programdata\softwaredistribution
 C:\Data\systemdata\nonetwlogs
 ```
 
-Para agregar las exclusiones:`uwfmgr.exe file Add-Exclusion <file/folder name>`
+Para agregar las exclusiones: `uwfmgr.exe file Add-Exclusion <file/folder name>`
 
 
 
 ## <a name="servicing-uwf-protected-devices"></a>Mantenimiento de dispositivos protegidos de UWF
 
 > [!Note]
-> A partir de la versión 1709 de IOT Core de Windows 10, la versión 16299, el\) volumen del sistema operativo principal (C: se puede proteger con el UWF y con servicio *automáticamente* sin ningún paso especial).
+> A partir de la versión 1709 de IoT Core de Windows 10, versión 16299, el volumen principal del sistema operativo (C:\) se puede proteger con el UWF y con servicio *automáticamente* sin ningún paso especial.
 
 Los siguientes pasos son necesarios para el servicio de los dispositivos protegidos de UWF con volúmenes de datos protegidos.
 
-* `uwfmgr.exe filter disable`Deshabilitar UWF
-* `shutdown /r /t 0`Reinicio del dispositivo para deshabilitar UWF
+* `uwfmgr.exe filter disable` deshabilitar UWF
+* `shutdown /r /t 0` reiniciar el dispositivo para deshabilitar el UWF
 * Habilitar el servicio (mediante el paquete de aprovisionamiento o MDM para establecer la Directiva de actualización)
    * Tenga en cuenta que el dispositivo se reiniciará automáticamente para realizar las actualizaciones de servicio.
-* `uwfmgr.exe filter enable`Habilitar UWF
-* `shutdown /r /t 0`Reiniciar el dispositivo para habilitar el UWF
+* `uwfmgr.exe filter enable` habilitar UWF
+* `shutdown /r /t 0` reiniciar el dispositivo para habilitar el UWF
 
 ## <a name="unsupported-uwfmgrexe-commands"></a>Comandos uwfmgr. exe no admitidos
 
 El **modo de servicio de UWF** no es compatible con IOT Core.
 
-`uwfmgr.exe`en Windows 10 IoT Core no es compatible con los comandos que se enumeran a continuación.
+`uwfmgr.exe` en Windows 10 IoT Core no es compatible con los comandos que se enumeran a continuación.
 
 ```
 Filter 

@@ -1,18 +1,16 @@
 ---
 title: Aplicación predeterminada de Windows 10 IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 08/08/2018
 ms.topic: article
 description: Obtenga información sobre la aplicación predeterminada de Windows 10 IoT Core y sus características.
 keywords: Windows IOT, Windows 10 IOT Core, aplicación predeterminada
 ms.custom: RS5
-ms.openlocfilehash: 12baa759c9085360431c2b7f87f72816cd24680b
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: a0e26d54f1c6694cd408de6f54cf0c0fba263156
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60168032"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918248"
 ---
 # <a name="windows-10-iot-core-default-app-overview"></a>Introducción a la aplicación predeterminada de Windows 10 IoT Core
 
@@ -30,12 +28,12 @@ En este artículo se proporciona un resumen de las distintas características qu
 ## <a name="leveraging-the-iot-core-default-app"></a>Aprovechamiento de la aplicación predeterminada de IoT Core 
 
 > [!IMPORTANT]
-> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
+> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Puedes obtener más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
 
 La aplicación predeterminada de IoT Core puede personalizarse y ampliarse, o bien se puede usar el código fuente como ejemplo para su propia aplicación. Para probarlo, descargue el archivo. zip de nuestros ejemplos o consulte el código de la aplicación de IoT Core predeterminada [aquí](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp). Si tiene alguna pregunta, envíe un problema en nuestro repositorio de ejemplos [aquí](https://github.com/Microsoft/Windows-iotcore-samples/issues).
 
-Como se muestra en [la sección](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoredefaultapp#settings
-) configuración siguiente, en algunos casos, puede configurar la configuración y las características predeterminadas en el sistema del cliente en nombre del usuario final. Sin embargo, si activa esta configuración y las características de forma predeterminada o si los diagnósticos están por encima de la configuración básica, debe:
+Como se muestra en la [sección configuración](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoredefaultapp#settings
+) siguiente, en algunos casos, puede configurar la configuración y las características predeterminadas en el sistema del cliente en nombre del usuario final. Sin embargo, si activa esta configuración y las características de forma predeterminada o si los diagnósticos están por encima de la configuración básica, debe:
 
 * Notifique al usuario final que se han habilitado estas características y proporcione al usuario final el vínculo a la Página Web de la declaración de privacidad de Microsoft [aquí](http://go.microsoft.com/fwlink/?LinkId=521839). 
 * Consentimiento seguro del usuario final relevante para habilitar dichas características de forma predeterminada (según lo requiera la ley aplicable).
@@ -46,8 +44,8 @@ Como se muestra en [la sección](https://docs.microsoft.com/windows/iot-core/dev
 
 La configuración rápida de la aplicación predeterminada de IoT Core es tan eficiente como se obtiene. Las primeras páginas solicitarán un idioma y una configuración de Wi-Fi predeterminados. A partir de ahí, para que la aplicación sea compatible con RGPD, debe tener una pantalla de datos de diagnóstico y, si tiene previsto realizar un seguimiento de la ubicación, deberá tener también una pantalla de permisos de ubicación. A continuación se muestran ejemplos de ambos. 
 
-![Configuración de la ubicación](../media/IoTCoreDefaultApp/OOBE3.jpg)
-de la configuración de diagnóstico de Oobe![para Oobe](../media/IoTCoreDefaultApp/OOBE4.jpg)
+![configuración de ubicación de OOBE](../media/IoTCoreDefaultApp/OOBE3.jpg)
+![configuración de diagnóstico para OOBE](../media/IoTCoreDefaultApp/OOBE4.jpg)
 
 ## <a name="command-bar"></a>Barra de comandos
 La barra de comandos es la barra horizonatal persistente que se encuentra en la parte inferior de la pantalla. Esto proporciona acceso sencillo a la siguiente funcionalidad de:
@@ -118,7 +116,7 @@ Esta página le permite ejecutar comandos directamente en el dispositivo.
 
 Para habilitar esta característica, debe establecer una clave del registro para que la aplicación pueda ejecutar los comandos. La primera vez que intente ejecutar un comando, verá un vínculo que le permite establecer la clave del registro mediante una llamada a Windows Device portal. Haga clic en el vínculo para habilitar el dispositivo para ejecutar comandos.
 
-Algunos comandos requieren acceso de administrador. Por motivos de seguridad, la aplicación usa una cuenta que no es de administrador de forma predeterminada para ejecutar comandos. Si necesita ejecutar un comando como administrador, puede escribir "RunAsAdmin <your command>" en el símbolo de la línea de comandos.
+Algunos comandos requieren acceso de administrador. Por motivos de seguridad, la aplicación usa una cuenta que no es de administrador de forma predeterminada para ejecutar comandos. Si necesita ejecutar un comando como administrador, puede escribir "RunAsAdmin <your command>" en el símbolo del sistema.
 
 ## <a name="settings"></a>Configuración
 Aquí podrá configurar una serie de opciones, como Wi-Fi, Bluetooth, opciones de energía, etc.
@@ -134,7 +132,7 @@ Algunas de las opciones que puede personalizar son:
 
 ##### <a name="weather-settings"></a>Configuración meteorológica
 * Cambiar la ubicación
-  > Esta característica solo está habilitada si se ha proporcionado un [token de servicio de mapa de Bing](https://msdn.microsoft.com/library/ff428642.aspx)válido.  Para pasar el token a la aplicación, cree un archivo **MapToken. config** en la carpeta LocalState de la aplicación (por ejemplo,\\C:\Data\USERS [cuenta de usuario\\] \AppData\Packages [nombre completo del paquete] \LocalState\MapToken.config) y reinicie la aplicación.
+  > Esta característica solo está habilitada si se ha proporcionado un [token de servicio de mapa de Bing](https://msdn.microsoft.com/library/ff428642.aspx)válido.  Para pasar el token a la aplicación, cree un archivo **MapToken. config** en la carpeta LocalState de la aplicación (por ejemplo, C:\Data\USERS\\[cuenta de usuario] \AppData\Packages\\[nombre completo del paquete] \LocalState\MapToken.config) y reinicie la aplicación.
 * Expandir el mapa
 * Habilitar o deshabilitar el volteo de mapas para que el mapa y el interruptor meteorológico se coloquen periódicamente para evitar la grabación de la pantalla
 
@@ -144,7 +142,7 @@ Algunas de las opciones que puede personalizar son:
 ##### <a name="slideshow-settings"></a>Configuración de la presentación
 * Establecer el intervalo de presentación de diapositivas
 
-##### <a name="appearance"></a>Apariencia
+##### <a name="appearance"></a>Aparición
 * Usar activos de MDL2 en lugar de emojis para los iconos de icono
 * Establecer el ancho y el alto del mosaico
 * Establecer escala de IU: el escalado automático se establece de forma predeterminada
@@ -156,7 +154,7 @@ Cambiar el idioma, la distribución del teclado y la zona horaria.
 #### <a name="network--wi-fi"></a>Red & Wi-Fi
 Ver las propiedades del adaptador de red o conectarse a una red Wi-Fi disponible.
 
-#### <a name="bluetooth"></a>Bluetooth
+#### <a name="bluetooth"></a>Bluetooth,
 Emparejar con un dispositivo Bluetooth.
 
 #### <a name="app-updates"></a>Actualizaciones de aplicaciones
@@ -168,11 +166,11 @@ Reiniciar o apagar el dispositivo.
 #### <a name="diagnostics"></a>Diagnóstico
 Seleccione la cantidad de datos de diagnóstico que desea proporcionar a Microsoft.  Se recomienda a los usuarios que opten por los datos de diagnóstico **completos** para que podamos diagnosticar problemas rápidamente y realizar mejoras en el producto.
 
-##### <a name="basic"></a>Básica 
+##### <a name="basic"></a>Básico 
 Envíe solo información sobre el dispositivo, su configuración y capacidades, y si funciona correctamente.
 
 ##### <a name="full"></a>Completo
 Enviar todos los datos de diagnóstico básicos, junto con información sobre los sitios web que se examinan y cómo se usan las aplicaciones y características, además de información adicional sobre el estado del dispositivo, la actividad del dispositivo y el informe de errores mejorado.
 
-#### <a name="location"></a>Location
+#### <a name="location"></a>Ubicación
 Permita o deniegue el acceso de la aplicación a su ubicación.

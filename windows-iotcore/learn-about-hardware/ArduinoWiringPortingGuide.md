@@ -1,17 +1,15 @@
 ---
 title: Guía de migración de cableado de Arduino
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre las modificaciones y los problemas comunes que surgen al implementar proyectos de cableado de Arduino.
 keywords: Windows IOT, Arduino, cableado, Visual Studio, portabilidad
-ms.openlocfilehash: 9b1d54807c21a54d8186d7f7ddabc31f16d3dab3
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 7f3f70101fb28fab001dbd38d3159a7a10fa5586
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60170029"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918137"
 ---
 # <a name="arduino-wiring-porting-guide"></a>Guía de migración de cableado de Arduino
 
@@ -86,15 +84,15 @@ Los nombres de anclaje predefinidos se pueden encontrar en [pins_arduino. h](htt
 
 ### <a name="cant-find-arduino-wiring-application-visual-c-project-template-in-visual-studio"></a>No se encuentra la plantilla de proyecto visual C++ "Arduino cableado Application" en Visual Studio
 
-**Causa**: La extensión de plantillas de proyecto de Windows IoT para Visual Studio no está instalada.
+**Causa**: la extensión de plantillas de proyecto de Windows IOT para Visual Studio no está instalada.
 
-**Solución**: Debe instalar la extensión de Visual Studio para las plantillas de proyecto de Windows IoT antes de poder crear proyectos de cableado de Arduino en Visual Studio. Vaya a la [Página de la extensión de plantillas de proyecto de Windows IOT Core](https://go.microsoft.com/fwlink/?linkid=847472) para descargar la extensión desde la galería de Visual Studio.
+**Solución**: debe instalar la extensión de Visual Studio para las plantillas de proyecto de Windows IOT antes de poder crear proyectos de cableado de Arduino en Visual Studio. Vaya a la [Página de la extensión de plantillas de proyecto de Windows IOT Core](https://go.microsoft.com/fwlink/?linkid=847472) para descargar la extensión desde la galería de Visual Studio.
 
 ### <a name="error-identifier-not-found-when-calling-a-function"></a>ERROR: "no se encontró el identificador" al llamar a una función
 
-**Causa**: Este error se produce durante el proceso del enlazador cuando se invoca una función que aún no se ha declarado en el documento.
+**Causa**: este error se produce durante el proceso del enlazador cuando se invoca una función que aún no se ha declarado en el documento.
 
-**Solución**: En C++, todas las funciones deben declararse antes de que se invoquen. Si ha definido una función nueva en el archivo de boceto, la declaración o la implementación completa de la función debe estar por encima de cualquier intento de invocarla (normalmente en la parte superior del documento).
+**Solución**: en C++, todas las funciones deben declararse antes de que se invoquen. Si ha definido una función nueva en el archivo de boceto, la declaración o la implementación completa de la función debe estar por encima de cualquier intento de invocarla (normalmente en la parte superior del documento).
 
 **Ejemplo**:
 
@@ -162,13 +160,13 @@ void loop()
 
 Existe un problema conocido que puede provocar que una C++ solución se bloquee infinitamente (interbloqueo) al inicializarse. Es posible que experimente este tipo de problema si observa que la solución parece dejar de responder indefinidamente y no puede usar el depurador para "interrumpir" en las secciones de configuración () o bucle () de la aplicación de cableado de Arduino.
 
-**Causa**: Se está creando un objeto o se está llamando a una función que conduce a una acción asyncronous antes de que la solución termine de inicializarse. Probablemente se deba a que el constructor de un objeto llama a una función `pinMode`de la API como.
+**Causa**: se está creando un objeto o se está llamando a una función que conduce a una acción asyncronous antes de que la solución termine de inicializarse. Probablemente se deba a que el constructor de un objeto llama a una función de la API como `pinMode`.
 
-**Solución**: Mueva todos los constructores de objetos y las llamadas a funciones de la sección de inicialización `setup()` del código y al bloque.
+**Solución**: mueva cualquier constructor de objetos y las llamadas de función fuera de la sección de inicialización del código y al bloque `setup()`.
 
 **Ejemplo 1**:
 
-La ejecución de este boceto llama a una función `setPinModes()` llamada antes de que se haya inicializado la propia solución. La solución parecerá ejecutarse, pero se bloqueará infinitamente.
+La ejecución de este boceto llama a una función llamada `setPinModes()` antes de que se haya inicializado la propia solución. La solución parecerá ejecutarse, pero se bloqueará infinitamente.
 
 ```C++
 bool setPinModes();
@@ -197,7 +195,7 @@ bool setPinModes()
 }
 ```
 
-La solución se muestra a continuación, simplemente hemos cambiado la ejecución `setPinModes()` de a `setup()` la función:
+La solución se encuentra a continuación, simplemente hemos cambiado la ejecución de `setPinModes()` a la función `setup()`:
 
 ```C++
 bool setPinModes();
@@ -228,7 +226,7 @@ bool setPinModes()
 
 **Ejemplo 2**:
 
-La ejecución de este boceto crea un objeto en la pila antes `setup()` de que se haya llamado a. Dado que el objeto `pinMode` llama a en su constructor, también se producirá un interbloqueo. Se trata de un problema poco frecuente, pero puede producirse con objetos de ciertas bibliotecas (como `LiquidCrystal` la biblioteca Arduino).
+La ejecución de este boceto crea un objeto en la pila antes de que se haya llamado a `setup()`. Puesto que el objeto llama a `pinMode` en su constructor, también se producirá un interbloqueo. Se trata de un problema poco frecuente, pero puede producirse con objetos de ciertas bibliotecas (como la biblioteca `LiquidCrystal` Arduino).
 
 ```C++
 class MyObject
@@ -257,7 +255,7 @@ void loop()
 }
 ```
 
-La solución se encuentra a continuación. Hemos cambiado el objeto a un puntero de objeto y se ha cambiado la inicialización del `setup()`objeto a.
+La solución se encuentra a continuación. Hemos cambiado el objeto a un puntero de objeto y se ha pasado la inicialización del objeto a `setup()`.
 
 ```C++
 class MyObject
@@ -287,30 +285,30 @@ void loop()
 }
 ```
 
-### <a name="using-serialprint-and-serialprintln"></a>Usar `Serial.print()` y`Serial.println()`
+### <a name="using-serialprint-and-serialprintln"></a>Usar `Serial.print()` y `Serial.println()`
 
-Muchos bocetos de Arduino `Serial` usan para imprimir datos en la consola serie (si se abren) o para escribir en las líneas de serie (USB o TX/RX). En versiones anteriores del SDK de Lightning, no `Serial` se incluía la compatibilidad de hardware, `Log()` por lo que se proporciona una función que se imprimirá en la ventana de salida del depurador en Visual Studio. `Serial.print*()`o `Serial.write()` se tenía que quitar.
+Muchos bocetos de Arduino usan `Serial` para imprimir datos en la consola serie (si se abren) o para escribir en las líneas serie (USB o TX/RX). En versiones anteriores del rayo SDK, no se incluía compatibilidad con hardware `Serial`, por lo que proporcionamos una función `Log()` que se imprimirá en la ventana de salida del depurador en Visual Studio. `Serial.print*()` o `Serial.write()` tuvieron que quitarse.
 
-Sin embargo, a partir de _Lightning SDK v 1.1.0_, hemos `Hardware Serial` agregado compatibilidad y `Serial.print*()` las `Serial.write()` funciones o son totalmente compatibles. Por lo tanto, si va a copiar un boceto creado para un Arduino, no necesitará reemplazar ninguna de estas referencias en serie en la versión de Windows IoT del boceto.
+Sin embargo, a partir de _Lightning SDK v 1.1.0_, hemos agregado compatibilidad con `Hardware Serial` y las funciones de `Serial.print*()` o `Serial.write()` son totalmente compatibles. Por lo tanto, si va a copiar un boceto creado para un Arduino, no necesitará reemplazar ninguna de estas referencias en serie en la versión de Windows IoT del boceto.
 
-Además, hemos ampliado la funcionalidad de `Serial.print()` y `Serial.println()`, para generar la salida en la ventana del depurador cuando se adjunta un depurador, además de escribir en las clavijas de serialización de hardware.
-La impresión de salida de depuración se establece como el valor predeterminado, ya que la lectura de la salida es lo que la mayoría de los usuarios querrán al ejecutar sus bocetos. Sin embargo, esa funcionalidad también se puede deshabilitar; por ejemplo, para mejorar el rendimiento, `Serial.enablePrintDebugOutput(false);` basta con llamar a para deshabilitarlo en el boceto. Para volver a habilitarlo, llame `Serial.enablePrintDebugOutput(true);`a. Estas llamadas no afectan a la escritura en las clavijas de serialización de hardware.
+Además, hemos ampliado la funcionalidad de `Serial.print()` y `Serial.println()`para generar la salida en la ventana del depurador cuando se adjunta un depurador, además de escribir en las clavijas de serie del hardware.
+La impresión de salida de depuración se establece como el valor predeterminado, ya que la lectura de la salida es lo que la mayoría de los usuarios querrán al ejecutar sus bocetos. Sin embargo, esa funcionalidad también se puede deshabilitar; por ejemplo, para mejorar el rendimiento, simplemente llame a `Serial.enablePrintDebugOutput(false);` para deshabilitarlo en el boceto. Para volver a habilitarla, llame a `Serial.enablePrintDebugOutput(true);`. Estas llamadas no afectan a la escritura en las clavijas de serialización de hardware.
 
 Tenga en cuenta que no es necesario que conecte ningún periférico a los Pin serie, como un FTDI, para obtener la salida enviada a la ventana del depurador. Sin embargo, deberá asegurarse de que la ventana del depurador está abierta mientras se depura la aplicación.
 
 ![Salida del depurador](../media/ArduinoWiringPortingGuide/debugger_output.png)
 
-Las plantillas de proyecto se han actualizado en la página de la [extensión de plantillas de proyecto de Windows IOT Core](https://go.microsoft.com/fwlink/?linkid=847472) para habilitar el uso de hardware `Serial` de un equipo. Sin embargo, si la aplicación de cableado de Arduino ya se ha creado con una versión anterior de la plantilla de proyecto, deberá 1) actualizar el proyecto a la versión más reciente de Lightning SDK, v 1.1.0 o posterior y 2) agregar la funcionalidad de dispositivo serie de hardware necesaria a su AppxManifest que se va a poder `Serial`usar.
+Las plantillas de proyecto se han actualizado en la página de la [extensión de plantillas de proyecto de Windows IOT Core](https://go.microsoft.com/fwlink/?linkid=847472) para habilitar el uso de hardware `Serial` de la caja. Sin embargo, si la aplicación de cableado de Arduino ya se ha creado con una versión anterior de la plantilla de proyecto, deberá 1) actualizar el proyecto a la versión más reciente de Lightning SDK, v 1.1.0 o posterior y 2) agregar la funcionalidad de dispositivo serie de hardware necesaria a su AppxManifest para poder usar `Serial`.
 
 ### <a name="hardware-serial-device-capability-requirements"></a>Requisitos de funcionalidad del dispositivo serie de hardware
 
 La funcionalidad de serie de hardware en Windows 10 IoT core requiere declaraciones de funcionalidad de dispositivo agregadas al manifiesto AppX.
 
-Busque el archivo `Package.appxmanifest` en el proyecto escribiendo el nombre del archivo en el explorador de soluciones. A continuación, haga clic con el botón derecho en el archivo y elija "abrir con...". Elija editor XML (texto) y haga clic en "Aceptar".
+Busque el archivo `Package.appxmanifest` en el proyecto; para ello, escriba el nombre del archivo en el explorador de soluciones. A continuación, haga clic con el botón derecho en el archivo y elija "abrir con...". Elija editor XML (texto) y haga clic en "Aceptar".
 
 ![Actualizando package. appxmanifest](../media/ArduinoWiringPortingGuide/appxmanifest_search.png)
 
-En el editor del archivo de manifiesto appx, `serialcommunication` agregue la DeviceCapability al proyecto como en el siguiente fragmento de código XML:
+En el editor del archivo de manifiesto appx, agregue el `serialcommunication` DeviceCapability al proyecto como en el siguiente fragmento de código XML:
 
 ```xml
 <Capabilities>

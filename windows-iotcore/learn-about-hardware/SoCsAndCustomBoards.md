@@ -1,19 +1,17 @@
 ---
 title: SOC y paneles personalizados para Windows 10 IoT Core
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información acerca de las características de hardware para una variedad de paneles sugeridos y dispositivos de la comunidad.
 keywords: Windows IOT, dispositivos de desarrollo, paneles, SOC, SOM, sistema en chips, Raspberry pi 2, Raspberry PI 3, Minnowboard Max, DragonBoard
-ms.openlocfilehash: 85625926a5aaa474ba2ea86ff6c2890553669131
-ms.sourcegitcommit: 8bb162cbfa286107e243a0286fe53b3b9cc3f359
+ms.openlocfilehash: 4114cc6ba7b0580b1f00a7aeae67284bb1fc8cb3
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67345116"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917407"
 ---
-# <a name="socs-and-custom-boards"></a>SOC y paneles personalizados
+# <a name="socs-and-custom-boards"></a>Paneles personalizados y SOC
 
 ## <a name="microsoft-enabled-socs"></a>SOC habilitado para Microsoft
 
@@ -79,9 +77,9 @@ Cada una de las plataformas tiene peculiaridades únicas que requieren atención
 * __[Qualcomm](#qualcomm-dragonboard-410c-apq8016-based-custom-design)__
 * __[NXP](#nxp-preview)__
 
-*Si es un proveedor de SOM o un ODM y desea agregarlo a la lista siguiente, envíe un correo electrónico a [winiotsomhelp@microsoft.com](mailto:winiotsomhelp@microsoft.com) o edite directamente esta página y envíe una solicitud de incorporación de cambios.*
+*Si es un proveedor de SoM o un ODM y desea agregarlo a la lista siguiente, envíe un correo electrónico a [winiotsomhelp@microsoft.com](mailto:winiotsomhelp@microsoft.com) o edite directamente esta página y envíe una solicitud de incorporación de cambios.*
 
-*Muchas de las compañías que se enumeran aquí son grandes y complejas.  Si tiene problemas para llegar a la persona adecuada, envíe [winiotsomhelp@microsoft.com](mailto:winiotsomhelp@microsoft.com) un correo electrónico y haremos todo lo posible para conectarse a las personas adecuadas.*
+*Muchas de las compañías que se enumeran aquí son grandes y complejas.  Si tiene problemas para llegar a la persona adecuada, envíe un correo electrónico a [winiotsomhelp@microsoft.com](mailto:winiotsomhelp@microsoft.com) y haremos todo lo posible para conectarse a las personas adecuadas.*
 
 ### <a name="raspberry-pi-derived-custom-design"></a>**Diseño personalizado derivado de Raspberry PI**
 
@@ -120,7 +118,7 @@ Recomendaciones:
 
 #### <a name="experienced-partners"></a>*Asociados con experiencia*
 
-* [Intrinsyc](https://www.intrinsyc.com/computing-platforms/410-som/) -Mark WALDENBERG (mwaldenberg@intrinsyc.com)
+* [Intrinsyc](https://www.intrinsyc.com/computing-platforms/410-som/) -Mark Waldenberg (mwaldenberg@intrinsyc.com)
 * [Keith & Koep](https://keith-koep.com/en/products/products-som/myon-1-features-snapdragon-410/) -contact@keith-koep.com
 * [Reycom](http://www.reycom.swiss/en/home-swiss.html) -welcome@reycom.swiss
 * [Unitech](http://ute.com/products_info.php?pc1=4&pc2=461&rbu=0&pid=2395) -Sam (saml@tw.ute.com); Perry (perryt@te.ute.com)
@@ -136,8 +134,8 @@ También puede ponerse en contacto con los asociados con los que estamos trabaja
 ) con [Trizeps VII](https://keith-koep.com/de/produkte/produkte-trizeps/trizeps-vii-technische-daten-imx6/) -contact@keith-koep.com
 * Kontron [SMARC-sAMX6i](https://www.kontron.com/products/boards-and-standard-form-factors/smarc/smarc-samx6i.html) -Martin Unverdorben (martin.unverdorben@kontron.com)
 * Ejecución sólida [Hummingboard Edge](https://www.solid-run.com/imx6-win-10-iot-core/ )-Ilya Viten (ilya@solid-run.com)
-* Geniatech [SOM-iMX6Q-Q7](https://www.geniatech.com/product/som-imx6q-q7/) & [SOM-iMX7D](https://www.geniatech.com/product/som-imx7d/) -Mike Decker (mike.decker@geniatech.com) o Fang Jijun (Fjj@geniatech.com)
-* A través [de VAB-820](https://www.viaembeddedstore.com/shop/boards/vab-820/) -MichaelMichaelFox@via.com.twFox () o dedreamku@via.com.twsueño Ku ()
+* Geniatech [SOM-iMX6Q-Q7](https://www.geniatech.com/product/som-imx6q-q7/) & [SOM-IMX7D](https://www.geniatech.com/product/som-imx7d/) -Mike Decker (mike.decker@geniatech.com) o Fang Jijun (Fjj@geniatech.com)
+* A través [de VAB-820](https://www.viaembeddedstore.com/shop/boards/vab-820/) -Michael Fox (MichaelFox@via.com.tw) o de soñar Ku (dreamku@via.com.tw)
 * Phytec [phyBOARD-i. MX7](https://phytec.com/products/single-board-computers/phyboard-i.mx7/) -Brad Dodson (sales@phytec.com)
 
 

@@ -1,24 +1,22 @@
 ---
 title: Minnowboard asignaciones de PIN máx.
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre la funcionalidad de las asignaciones de PIN para Minnowboard Max.
 keywords: Windows IOT, Minnowboard Max, asignaciones de PIN, GPIO
-ms.openlocfilehash: 884d9ee0d93167a13f39a28b28454daccb2eebad
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: c97147357bbe17c13f2e69e9878b2630a6d12097
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167501"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72917955"
 ---
 # <a name="minnowboard-max-pin-mappings"></a>MinnowBoard asignaciones de PIN máx.
 
 > [!NOTE] 
 > Para comparar esta asignación de pin con las versiones más recientes de Minnowboard, visite la documentación [aquí](https://minnowboard.org/minnowboard-turbot/documentation).
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 ![MinnowBoard encabezado Max PIN](../../media/PinMappingsMBM/MBM_Pinout.png)
 
@@ -54,7 +52,7 @@ Se puede acceder a los siguientes PIN de GPIO a través de las API:
 > | 8     | 24                 |
 > | 9     | 26                 |
 
-**Nota:** Los pin de configuración Max **4** y **GPIO 5** se usan en las clavijas de configuración MinnowBoard Max as bootstrap del BIOS.
+**Nota:** los pin de configuración Max **4** y **GPIO 5** se usan en las clavijas de configuración MinnowBoard Max as bootstrap del BIOS.
 Asegúrese de que los dispositivos conectados no controlan el nivel de GPIO bajo durante el arranque, ya que esto podría impedir el arranque de MBM.
 Después de que MBM haya arrancado más allá del BIOS, estos GPIO se pueden usar con normalidad.
      

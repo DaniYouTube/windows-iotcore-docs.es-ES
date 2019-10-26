@@ -1,17 +1,15 @@
 ---
 title: Capturar seguimientos de Fiddler
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo usar Fiddler para capturar seguimientos de Fiddler en Windows IoT Core.
 keywords: Windows IOT, Fiddler, seguimientos, PuTTy, seguimientos de Fiddler
-ms.openlocfilehash: b8bf4fa6390aad9640ad9139a8a164a9c83fcff5
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 0539365ed4727866d816ad129cef0e904f22b1df
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167763"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918254"
 ---
 # <a name="capturing-fiddler-traces-on-windows-iot-core"></a>Captura de seguimientos de Fiddler en Windows IoT Core
 
@@ -28,13 +26,13 @@ Fiddler es una herramienta para depurar el tráfico web. Es especialmente útil 
 2. Inicie Fiddler y realice las siguientes actualizaciones de configuración en _herramientas-> Telerik Fiddler Options-> pestaña https_ .
     * Comprobar la _captura de conexiones https_
     * Comprobar _el descifrado del tráfico https: > de todos los procesos_
-    * Haga clic en el vínculo "certificados generados por" y seleccione el _motor Makecert_ (recomendación: Reinicie Fiddler para que este cambio surta efecto)
+    * Haga clic en el vínculo "certificados generados por" y seleccione el _motor Makecert_ (recomendación: reiniciar Fiddler para que este cambio surta efecto)
     * A continuación, exporte el archivo FiddlerRoot. cer a través _de Actions-> exportar el certificado raíz al escritorio_ .
 3. Realice las siguientes actualizaciones de configuración en _herramientas-> opciones de Telerik Fiddler: pestaña > conexiones_ :
     * Configure Fiddler para que actúe como proxy del sistema; para ello, active la casilla _permitir que los equipos remotos se conecten_
     * _Fiddler escucha en el puerto_ debe establecerse en _8888_
   
-Nota: Debe reiniciar Fiddler después de este y aceptar cualquier símbolo del sistema de UAC.
+Nota: debe reiniciar Fiddler después de este y aceptar cualquier solicitud de UAC.
 
 ## <a name="transfer-and-import-fiddler-root-certificate"></a>Transferencia e importación de un certificado raíz de Fiddler
 Debe importar el certificado raíz de Fiddler en la imagen o el dispositivo de IoT para depurar el enrutamiento de tráfico HTTPS a través de su equipo.  Para ello:
@@ -54,7 +52,7 @@ Debe importar el certificado raíz de Fiddler en la imagen o el dispositivo de I
 Los pasos siguientes permitirán que la máquina virtual o el dispositivo de IoT enruten el tráfico a través de su equipo para que Fiddler pueda capturar el tráfico de red para el análisis:
 
 1. Determinar la dirección IP de la máquina de desarrollo mediante una consola CMD mediante _ipconfig_
-2. Inicie una nueva sesión de SSH y esta vez, inicie sesión como defaultUser (nombre de usuario: _DefaultAccount_  PWD: _[Blank]_ )
+2. Inicie una nueva sesión de SSH y esta vez, inicie sesión como defaultUser (nombredeusuario: _DefaultAccount_ PWD: _[Blank]_ )
 3. Establezca el proxy mediante los siguientes comandos:
     * `reg add "hkcu\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1`
     * `reg add "hkcu\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /t REG_SZ /d [PC IP address]:8888`

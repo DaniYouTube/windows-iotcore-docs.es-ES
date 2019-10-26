@@ -1,17 +1,15 @@
 ---
 title: Aplicaciones en segundo plano
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Aprenda a desarrollar aplicaciones en segundo plano para su dispositivo IoT.
 keywords: Windows IOT, aplicaciones en segundo plano
-ms.openlocfilehash: 1b3fd831a4cdf3ebb8bc2d80c544344b13115617
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: ab9e4f66f3829c9758cbc40abfcde50df597a2d3
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167891"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918270"
 ---
 # <a name="developing-background-applications"></a>Desarrollo de aplicaciones en segundo plano
 
@@ -27,7 +25,7 @@ Hay un punto crítico a tener en cuenta: de forma predeterminada, la aplicación
 
 ## <a name="where-can-background-applications-be-installed-from"></a>¿Dónde se pueden instalar las aplicaciones en segundo plano? 
 
-Puede descargar e instalar plantillas de IoT para habilitar las aplicaciones en segundo plano desde la galería de Visual Studio [aquí](https://go.microsoft.com/fwlink/?linkid=847472).  También puede encontrar las plantillas si busca `Windows IoT Core Project Templates` en la galería de [Visual Studio](https://visualstudiogallery.msdn.microsoft.com/) o directamente desde Visual Studio en el cuadro de diálogo extensiones y actualizaciones (Herramientas > extensiones y actualizaciones > en línea).
+Puede descargar e instalar plantillas de IoT para habilitar las aplicaciones en segundo plano desde la galería de Visual Studio [aquí](https://go.microsoft.com/fwlink/?linkid=847472).  Como alternativa, puede encontrar las plantillas buscando `Windows IoT Core Project Templates` en la [Galería de Visual Studio](https://visualstudiogallery.msdn.microsoft.com/) o directamente desde Visual Studio en el cuadro de diálogo extensiones y actualizaciones (Herramientas > extensiones y actualizaciones > en línea).
 
 ## <a name="what-languages-are-available"></a>¿Qué idiomas están disponibles?
 
@@ -35,8 +33,8 @@ Se pueden encontrar plantillas de **aplicación en segundo plano (IOT)** para:
 
 * **C++** `File > New > Project > Installed > Visual C++ > Windows > Windows IoT Core`
 * **C#** `File > New > Project > Installed > Visual C# > Windows > Windows IoT Core`
-* **Visual Basic**`File > New > Project > Installed > Visual Basic > Windows > Windows IoT Core`
-* **JavaScript**`File > New > Project > Installed > JavaScript > Windows > Windows IoT Core`
+* **Visual Basic** `File > New > Project > Installed > Visual Basic > Windows > Windows IoT Core`
+* `File > New > Project > Installed > JavaScript > Windows > Windows IoT Core` de **JavaScript**
 
 ## <a name="how-are-background-applications-used"></a>¿Cómo se usan las aplicaciones en segundo plano? 
 
@@ -88,7 +86,7 @@ Para invocar una aplicación en segundo plano, puede:
 > [!NOTE]
 > Esto no configurará la aplicación en segundo plano para que se inicie cuando se arranque el dispositivo.
 
-* En el caso de una aplicación en segundo plano que se ha implementado en un dispositivo IoT, puede usar la utilidad iotstartup. exe para configurar la aplicación en segundo plano para que se inicie cuando se arranque el dispositivo.  Para especificar la aplicación en segundo plano como una aplicación de inicio, siga estas instrucciones (sustituya**el nombre** de la aplicación por `BackgroundApplication1` debajo):
+* En el caso de una aplicación en segundo plano que se ha implementado en un dispositivo IoT, puede usar la utilidad iotstartup. exe para configurar la aplicación en segundo plano para que se inicie cuando se arranque el dispositivo.  Para especificar la aplicación en segundo plano como una aplicación de inicio, siga estas instrucciones (**sustituya el nombre** de la aplicación por `BackgroundApplication1` a continuación):
 
 1. Inicie una sesión de PowerShell (PS) con el dispositivo Windows IoT Core tal como se describe [aquí](../connect-your-device/PowerShell.md).
 
@@ -128,5 +126,5 @@ Headless : BackgroundApplication1-uwp_1.0.0.0_x86__cqewk5knvpvee`
 
 `Removed headless: BackgroundApplication1-uwp_1.0.0.0_x86__cqewk5knvpvee`
 
-# <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 Para agregar una aplicación en segundo plano al compilar una imagen personalizada, consulte [crear un paquete appx](../build-your-image/createinstallpackage.md) .

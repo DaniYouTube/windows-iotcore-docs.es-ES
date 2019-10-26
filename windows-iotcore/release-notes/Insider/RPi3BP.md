@@ -1,17 +1,15 @@
 ---
 title: Notas de la versión de Raspberry PI 3B +
-author: zeeshanfurqan
-ms.author: zeeshanf
 ms.date: 05/16/2018
 ms.topic: article
 description: Lea y obtenga información sobre lo que hay en la compilación de Raspberry PI 3B +.
 keywords: Windows IOT, Windows Insider, notas de la versión, Raspberry PI 3B +
-ms.openlocfilehash: f9a1bf98e6ef53ff7f96d35cb34af9527f1c6de1
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: e0cf0afb98440034d8384e5d44ce98bb14a0fe71
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167363"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918746"
 ---
 # <a name="release-notes-for-raspberry-pi-3b"></a>Notas de la versión de Raspberry PI 3B +
 
@@ -93,7 +91,7 @@ El intento de agregar referencias a proyectos de adaptador AllJoyn puede produci
 En Raspberry Pi y DragonBoard, el cambio de un modo de unidad no predeterminado a otro puede producir un problema en la patilla GPIO. Para solucionar este problema, establezca el modo de unidad una vez al principio de la aplicación. 
 
 ### <a name="application-already-running-1244550"></a>La aplicación ya se está ejecutando (1244550) 
-La aplicación de inicio predeterminada podría entrar en conflicto consigo misma cuando también se implementa desde Visual Studio. Solución alternativa: cambie la aplicación de inicio predeterminada a otra aplicación distinta de la que quiere implementar. 
+La aplicación de inicio predeterminada podría entrar en conflicto consigo misma cuando también se implementa desde Visual Studio. SOLUCIÓN alternativa: cambie la aplicación de inicio predeterminada a una aplicación que no sea la que desea implementar. 
 
 ### <a name="backgroundmediaplayermessagereceivedfromforeground-may-crash-2199869"></a>BackgroundMediaPlayer. MessageReceivedFromForeground puede bloquearse (2199869) 
 La línea de código siguiente podría bloquearse: 
@@ -179,4 +177,4 @@ Schtasks no admite el uso del modificador/XML. Por ejemplo:
 ```
 schtasks /create /xml <xmlfile> /TN <taskname>
 ```
-Se producirá un error en IoT Core. Al ejecutar el comando se generará el error: ERROR: No se pudo encontrar el procedimiento especificado. 
+Se producirá un error en IoT Core. Al ejecutar el comando se generará el error: ERROR: no se encontró el procedimiento especificado. 

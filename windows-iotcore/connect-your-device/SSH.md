@@ -1,17 +1,15 @@
 ---
 title: Secure Shell (SSH)
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Aprenda a usar Secure Shell para administrar y configurar de forma remota el dispositivo de IoT Core.
 keywords: Windows IOT, shell seguro, remoto, cliente SSH, PuTTy, SSH
-ms.openlocfilehash: 2c83184507a840c6017b1dfe36ac915004057d9a
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 1fe94a29f04ac01efc94079425ac4a5a0dab34f6
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60168772"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918308"
 ---
 # <a name="secure-shell-ssh"></a>Secure Shell (SSH)
 Secure Shell (SSH) permite administrar y configurar de forma remota el dispositivo de Windows IoT Core
@@ -119,9 +117,9 @@ get-acl x:\data\ProgramData\ssh\ssh_host_dsa_key | set-acl x:\data\ProgramData\s
 ```
 
 > [!NOTE]
-> Si ve un mensaje de **identificación de host remoto cambiado** después de realizar cambios en el dispositivo de Windows 10 IOT Core,\<Edite\.C:\Users username > ssh\known_hosts y quite el host que ha cambiado.
+> Si ve un mensaje de **identificación de host remoto cambiado** después de realizar cambios en el dispositivo de Windows 10 IOT Core, edite C:\Users\<username >\.ssh\known_hosts y quite el host que ha cambiado.
 
-Consulte también: [Win32-OpenSSH](https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples)
+Vea también: [Win32-OpenSSH](https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples)
 
 ## <a name="using-putty"></a>Usar PuTTy
 
@@ -133,16 +131,16 @@ Para conectarse a su dispositivo mediante SSH, primero deberá descargar un clie
 
     ![DefaultApp en Windows IoT Core](../media/SSH/DefaultApp.png)
 
-* Ahora, inicie Putty y escriba la dirección IP en `Host Name` el cuadro de texto y asegúrese `SSH` de que el botón de radio está seleccionado.  A continuación `Open`, haga clic en.
+* Ahora, inicie PuTTy y escriba la dirección IP en el cuadro de texto `Host Name` y asegúrese de que está seleccionado el botón de radio `SSH`.  A continuación, haga clic en `Open`.
 
     ![Configuración de PuTTy](../media/SSH/putty_config.png)
 
-* Si se va a conectar al dispositivo por primera vez desde el equipo, es posible que vea la alerta de seguridad siguiente.  Basta con `Yes` hacer clic para continuar.
+* Si se va a conectar al dispositivo por primera vez desde el equipo, es posible que vea la alerta de seguridad siguiente.  Simplemente haga clic en `Yes` para continuar.
 
     ![Alerta de seguridad de PuTTy](../media/SSH/putty_security_prompt.png)
 
 * Si la conexión se realizó correctamente, debería ver `login as:` en la pantalla, donde se le pide que inicie sesión.  
-    Escriba `Administrator` y presione Entrar.  A continuación, escriba la `p@ssw0rd` contraseña predeterminada como contraseña y presione Entrar.
+    Escriba `Administrator` y presione Entrar.  A continuación, escriba la contraseña predeterminada `p@ssw0rd` como contraseña y presione Entrar.
 
     ![Inicio de sesión de PuTTy](../media/SSH/putty_login.png)
 
@@ -154,7 +152,7 @@ Para conectarse a su dispositivo mediante SSH, primero deberá descargar un clie
 
 Se **recomienda encarecidamente** que actualice la contraseña predeterminada para la cuenta de administrador.
 
-Para ello, escriba el siguiente comando en la consola de Putty y reemplace `[new password]` con una contraseña segura:
+Para ello, escriba el siguiente comando en la consola de PuTTy, reemplazando `[new password]` por una contraseña segura:
     
     net user Administrator [new password]
     
@@ -163,11 +161,11 @@ Para ello, escriba el siguiente comando en la consola de Putty y reemplace `[new
 
 * Es posible que el Visual Studio Remote Debugger agote el tiempo de espera después de largos períodos de inactividad. Si Visual Studio no se puede conectar al dispositivo de Windows IoT Core, intente reiniciar el dispositivo.
 
-* Si lo desea, también puede cambiar el nombre del dispositivo. Para cambiar el nombre de equipo, use la `setcomputername` utilidad:
+* Si lo desea, también puede cambiar el nombre del dispositivo. Para cambiar el nombre de equipo, use la utilidad `setcomputername`:
 
         setcomputername <new-name>
 
-    Tendrá que reiniciar el dispositivo para que el cambio surta efecto. Puede usar el comando `shutdown` de la siguiente manera:
+    Tendrá que reiniciar el dispositivo para que el cambio surta efecto. Puede usar el comando `shutdown` como se indica a continuación:
 
         shutdown /r /t 0
         

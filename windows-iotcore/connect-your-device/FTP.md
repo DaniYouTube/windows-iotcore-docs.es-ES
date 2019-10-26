@@ -1,17 +1,15 @@
 ---
 title: Protocolo de transferencia de archivos
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Aprenda a usar File Transfer Protocol (FTP) para transferir archivos a y desde sus dispositivos.
 keywords: Windows IOT, FTP, protocolo de transferencia de archivos, transferencia de archivos, dispositivos
-ms.openlocfilehash: 43a64e186c2e783624bb47b89e4fa6322c93e04d
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: a15fdca4443b6fdc6e1b3aed49c16444bbe97a33
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60169192"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918321"
 ---
 # <a name="file-transfer-protocol"></a>Protocolo de transferencia de archivos
 El File Transfer Protocol (FTP) permite transferir archivos desde y hacia el dispositivo de Windows 10 IoT Core.
@@ -26,7 +24,7 @@ El File Transfer Protocol (FTP) permite transferir archivos desde y hacia el dis
 
 ![Inicio de FTP](../media/ftp/ftp_start.png)
 
-## <a name="stopping-the-ftp-server-on-your-devicea-namestopftp"></a>Detención del servidor FTP en el dispositivo<a name="stopftp"/>
+## <a name="stopping-the-ftp-server-on-your-devicea-namestopftp"></a>Detener el servidor FTP en el dispositivo<a name="stopftp"/>
 * Para detener el servidor FTP en el dispositivo de IoT Core, primero debe conectarse al dispositivo a través de [PowerShell](../connect-your-device/PowerShell.md) o [ssh](../connect-your-device/SSH.md).
 * Si se conectó mediante PowerShell, escriba `kill -processname ftpd*` para detener el proceso FTP.
 
@@ -41,17 +39,17 @@ El File Transfer Protocol (FTP) permite transferir archivos desde y hacia el dis
 
 ![DefaultApp en Windows IoT Core](../media/ftp/DefaultApp.png)
 
-* Una vez que tenga la IP, abra el **Explorador de archivos** en su PC `ftp://<TARGET_DEVICE>`y escriba `<TARGET_DEVICE>` , donde es el nombre o la dirección IP del dispositivo y presione Entrar.  Si se le solicita, escriba el nombre de usuario y la contraseña del administrador.
+* Una vez que tenga la dirección IP, abra el **Explorador de archivos** en su PC y escriba `ftp://<TARGET_DEVICE>`, donde `<TARGET_DEVICE>` es el nombre o la dirección IP del dispositivo y presione Entrar.  Si se le solicita, escriba el nombre de usuario y la contraseña del administrador.
 
 ![Explorador FTP](../media/ftp/ftp_explorer.png)
 
 * Ahora puede tener acceso a los archivos del dispositivo a través de FTP.
 
 ## <a name="changing-the-root-ftp-directory"></a>Cambiar el directorio raíz FTP
-* De forma predeterminada, el servidor FTP muestra todas las carpetas del directorio raíz del dispositivo C\\:.  Para cambiar el directorio raíz, siga los mismos pasos para iniciar el servidor FTP, salvo que debe pasar el directorio raíz como un parámetro.
+* De forma predeterminada, el servidor FTP muestra todas las carpetas del directorio raíz del dispositivo C:\\.  Para cambiar el directorio raíz, siga los mismos pasos para iniciar el servidor FTP, salvo que debe pasar el directorio raíz como un parámetro.
 * Para cambiarlo, primero Conéctese a su dispositivo a través de [PowerShell](../connect-your-device/PowerShell.md) o [ssh](../connect-your-device/SSH.md).
 * [Detenga](#stopftp) el proceso FTP si ya se está ejecutando.
-* Escriba `start C:\Windows\System32\ftpd.exe <PATH_TO_DIRECTORY>`, donde `<PATH_TO_DIRECTORY>` es la ruta de acceso absoluta al directorio que desea establecer como directorio `C:\Users\DefaultAccount`raíz, como.
+* Escriba `start C:\Windows\System32\ftpd.exe <PATH_TO_DIRECTORY>`, donde `<PATH_TO_DIRECTORY>` es la ruta de acceso absoluta al directorio que desea establecer como directorio raíz, como `C:\Users\DefaultAccount`.
 
 ![Parámetro FTP Start with](../media/ftp/ftp_start_parameter.png)
 
@@ -59,4 +57,4 @@ Ahora, cuando se conecte a su dispositivo a través de FTP, verá el contenido d
 
 ![Explorador FTP con nuevo directorio raíz](../media/ftp/ftp_explorer_parameter.png)
 
-Para que este cambio sea permanente, debe agregar una llamada a `start ftpd.exe <PATH_TO_DIRECTORY>` , donde `<PATH_TO_DIRECTORY>` es la ruta de acceso absoluta al directorio que desea establecer como directorio `C:\Data\Users\DefaultAccount` raíz, como OEMCustomization. cmd y colocarlo en`C:\Windows\System32`
+Para que este cambio sea permanente, debe agregar una llamada a `start ftpd.exe <PATH_TO_DIRECTORY>` donde `<PATH_TO_DIRECTORY>` es la ruta de acceso absoluta al directorio que desea establecer como directorio raíz, como `C:\Data\Users\DefaultAccount` en OEMCustomization. cmd y colocarlo en `C:\Windows\System32`

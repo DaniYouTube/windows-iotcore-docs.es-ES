@@ -1,17 +1,15 @@
 ---
 title: Computer Vision
-author: saraclay
-ms.author: saclayt
 ms.date: 08/28/2017
 ms.topic: article
 description: Aprenda a usar Webstore Cognitive Services y OpenCV para el dispositivo de IoT.
 keywords: Windows IOT, Computer Vision, Cognitive Services, OpenCV
-ms.openlocfilehash: f6d10024f0f52f7219eb3a63dcefa7fd2b4a6fe3
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 74e4ee1303a9c59461f12b59f141c0f7b97d26db
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60169203"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918190"
 ---
 # <a name="computer-vision"></a>Computer Vision
 
@@ -22,14 +20,14 @@ ___
 
 ### <a name="cognitive-services"></a>Cognitive Services
 
-#### <a name="overview"></a>Información general
+#### <a name="overview"></a>Introducción
 Cognitive Services, originalmente un proyecto de Microsoft Research denominado Project Oxford, es una colección de API que realizan "tareas cognitivas" de alto nivel. Estas API extraen información de sus datos en función de los modelos de aprendizaje automático muy entrenados de años de exploración y desarrollo en Microsoft Research.
 
-Cognitive Services se compone de 5 categorías: Visión, voz, lenguajes, conocimiento y búsqueda.
+Cognitive Services se compone de 5 categorías: visión, voz, lenguajes, conocimiento y búsqueda.
 
 Puede encontrar más información sobre Cognitive Services en el [sitio web](https://www.microsoft.com/cognitive-services)de Cognitive Services.
 
-La categoría visión, la categoría más valiosa para Computer Vision Applications, contiene cuatro API: Computer Vision, emoción, facial y vídeo. Estas API proporcionan la siguiente funcionalidad:
+La categoría visión, la categoría más valiosa de Computer Vision Applications, contiene cuatro API: Computer Vision, emoción, facial y vídeo. Estas API proporcionan la siguiente funcionalidad:
 - Reconocimiento facial
 - Detección de movimiento
 - Reconocimiento de emociones
@@ -80,11 +78,11 @@ Mientras tanto, para compilar la biblioteca desde el origen para ARM, visite el 
 
 > |        |Microsoft Cognitive Services|OpenCV|
 > |---------------------|--------|------|
-> |Fácil de usar en Windows|Sí|Sin |
+> |Fácil de usar en Windows|Sí|No |
 > |Compatibilidad con la arquitectura|ARM, x86, x64 | ARM, x86, x64|
 > |Reconocimiento facial y seguimiento| Sí | Sí|
 > |Reconocimiento de emociones| Sí | Sí|
-> |reconstrucción y asignación 3D| Sin | Sí|
+> |reconstrucción y asignación 3D| No | Sí|
 > |Detección de contenido| Detecta características generales en lugar de objetos específicos | Sí|
 > |Estabilización de vídeo| Sí | Sí|
 > |Detección de movimiento| Sí | Sí|
