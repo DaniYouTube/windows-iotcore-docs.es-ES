@@ -1,17 +1,15 @@
 ---
 title: Placas de prototipo sugeridas
-author: saraclay
-ms.author: saclayt
 ms.date: 04/17/2018
 ms.topic: article
 description: Obtenga información sobre las placas de prototipo sugeridas para Windows 10 IoT.
 keywords: Windows IoT, dispositivos de desarrollo, placas, Raspberry Pi 2, Raspberry Pi 3, Minnowboard Max, Dragonboard
-ms.openlocfilehash: e303ce86133fe1cfcef49639e8c60be7178afe08
-ms.sourcegitcommit: 823a8f6967f74d71d5c61fe90f6b63ba79483479
+ms.openlocfilehash: f2ecf7295af1236330e48b1301bf5fe224606ac4
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70159299"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918477"
 ---
 # <a name="suggested-prototype-boards"></a>Placas de prototipo sugeridas
 

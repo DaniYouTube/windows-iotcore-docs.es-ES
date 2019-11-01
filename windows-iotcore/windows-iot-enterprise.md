@@ -1,17 +1,15 @@
 ---
 title: Introducción a Windows 10 IoT Enterprise
-author: saraclay
-ms.author: saclayt
 ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información acerca de qué es Windows 10 IoT Enterprise y lo que se puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Enterprise, binario, Windows
-ms.openlocfilehash: 0d7347e86e3fd3eb6b5b7ad0eccc0825611a9225
-ms.sourcegitcommit: c5552007f5456e57512307f51b146406a23fa723
+ms.openlocfilehash: e965594b89ac41bc3f62a9fa3c033c4244100d02
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739831"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918604"
 ---
 # <a name="an-overview-of-windows-10-iot-enterprise"></a>Introducción a Windows 10 IoT Enterprise
 

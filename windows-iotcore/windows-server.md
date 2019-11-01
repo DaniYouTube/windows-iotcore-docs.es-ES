@@ -1,17 +1,15 @@
 ---
 title: Información general de Windows Server IoT 2019
-author: saraclay
-ms.author: saclayt
 ms.date: 02/07/2019
 ms.topic: article
 description: Obtenga información sobre qué es Windows Server IoT 2019 y lo que le permite hacer.
 keywords: Windows Server IoT 2019, capacidad de administración empresarial, ecosistema de Windows, IoT
-ms.openlocfilehash: 7c14df57e3a9e9368ba02a435027efe836d12e28
-ms.sourcegitcommit: c5552007f5456e57512307f51b146406a23fa723
+ms.openlocfilehash: c02dfb5887c53769baae54955f1208d2ae7f88ff
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739844"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918600"
 ---
 # <a name="an-overview-of-windows-server-iot-2019"></a>Una descripción general de Windows Server IoT 2019
 

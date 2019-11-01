@@ -1,16 +1,14 @@
 ---
-author: saraclay
 Description: Solución de diferentes problemas relacionados con el desarrollo.
 title: Solución de problemas
-ms.author: saclayt
-ms.date: 08/28/18
+ms.date: 08/28/2018
 ms.topic: article
-ms.openlocfilehash: 8b93ad987c27e1123d68c4d22148447ccc99e37d
-ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.openlocfilehash: 8d2e326dae01157931e5d1d1c3d6eb858a1268b1
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66491706"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918587"
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 Se trata de un artículo que contiene los problemas más comunes que se han encontrado los usuarios. Para encontrar un elemento específico, presione Ctrl+F para buscar una palabra o frase. ¿Tiene alguna idea que quiera agregar? Cree una solicitud de incorporación de cambios para esta documentación o proporcione comentarios sobre el contenido a continuación.

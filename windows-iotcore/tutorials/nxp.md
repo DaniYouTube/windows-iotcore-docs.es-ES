@@ -1,17 +1,16 @@
 ---
 title: Configuración de un dispositivo NXP
-ms.author: saclayt
 ms.date: 05/22/2019
 ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo NXP con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, NXP
 ms.custom: RS5
-ms.openlocfilehash: 4924d109ab6fce3b6794a996140364d2814aca23
-ms.sourcegitcommit: 4272081b5186dada1e61974193e41fcc1c42a1b9
+ms.openlocfilehash: 180399130d898baff6af4f0dc18e1e20e13ec83c
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629393"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918495"
 ---
 # <a name="setting-up-a-nxp-device"></a>Configuración de un dispositivo NXP
 

@@ -1,17 +1,15 @@
 ---
 title: Información general de Windows 10 IoT
-author: saraclay
-ms.author: saclayt
 ms.date: 01/30/2018
 ms.topic: article
 description: Obtenga información sobre qué es Windows 10 IoT y lo que puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Windows 10 IoT Core, equipo sin periféricos, voz, características, edición binaria, ediciones
-ms.openlocfilehash: 8638a17201f2fe0a571741918e08172c99592be5
-ms.sourcegitcommit: 823a8f6967f74d71d5c61fe90f6b63ba79483479
+ms.openlocfilehash: 0c4c0a17ef979d00e1c01a231ab4d49bd8072240
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70159278"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918460"
 ---
 # <a name="an-overview-of-windows-10-iot"></a>Información general de Windows 10 IoT 
 

@@ -1,17 +1,16 @@
 ---
 title: Configuración de un dispositivo Raspberry Pi
-ms.author: saclayt
 ms.date: 05/22/2019
 ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo Raspberry Pi con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, Raspberry Pi
 ms.custom: RS5
-ms.openlocfilehash: 3269aa2ed102b667519baa9212e604083f910783
-ms.sourcegitcommit: 9ec4716afde25fdc8b94f7c0794448501f451b55
+ms.openlocfilehash: 304ad0ab555ccb32d546220e0b2b5a649e4b7e28
+ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66182197"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72918627"
 ---
 # <a name="setting-up-a-raspberry-pi"></a>Configuración de un dispositivo Raspberry Pi
 
