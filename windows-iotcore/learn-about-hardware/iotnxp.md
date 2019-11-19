@@ -6,32 +6,33 @@ ms.date: 02/22/2019
 ms.topic: article
 description: Más información sobre Windows 10 IoT Core y NXP i.MX SOC
 keywords: Windows 10 IoT Core, introducción, i.MX, NXP
-ms.openlocfilehash: 244d767507393680df7a48487522ff62be40692d
-ms.sourcegitcommit: c5552007f5456e57512307f51b146406a23fa723
-ms.translationtype: MT
+ms.openlocfilehash: 79b42c31abc110a3256db32fd67818288f7269aa
+ms.sourcegitcommit: 833f64e5c9ef8edc6ea62824d5f4f0b7d5a03270
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739812"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74154917"
 ---
 # <a name="window-10-iot-core-and-nxp-imx-socs"></a>Windows 10 IoT Core y NXP i.MX SOC
 
-En 2018, Microsoft y NXP anunció una versión preliminar privada de Windows 10 IoT Core en NXP i.MX 6 y i.MX 7 Silicon y empezó a trabajar en la i.mx 8 m 8 m. Cientos de desarrolladores, investigadores y desarrolladores comerciales expresaron su interés en la combinación de 10 años de actualizaciones de seguridad de Windows y la flexibilidad y confiabilidad de NXP Silicon. 
- 
-Durante la versión preliminar, los ingenieros de Microsoft y NXP dedican miles de horas a ajustar y mejorar el BSP en función de la entrada de los que evalúan la solución. Trabajamos con clientes interesados en la modernización de controladores industriales heredados, el desarrollo de nuevas soluciones de automatización para la creación de conexiones en la nube y puertas de enlace con seguridad líder de clase, como [e/s de confianza](https://blogs.windows.com/windowsexperience/2018/04/24/trusted-cyber-physical-systems-looks-to-protect-your-critical-infrastructure-from-modern-threats-in-the-world-of-iot/#A0WkfgLBpgbLaFe3.97).
- 
-En función del interesante interés de la solución, Microsoft y NXP ahora están haciendo que BSP para la familia i.MX 6, i.MX 7 y i.MX 8 $ de SOC disponible como versión preliminar pública no comercial. Debido al largo historial que Microsoft y NXP tiene en los mercados de IoT y Embedded, somos conscientes de la necesidad de flexibilidad de diseño. Por lo tanto, además de los equipos de varios paneles y del sistema en las soluciones de módulos, Microsoft, NXP y nuestros asociados de hardware han habilitado, los i.MX 6, i.MX 7 y i.MX 8 $ BSP se proporcionan con licencia de código abierto. Ahora, todo el mundo podrá acceder al contenido de BSP completo de las familias de productos i.MX 6, i.MX 7 y i.MXn para su evaluación en su hardware, junto con la versión 2018 de octubre de Windows 10 IoT Core.
+NXP admite los paquetes de soporte técnico de Windows 10 IoT Core a la placa (BSP) en los procesadores de aplicaciones de i.MX y los paneles de desarrollo destacados. 
 
+Las plataformas de aplicaciones de i.MX de Windows 10 IoT Core altamente optimizadas en BSP, facilitan la creación de soluciones seguras y escalables desde el dispositivo hasta la nube, desde el aprovisionamiento hasta la administración y la protección de dispositivos a escala. Los diseñadores pueden ejecutar servicios en la nube con facilidad y obtener información de los dispositivos de IoT. Windows 10 IoT Core en procesadores de aplicaciones i.MX proporciona un tiempo de comercialización más rápido con muchas interfaces de usuario y pilas de dispositivos incluidas, que funciona de forma integrada.
+
+En función de la abrumadora interés del cliente en Windows 10 IoT Core con i.MX Silicon de NXP, Microsoft y NXP han realizado el BSP de la familia i.MX 6, i.MX 7 y i.MX 8 de SOC disponible para uso comercial. Debido al largo historial que Microsoft y NXP tiene en los mercados de IoT y Embedded, somos conscientes de la necesidad de flexibilidad de diseño. Por lo tanto, además de los equipos de varios paneles y del sistema en las soluciones de módulos, Microsoft, NXP y nuestros asociados de hardware han habilitado, los i.MX 6, i.MX 7 y i.MX 8 $ BSP se proporcionan con licencia de código abierto. Ahora, todo el mundo podrá tener acceso al contenido de BSP completo de las familias de productos i.MX 6, i.MX 7 y i.MX 8 m para su uso comercial en su hardware, junto con la versión 2018 de octubre de Windows 10 IoT Core.
 
 ## <a name="bsp-access"></a>Acceso BSP
 
-Si está interesado en habilitar la compatibilidad con su propio hardware de i.MX, acceda a la documentación y el origen de BSP en [GitHub]( https://github.com/ms-iot/imx-iotcore). A menos que se indique lo contrario, la mayoría del origen se proporciona en la licencia MIT. El código se publica para uso comercial con soporte técnico proporcionado por NXP y se puede encontrar [aquí](https://www.nxp.com/support/developer-resources/evaluation-and-development-boards/i.mx-evaluation-and-development-boards/i.mx-software-and-development-tool:IMX-SW).
+Si está interesado en habilitar el soporte técnico comercial para su propio hardware de e/MX, acceda a la fuente de BSP y a la documentación del [sitio web de NXP](https://www.nxp.com/design/software/embedded-software/windows-10-iotIf-core-for-i.mx-applications-processors:IMXWIN10IOT). 
 
 Si tiene preguntas de NXP de hardware/BSP respectivo o comentarios sobre cómo el BSP puede admitir mejor su solución de destino, publique en la [comunidad de NXP](https://community.nxp.com/community/imx/content?filterID=contentstatus%5Bpublished%5D%7Ecategory%5Bwindows%5D). Si tiene alguna pregunta relacionada con Windows, use la [comunidad de Microsoft](https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT).
+
+Si necesita soporte adicional más allá de los foros de la comunidad para la personalización de BSP y la incompatibilidad con los productos de i.MX, el soporte técnico está disponible a través de www.nxp.com/prosupport de soporte técnico Pro. Las consultas pueden enviarse a [prosupport@nxp.com](mailto:prosupport@nxp.com). Para la integración y los servicios de pago de IoT de Windows 10, póngase en contacto con [epsoinfo@microsoft.com](mailto:epsoinfo@microsoft.com).
 
 
 ## <a name="ecosystem-resources"></a>Recursos del ecosistema
 
-Varios asociados de Microsoft y NXP han habilitado los dispositivos comerciales i.MX 6, i.MX 7 y i.MX 8M compatibles con Windows 10 IoT Core. Póngase en contacto directamente con el asociado para hardware y una imagen de plataforma.
+Varios asociados de Microsoft y NXP han habilitado Windows 10 IoT Core en dispositivos comerciales i.MX 6, i.MX 7 y i.MX 8 m. Póngase en contacto directamente con el asociado para obtener acceso al hardware. 
 
 
 > | Dispositivo | Contacto |
@@ -53,3 +54,7 @@ Varios asociados de Microsoft y NXP han habilitado los dispositivos comerciales 
 > | [MCIMX6ULL-EVK](https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/i.mx-applications-processors/i.mx-6-processors/evaluation-kit-for-the-i.mx-6ull-and-6ulz-applications-processor:MCIMX6ULL-EVK) | [Wei Wang](mailto:Wei.A.Wang@nxp.com) |
 > | [MCIMX8M-EVK](https://www.nxp.com/support/developer-resources/software-development-tools/i.mx-developer-resources/evaluation-kit-for-the-i.mx-8m-applications-processor:MCIMX8M-EVK) |  |
 > | [MCIMX8MMINI-EVK](http://www.nxp.com/imx8mminievk) | []() |
+> | [i. MX8M MaaXBoard](http://www.embest-tech.com/prod_view.aspx?TypeId=117&Id=388&Fid=t3:117:3) | [chinasales@embest-tech.com](mailto:chinasales@embest-tech.com) |
+
+Nota: los asociados anteriores admiten su hardware y el BSP para su hardware. Es posible que no puedan ayudar a otros problemas de software o de configuración.
+
