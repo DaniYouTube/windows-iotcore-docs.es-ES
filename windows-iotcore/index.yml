@@ -3,16 +3,14 @@ title: Documentación de Windows para IoT
 summary: La plataforma Windows para IoT tiene varias ediciones, cada una de ellas optimizada para escenarios específicos. Todas comparten la seguridad, la facilidad de administración, la compatibilidad y la conectividad en la nube que espera de Windows.
 metadata:
   description: Obtenga información sobre Windows para IoT con el fin de desarrollar sus propias soluciones insertadas y conectadas.
-  services: windows-iot
-  ms.service: windows-iot
   ms.topic: landing-page
   ms.date: 09/04/2019
-  ms.openlocfilehash: fa98addadf627de0037f38c2bd9f13c90cef460a
-  ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+  ms.openlocfilehash: 9d2a71a4e5615ec8ef79ed9e6f6d20ce6702aff1
+  ms.sourcegitcommit: 833f64e5c9ef8edc6ea62824d5f4f0b7d5a03270
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/25/2019
-  ms.locfileid: "72918156"
+  ms.lasthandoff: 11/18/2019
+  ms.locfileid: "74154955"
 landingContent:
 - title: Acerca de Windows para IoT
   linkLists:
