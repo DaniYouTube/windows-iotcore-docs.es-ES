@@ -5,12 +5,12 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo Intel con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, Intel
 ms.custom: RS5
-ms.openlocfilehash: 3f92f9af4ddb492b1f465ee00b55e88e16b3a67f
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: bd1aa788e11bf4d01fdd897c64c9ae947928a46f
+ms.sourcegitcommit: 833f64e5c9ef8edc6ea62824d5f4f0b7d5a03270
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918508"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74154968"
 ---
 # <a name="setting-up-an-intel-device"></a>Configuración de un dispositivo Intel
 
@@ -26,7 +26,7 @@ Si lo que quiere es fabricar con un dispositivo Qualcomm, consulte la [guía de 
 3. Cree una imagen de WinPE con arranque USB:
 4. Inicie el entorno de herramientas de implementación y creación de imágenes `(C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools)` como un administrador.
 5. Cree una copia de trabajo de los archivos de Windows PE. Especifique x86, amd64 o ARM: `Copype amd64 C:\WINPE_amd64`
-6. Instale Windows PE en la unidad flash USB, especificando la siguiente letra de unidad de WinPE. Puede encontrar más información [aquí](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive). `MMakeWinPEMedia /UFD C:\WinPE_amd64 P:`
+6. Instale Windows PE en la unidad flash USB, especificando la siguiente letra de unidad de WinPE. Puede encontrar más información [aquí](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive). `MakeWinPEMedia /UFD C:\WinPE_amd64 P:`
 7. Para descargar la [imagen de Windows 10 IoT Core](https://downloads.up-community.org/?post_type=wpdmpro&p=204&preview=true) haga doble clic en el archivo ISO descargado y localice la unidad de Virtual CD montada.
 8. Esta unidad contendrá un archivo de instalación (.msi); haga doble clic en él. Esto creará un directorio en el equipo en C:\Archivos de programa (x86)\Microsoft IoT\FFU\ en el que debería ver un archivo de imagen, "flash.ffu".
 9. Descargue, descomprima y copie el [script de instalador eMMC](https://github.com/ms-iot/content/blob/develop/Resources/eMMCInstaller.zip) al directorio raíz del dispositivo USB, junto con la FFU del dispositivo.
