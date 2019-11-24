@@ -55,7 +55,7 @@ La declaración de privacidad para esta versión del sistema operativo Windows s
       * Compatibilidad con idiomas mejorada 
    * Varios  
       * Se ha realizado un cambio en la configuración de BCD predeterminada para evitar que los dispositivos intenten arrancar en modo de recuperación cuando no existe el modo de recuperación. 
-      * La característica IOT_POWER_SETTINGS ahora incluye powercfg. exe. Está disponible para todas las arquitecturas (ARM32, x86 y x64). 
+      * IOT_POWER_SETTINGS característica ahora incluye powercfg. exe. Está disponible para todas las arquitecturas (ARM32, x86 y x64). 
       * Se realizaron cambios en Applyupdate. exe para agregar las marcas blockrebooton/blockrebootoff 
       * Se han agregado las extensiones de clase para la notificación de hardware (hwnclx) y la función USB (usbfnclx) a las imágenes de IoT Core predeterminadas.
 
@@ -82,7 +82,7 @@ Raspberry Pi 2 es compatible con el transporte en serie para la comunicación 
  
 ### <a name="dragon-board"></a>Placa de dragón 
 
-#### <a name="dragonboard-410c-shutdown"></a>Apagado de DragonBoard 410c 
+#### <a name="dragonboard-410c-shutdown"></a>Apagado de DragonBoard 410c 
 En DragonBoard, la placa no se apagará con un comando de apagado. El sistema se reiniciará. Para apagar la placa, desconecte la alimentación. 
 
 #### <a name="dragon-board-headset--microphone-jack"></a>Conector de auriculares y micrófono de DragonBoard  

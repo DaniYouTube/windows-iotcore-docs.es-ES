@@ -31,25 +31,25 @@ La inscripción de MDM de un dispositivo de IoT Core se realiza mediante un paqu
 
 1. Abra la consola de administración de Configuration Manager (consola de ConfigMgr)
 
-2. Vaya a _activos y compatibilidad > configuración de cumplimiento > acceso a recursos de la empresa >_ 
-   ![perfiles de certificado perfiles de certificado](../media/ManagingDevices/ConfigMgr-Certificate-Profiles.PNG)
+2. Vaya a _activos y compatibilidad > configuración de cumplimiento > perfiles de acceso de recursos de la compañía > perfiles_ de certificado
+   ![perfiles de certificado](../media/ManagingDevices/ConfigMgr-Certificate-Profiles.PNG)
 
 3. Haga clic en **crear Perfil de certificado** .
 
 4. Proporcionar un nombre y una descripción para el perfil
-   - Nombre: Ejemplo de Configuration Manager certificado raíz de confianza
-     - Tipo de Perfil de certificado: Certificado de CA de confianza  
+   - Nombre: ejemplo de Configuration Manager certificado raíz de confianza
+     - Tipo de Perfil de certificado: certificado de CA de confianza  
      ![Certificación de confianza](../media/ManagingDevices/ConfigMgr-Certificate-Profiles-Wizard.png)
 
-5. Haga clic en **Next**.
+5. Haz clic en **Siguiente**.
 
 6. Importe el archivo de certificado.
 
 7. Seleccione **almacén de certificados del equipo-raíz** para el **almacén de destino**.
 
-8. Haga clic en **Next**.
+8. Haz clic en **Siguiente**.
 
-9. Elegir **seleccionar todo** para plataformas compatibles ![plataformas admitidas](../media/ManagingDevices/ConfigMgr-Certificate-Profiles-Wizard-Supported-Platforms.png)
+9. Elija **seleccionar todo para las** plataformas compatibles ![plataformas admitidas](../media/ManagingDevices/ConfigMgr-Certificate-Profiles-Wizard-Supported-Platforms.png)
 
 10. Haga clic en **Resumen, siguiente y cerrar** para salir del asistente.
 
@@ -64,7 +64,7 @@ La inscripción de MDM de un dispositivo de IoT Core se realiza mediante un paqu
 1. Descargue e instale [Windows Assessment and Deployment Kit (Windows ADK)](https://developer.microsoft.com/windows/hardware/windows-assessment-deployment-kit).
 
 2. Abra el diseñador de imágenes y configuraciones de Windows (WICD).
-   ![Diseñador de imágenes y configuraciones de Windows](../media/ManagingDevices/WICD-Start-Page.png)
+   ![el diseñador de imágenes y configuraciones de Windows](../media/ManagingDevices/WICD-Start-Page.png)
 
 3. Elección del **aprovisionamiento avanzado**
 
@@ -73,13 +73,13 @@ La inscripción de MDM de un dispositivo de IoT Core se realiza mediante un paqu
 5. Elija la configuración común para Windows 10 IoT Core.
 
 6. Omitir el paso importar paquete.
-   ![WICD-New-](../media/ManagingDevices/WICD-Advanced-Provisioning-New-Project-Details.PNG) 
-   Project-details![wicd-New-Project](../media/ManagingDevices/WICD-Advanced-Provisioning-New-Project-Editions.PNG) 
-   -Editions![wicd-New-Project-Import](../media/ManagingDevices/WICD-Advanced-Provisioning-New-Project-Import.PNG)
+   ![WICD-New-Project-details](../media/ManagingDevices/WICD-Advanced-Provisioning-New-Project-Details.PNG) 
+   ![WICD-New-Project-Editions](../media/ManagingDevices/WICD-Advanced-Provisioning-New-Project-Editions.PNG) 
+   ![WICD-New-Project-Import](../media/ManagingDevices/WICD-Advanced-Provisioning-New-Project-Import.PNG)
 
 7. Vaya a Workplace-> inscripciones.
 
-8. En el campo UPN, escriba la cuenta en la que desea inscribir el dispositivo (es trmck@contoso.codecir,) y haga clic en **Agregar**.
+8. En el campo UPN, escriba la cuenta en la que desea inscribir el dispositivo (es decir, trmck@contoso.co) y haga clic en **Agregar**.
 
    ![Inscripciones de área de trabajo llenas](../media/ManagingDevices/WICD-Workplace-Enrollments-UPN-Filled.png)
 
@@ -91,8 +91,8 @@ La inscripción de MDM de un dispositivo de IoT Core se realiza mediante un paqu
 > La dirección URL del servicio de inscripción y la dirección URL del servicio de directivas son opcionales.
 
 11. Para el secreto, escriba  
-    - OnPremises La contraseña de la cuenta con la que está realizando la inscripción.  
-    - Certificado La huella digital del certificado.
+    - Local: la contraseña de la cuenta con la que está realizando la inscripción.  
+    - Certificado: la huella digital del certificado
     
     ![En su entorno local](../media/ManagingDevices/WICD-Workplace-Enrollments-UPN-Details-Filled-Premise.png)  
 
@@ -115,7 +115,7 @@ Hay varias maneras en las que se puede implementar un paquete de aprovisionamien
 
 #### <a name="copying-package-to-device"></a>Copiando el paquete en el dispositivo
 
-Tome el paquete de aprovisionamiento que se exportó desde SCCM o wicd y copie el archivo. ppkg `C:\Windows\Provisioning\Packages` en el directorio del dispositivo iot. Tras reiniciar el dispositivo, se ejecutará el paquete y el dispositivo iniciará el proceso de inscripción.
+Tome el paquete de aprovisionamiento que se exportó desde SCCM o WICD y copie el archivo. ppkg en `C:\Windows\Provisioning\Packages` directorio del dispositivo IoT. Tras reiniciar el dispositivo, se ejecutará el paquete y el dispositivo iniciará el proceso de inscripción.
 
 #### <a name="adding-package-to-image"></a>Agregando paquete a la imagen
 
