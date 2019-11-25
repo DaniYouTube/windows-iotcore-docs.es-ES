@@ -4,17 +4,17 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información acerca de qué es Windows 10 IoT Enterprise y lo que se puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Enterprise, binario, Windows
-ms.openlocfilehash: e965594b89ac41bc3f62a9fa3c033c4244100d02
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: ea8a3b2395052beaa722ad0c83e1fe7386a3e628
+ms.sourcegitcommit: 833f64e5c9ef8edc6ea62824d5f4f0b7d5a03270
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918604"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74154984"
 ---
 # <a name="an-overview-of-windows-10-iot-enterprise"></a>Introducción a Windows 10 IoT Enterprise
 
 > [!NOTE]
-> Se admiten contenedores Windows para implementaciones comerciales en Windows Server, Windows IoT Server, Windows IoT Enterprise y Windows IoT Core.  A partir de la actualización de octubre de 2018 de Windows (compilación 17763), los contenedores Windows solo se pueden usar con Windows Enterprise y Professional para fines de desarrollo y pruebas.
+> Se admiten contenedores Windows para implementaciones comerciales en Windows Server, Windows Server IoT, Windows 10 IoT Enterprise y Windows 10 IoT Core.  A partir de la actualización de octubre de 2018 de Windows (compilación 17763), los contenedores Windows solo se pueden usar con Windows 10 Enterprise y Windows 10 Professional para fines de desarrollo y pruebas.
 
 ## <a name="what-is-windows-10-iot-enterprise"></a>¿Qué es Windows 10 IoT Enterprise?
 Windows 10 IoT Enterprise es una versión completa de Windows 10 que ofrece seguridad y capacidad de administración empresarial a las soluciones de IoT. Windows 10 IoT Enterprise comparte todos los beneficios del ecosistema mundial de Windows. Es un binario equivalente a Windows 10 Enterprise, por lo que puede usar las mismas herramientas de desarrollo y administración que los PC y portátiles cliente.  Sin embargo, en lo referente a licencias y distribución, la versión de escritorio y versiones de IoT son diferentes. Tenga en cuenta que Windows 10 IoT Enterprise ofrece las opciones de Canal de mantenimiento a largo plazo (LTSC) y Canal semianual (SAC). Los OEM pueden elegir la versión que necesitan para sus dispositivos.
