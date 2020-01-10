@@ -4,12 +4,12 @@ ms.date: 01/30/2018
 ms.topic: article
 description: Obtenga información sobre qué es Windows 10 IoT y lo que puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Windows 10 IoT Core, equipo sin periféricos, voz, características, edición binaria, ediciones
-ms.openlocfilehash: 0c4c0a17ef979d00e1c01a231ab4d49bd8072240
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 9ef9562e93dbaa71b97f75689adc3eed28ac1f9f
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918460"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721801"
 ---
 # <a name="an-overview-of-windows-10-iot"></a>Información general de Windows 10 IoT 
 
@@ -26,18 +26,18 @@ Windows 10 IoT está disponible en dos ediciones.  Windows 10 IoT Core es el mie
 
 Aunque Windows 10 IoT Core y Windows 10 IoT Enterprise son similares en el nombre, hay diferencias en lo que ofrecen y también en lo que admiten. A continuación se muestra una lista de características en la que se resaltan las diferencias de cada edición.
 
-> |             | Windows 10 IoT Core  |  Windows 10 IoT Enterprise  |
+> |             | Windows 10 IoT Core  |  Windows 10 IoT Enterprise  |
 > |-------------|----------|---------|
-> | Experiencia del usuario | Una aplicación para UWP en primer plano a la vez (vea la [documentación de IoT Shell](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/iotcoreshell) para el control de la pila de retroceso de aplicaciones) con servicios y aplicaciones complementarios en segundo plano. | Shell de Windows tradicional con características avanzadas de bloqueo |
+> | Experiencia del usuario | Una aplicación para UWP en primer plano a la vez (vea la [documentación de IoT Shell](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoreshell) para el control de la pila de retroceso de aplicaciones) con servicios y aplicaciones complementarios en segundo plano. | Shell de Windows tradicional con características avanzadas de bloqueo |
 > | Compatibilidad con equipos sin periféricos | Sí | Sí |
 > | Arquitectura de aplicaciones compatible | Solo IU de UWP | Compatibilidad completa con la interfaz de usuario de Windows (por ejemplo, UWP, WinForms, etc.) |
-> | Cortana | [*SDK de Cortana*](https://developer.microsoft.com/en-us/cortana/devices) | Sí |
+> | Cortana | [*SDK de Cortana*](https://developer.microsoft.com/cortana/devices) | Sí |
 > | Unión a un dominio | Solo AAD | AAD y dominio tradicional |
-> | Management | MDM | MDM |
+> | Administración | MDM | MDM |
 > | Tecnologías de seguridad del dispositivo | [TPM](https://docs.microsoft.com/windows/iot-core/secure-your-device/tpm), [Arranque seguro, BitLocker, Device Guard](https://docs.microsoft.com/windows/iot-core/secure-your-device/securebootandbitlocker) y Atestación de estado de dispositivo | [TPM](https://docs.microsoft.com/windows/iot-core/secure-your-device/tpm), [Arranque seguro, BitLocker, Device Guard](https://docs.microsoft.com/windows/iot-core/secure-your-device/securebootandbitlocker) y Atestación de estado de dispositivo |
 > | Compatibilidad con arquitecturas de CPU | x86, x64 y ARM | x86 y x64 |
 > | Concesión de licencias | Contrato de licencia en línea y contratos de OEM insertados, libres de regalías | Contratos de OEM insertados directos e indirectos |
-> | Escenarios de uso | [Señalización digital](https://www.microsoft.com/en-us/windowsforbusiness/digital-signage), edificio inteligente, puerta de enlace de IoT, HMI, hogar inteligente, dispositivos transportables | Tabletas industriales, punto de servicio comercial, pantalla completa, [señalización digital](https://www.microsoft.com/en-us/windowsforbusiness/digital-signage), cajeros automáticos, dispositivos médicos, dispositivos de fabricación, cliente ligero |
+> | Escenarios de uso | [Señalización digital](https://www.microsoft.com/windowsforbusiness/digital-signage), edificio inteligente, puerta de enlace de IoT, HMI, hogar inteligente, dispositivos transportables | Tabletas industriales, punto de servicio comercial, pantalla completa, [señalización digital](https://www.microsoft.com/windowsforbusiness/digital-signage), cajeros automáticos, dispositivos médicos, dispositivos de fabricación, cliente ligero |
 
 Para obtener detalles sobre los requisitos mínimos, visite [el sitio de hardware de Windows](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview).
 
@@ -47,9 +47,9 @@ Si le interesa obtener más información sobre Punto de servicio, visite la [doc
 
 ### <a name="different-features-available-on-desktop-and-iot-core"></a>Distintas características disponibles en Desktop e IoT Core
 
-* Inbox Cortana ya no está disponible en Windows 10 IoT Core desde la versión 1809 (17763). Si lo que busca es comercializar rápidamente un dispositivo habilitado para voz, puede integrar la compatibilidad con Cortana en el dispositivo mediante la [versión preliminar del SDK de dispositivos de Cortana](https://developer.microsoft.com/en-us/cortana/devices).
-* [FileOpenPicker API](https://docs.microsoft.com/en-us/uwp/api/windows.storage.pickers.fileopenpicker) no se admite en Windows 10 IoT Core. Para acceder a unidades locales o almacenamiento extraíble, puede implementar esto en una aplicación propia.
-* El dispositivo Windows 10 IoT Core arrancará en la [aplicación predeterminada](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/iotcoredefaultapp) en lugar de un PC de estilo escritorio. El propósito de esta aplicación no es solo proporcionar un shell descriptivo con el que interactuar tras el primer arranque, sino también permitir el uso del [código abierto](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp) para esta aplicación con el fin de poder utilizar estas características para conectar aplicaciones personalizadas propias.
+* Inbox Cortana ya no está disponible en Windows 10 IoT Core desde la versión 1809 (17763). Si lo que busca es comercializar rápidamente un dispositivo habilitado para voz, puede integrar la compatibilidad con Cortana en el dispositivo mediante la [versión preliminar del SDK de dispositivos de Cortana](https://developer.microsoft.com/cortana/devices).
+* [FileOpenPicker API](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker) no se admite en Windows 10 IoT Core. Para acceder a unidades locales o almacenamiento extraíble, puede implementar esto en una aplicación propia.
+* El dispositivo Windows 10 IoT Core arrancará en la [aplicación predeterminada](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoredefaultapp) en lugar de un PC de estilo escritorio. El propósito de esta aplicación no es solo proporcionar un shell descriptivo con el que interactuar tras el primer arranque, sino también permitir el uso del [código abierto](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp) para esta aplicación con el fin de poder utilizar estas características para conectar aplicaciones personalizadas propias.
 
 ### <a name="differences-in-driver-supported-areas"></a>Diferencias en las áreas compatibles con el controlador
 
@@ -91,7 +91,7 @@ REG ADD "HKCU\Control Panel\Accessibility" /v DynamicScrollbars /t REG_DWORD \d 
 Es posible que los comandos que se muestran en esta publicación cambien con el tiempo, ya que Windows 10 IoT Core se actualiza continuamente.
 
 ## <a name="iot-edge-support-for-windows-10-iot"></a>Compatibilidad de IoT Edge con Windows 10 IoT
-Para más información sobre la compatibilidad de IoT Edge con Windows 10 IoT, puede leer más sobre "Sistemas operativos" en el artículo de Azure IoT Edge [aquí](https://docs.microsoft.com/en-us/azure/iot-edge/support#operating-systems).
+Para más información sobre la compatibilidad de IoT Edge con Windows 10 IoT, puede leer más sobre "Sistemas operativos" en el artículo de Azure IoT Edge [aquí](https://docs.microsoft.com/azure/iot-edge/support#operating-systems).
 
 
 ## <a name="helpful-resources"></a>Recursos útiles

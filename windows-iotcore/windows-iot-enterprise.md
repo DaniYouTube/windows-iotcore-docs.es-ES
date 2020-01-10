@@ -4,12 +4,12 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información acerca de qué es Windows 10 IoT Enterprise y lo que se puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Enterprise, binario, Windows
-ms.openlocfilehash: ea8a3b2395052beaa722ad0c83e1fe7386a3e628
-ms.sourcegitcommit: 833f64e5c9ef8edc6ea62824d5f4f0b7d5a03270
+ms.openlocfilehash: da4621a46ae5769ac28c00f2eb3c2d461f3d74ac
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74154984"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721815"
 ---
 # <a name="an-overview-of-windows-10-iot-enterprise"></a>Introducción a Windows 10 IoT Enterprise
 
@@ -25,7 +25,7 @@ Para iniciar su recorrido con Windows 10 IoT Enterprise, tendrá que ponerse en 
 
 También puede probar una copia de evaluación de Windows 10 IoT Enterprise [aquí](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise).
 
-Desde ahí, puede aprender a fabricar con Windows 10 IoT Enterprise con la [Guía de fabricación con Windows 10 IoT Enterprise](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/iot-ent-overview). 
+Desde ahí, puede aprender a fabricar con Windows 10 IoT Enterprise con la [Guía de fabricación con Windows 10 IoT Enterprise](https://docs.microsoft.com/windows-hardware/manufacture/desktop/iot-ent-overview). 
 
 ## <a name="fixed-purpose-devices"></a>Dispositivos de propósito fijo 
 

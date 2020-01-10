@@ -4,12 +4,12 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información sobre qué es Windows 10 IoT Core y lo que puede hacer con él.
 keywords: Windows 10 IoT Core, superficie pequeña, equipo sin periféricos
-ms.openlocfilehash: 31e16be3784be6f33438ae8907997a0a58828620
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 837b9ba8b7f6fa4d36014f4ff5ae2669a73e6e6c
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918463"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721826"
 ---
 # <a name="an-overview-of-windows-10-iot-core"></a>Información general de Windows 10 IoT Core
 
@@ -19,7 +19,7 @@ ms.locfileid: "72918463"
 ## <a name="what-is-windows-10-iot-core"></a>¿Qué es Windows 10 IoT Core?
 Windows 10 IoT Core es una versión de Windows 10 optimizada para dispositivos más pequeños con o sin pantalla, y que se ejecutan en dispositivos ARM y x86 o x64. La documentación de Windows IoT Core, proporciona información sobre la conexión, administración, actualización y protección de los dispositivos, y mucho más. 
 
-Si está listo para pasar al siguiente nivel y empezar a comercializar la solución, puede aprender a fabricar con Windows 10 IoT Core con nuestra [Guía de fabricación de Windows 10 IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). 
+Si está listo para pasar al siguiente nivel y empezar a comercializar la solución, puede aprender a fabricar con Windows 10 IoT Core con nuestra [Guía de fabricación de Windows 10 IoT Core](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). 
 
 ## <a name="getting-started"></a>Introducción
 
@@ -36,7 +36,7 @@ Antes de intentar fabricar un dispositivo, primero es recomendable probar y dise
 <tbody>
 
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/tutorials/quickstarter/PrototypeBoards"
+<td align="left"><p><a href="https://docs.microsoft.com/windows/iot-core/tutorials/quickstarter/PrototypeBoards"
 >1. Selección de una placa de prototipo</a></p></td>
 <td align="left"><p>Examine placas de prototipo comunes y elija una con la que empezar a crear prototipos.</p></td>
 </tr>
@@ -47,12 +47,12 @@ Antes de intentar fabricar un dispositivo, primero es recomendable probar y dise
 </tr>
 
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appinstaller">2. 3. Instalación de la aplicación</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/iot-core/develop-your-app/appinstaller">2. 3. Instalación de la aplicación</a></p></td>
 <td align="left"><p>Obtenga información sobre cómo instalar la aplicación mediante distintas herramientas.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/appdeployment">4. Implementación de la aplicación</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/iot-core/develop-your-app/appdeployment">4. Implementación de la aplicación</a></p></td>
 <td align="left"><p>Obtenga información sobre cómo implementar una aplicación mediante Visual Studio.</p></td>
 </tr>
 
@@ -63,9 +63,9 @@ Antes de intentar fabricar un dispositivo, primero es recomendable probar y dise
 
 ### <a name="different-features-available-on-desktop-and-iot-core"></a>Distintas características disponibles en Desktop e IoT Core
 
-* Inbox Cortana ya no está disponible en Windows 10 IoT Core desde la versión 1809 (17763). Si lo que busca es comercializar rápidamente un dispositivo habilitado para voz, puede integrar la compatibilidad con Cortana en el dispositivo mediante la [versión preliminar del SDK de dispositivos de Cortana](https://developer.microsoft.com/en-us/cortana/devices).
-* [FileOpenPicker API](https://docs.microsoft.com/en-us/uwp/api/windows.storage.pickers.fileopenpicker) no se admite en Windows 10 IoT Core. Para acceder a unidades locales o almacenamiento extraíble, puede implementar esto en una aplicación propia.
-* De fábrica, el dispositivo Windows 10 IoT Core arrancará en la [aplicación predeterminada](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/iotcoredefaultapp) en lugar de un PC de estilo escritorio. Pero para la comercialización, **es obligatorio** reemplazar esta aplicación predeterminada por una personalizada o una aplicación predeterminada que se pueda modificar. El propósito de esta aplicación no es solo proporcionar un shell descriptivo con el que interactuar tras el primer arranque, sino también permitir el uso del [código abierto](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp) para esta aplicación con el fin de poder utilizar estas características para conectar aplicaciones personalizadas propias.
+* Inbox Cortana ya no está disponible en Windows 10 IoT Core desde la versión 1809 (17763). Si lo que busca es comercializar rápidamente un dispositivo habilitado para voz, puede integrar la compatibilidad con Cortana en el dispositivo mediante la [versión preliminar del SDK de dispositivos de Cortana](https://developer.microsoft.com/cortana/devices).
+* [FileOpenPicker API](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker) no se admite en Windows 10 IoT Core. Para acceder a unidades locales o almacenamiento extraíble, puede implementar esto en una aplicación propia.
+* De fábrica, el dispositivo Windows 10 IoT Core arrancará en la [aplicación predeterminada](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoredefaultapp) en lugar de un PC de estilo escritorio. Pero para la comercialización, **es obligatorio** reemplazar esta aplicación predeterminada por una personalizada o una aplicación predeterminada que se pueda modificar. El propósito de esta aplicación no es solo proporcionar un shell descriptivo con el que interactuar tras el primer arranque, sino también permitir el uso del [código abierto](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp) para esta aplicación con el fin de poder utilizar estas características para conectar aplicaciones personalizadas propias.
 
 ### <a name="differences-in-driver-supported-areas"></a>Diferencias en las áreas compatibles con el controlador
 

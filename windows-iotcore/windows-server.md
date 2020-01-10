@@ -4,12 +4,12 @@ ms.date: 02/07/2019
 ms.topic: article
 description: Obtenga información sobre qué es Windows Server IoT 2019 y lo que le permite hacer.
 keywords: Windows Server IoT 2019, capacidad de administración empresarial, ecosistema de Windows, IoT
-ms.openlocfilehash: c02dfb5887c53769baae54955f1208d2ae7f88ff
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 8ed21ae695bff2386346dfe15de9cb83e2697a90
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918600"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721780"
 ---
 # <a name="an-overview-of-windows-server-iot-2019"></a>Una descripción general de Windows Server IoT 2019
 
@@ -30,10 +30,10 @@ Windows Server es conocido como el sistema operativo de servidor que usan peque�
 
 Este es el modelo de distribución con el que ya está familiarizado (anteriormente denominado "Rama de mantenimiento a largo plazo"), donde se publica una nueva versión principal de Windows Server cada 2 o 3 años. Los usuarios tienen derecho a 5 años de soporte estándar y 5 años de soporte extendido. Este canal es adecuado para los sistemas que requieren una opción de mantenimiento prolongado y una estabilidad funcional. Las implementaciones de Windows Server IoT 2019 y las versiones anteriores de Windows Server no se verán afectadas por las nuevas versiones del Canal semianual. El Canal de mantenimiento a largo plazo seguirá recibiendo actualizaciones de seguridad y no relacionadas con la seguridad, pero no recibirá las nuevas funciones y funcionalidades.
 
-* [Más información sobre LTSC](https://docs.microsoft.com/en-us/windows-server/get-started-19/servicing-channels-19#long-term-servicing-channel-ltsc)
+* [Más información sobre LTSC](https://docs.microsoft.com/windows-server/get-started-19/servicing-channels-19#long-term-servicing-channel-ltsc)
 
 ## <a name="helpful-resources"></a>Recursos útiles
 > [!NOTE]
 > Es posible que el distribuidor o el representante de Microsoft disponga de recursos adicionales.
 
-* [Documentación de Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/index)
+* [Documentación de Windows Server 2019](https://docs.microsoft.com/windows-server/index)
