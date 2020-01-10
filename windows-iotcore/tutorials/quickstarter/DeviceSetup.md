@@ -5,19 +5,19 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo con Windows 10 IoT Core mediante una tarjeta SD.
 keywords: Windows 10 IoT Core, tarjeta SD, Panel de Windows 10 IoT Core
 ms.custom: RS5
-ms.openlocfilehash: a201a70019a00448ea1913da158365d9788ed247
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 7575889b94cf7a69550c5c4128ab5ff8a82dde9c
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918637"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721840"
 ---
 # <a name="setting-up-your-device"></a>Configuración del dispositivo
 
 Debajo encontrará cuatro maneras diferentes para instalar una imagen en el dispositivo con Windows 10 IoT Core. Basándose en el gráfico incluido en la [lista de placas sugeridas para la creación de prototipos](PrototypeBoards.md), siga las instrucciones adecuadas. Use la columna derecha para navegar entre estos dos métodos diferentes de instalación de imágenes.
 
 > [!IMPORTANT]
-> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
+> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
 
 > [!IMPORTANT]
 > Cuando aparezca el mensaje emergente "formatear el disco", _no_ lo formatee. Estamos trabajando en una solución para este problema.
@@ -34,7 +34,7 @@ Debajo encontrará cuatro maneras diferentes para instalar una imagen en el disp
 > NXP solo admite imágenes personalizadas. Si lo que busca es instalar una imagen personalizada, seleccione "Personalizada" en la lista desplegable de la compilación del sistema operativo, siga las instrucciones [aquí](https://docs.microsoft.com/windows-hardware/manufacture/iot/create-a-basic-image) para crear una imagen básica y siga el resto de las siguientes instrucciones para finalizar.
 
 > [!NOTE]
-> El panel de información no se puede utilizar para configurar Raspberry Pi 3B+. Si tiene un dispositivo 3B+, debe usar la [versión preliminar técnica de 3B+](https://www.microsoft.com/en-us/software-download/windowsiot). Consulte las [limitaciones conocidas](https://docs.microsoft.com/en-us/windows/iot-core/troubleshooting) de la versión preliminar técnica para determinar si esto es adecuado para el desarrollo.
+> El panel de información no se puede utilizar para configurar Raspberry Pi 3B+. Si tiene un dispositivo 3B+, debe usar la [versión preliminar técnica de 3B+](https://www.microsoft.com/software-download/windowsiot). Consulte las [limitaciones conocidas](https://docs.microsoft.com/windows/iot-core/troubleshooting) de la versión preliminar técnica para determinar si esto es adecuado para el desarrollo.
 
 > [!TIP]
 > Se recomienda usar una tarjeta SD de alto rendimiento, como una tarjeta SD SanDisk, para una mayor estabilidad, así como conectar el dispositivo en una pantalla externa para ver cómo arranca la aplicación predeterminada.
@@ -79,7 +79,7 @@ Debajo encontrará cuatro maneras diferentes para instalar una imagen en el disp
 ## <a name="flashing-with-emmc-for-dragonboard-410c-other-qualcomm-devices"></a>Instalación de una imagen con eMMC (para DragonBoard 410c y otros dispositivos de Qualcomm)
 
 1. Descargue e instale la herramienta de actualización de DragonBoard para la máquina [x86](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip) o [x64](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip).
-2. Descargue la [FFU de DragonBoard de Windows 10 IoT Core](https://developer.microsoft.com/en-us/windows/iot/Downloads).
+2. Descargue la [FFU de DragonBoard de Windows 10 IoT Core](https://developer.microsoft.com/windows/iot/Downloads).
 3. Haga doble clic en el archivo ISO descargado y busque la unidad de Virtual CD montada. Esta unidad contendrá un archivo de instalador (.msi); haga doble clic en él. Esto crea un directorio en el equipo en  `C:\Program Files (x86)\Microsoft IoT\FFU\` donde debería ver un archivo de imagen, "flash.ffu".
 4. Asegúrese de que DragonBoard está en modo de descarga estableciendo que el primer arranque cambie en la placa a arranque de USB, como se muestra debajo. Luego, conecte DragonBoard al equipo host a través de un cable microUSB y, después, conecte DragonBoard a una fuente de alimentación de 12 V (> 1 A).
 5. Inicie la herramienta de actualización de DragonBoard, que debe detectar que DragonBoard se conecta al equipo con un círculo verde. Haga clic en "Examinar" en la FFU del DragonBoard que ha descargado y, después, haga clic en el botón _Programa_.
@@ -99,12 +99,12 @@ Debajo encontrará cuatro maneras diferentes para instalar una imagen en el disp
 1. Descargue e instale el [kit de evaluación e implementación de Windows](https://docs.microsoft.com/windows-hardware/get-started/adk-install) (Windows ADK) con la versión de correlación de Windows 10 que se está ejecutando en su equipo.
 2. Descargue e instale el [complemento de Windows PE para el ADK](https://go.microsoft.com/fwlink/?linkid=2087112).
 
-#### <a name="create-a-usb-bootable-windows-pehttpsdocsmicrosoftcomen-uswindows-hardwaremanufacturedesktopwinpe-intro-image"></a>Creación de una imagen de [Windows PE](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-intro) con arranque USB
+#### <a name="create-a-usb-bootable-windows-pehttpsdocsmicrosoftcomwindows-hardwaremanufacturedesktopwinpe-intro-image"></a>Creación de una imagen de [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) con arranque USB
 
 3. Inserte una unidad USB en el equipo.
 4. Inicie el entorno de herramientas de implementación y creación de imágenes como un administrador. La ruta de instalación predeterminada es `C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\DandISetEnv.bat`.
-5. Use [`Copype`](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/copype-command-line-options) para crear una copia de trabajo de los archivos de Windows PE. Debe especificar arquitecturas x86, AMD64 o ARM (por ejemplo, `Copype amd64 C:\WINPE_amd64`).
-6. Instale Windows PE en la unidad flash USB con [`MakeWinPEMedia`](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/makewinpemedia-command-line-options). Debe especificar la unidad USB de destino (por ejemplo, `MakeWinPEMedia /UFD C:\WinPE_amd64 P:`).
+5. Use [`Copype`](https://docs.microsoft.com/windows-hardware/manufacture/desktop/copype-command-line-options) para crear una copia de trabajo de los archivos de Windows PE. Debe especificar arquitecturas x86, AMD64 o ARM (por ejemplo, `Copype amd64 C:\WINPE_amd64`).
+6. Instale Windows PE en la unidad flash USB con [`MakeWinPEMedia`](https://docs.microsoft.com/windows-hardware/manufacture/desktop/makewinpemedia-command-line-options). Debe especificar la unidad USB de destino (por ejemplo, `MakeWinPEMedia /UFD C:\WinPE_amd64 P:`).
 7. Para descargar la [imagen de Windows 10 IoT Core](https://downloads.up-community.org/?post_type=wpdmpro&p=204&preview=true) haga doble clic en el archivo ISO descargado y localice la unidad de Virtual CD montada.
 8. Esta unidad contendrá un archivo de instalación (.msi); haga doble clic en él. Esto creará un directorio en el equipo en `C:\Program Files (x86)\Microsoft IoT\FFU\` donde debería ver un archivo de imagen, `flash.ffu`.
 9. Descargue, descomprima y copie el [script de instalador eMMC](https://github.com/ms-iot/content/blob/develop/Resources/eMMCInstaller.zip) al directorio raíz del dispositivo USB, junto con la FFU del dispositivo.

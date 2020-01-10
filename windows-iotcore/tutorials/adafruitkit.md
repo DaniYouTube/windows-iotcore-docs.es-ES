@@ -4,12 +4,12 @@ ms.date: 06/13/2018
 ms.topic: article
 description: Obtenga información sobre cómo empezar a trabajar con Microsoft IoT Pack.
 keywords: Windows IoT, Raspberry Pi 3, Adafruit, paquete de inicio
-ms.openlocfilehash: 905506716ff05ea54707a4a469c449aa8cf6259e
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 17c7c7acadb2811a01ce14e3c42c0494b328c42d
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918517"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721910"
 ---
 # <a name="microsoft-iot-pack"></a>Microsoft IoT Pack
 
@@ -20,7 +20,7 @@ _¿No está seguro de qué es esto? Obtenga más información sobre Microsoft Io
 
 ## <a name="build-your-first-app"></a>Compilación de la primera aplicación
 
-Obtenga información sobre cómo completar la configuración y empezar a trabajar. Comience [aquí](https://docs.microsoft.com/en-us/windows/iot-core/tutorials/quickstarter/devicesetup#using-the-iot-dashboard-raspberry-pi-minnowboard-nxp).
+Obtenga información sobre cómo completar la configuración y empezar a trabajar. Comience [aquí](https://docs.microsoft.com/windows/iot-core/tutorials/quickstarter/devicesetup#using-the-iot-dashboard-raspberry-pi-minnowboard-nxp).
 
 ## <a name="explore-sample-projects"></a>Exploración de proyectos de ejemplo
 

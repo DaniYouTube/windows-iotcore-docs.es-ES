@@ -1,20 +1,20 @@
 ---
 Description: Solución de diferentes problemas relacionados con el desarrollo.
-title: Solución de problemas
+title: Solucionar problemas
 ms.date: 08/28/2018
 ms.topic: article
-ms.openlocfilehash: 8d2e326dae01157931e5d1d1c3d6eb858a1268b1
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 6118a5a5006d79c65681400de45fb7626f96836d
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918587"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721521"
 ---
-# <a name="troubleshooting"></a>Solución de problemas
+# <a name="troubleshooting"></a>Solucionar problemas
 Se trata de un artículo que contiene los problemas más comunes que se han encontrado los usuarios. Para encontrar un elemento específico, presione Ctrl+F para buscar una palabra o frase. ¿Tiene alguna idea que quiera agregar? Cree una solicitud de incorporación de cambios para esta documentación o proporcione comentarios sobre el contenido a continuación.
 
 > [!TIP]
-> Para solucionar problemas relacionados con la fabricación, lea el [documento sobre solución de problemas](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/troubleshooting) de nuestra guía de fabricación.
+> Para solucionar problemas relacionados con la fabricación, lea el [documento sobre solución de problemas](https://docs.microsoft.com/windows-hardware/manufacture/iot/troubleshooting) de nuestra guía de fabricación.
 
 ## <a name="asus-tinkerboard-and-rockchip-support"></a>Compatibilidad con ASUS Tinkerboard y Rockchip
 
@@ -69,7 +69,7 @@ Para establecer un perfil de conexión automática, seleccione "auto":
 
 2. Otro factor es que se debe cumplir la directiva de itinerancia por cada interfaz. De forma predeterminada, esa directiva se establece en FALSE ("solo operador local"). Esto se puede consultar y cambiar en la línea de comandos a través de `netsh mbn get/set dataroamcontrol.`
 
-Por ejemplo:
+Ejemplo:
 
 ```
     netsh mbn show dataroamcontrol int=*
@@ -82,7 +82,7 @@ Puede obtener el error **0x139f (ERROR_INVALID_STATE)** cuando el dispositivo es
 ## <a name="raspberry-pi-3b-booting-issues"></a>Problemas de arranque de Raspberry Pi 3B+
 
 > [!NOTE]
-> Esta versión para Raspberry Pi 3B+ es una versión preliminar técnica no admitida. Se ha completado la habilitación y la validación limitadas. Para obtener una mejor experiencia de evaluación y para cualquier producto comercial, use Raspberry Pi 3B u otros dispositivos con SoC de Intel, Qualcomm o NXP admitidos. Para solucionar problemas relacionados con el dispositivo Raspberry Pi 3B+, vea nuestra guía de solución de problemas, [aquí](https://docs.microsoft.com/en-us/windows/iot-core/troubleshooting?branch=master#raspberry-pi-3b-booting-issues). 
+> Esta versión para Raspberry Pi 3B+ es una versión preliminar técnica no admitida. Se ha completado la habilitación y la validación limitadas. Para obtener una mejor experiencia de evaluación y para cualquier producto comercial, use Raspberry Pi 3B u otros dispositivos con SoC de Intel, Qualcomm o NXP admitidos. Para solucionar problemas relacionados con el dispositivo Raspberry Pi 3B+, vea nuestra guía de solución de problemas, [aquí](https://docs.microsoft.com/windows/iot-core/troubleshooting?branch=master#raspberry-pi-3b-booting-issues). 
 
 El dispositivo Raspberry Pi 3 modelo B+ es el producto más reciente de la gama Raspberry Pi 3, con un procesador de cuatro núcleos de 64 bits a 1,4 GHz, LAN inalámbrica de banda dual a 2,4 GHz y 5 GHz, Bluetooth 4.2/BLE, Ethernet más rápido y funciones PoE a través de alta disponibilidad de PoE independiente.
 
@@ -101,7 +101,7 @@ Solo hay dos requisitos al elegir las tarjetas SD que se van a usar con Windows 
 
 Por lo general, tendrá que comprobar si la tarjeta SD es falsa o si está dañada. Igualmente la tarjeta SD puede sufrir daños debido a diversos factores, como la escasez de alimentación o una extracción incorrecta. Es importante proteger la tarjeta de memoria de posibles daños.
 
-Para instalar la imagen en una tarjeta SD, puede usar el [Panel de Windows 10 IoT Core](https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/iotdashboard). Tendrá que elegir "Personalizada" en el campo de la compilación del sistema operativo y luego seleccionar el archivo FFU para instalar. 
+Para instalar la imagen en una tarjeta SD, puede usar el [Panel de Windows 10 IoT Core](https://docs.microsoft.com/windows/iot-core/connect-your-device/iotdashboard). Tendrá que elegir "Personalizada" en el campo de la compilación del sistema operativo y luego seleccionar el archivo FFU para instalar. 
 
 Compruebe si hay algún error de hardware en el dispositivo. Hay dos LED en la placa Raspberry Pi 3B+, como en el modelo 3B. Uno es para PWR y el otro para ACT. El número de parpadeos que emite la luz ACT determinará si la placa arranca o no. En el modelo Raspberry Pi 3B+, el LED de actividad de la tarjeta SD no parpadeará durante algunas fases del arranque.
 
@@ -117,7 +117,7 @@ En el dispositivo Raspberry Pi, la aplicación puede usar los adaptadores hardwa
 
 ![Adaptadores UART y UART USB](media/Troubleshooting/adapters.png)
 
-Puede leer [este artículo](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi#serial-uart) para obtener más información sobre cómo inicializar UART0 y realizar una operación de escritura seguida de una de lectura.
+Puede leer [este artículo](https://docs.microsoft.com/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi#serial-uart) para obtener más información sobre cómo inicializar UART0 y realizar una operación de escritura seguida de una de lectura.
 
 Además, la comunicación por radiofrecuencia (RFCOMM) es la comunicación de serie subyacente para Bluetooth clásico. Consulte [este ejemplo de GitHub](https://github.com/djaus2/iotbluetoothserial) para obtener información sobre la ejecución de aplicaciones para UWP en Windows 10 IoT Core conectadas a través de un dispositivo de IoT con Bluetooth de serie.
 
@@ -182,7 +182,7 @@ administrator@MINWINPC C:\Data\Users\administrator>sc config TestSirepSvc start=
 
 El "modo tableta" es un concepto que solo existe en el shell de Desktop y no se aplica a IoT Core. 
 
-Si el dispositivo tiene hardware compatible (ya sea a través de I2C o USB HID Touch), la función táctil debería funcionar de forma automática con los controladores de clase de bandeja de entrada. Puedes leer más sobre esto [aquí](https://docs.microsoft.com/en-us/windows-hardware/design/component-guidelines/touchscreen-device-bus-connectivity).
+Si el dispositivo tiene hardware compatible (ya sea a través de I2C o USB HID Touch), la función táctil debería funcionar de forma automática con los controladores de clase de bandeja de entrada. Puedes leer más sobre esto [aquí](https://docs.microsoft.com/windows-hardware/design/component-guidelines/touchscreen-device-bus-connectivity).
 
 
 ## <a name="yubikey-support"></a>Compatibilidad con Yubikey

@@ -5,24 +5,24 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo Raspberry Pi con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, Raspberry Pi
 ms.custom: RS5
-ms.openlocfilehash: 304ad0ab555ccb32d546220e0b2b5a649e4b7e28
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 7a79931bc4ce1976a047d51f64a8ba6d4cc590a1
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918627"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721726"
 ---
 # <a name="setting-up-a-raspberry-pi"></a>Configuración de un dispositivo Raspberry Pi
 
 ## <a name="overview"></a>Introducción
 
 > [!NOTE]
-> El panel de información no se puede usar para configurar Raspberry Pi 3B+. Si tiene un dispositivo 3B+, debe usar la [versión preliminar técnica de 3B+](https://www.microsoft.com/en-us/software-download/windowsiot). Vea las [limitaciones conocidas](https://docs.microsoft.com/en-us/windows/iot-core/troubleshooting) de la versión preliminar técnica para determinar si esto es adecuado para el desarrollo.
+> El panel de información no se puede usar para configurar Raspberry Pi 3B+. Si tiene un dispositivo 3B+, debe usar la [versión preliminar técnica de 3B+](https://www.microsoft.com/en-us/software-download/windowsiot). Vea las [limitaciones conocidas](https://docs.microsoft.com/windows/iot-core/troubleshooting) de la versión preliminar técnica para determinar si esto es adecuado para el desarrollo.
 
 > [!IMPORTANT]
 > Cuando aparezca el mensaje emergente "formatear el disco", _no_ lo formatee. Estamos trabajando en una solución para este problema.
 
-Al configurar un dispositivo Raspberry Pi para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Pero si lo que quiere es fabricar con un dispositivo Raspberry Pi, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
+Al configurar un dispositivo Raspberry Pi para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Pero si lo que quiere es fabricar con un dispositivo Raspberry Pi, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
 <br>
 > [!Video https://www.youtube.com/embed/JPRUbGIyODY]
 

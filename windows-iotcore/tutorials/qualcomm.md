@@ -5,16 +5,16 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo Qualcomm con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, Qualcomm
 ms.custom: RS5
-ms.openlocfilehash: 9c27f6011503ea557687817bc044b08695ee7add
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: cb9c1e07219b30aafe8b036c99710b49bcddee66
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918646"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721470"
 ---
 # <a name="setting-up-a-qualcomm-device"></a>Configuración de un dispositivo Qualcomm
 
-Si lo que quiere es fabricar con un dispositivo Qualcomm, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
+Si lo que quiere es fabricar con un dispositivo Qualcomm, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
 
 > [!NOTE]
 > Para asegurarse de que el dispositivo ahora arranca desde la memoria eMMC, escriba de nuevo la configuración del BIOS y cambie el orden de la unidad de arranque para que se cargue desde el disco duro en lugar de la unidad USB.
@@ -22,7 +22,7 @@ Si lo que quiere es fabricar con un dispositivo Qualcomm, consulte la [guía de 
 ## <a name="using-emmc"></a>Uso de eMMC
 
 1. Descargue e instale la herramienta de actualización de DragonBoard para el equipo [x86](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip) o [x64](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip).
-2. Descargue la [FFU de DragonBoard de Windows 10 IoT Core](https://docs.microsoft.com/en-us/windows/iot-core/downloads).
+2. Descargue la [FFU de DragonBoard de Windows 10 IoT Core](https://docs.microsoft.com/windows/iot-core/downloads).
 3. Haga doble clic en el archivo ISO descargado y busque la unidad de Virtual CD montada. Esta unidad contendrá un archivo de instalador (.msi); haga doble clic en él. Esto crea un directorio en el equipo en  `C:\Program Files (x86)\Microsoft IoT\FFU\` donde debería ver un archivo de imagen, "flash.ffu".
 4. Para asegurarse de que DragonBoard está en modo de descarga, establezca que el primer arranque cambie en la placa a arranque de USB, como se muestra a continuación. Después, conecte DragonBoard al equipo host a través de un cable microUSB y, luego, conecte DragonBoard a una fuente de alimentación de 12 V (> 1 A).
 5. Inicie la herramienta de actualización de DragonBoard, que debe detectar que DragonBoard se conecta al equipo con un círculo verde. Haga clic en "Examinar" en la FFU del DragonBoard que ha descargado y, después, haga clic en el botón _Programa_.

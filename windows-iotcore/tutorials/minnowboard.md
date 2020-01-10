@@ -5,12 +5,12 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo MinnowBoard con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, MinnowBoard
 ms.custom: RS5
-ms.openlocfilehash: f74d15a5a20a6869544ad47798457067422590f4
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: abbc6548a9219b967ea379e238ed6a898830e798
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918652"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721920"
 ---
 # <a name="setting-up-a-minnowboard"></a>Configuración de un dispositivo MinnowBoard
 
@@ -22,7 +22,7 @@ ms.locfileid: "72918652"
 > [!IMPORTANT]
 > Cuando aparezca el mensaje emergente "formatear el disco", _no_ lo formatee. Estamos trabajando en una solución para este problema.
 
-Al configurar un dispositivo MinnowBoard para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Si lo que quiere es fabricar con un dispositivo MinnowBoard, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
+Al configurar un dispositivo MinnowBoard para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Si lo que quiere es fabricar con un dispositivo MinnowBoard, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
 <br>
 > [!Video https://www.youtube.com/embed/JPRUbGIyODY]
 

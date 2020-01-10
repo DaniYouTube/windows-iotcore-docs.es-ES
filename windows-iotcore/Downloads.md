@@ -5,33 +5,33 @@ ms.date: 10/05/2018
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
-ms.openlocfilehash: 863df3df64515e96bbd1b1308d86e2228b291f84
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: c2ba5b9151400774c236bab612b877c4e5a360f3
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918545"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721460"
 ---
 # <a name="downloads"></a>Descargas
 Descargue las herramientas y el software necesarios para comenzar con Windows 10 IoT Core.
 
 ## <a name="windows-10-iot-core-dashboard"></a>Panel de Windows 10 IoT Core
 
-El Panel de Windows 10 IoT Core hace que la instalación de la imagen de Windows 10 IoT Core en el dispositivo sea más sencilla, con una interfaz navegable. Una vez descargado, obtenga información [aquí](https://docs.microsoft.com/en-gb/windows/iot-core/tutorials/quickstarter/devicesetup#using-the-iot-dashboard-raspberry-pi-minnowboard-nxp) sobre cómo configurar el dispositivo con el panel.
+El Panel de Windows 10 IoT Core hace que la instalación de la imagen de Windows 10 IoT Core en el dispositivo sea más sencilla, con una interfaz navegable. Una vez descargado, obtenga información [aquí](https://docs.microsoft.com/windows/iot-core/tutorials/quickstarter/devicesetup#using-the-iot-dashboard-raspberry-pi-minnowboard-nxp) sobre cómo configurar el dispositivo con el panel.
 
 > [!div class="nextstepaction"]
-> [Descargar el Panel de Windows 10 IoT Core](http://go.microsoft.com/fwlink/?LinkID=708576)
+> [Descargar el Panel de Windows 10 IoT Core](https://go.microsoft.com/fwlink/?LinkID=708576)
 
-_Al descargar y usar el Panel de Windows 10 IoT Core acepta los [términos de licencia](http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809) y la [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=521839) del Panel de Windows 10 IoT Core._
+_Al descargar y usar el Panel de Windows 10 IoT Core acepta los [términos de licencia](https://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809) y la [declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=521839) del Panel de Windows 10 IoT Core._
 
 ![Imagen del Panel de Windows 10 IoT Core](media/IoTDashboard/DASHBOARD-800x450.jpg)
 
 ## <a name="latest-windows-10-iot-core-builds"></a>Compilaciones más recientes de Windows 10 IoT Core
 
 > [!WARNING]
-> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
+> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
 
-Cuando comercialice la solución de IoT, deberá descargar las compilaciones desde el [sitio de Descarga de software de Microsoft](https://www.microsoft.com/en-us/software-download/windows10IoTCore#!). También hemos incluido debajo versiones del pasado, en caso de que necesite trabajar con una compilación anterior de Windows 10 IoT Core en el dispositivo. 
+Cuando comercialice la solución de IoT, deberá descargar las compilaciones desde el [sitio de Descarga de software de Microsoft](https://www.microsoft.com/software-download/windows10IoTCore#!). También hemos incluido debajo versiones del pasado, en caso de que necesite trabajar con una compilación anterior de Windows 10 IoT Core en el dispositivo. 
 
 ### <a name="october-2018-release"></a>Versión de octubre de 2018
 
@@ -54,9 +54,9 @@ Cuando comercialice la solución de IoT, deberá descargar las compilaciones des
 ### <a name="fall-creators-update"></a>Actualización Fall Creators Update
 
 * [Paquetes de Windows 10 IoT Core](https://software-download.microsoft.com/download/pr/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_PACKAGES.iso)
-* [Raspberry Pi2 y Pi3](http://download.microsoft.com/download/9/6/2/9629C69B-02B8-4A82-A4C8-860D6E880C66/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_RPi.iso)
-* [DragonBoard 410c](http://download.microsoft.com/download/1/0/C/10CAECC2-3B60-45BF-BF0D-D0BACF4072E5/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_QCDB410C.iso)
-* [MinnowBoard Turbot y MAX](http://download.microsoft.com/download/5/F/9/5F917B68-020E-4993-A972-F1A7038510CF/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_MBM.iso)
+* [Raspberry Pi2 y Pi3](https://download.microsoft.com/download/9/6/2/9629C69B-02B8-4A82-A4C8-860D6E880C66/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_RPi.iso)
+* [DragonBoard 410c](https://download.microsoft.com/download/1/0/C/10CAECC2-3B60-45BF-BF0D-D0BACF4072E5/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_QCDB410C.iso)
+* [MinnowBoard Turbot y MAX](https://download.microsoft.com/download/5/F/9/5F917B68-020E-4993-A972-F1A7038510CF/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_MBM.iso)
 
 
 ## <a name="other-downloads"></a>Otras descargas

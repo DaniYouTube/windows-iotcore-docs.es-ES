@@ -5,22 +5,22 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo DragonBoard con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, DragonBoard
 ms.custom: RS5
-ms.openlocfilehash: 0233ef4380cfb8f9fadbbd64d8e7e594cf11b0b1
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 49de9a3007dac12a13a42a334d33dc79c96f96af
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918669"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721748"
 ---
 # <a name="setting-up-a-dragonboard"></a>Configuración de un dispositivo DragonBoard
 
 > [!IMPORTANT]
-> Cuando trabaja con un nuevo dispositivo DragonBoard, viene con Android instalado. Deberá borrar y cargar el dispositivo mediante el método de instalación de imagen eMMC, como se indica [aquí](https://docs.microsoft.com/en-us/windows/iot-core/tutorials/qualcomm).
+> Cuando trabaja con un nuevo dispositivo DragonBoard, viene con Android instalado. Deberá borrar y cargar el dispositivo mediante el método de instalación de imagen eMMC, como se indica [aquí](https://docs.microsoft.com/windows/iot-core/tutorials/qualcomm).
 
 > [!NOTE]
 > Si experimenta problemas relacionados con el audio con DragonBoard, le recomendamos que consulte el manual de Qualcomm [aquí](https://developer.qualcomm.com/download/db410c/stereo-connector-and-audio-routing-application-note.pdf). 
 
-Al configurar un dispositivo DragonBoard para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Si lo que quiere es fabricar con un dispositivo DragonBoard, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
+Al configurar un dispositivo DragonBoard para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Si lo que quiere es fabricar con un dispositivo DragonBoard, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
 <br>
 > [!Video https://www.youtube.com/embed/iPm57hGq-Q8]
 

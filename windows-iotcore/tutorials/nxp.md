@@ -5,12 +5,12 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo NXP con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, NXP
 ms.custom: RS5
-ms.openlocfilehash: 180399130d898baff6af4f0dc18e1e20e13ec83c
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: aa3e28cb79e69c1faccd733d993c8ec12f6ae314
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918495"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721736"
 ---
 # <a name="setting-up-a-nxp-device"></a>Configuración de un dispositivo NXP
 
@@ -22,7 +22,7 @@ ms.locfileid: "72918495"
 > [!NOTE]
 > La configuración de NXP es casi idéntica a la configuración de Raspberry Pi.
 
-Al configurar un dispositivo NXP para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Si lo que quiere es fabricar con un dispositivo NXP, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
+Al configurar un dispositivo NXP para crear prototipos, se recomienda usar el Panel de Windows 10 IoT Core. Si lo que quiere es fabricar con un dispositivo NXP, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
 <br>
 > [!Video https://www.youtube.com/embed/JPRUbGIyODY]
 
@@ -46,7 +46,7 @@ Device: minwinpc
 Password: p@ssw0rd
 ```
 
-4. Cargue el archivo de imagen descargado previamente mediante la función "Examinar". Para más información, vea la [documentación de NXP](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/iotnxp).
+4. Cargue el archivo de imagen descargado previamente mediante la función "Examinar". Para más información, vea la [documentación de NXP](https://docs.microsoft.com/windows/iot-core/learn-about-hardware/iotnxp).
 5. Acepte los términos de licencia de software y haga clic en *Descargar e instalar*. Si todo es correcto, verá que Windows 10 IoT Core instala una imagen en la tarjeta SD.
 
 ![Captura de pantalla del panel](../media/DeviceSetup/Dashboard-Screenshot.jpg)

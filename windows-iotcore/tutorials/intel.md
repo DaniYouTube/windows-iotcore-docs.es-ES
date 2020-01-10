@@ -5,16 +5,16 @@ ms.topic: article
 description: Obtenga información sobre cómo configurar el dispositivo Intel con Windows 10 IoT Core.
 keywords: Windows 10 IoT Core, Intel
 ms.custom: RS5
-ms.openlocfilehash: bd1aa788e11bf4d01fdd897c64c9ae947928a46f
-ms.sourcegitcommit: 833f64e5c9ef8edc6ea62824d5f4f0b7d5a03270
+ms.openlocfilehash: bf32ffbaa890620c8ff9aca40a2c45023609c9ef
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74154968"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721900"
 ---
 # <a name="setting-up-an-intel-device"></a>Configuración de un dispositivo Intel
 
-Si lo que quiere es fabricar con un dispositivo Qualcomm, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
+Si lo que quiere es fabricar con un dispositivo Qualcomm, consulte la [guía de fabricación de IoT Core](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide). No se pueden usar imágenes del creador para la fabricación.
 
 > [!NOTE]
 > Para asegurarse de que el dispositivo ahora arranca desde la memoria eMMC, escriba de nuevo la configuración del BIOS y cambie el orden de la unidad de arranque para que se cargue desde el disco duro en lugar de la unidad USB.
