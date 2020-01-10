@@ -4,12 +4,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información acerca de las características de hardware para una variedad de paneles sugeridos y dispositivos de la comunidad.
 keywords: Windows IOT, dispositivos de desarrollo, paneles, SOC, SOM, sistema en chips, Raspberry pi 2, Raspberry PI 3, Minnowboard Max, DragonBoard
-ms.openlocfilehash: 4114cc6ba7b0580b1f00a7aeae67284bb1fc8cb3
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 049cea0ede9740c95d49eba39c387fb1be49a86c
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72917407"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721713"
 ---
 # <a name="socs-and-custom-boards"></a>Paneles personalizados y SOC
 
@@ -19,9 +19,9 @@ Microsoft trabaja junto con Broadcom, Intel, NXP y Qualcomm para comprobar la co
 
 | Broadcom | Intel | Qualcomm | NXP |
 |----------|-------|----------|-----|
-| BCM2837 | [Intel® Atom® Processor E3900 Series (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                                | [Snapdragon 410 (APQ8016)](https://www.qualcomm.com/products/snapdragon/processors/410) | [Familia i.MX 6](http://aka.ms/iotnxp) |
-| BCM2836 | [Procesador Intel® Celeron® N3350 (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                                    | [Snapdragon 212 (APQ8009)](https://www.qualcomm.com/products/snapdragon/processors/212) | [Familia i.MX 7](http://aka.ms/iotnxp)     |
-|         | [Plataforma N4200 Intel® Pentium® Processor (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                           |                                                                                         | [Familia mini de i.MX 8 m y 8 m](http://aka.ms/iotnxp) |
+| BCM2837 | [Intel® Atom® Processor E3900 Series (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                                | [Snapdragon 410 (APQ8016)](https://www.qualcomm.com/products/snapdragon/processors/410) | [Familia i.MX 6](https://aka.ms/iotnxp) |
+| BCM2836 | [Procesador Intel® Celeron® N3350 (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                                    | [Snapdragon 212 (APQ8009)](https://www.qualcomm.com/products/snapdragon/processors/212) | [Familia i.MX 7](https://aka.ms/iotnxp)     |
+|         | [Plataforma N4200 Intel® Pentium® Processor (Apollo Lake)](https://ark.intel.com/products/codename/80644/#@embedded)                           |                                                                                         | [Familia mini de i.MX 8 m y 8 m](https://aka.ms/iotnxp) |
 |         | [Intel® Pentium® y Celeron® Processor N3000 Series (Braswell)](http://ark.intel.com/products/codename/66094/#@embedded)                    |                                                                                         |      |
 |         | [Procesador Intel® Atom® X5-E8000 (Braswell)](http://ark.intel.com/products/codename/66094/#@embedded)                                        |                                                                                         |  |
 |         | [Procesador Intel® Atom® X5-Z8350 (Cherry Trail)](https://ark.intel.com/products/93361/Intel-Atom-x5-Z8350-Processor-2M-Cache-up-to-1_92-GHz) |                                                                                         |     |
@@ -44,23 +44,23 @@ Para ayudarle a seleccionar la plataforma correcta para el dispositivo, en la ta
 > | Audio | x | x | x | x | x | x |
 > | GPIO | x | x | x | x | x | x |
 > | I2C | x | x | x | x | x | x |
-> | Ethernet | x | N/D | x | x | x | x |
+> | Ethernet | x | N/A | x | x | x | x |
 > | SPI | x | x | x | x | x | x |
 > | Pantalla | x | x | x | x | x | x |
 > | UART | x | x | x | x | x | x |
 > | USB | x | x | x | x | x | x |
-> | PCIe | x | N/D | x | En desarrollo | En desarrollo | N/D |
-> |MIPI-CSI | N/D | x | N/D | N/D | N/D | N/D |
+> | PCIe | x | N/A | x | En desarrollo | En desarrollo | N/A |
+> |MIPI-CSI | N/A | x | N/A | N/A | N/A | N/A |
 > | Gráficos/vídeo | x | x | Software-representado | Software-representado | Software-representado | Software-representado |
-> | GPS | N/D | x | N/D | N/D | N/D | N/D |
-> | Wi-Fi/BT | N/D | x | N/D | N/D | N/D | N/D |
-> | E/s de confianza | N/D | N/D | x | x | x | N/D |
+> | GPS | N/A | x | N/A | N/A | N/A | N/A |
+> | Wi-Fi/BT | N/A | x | N/A | N/A | N/A | N/A |
+> | E/s de confianza | N/A | N/A | x | x | x | N/A |
 > | Administración de energía del procesador |  | x | x | x | En desarrollo | |
-> | TPM | x | x | x | x | x | N/D |
+> | TPM | x | x | x | x | x | N/A |
 > | Arranque seguro | x | x | En desarrollo | En desarrollo | En desarrollo | |
 > | Hibernar | x | | | | | | 
-> | PWM | x | N/D | x | x | x | |
-> | JTAG | x | N/D | x | x | x | |
+> | PWM | x | N/A | x | x | x | |
+> | JTAG | x | N/A | x | x | x | |
 > | eMMC | x | x | x | x | x | |
 > | SDHC | x | x | x | x | x | x |
 
@@ -125,7 +125,7 @@ Recomendaciones:
 
 ### <a name="nxp-preview"></a>**Vista previa de NXP**
 
-La compatibilidad con NXP para Windows 10 IoT Core está en versión preliminar pública. Para obtener más información, el acceso al BSP o para encontrar un asociado de hardware, visite la [Página de NXP SOC](http://aka.ms/iotnxp).
+La compatibilidad con NXP para Windows 10 IoT Core está en versión preliminar pública. Para obtener más información, el acceso al BSP o para encontrar un asociado de hardware, visite la [Página de NXP SOC](https://aka.ms/iotnxp).
 
 También puede ponerse en contacto con los asociados con los que estamos trabajando:
 

@@ -6,18 +6,18 @@ ms.prod: windows-iot
 ms.technology: IoT
 description: Obtenga información sobre las distintas formas en que puede depurar Windows 10 IoT Core.
 keywords: Windows IOT, depuración, PowerShell, SSH
-ms.openlocfilehash: 455d8a90fc655b2deda4a09a661c849ff852b65c
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 2fbfbbd9b181455b56964678d105f106acefa789
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72917246"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721600"
 ---
 # <a name="debugging-on-windows-iot-core"></a>Depuración en Windows IoT Core
 Una vez que tenga la configuración de la imagen de IoT Core con la aplicación en ejecución, es importante que pueda depurar la aplicación o el sistema según sea necesario. El mejor momento para depurar y probar el sistema es el estado de la imagen de prueba. Una vez que los sistemas basados en IoT Core están fuera de la naturaleza, la depuración puede convertirse en Challanging. Esto no se puede decir que no se puede hacer, pero con capas adicionales de dificultades agregadas para depurar Comparar con las fases de prueba. Puede usar lo siguiente para depurar la aplicación o imagen en modo de prueba:
 
 ## <a name="device-portal"></a>Device Portal
-Windows Device portal (WDP) permite configurar y administrar el dispositivo de IoT remoately a través de la red local. Se puede tener acceso a WDP a través de la dirección IP local del dispositivo IoT. Puede encontrar información adicional sobre WDP en IoT [aquí](https://docs.microsoft.com/en-us/windows/iot-core/manage-your-device/DevicePortal).
+Windows Device portal (WDP) permite configurar y administrar el dispositivo de IoT remoately a través de la red local. Se puede tener acceso a WDP a través de la dirección IP local del dispositivo IoT. Puede encontrar información adicional sobre WDP en IoT [aquí](https://docs.microsoft.com/windows/iot-core/manage-your-device/DevicePortal).
 
 ### <a name="collecting-etw--wpp-logs"></a>Recopilación de registros de ETW/WPP 
 -----
@@ -42,4 +42,4 @@ La implementación y depuración de la aplicación es sencilla con Visual Studio
 
 -----
 ## <a name="live-app-debug"></a>Depuración de aplicación activa
-En Visual Studio (2015 y versiones posteriores), puede analizar el rendimiento y diagnosticar problemas en la aplicación Web de ASP.NET en la depuración y en producción, mediante la telemetría de Aplicación de Azure Insights. La característica se extiende posteriormente para incluir aplicaciones de escritorio y UWP en Visual Studio 2017 y a través de Azure portal. Puede encontrar información adicional sobre cómo depurar el proyecto [aquí](https://docs.microsoft.com/en-us/azure/azure-monitor/app/visual-studio) y supervisar el uso, y el rendimiento de las aplicaciones de escritorio o UWP [aquí](https://docs.microsoft.com/en-us/azure/azure-monitor/app/windows-desktop).
+En Visual Studio (2015 y versiones posteriores), puede analizar el rendimiento y diagnosticar problemas en la aplicación Web de ASP.NET en la depuración y en producción, mediante la telemetría de Aplicación de Azure Insights. La característica se extiende posteriormente para incluir aplicaciones de escritorio y UWP en Visual Studio 2017 y a través de Azure portal. Puede encontrar información adicional sobre cómo depurar el proyecto [aquí](https://docs.microsoft.com/azure/azure-monitor/app/visual-studio) y supervisar el uso, y el rendimiento de las aplicaciones de escritorio o UWP [aquí](https://docs.microsoft.com/azure/azure-monitor/app/windows-desktop).

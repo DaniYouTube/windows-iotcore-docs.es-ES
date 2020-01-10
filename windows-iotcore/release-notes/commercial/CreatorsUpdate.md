@@ -4,12 +4,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Lea y obtenga información sobre las novedades en Creators Update.
 keywords: Windows IOT, Creators Update, notas de la versión
-ms.openlocfilehash: f62bb14e99c8509374c776172cfcb495b62325da
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 5946d97cd84992f62213d71c59374aa7f9a5779b
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918717"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721860"
 ---
 # <a name="creators-update-release-notes-for-windows-10-iot-core"></a>Notas de la versión de Creators Update para Windows 10 IoT Core
 Número de compilación 15063. Abril de 2017
@@ -24,7 +24,7 @@ Pueden estar disponibles [otras plataformas y procesadores](../../learn-about-ha
 
 ## <a name="privacy-statement"></a>Declaración de privacidad en línea
 
-La declaración de privacidad para esta versión del sistema operativo Windows se puede consultar [aquí](http://go.microsoft.com/fwlink/?LinkId=506737).
+La declaración de privacidad para esta versión del sistema operativo Windows se puede consultar [aquí](https://go.microsoft.com/fwlink/?LinkId=506737).
 
 ## <a name="whats-new"></a>Novedades
 * Versión pública de Windows 10 IoT Core. 
@@ -61,7 +61,7 @@ La declaración de privacidad para esta versión del sistema operativo Windows s
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-### <a name="raspberry-pi"></a>Raspberry PI  
+### <a name="raspberry-pi"></a>Raspberry Pi  
 
 #### <a name="raspberry-pi-display-resolution-if-monitor-is-disconnected"></a>Resolución de pantalla de Raspberry Pi si se desconecta el monitor 
 Puede que Raspberry Pi no mantenga la resolución de pantalla si se desconecta el monitor. El EDID del monitor se usa para establecer la resolución del sistema cuando uno está conectado.  
@@ -113,7 +113,7 @@ Para confirmación/comprobación en una imagen existente, conéctese con SSH o P
 
 #### <a name="minnowboard-max-firmware-update"></a>Actualización de firmware de Minnowboard Max 
 El número máximo de MinnowBoard no arrancará a menos que el firmware sea la versión. 092 o posterior.  
-Puede haber errores de conectividad de red en el firmware MinnowBoard Max (MBM) versión 0,93.   El problema se corrigió en la versión de firmware 0,94).  la versión mínima recomendada del firmware es "MinnowBoard MAX 0,94 32-bit". Las actualizaciones de firmware se pueden descargar desde [aquí](http://go.microsoft.com/fwlink/?LinkId=708613).
+Puede haber errores de conectividad de red en el firmware MinnowBoard Max (MBM) versión 0,93.   El problema se corrigió en la versión de firmware 0,94).  la versión mínima recomendada del firmware es "MinnowBoard MAX 0,94 32-bit". Las actualizaciones de firmware se pueden descargar desde [aquí](https://go.microsoft.com/fwlink/?LinkId=708613).
   
  
 ### <a name="all-platforms"></a>Todas las plataformas 
@@ -226,7 +226,7 @@ Algunos de los ejemplos mencionados aquí son solamente ejemplos ficticios.  N
 
 Este documento no proporciona ningún derecho legal sobre ninguna propiedad intelectual de ningún producto de Microsoft.  Este documento se puede usar para fines de referencia internos. 
   
-Microsoft no otorga ninguna garantía, ni expresa ni implícita.  
+Microsoft no ofrece garantía alguna, ya sea expresa o implícita,  
 
 Consulte las marcas comerciales de Microsoft para obtener una lista de productos marcados. 
 

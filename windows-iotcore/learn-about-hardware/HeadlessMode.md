@@ -4,12 +4,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo configurar Windows IoT Core para dispositivos con o sin cabeza.
 keywords: Windows IOT, pantallas, cabeza, interfaz de usuario
-ms.openlocfilehash: 138bc19b355e39db7e6bd4f4441159b03fde26c1
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 2fb41d2981b74436ba88ca573407b0ddbcf35566
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918098"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721790"
 ---
 # <a name="headed-and-headless-devices"></a>Dispositivos con cabeza y sin periféricos
 
@@ -49,7 +49,7 @@ Puede modificar el estado de la cabeza o el estado de los dispositivos desde una
 
 ## <a name="finding-your-headless-device"></a>Búsqueda de un dispositivo sin periféricos
 
-Un dispositivo de IoT Core que está en modo sin periférico se puede detectar mediante la aplicación **Windows 10 IOT Core Dashboard** .  Para descargar el panel de IoT, consulte la página de [descargas](http://go.microsoft.com/fwlink/?LinkID=708576) .
+Un dispositivo de IoT Core que está en modo sin periférico se puede detectar mediante la aplicación **Windows 10 IOT Core Dashboard** .  Para descargar el panel de IoT, consulte la página de [descargas](https://go.microsoft.com/fwlink/?LinkID=708576) .
 Cuando se ejecuta, la aplicación escucha los pings desde cualquier dispositivo de IoT Core en la red local y muestra información del dispositivo, como el nombre, la dirección IP, etc.
 
 ![Panel de Windows 10 IoT Core](../media/HeadlessMode/selectDevice.png)

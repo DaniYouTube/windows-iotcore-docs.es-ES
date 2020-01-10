@@ -4,12 +4,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Aprenda a usar el seguimiento de eventos para escribir eventos y consumir eventos para Windows IoT Core.
 keywords: Windows IOT, seguimiento de eventos, ETW, seguimiento de eventos para Windows, dispositivos
-ms.openlocfilehash: ce031cd2bc7b94f01c970bec9e1ad4df0b9dbf06
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: e5d017c28640f78011ef0b7d82071a51524b2185
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72917260"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721578"
 ---
 # <a name="event-tracing-for-windows-iot-core"></a>Seguimiento de eventos para Windows IoT Core
 
@@ -32,7 +32,7 @@ Use [FTP](../connect-your-device/FTP.md) o el [uso compartido de archivos de Win
 
 ## <a name="use-tools-in-windows-assessment-and-deployment-kit"></a>Usar herramientas en Windows Assessment and Deployment Kit
 
-Windows Assessment and Deployment Kit incluye 3 herramientas para ayudar a capturar y analizar eventos. [Haga clic aquí para descargar](http://go.microsoft.com/fwlink/p/?LinkId=526740)
+Windows Assessment and Deployment Kit incluye 3 herramientas para ayudar a capturar y analizar eventos. [Haga clic aquí para descargar](https://go.microsoft.com/fwlink/p/?LinkId=526740)
 
 
 1. El **analizador de rendimiento de Windows** visualiza archivos ETL en el escritorio, con una guía paso a paso [aquí](https://msdn.microsoft.com/library/windows/hardware/dn927319(v=vs.85).aspx).

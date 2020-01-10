@@ -6,12 +6,12 @@ ms.date: 02/22/2019
 ms.topic: article
 description: Más información sobre Windows 10 IoT Core y NXP i.MX SOC
 keywords: Windows 10 IoT Core, introducción, i.MX, NXP
-ms.openlocfilehash: 6b0561b64264358410a86ed8e117e7e407e164b0
-ms.sourcegitcommit: 8980231f05b9fe0a1fd6350cfed5fd8a1dd38c33
+ms.openlocfilehash: 5720def1be274d2c241715c164e74249f4ab8e76
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74178782"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721870"
 ---
 # <a name="window-10-iot-core-and-nxp-imx-socs"></a>Windows 10 IoT Core y NXP i.MX SOC
 
@@ -38,7 +38,6 @@ Varios asociados de Microsoft y NXP han habilitado Windows 10 IoT Core en dispos
 > |-------|------|
 > | [AAEON PICO-IMX6](https://www.aaeon.com/en/p/pico-itx-boards-pico-imx6/) | [David bloqueado](mailto:davidhung@aaeon.com.tw) |
 > | [Advantech RSB-4411](http://www.advantech.com/products/single_board_computer/rsb-4411/mod_d3901250-b0a0-4a5f-9762-b26fa0c36858) | [buy@advantech.com](mailto:buy@advantech.com) |
-> | [Compulab IoT-Gate](https://www.compulab.com/products/iot-gateways/iot-gate-imx7-nxp-i-mx-7-internet-of-things-gateway/) | [Igor Vaisbein](mailto:igor@compulab.co.il) | 
 > | [FS Eletronik sistema armStone A9](https://www.fs-net.de/en/products/armstone/armstonea9/) | [support@fs-net.de](mailto:support@fs-net.de) |
 > | [Geniatech SoM-iMX6Q-Q7](https://www.geniatech.com/product/som-imx6q-q7/) | [Mike Decker](mailto:mike.decker@geniatech.com) o [Fang Jijun](mailto:Fjj@geniatech.com) |
 > | [Geniatech SoM-iMX7D](https://www.geniatech.com/product/som-imx7d/) | [Mike Decker](mailto:mike.decker@geniatech.com) o [Fang Jijun](mailto:Fjj@geniatech.com) |

@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo instalar la aplicación mediante el portal de dispositivos de Windows o como parte de la imagen de IoT Core.
 keywords: Windows IOT, instalación de aplicaciones, portal de dispositivos de Windows, dispositivos
-ms.openlocfilehash: 23df6bec04395eb31f066eb3befc84a4ff4bbe56
-ms.sourcegitcommit: 5a103405cbc5c61101139aff6aaa709bd4ef9582
+ms.openlocfilehash: 93afe3f13e5248876303a12f34e1ab2a73f510a5
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66694156"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721648"
 ---
 # <a name="install-your-app-on-an-iot-core-device"></a>Instalación de la aplicación en un dispositivo de IoT Core
 Puede instalar la aplicación mediante uno de los dos métodos que se enumeran a continuación.
@@ -24,7 +24,7 @@ Puede instalar la aplicación mediante uno de los dos métodos que se enumeran a
 
 > [!NOTE]
 > Se requiere un. appx o. appxbundle para el portal de dispositivos de Windows. A partir de la versión 17763 del SDK y las herramientas si la versión de destino mínima del proyecto de aplicación > es 17763 o superior, las herramientas crearán un [. msix o. msixbundle](https://developercommunity.visualstudio.com/content/problem/391934/makeappx-now-creates-msix-files-instead-of-appx.html).
-> Para crear un archivo. appx o. appxbundle, establezca la versión mínima en una versión inferior a 17763 o [ejecute makeappx. exe directamente](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-#command-line-syntax). También es posible cambiar el nombre de. msix a. appx o. msixbundle a. appxbundle.
+> Para crear un archivo. appx o. appxbundle, establezca la versión mínima en una versión inferior a 17763 o [ejecute makeappx. exe directamente](https://docs.microsoft.com/windows/desktop/appxpkg/make-appx-package--makeappx-exe-#command-line-syntax). También es posible cambiar el nombre de. msix a. appx o. msixbundle a. appxbundle.
 
 Para este método, deberá asegurarse de que está conectado a Internet. Si no tiene acceso a Internet, también puede tener una conexión Ethernet punto a punto entre el dispositivo y un equipo cliente que no incluya una ruta de acceso para acceder a Internet abierto. Sin embargo, si se trata de la última manera, se instalará la aplicación, pero no se iniciará si la aplicación está firmada en la tienda.
 
@@ -55,7 +55,7 @@ Para instalar la aplicación en el dispositivo, haga lo siguiente:
  ![Instalar aplicación](../media/AppInstaller/install-app.gif)
 
 10. La aplicación ahora estará visible en la lista de aplicaciones del dispositivo.
- ![Instalar aplicación](../media/AppInstaller/install-app.gif)
+ ![instalar la aplicación](../media/AppInstaller/install-app.gif)
 
 
 ## <a name="using-provisioning-package-from-wcd"></a>Usar el paquete de aprovisionamiento de WCD

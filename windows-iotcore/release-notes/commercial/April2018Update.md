@@ -4,12 +4,12 @@ ms.date: 05/01/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de la actualización de abril de 2018 para Windows 10 IoT.
 keywords: Windows IoT, actualización de abril de 2018, notas de la versión
-ms.openlocfilehash: f9068b3860dcf684aaa12d12ed3fb0abd9598232
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: b06378db14ba78fc5a3eb60e842e1555e56a66ac
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918729"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721758"
 ---
 # <a name="april-2018-update-release-notes-for-windows-10-iot"></a>Notas de la versión de abril de 2018 para Windows 10 IoT
 Número de compilación 17134. Mayo de 2018
@@ -25,7 +25,7 @@ La declaración de privacidad de esta versión del sistema operativo Windows se 
 ## <a name="whats-new-in-april-2018-update"></a>Novedades de la actualización 2018 de abril
 * La [plataforma de prueba de Visual Studio](https://blogs.msdn.microsoft.com/devops/2017/02/12/evolving-the-visual-studio-test-platform-part-4-together-in-the-open/) que se incluye con [Visual Studio 15,6 RTW](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#Win10_IoT_Core_Testing_Support) ahora admite pruebas en Windows 10 IOT Core. Al [escribir pruebas unitarias](https://blogs.msdn.microsoft.com/devops/2018/03/07/devops-for-iot-with-win10-iot-core-uwp-and-vsts/) para un proyecto en Visual Studio 2017 que tiene como destino Windows 10 IOT Core, los desarrolladores ahora pueden ejecutar esas pruebas unitarias de forma remota en el dispositivo directamente desde Visual Studio en lugar de tener que implementar las pruebas en el dispositivo y ejecutarlas manualmente.
 * Los desarrolladores pueden aprovechar las funcionalidades de la [plataforma Windows AI](https://blogs.windows.com/buildingapps/2018/03/07/ai-platform-windows-developers/) en Windows 10 IOT para crear dispositivos más inteligentes y acelerar la evaluación de los modelos de aprendizaje automático mediante la CPU o la GPU.
-* Los fabricantes de equipos originales que quieran traer rápidamente un dispositivo habilitado para voz pueden integrar la compatibilidad con Cortana en sus dispositivos mediante la [versión preliminar del SDK de dispositivos de Cortana](http://www.aka.ms/cortanadevices).
+* Los fabricantes de equipos originales que quieran traer rápidamente un dispositivo habilitado para voz pueden integrar la compatibilidad con Cortana en sus dispositivos mediante la [versión preliminar del SDK de dispositivos de Cortana](https://www.aka.ms/cortanadevices).
 * Los fabricantes OEM pueden aprovechar el rico conjunto de CSP disponibles en Windows para realizar la configuración y la administración remota de dispositivos a escala mediante la [Administración de dispositivos IOT de Azure](https://github.com/ms-iot/iot-core-azure-dm-client). Esta nueva implementación de ejemplo combina un cliente local, un servicio en la nube y un portal de administración, lo que permite a los operadores de IoT realizar la administración de dispositivos a escala de nube.
 * Con esta versión, puede escribir [aplicaciones de consola de UWP](https://docs.microsoft.com/windows/uwp/launch-resume/console-uwp) que se ejecuten en un host de consola, como una consola de comandos o PowerShell. Las aplicaciones de consola de UWP también pueden usar las API de Win32 disponibles para las aplicaciones UWP y se pueden publicar y actualizar mediante el Microsoft Store.
 * Hemos agregado un nuevo [paquete de características de Miracast](https://docs.microsoft.com/windows/iot-core/connect-your-device/miracast) para IOT Core junto con un [conjunto de API de conversión](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicMediaCasting) para permitir que un dispositivo actúe como transmisor o receptor de Miracast.
@@ -50,7 +50,7 @@ La declaración de privacidad de esta versión del sistema operativo Windows se 
 * Compatibilidad con el hospedaje de [contenedores de nano Server](https://docs.microsoft.com/virtualization/windowscontainers/about/index) en ediciones de 64 bits de Windows 10 IOT Core y Enterprise, la habilitación de aplicaciones y sus datos se puede aislar entre sí y pasar rápidamente de un desarrollo a un entorno de producción o de nube al perímetro.
 * El servicio Windows Atestación de estado de dispositivo [versión preliminar] utiliza características de hardware y servicios en la nube para proporcionar una prueba de alteración y la atestación remota del estado de los dispositivos en función de las métricas de nivel de hardware y los datos acreditados.
 * [Azure IOT Edge](https://azure.microsoft.com/campaigns/iot-edge/) en Windows IOT [Preview] permite que las soluciones de IOT coordinen la inteligencia entre los dispositivos perimetrales y de la nube para garantizar que las aplicaciones y los servicios pueden actuar en los datos de IOT siempre que resulte más conveniente.
-* Azure IoT Hub [servicio Device provisioning [versión preliminar]](https://blogs.windows.com/buildingapps/2017/10/05/windows-10-iot-enables-complete-iot-lifecycle/) permite crear dispositivos IOT de Windows 10 con una imagen común durante la fabricación y configurarse para conectarse automáticamente en el primer arranque a Azure IOT hub para recuperar el aprovisionamiento específico del dispositivo. informaciones.
+* Azure IoT Hub [servicio Device provisioning [versión preliminar]](https://blogs.windows.com/buildingapps/2017/10/05/windows-10-iot-enables-complete-iot-lifecycle/) permite crear dispositivos IOT de Windows 10 con una imagen común durante la fabricación y configurarse para conectarse automáticamente en el primer arranque a Azure IOT hub para recuperar la información de aprovisionamiento específica del dispositivo.
 
 ## <a name="windows-10-iot-core-reference-images"></a>Imágenes de referencia de Windows 10 IoT Core
 ___ 

@@ -6,12 +6,12 @@ ms.date: 08/13/2019
 ms.topic: article
 description: Aprende a instalar Python en un dispositivo ejecutando Windows 10 IoT Core
 keywords: windows iot, python
-ms.openlocfilehash: 26063863e5fdf7539e3159d4a4809bab3a38fb71
-ms.sourcegitcommit: 4272081b5186dada1e61974193e41fcc1c42a1b9
+ms.openlocfilehash: e76fdeaafe4b3b2b80b75a1fc22bd8a58769e1e5
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629380"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721638"
 ---
 # <a name="python"></a>Python
 Python es un lenguaje de scripting que es popular para la automatización del sistema y el aprendizaje automático (ML).
@@ -211,21 +211,21 @@ En la salida de `pip install` se pueden producir errores: `Download error on htt
 
 ### <a name="set-up-an-iot-hub-and-create-a-device-identity"></a>Configuración de una instancia de IoT Hub y creación de una identidad de dispositivo
 
-19. Instala la [CLI de Azure](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) (o usa [Azure Cloud Shell](https://shell.azure.com/)) y úsala para [crear una instancia de Azure IOT Hub](https://docs.microsoft.com/en-us/cli/azure/iot/hub?view=azure-cli-latest#az-iot-hub-create).
+19. Instala la [CLI de Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) (o usa [Azure Cloud Shell](https://shell.azure.com/)) y úsala para [crear una instancia de Azure IOT Hub](https://docs.microsoft.com/cli/azure/iot/hub?view=azure-cli-latest#az-iot-hub-create).
 
     ```powershell
     az iot hub create --resource-group <your resource group> --name <your IoT Hub name>
     ```
     * Ten en cuenta que esta operación tarda unos minutos.
 
-20. Agrega la extensión de IOT a la CLI de Azure y, a continuación, [registra una identidad de dispositivo](https://docs.microsoft.com/en-us/cli/azure/ext/azure-cli-iot-ext/iot/hub/device-identity?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-hub-device-identity-create).
+20. Agrega la extensión de IOT a la CLI de Azure y, a continuación, [registra una identidad de dispositivo](https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/hub/device-identity?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-hub-device-identity-create).
 
     ```powershell
     az extension add --name azure-cli-iot-ext
     az iot hub device-identity create --hub-name <your IoT Hub name> --device-id <your device id>
     ```
 
-21. [Recupera la cadena de conexión del dispositivo](https://docs.microsoft.com/en-us/cli/azure/ext/azure-cli-iot-ext/iot/hub/device-identity?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-hub-device-identity-show-connection-string) mediante la CLI de Azure
+21. [Recupera la cadena de conexión del dispositivo](https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/hub/device-identity?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-hub-device-identity-show-connection-string) mediante la CLI de Azure
 
     ```powershell
     az iot hub device-identity show-connection-string --device-id <your device id> --hub-name <your IoT Hub name>
@@ -238,7 +238,7 @@ En la salida de `pip install` se pueden producir errores: `Download error on htt
 
 ### <a name="send-a-simple-telemetry-message"></a>Envío de un mensaje de telemetría simple
 
-22. [Comienza la supervisión de la telemetría](https://docs.microsoft.com/en-us/cli/azure/ext/azure-cli-iot-ext/iot/hub?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-hub-monitor-events) en la instancia de IOT Hub mediante la CLI de Azure
+22. [Comienza la supervisión de la telemetría](https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/hub?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-hub-monitor-events) en la instancia de IOT Hub mediante la CLI de Azure
 
     ```powershell
     az iot hub monitor-events --hub-name <your IoT Hub name> --output table

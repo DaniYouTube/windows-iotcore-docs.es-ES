@@ -6,20 +6,20 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre los diferentes proveedores disponibles a través de Windows 10 IoT Core.
 keywords: Windows IOT, proveedores, proveedores de bus, UWP, GPIO, SPI
-ms.openlocfilehash: 7e2a3bf45317cd11ca558db6f1b6845e0e0f7a67
-ms.sourcegitcommit: 77b86eee2bba3844e87f9d3dbef816761ddf0dd9
+ms.openlocfilehash: 9f9b13834565fd896fd63e6d09ce113ef5035202
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65533280"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721430"
 ---
 # <a name="usermode-access-to-gpio-i2c-and-spi"></a>Acceso de modo de solo acceso a GPIO, I2C y SPI
 
 Windows 10 contiene nuevas API para acceder a GPIO, I2C, SPI y UART directamente desde el modo usuario. Los paneles de desarrollo como Raspberry Pi 2 exponen un subconjunto de estas conexiones que permiten a los usuarios ampliar un módulo de cálculo base con circuitos personalizados para dirigirte a una aplicación particular. Normalmente, estos buses de bajo nivel se comparten con otras funciones incorporadas críticas, con solo un subconjunto de las patillas y buses de GPIO expuestos en los encabezados. Para preservar la estabilidad del sistema, es necesario especificar qué patillas y buses son seguros para modificar las aplicaciones de modo de usuario.
 
-El acceso de modo de usuario a buses de nivel bajo en Windows se asocia a través de los marcos `GpioClx` y `SpbCx` existentes. Un nuevo controlador denominado RhProxy, disponible en Windows IOT Core y Windows Enterprise, expone `GpioClx` los recursos y `SpbCx` a los recursos en modo de los mismos. Para habilitar las API, se debe declarar un nodo de dispositivo para rhproxy en las tablas ACPI con cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario.
+El acceso de modo usuario a buses de nivel bajo en Windows se asocia a través de los marcos`GpioClx``SpbCx`existentes. Un nuevo controlador denominado RhProxy, disponible en Windows IoT Core y Windows Enterprise, expone los recursos de `GpioClx` y `SpbCx` a un modo en modo de otro. Para habilitar las API, se debe declarar un nodo de dispositivo para rhproxy en las tablas ACPI con cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario.
 
-Puede encontrar documentación más detallada sobre el acceso de modo de RhProxy [aquí](https://docs.microsoft.com/en-us/windows/uwp/devices-sensors/enable-usermode-access).
+Puede encontrar documentación más detallada sobre el acceso de modo de RhProxy [aquí](https://docs.microsoft.com/windows/uwp/devices-sensors/enable-usermode-access).
 
 ## <a name="bus-providers"></a>Proveedores de bus
 
@@ -45,7 +45,7 @@ GpioPin pin = gpioController.OpenPin(LED_PIN, GpioSharingMode.Exclusive);`
 
 Actualmente tenemos varios proveedores disponibles en el repositorio de github de [proveedores de bus](https://github.com/ms-iot/BusProviders) . Además del código del proveedor, cada proveedor tiene una solución de VS de ejemplo que muestra cómo un cliente usaría ese proveedor. 
 
-- **ACD**
+- **ADC**
   - Ads1x15
   - Mcp3008
   - Arduino remoto
@@ -58,7 +58,7 @@ Actualmente tenemos varios proveedores disponibles en el repositorio de github d
 - **GPIO, SPI, I2C**
   - Arduino remoto
 
-Además de los proveedores que proporcionan acceso al hardware real, hemos creado un [proveedor simulado](https://github.com/ms-iot/BusProviders/tree/develop/SimulatedProvider) que actuará como si fuera un proveedor compatible con inifitely y está diseñado para permitirle escribir y depurar sus aplicaciones sin tener que implementarlas primero en un dispositivo de trabajo. Para obtener una experiencia más completa, puede personalizarla para simular el hardware real. Por ejemplo: actualizar el proveedor I2C para devolver el resultado "75" cuando lo envíe al comando para una lectura de temperatura en un dispositivo con la dirección subordinada designada.
+Además de los proveedores que proporcionan acceso al hardware real, hemos creado un [proveedor simulado](https://github.com/ms-iot/BusProviders/tree/develop/SimulatedProvider) que actuará como si fuera un proveedor compatible con inifitely y está diseñado para permitirle escribir y depurar las aplicaciones sin tener que implementarlas primero en un dispositivo de trabajo. Para obtener una experiencia más completa, puede personalizarla para simular el hardware real. Por ejemplo: actualizar el proveedor I2C para devolver el resultado "75" cuando lo envíe al comando para una lectura de temperatura en un dispositivo con la dirección subordinada designada.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

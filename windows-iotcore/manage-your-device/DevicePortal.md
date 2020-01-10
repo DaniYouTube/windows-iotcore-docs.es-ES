@@ -6,12 +6,12 @@ ms.prod: windows-iot
 ms.technology: IoT
 description: Obtenga información sobre cómo usar el portal de dispositivos de Windows para configurar y administrar el dispositivo de forma remota.
 keywords: Windows IOT, Windows Device portal, Remote, portal de dispositivos
-ms.openlocfilehash: d7e5285b7a29a61f15a5272cc822832230e56f75
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 9a5bb55da073ad7fa44674bc851e9dfef4809a37
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72917432"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721626"
 ---
 # <a name="windows-device-portal"></a>Windows Device Portal
    Windows Device portal (WDP) le permite configurar y administrar el dispositivo de forma remota a través de la red local.
@@ -20,13 +20,13 @@ Las características principales se documentan en la [Página de información ge
 ![Página principal del portal de dispositivos](../media/deviceportal/deviceportal.png)
 
 > [!IMPORTANT]
-> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Puedes obtener más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
+> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Puedes obtener más información [aquí](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
 
 > [!WARNING]
 > Actualmente no se puede realizar la depuración del kernel activo para dispositivos ARM. Estamos trabajando para solucionar este problema.
 
 > [!IMPORTANT]
-> Si va a crear un dispositivo minorista abierto para la implementación comercial en una "instalación específica/limitada" (es decir, en fábrica o en tienda) donde el usuario final realiza la configuración final y documenta a los clientes que deben [obtener un certificado para WDP y lo instala en WDP y los exploradores y las contraseñas se cambian en WDP](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-ssl), y se acepta el uso de WDP en esta instancia comercial estrecha. Las imágenes comerciales de este escenario *no* deben incluir IOT_TOOLKIT, pero deben usar el paquete IOT_WEBBEXTN para extraer de WDP. 
+> Si va a crear un dispositivo de venta al por menor abierto para la implementación comercial en una "instalación específica/limitada" (es decir, en fábrica o en tienda) donde el usuario final realiza la configuración final y documenta a los clientes que deben [obtener un certificado para WDP e instalarlo tanto en WDP como en los exploradores y contraseñas de conexión](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-ssl), se cambia el uso de WDP en esta instancia Las imágenes comerciales de este escenario *no* deben incluir IOT_TOOLKIT, sino que deben usar el paquete de IOT_WEBBEXTN para extraer de WDP. 
 
 ## <a name="shared-documentation"></a>Documentación compartida
 WDP es una herramienta de desarrollo compartida entre todos los dispositivos de Windows 10. Cada producto tiene sus propias características únicas, pero la funcionalidad básica es la misma.
@@ -38,7 +38,7 @@ Hay dos maneras de poner en marcha el portal de dispositivos de Windows.
 
 ### <a name="1-windows-10-iot-dashboard"></a>1. panel de IoT de Windows 10
 
-En primer lugar, querrá descargar el [Panel de IOT de Windows 10](https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/iotdashboard), una herramienta de desarrollador que facilita la configuración de nuevos dispositivos. Una vez que haya usado el panel para crear una imagen de Windows 10 IoT Core en el dispositivo, compruebe que el dispositivo aparece en "mis dispositivos". 
+En primer lugar, querrá descargar el [Panel de IOT de Windows 10](https://docs.microsoft.com/windows/iot-core/connect-your-device/iotdashboard), una herramienta de desarrollador que facilita la configuración de nuevos dispositivos. Una vez que haya usado el panel para crear una imagen de Windows 10 IoT Core en el dispositivo, compruebe que el dispositivo aparece en "mis dispositivos". 
 
 Desde allí, use los puntos suspensivos en "acciones" para seleccionar "abrir en el portal de dispositivos". Desde allí, se le dirigirá a la página de autenticación del portal de dispositivos, donde, a menos que haya cambiado las credenciales inicialmente, las credenciales predeterminadas son: 
 
@@ -117,7 +117,7 @@ Para usar esta característica, el dispositivo de IoT de Windows 10 debe tener a
 > Para usar la incorporación de AllJoyn con las compilaciones de IoT de Windows 10 10.0.14393 o anterior, se requiere una actualización del ejemplo <strong>IotOnboarding</strong> que se puede [Descargar aquí](https://github.com/ms-iot/samples).
 
 ![incorporación en el](../media/DevicePortal/OnboardingAllJoyn.png)
-de AllJoyn![incorporación a ICS](../media/DevicePortal/OnboardingICS.png)
+de AllJoyn ![incorporación a ICS](../media/DevicePortal/OnboardingICS.png)
 
 > [!NOTE]
 > El adaptador de punto de acceso es el adaptador WiFi que actúa como punto de acceso WiFi (normalmente tiene una dirección IP como 192.168.137.1).
@@ -126,7 +126,7 @@ de AllJoyn![incorporación a ICS](../media/DevicePortal/OnboardingICS.png)
 ![Incorporación a AP blando](../media/DevicePortal/OnboardingSoftAP.png)
 
 > [!NOTE]
-> El prefijo "AJ_" de SoftAP SSID se prefijará automáticamente si la incorporación de AllJoyn está habilitada y se ha posfijado con la dirección MAC del adaptador WiFi. La frase de contraseña de SoftAP debe tener entre 8 y 63 caracteres ASCII.
+> El prefijo "AJ_" agregará automáticamente el SSID de SoftAP si la incorporación de AllJoyn está habilitada y se ha posfijado con la dirección MAC del adaptador WiFi. La frase de contraseña de SoftAP debe tener entre 8 y 63 caracteres ASCII.
 
 
 ### <a name="tpm-configuration"></a>Configuración de TPM

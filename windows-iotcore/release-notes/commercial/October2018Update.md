@@ -4,18 +4,18 @@ ms.date: 10/02/2018
 ms.topic: article
 description: Obtenga información sobre las novedades de la actualización de octubre de 2018 para Windows.
 keywords: Windows IoT, actualización de octubre de 2018, notas de la versión
-ms.openlocfilehash: 30292437da20a577a319fe47b3f5c2647df00382
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 5b5b6e45552d099426019626ca52000635e308a5
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918708"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721880"
 ---
 # <a name="october-2018-update-release-notes-for-windows-10-iot"></a>Notas de la versión de octubre de 2018 para Windows 10 IoT
 Número de compilación 17763. Octubre de 2018
 
 > [!IMPORTANT]
-> Si usa la actualización de [octubre de 2018](https://docs.microsoft.com/en-us/windows/iot-core/release-notes/commercial/october2018update), use la versión de la [actualización de octubre (con el paquete de mantenimiento de enero, compilación 17763,253)](https://docs.microsoft.com/en-us/windows/iot-core/release-notes/commercial/17763) en su lugar. Encontramos problemas conocidos que afectan a los usuarios de la actualización de octubre de 2018. 
+> Si usa la actualización de [octubre de 2018](https://docs.microsoft.com/windows/iot-core/release-notes/commercial/october2018update), use la versión de la [actualización de octubre (con el paquete de mantenimiento de enero, compilación 17763,253)](https://docs.microsoft.com/windows/iot-core/release-notes/commercial/17763) en su lugar. Encontramos problemas conocidos que afectan a los usuarios de la actualización de octubre de 2018. 
 
 Windows 10 IoT permite el desarrollo de dispositivos integrados o dedicados y es la opción para los OEM y desarrolladores que compilan soluciones de Windows para Smart Devices.
 
@@ -37,7 +37,7 @@ _Windows 10 IoT Core_
 * Para satisfacer la creciente demanda de clientes y asociados de silicio Diversity, Microsoft, en estrecha colaboración con NXP, ha agregado compatibilidad con los procesadores de NXP i.MX 6, 7 y 8 de Windows 10 IoT Core. 
 * Qualcomm y Microsoft han creado una solución que combina Windows 10 IoT Enterprise con procesadores de Snapdragon para crear dispositivos que consumen menos energía, siempre se conectan y reactivan al instante. La larga duración de la batería permite que dispositivos dedicados, como Mobile POS y tabletas de línea de negocio, duren un día completo de uso intensivo. 
 * [La aplicación predeterminada de Windows 10 IOT Core](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoredefaultapp) tiene más características que los usuarios pueden aprovechar para sus propias aplicaciones, sobre todo cuando traen sus dispositivos al mercado. Estas características incluyen el tiempo, las capacidades de entrada manuscrita y las capacidades de audio. 
-* Si va a crear un dispositivo minorista abierto para la implementación comercial en una "instalación específica/limitada" (es decir, en fábrica o en tienda) donde el usuario final realiza la configuración final y documenta a los clientes que deben [obtener un certificado para WDP y lo instala en WDP y los exploradores y las contraseñas se cambian en WDP](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-ssl), y se acepta el uso de WDP en esta instancia comercial estrecha. Las imágenes comerciales de este escenario no deben incluir IOT_TOOLKIT, pero deben usar el paquete IOT_WEBBEXTN para extraer de WDP. 
+* Si va a crear un dispositivo de venta al por menor abierto para la implementación comercial en una "instalación específica/limitada" (es decir, en fábrica o en tienda) donde el usuario final realiza la configuración final y documenta a los clientes que deben [obtener un certificado para WDP e instalarlo tanto en WDP como en los exploradores y contraseñas de conexión](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-ssl), se cambia el uso de WDP en esta instancia Las imágenes comerciales de este escenario no deben incluir IOT_TOOLKIT, sino que deben usar el paquete de IOT_WEBBEXTN para extraer de WDP. 
 * Limpet. exe ahora está disponible como [proyecto de código abierto](https://github.com/ms-iot/azure-dm-client). Para facilitar las pruebas, tenemos una versión no firmada pregenerada de limpet. exe disponible y se puede descargar directamente desde WDP. Obtenga más información sobre esta característica en la [documentación del portal de dispositivos de Windows](https://docs.microsoft.com/windows/iot-core/manage-your-device/deviceportal).  
 * Con RS5, los desarrolladores ahora pueden hacer Flash de FFUs personalizadas en su dispositivo mediante el panel. Esto puede hacerse con DragonBoard 410C o NXP. Obtenga más información y comience [aquí](https://docs.microsoft.com/windows/iot-core/tutorials/quickstarter/devicesetup).
 * Windows 10 IoT Core ahora usa los mismos componentes de teclado táctil que la edición de escritorio de Windows, que permite características como el modo de dictado, todo el conjunto de diseños de idioma del teclado de Windows y mucho más. Esta nueva actualización también incluye supprt para los emoticonos, la mayoría de los "ámbitos" y una mejor compatibilidad con varios idiomas. Obtenga información sobre cómo aprovechar estas características [aquí](https://docs.microsoft.com/windows/iot-core/develop-your-app/onscreenkeyboard).
@@ -47,11 +47,11 @@ _Windows 10 IoT Core_
 * Las herramientas de bus que permiten interactuar con GPIO, I2C, SPI y UART ahora están disponibles en [nuestro repositorio de ejemplos](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/BusTools). Estas herramientas se ejecutarán en cualquier edición de Windows, incluidas Windows 10 IoT Core y Windows Enterprise. 
 * [La API de espacio de nombres Windows. System. Update](https://docs.microsoft.com/uwp/api/windows.system.update) habilita las llamadas para el control interactivo de las actualizaciones del sistema. Este espacio de nombres solo está disponible para Windows 10 IoT Core.
 * Si desea usar IoT Central como parte de una solución de IoT de Windows 10, ahora puede preparar y [conectar un dispositivo de Windows 10 IOT Core a su aplicación de Azure IOT central](https://docs.microsoft.com/azure/iot-central/howto-connect-windowsiotcore). 
-* La versión de Raspberry PI 3B + (la ISO descargable se puede encontrar [aquí](http://go.microsoft.com/fwlink/?LinkID=708576)) es una vista previa técnica y actualmente no hay ninguna escala de tiempo para una versión de lanzamiento. Para obtener una mejor experiencia de evaluación y fr en el caso de los productos comerciales, use el Raspberry PI 3B u otros dispositivos con los SOC de Intel, Qualcomm o NXP admitidos. 
+* La versión de Raspberry PI 3B + (la ISO descargable se puede encontrar [aquí](https://go.microsoft.com/fwlink/?LinkID=708576)) es una vista previa técnica y actualmente no hay ninguna escala de tiempo para una versión de lanzamiento. Para obtener una mejor experiencia de evaluación y fr en el caso de los productos comerciales, use el Raspberry PI 3B u otros dispositivos con los SOC de Intel, Qualcomm o NXP admitidos. 
 
 ## <a name="iot-enterprise-manufacturing-guide"></a>Guía de fabricación empresarial de IoT
 
-* [Ahora hay disponible](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/iot-ent-overview)una nueva guía de fabricación para Windows 10 IOT Enterprise. 
+* [Ahora hay disponible](https://docs.microsoft.com/windows-hardware/manufacture/desktop/iot-ent-overview)una nueva guía de fabricación para Windows 10 IOT Enterprise. 
 
 ## <a name="improvements-in-assigned-access"></a>Mejoras en el acceso asignado 
 

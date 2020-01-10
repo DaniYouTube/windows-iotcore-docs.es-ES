@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo usar PowerShell para conectarse al dispositivo, así como para administrar el dispositivo.
 keywords: Windows IOT, PowerShell, Windows PowerShell, línea de comandos, Shell de línea de comandos
-ms.openlocfilehash: 1519fb9dd61a8d6521757fdd97999f03b74afa7d
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: fb8ec04365e330c2466c1287b446a5d3b15729a1
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60168169"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721590"
 ---
 # <a name="using-powershell-for-windows-iot"></a>Uso de PowerShell para Windows IoT
 
@@ -43,7 +43,7 @@ Asegúrese de seguir estos pasos para configurar correctamente el dispositivo qu
 
         net start WinRM
 
-5. En la consola de PowerShell, escriba lo siguiente, sustituyendo `<machine-name or IP address>` el valor adecuado (con el **nombre del equipo** es el más sencillo, pero si el dispositivo no tiene un nombre único en la red, pruebe la dirección IP):
+5. En la consola de PowerShell, escriba lo siguiente, sustituyendo `<machine-name or IP address>` por el valor adecuado (con el **nombre del equipo** es el más sencillo, pero si el dispositivo no tiene un nombre único en la red, pruebe la dirección IP):
 
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value <machine-name or IP Address>
 
@@ -58,10 +58,10 @@ Asegúrese de seguir estos pasos para configurar correctamente el dispositivo qu
 
         Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
-8. En el cuadro de diálogo de credenciales, escriba la siguiente contraseña predeterminada:`p@ssw0rd`
+8. En el cuadro de diálogo de credenciales, escriba la siguiente contraseña predeterminada: `p@ssw0rd`
     
     <div class="alert alert-note">
-      <h5><span class="win-icon win-icon-Page"></span>TENGA EN CUENTA </h5>
+      <h5><span class="win-icon win-icon-Page"></span>Tenga en cuenta </h5>
       <p>El proceso de conexión no es inmediato y puede tardar hasta 30 segundos.</p>
     </div>    
     
@@ -71,11 +71,11 @@ Asegúrese de seguir estos pasos para configurar correctamente el dispositivo qu
 
 9. Actualice la contraseña de la cuenta. Se *recomienda encarecidamente* que actualice la contraseña predeterminada para la cuenta de administrador. Para ello, emita los siguientes comandos en la conexión de PowerShell:
 
-    a. Reemplace `[new password]` con una contraseña segura:
+    a. Reemplace `[new password]` por una contraseña segura:
     
             net user Administrator [new password]
             
-    b. A continuación, establezca una nueva sesión de `Exit-PSSession` PowerShell `Enter-PSSession` con y con las nuevas credenciales.
+    b. A continuación, establezca una nueva sesión de PowerShell con `Exit-PSSession` y `Enter-PSSession` con las nuevas credenciales.
     
             Exit-PSSession
             
@@ -85,7 +85,7 @@ Asegúrese de seguir estos pasos para configurar correctamente el dispositivo qu
 
 ### <a name="troubleshooting-with-visual-studio-remote-debugger"></a>Solución de problemas con Visual Studio Remote Debugger
 
-Para poder implementar aplicaciones desde Visual Studio 2017, tendrá que asegurarse de que el Visual Studio Remote Debugger se está ejecutando en el dispositivo de Windows IoT Core. El depurador remoto debe abrirse automáticamente al iniciar el equipo. Para realizar una doble comprobación, `tlist` use el comando para enumerar todos los procesos en ejecución de PowerShell. Debe haber dos instancias de msvsmon. exe en ejecución en el dispositivo.
+Para poder implementar aplicaciones desde Visual Studio 2017, tendrá que asegurarse de que el Visual Studio Remote Debugger se está ejecutando en el dispositivo de Windows IoT Core. El depurador remoto debe abrirse automáticamente al iniciar el equipo. Para realizar una doble comprobación, use el comando `tlist` para mostrar todos los procesos en ejecución de PowerShell. Debe haber dos instancias de msvsmon. exe en ejecución en el dispositivo.
 
 Es posible que el Visual Studio Remote Debugger agote el tiempo de espera después de largos períodos de inactividad. Si Visual Studio no se puede conectar al dispositivo de Windows IoT Core, intente reiniciar el dispositivo.
 
@@ -93,11 +93,11 @@ Es posible que el Visual Studio Remote Debugger agote el tiempo de espera despu�
 
 Si lo desea, puede cambiar el nombre del dispositivo. 
 
-1. Para cambiar el nombre del equipo, use `setcomputername` la utilidad:
+1. Para cambiar el nombre del equipo, use la utilidad `setcomputername`:
 
         setcomputername <new-name>
 
-2. Reinicie el dispositivo para que el cambio surta efecto. Puede usar el comando `shutdown` de la siguiente manera:
+2. Reinicie el dispositivo para que el cambio surta efecto. Puede usar el comando `shutdown` como se indica a continuación:
 
         shutdown /r /t 0
 
@@ -113,32 +113,32 @@ Para obtener una lista de comandos y utilidades que puede usar con PowerShell, c
 
 ## <a name="known-issues-and-workarounds"></a>Problemas y soluciones conocidos
 
-**PROBLEMA**: Un error conocido en las directivas de seguridad de PowerShell provoca el manifiesto de los siguientes problemas en la sesión remota:
+**Problema**: un error conocido en las directivas de seguridad de PowerShell provoca el manifiesto de los siguientes problemas en la sesión remota:
 * Get-Help devuelve coincidencias inesperadas.
 * Get-command en un módulo especificado devuelve una lista de comandos vacía.
 * La ejecución de un cmdlet desde cualquiera de estos módulos produce CommandNotFoundException: Appx, NetAdapter, NetSecurity, NetTCPIP, PnpDevice.
 * Import-Module en cualquiera de los módulos anteriores produce una excepción PSSecurityException con UnauthorizedAccess. La carga automática de módulos no parece funcionar.
 
-**Solución**: Modifique la Directiva de ejecución en la sesión remota de PowerShell a **RemoteSigned**. Para obtener más información sobre las diferentes directivas de ejecución, consulte [uso del cmdlet Set-ExecutionPolicy](https://technet.microsoft.com/library/ee176961.aspx).
+**Solución alternativa**: modifique la Directiva de ejecución en la sesión remota de PowerShell a **RemoteSigned**. Para obtener más información sobre las diferentes directivas de ejecución, consulte [uso del cmdlet Set-ExecutionPolicy](https://technet.microsoft.com/library/ee176961.aspx).
 
-**PROBLEMA**: En ocasiones, los cmdlets de algunos módulos, como NetAdapter, no son visibles. Por ejemplo, Get-Module NetAdapter devuelve una lista vacía. 
+**Problema**: a veces, los cmdlets de algunos módulos, como NetAdapter, no son visibles. Por ejemplo, Get-Module NetAdapter devuelve una lista vacía. 
 
-**Solución**: Use el parámetro-Force con Import-Module. Por ejemplo: `Import-Module NetAdapter -Force`.
+**Solución alternativa**: Use el parámetro-Force con Import-Module. Por ejemplo: `Import-Module NetAdapter -Force`.
 
-**PROBLEMA**: La configuración de la Directiva de ejecución en "AllSigned" interrumpe la comunicación remota de PowerShell. Los intentos posteriores de crear una sesión remota producirán un error con una excepción de carga Typesv3. ps1xml. 
+**Problema**: establecer la Directiva de ejecución en "AllSigned" interrumpe la comunicación remota de PowerShell. Los intentos posteriores de crear una sesión remota producirán un error con una excepción de carga Typesv3. ps1xml. 
 
-**Solución**: Use Winrs. exe para restaurar la Directiva de ejecución de PowerShell:
-* Cambiar página de códigos de la consola`Chcp 65001`
-* Iniciar sesión en un shell de cmd. exe remoto`Winrs.exe -r:<target> -u:<username> -p:<password> cmd.exe`
-* En cmd. exe remoto, modifique la clave del registro adecuada.`reg add HKLM\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell /v ExecutionPolicy /d RemoteSigned /f`
-* Salir de la sesión remota de cmd. exe`exit`
+**Solución alternativa**: Use Winrs. exe para restaurar la Directiva de ejecución de PowerShell:
+* Cambiar la página de códigos de la consola `Chcp 65001`
+* Inicie sesión en un shell de cmd. exe remoto `Winrs.exe -r:<target> -u:<username> -p:<password> cmd.exe`
+* En cmd. exe remoto, modifique la clave del registro adecuada `reg add HKLM\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell /v ExecutionPolicy /d RemoteSigned /f`
+* Salga de la sesión remota de cmd. exe `exit`
 
 ### <a name="other-known-issues"></a>Otros problemas conocidos
 
-- En los scripts de PowerShell, los atributos de la clase o enumeración de PowerShell no funcionan. Al agregar los resultados con atributos se produce la siguiente excepción: *El tipo debe ser un objeto de tipo en tiempo de ejecución*.
+- En los scripts de PowerShell, los atributos de la clase o enumeración de PowerShell no funcionan. Agregando resultados con atributos en la siguiente excepción: el *tipo debe ser un objeto de tipo en tiempo de ejecución*.
 
 - No se admite CIM saliente y la comunicación remota de PowerShell. La funcionalidad relevante en los cmdlets de confianza no funcionará. Entre ellas se incluyen Enter-PSSession, Get-Job, Receive-Job, Import-Module, Invoke-Command y Copy-Item.
 
-- Los comandos SecureString ConvertFrom-SecureString y ConvertTo-SecureString no funcionan a menos que la sesión se cree mediante la autenticación CredSSP. De lo contrario, debe especificarse el parámetro-Key. Para obtener más información sobre la configuración de la autenticación CredSSP, vea [el problema de "salto doble"](http://blogs.msdn.com/b/clustering/archive/2009/06/25/9803001.aspx).
+- Los comandos SecureString ConvertFrom-SecureString y ConvertTo-SecureString no funcionan a menos que la sesión se cree mediante la autenticación CredSSP. De lo contrario, debe especificarse el parámetro-Key. Para más información sobre la configuración de la autenticación CredSSP, consulte [habilitación de la funcionalidad de segundo salto de PowerShell con CredSSP](https://devblogs.microsoft.com/scripting/enable-powershell-second-hop-functionality-with-credssp/).
 
 

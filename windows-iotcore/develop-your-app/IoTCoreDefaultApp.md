@@ -5,12 +5,12 @@ ms.topic: article
 description: Obtenga información sobre la aplicación predeterminada de Windows 10 IoT Core y sus características.
 keywords: Windows IOT, Windows 10 IOT Core, aplicación predeterminada
 ms.custom: RS5
-ms.openlocfilehash: a0e26d54f1c6694cd408de6f54cf0c0fba263156
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 730e8c386b328efdbb66092121980a42e066679c
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918248"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721500"
 ---
 # <a name="windows-10-iot-core-default-app-overview"></a>Introducción a la aplicación predeterminada de Windows 10 IoT Core
 
@@ -21,21 +21,21 @@ La primera vez que Flash Windows 10 IoT Core, se le presentará la aplicación W
 
 ![Captura de pantalla de la aplicación predeterminada de IoT Core](../media/IoTCoreDefaultApp/DeviceInfoPage-Screenshot.jpg)
 
-La finalidad de esta aplicación no es solo proporcionar un shell sencillo para interactuar con la primera vez que se arranca Windows 10 IoT Core, pero se ha proporcionado código abierto para esta aplicación [aquí](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp) para que pueda conectarse y jugar con estas características en su propia cu aplicaciones sonalizado.
+La finalidad de esta aplicación no es solo proporcionar un shell sencillo para interactuar con la primera vez que se arranca Windows 10 IoT Core, pero [aquí](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp) se incluye código abierto para esta aplicación, de modo que se pueda conectar y reproducir con estas características en sus propias aplicaciones personalizadas:.
 
 En este artículo se proporciona un resumen de las distintas características que ofrece la aplicación predeterminada de Windows 10 IoT Core, así como cómo puede aprovechar estas características diferentes para sus propias aplicaciones.
 
 ## <a name="leveraging-the-iot-core-default-app"></a>Aprovechamiento de la aplicación predeterminada de IoT Core 
 
 > [!IMPORTANT]
-> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Puedes obtener más información [aquí](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
+> No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Puedes obtener más información [aquí](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
 
 La aplicación predeterminada de IoT Core puede personalizarse y ampliarse, o bien se puede usar el código fuente como ejemplo para su propia aplicación. Para probarlo, descargue el archivo. zip de nuestros ejemplos o consulte el código de la aplicación de IoT Core predeterminada [aquí](https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp). Si tiene alguna pregunta, envíe un problema en nuestro repositorio de ejemplos [aquí](https://github.com/Microsoft/Windows-iotcore-samples/issues).
 
 Como se muestra en la [sección configuración](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoredefaultapp#settings
 ) siguiente, en algunos casos, puede configurar la configuración y las características predeterminadas en el sistema del cliente en nombre del usuario final. Sin embargo, si activa esta configuración y las características de forma predeterminada o si los diagnósticos están por encima de la configuración básica, debe:
 
-* Notifique al usuario final que se han habilitado estas características y proporcione al usuario final el vínculo a la Página Web de la declaración de privacidad de Microsoft [aquí](http://go.microsoft.com/fwlink/?LinkId=521839). 
+* Notifique al usuario final que se han habilitado estas características y proporcione al usuario final el vínculo a la Página Web de la declaración de privacidad de Microsoft [aquí](https://go.microsoft.com/fwlink/?LinkId=521839). 
 * Consentimiento seguro del usuario final relevante para habilitar dichas características de forma predeterminada (según lo requiera la ley aplicable).
 * Proporcionar a los usuarios finales la capacidad de volver a cambiar la configuración de diagnóstico a la configuración básica.
 * Si habilita las cuentas de Microsoft y tiene acceso a los datos del usuario final, si el usuario final elimina la cuenta de Microsoft, debe habilitar la eliminación simultánea de todos los datos de la cuenta de Microsoft del usuario final en el dispositivo. 
@@ -66,7 +66,7 @@ En el menú Inicio se encuentra en directo la mayoría de las características d
 ### <a name="weather"></a>El Tiempo
 Con los datos del servicio de Meteorología nacional, la página de Meteorología representa información meteorológica en su ubicación actual.
 
-### <a name="web-browser"></a>Explorador Web
+### <a name="web-browser"></a>Explorador web
 El explorador Web permite extraer la mayoría de los sitios de la Web.
 
 ### <a name="music"></a>Música
@@ -99,7 +99,7 @@ En esta página se enumeran las últimas 20 notificaciones, ya que se ha iniciad
 ### <a name="logs"></a>Registros
 En esta página se enumeran los registros de errores o bloqueos generados automáticamente que se pueden quitar del dispositivo y analizarlos.
 
-### <a name="github"></a>GitHub
+### <a name="github"></a>Github
 Esta página le llevará a la ubicación de GitHub de código abierto del código de aplicación predeterminado de IoT Core.
 
 ## <a name="start-menu---windows-device-portal"></a>Menú Inicio-Windows Device portal
@@ -142,7 +142,7 @@ Algunas de las opciones que puede personalizar son:
 ##### <a name="slideshow-settings"></a>Configuración de la presentación
 * Establecer el intervalo de presentación de diapositivas
 
-##### <a name="appearance"></a>Aparición
+##### <a name="appearance"></a>Apariencia
 * Usar activos de MDL2 en lugar de emojis para los iconos de icono
 * Establecer el ancho y el alto del mosaico
 * Establecer escala de IU: el escalado automático se establece de forma predeterminada

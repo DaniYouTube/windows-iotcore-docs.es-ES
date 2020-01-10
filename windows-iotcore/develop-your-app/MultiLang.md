@@ -6,12 +6,12 @@ ms.date: 09/12/2017
 ms.topic: article
 description: Obtenga información sobre la compatibilidad con varios idiomas en aplicaciones y sistemas operativos UWP en IoT Core.
 keywords: Windows IOT, idiomas, tipos de aplicaciones, UWP, so
-ms.openlocfilehash: 5bc44fb090e6e198525e95d6aee6815afd0095da
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: ea54ee9dac93866065313e00caccb91ac1dc7c7f
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918227"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721688"
 ---
 # <a name="language-support"></a>Compatibilidad con idiomas
 
@@ -110,7 +110,7 @@ En el archivo XML de entrada OEM, los recursos de datos de voz necesarios se esp
 > [!NOTE]
 > De forma predeterminada, los datos de voz en-US están incluidos en la imagen.
 
-### <a name="samples"></a>Ejemplos
+### <a name="samples"></a>Muestras
 * Consulte [MultiLangSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/MultiLangSample) para compatibilidad con varios idiomas
 * Consulte [SingleLangSample](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SingleLangSample) para el idioma FR-fr con en-US como lenguaje de reserva.
     * Tenga en cuenta que cuando se cambia el idioma de la interfaz de usuario de arranque, el nombre de la cuenta de `administrator` también se traduce en el idioma de la interfaz de usuario de arranque. Por lo tanto, en fr-FR es `administrateur`. Vea [OEMCustomization. cmd.](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/Products/SingleLangSample/oemcustomization.cmd)
@@ -124,7 +124,7 @@ Si la aplicación no tiene los recursos correspondientes, se cargarán los recur
 * Establecimiento de la región mediante `TrySetHomeGeographicRegion` en [Windows. System. userprofile. GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
 * Establezca el idioma de la interfaz de usuario mediante `TrySetLanguages` en [Windows. System. userprofile. GlobalizationPreferences](https://docs.microsoft.com/uwp/api/windows.system.userprofile.globalizationpreferences)
 * Establecimiento del lenguaje de voz mediante `TrySetSystemSpeechLanguageAsync` en [Windows. Media. SpeechRecognition. SpeechRecognizer](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer)
-* Establecer Voice mediante `TrySetDefaultVoiceAsync` en [Windows. Media. SpeechSynthesis. SpeechSynthesizer](https://docs.microsoft.com/en-us/uwp/api/windows.media.speechsynthesis.speechsynthesizer)
+* Establecer Voice mediante `TrySetDefaultVoiceAsync` en [Windows. Media. SpeechSynthesis. SpeechSynthesizer](https://docs.microsoft.com/uwp/api/windows.media.speechsynthesis.speechsynthesizer)
 
 > [!NOTE]
 > Para un funcionamiento correcto, Cortana requiere que la región, el idioma de la interfaz de usuario y el idioma de la voz sean coherentes, por ejemplo: región FR, interfaz de usuario y lenguajes de voz fr-FR o región ES, interfaz de usuario y lenguajes de voz es-ES. Cortana usa su propia voz; la aplicación UWP no puede cambiarla.

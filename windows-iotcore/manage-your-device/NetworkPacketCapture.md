@@ -4,16 +4,16 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Aprenda a usar el analizador de mensajes de Microsoft para habilitar la captura de paquetes de red
 keywords: Windows IOT, paquete de red, captura de paquetes de red, analizador de mensajes de Microsoft, PowerShell
-ms.openlocfilehash: 593b6f4f8650e074666dda06feb88e6afccf5e61
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 20f280623fc8919a5ebd3b015ece7d29dbe40cb5
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72917430"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721662"
 ---
 # <a name="network-packet-capture"></a>Capturas de paquetes de red
 
-Puede usar el [analizador de mensajes de Microsoft](http://www.microsoft.com/en-us/download/details.aspx?id=44226) para capturar, mostrar y analizar el tráfico de mensajes de protocolo en el dispositivo de Windows 10 IOT Core.
+Puede usar el [analizador de mensajes de Microsoft](https://www.microsoft.com/download/details.aspx?id=44226) para capturar, mostrar y analizar el tráfico de mensajes de protocolo en el dispositivo de Windows 10 IOT Core.
 
 ![Analizador de mensajes](../media/NetworkPacketCapture/message-analyzer.png)
 
@@ -21,7 +21,7 @@ Puede usar el [analizador de mensajes de Microsoft](http://www.microsoft.com/en-
 
 Conexión de PowerShell en funcionamiento (paso 1 a 8 descrito en [PowerShell](../connect-your-device/PowerShell.md).
 
-## <a name="set-up-your-device"></a>Configuración del dispositivo
+## <a name="set-up-your-device"></a>Configurar el dispositivo
 
 Para conectarse a su dispositivo con el analizador de mensajes, primero debe cambiar el nombre del dispositivo.  Esto puede realizarse a través de [ssh](../connect-your-device/SSH.md) o [PowerShell](../connect-your-device/PowerShell.md) mediante el comando `setcomputername`.
 
@@ -39,7 +39,7 @@ Conéctese al dispositivo mediante PowerShell o SSH y ejecute el siguiente coman
 
 Ahora que el dispositivo está configurado, vamos a conectarnos con el analizador de mensajes de Microsoft.
 
-1. Descargue el [analizador de mensajes de Microsoft](http://www.microsoft.com/en-us/download/details.aspx?id=44226).
+1. Descargue el [analizador de mensajes de Microsoft](https://www.microsoft.com/download/details.aspx?id=44226).
 2. Abra el analizador de mensajes.
 3. Haga clic en `New Session`.
 

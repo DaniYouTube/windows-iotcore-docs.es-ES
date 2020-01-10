@@ -4,18 +4,18 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre lo que hace el panel de IoT Core de Windows 10 y cómo empezar.
 keywords: Windows IOT, Windows 10 IOT Core Dashboard, panel de Windows IOT, dispositivos
-ms.openlocfilehash: e244dd4705fa85707468f284b9a5d070c91720d8
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 53a8be4e29f93ab3f6d9979e247c598ea5e637c8
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918617"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721490"
 ---
 # <a name="windows-10-iot-core-dashboard"></a>Panel de Windows 10 IoT Core
 
 Panel de Windows 10 IoT Core es la mejor manera de descargar, configurar y conectar sus dispositivos Windows 10 IoT Core, todo desde su PC.
 
-Puede descargar el [Panel de IOT Core aquí](http://go.microsoft.com/fwlink/?LinkID=708576).
+Puede descargar el [Panel de IOT Core aquí](https://go.microsoft.com/fwlink/?LinkID=708576).
 
 > [!NOTE]
 > Si encuentra que está recibiendo una pantalla en blanco al abrir el panel de IoT después de la descarga, puede deberse a un problema con el controlador. Para solucionar este problema, debe descargar el [formato zip](https://downloadmirror.intel.com/27894/a08/win64_24.20.100.6229.zip) del controlador de gráficos Intel e instalar el controlador manualmente. 
@@ -23,13 +23,13 @@ Puede descargar el [Panel de IOT Core aquí](http://go.microsoft.com/fwlink/?Lin
 ## <a name="set-up-a-new-device"></a>Configuración de un dispositivo nuevo
 
 > [!NOTE]
-> El panel de información no se puede usar para configurar Raspberry Pi 3B+. Si tiene un dispositivo 3B+, debe usar la [versión preliminar técnica de 3B+](https://www.microsoft.com/en-us/software-download/windowsiot). Vea las [limitaciones conocidas](https://docs.microsoft.com/en-us/windows/iot-core/troubleshooting) de la versión preliminar técnica para determinar si esto es adecuado para el desarrollo.
+> El panel de información no se puede usar para configurar Raspberry Pi 3B+. Si tiene un dispositivo 3B+, debe usar la [versión preliminar técnica de 3B+](https://www.microsoft.com/software-download/windowsiot). Vea las [limitaciones conocidas](https://docs.microsoft.com/windows/iot-core/troubleshooting) de la versión preliminar técnica para determinar si esto es adecuado para el desarrollo.
 
 > [!NOTE]
 > Actualmente hay un problema conocido en el que el sistema operativo atraviesa las particiones de la tarjeta SD y solicita un "formato..." mensaje para una partición de datos específica que no contiene ningún sistema de archivos. Descartar este mensaje presionando cancelar. Aunque trabajamos en una solución, se recomienda que, si hace clic en "formatear ahora", vuelva a crear la tarjeta SD con la imagen FFU cuando la acción de formato afecte al proceso de actualización y el dispositivo no se actualizará.
 
 
-El panel de IoT facilita la configuración de un nuevo dispositivo. Para obtener instrucciones detalladas sobre cómo empezar, [consulte la página de introducción.](https://docs.microsoft.com/en-us/windows/iot-core/getstarted)
+El panel de IoT facilita la configuración de un nuevo dispositivo. Para obtener instrucciones detalladas sobre cómo empezar, [consulte la página de introducción.](https://docs.microsoft.com/windows/iot-core/getstarted)
 
 ![Página de configuración del panel de IoT](../media/IoTDashboard/IoTDashboard_SetupPage.PNG)
 
@@ -75,7 +75,7 @@ Para encontrar el dispositivo, vaya a **mis dispositivos**. Si el dispositivo no
 5. Busque **windows10iotcoredashboard. exe** en **aplicaciones y características permitidas** y, a continuación, habilite la casilla red adecuada (es decir, el tipo de red que encontró en el paso 1).
 
 
-### <a name="connect-to-your-device"></a>Conectarse al dispositivo
+### <a name="connect-to-your-device"></a>Conexión al dispositivo
 
 > [!NOTE]
 > Si no puede encontrar el dispositivo en el panel, intente escribir su [dirección IP] y [: 8080] en el explorador para poner en marcha el portal de dispositivos de Windows. Para que el dispositivo se muestre en el panel, intente reiniciar el dispositivo.

@@ -4,12 +4,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo conectar el dispositivo a la nube.
 keywords: Windows IOT, Azure, seguridad, Módulo de plataforma segura, SoC
-ms.openlocfilehash: 6bce16b45175c4c19156f30f35f6d3502f675930
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 62120695d2209227f938ebd5635380f226dddfc1
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918397"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721510"
 ---
 # <a name="connect-your-device-to-the-cloud"></a>Conectar el dispositivo a la nube
 
@@ -26,7 +26,7 @@ La idea básica detrás del uso de claves criptográficas: el secreto (también 
 
 ## <a name="device-provisioning"></a>Aprovisionamiento de dispositivos 
 
-La herramienta que aprovisiona dispositivos Windows 10 IoT Core se denomina panel de IoT Core y se puede descargar desde [la página de descargas](http://go.microsoft.com/fwlink/?LinkID=708576).
+La herramienta que aprovisiona dispositivos Windows 10 IoT Core se denomina panel de IoT Core y se puede descargar desde [la página de descargas](https://go.microsoft.com/fwlink/?LinkID=708576).
 
 El panel genera una imagen del sistema operativo y conecta de forma segura el dispositivo a Azure. Esto se realiza asociando el dispositivo físico con el identificador del dispositivo en el Azure IoT Hub e imprime la clave de acceso compartida específica del dispositivo en el TPM del dispositivo. 
 

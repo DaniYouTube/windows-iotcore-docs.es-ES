@@ -4,12 +4,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información acerca de cómo crear un paquete de controladores e instalar controladores de terceros en los dispositivos.
 keywords: Windows IOT, controladores USB, dispositivos periféricos, USB
-ms.openlocfilehash: 96e234c943771c336a9f5d7c0b7568cb11c0f6ce
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: 4e3b77466e2bacb9bf8e06bc3a0dc081db2ee5f9
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918067"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721480"
 ---
 # <a name="install-usb-peripheral-drivers"></a>Instalación de controladores periféricos de USB
 Siga los pasos que se indican a continuación para agregar controladores de terceros (USB) para dispositivos periféricos, como módems de banda ancha móvil USB, impresoras, escáneres, etc. 
@@ -38,7 +38,7 @@ El paquete de controladores contiene las referencias (InfSource) del archivo INF
 [New-IoTInf2Cab](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Tools/IoTCoreImaging/Docs/New-IoTInf2Cab.md) crea el archivo XML del paquete y también genera el archivo CAB directamente.
 
 > [!NOTE]
-> Windows IoT Core solo admite [los controladores universal y universal INF](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/getting-started-with-universal-drivers).
+> Windows IoT Core solo admite [los controladores universal y universal INF](https://docs.microsoft.com/windows-hardware/drivers/develop/getting-started-with-universal-drivers).
 
 
 Vea también: [paquete de controladores de ejemplo](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Workspace/Source-arm/BSP/CustomRpi2/Packages/CustomRPi2.GPIO) 

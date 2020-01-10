@@ -6,12 +6,12 @@ ms.date: 11/10/2017
 ms.topic: article
 description: Obtenga información acerca de cómo configurar Windows para permitir el modo incrustado, habilitar aplicaciones en segundo plano y otras funcionalidades.
 keywords: Windows IOT, modo incrustado, aplicaciones en segundo plano
-ms.openlocfilehash: ca8124d97a9161a1539eff92c55cf3630cf0a049
-ms.sourcegitcommit: b719e66699372e1339c2316cab45df2a474d09a0
+ms.openlocfilehash: 7305853515b5bd1ca53c9b8be34c2449752c4897
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66252175"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721675"
 ---
 # <a name="embedded-mode"></a>Modo insertado
 
@@ -42,7 +42,7 @@ La funcionalidad del dispositivo **lowLevel** proporciona acceso a interfaces de
 
 La funcionalidad **lowLevelDevices** permite a las aplicaciones tener acceso a dispositivos personalizados cuando se cumplen varios requisitos adicionales. Esta funcionalidad no se debe confundir con la funcionalidad de dispositivo lowLevel, que permite el acceso a dispositivos GPIO, I2C, SPI y PWM.
 
-Consulte [declaraciones de funcionalidades de aplicación](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations) para obtener más información.
+Consulte [declaraciones de funcionalidades de aplicación](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) para obtener más información.
 
 ## <a name="systemmanagment-capability"></a>Funcionalidad de systemManagment
 
@@ -57,13 +57,13 @@ Cuando se habilitan las capacidades de systemManagment para la aplicación, este
 
 Si está depurando en un dispositivo que no ejecuta Windows IoT Core y ve alguno de los siguientes mensajes de error, debe asegurarse de que AllowEmbeddedMode está habilitado en el dispositivo y de que el servicio de modo incrustado se está ejecutando:
 
-* No hay más extremos disponibles desde el asignador de extremos.
+* No hay más extremos disponibles desde el Endpoint Mapper.
 * Este programa está bloqueado por la Directiva de grupo. Para obtener más información, póngase en contacto con el administrador del sistema.
 
 ## <a name="changing-the-mode"></a>Cambiar el modo
 Para habilitar el modo incrustado, debe crear un paquete de aprovisionamiento en el diseñador de imágenes y configuraciones (ICD) que establece AllowEmbeddedMode = 1.  Para instalar ICD, debe descargar e instalar Windows ADK para Windows 10.
 
-* [Descargar Windows ADK para Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=526740)
+* [Descargar Windows ADK para Windows 10](https://go.microsoft.com/fwlink/p/?LinkId=526740)
 * [Obtener información sobre las novedades de Windows ADK para Windows 10](https://msdn.microsoft.com/library/windows/hardware/dn927348(v=vs.85).aspx)
 
 1. Al instalar el ADK, seleccione **Imaging and Configuration Designer (ICD)**
@@ -77,7 +77,7 @@ Para habilitar el modo incrustado, debe crear un paquete de aprovisionamiento en
 4. Elija **común a todas las ediciones de Windows** y, a continuación, haga clic en **siguiente**.
     ![Paso4](../media/EmbeddedMode/Step4.png)
 
-5. Haga clic en **Finalizar**
+5. Haz clic en **Finalizar**.
 
     ![Paso5](../media/EmbeddedMode/Step5.png)
 
@@ -103,7 +103,7 @@ Para habilitar el modo incrustado, debe crear un paquete de aprovisionamiento en
 
     ![Step11](../media/EmbeddedMode/Step11.png)
 
-12. Haga clic en compilar.
+12. Haga clic en Generar.
 
     ![Step12](../media/EmbeddedMode/Step12.png)
 
@@ -115,7 +115,7 @@ Para habilitar el modo incrustado, debe crear un paquete de aprovisionamiento en
 
 
 ## <a name="configuring-a-background-application-to-run-automatically"></a>Configurar una aplicación en segundo plano para que se ejecute automáticamente
-1. Para configurar una aplicación en segundo plano para que se ejecute automáticamente, tendrá que seguir las instrucciones para [crear una tarjeta MinnowBoardMax SD](https://developer.microsoft.com/en-us/windows/iot/getstarted) y copiar `D:\windows\system32\iotstartup.exe` (donde D: es la tarjeta SD).
+1. Para configurar una aplicación en segundo plano para que se ejecute automáticamente, deberá seguir las instrucciones para [crear una tarjeta SD MinnowBoardMax](https://developer.microsoft.com/en-us/windows/iot/getstarted) y copiar `D:\windows\system32\iotstartup.exe` (donde D: es la tarjeta SD).
 
 2. Para obtener una lista de las aplicaciones en segundo plano instaladas, escriba:
 

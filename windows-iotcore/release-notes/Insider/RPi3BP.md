@@ -4,19 +4,19 @@ ms.date: 05/16/2018
 ms.topic: article
 description: Lea y obtenga información sobre lo que hay en la compilación de Raspberry PI 3B +.
 keywords: Windows IOT, Windows Insider, notas de la versión, Raspberry PI 3B +
-ms.openlocfilehash: e0cf0afb98440034d8384e5d44ce98bb14a0fe71
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: d321676758f7ff438540720098e6a6ecb1ba457f
+ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918746"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721020"
 ---
 # <a name="release-notes-for-raspberry-pi-3b"></a>Notas de la versión de Raspberry PI 3B +
 
 &copy; 2018 Microsoft Corporation. Todos los derechos reservados.
 
 > [!NOTE]
-> Esta versión para Raspberry Pi 3B+ es una versión preliminar técnica no admitida. Se ha completado la habilitación y la validación limitadas. La versión actual se puede encontrar [aquí](https://www.microsoft.com/en-us/software-download/windowsiot). Para obtener una mejor experiencia de evaluación y para cualquier producto comercial, use Raspberry Pi 3B u otros dispositivos con SoC de Intel, Qualcomm o NXP admitidos. Para solucionar problemas relacionados con el dispositivo Raspberry Pi 3B+, vea nuestra guía de solución de problemas, [aquí](https://docs.microsoft.com/en-us/windows/iot-core/troubleshooting?branch=master#raspberry-pi-3b-booting-issues). 
+> Esta versión para Raspberry Pi 3B+ es una versión preliminar técnica no admitida. Se ha completado la habilitación y la validación limitadas. La versión actual se puede encontrar [aquí](https://www.microsoft.com/en-us/software-download/windowsiot). Para obtener una mejor experiencia de evaluación y para cualquier producto comercial, use Raspberry Pi 3B u otros dispositivos con SoC de Intel, Qualcomm o NXP admitidos. Para solucionar problemas relacionados con el dispositivo Raspberry Pi 3B+, vea nuestra guía de solución de problemas, [aquí](https://docs.microsoft.com/windows/iot-core/troubleshooting?branch=master#raspberry-pi-3b-booting-issues). 
 
 ## <a name="whats-new-in-this-build"></a>Novedades de esta compilación: 
 * Correcciones de errores generales
@@ -53,7 +53,7 @@ checknetisolation loopbackexempt -a -n=<AppID for Additional App>
 For example:  checknetisolation loopbackexempt -a -n=IoTOnboardingTask-uwp_1w720vyc4ccym 
 ```
 
-Reinicio.
+Reinicie el equipo.
 
 ### <a name="sensor-driver-conflict-in-pre-built-ffus"></a>Conflicto del controlador de sensor en FFU precompiladas 
 Hay un conflicto del controlador de sensor en las FFU proporcionadas. El marco del sensor remoto instala controladores para la brújula, el magnetómetro, el acelerómetro y el giroscopio. Las API de UWP para acceder a ellas desde una aplicación suponen que solo hay una instalada. Si va a desarrollar un controlador para un dispositivo adjuntado físicamente, el controlador remoto de las FFU que proporciona Microsoft entrará en conflicto.  
@@ -74,7 +74,7 @@ El nombre de usuario y la contraseña predeterminados del administrador están c
 Los controles de volumen del hardware para micrófonos y altavoces USB que dependen del sistema de Windows para cambiar el volumen del sistema no son compatibles actualmente con Windows 10 IoT Core. 
 
 ### <a name="usb-keyboards"></a>Teclados USB
-Es posible que algún teclado y mouse USB no funcionen en IoT Core. Use otro teclado o mouse. Puede encontrar una lista de dispositivos periféricos validados en la documentación [aquí](http://go.microsoft.com/fwlink/?LinkId=619428).
+Es posible que algún teclado y mouse USB no funcionen en IoT Core. Use otro teclado o mouse. Puede encontrar una lista de dispositivos periféricos validados en la documentación [aquí](https://go.microsoft.com/fwlink/?LinkId=619428).
  
 ### <a name="screen-orientation"></a>Orientación de la pantalla
 El establecimiento de la orientación en "Vertical" puede que no se respete en una aplicación universal.
@@ -134,7 +134,7 @@ delay = (dword) ((float)BaseRetryDelayMs * (crashes_seen ** Fallback_exponent))
 Espere el retraso y vuelva a iniciar la aplicación.
 
 #### <a name="dragonboard-spi-runs-at-48mhz"></a>El SPI de DragonBoard se ejecuta a 4,8 Mhz
-El SPI en DragonBoard omitirá la velocidad solicitada y siempre se ejecutará a 4,8 Mhz.  
+El SPI de DragonBoard omitirá la velocidad solicitada y siempre se ejecutará a 4,8 Mhz.  
 
 #### <a name="dragonboard-connected-standby"></a>Modo de espera conectado de DragonBoard 
 El modo de espera conectado no está habilitado en Qualcomm DragonBoard de manera predeterminada.  Para habilitar el modo de espera conectado en DragonBoard, la siguiente clave del registro debe establecerse en "1".
