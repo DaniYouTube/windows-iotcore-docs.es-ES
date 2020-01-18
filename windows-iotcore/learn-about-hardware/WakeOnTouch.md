@@ -7,12 +7,12 @@ ms.topic: article
 description: Configuración del dispositivo para la reactivación táctil
 keywords: Windows IOT, pantalla, suspensión, Wake, Touch, Standby, Power
 ms.custom: RS5
-ms.openlocfilehash: 7c0fc9613f1b1ed45fb8d69a18d82b034eb366fb
-ms.sourcegitcommit: 2b4ce105834c294dcdd8f332ac8dd2732f4b5af8
+ms.openlocfilehash: 11aaaeed721ff3df7d4b78a29ddb3d0f1b4aa732
+ms.sourcegitcommit: 0fa10fafb13788496674d13e0ae810a6d93e3483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60167643"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258536"
 ---
 # <a name="configure-your-device-to-wake-on-touch"></a>Configuración del dispositivo para la reactivación táctil
 
@@ -22,19 +22,19 @@ En algunos escenarios, quiere que la pantalla del dispositivo se apague mientras
 
 Puede configurar la pantalla para que se apague después de un período de inactividad mediante la configuración de un tiempo de espera de inactividad de vídeo. Cuando el usuario no ha interactuado con el dispositivo durante un período de tiempo especificado, la pantalla se apagará. Esto permitirá que el dispositivo entre en un estado de energía baja apagando los componentes relacionados con la pantalla.
 
-```
+```powershell
     powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 10
     powercfg.exe /setdcvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 10
     powercfg.exe /setactive SCHEME_CURRENT
 ```
 
-Para obtener más información, vea Mostrar el tiempo de [espera](/windows-hardware/customize/power-settings/display-settings-display-idle-timeout) de inactividad y [Mostrar, suspender e hibernar temporizadores](/windows-hardware/design/device-experiences/display--sleep--and-hibernate-idle-timers)de inactividad.
+Para obtener más información, vea Mostrar el tiempo de [espera de inactividad](/windows-hardware/customize/power-settings/display-settings-display-idle-timeout) y [Mostrar, suspender e hibernar temporizadores de inactividad](/windows-hardware/design/device-experiences/display--sleep--and-hibernate-idle-timers).
 
 ## <a name="disabling-modern-standby"></a>Deshabilitar el modo de espera moderno
 
 En los sistemas AoAC (que incluyen todos los sistemas ARM), el sistema entrará automáticamente en [modo de espera moderno](/windows-hardware/design/device-experiences/modern-standby) cuando la pantalla se desactive. Cuando un sistema se encuentra en modo de espera moderno, solo se puede reactivarán mediante ciertas entradas. Esta no es una lista exhaustiva, pero estas entradas incluyen presionar el botón de encendido, abrir la tapa de un portátil o hacer clic con el mouse. Al tocar la pantalla no se reactivará el dispositivo desde el modo de espera moderno. Si desea que el dispositivo se reactive mediante la función táctil, tiene que configurar el dispositivo para que no entre en modo de espera moderno. Para deshabilitar el modo de espera moderno, establezca la siguiente clave del registro y reinicie el sistema.
 
-```
+```powershell
     reg add HKLM\System\CurrentControlSet\Control\Power /v PlatformAoAcOverride /t REG_DWORD /d 0
 ```
     

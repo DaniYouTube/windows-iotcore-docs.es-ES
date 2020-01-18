@@ -4,18 +4,18 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre la funcionalidad de las asignaciones de PIN para Dragonboard.
 keywords: asignaciones de Windows IOT, Dragonboard, PIN, GPIO
-ms.openlocfilehash: 170b14ce640fed33754f90bd4df188f4629f04c2
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.openlocfilehash: f0a811c05b371d9f7a85c1f86b0f69de4d750487
+ms.sourcegitcommit: 0fa10fafb13788496674d13e0ae810a6d93e3483
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72917962"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258549"
 ---
 # <a name="dragonboard-pin-mappings"></a>Asignaciones de Dragonboard PIN
 
 ![Encabezado Dragonboard PIN](../../media/PinMappingsDB/DB_Pinout.png)
 
-Las interfaces de hardware de Dragonboard se exponen a través del encabezado 40-PIN en el panel. La funcionalidad incluye:
+Las interfaces de hardware de Dragonboard se exponen a través del encabezado 40-PIN en el panel. Entre las funcionalidades se incluyen:
 
 * PIN de **11x** -GPIO
 * **2x** -UART en serie
@@ -210,7 +210,7 @@ El reloj SPI se fija a 4,8 MHz. Se omitirá el reloj SPI solicitado.
 
 A continuación se muestra un ejemplo de cómo realizar una escritura SPI en el bus **SPI0** :
 
-```C3
+```C#
 using Windows.Devices.Enumeration;
 using Windows.Devices.Spi;
 
