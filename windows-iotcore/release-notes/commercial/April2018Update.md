@@ -6,7 +6,7 @@ description: Obtenga información sobre las novedades de la actualización de ab
 keywords: Windows IoT, actualización de abril de 2018, notas de la versión
 ms.openlocfilehash: b06378db14ba78fc5a3eb60e842e1555e56a66ac
 ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75721758"
