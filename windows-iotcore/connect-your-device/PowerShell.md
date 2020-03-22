@@ -6,12 +6,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información sobre cómo usar PowerShell para conectarse al dispositivo, así como para administrar el dispositivo.
 keywords: Windows IOT, PowerShell, Windows PowerShell, línea de comandos, Shell de línea de comandos
-ms.openlocfilehash: fb8ec04365e330c2466c1287b446a5d3b15729a1
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.openlocfilehash: f12fd88ee7c53937d92f163ae5acedc4197dbc8a
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75721590"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080566"
 ---
 # <a name="using-powershell-for-windows-iot"></a>Uso de PowerShell para Windows IoT
 
@@ -48,12 +48,12 @@ Asegúrese de seguir estos pasos para configurar correctamente el dispositivo qu
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value <machine-name or IP Address>
 
 6. Escriba `Y` para confirmar el cambio.
-
-> [!NOTE]
-> Si desea conectar varios dispositivos, puede usar comas y comillas para separar cada dispositivo.
         
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value "<machine1-name or IP Address>,<machine2-name or IP Address>"
     
+> [!NOTE]
+> Si desea conectar varios dispositivos, puede usar comas y comillas para separar cada dispositivo.
+
 7. Ahora puede iniciar una sesión con el dispositivo de Windows IoT Core. En la consola de PowerShell del administrador, escriba:
 
         Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
@@ -111,7 +111,7 @@ El dispositivo Windows IoT Core ahora debe estar configurado correctamente y lis
 
 Para obtener una lista de comandos y utilidades que puede usar con PowerShell, consulte la página de utilidades de la [línea de comandos](../manage-your-device/CommandLineUtils.md) .
 
-## <a name="known-issues-and-workarounds"></a>Problemas y soluciones conocidos
+## <a name="known-issues-and-workarounds"></a>Problemas conocidos y soluciones
 
 **Problema**: un error conocido en las directivas de seguridad de PowerShell provoca el manifiesto de los siguientes problemas en la sesión remota:
 * Get-Help devuelve coincidencias inesperadas.
@@ -123,7 +123,7 @@ Para obtener una lista de comandos y utilidades que puede usar con PowerShell, c
 
 **Problema**: a veces, los cmdlets de algunos módulos, como NetAdapter, no son visibles. Por ejemplo, Get-Module NetAdapter devuelve una lista vacía. 
 
-**Solución alternativa**: Use el parámetro-Force con Import-Module. Por ejemplo: `Import-Module NetAdapter -Force`.
+**Solución alternativa**: Use el parámetro-Force con Import-Module. Por ejemplo, `Import-Module NetAdapter -Force`.
 
 **Problema**: establecer la Directiva de ejecución en "AllSigned" interrumpe la comunicación remota de PowerShell. Los intentos posteriores de crear una sesión remota producirán un error con una excepción de carga Typesv3. ps1xml. 
 

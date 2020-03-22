@@ -4,12 +4,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Obtenga información acerca de cómo crear un paquete de controladores e instalar controladores de terceros en los dispositivos.
 keywords: Windows IOT, controladores USB, dispositivos periféricos, USB
-ms.openlocfilehash: 4e3b77466e2bacb9bf8e06bc3a0dc081db2ee5f9
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.openlocfilehash: 36b11d06d860b169503ecc5979a8cfb1b1fa1fea
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75721480"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080537"
 ---
 # <a name="install-usb-peripheral-drivers"></a>Instalación de controladores periféricos de USB
 Siga los pasos que se indican a continuación para agregar controladores de terceros (USB) para dispositivos periféricos, como módems de banda ancha móvil USB, impresoras, escáneres, etc. 
@@ -33,7 +33,7 @@ El paso es obtener la versión x86 de los controladores del equipo. Para ARM, p�
 ## <a name="step-2-create-a-driver-package"></a>Paso 2: crear un paquete de controladores
 ___
 
-El paquete de controladores contiene las referencias (InfSource) del archivo INF para el controlador y también enumera todos los archivos a los que se hace referencia en el archivo INF. Puede crear el archivo driver. WM. XML mediante [New-IoTDriverPackage](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Tools/IoTCoreImaging/Docs/Add-IoTDriverPackage.md).
+El paquete de controladores contiene las referencias (InfSource) del archivo INF para el controlador y también enumera todos los archivos a los que se hace referencia en el archivo INF. Puede crear el archivo driver. WM. XML mediante [Add-IoTDriverPackage](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Tools/IoTCoreImaging/Docs/Add-IoTDriverPackage.md).
 
 [New-IoTInf2Cab](https://github.com/ms-iot/iot-adk-addonkit/tree/master/Tools/IoTCoreImaging/Docs/New-IoTInf2Cab.md) crea el archivo XML del paquete y también genera el archivo CAB directamente.
 
