@@ -5,12 +5,12 @@ ms.date: 10/05/2018
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
-ms.openlocfilehash: c2ba5b9151400774c236bab612b877c4e5a360f3
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.openlocfilehash: 44e1b03ce9e7e9eb4e9bdad6f90ef803a00094f6
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75721460"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080551"
 ---
 # <a name="downloads"></a>Descargas
 Descargue las herramientas y el software necesarios para comenzar con Windows 10 IoT Core.
@@ -31,11 +31,11 @@ _Al descargar y usar el Panel de Windows 10 IoT Core acepta los [términos de li
 > [!WARNING]
 > No use las imágenes del creador con fines comerciales. Si se comercializa un dispositivo, debe usar una FFU personalizada para una seguridad óptima. Obtenga más información [aquí](https://docs.microsoft.com/windows-hardware/manufacture/iot/iot-core-manufacturing-guide).
 
-Cuando comercialice la solución de IoT, deberá descargar las compilaciones desde el [sitio de Descarga de software de Microsoft](https://www.microsoft.com/software-download/windows10IoTCore#!). También hemos incluido debajo versiones del pasado, en caso de que necesite trabajar con una compilación anterior de Windows 10 IoT Core en el dispositivo. 
+Cuando comercialice la solución de IoT, deberá descargar las compilaciones desde el [sitio de Descarga de software de Microsoft](https://aka.ms/iotcoredownloads). También hemos incluido debajo versiones del pasado, en caso de que necesite trabajar con una compilación anterior de Windows 10 IoT Core en el dispositivo. 
 
 ### <a name="october-2018-release"></a>Versión de octubre de 2018
 
-* [Paquetes de Windows 10 IoT Core](https://www.microsoft.com/en-us/software-download/windows10IoTCore#!)
+* [Paquetes de Windows 10 IoT Core](https://aka.ms/iotcoredownloads)
 * [Raspberry Pi2 y Pi3](https://go.microsoft.com/fwlink/?LinkId=846058)
 * [DragonBoard 410c](https://go.microsoft.com/fwlink/?LinkId=846059)
 * [MinnowBoard Turbot y MAX](https://go.microsoft.com/fwlink/?linkid=846057)
@@ -61,17 +61,17 @@ Cuando comercialice la solución de IoT, deberá descargar las compilaciones des
 
 ## <a name="other-downloads"></a>Otras descargas
 
-### <a name="mdns-responderhttpsgomicrosoftcomfwlinklinkid2077676"></a>[Respondedor de mDNS](https://go.microsoft.com/fwlink/?linkid=2077676)
+### <a name="mdns-responder"></a>[Respondedor de mDNS](https://go.microsoft.com/fwlink/?linkid=2077676)
 Descargue el respondedor de mDNS compatible con Bonjour para Windows IoT (código fuente de ejemplo). Obtenga más información [aquí](mDNS.md).
 
-### <a name="firmware-updatehttpfirmwareintelcomprojectsminnowboard-max"></a>[Actualización de firmware](http://firmware.intel.com/projects/minnowboard-max)
+### <a name="firmware-update"></a>[Actualización de firmware](http://firmware.intel.com/projects/minnowboard-max)
 Descargue los componentes y actualizaciones de firmware para la placa de referencia MinnowBoard MAX de Intel.
 
-### <a name="visual-studio-2017httpswwwvisualstudiocomdownloads"></a>[Visual Studio 2017](https://www.visualstudio.com/downloads/)
+### <a name="visual-studio-2017"></a>[Visual Studio 2017](https://www.visualstudio.com/downloads/)
 IDE, herramientas y servicios modernos que puede usar para crear excelentes aplicaciones de IoT.
 
-### <a name="windows-driver-kit-2017httpsmsdnmicrosoftcomwindowshardwarehh852365aspx"></a>[Kit para controladores de Windows 2017](https://msdn.microsoft.com/windows/hardware/hh852365.aspx)
+### <a name="windows-driver-kit-2017"></a>[Kit para controladores de Windows 2017](https://msdn.microsoft.com/windows/hardware/hh852365.aspx)
 Ofrece un entorno de desarrollo integrado para crear controladores eficaces y de alta calidad para dispositivos que ejecutan Windows 10.
 
-### <a name="windows-developer-tools-for-visual-studiohttpsdevwindowscomen-usdownloads"></a>[Herramientas del desarrollador de Windows para Visual Studio](https://dev.windows.com/en-us/downloads)
-Herramientas que se integran con Visual Studio 2017 y que son necesarias para el desarrollo de la plataforma Aplicación universal de Windows. 
+### <a name="windows-developer-tools-for-visual-studio"></a>[Herramientas del desarrollador de Windows para Visual Studio](https://developer.microsoft.com/windows/downloads/)
+Herramientas que se integran con Visual Studio 2017 y que son necesarias para el desarrollo de la plataforma Aplicación universal de Windows.
