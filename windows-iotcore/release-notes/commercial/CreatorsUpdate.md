@@ -4,12 +4,12 @@ ms.date: 08/28/2017
 ms.topic: article
 description: Lee y obtén información sobre las novedades en Creators Update.
 keywords: windows iot, Creators Update, notas de la versión
-ms.openlocfilehash: 5946d97cd84992f62213d71c59374aa7f9a5779b
-ms.sourcegitcommit: 34928850d3b1b2fe22a92ebd1d75c01b3d4bf0aa
+ms.openlocfilehash: 09157cb634de971bfe57f549c3c87354f814f9e9
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "75721860"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080555"
 ---
 # <a name="creators-update-release-notes-for-windows-10-iot-core"></a>Notas de la versión de Creators Update para Windows 10 IoT Core
 Número de compilación 15063. Abril de 2017
@@ -112,7 +112,7 @@ Para confirmar o verificar una imagen existente, conéctate con SSH o PowerShell
 ### <a name="minnowboard"></a>MinnowBoard  
 
 #### <a name="minnowboard-max-firmware-update"></a>Actualización del firmware de MinnowBoard Max 
-MinnowBoard Max no arrancará a menos que la versión del firmware sea .092 o posterior.  
+MinnowBoard Max no arrancará a menos que la versión del firmware sea 0.92 o posterior.  
 Puede haber errores de conectividad de red en el firmware de MinnowBoard Max (MBM) versión 0.93.   El problema se corrigió en la versión de firmware 0.94.  La versión mínima recomendada del firmware es MinnowBoard Max 0.94 de 32 bits. Las actualizaciones de firmware pueden descargarse desde  [aquí](https://go.microsoft.com/fwlink/?LinkId=708613).
   
  
