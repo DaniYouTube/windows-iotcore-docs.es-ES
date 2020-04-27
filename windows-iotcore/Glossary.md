@@ -7,10 +7,10 @@ ms.technology: IoT
 description: Obtenga información sobre los distintos términos relacionados con Windows IoT Core en nuestra documentación.
 keywords: windows iot, glosario, términos, terminología, definiciones
 ms.openlocfilehash: 109ddbb9e9c6c163fdc5a8d0219b89dde3a2bbf2
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "72918429"
 ---
 # <a name="glossary-for-windows-iot"></a>Glosario de Windows IoT

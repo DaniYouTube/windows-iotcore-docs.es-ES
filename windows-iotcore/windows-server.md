@@ -5,10 +5,10 @@ ms.topic: article
 description: Obtenga información sobre qué es Windows Server IoT 2019 y lo que le permite hacer.
 keywords: Windows Server IoT 2019, capacidad de administración empresarial, ecosistema de Windows, IoT
 ms.openlocfilehash: 8ed21ae695bff2386346dfe15de9cb83e2697a90
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721780"
 ---
 # <a name="an-overview-of-windows-server-iot-2019"></a>Una descripción general de Windows Server IoT 2019
@@ -22,7 +22,7 @@ Windows Server IoT 2019 es una versión completa de Windows Server 2019 que ofre
 ## <a name="fixed-purpose-devices"></a>Dispositivos de propósito fijo 
 
 > [!TIP]
-> Vea el contrato de licencia para obtener instrucciones completas sobre todos los escenarios de uso de Windows Server IoT 2019. Si no tiene este contrato de licencia, solicite el acuerdo comercial al fabricante de equipos originales con el que trabaje.
+> Vea el contrato de licencia para obtener instrucciones completas sobre todos los escenarios de uso de Windows Server IoT 2019. Si no tiene este contrato de licencia, solicite el contrato comercial al fabricante de equipos originales con el que trabaje.
 
 Windows Server es conocido como el sistema operativo de servidor que usan pequeñas empresas y grandes compañías de todo el mundo. Lo que se desconoce es que, durante años, Windows Server también ha impulsado muchas soluciones dedicadas en los sectores del comercio al por menor, la fabricación, la atención sanitaria y muchos más. Windows Server IoT 2019 permite crear soluciones de propósito fijo con asignaciones y restricciones específicas en el contrato de licencia.
 
@@ -30,7 +30,7 @@ Windows Server es conocido como el sistema operativo de servidor que usan peque�
 
 Este es el modelo de distribución con el que ya está familiarizado (anteriormente denominado "Rama de mantenimiento a largo plazo"), donde se publica una nueva versión principal de Windows Server cada 2 o 3 años. Los usuarios tienen derecho a 5 años de soporte estándar y 5 años de soporte extendido. Este canal es adecuado para los sistemas que requieren una opción de mantenimiento prolongado y una estabilidad funcional. Las implementaciones de Windows Server IoT 2019 y las versiones anteriores de Windows Server no se verán afectadas por las nuevas versiones del Canal semianual. El Canal de mantenimiento a largo plazo seguirá recibiendo actualizaciones de seguridad y no relacionadas con la seguridad, pero no recibirá las nuevas funciones y funcionalidades.
 
-* [Más información sobre LTSC](https://docs.microsoft.com/windows-server/get-started-19/servicing-channels-19#long-term-servicing-channel-ltsc)
+* [Más información acerca de LTSC](https://docs.microsoft.com/windows-server/get-started-19/servicing-channels-19#long-term-servicing-channel-ltsc)
 
 ## <a name="helpful-resources"></a>Recursos útiles
 > [!NOTE]

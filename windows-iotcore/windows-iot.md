@@ -5,10 +5,10 @@ ms.topic: article
 description: Obtenga información sobre qué es Windows 10 IoT y lo que puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Windows 10 IoT Core, equipo sin periféricos, voz, características, edición binaria, ediciones
 ms.openlocfilehash: 9ef9562e93dbaa71b97f75689adc3eed28ac1f9f
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721801"
 ---
 # <a name="an-overview-of-windows-10-iot"></a>Información general de Windows 10 IoT 
@@ -26,14 +26,14 @@ Windows 10 IoT está disponible en dos ediciones.  Windows 10 IoT Core es el mie
 
 Aunque Windows 10 IoT Core y Windows 10 IoT Enterprise son similares en el nombre, hay diferencias en lo que ofrecen y también en lo que admiten. A continuación se muestra una lista de características en la que se resaltan las diferencias de cada edición.
 
-> |             | Windows 10 IoT Core  |  Windows 10 IoT Enterprise  |
+> |             | Windows 10 IoT Core  |  Windows 10 IoT Enterprise  |
 > |-------------|----------|---------|
 > | Experiencia del usuario | Una aplicación para UWP en primer plano a la vez (vea la [documentación de IoT Shell](https://docs.microsoft.com/windows/iot-core/develop-your-app/iotcoreshell) para el control de la pila de retroceso de aplicaciones) con servicios y aplicaciones complementarios en segundo plano. | Shell de Windows tradicional con características avanzadas de bloqueo |
 > | Compatibilidad con equipos sin periféricos | Sí | Sí |
 > | Arquitectura de aplicaciones compatible | Solo IU de UWP | Compatibilidad completa con la interfaz de usuario de Windows (por ejemplo, UWP, WinForms, etc.) |
 > | Cortana | [*SDK de Cortana*](https://developer.microsoft.com/cortana/devices) | Sí |
 > | Unión a un dominio | Solo AAD | AAD y dominio tradicional |
-> | Administración | MDM | MDM |
+> | Management | MDM | MDM |
 > | Tecnologías de seguridad del dispositivo | [TPM](https://docs.microsoft.com/windows/iot-core/secure-your-device/tpm), [Arranque seguro, BitLocker, Device Guard](https://docs.microsoft.com/windows/iot-core/secure-your-device/securebootandbitlocker) y Atestación de estado de dispositivo | [TPM](https://docs.microsoft.com/windows/iot-core/secure-your-device/tpm), [Arranque seguro, BitLocker, Device Guard](https://docs.microsoft.com/windows/iot-core/secure-your-device/securebootandbitlocker) y Atestación de estado de dispositivo |
 > | Compatibilidad con arquitecturas de CPU | x86, x64 y ARM | x86 y x64 |
 > | Concesión de licencias | Contrato de licencia en línea y contratos de OEM insertados, libres de regalías | Contratos de OEM insertados directos e indirectos |

@@ -9,7 +9,7 @@ ms.openlocfilehash: 44e1b03ce9e7e9eb4e9bdad6f90ef803a00094f6
 ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "80080551"
 ---
 # <a name="downloads"></a>Descargas

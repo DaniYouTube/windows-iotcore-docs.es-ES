@@ -1,16 +1,16 @@
 ---
 Description: Solución de diferentes problemas relacionados con el desarrollo.
-title: Solucionar problemas
+title: Solución de problemas
 ms.date: 08/28/2018
 ms.topic: article
 ms.openlocfilehash: 6118a5a5006d79c65681400de45fb7626f96836d
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721521"
 ---
-# <a name="troubleshooting"></a>Solucionar problemas
+# <a name="troubleshooting"></a>Solución de problemas
 Se trata de un artículo que contiene los problemas más comunes que se han encontrado los usuarios. Para encontrar un elemento específico, presione Ctrl+F para buscar una palabra o frase. ¿Tiene alguna idea que quiera agregar? Cree una solicitud de incorporación de cambios para esta documentación o proporcione comentarios sobre el contenido a continuación.
 
 > [!TIP]
@@ -69,7 +69,7 @@ Para establecer un perfil de conexión automática, seleccione "auto":
 
 2. Otro factor es que se debe cumplir la directiva de itinerancia por cada interfaz. De forma predeterminada, esa directiva se establece en FALSE ("solo operador local"). Esto se puede consultar y cambiar en la línea de comandos a través de `netsh mbn get/set dataroamcontrol.`
 
-Ejemplo:
+Por ejemplo:
 
 ```
     netsh mbn show dataroamcontrol int=*

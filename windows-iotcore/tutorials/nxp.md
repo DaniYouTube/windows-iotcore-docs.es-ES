@@ -6,10 +6,10 @@ description: Obtenga información sobre cómo configurar el dispositivo NXP con 
 keywords: Windows 10 IoT Core, NXP
 ms.custom: RS5
 ms.openlocfilehash: aa3e28cb79e69c1faccd733d993c8ec12f6ae314
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721736"
 ---
 # <a name="setting-up-a-nxp-device"></a>Configuración de un dispositivo NXP
@@ -71,7 +71,7 @@ Si no se ha conectado a una pantalla y le gustaría conectarse a través de Wi-F
 3. Haga clic en _Configurar dispositivo_ y escriba las credenciales de red. Esto conectará la placa a la red.
 
 > [!NOTE]
-> La Wi-Fi debe estar activada en el equipo para poder buscar otras redes.
+> En el equipo la Wi-Fi debe estar activada para poder buscar otras redes.
 
 ## <a name="connect-to-windows-device-portal"></a>Conexión al Portal de dispositivos Windows
 

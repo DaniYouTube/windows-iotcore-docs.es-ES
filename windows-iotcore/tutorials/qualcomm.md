@@ -6,10 +6,10 @@ description: Obtenga información sobre cómo configurar el dispositivo Qualcomm
 keywords: Windows 10 IoT Core, Qualcomm
 ms.custom: RS5
 ms.openlocfilehash: cb9c1e07219b30aafe8b036c99710b49bcddee66
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721470"
 ---
 # <a name="setting-up-a-qualcomm-device"></a>Configuración de un dispositivo Qualcomm
@@ -21,10 +21,10 @@ Si lo que quiere es fabricar con un dispositivo Qualcomm, consulte la [guía de 
 
 ## <a name="using-emmc"></a>Uso de eMMC
 
-1. Descargue e instale la herramienta de actualización de DragonBoard para el equipo [x86](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip) o [x64](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip).
+1. Descargue e instale la herramienta de actualización de DragonBoard para la máquina [x86](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip) o [x64](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip).
 2. Descargue la [FFU de DragonBoard de Windows 10 IoT Core](https://docs.microsoft.com/windows/iot-core/downloads).
 3. Haga doble clic en el archivo ISO descargado y busque la unidad de Virtual CD montada. Esta unidad contendrá un archivo de instalador (.msi); haga doble clic en él. Esto crea un directorio en el equipo en  `C:\Program Files (x86)\Microsoft IoT\FFU\` donde debería ver un archivo de imagen, "flash.ffu".
-4. Para asegurarse de que DragonBoard está en modo de descarga, establezca que el primer arranque cambie en la placa a arranque de USB, como se muestra a continuación. Después, conecte DragonBoard al equipo host a través de un cable microUSB y, luego, conecte DragonBoard a una fuente de alimentación de 12 V (> 1 A).
+4. Asegúrese de que DragonBoard está en modo de descarga estableciendo que el primer arranque cambie en la placa a arranque de USB, como se muestra debajo. Después, conecte DragonBoard al equipo host a través de un cable microUSB y, luego, conecte DragonBoard a una fuente de alimentación de 12 V (> 1 A).
 5. Inicie la herramienta de actualización de DragonBoard, que debe detectar que DragonBoard se conecta al equipo con un círculo verde. Haga clic en "Examinar" en la FFU del DragonBoard que ha descargado y, después, haga clic en el botón _Programa_.
 6. Haga clic otra vez en "Examinar" y seleccione "rawprogram0.xml", que se ha generado en el paso 5. Luego haga clic en el botón "Programa".
 7. Una vez completada la descarga, desconecte la fuente de alimentación y el cable microUSB de la placa y cambie el conmutador de arranque USB a _OFF_. Conecte una pantalla HDMI, un ratón y un teclado a DragonBoard y vuelva a conectar la fuente de alimentación. Pasados unos minutos, debería ver la aplicación predeterminada Windows 10 IoT Core. 
@@ -51,7 +51,7 @@ Si no se ha conectado a una pantalla y le gustaría conectarse a través de Wi-F
 3. Haga clic en _Configurar dispositivo_ y escriba las credenciales de red. Esto conectará la placa a la red.
 
 > [!NOTE]
-> La Wi-Fi debe estar activada en el equipo para poder buscar otras redes.
+> En el equipo la Wi-Fi debe estar activada para poder buscar otras redes.
 
 ## <a name="connect-to-windows-device-portal"></a>Conexión al Portal de dispositivos Windows
 

@@ -6,10 +6,10 @@ description: Obtenga información sobre cómo configurar el dispositivo DragonBo
 keywords: Windows 10 IoT Core, DragonBoard
 ms.custom: RS5
 ms.openlocfilehash: 49de9a3007dac12a13a42a334d33dc79c96f96af
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721748"
 ---
 # <a name="setting-up-a-dragonboard"></a>Configuración de un dispositivo DragonBoard
@@ -41,7 +41,7 @@ Para instalar una imagen de IoT Core o descargarlo en el dispositivo MinnowBoard
 4. Conecte el dispositivo DragongBoard a una pantalla externa.
 5. Encienda el dispositivo DragonBoard con una fuente de alimentación de 12 V (> 1 A) mientras mantiene presionado el botón de subir volumen (+). El dispositivo, cuando se conecta a una pantalla, debe mostrar la imagen de un martillo, un rayo y un engranaje.
 6. Ahora, el dispositivo debe estar visible en el panel, como se muestra debajo. Seleccione el dispositivo correspondiente.
-7. Acepte los términos de licencia de software y, después, haga clic en **Descargar e instalar**. Verá que Windows 10 IoT Core instala una imagen en el dispositivo.
+7. Acepte los términos de licencia y, después, haga clic en **Descargar e instalar**. Verá que Windows 10 IoT Core instala una imagen en el dispositivo.
 
 ![DragonBoard en modo sobrescribir](../media/DeviceSetup/db4.png)
 
@@ -64,7 +64,7 @@ Si no se ha conectado a una pantalla y le gustaría conectarse a través de Wi-F
 3. Haga clic en _Configurar dispositivo_ y escriba las credenciales de red. Esto conectará la placa a la red.
 
 > [!NOTE]
-> La Wi-Fi debe estar activada en el equipo para poder buscar otras redes.
+> En el equipo la Wi-Fi debe estar activada para poder buscar otras redes.
 
 ## <a name="connect-to-windows-device-portal"></a>Conexión al Portal de dispositivos Windows
 

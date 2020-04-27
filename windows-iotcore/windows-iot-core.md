@@ -8,7 +8,7 @@ ms.openlocfilehash: 270d2e2491514a1b5b0c0fefb7c16da326512355
 ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "80080533"
 ---
 # <a name="an-overview-of-windows-10-iot-core"></a>Información general de Windows 10 IoT Core

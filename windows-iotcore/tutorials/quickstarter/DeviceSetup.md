@@ -6,10 +6,10 @@ description: Obtenga información sobre cómo configurar el dispositivo con Wind
 keywords: Windows 10 IoT Core, tarjeta SD, Panel de Windows 10 IoT Core
 ms.custom: RS5
 ms.openlocfilehash: 7575889b94cf7a69550c5c4128ab5ff8a82dde9c
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721840"
 ---
 # <a name="setting-up-your-device"></a>Configuración del dispositivo
@@ -28,7 +28,7 @@ Debajo encontrará cuatro maneras diferentes para instalar una imagen en el disp
 
 
 > [!IMPORTANT]
-> El firmware de 64 bits más reciente para MinnowBoard Turbot se puede encontrar en el [sitio web de MinnowBoard](https://minnowboard.org/tutorials/updating-the-firmware) (omita el paso 4 en las instrucciones del sitio de MinnowBoard).
+> El firmware de 64 bits más reciente para MinnowBoard Turbot se puede encontrar en el [sitio web de MinnowBoard](https://minnowboard.org/tutorials/updating-the-firmware) (omita el paso 4 en las instrucciones del sitio de MinnowBoard).
 
 > [!IMPORTANT]
 > NXP solo admite imágenes personalizadas. Si lo que busca es instalar una imagen personalizada, seleccione "Personalizada" en la lista desplegable de la compilación del sistema operativo, siga las instrucciones [aquí](https://docs.microsoft.com/windows-hardware/manufacture/iot/create-a-basic-image) para crear una imagen básica y siga el resto de las siguientes instrucciones para finalizar.
@@ -46,7 +46,7 @@ Debajo encontrará cuatro maneras diferentes para instalar una imagen en el disp
 4. Acepte los términos de licencia y, después, haga clic en _Descargar e instalar_. Verá que Windows 10 IoT Core instala una imagen en la tarjeta SD.
 
 
-![Captura de pantalla del panel.](../../media/DeviceSetup/Dashboard-Screenshot.jpg)
+![Captura de pantalla del panel](../../media/DeviceSetup/Dashboard-Screenshot.jpg)
  
 
 ## <a name="using-the-iot-dashboard-dragonboard-410c"></a>Mediante el Panel de IoT (DragonBoard 410c)
@@ -70,7 +70,7 @@ Debajo encontrará cuatro maneras diferentes para instalar una imagen en el disp
 3. Conecte la placa de Qualcomm a la máquina del desarrollador mediante un cable microUSB.
 4. Encienda el dispositivo DragonBoard con una fuente de alimentación de 12 V (> 1 A) mientras mantiene presionado el botón de subir volumen (+). El dispositivo, cuando se conecta a una pantalla, debe mostrar la imagen de un martillo, un rayo y un engranaje. 
 5. Ahora, el dispositivo debe estar visible en el panel, como se muestra debajo. Seleccione el dispositivo correspondiente.
-6. Acepte los términos de licencia de software y, después, haga clic en _Descargar e instalar_. Verá que Windows 10 IoT Core instala una imagen en el dispositivo.
+6. Acepte los términos de licencia y, después, haga clic en _Descargar e instalar_. Verá que Windows 10 IoT Core instala una imagen en el dispositivo.
 
 
 ![DragonBoard en modo sobrescribir](../../media/DeviceSetup/db4.png)
@@ -99,7 +99,7 @@ Debajo encontrará cuatro maneras diferentes para instalar una imagen en el disp
 1. Descargue e instale el [kit de evaluación e implementación de Windows](https://docs.microsoft.com/windows-hardware/get-started/adk-install) (Windows ADK) con la versión de correlación de Windows 10 que se está ejecutando en su equipo.
 2. Descargue e instale el [complemento de Windows PE para el ADK](https://go.microsoft.com/fwlink/?linkid=2087112).
 
-#### <a name="create-a-usb-bootable-windows-pehttpsdocsmicrosoftcomwindows-hardwaremanufacturedesktopwinpe-intro-image"></a>Creación de una imagen de [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) con arranque USB
+#### <a name="create-a-usb-bootable-windows-pe-image"></a>Creación de una imagen de [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) con arranque USB
 
 3. Inserte una unidad USB en el equipo.
 4. Inicie el entorno de herramientas de implementación y creación de imágenes como un administrador. La ruta de instalación predeterminada es `C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\DandISetEnv.bat`.

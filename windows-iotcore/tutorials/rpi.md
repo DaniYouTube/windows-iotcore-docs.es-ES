@@ -6,10 +6,10 @@ description: Obtenga información sobre cómo configurar el dispositivo Raspberr
 keywords: Windows 10 IoT Core, Raspberry Pi
 ms.custom: RS5
 ms.openlocfilehash: 7a79931bc4ce1976a047d51f64a8ba6d4cc590a1
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721726"
 ---
 # <a name="setting-up-a-raspberry-pi"></a>Configuración de un dispositivo Raspberry Pi
@@ -17,7 +17,7 @@ ms.locfileid: "75721726"
 ## <a name="overview"></a>Introducción
 
 > [!NOTE]
-> El panel de información no se puede usar para configurar Raspberry Pi 3B+. Si tiene un dispositivo 3B+, debe usar la [versión preliminar técnica de 3B+](https://www.microsoft.com/en-us/software-download/windowsiot). Vea las [limitaciones conocidas](https://docs.microsoft.com/windows/iot-core/troubleshooting) de la versión preliminar técnica para determinar si esto es adecuado para el desarrollo.
+> El panel de información no se puede utilizar para configurar Raspberry Pi 3B+. Si tiene un dispositivo 3B+, debe usar la [versión preliminar técnica de 3B+](https://www.microsoft.com/en-us/software-download/windowsiot). Consulte las [limitaciones conocidas](https://docs.microsoft.com/windows/iot-core/troubleshooting) de la versión preliminar técnica para determinar si esto es adecuado para el desarrollo.
 
 > [!IMPORTANT]
 > Cuando aparezca el mensaje emergente "formatear el disco", _no_ lo formatee. Estamos trabajando en una solución para este problema.
@@ -69,7 +69,7 @@ Si no se ha conectado a una pantalla y le gustaría conectarse a través de Wi-F
 3. Haga clic en _Configurar dispositivo_ y escriba las credenciales de red. Esto conectará la placa a la red.
 
 > [!NOTE]
-> La Wi-Fi debe estar activada en el equipo para poder buscar otras redes.
+> En el equipo la Wi-Fi debe estar activada para poder buscar otras redes.
 
 ## <a name="connect-to-windows-device-portal"></a>Conexión al Portal de dispositivos Windows
 

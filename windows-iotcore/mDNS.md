@@ -5,10 +5,10 @@ ms.topic: article
 description: Obtenga información sobre cómo empezar a usar el origen de ejemplo de respondedor de mDNS.
 keywords: Windows 10 IoT Core, origen de ejemplo de respondedor de mDNS
 ms.openlocfilehash: ca99a217ade4c55c6d3050134af8d5663d8d1621
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "72917337"
 ---
 # <a name="getting-started-with-mdns-responder-sample-source"></a>Introducción al origen de ejemplo de respondedor de mDNS
