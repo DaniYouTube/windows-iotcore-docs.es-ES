@@ -5,10 +5,10 @@ ms.topic: article
 description: Obtenga información sobre cómo empezar a trabajar con Microsoft IoT Pack.
 keywords: Windows IoT, Raspberry Pi 3, Adafruit, paquete de inicio
 ms.openlocfilehash: 17c7c7acadb2811a01ce14e3c42c0494b328c42d
-ms.sourcegitcommit: ea060254f9c4c25afcd0245c897b9e1425321859
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721910"
 ---
 # <a name="microsoft-iot-pack"></a>Microsoft IoT Pack

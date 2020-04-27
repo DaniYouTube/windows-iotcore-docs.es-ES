@@ -5,10 +5,10 @@ ms.topic: article
 description: Aproveche todos los recursos de la comunidad de Windows 10 IoT.
 keywords: Windows 10 IoT Core, Windows 10 IoT Enterprise, recursos, MVP, vídeos, entradas de blog
 ms.openlocfilehash: 20057f55e2083189d17d2455c065c33d456dad87
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "72918420"
 ---
 # <a name="windows-10-iot-resources"></a>Recursos de Windows 10 IoT

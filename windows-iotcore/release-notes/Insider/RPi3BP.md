@@ -5,10 +5,10 @@ ms.topic: article
 description: Lee y obtén información sobre las novedades de la compilación para Raspberry Pi 3B+.
 keywords: windows iot, Windows Insider, notas de la versión, Raspberry Pi 3B+
 ms.openlocfilehash: d321676758f7ff438540720098e6a6ecb1ba457f
-ms.sourcegitcommit: 34928850d3b1b2fe22a92ebd1d75c01b3d4bf0aa
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721020"
 ---
 # <a name="release-notes-for-raspberry-pi-3b"></a>Notas de la versión de Raspberry Pi 3B+

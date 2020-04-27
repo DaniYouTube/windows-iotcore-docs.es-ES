@@ -5,10 +5,10 @@ ms.topic: article
 description: Obtén información sobre las novedades de la actualización de abril de 2018 para Windows 10 IoT.
 keywords: Windows IoT, actualización de abril de 2018, notas de la versión
 ms.openlocfilehash: b06378db14ba78fc5a3eb60e842e1555e56a66ac
-ms.sourcegitcommit: 34928850d3b1b2fe22a92ebd1d75c01b3d4bf0aa
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "75721758"
 ---
 # <a name="april-2018-update-release-notes-for-windows-10-iot"></a>Notas de la versión de la actualización de abril de 2018 para Windows 10 IoT

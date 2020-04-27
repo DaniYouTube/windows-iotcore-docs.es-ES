@@ -10,7 +10,7 @@
           tocHref: /windows/iot-core/
           topicHref: /windows/iot-core/index
           items:
-            - name: Windows 10 IoT Core
+            - name: "Windows\_10 IoT Core"
               tocHref: /windows/iot-core/windows-iot-core/
               topicHref: /windows/iot-core/windows-iot-core
             - name: Windows 10 IoT Enterprise
@@ -19,7 +19,7 @@
             - name: Windows Server IoT 2019
               tocHref: /windows/iot-core/windows-server/
               topicHref: /windows/iot-core/windows-server
-            - name: Comenzar
+            - name: Introducción
               tocHref: /windows/iot-core/getstarted/
               topicHref: /windows/iot-core/getstarted/
             - name: Inicios rápidos
@@ -55,7 +55,7 @@
             - name: Notas de la versión
               tocHref: /windows/iot-core/release-notes/
               topicHref: /windows/iot-core/release-notes/rtm/creatorsupdate
-            - name: Solución de problemas
+            - name: Solucionar problemas
               tocHref: /windows/iot-core/troubleshooting/
               topicHref: /windows/iot-core/troubleshooting/
             - name: Descargas
@@ -67,6 +67,6 @@
             - name: Accesibilidad
               tocHref: /windows/iot-core/accessibility/
               topicHref: /windows/iot-core/accessibility/
-            - name: Glosario
+            - name: glosario
               tocHref: /windows/iot-core/glossary/
               topicHref: /windows/iot-core/glossary/

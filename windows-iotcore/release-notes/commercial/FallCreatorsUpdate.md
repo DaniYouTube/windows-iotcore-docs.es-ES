@@ -5,10 +5,10 @@ ms.topic: article
 description: Obtén información sobre las novedades de Fall Creators Update para Windows 10 IoT.
 keywords: Windows IoT, Fall Creators Update, notas de la versión
 ms.openlocfilehash: 35dbe905cfb25613d1225ab8e6d4b8fd636134d9
-ms.sourcegitcommit: 34928850d3b1b2fe22a92ebd1d75c01b3d4bf0aa
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "72918692"
 ---
 # <a name="fall-creators-update-release-notes-for-windows-10-iot"></a>Notas de la versión de Fall Creators Update para Windows 10 IoT
@@ -44,7 +44,7 @@ La declaración de privacidad para esta versión del sistema operativo Windows s
 * El servicio de actualización de componentes [versión preliminar] permite a los OEM administrar de forma global sus aplicaciones e insertar actualizaciones para el sistema operativo, las aplicaciones, la configuración y los archivos desde la nube en dispositivos para mantenerlos actualizados y protegidos.
 * Compatibilidad con el hospedaje de [contenedores de Nano Server](https://docs.microsoft.com/virtualization/windowscontainers/about/index) en las ediciones de 64 bits de Windows 10 IoT Core y Enterprise, lo que permite que las aplicaciones y sus datos se puedan aislar unos de otros y pasar rápidamente de desarrollo a producción o de la nube al perímetro.
 * El servicio Atestación de estado de dispositivo [versión preliminar] de Windows usa características de hardware y servicios en la nube para proporcionar protección contra alteraciones y atestación remota del estado de los dispositivos en función de las métricas de nivel de hardware y los datos acreditados.
-* [Azure IoT Edge](https://azure.microsoft.com/campaigns/iot-edge/) en Windows IoT [versión preliminar] permite que las soluciones de IoT coordinen la inteligencia entre los dispositivos perimetrales y de la nube para garantizar que las aplicaciones y los servicios pueden actuar en función de los datos de IoT siempre que resulte lo más conveniente.
+* [Azure IoT Edge](https://azure.microsoft.com/campaigns/iot-edge/) en Windows IoT [versión preliminar] permite que las soluciones de IoT coordinen la inteligencia entre los dispositivos perimetrales y de la nube para garantizar que las aplicaciones y los servicios pueden actuar en función de los datos de IoT siempre que resulte más conveniente.
 * El [servicio de aprovisionamiento de dispositivos [versión preliminar]](https://blogs.windows.com/buildingapps/2017/10/05/windows-10-iot-enables-complete-iot-lifecycle/) de Azure IoT Hub permite crear dispositivos de Windows 10 IoT con una imagen común durante la fabricación y configurarlos para que se conecten automáticamente en el primer arranque a Azure IoT Hub para recuperar la información de aprovisionamiento específica del dispositivo.
 * La [Administración de dispositivos con Azure IoT [versión preliminar]](https://docs.microsoft.com/windows/iot-core/manage-your-device/AzureIoTDM) permite a los operadores de IoT administrar la configuración de dispositivos, como las aplicaciones instaladas, las actualizaciones de Windows, los certificados y la configuración de red, de forma remota desde la nube.
 
