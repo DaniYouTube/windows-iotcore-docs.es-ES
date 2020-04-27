@@ -5,10 +5,10 @@ ms.topic: article
 description: Obtenga información sobre cómo agregar y desarrollar aplicaciones para el dispositivo.
 keywords: Windows 10 IoT Core, introducción, desarrollo de aplicaciones, aplicaciones
 ms.openlocfilehash: 7c047e2bba686705db19b12ea3b31350f0240688
-ms.sourcegitcommit: d84ba83c412d5c245e89880a4fca6155d98c8f52
+ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "72918484"
 ---
 # <a name="develop-an-app-for-your-device"></a>Desarrollo de una aplicación para el dispositivo
