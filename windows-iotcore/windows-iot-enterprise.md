@@ -4,12 +4,12 @@ ms.date: 01/18/2018
 ms.topic: article
 description: Obtenga información acerca de qué es Windows 10 IoT Enterprise y lo que se puede hacer con él.
 keywords: Windows 10 IoT Enterprise, Enterprise, binario, Windows
-ms.openlocfilehash: da4621a46ae5769ac28c00f2eb3c2d461f3d74ac
-ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
+ms.openlocfilehash: 29edd07682102c89c3442ed77be86466e89ed346
+ms.sourcegitcommit: f4660deb31a5736f4bf267d358778d53d2a2c04d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "75721815"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001359"
 ---
 # <a name="an-overview-of-windows-10-iot-enterprise"></a>Introducción a Windows 10 IoT Enterprise
 
@@ -52,27 +52,7 @@ Los sistemas especializados, como los PC que controlan equipos médicos, sistema
 
 ## <a name="long-term-support-silicon-details"></a>Detalles de soporte técnico para procesadores a largo plazo
 
-La versión Windows 10 IoT Enterprise 2019 será una versión LTSC. La siguiente lista engloba todos los procesadores que se espera que sean compatibles con esta versión. Si planea usar una versión anterior de Windows 10 IoT Enterprise, puede encontrar detalles acerca de los procesadores compatibles [aquí](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements#windows-iot-enterprise--embedded-processor-table).
-
-> | Windows 10 IoT Enterprise  |
-> |-------------|
-> | Procesadores AMD® de 6ª generación de la serie Ax-8xxx y de la serie E Ex-8xxx y FX - 870 K | 
-> | Procesadores AMD® de 7ª generación de la serie Ax-9xxx y de la serie E Ex-9xxx y FX-9xxx | 
-> | AMD® Ryzen™ 3/5/7 1xxx | 
-> | AMD® Ryzen™ 3/5/7 2xxx | 
-> | AMD® serie G | 
-> | AMD® serie R | 
-> | AMD® V1xxx | 
-> | Procesadores Intel® Core™ de 4ª generación | 
-> | Procesadores Intel® Core™ de 5ª generación |
-> | Procesadores Intel® Core™ de 6ª generación |
-> | Procesadores Intel® Core™ de 7ª generación |
-> | Procesadores Intel® Core™ de 8ª generación |
-> | Procesador Intel® Atom™ de la serie E3900 |
-> | Procesador Intel® Atom™ x5-E8000 |
-> | Procesador Intel® Atom™ x5-Z8350 |
-> | Familia de productos del procesador Intel® Atom™ E3800 |
-> | Procesador Intel® Pentium® y Celeron® de las series N y J |
+La versión Windows 10 IoT Enterprise 2019 será una versión LTSC. Ve [aquí](https://docs.microsoft.com/windows/whats-new/ltsc) para obtener una descripción general de Windows 10 LTSC y otros canales disponibles. Puedes encontrar detalles sobre la compatibilidad del procesador con cada edición y canal de Windows 10 [aquí](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements#windows-iot-enterprise--embedded-processor-table).
 
 ## <a name="helpful-resources"></a>Recursos útiles
 > [!NOTE]
