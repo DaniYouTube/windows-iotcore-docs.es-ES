@@ -5,12 +5,12 @@ ms.date: 10/05/2018
 ms.topic: article
 ms.prod: windows-iot
 ms.technology: IoT
-ms.openlocfilehash: 44e1b03ce9e7e9eb4e9bdad6f90ef803a00094f6
-ms.sourcegitcommit: 9fb86fb605d6a8feb5c226a391045b908117a90a
+ms.openlocfilehash: 81b54ab3a0e5f0dcca480bd9abdebf4aadb85f84
+ms.sourcegitcommit: 415bbc74b970f7a1b30e4aa01f06c09a63270150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "80080551"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84418851"
 ---
 # <a name="downloads"></a>Descargas
 Descargue las herramientas y el software necesarios para comenzar con Windows 10 IoT Core.
@@ -67,7 +67,7 @@ Descargue el respondedor de mDNS compatible con Bonjour para Windows IoT (códig
 ### <a name="firmware-update"></a>[Actualización de firmware](http://firmware.intel.com/projects/minnowboard-max)
 Descargue los componentes y actualizaciones de firmware para la placa de referencia MinnowBoard MAX de Intel.
 
-### <a name="visual-studio-2017"></a>[Visual Studio 2017](https://www.visualstudio.com/downloads/)
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](https://www.visualstudio.com/downloads/)
 IDE, herramientas y servicios modernos que puede usar para crear excelentes aplicaciones de IoT.
 
 ### <a name="windows-driver-kit-2017"></a>[Kit para controladores de Windows 2017](https://msdn.microsoft.com/windows/hardware/hh852365.aspx)
